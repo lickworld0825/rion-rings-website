@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rion&Rings Dubai — Bespoke Memorial Jewellery | One of a Kind</title>
+<title>Rion — Bespoke Memorial Jewellery from Japan | Dubai</title>
+<meta name="description" content="Rion — The world's only bespoke hair memorial jewellery, handcrafted entirely in Japan. K18 Gold & Platinum. Free shipping to Dubai & UAE.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&family=Noto+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -11,17 +12,19 @@
 :root{
   --gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#8B6914;
   --cream:#FAF7F2;--ink:#1A1714;--ink-soft:#4A4540;--ink-muted:#8A8480;
-  --border:rgba(201,169,110,0.25);
+  --border:rgba(201,169,110,0.25);--green:#128C7E;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:hidden}
 body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
 
+/* ANNOUNCE */
 .announce{background:var(--ink);color:var(--gold-light);text-align:center;padding:10px 2rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase}
 .announce span{color:var(--gold)}
 
+/* NAV */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;letter-spacing:0.12em;color:var(--ink);text-decoration:none}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;transition:color .3s}
 .nav-links a:hover{color:var(--gold)}
@@ -33,43 +36,46 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s}
 .nav-cta:hover{background:var(--ink)}
 
+/* HERO */
 .hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 6rem}
-.trust-bar{display:flex;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap}
-.trust-chip{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);border:0.5px solid var(--gold);padding:4px 12px;display:flex;align-items:center;gap:6px}
+.trust-bar{display:flex;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
+.trust-chip{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);border:0.5px solid var(--gold);padding:4px 12px}
 .hero-eyebrow{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--ink);margin-bottom:1.5rem}
 .hero-title em{font-style:italic;color:var(--gold-dark)}
 .hero-body{font-size:0.9rem;line-height:1.9;color:var(--ink-soft);max-width:420px;margin-bottom:2rem}
 .unique-badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--gold-light);padding:0.75rem 1.5rem;margin-bottom:2rem;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase}
-.unique-badge span{color:var(--gold)}
 .hero-cta-group{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
 .btn-primary{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:var(--ink);padding:1rem 2.5rem;text-decoration:none;transition:background .3s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--gold-dark)}
-.btn-whatsapp{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:#128C7E;padding:1rem 2rem;text-decoration:none;transition:background .3s}
-.btn-whatsapp:hover{background:#075E54}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
+.btn-wa:hover{background:#075E54}
 .social-proof{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink-muted)}
 .stars{color:var(--gold);font-size:0.9rem;letter-spacing:2px}
 .hero-right{position:relative;background:var(--ink);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .hero-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;padding:4rem 0}
 .hero-circle{width:320px;height:320px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.4);display:flex;align-items:center;justify-content:center;position:relative}
 .hero-circle::before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.2)}
-.hero-ring-icon{font-family:'Cormorant Garamond',serif;font-size:4.5rem;color:var(--gold);font-weight:300;font-style:italic;line-height:1;text-align:center}
+.hero-ring-icon{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);font-weight:300;font-style:italic;line-height:1;text-align:center;letter-spacing:0.05em}
 .hero-ring-sub{font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(201,169,110,0.6);text-align:center;margin-top:0.5rem}
-.floating-tag{position:absolute;background:rgba(250,247,242,0.08);border:0.5px solid rgba(201,169,110,0.3);padding:0.6rem 1rem;font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(201,169,110,0.7)}
+.floating-tag{position:absolute;background:rgba(250,247,242,0.06);border:0.5px solid rgba(201,169,110,0.3);padding:0.6rem 1rem;font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(201,169,110,0.7)}
 .tag-tl{top:3rem;left:3rem}.tag-br{bottom:3rem;right:3rem}.tag-tr{top:3rem;right:3rem}
 
+/* SCARCITY */
 .scarcity{background:#F0EBE0;border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);padding:1rem 6rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.scarcity-item{display:flex;align-items:center;gap:10px;font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-soft)}
-.scarcity-icon{color:var(--gold);font-size:1rem}
+.scarcity-item{display:flex;align-items:center;gap:10px;font-size:0.72rem;color:var(--ink-soft)}
+.scarcity-icon{color:var(--gold)}
 .scarcity-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold-dark);font-weight:300;margin-right:4px}
 
+/* TRUST */
 .trust-section{padding:4rem 6rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;border-bottom:0.5px solid var(--border)}
 .trust-block{text-align:center;padding:1.5rem}
 .trust-icon{font-size:1.8rem;color:var(--gold);margin-bottom:1rem}
 .trust-block h3{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.5rem}
 .trust-block p{font-size:0.8rem;line-height:1.7;color:var(--ink-muted)}
 
+/* STORY */
 .story{padding:7rem 6rem;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;border-bottom:0.5px solid var(--border)}
 .story-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);line-height:2.5}
 .story-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
@@ -79,42 +85,39 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .story-quote p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--ink);line-height:1.6;margin:0}
 html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);padding-left:0;padding-right:2rem}
 
-/* ── PROCESS WITH HAIR KIT ── */
+/* PROCESS */
 .process{background:var(--ink);padding:7rem 6rem;color:var(--cream)}
-.process-header{margin-bottom:4rem}
+.process-header{margin-bottom:3rem}
 .process-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2}
 .process-header h2 em{font-style:italic;color:var(--gold)}
 .process-header p{font-size:0.85rem;color:rgba(250,247,242,0.5);margin-top:0.75rem;line-height:1.8}
-
-/* Phase labels */
-.phase-label{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:0.5px solid rgba(201,169,110,0.3)}
-
-/* Kit flow — horizontal */
-.kit-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem}
-.kit-step{background:rgba(250,247,242,0.04);border:0.5px solid rgba(201,169,110,0.2);padding:1.75rem 1.5rem;position:relative;transition:border-color .3s}
-.kit-step:hover{border-color:rgba(201,169,110,0.5)}
-.kit-step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:rgba(201,169,110,0.2);line-height:1;margin-bottom:0.75rem}
+.phase-label{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:0.5px solid rgba(201,169,110,0.3);display:block}
+.kit-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
+.kit-step{background:rgba(250,247,242,0.04);border:0.5px solid rgba(201,169,110,0.2);padding:1.75rem 1.5rem;position:relative}
+.kit-step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:rgba(201,169,110,0.2);line-height:1;margin-bottom:0.75rem}
 .kit-step h4{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
 .kit-step p{font-size:0.8rem;line-height:1.75;color:rgba(250,247,242,0.5)}
-.kit-step .tag{position:absolute;top:1rem;right:1rem;font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;background:rgba(201,169,110,0.15);color:var(--gold);padding:2px 8px}
-
-/* Arrow between phases */
-.phase-divider{display:flex;align-items:center;gap:1.5rem;margin:2rem 0;color:rgba(201,169,110,0.4);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase}
+.kit-step .ktag{position:absolute;top:1rem;right:1rem;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(201,169,110,0.12);color:var(--gold);padding:2px 8px}
+.phase-divider{display:flex;align-items:center;gap:1.5rem;margin:2rem 0;color:rgba(201,169,110,0.4);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase}
 .phase-divider::before,.phase-divider::after{content:'';flex:1;height:0.5px;background:rgba(201,169,110,0.2)}
-
-/* Craft steps — horizontal */
 .craft-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
-.step{border-top:0.5px solid rgba(201,169,110,0.3);padding-top:1.75rem}
-.step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:rgba(201,169,110,0.25);line-height:1;margin-bottom:0.75rem}
-.step h3{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
-.step p{font-size:0.8rem;line-height:1.75;color:rgba(250,247,242,0.5)}
-
-/* Shipping note */
-.shipping-note{margin-top:2rem;background:rgba(201,169,110,0.08);border:0.5px solid rgba(201,169,110,0.25);padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
-.shipping-note-icon{color:var(--gold);font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.cstep{border-top:0.5px solid rgba(201,169,110,0.3);padding-top:1.75rem}
+.cstep-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:rgba(201,169,110,0.2);line-height:1;margin-bottom:0.75rem}
+.cstep h3{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
+.cstep p{font-size:0.8rem;line-height:1.75;color:rgba(250,247,242,0.5)}
+.shipping-note{margin-top:2rem;background:rgba(201,169,110,0.08);border:0.5px solid rgba(201,169,110,0.25);padding:1.25rem 1.5rem;display:flex;gap:1rem}
+.shipping-note-icon{color:var(--gold);flex-shrink:0;margin-top:2px}
 .shipping-note p{font-size:0.8rem;line-height:1.8;color:rgba(250,247,242,0.55)}
 .shipping-note strong{color:var(--gold-light);font-weight:400}
 
+/* AMOUNT NOTE */
+.amount-note{margin-top:1.5rem;background:rgba(201,169,110,0.06);border:0.5px solid rgba(201,169,110,0.2);padding:1.25rem 1.5rem}
+.amount-note h4{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+.amount-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.amount-item{font-size:0.8rem;line-height:1.8;color:rgba(250,247,242,0.55)}
+.amount-item strong{color:var(--gold-light);font-weight:400;display:block;margin-bottom:2px}
+
+/* COLLECTION */
 .collection{padding:7rem 6rem;border-bottom:0.5px solid var(--border)}
 .collection-header{margin-bottom:3rem}
 .collection-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:0.75rem}
@@ -122,7 +125,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .collection-header p{font-size:0.88rem;line-height:1.9;color:var(--ink-soft);max-width:600px}
 .collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .piece{border:0.5px solid var(--border);padding:2.5rem 2rem 2rem;position:relative;transition:border-color .3s,box-shadow .3s}
-.piece:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(201,169,110,0.12)}
+.piece:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(201,169,110,0.1)}
 .piece-badge{position:absolute;top:1.25rem;right:1.25rem;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:3px 10px}
 .piece-icon{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-style:italic;margin-bottom:1.25rem}
 .piece h3{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:0.4rem}
@@ -138,26 +141,35 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .unique-statement p{font-size:0.85rem;line-height:1.8;color:rgba(250,247,242,0.7)}
 .unique-statement strong{color:var(--gold-light);font-weight:400}
 
-.reviews{padding:7rem 6rem;border-bottom:0.5px solid var(--border);background:#F7F3EC}
-.reviews h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;line-height:1.2;margin-bottom:0.5rem}
-.reviews h2 em{font-style:italic;color:var(--gold-dark)}
-.reviews-sub{font-size:0.82rem;color:var(--ink-muted);margin-bottom:3rem}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.review-card{background:var(--cream);border:0.5px solid var(--border);padding:2rem}
-.review-stars{color:var(--gold);font-size:0.85rem;letter-spacing:3px;margin-bottom:1rem}
-.review-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;line-height:1.7;color:var(--ink);margin-bottom:1.25rem}
-.review-author{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted)}
-.review-location{font-size:0.68rem;color:var(--gold);margin-top:2px}
+/* ADVANCE ORDER */
+.advance-order{margin-top:1.5rem;padding:1.5rem 2rem;border:0.5px solid var(--gold);background:#FDFAF5}
+.advance-order h3{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.6rem}
+.advance-order p{font-size:0.82rem;line-height:1.8;color:var(--ink-soft)}
 
+/* VOICES */
+.voices{padding:7rem 6rem;border-bottom:0.5px solid var(--border);background:#F7F3EC}
+.voices h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;line-height:1.2;margin-bottom:0.5rem}
+.voices h2 em{font-style:italic;color:var(--gold-dark)}
+.voices-sub{font-size:0.82rem;color:var(--ink-muted);margin-bottom:3rem}
+.voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.voice-card{background:var(--cream);border:0.5px solid var(--border);padding:2rem}
+.voice-stars{color:var(--gold);font-size:0.85rem;letter-spacing:3px;margin-bottom:1rem}
+.voice-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;line-height:1.7;color:var(--ink);margin-bottom:1.25rem}
+.voice-author{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted)}
+.voice-location{font-size:0.68rem;color:var(--gold);margin-top:2px}
+.voice-tag{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;display:inline-block;margin-top:6px}
+
+/* FAQ */
 .faq{padding:7rem 6rem;border-bottom:0.5px solid var(--border)}
 .faq h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;margin-bottom:3rem}
 .faq h2 em{font-style:italic;color:var(--gold-dark)}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
 .faq-item{background:var(--cream);padding:2rem}
-.faq-q{font-size:0.82rem;font-weight:500;letter-spacing:0.06em;color:var(--ink);margin-bottom:0.75rem;display:flex;align-items:start;gap:0.75rem}
-.faq-q::before{content:'Q';font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);font-style:italic;flex-shrink:0;margin-top:-1px}
+.faq-q{font-size:0.82rem;font-weight:500;color:var(--ink);margin-bottom:0.75rem;display:flex;align-items:start;gap:0.75rem}
+.faq-q::before{content:'Q';font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);font-style:italic;flex-shrink:0}
 .faq-a{font-size:0.82rem;line-height:1.8;color:var(--ink-soft);padding-left:1.5rem}
 
+/* CONTACT */
 .contact{background:#F0EBE0;padding:7rem 6rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;border-bottom:0.5px solid var(--border)}
 .contact h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1rem}
 .contact h2 em{font-style:italic;color:var(--gold-dark)}
@@ -173,6 +185,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .channel-sub{font-size:0.72rem;color:var(--ink-muted);display:block;margin-top:2px}
 .channel-arrow{color:var(--ink-muted)}
 
+/* LEGAL */
 .legal{padding:4rem 6rem;background:var(--ink);color:rgba(250,247,242,0.5)}
 .legal h3{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem}
@@ -181,20 +194,39 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .legal-col ul{list-style:none;padding:0}
 .legal-col li::before{content:'·';margin-right:6px;color:var(--gold)}
 
+/* FOOTER */
 footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid rgba(201,169,110,0.15)}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--gold);letter-spacing:0.1em}
-.footer-copy{font-size:0.68rem;color:rgba(250,247,242,0.25);letter-spacing:0.08em}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--gold);letter-spacing:0.16em}
+.footer-copy{font-size:0.68rem;color:rgba(250,247,242,0.25)}
 .footer-right{font-size:0.68rem;color:rgba(201,169,110,0.35)}
 
+/* STICKY */
 .sticky-order{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--ink);border-top:0.5px solid rgba(201,169,110,0.3);padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;transform:translateY(100%);transition:transform .4s}
 .sticky-order.visible{transform:translateY(0)}
-.sticky-order-text{font-size:0.75rem;letter-spacing:0.1em;color:rgba(250,247,242,0.6)}
+.sticky-order-text{font-size:0.75rem;color:rgba(250,247,242,0.6)}
 .sticky-order-text strong{color:var(--gold-light);font-weight:400}
-.sticky-order-ctas{display:flex;gap:1rem}
-.sticky-btn-wa{background:#128C7E;color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;transition:background .3s}
-.sticky-btn-wa:hover{background:#075E54}
-.sticky-btn-order{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;transition:background .3s}
-.sticky-btn-order:hover{background:var(--gold)}
+.sticky-ctas{display:flex;gap:1rem}
+.s-wa{background:var(--green);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none}
+.s-order{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none}
+
+/* GALLERY */
+.gallery{padding:5rem 6rem;border-bottom:0.5px solid var(--border);background:var(--cream)}
+.gallery-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:opacity .3s}
+.gallery-grid img:hover{opacity:0.85}
+.gallery-wide{grid-column:span 2;aspect-ratio:2/1 !important}
+.gallery-tall{grid-row:span 2;aspect-ratio:1/2 !important}
+
+/* PHOTO STORY */
+.photo-story{padding:5rem 6rem;border-bottom:0.5px solid var(--border)}
+.photo-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.photo-story-img img{width:100%;object-fit:cover;display:block}
+.photo-story-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:300;line-height:1.3;margin-bottom:1rem}
+.photo-story-text h3 em{font-style:italic;color:var(--gold-dark)}
+.photo-story-text p{font-size:0.88rem;line-height:2;color:var(--ink-soft)}
+.photo-story-reverse{direction:rtl}
+.photo-story-reverse .photo-story-text{direction:ltr}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .hero-eyebrow{animation:fadeUp .8s ease both}
@@ -206,17 +238,16 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 .hero-circle{animation:fadeUp 1s .3s ease both}
 
 html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);padding-left:0;padding-right:2rem}
-html[dir=rtl] .btn-ghost{margin-left:0;margin-right:1rem}
 
 @media(max-width:1024px){
   nav{padding:1.2rem 2rem}.nav-links{display:none}
   .hero{grid-template-columns:1fr;min-height:auto}
   .hero-left{padding:5rem 2rem 3rem}.hero-right{min-height:55vh}
-  .scarcity,.trust-section,.story,.process,.collection,.reviews,.faq,.contact,.legal{padding:4rem 2rem}
+  .scarcity,.trust-section,.story,.process,.collection,.voices,.faq,.contact,.legal{padding:4rem 2rem}
   .trust-section{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr}
-  .kit-flow{grid-template-columns:1fr}
-  .craft-steps{grid-template-columns:1fr 1fr}
-  .collection-grid,.reviews-grid{grid-template-columns:1fr}
+  .kit-flow{grid-template-columns:1fr}.craft-steps{grid-template-columns:1fr 1fr}
+  .amount-grid{grid-template-columns:1fr}
+  .collection-grid,.voices-grid{grid-template-columns:1fr}
   .faq-grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}
   .legal-grid{grid-template-columns:1fr}
   footer{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
@@ -226,14 +257,15 @@ html[dir=rtl] .btn-ghost{margin-left:0;margin-right:1rem}
 </head>
 <body class="lang-en">
 
-<div class="announce" data-i18n="announce">Free secure shipping to Dubai · UAE · Kuwait &nbsp;|&nbsp; <span>Handcrafted entirely in Japan</span></div>
+<div class="announce" data-i18n="announce">Free insured shipping to Dubai · UAE · Kuwait &nbsp;|&nbsp; <span>100% Handcrafted in Japan</span></div>
 
 <nav>
-  <a href="#" class="nav-logo">Rion&Rings</a>
+  <a href="#" class="nav-logo">Rion</a>
   <ul class="nav-links">
     <li><a href="#story" data-i18n="nav_story">Our Story</a></li>
-    <li><a href="#process" data-i18n="nav_process">Process</a></li>
+    <li><a href="#process" data-i18n="nav_process">How It Works</a></li>
     <li><a href="#collection" data-i18n="nav_collection">Collection</a></li>
+    <li><a href="#voices" data-i18n="nav_voices">Stories</a></li>
     <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
     <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
   </ul>
@@ -247,6 +279,7 @@ html[dir=rtl] .btn-ghost{margin-left:0;margin-right:1rem}
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="trust-bar">
@@ -256,104 +289,108 @@ html[dir=rtl] .btn-ghost{margin-left:0;margin-right:1rem}
     </div>
     <p class="hero-eyebrow" data-i18n="hero_eyebrow">Dubai Exclusive · Bespoke Memorial Jewellery</p>
     <h1 class="hero-title" data-i18n="hero_title">Carry their<br><em>love.</em><br>Forever.</h1>
-    <p class="hero-body" data-i18n="hero_body">A single strand of hair. A lifetime of love. Sealed forever in Japanese gold. Each piece is the only one of its kind in the world — made entirely by hand in Japan, for you alone.</p>
+    <p class="hero-body" data-i18n="hero_body">A single strand of hair — just 1cm, one strand. Sealed forever in Japanese gold. Each piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone.</p>
     <div class="unique-badge">✦ &nbsp;<span data-i18n="unique_badge">The World's Only Jewel of Its Kind</span></div>
     <div class="hero-cta-group">
       <a href="#contact" class="btn-primary" data-i18n="hero_cta1">Begin Your Order</a>
-      <a href="https://wa.me/" class="btn-whatsapp" target="_blank">💬 &nbsp;<span data-i18n="hero_cta2">WhatsApp Us</span></a>
+      <a href="https://wa.me/" class="btn-wa" target="_blank">💬 &nbsp;<span data-i18n="hero_cta2">WhatsApp Us</span></a>
     </div>
     <div class="social-proof">
       <span class="stars">★★★★★</span>
-      <span data-i18n="social_proof">Trusted by families in Dubai, Kuwait & Japan</span>
+      <span data-i18n="social_proof">Trusted by families across Dubai, Kuwait & Japan</span>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-visual">
-      <div class="floating-tag tag-tl" data-i18n="float1">One of a Kind</div>
-      <div class="floating-tag tag-tr" data-i18n="float2">Ships to UAE</div>
-      <div class="hero-circle">
-        <div>
-          <div class="hero-ring-icon">R&R</div>
-          <div class="hero-ring-sub">Est. 2018 · Japan</div>
-        </div>
-      </div>
-      <div class="floating-tag tag-br" data-i18n="float3">K18 · Platinum · Diamonds</div>
-    </div>
+  <div class="hero-right" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;padding:0;">
+    <img src="images/IMG_0185.JPG" alt="Luxury Gold Ring" style="width:100%;height:100%;object-fit:cover;">
+    <img src="images/9f92bbae64067b08dbfe79bc1c72cc6e.jpg" alt="Diamond Necklace" style="width:100%;height:100%;object-fit:cover;">
+    <img src="images/c93109a64256c6e228439551c0bec605.jpg" alt="Platinum Ring" style="width:100%;height:100%;object-fit:cover;">
+    <img src="images/IMG_0008-2.jpg" alt="Gold Jewelry" style="width:100%;height:100%;object-fit:cover;">
   </div>
 </section>
 
+<!-- SCARCITY -->
 <div class="scarcity">
   <div class="scarcity-item"><span class="scarcity-icon">◈</span><span><span class="scarcity-num">3</span><span data-i18n="scar1">pieces currently in production</span></span></div>
-  <div class="scarcity-item"><span class="scarcity-icon">◉</span><span data-i18n="scar2">Each piece takes 4–8 weeks to complete by hand</span></div>
-  <div class="scarcity-item"><span class="scarcity-icon">◫</span><span data-i18n="scar3">Free insured shipping · Dubai & UAE</span></div>
-  <div class="scarcity-item"><span class="scarcity-icon">✦</span><span data-i18n="scar4">Certificate of Authenticity included</span></div>
+  <div class="scarcity-item"><span class="scarcity-icon">◉</span><span data-i18n="scar2">Just 1cm of hair is all we need</span></div>
+  <div class="scarcity-item"><span class="scarcity-icon">◫</span><span data-i18n="scar3">Free insured shipping to Dubai & UAE</span></div>
+  <div class="scarcity-item"><span class="scarcity-icon">✦</span><span data-i18n="scar4">Authenticity certificate & photo report included</span></div>
 </div>
 
+<!-- TRUST -->
 <section class="trust-section">
-  <div class="trust-block"><div class="trust-icon">◯</div><h3 data-i18n="tr1_h">One of a Kind</h3><p data-i18n="tr1_p">Every piece is unique — no two are ever alike. Your jewel exists nowhere else in the world.</p></div>
-  <div class="trust-block"><div class="trust-icon">✦</div><h3 data-i18n="tr2_h">100% Made in Japan</h3><p data-i18n="tr2_p">Gold, platinum, diamonds, and setting — every element sourced and handcrafted in Japan.</p></div>
-  <div class="trust-block"><div class="trust-icon">◇</div><h3 data-i18n="tr3_h">Secure Delivery</h3><p data-i18n="tr3_p">Fully insured via Brink's Global Services. Delivered to Dubai in a handcrafted kiri wood box.</p></div>
+  <div class="trust-block"><div class="trust-icon">◯</div><h3 data-i18n="tr1_h">One of a Kind</h3><p data-i18n="tr1_p">Every piece is unique. No two are ever alike. Your jewel exists nowhere else in the world.</p></div>
+  <div class="trust-block"><div class="trust-icon">✦</div><h3 data-i18n="tr2_h">100% Made in Japan</h3><p data-i18n="tr2_p">Gold, platinum, diamonds and setting — every element sourced and handcrafted in Japan.</p></div>
+  <div class="trust-block"><div class="trust-icon">◇</div><h3 data-i18n="tr3_h">Photo Report</h3><p data-i18n="tr3_p">We photograph every step of the hair sealing process and send you the photos before delivery.</p></div>
   <div class="trust-block"><div class="trust-icon">◈</div><h3 data-i18n="tr4_h">7-Day Guarantee</h3><p data-i18n="tr4_p">In compliance with UAE Consumer Protection Law, we stand behind every piece we create.</p></div>
 </section>
 
+<!-- STORY -->
 <section class="story" id="story">
   <div><p class="story-label" data-i18n="story_label">Our Story<br>قصتنا<br>ストーリー</p></div>
   <div class="story-content">
     <h2 data-i18n="story_title">Born from <em>loss.</em><br>Made from love.</h2>
     <p data-i18n="story_p1">In 2011, our founder held her newborn son for three days — and then said goodbye. In that grief, a question was born: how do we carry the people we love when they can no longer walk beside us?</p>
-    <p data-i18n="story_p2">Seven years later, Rion&Rings was born — named after that son, built on that love. Today we create bespoke memorial jewellery for families around the world. Every piece begins not with gold, but with your story.</p>
+    <p data-i18n="story_p2">She discovered memorial jewellery — a ring that could hold a piece of her son close to her heart forever. Seven years later, in 2018, she founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.</p>
     <div class="story-quote"><p data-i18n="story_quote">"The shape of love does not disappear.<br>It simply changes form."</p></div>
-    <p data-i18n="story_p3">A strand of hair from someone dear to you — a child, a parent, a partner, a beloved pet — becomes a jewel you wear forever. Handcrafted entirely in Japan. The only one of its kind in the world.</p>
+    <p data-i18n="story_p3">A strand of hair from someone dear — a child, a parent, a partner, a beloved pet — becomes a jewel you wear forever. Just 1cm. One strand. That is all we need to carry them with you, always.</p>
+    <img src="images/IMG_0066.JPG" alt="Rion Memorial Jewellery" style="width:100%;margin-top:1.5rem;object-fit:cover;max-height:320px;display:block;">
   </div>
 </section>
 
-<!-- ── PROCESS WITH HAIR COLLECTION KIT ── -->
+<!-- PROCESS -->
 <section class="process" id="process">
   <div class="process-header">
     <h2 data-i18n="process_title">From your <em>hair</em><br>to your heart.</h2>
-    <p data-i18n="process_intro">Everything is handled for you — from Dubai to Japan and back again. Here is exactly how it works.</p>
+    <p data-i18n="process_intro">Everything is handled for you — from Dubai to Japan and back. Here is exactly how it works.</p>
   </div>
 
-  <!-- Phase 1: Hair Collection -->
-  <p class="phase-label" data-i18n="phase1_label">Phase 1 — Hair Collection Kit · طقم تجميع الشعر · 採取キット</p>
+  <span class="phase-label" data-i18n="phase1_label">Phase 1 — Hair Collection Kit · طقم تجميع الشعر · 採取キット</span>
   <div class="kit-flow">
     <div class="kit-step">
       <div class="kit-step-num">01</div>
       <h4 data-i18n="kit1_t">We Send You a Kit</h4>
-      <p data-i18n="kit1_b">After your order is confirmed, we send a secure hair collection kit to your address in Dubai — a sealed envelope, instructions in English & Arabic, and a prepaid return label. Delivered by DHL in 3–5 days.</p>
-      <span class="tag" data-i18n="kit1_tag">Dubai → Japan</span>
+      <p data-i18n="kit1_b">After your order is confirmed, we send a secure hair collection kit to your Dubai address via DHL — a sealed envelope, instructions in English & Arabic, and a prepaid return label. Arrives in 3–5 days.</p>
+      <span class="ktag" data-i18n="kit1_tag">Japan → Dubai</span>
     </div>
     <div class="kit-step">
       <div class="kit-step-num">02</div>
       <h4 data-i18n="kit2_t">You Collect the Hair</h4>
-      <p data-i18n="kit2_b">Follow the simple instructions to collect a small amount of hair (approximately 1–2cm, a few strands). Place it in the sealed envelope provided. No special equipment needed.</p>
-      <span class="tag" data-i18n="kit2_tag">At Your Home</span>
+      <p data-i18n="kit2_b">Follow the simple instructions. Collect just 1cm of hair — a few strands. Even less is fine. Place it in the sealed envelope. No special equipment needed. For pets, the same process applies.</p>
+      <span class="ktag" data-i18n="kit2_tag">At Your Home</span>
     </div>
     <div class="kit-step">
       <div class="kit-step-num">03</div>
       <h4 data-i18n="kit3_t">Return to Japan</h4>
-      <p data-i18n="kit3_b">Send the sealed envelope back to our atelier in Japan using the prepaid DHL label we provide. The envelope is pre-labelled with all customs declarations completed — you simply drop it at any DHL point.</p>
-      <span class="tag" data-i18n="kit3_tag">Japan → Atelier</span>
+      <p data-i18n="kit3_b">Drop the sealed envelope at any DHL point in Dubai using our prepaid label. All customs declarations are pre-completed by us — you do nothing extra. Arrives at our Japanese atelier in 3–5 days.</p>
+      <span class="ktag" data-i18n="kit3_tag">Dubai → Japan</span>
     </div>
   </div>
 
-  <div class="phase-divider" data-i18n="phase_divider">Hair arrives at our Japanese atelier · Production begins</div>
+  <div class="amount-note">
+    <h4 data-i18n="amount_title">How much hair do we need?</h4>
+    <div class="amount-grid">
+      <div class="amount-item"><strong data-i18n="amount1_label">Human hair</strong><span data-i18n="amount1_val">Just 1cm in length, 1 strand. Even less is perfectly fine.</span></div>
+      <div class="amount-item"><strong data-i18n="amount2_label">Pet fur</strong><span data-i18n="amount2_val">1cm, 1 strand of fur. The same simple amount.</span></div>
+    </div>
+  </div>
 
-  <!-- Phase 2: Crafting -->
-  <p class="phase-label" data-i18n="phase2_label">Phase 2 — Japanese Craftsmanship · الصياغة اليابانية · 日本の職人技</p>
+  <div class="phase-divider" data-i18n="phase_divider">Hair arrives at our atelier · Crafting begins</div>
+
+  <span class="phase-label" data-i18n="phase2_label">Phase 2 — Japanese Craftsmanship · الصياغة اليابانية · 日本の職人技</span>
   <div class="craft-steps">
-    <div class="step"><div class="step-num">04</div><h3 data-i18n="s1_t">Bespoke Design</h3><p data-i18n="s1_b">Our master artisan proposes a design in K18 gold or platinum. You approve before any work begins. Diamonds, rubies, or sapphires available.</p></div>
-    <div class="step"><div class="step-num">05</div><h3 data-i18n="s2_t">Handcrafting</h3><p data-i18n="s2_b">The hair is carefully sealed within the jewel by hand. Every material — gold, platinum, gems — is sourced and finished entirely in Japan. Takes 4–8 weeks.</p></div>
-    <div class="step"><div class="step-num">06</div><h3 data-i18n="s3_t">Quality & Certificate</h3><p data-i18n="s3_b">Each piece is inspected and photographed. A Certificate of Authenticity is prepared — confirming your unique jewel, its materials, and the story it holds.</p></div>
-    <div class="step"><div class="step-num">07</div><h3 data-i18n="s4_t">Delivered to Dubai</h3><p data-i18n="s4_b">Your piece is shipped via Brink's Global Services — the world's most trusted high-value jewellery carrier — in a handcrafted kiri wood box. Fully insured. DDP — no charges on delivery.</p></div>
+    <div class="cstep"><div class="cstep-num">04</div><h3 data-i18n="s1_t">Bespoke Design</h3><p data-i18n="s1_b">Our artisan proposes a design in K18 gold or platinum. Diamonds, rubies, sapphires available. You approve before any work begins.</p></div>
+    <div class="cstep"><div class="cstep-num">05</div><h3 data-i18n="s2_t">Handcrafting</h3><p data-i18n="s2_b">The hair is carefully sealed inside the jewel by hand. Every material is sourced and finished entirely in Japan. Takes 4–8 weeks.</p></div>
+    <div class="cstep"><div class="cstep-num">06</div><h3 data-i18n="s3_t">Photo Report</h3><p data-i18n="s3_b">We photograph the hair before sealing, during sealing, and after. These photos are sent to you via WhatsApp — so you can see with your own eyes.</p></div>
+    <div class="cstep"><div class="cstep-num">07</div><h3 data-i18n="s4_t">Delivered to Dubai</h3><p data-i18n="s4_b">Shipped via Brink's Global Services in a handcrafted kiri wood box with Certificate of Authenticity. Fully insured. DDP — no charges on delivery.</p></div>
   </div>
 
   <div class="shipping-note">
     <span class="shipping-note-icon">◈</span>
-    <p data-i18n="shipping_note"><strong>Shipping & customs — fully handled by us.</strong> The hair collection kit travels from Dubai to Japan via DHL. Your completed jewel returns via Brink's Global Services. All customs declarations, duties (5%), and UAE VAT (5%) are prepaid by Rion&Rings. You pay nothing extra on delivery.</p>
+    <p data-i18n="shipping_note"><strong>All shipping & customs handled by us.</strong> Kit ships Dubai→Japan via DHL. Your jewel returns via Brink's Global Services. UAE import duty (5%) and VAT (5%) are prepaid by Rion. You pay nothing extra on delivery.</p>
   </div>
 </section>
 
+<!-- COLLECTION -->
 <section class="collection" id="collection">
   <div class="collection-header">
     <h2 data-i18n="col_title">The<br><em>Collection</em></h2>
@@ -362,97 +399,168 @@ html[dir=rtl] .btn-ghost{margin-left:0;margin-right:1rem}
   <div class="collection-grid">
     <div class="piece">
       <div class="piece-badge" data-i18n="badge1">Most Chosen</div>
-      <div class="piece-icon">◯</div>
+      <img src="images/133e35bddd48cfe7644a85dc7fa54b6f-1.jpg" alt="The Ring" style="width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:1.25rem;">
       <h3 data-i18n="p1_name">The Ring</h3>
       <p class="piece-sub" data-i18n="p1_sub">خاتم الذكرى · 記念リング</p>
-      <p data-i18n="p1_body">K18 gold or platinum band with a sealed chamber holding a strand of hair. The most intimate way to keep a loved one close.</p>
+      <p data-i18n="p1_body">K18 gold or platinum band with a sealed chamber holding a strand of hair. Wear them close, always. Available in all sizes — a ring gauge is included in your kit.</p>
       <div class="piece-price-row">
-        <div class="piece-price">From AED 8,800</div>
-        <div class="piece-price-sub" data-i18n="p_ddp">DDP incl. all taxes</div>
+        <div class="piece-price">From AED 70,000</div>
+        <div class="piece-price-sub" data-i18n="p_ddp">DDP · all taxes incl.</div>
       </div>
       <a href="https://wa.me/" class="piece-cta" target="_blank" data-i18n="p_cta">Enquire via WhatsApp →</a>
     </div>
     <div class="piece">
-      <div class="piece-icon">◇</div>
+      <img src="images/9f92bbae64067b08dbfe79bc1c72cc6e.jpg" alt="The Pendant" style="width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:1.25rem;">
       <h3 data-i18n="p2_name">The Pendant</h3>
       <p class="piece-sub" data-i18n="p2_sub">قلادة الحب · ペンダント</p>
-      <p data-i18n="p2_body">A necklace pendant in geometric or organic form, enclosing a strand near your heart. Available with diamond setting.</p>
+      <p data-i18n="p2_body">A necklace pendant in geometric or organic form, enclosing a strand near your heart. Diamond setting available. Holds hair from multiple loved ones on select designs.</p>
       <div class="piece-price-row">
-        <div class="piece-price">From AED 11,000</div>
-        <div class="piece-price-sub" data-i18n="p_ddp">DDP incl. all taxes</div>
+        <div class="piece-price">From AED 26,800</div>
+        <div class="piece-price-sub" data-i18n="p_ddp">DDP · all taxes incl.</div>
       </div>
       <a href="https://wa.me/" class="piece-cta" target="_blank" data-i18n="p_cta">Enquire via WhatsApp →</a>
     </div>
     <div class="piece">
       <div class="piece-badge" data-i18n="badge3">Premium</div>
-      <div class="piece-icon">✦</div>
+      <img src="images/IMG_0185.JPG" alt="Bespoke Commission" style="width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:1.25rem;">
       <h3 data-i18n="p3_name">Bespoke Commission</h3>
       <p class="piece-sub" data-i18n="p3_sub">تصميم خاص · フルオーダー</p>
-      <p data-i18n="p3_body">A fully custom design created with our head artisan. Diamonds, rubies, sapphires. The ultimate one-of-a-kind jewel.</p>
+      <p data-i18n="p3_body">A fully custom design created with our head artisan. Diamonds, rubies, sapphires. Can hold hair from multiple loved ones. The ultimate one-of-a-kind jewel.</p>
       <div class="piece-price-row">
-        <div class="piece-price">From AED 22,000</div>
-        <div class="piece-price-sub" data-i18n="p_ddp">DDP incl. all taxes</div>
+        <div class="piece-price">From AED 70,000</div>
+        <div class="piece-price-sub" data-i18n="p_ddp">DDP · all taxes incl.</div>
       </div>
       <a href="https://wa.me/" class="piece-cta" target="_blank" data-i18n="p_cta">Enquire via WhatsApp →</a>
     </div>
   </div>
+
   <div class="unique-statement">
     <div class="unique-statement-icon">✦</div>
-    <p data-i18n="unique_stmt"><strong>Each Rion&Rings jewel is the only one of its kind in the world.</strong> Because it is made from your hair alone, with a design created exclusively for you, no identical piece has ever existed or ever will. This is not a limited edition — it is a singular creation. One jewel. One story. One world.</p>
+    <p data-i18n="unique_stmt"><strong>Each Rion jewel is the only one of its kind in the world.</strong> Because it is made from your hair alone, with a design created exclusively for you, no identical piece has ever existed or ever will. One jewel. One story. One world.</p>
   </div>
 </section>
 
-<section class="reviews" id="reviews">
-  <h2 data-i18n="rev_title">Worn with <em>love</em></h2>
-  <p class="reviews-sub" data-i18n="rev_sub">Families across Dubai, Kuwait and Japan</p>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text" data-i18n="rev1_text">"I wear my daughter's hair every day. No one knows what it holds. Only I do. There is nothing more precious I own."</p>
-      <div class="review-author" data-i18n="rev1_name">F. Al-Rashidi</div>
-      <div class="review-location" data-i18n="rev1_loc">Dubai, UAE</div>
+<!-- GALLERY -->
+<section class="gallery">
+  <span class="gallery-label" data-i18n="gallery_label">Our Work · أعمالنا · 作品集</span>
+  <div class="gallery-grid">
+    <img src="images/IMG_0008-2.jpg" alt="Gold Ring" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/c93109a64256c6e228439551c0bec605.jpg" alt="Diamond Ring" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/IMG_0010-1.jpg" alt="Gold Necklace" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/IMG_0014.jpg" alt="Luxury Ring" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/9f92bbae64067b08dbfe79bc1c72cc6e.jpg" alt="Pendant" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/133e35bddd48cfe7644a85dc7fa54b6f-1.jpg" alt="Platinum Ring" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/IMG_0093.JPG" alt="Jewelry Close Up" style="aspect-ratio:1;object-fit:cover;width:100%;">
+    <img src="images/IMG_0094.JPG" alt="Gold Jewellery" style="aspect-ratio:1;object-fit:cover;width:100%;">
+  </div>
+</section>
+
+<!-- PHOTO STORY -->
+<section class="photo-story">
+  <div class="photo-story-grid">
+    <div class="photo-story-img">
+      <img src="images/IMG_0100.JPG" alt="Materials — K18 Gold and Platinum" style="width:100%;display:block;">
     </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text" data-i18n="rev2_text">"The kit arrived in days. The instructions were clear in Arabic. And the ring — I have no words. It is extraordinary."</p>
-      <div class="review-author" data-i18n="rev2_name">N. Al-Mutawa</div>
-      <div class="review-location" data-i18n="rev2_loc">Kuwait City, Kuwait</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text" data-i18n="rev3_text">"My mother passed away last year. This ring has her hair. I never take it off. Thank you, Rion&Rings."</p>
-      <div class="review-author" data-i18n="rev3_name">S. Tanaka</div>
-      <div class="review-location" data-i18n="rev3_loc">Tokyo, Japan</div>
+    <div class="photo-story-text">
+      <h3 data-i18n="ps1_title">K18 Gold, Platinum<br>& <em>Precious Stones</em></h3>
+      <p data-i18n="ps1_body">Every material used in a Rion jewel is sourced and handcrafted entirely in Japan. K18 yellow gold, white gold, pink gold, and platinum — all available. Diamonds, rubies, and sapphires can be added to any design. Each stone is selected by our master artisan for brilliance and quality.</p>
     </div>
   </div>
 </section>
 
+<section class="photo-story" style="background:#F7F3EC;">
+  <div class="photo-story-grid photo-story-reverse">
+    <div class="photo-story-text">
+      <h3 data-i18n="ps2_title">Made with care,<br><em>delivered with love.</em></h3>
+      <p data-i18n="ps2_body">Each completed piece arrives in a handcrafted Japanese kiri wood box — a traditional wooden case used for precious items in Japan for centuries. Inside: your unique jewel, a Certificate of Authenticity, and the photo report of the hair sealing process. A gift worthy of what it holds.</p>
+    </div>
+    <div class="photo-story-img">
+      <img src="images/IMG_0755.JPG" alt="Kiri Wood Box — Japanese Craftsmanship" style="width:100%;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="voices" id="voices">
+  <h2 data-i18n="voices_title">Worn with <em>love</em></h2>
+  <p class="voices-sub" data-i18n="voices_sub">Real stories from families who carry their loved ones with them</p>
+  <div class="voices-grid">
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text" data-i18n="v1_text">"My brother passed away suddenly. I wore the ring to my wedding — and he was there with me. The design is beautiful and I treasure it beyond words."</p>
+      <div class="voice-author" data-i18n="v1_name">F. Al-Rashidi</div>
+      <div class="voice-location" data-i18n="v1_loc">Dubai, UAE</div>
+      <span class="voice-tag" data-i18n="v1_tag">Brother · Ring</span>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text" data-i18n="v2_text">"My son passed away in an accident. I had four rings made — one for his girlfriend who had been with him since they were children. When I gave it to her, she smiled for the first time since he was gone."</p>
+      <div class="voice-author" data-i18n="v2_name">N. Al-Mutawa</div>
+      <div class="voice-location" data-i18n="v2_loc">Kuwait City, Kuwait</div>
+      <span class="voice-tag" data-i18n="v2_tag">Son · Ring × 4</span>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text" data-i18n="v3_text">"Two years ago I lost my daughter. Every year we visit the flower fields we used to go to together. Now I wear the ring and she comes with us. I am so glad I made it."</p>
+      <div class="voice-author" data-i18n="v3_name">S. Tanaka</div>
+      <div class="voice-location" data-i18n="v3_loc">Tokyo, Japan</div>
+      <span class="voice-tag" data-i18n="v3_tag">Daughter · Ring</span>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text" data-i18n="v4_text">"38 years of marriage. He left so suddenly. I grip this ring and I can still feel his hand. He loved to drive me anywhere. Now I take him everywhere."</p>
+      <div class="voice-author" data-i18n="v4_name">M. Yoshida</div>
+      <div class="voice-location" data-i18n="v4_loc">Osaka, Japan</div>
+      <span class="voice-tag" data-i18n="v4_tag">Husband · Ring</span>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text" data-i18n="v5_text">"My husband died in an accident at 28. I was pregnant with our second child. The ring arrived and my 2-year-old daughter said 'how pretty.' Now we are always together."</p>
+      <div class="voice-author" data-i18n="v5_name">Y. Kimura</div>
+      <div class="voice-location" data-i18n="v5_loc">Nagoya, Japan</div>
+      <span class="voice-tag" data-i18n="v5_tag">Husband · Ring</span>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text" data-i18n="v6_text">"The kit arrived in days. Instructions were clear in Arabic. The ring — I have no words. The photo report they sent showing the hair being sealed moved me to tears."</p>
+      <div class="voice-author" data-i18n="v6_name">A. Al-Sayed</div>
+      <div class="voice-location" data-i18n="v6_loc">Abu Dhabi, UAE</div>
+      <span class="voice-tag" data-i18n="v6_tag">Mother · Ring</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
 <section class="faq" id="faq">
   <h2 data-i18n="faq_title">Your questions, <em>answered</em></h2>
   <div class="faq-grid">
-    <div class="faq-item"><p class="faq-q" data-i18n="fq1">How does the hair collection work from Dubai?</p><p class="faq-a" data-i18n="fa1">We send a secure collection kit to your Dubai address via DHL (3–5 days). It includes a sealed envelope, Arabic & English instructions, and a prepaid return label. You simply collect the hair, seal it, and drop it at any DHL point — we handle all customs paperwork.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq2">Is sending hair from UAE to Japan legal?</p><p class="faq-a" data-i18n="fa2">Yes, completely. Cut hair (human or pet) is not a restricted item in either UAE or Japanese customs regulations. It is not a biological specimen or hazardous material. All customs declarations on the return envelope are pre-completed by us.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq3">How long does the full process take?</p><p class="faq-a" data-i18n="fa3">From order confirmation to delivery: approximately 6–10 weeks. This includes kit shipping (1 week), hair return (1 week), and handcrafting (4–8 weeks). We provide updates throughout.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq4">Are there any extra charges on delivery?</p><p class="faq-a" data-i18n="fa4">None. All prices are DDP (Delivered Duty Paid), meaning UAE import duty (5%) and VAT (5%) are prepaid by us and included in the displayed price. You pay nothing extra when your jewel arrives.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq5">What is your return policy?</p><p class="faq-a" data-i18n="fa5">In accordance with UAE Consumer Protection Law (Federal Decree-Law No. 15/2020), we offer a 7-day return window. As each piece is uniquely made for you, we work closely throughout production to ensure complete satisfaction.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq6">Can I order for a pet's hair?</p><p class="faq-a" data-i18n="fa6">Yes. Many clients commission pieces for beloved pets. The process is identical. The collection kit works for pet fur too — instructions are included.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq1">How much hair do you need?</p><p class="faq-a" data-i18n="fa1">Just 1cm in length, one strand. Even less is perfectly fine. For pet fur, the same — 1cm, one strand. We work with whatever you can provide, no matter how little.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq2">How does the collection work from Dubai?</p><p class="faq-a" data-i18n="fa2">We send a secure kit to your Dubai address via DHL (3–5 days). Inside: a sealed envelope, English & Arabic instructions, and a prepaid return label. Drop it at any DHL point — we handle all customs paperwork.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq3">Can I see the hair being sealed?</p><p class="faq-a" data-i18n="fa3">Yes. We photograph the hair before sealing, during sealing, and after — showing it fully enclosed and hermetically sealed. We send these photos to you via WhatsApp or email before shipping. Complete peace of mind.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq4">How long does it take?</p><p class="faq-a" data-i18n="fa4">Total: approximately 6–10 weeks. Kit delivery (1 week) + hair return to Japan (1 week) + handcrafting (4–8 weeks). We send progress updates throughout.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq6">Can I put hair from multiple loved ones in one piece?</p><p class="faq-a" data-i18n="fa6">Yes, on select designs. Multiple people's hair — or hair and ashes — can be sealed together in one jewel. Ask us which designs support this when you enquire.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq7">Are there any extra charges on delivery?</p><p class="faq-a" data-i18n="fa7">None at all. All prices are DDP — UAE import duty (5%) and VAT (5%) are prepaid by us and included in the displayed price. You pay nothing extra when your jewel arrives at your door.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq8">Can I order for a pet?</p><p class="faq-a" data-i18n="fa8">Yes. Many clients commission pieces for beloved pets. The kit and process are identical — the instructions for pet fur are included. 1cm of fur is all we need.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq9">What is your return policy?</p><p class="faq-a" data-i18n="fa9">In accordance with UAE Consumer Protection Law (Federal Decree-Law No. 15/2020), we offer a 7-day return window on all orders. We also work closely with you throughout production to ensure complete satisfaction.</p></div>
+    <div class="faq-item"><p class="faq-q" data-i18n="fq10">What happens to leftover hair after crafting?</p><p class="faq-a" data-i18n="fa10">Any remaining hair — no matter how little — is returned to you in a dedicated container, together with your completed jewel. Nothing precious is ever discarded.</p></div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div>
     <h2 data-i18n="con_title">Begin your<br><em>story.</em></h2>
-    <p data-i18n="con_body">Every Rion&Rings piece begins with a conversation. Reach us on WhatsApp or Instagram — we respond personally in English, Arabic, and Japanese.</p>
-    <p style="font-size:0.78rem;color:var(--ink-muted);" data-i18n="con_sub">Free insured shipping · DDP pricing · 7-day return policy · 100% Made in Japan</p>
+    <p data-i18n="con_body">Every Rion piece begins with a conversation. Reach us on WhatsApp or Instagram — we respond personally in English, Arabic, and Japanese.</p>
+    <p style="font-size:0.78rem;color:var(--ink-muted);" data-i18n="con_sub">Free insured shipping · DDP all-inclusive pricing · 7-day return · 100% Made in Japan</p>
     <div class="mij-box">
       <p class="mij-box-label" data-i18n="mij_label">100% Made in Japan · صُنع في اليابان · 100%日本製</p>
-      <p data-i18n="mij_body">Every element — gold, platinum, gemstones, and setting — is sourced and crafted entirely in Japan. Our artisans combine decades of traditional goldsmithing with modern design.</p>
+      <p data-i18n="mij_body">Every element — gold, platinum, gemstones, and setting — is sourced and handcrafted entirely in Japan. Our artisans combine decades of traditional goldsmithing with modern design to create each unique piece.</p>
     </div>
   </div>
   <div class="contact-channels">
     <a href="https://wa.me/" class="channel" target="_blank" style="background:#E8F5E9;border-color:#128C7E">
       <span class="channel-icon" style="color:#128C7E">💬</span>
-      <span class="channel-label">WhatsApp<span class="channel-sub" data-i18n="wa_sub">Fastest · English, Arabic, Japanese</span></span>
+      <span class="channel-label">WhatsApp<span class="channel-sub" data-i18n="wa_sub">Fastest response · English, Arabic, Japanese</span></span>
       <span class="channel-arrow">→</span>
     </a>
     <a href="https://instagram.com/rion.rings_official" class="channel" target="_blank">
@@ -464,44 +572,50 @@ html[dir=rtl] .btn-ghost{margin-left:0;margin-right:1rem}
       <span class="channel-icon">◫</span>
       <span class="channel-label"><span data-i18n="ship_label">Free Insured Shipping via Brink's</span><span class="channel-sub">Dubai · Abu Dhabi · Kuwait · Riyadh · Doha</span></span>
     </div>
+    <div class="channel" style="cursor:default">
+      <span class="channel-icon">◉</span>
+      <span class="channel-label"><span data-i18n="hours_label">Response Hours</span><span class="channel-sub" data-i18n="hours_val">9:00–19:00 JST · Outside hours also available</span></span>
+    </div>
   </div>
 </section>
 
+<!-- LEGAL -->
 <div class="legal">
-  <h3 data-i18n="legal_title">Legal & Compliance · معلومات قانونية</h3>
+  <h3 data-i18n="legal_title">Legal & Compliance · معلومات قانونية · 法的情報</h3>
   <div class="legal-grid">
     <div class="legal-col">
-      <h4 data-i18n="leg1_h">Consumer Rights (UAE)</h4>
-      <p data-i18n="leg1_p">All prices in AED inclusive of UAE import duty and VAT (DDP), per Federal Decree-Law No. 15/2020. 7-day return window on all orders. Invoices in Arabic and English.</p>
+      <h4 data-i18n="leg1_h">UAE Consumer Rights</h4>
+      <p data-i18n="leg1_p">All prices in AED, DDP (all duties and VAT included), per Federal Decree-Law No. 15/2020 on Consumer Protection. 7-day return window applies to all orders. Invoices issued in English and Arabic.</p>
     </div>
     <div class="legal-col">
       <h4 data-i18n="leg2_h">Product & Shipping</h4>
       <ul>
         <li data-i18n="leg2_1">All pieces handcrafted entirely in Japan</li>
         <li data-i18n="leg2_2">Certificate of Authenticity with every order</li>
-        <li data-i18n="leg2_3">Shipped via Brink's Global Services (insured)</li>
-        <li data-i18n="leg2_4">Hair: non-biological hazard, customs compliant</li>
-        <li data-i18n="leg2_5">No extra charges on delivery (DDP terms)</li>
+        <li data-i18n="leg2_3">Photo report of sealing process included</li>
+        <li data-i18n="leg2_4">Shipped via Brink's Global Services (fully insured)</li>
+        <li data-i18n="leg2_5">Hair: non-biological hazard, customs compliant</li>
+        <li data-i18n="leg2_6">No extra charges on delivery (DDP terms)</li>
       </ul>
     </div>
     <div class="legal-col">
       <h4 data-i18n="leg3_h">Business Information</h4>
-      <p data-i18n="leg3_p">Rion&Rings · Est. 2018, Japan · UAE e-commerce governed by Federal Decree-Law No. 14/2023 · AML compliant · Contact us via WhatsApp for all enquiries.</p>
+      <p data-i18n="leg3_p">Rion (formerly Rion&Rings) · Est. 2018, Japan · UAE e-commerce governed by Federal Decree-Law No. 14/2023 · AML compliant · Contact via WhatsApp for all enquiries.</p>
     </div>
   </div>
 </div>
 
 <footer>
-  <div class="footer-logo">Rion&Rings</div>
-  <div class="footer-copy">© 2025 Rion&Rings · 100% Made in Japan · DDP — All prices incl. UAE duty & VAT</div>
-  <div class="footer-right" data-i18n="footer_r">Est. 2018 · Japan · Shipping to UAE & Gulf</div>
+  <div class="footer-logo">Rion</div>
+  <div class="footer-copy">© 2025 Rion · 100% Made in Japan · DDP — All prices incl. UAE duty & VAT</div>
+  <div class="footer-right" data-i18n="footer_r">Est. 2018 · Japan · UAE & Gulf</div>
 </footer>
 
 <div class="sticky-order" id="stickyOrder">
-  <div class="sticky-order-text" data-i18n="sticky_text"><strong>The world's only jewel of its kind.</strong> &nbsp;From AED 8,800 DDP · Free kit to Dubai.</div>
-  <div class="sticky-order-ctas">
-    <a href="https://wa.me/" class="sticky-btn-wa" target="_blank" data-i18n="sticky_wa">💬 WhatsApp</a>
-    <a href="#contact" class="sticky-btn-order" data-i18n="sticky_order">Begin Order →</a>
+  <div class="sticky-order-text" data-i18n="sticky_text"><strong>The world's only jewel of its kind.</strong> &nbsp;From AED 70,000 DDP · Just 1cm of hair needed.</div>
+  <div class="sticky-ctas">
+    <a href="https://wa.me/" class="s-wa" target="_blank" data-i18n="sticky_wa">💬 WhatsApp</a>
+    <a href="#contact" class="s-order" data-i18n="sticky_order">Begin Order →</a>
   </div>
 </div>
 
@@ -513,204 +627,246 @@ window.addEventListener('scroll',()=>{
 
 const T={
   en:{
-    announce:"Free secure shipping to Dubai · UAE · Kuwait &nbsp;|&nbsp; <span>Handcrafted entirely in Japan</span>",
-    nav_story:"Our Story",nav_process:"Process",nav_collection:"Collection",nav_faq:"FAQ",nav_contact:"Contact",nav_cta:"Order Now",
+    announce:"Free insured shipping to Dubai · UAE · Kuwait &nbsp;|&nbsp; <span>100% Handcrafted in Japan</span>",
+    nav_story:"Our Story",nav_process:"How It Works",nav_collection:"Collection",nav_voices:"Stories",nav_faq:"FAQ",nav_contact:"Contact",nav_cta:"Order Now",
     chip1:"Est. 2018 · Japan",chip2:"100% Made in Japan",chip3:"K18 Gold · Platinum",
     hero_eyebrow:"Dubai Exclusive · Bespoke Memorial Jewellery",
     hero_title:"Carry their<br><em>love.</em><br>Forever.",
-    hero_body:"A single strand of hair. A lifetime of love. Sealed forever in Japanese gold. Each piece is the only one of its kind in the world — made entirely by hand in Japan, for you alone.",
+    hero_body:"A single strand of hair — just 1cm, one strand. Sealed forever in Japanese gold. Each piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone.",
     unique_badge:"The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"WhatsApp Us",
-    social_proof:"Trusted by families in Dubai, Kuwait & Japan",
+    social_proof:"Trusted by families across Dubai, Kuwait & Japan",
     float1:"One of a Kind",float2:"Ships to UAE",float3:"K18 · Platinum · Diamonds",
-    scar1:"pieces currently in production",scar2:"Each piece takes 4–8 weeks to complete by hand",scar3:"Free insured shipping · Dubai & UAE",scar4:"Certificate of Authenticity included",
-    tr1_h:"One of a Kind",tr1_p:"Every piece is unique — no two are ever alike. Your jewel exists nowhere else in the world.",
-    tr2_h:"100% Made in Japan",tr2_p:"Gold, platinum, diamonds, and setting — every element sourced and handcrafted in Japan.",
-    tr3_h:"Secure Delivery",tr3_p:"Fully insured via Brink's Global Services. Delivered to Dubai in a handcrafted kiri wood box.",
+    scar1:"pieces currently in production",scar2:"Just 1cm of hair is all we need",scar3:"Free insured shipping to Dubai & UAE",scar4:"Authenticity certificate & photo report included",
+    tr1_h:"One of a Kind",tr1_p:"Every piece is unique. No two are ever alike. Your jewel exists nowhere else in the world.",
+    tr2_h:"100% Made in Japan",tr2_p:"Gold, platinum, diamonds and setting — every element sourced and handcrafted in Japan.",
+    tr3_h:"Photo Report",tr3_p:"We photograph every step of the hair sealing process and send you the photos before delivery.",
     tr4_h:"7-Day Guarantee",tr4_p:"In compliance with UAE Consumer Protection Law, we stand behind every piece we create.",
     story_label:"Our Story\nقصتنا\nストーリー",
     story_title:"Born from <em>loss.</em><br>Made from love.",
     story_p1:"In 2011, our founder held her newborn son for three days — and then said goodbye. In that grief, a question was born: how do we carry the people we love when they can no longer walk beside us?",
-    story_p2:"Seven years later, Rion&Rings was born — named after that son, built on that love. Today we create bespoke memorial jewellery for families around the world. Every piece begins not with gold, but with your story.",
+    story_p2:"She discovered memorial jewellery — a ring that could hold a piece of her son close to her heart forever. Seven years later, in 2018, she founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.",
     story_quote:'"The shape of love does not disappear.<br>It simply changes form."',
-    story_p3:"A strand of hair from someone dear to you — a child, a parent, a partner, a beloved pet — becomes a jewel you wear forever. Handcrafted entirely in Japan. The only one of its kind in the world.",
+    story_p3:"A strand of hair from someone dear — a child, a parent, a partner, a beloved pet — becomes a jewel you wear forever. Just 1cm. One strand. That is all we need to carry them with you, always.",
     process_title:"From your <em>hair</em><br>to your heart.",
-    process_intro:"Everything is handled for you — from Dubai to Japan and back again. Here is exactly how it works.",
+    process_intro:"Everything is handled for you — from Dubai to Japan and back. Here is exactly how it works.",
     phase1_label:"Phase 1 — Hair Collection Kit · طقم تجميع الشعر · 採取キット",
-    kit1_t:"We Send You a Kit",kit1_b:"After your order is confirmed, we send a secure hair collection kit to your Dubai address via DHL — a sealed envelope, instructions in English & Arabic, and a prepaid return label. Delivered in 3–5 days.",kit1_tag:"Dubai → Japan",
-    kit2_t:"You Collect the Hair",kit2_b:"Follow the simple instructions to collect a small amount of hair (approximately 1–2cm, a few strands). Place it in the sealed envelope provided. No special equipment needed.",kit2_tag:"At Your Home",
-    kit3_t:"Return to Japan",kit3_b:"Send the sealed envelope back to our atelier using the prepaid DHL label. All customs declarations are pre-completed by us — you simply drop it at any DHL point in Dubai.",kit3_tag:"Japan → Atelier",
-    phase_divider:"Hair arrives at our Japanese atelier · Production begins",
+    kit1_t:"We Send You a Kit",kit1_b:"After your order is confirmed, we send a secure hair collection kit to your Dubai address via DHL — a sealed envelope, instructions in English & Arabic, and a prepaid return label. Arrives in 3–5 days.",kit1_tag:"Japan → Dubai",
+    kit2_t:"You Collect the Hair",kit2_b:"Follow the simple instructions. Collect just 1cm of hair — a few strands. Even less is fine. Place it in the sealed envelope. No special equipment needed. For pets, the same process applies.",kit2_tag:"At Your Home",
+    kit3_t:"Return to Japan",kit3_b:"Drop the sealed envelope at any DHL point in Dubai using our prepaid label. All customs declarations are pre-completed by us. Arrives at our Japanese atelier in 3–5 days.",kit3_tag:"Dubai → Japan",
+    amount_title:"How much hair do we need?",
+    amount1_label:"Human hair",amount1_val:"Just 1cm in length, 1 strand. Even less is perfectly fine.",
+    amount2_label:"Pet fur",amount2_val:"1cm, 1 strand of fur. The same simple amount.",
+    phase_divider:"Hair arrives at our atelier · Crafting begins",
     phase2_label:"Phase 2 — Japanese Craftsmanship · الصياغة اليابانية · 日本の職人技",
-    s1_t:"Bespoke Design",s1_b:"Our master artisan proposes a design in K18 gold or platinum. You approve before any work begins. Diamonds, rubies, or sapphires available.",
-    s2_t:"Handcrafting",s2_b:"The hair is carefully sealed within the jewel by hand. Every material — gold, platinum, gems — is sourced and finished entirely in Japan. Takes 4–8 weeks.",
-    s3_t:"Quality & Certificate",s3_b:"Each piece is inspected and photographed. A Certificate of Authenticity is prepared, confirming your unique jewel and its story.",
-    s4_t:"Delivered to Dubai",s4_b:"Shipped via Brink's Global Services in a handcrafted kiri wood box. Fully insured. DDP — no charges on delivery.",
-    shipping_note:"<strong>Shipping & customs — fully handled by us.</strong> The hair collection kit travels Dubai→Japan via DHL. Your jewel returns via Brink's. All customs, duties (5%), and UAE VAT (5%) are prepaid. You pay nothing extra on delivery.",
-    col_title:"The<br><em>Collection</em>",
-    col_sub:"Each piece is made entirely to your order. No two exist alike. All prices in AED, inclusive of UAE import duty and VAT (DDP — no charges on delivery).",
+    s1_t:"Bespoke Design",s1_b:"Our artisan proposes a design in K18 gold or platinum. Diamonds, rubies, sapphires available. You approve before any work begins.",
+    s2_t:"Handcrafting",s2_b:"The hair is carefully sealed inside the jewel by hand. Every material is sourced and finished entirely in Japan. Takes 4–8 weeks.",
+    s3_t:"Photo Report",s3_b:"We photograph the hair before sealing, during sealing, and after. These photos are sent to you via WhatsApp — so you can see with your own eyes.",
+    s4_t:"Delivered to Dubai",s4_b:"Shipped via Brink's Global Services in a handcrafted kiri wood box with Certificate of Authenticity. Fully insured. DDP — no charges on delivery.",
+    shipping_note:"<strong>All shipping & customs handled by us.</strong> Kit ships Dubai→Japan via DHL. Your jewel returns via Brink's. UAE import duty (5%) and VAT (5%) are prepaid by Rion. You pay nothing extra on delivery.",
+    col_title:"The<br><em>Collection</em>",col_sub:"Each piece is made entirely to your order. No two exist alike. All prices in AED, inclusive of UAE import duty and VAT (DDP — no charges on delivery).",
     badge1:"Most Chosen",badge3:"Premium",
-    p1_name:"The Ring",p1_sub:"خاتم الذكرى · 記念リング",p1_body:"K18 gold or platinum band with a sealed chamber holding a strand of hair. The most intimate way to keep a loved one close.",
-    p2_name:"The Pendant",p2_sub:"قلادة الحب · ペンダント",p2_body:"A necklace pendant in geometric or organic form, enclosing a strand near your heart. Available with diamond setting.",
-    p3_name:"Bespoke Commission",p3_sub:"تصميم خاص · フルオーダー",p3_body:"A fully custom design created with our head artisan. Diamonds, rubies, sapphires. The ultimate one-of-a-kind jewel.",
-    p_ddp:"DDP incl. all taxes",p_cta:"Enquire via WhatsApp →",
-    unique_stmt:"<strong>Each Rion&Rings jewel is the only one of its kind in the world.</strong> Because it is made from your hair alone, with a design created exclusively for you, no identical piece has ever existed or ever will. One jewel. One story. One world.",
-    rev_title:"Worn with <em>love</em>",rev_sub:"Families across Dubai, Kuwait and Japan",
-    rev1_text:'"I wear my daughter\'s hair every day. No one knows what it holds. Only I do. There is nothing more precious I own."',rev1_name:"F. Al-Rashidi",rev1_loc:"Dubai, UAE",
-    rev2_text:'"The kit arrived in days. The instructions were clear in Arabic. And the ring — I have no words. It is extraordinary."',rev2_name:"N. Al-Mutawa",rev2_loc:"Kuwait City, Kuwait",
-    rev3_text:'"My mother passed away last year. This ring has her hair. I never take it off. Thank you, Rion&Rings."',rev3_name:"S. Tanaka",rev3_loc:"Tokyo, Japan",
+    p1_name:"The Ring",p1_sub:"خاتم الذكرى · 記念リング",p1_body:"K18 gold or platinum band with a sealed chamber holding a strand of hair. Wear them close, always. Available in all sizes — a ring gauge is included in your kit.",
+    p2_name:"The Pendant",p2_sub:"قلادة الحب · ペンダント",p2_body:"A necklace pendant in geometric or organic form, enclosing a strand near your heart. Diamond setting available. Holds hair from multiple loved ones on select designs.",
+    p3_name:"Bespoke Commission",p3_sub:"تصميم خاص · フルオーダー",p3_body:"A fully custom design created with our head artisan. Diamonds, rubies, sapphires. Can hold hair from multiple loved ones. The ultimate one-of-a-kind jewel.",
+    p_ddp:"DDP · all taxes incl.",p_cta:"Enquire via WhatsApp →",
+    advance_title:"✦ Advance Order Available",advance_body:"You can order the jewel now and send the hair later — at your own timing. This is ideal if you wish to prepare the piece in advance, or if you are not yet ready to collect the hair. Ask us about this option via WhatsApp.",
+    unique_stmt:"<strong>Each Rion jewel is the only one of its kind in the world.</strong> Because it is made from your hair alone, with a design created exclusively for you, no identical piece has ever existed or ever will. One jewel. One story. One world.",
+    voices_title:"Worn with <em>love</em>",voices_sub:"Real stories from families who carry their loved ones with them",
+    v1_text:'"My brother passed away suddenly. I wore the ring to my wedding — and he was there with me. The design is beautiful and I treasure it beyond words."',v1_name:"F. Al-Rashidi",v1_loc:"Dubai, UAE",v1_tag:"Brother · Ring",
+    v2_text:'"My son passed away in an accident. I had four rings made — one for his girlfriend who had been with him since they were children. When I gave it to her, she smiled for the first time since he was gone."',v2_name:"N. Al-Mutawa",v2_loc:"Kuwait City, Kuwait",v2_tag:"Son · Ring × 4",
+    v3_text:'"Two years ago I lost my daughter. Every year we visit the flower fields we used to go to together. Now I wear the ring and she comes with us. I am so glad I made it."',v3_name:"S. Tanaka",v3_loc:"Tokyo, Japan",v3_tag:"Daughter · Ring",
+    v4_text:'"38 years of marriage. He left so suddenly. I grip this ring and I can still feel his hand. He loved to drive me anywhere. Now I take him everywhere."',v4_name:"M. Yoshida",v4_loc:"Osaka, Japan",v4_tag:"Husband · Ring",
+    v5_text:'"My husband died in an accident at 28. I was pregnant with our second child. The ring arrived and my 2-year-old daughter said how pretty. Now we are always together."',v5_name:"Y. Kimura",v5_loc:"Nagoya, Japan",v5_tag:"Husband · Ring",
+    v6_text:'"The kit arrived in days. Instructions were clear in Arabic. The photo report they sent showing the hair being sealed moved me to tears."',v6_name:"A. Al-Sayed",v6_loc:"Abu Dhabi, UAE",v6_tag:"Mother · Ring",
     faq_title:"Your questions, <em>answered</em>",
-    fq1:"How does the hair collection work from Dubai?",fa1:"We send a secure collection kit to your Dubai address via DHL (3–5 days). It includes a sealed envelope, Arabic & English instructions, and a prepaid return label. You collect the hair, seal it, and drop it at any DHL point — we handle all customs paperwork.",
-    fq2:"Is sending hair from UAE to Japan legal?",fa2:"Yes, completely. Cut hair is not a restricted item in UAE or Japanese customs. It is not a biological specimen or hazardous material. All customs declarations on the return envelope are pre-completed by us.",
-    fq3:"How long does the full process take?",fa3:"Approximately 6–10 weeks total: kit shipping (1 week), hair return (1 week), handcrafting (4–8 weeks). We provide updates throughout.",
-    fq4:"Are there any extra charges on delivery?",fa4:"None. All prices are DDP — UAE import duty (5%) and VAT (5%) are prepaid by us and included in the displayed price. You pay nothing extra on delivery.",
-    fq5:"What is your return policy?",fa5:"In accordance with UAE Consumer Protection Law (Federal Decree-Law No. 15/2020), we offer a 7-day return window. We work closely with you throughout production to ensure complete satisfaction.",
-    fq6:"Can I order for a pet's hair?",fa6:"Yes. Many clients commission pieces for beloved pets. The collection kit works for pet fur too — instructions in Arabic and English are included.",
-    con_title:"Begin your<br><em>story.</em>",
-    con_body:"Every Rion&Rings piece begins with a conversation. Reach us on WhatsApp or Instagram — we respond personally in English, Arabic, and Japanese.",
-    con_sub:"Free insured shipping · DDP pricing · 7-day return policy · 100% Made in Japan",
+    fq1:"How much hair do you need?",fa1:"Just 1cm in length, one strand. Even less is perfectly fine. For pet fur, the same — 1cm, one strand. We work with whatever you can provide.",
+    fq2:"How does the collection work from Dubai?",fa2:"We send a secure kit to your Dubai address via DHL (3–5 days). Inside: sealed envelope, English & Arabic instructions, prepaid return label. Drop at any DHL point — we handle all customs.",
+    fq3:"Can I see the hair being sealed?",fa3:"Yes. We photograph the hair before sealing, during sealing, and after — fully enclosed and hermetically sealed. Photos sent via WhatsApp before shipping. Complete peace of mind.",
+    fq4:"How long does it take?",fa4:"Total: approximately 6–10 weeks. Kit delivery (1 week) + hair return to Japan (1 week) + handcrafting (4–8 weeks). We send progress updates throughout.",
+    fq5:"Can I order now and send the hair later?",fa5:"Yes. We offer Advance Orders — the jewel is crafted first, and you send the hair at your own timing when you are ready. Ask us about this via WhatsApp.",
+    fq6:"Can I put hair from multiple loved ones in one piece?",fa6:"Yes, on select designs. Multiple people's hair can be sealed together in one jewel. Ask us which designs support this when you enquire.",
+    fq7:"Are there any extra charges on delivery?",fa7:"None at all. All prices are DDP — UAE import duty (5%) and VAT (5%) are prepaid by us. You pay nothing extra when your jewel arrives.",
+    fq8:"Can I order for a pet?",fa8:"Yes. Many clients commission pieces for beloved pets. The kit and process are identical. 1cm of fur is all we need.",
+    fq9:"What is your return policy?",fa9:"UAE Consumer Protection Law (Federal Decree-Law No. 15/2020) — 7-day return window on all orders. We work closely with you throughout production to ensure complete satisfaction.",
+    fq10:"What happens to leftover hair?",fa10:"Any remaining hair is returned to you in a dedicated container, together with your completed jewel. Nothing precious is ever discarded.",
+    con_title:"Begin your<br><em>story.</em>",con_body:"Every Rion piece begins with a conversation. Reach us on WhatsApp or Instagram — we respond personally in English, Arabic, and Japanese.",
+    con_sub:"Free insured shipping · DDP all-inclusive pricing · 7-day return · 100% Made in Japan",
     mij_label:"100% Made in Japan · صُنع في اليابان · 100%日本製",
-    mij_body:"Every element — gold, platinum, gemstones, and setting — is sourced and crafted entirely in Japan. Our artisans combine decades of traditional goldsmithing with modern design.",
-    wa_sub:"Fastest · English, Arabic, Japanese",ship_label:"Free Insured Shipping via Brink's",
-    legal_title:"Legal & Compliance · معلومات قانونية",
-    leg1_h:"Consumer Rights (UAE)",leg1_p:"All prices in AED inclusive of UAE import duty and VAT (DDP), per Federal Decree-Law No. 15/2020. 7-day return window on all orders.",
-    leg2_h:"Product & Shipping",leg2_1:"All pieces handcrafted entirely in Japan",leg2_2:"Certificate of Authenticity with every order",leg2_3:"Shipped via Brink's Global Services (insured)",leg2_4:"Hair: non-biological hazard, customs compliant",leg2_5:"No extra charges on delivery (DDP terms)",
-    leg3_h:"Business Information",leg3_p:"Rion&Rings · Est. 2018, Japan · UAE e-commerce governed by Federal Decree-Law No. 14/2023 · AML compliant.",
-    footer_r:"Est. 2018 · Japan · Shipping to UAE & Gulf",
-    sticky_text:"<strong>The world's only jewel of its kind.</strong> &nbsp;From AED 8,800 DDP · Free kit to Dubai.",
+    mij_body:"Every element — gold, platinum, gemstones, and setting — is sourced and handcrafted entirely in Japan. Our artisans combine decades of traditional goldsmithing with modern design.",
+    wa_sub:"Fastest response · English, Arabic, Japanese",ship_label:"Free Insured Shipping via Brink's",hours_label:"Response Hours",hours_val:"9:00–19:00 JST · Outside hours also available",
+    legal_title:"Legal & Compliance · معلومات قانونية · 法的情報",
+    leg1_h:"UAE Consumer Rights",leg1_p:"All prices in AED, DDP (all duties and VAT included), per Federal Decree-Law No. 15/2020. 7-day return window. Invoices in English and Arabic.",
+    leg2_h:"Product & Shipping",leg2_1:"All pieces handcrafted entirely in Japan",leg2_2:"Certificate of Authenticity with every order",leg2_3:"Photo report of sealing process included",leg2_4:"Shipped via Brink's Global Services (fully insured)",leg2_5:"Hair: non-biological hazard, customs compliant",leg2_6:"No extra charges on delivery (DDP terms)",
+    leg3_h:"Business Information",leg3_p:"Rion (formerly Rion&Rings) · Est. 2018, Japan · UAE e-commerce governed by Federal Decree-Law No. 14/2023 · AML compliant.",
+    footer_r:"Est. 2018 · Japan · UAE & Gulf",
+    gallery_label:"Our Work · أعمالنا · 作品集",
+    ps1_title:"K18 Gold, Platinum<br>& <em>Precious Stones</em>",
+    ps1_body:"Every material used in a Rion jewel is sourced and handcrafted entirely in Japan. K18 yellow gold, white gold, pink gold, and platinum — all available. Diamonds, rubies, and sapphires can be added to any design. Each stone is selected by our master artisan for brilliance and quality.",
+    ps2_title:"Made with care,<br><em>delivered with love.</em>",
+    ps2_body:"Each completed piece arrives in a handcrafted Japanese kiri wood box — a traditional wooden case used for precious items in Japan for centuries. Inside: your unique jewel, a Certificate of Authenticity, and the photo report of the hair sealing process. A gift worthy of what it holds.",
+    sticky_text:"<strong>The world's only jewel of its kind.</strong> &nbsp;From AED 70,000 DDP · Just 1cm of hair needed.",
     sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
   },
   ar:{
     announce:"شحن مجاني ومؤمَّن إلى دبي · الإمارات · الكويت &nbsp;|&nbsp; <span>مصنوع يدوياً بالكامل في اليابان</span>",
-    nav_story:"قصتنا",nav_process:"الصنع",nav_collection:"المجموعة",nav_faq:"أسئلة",nav_contact:"تواصل",nav_cta:"اطلب الآن",
+    nav_story:"قصتنا",nav_process:"كيف يعمل",nav_collection:"المجموعة",nav_voices:"قصص",nav_faq:"أسئلة",nav_contact:"تواصل",nav_cta:"اطلب الآن",
     chip1:"تأسس 2018 · اليابان",chip2:"صُنع بالكامل في اليابان",chip3:"ذهب 18K · بلاتين",
     hero_eyebrow:"حصري دبي · مجوهرات تذكارية حرفية",
     hero_title:"احمل<br><em>حبهم.</em><br>إلى الأبد.",
-    hero_body:"خصلة شعر واحدة. عمر من الحب. محفوظة إلى الأبد في الذهب الياباني. كل قطعة هي الوحيدة من نوعها في العالم — مصنوعة يدوياً بالكامل في اليابان، لك وحدك.",
+    hero_body:"خصلة شعر واحدة — سم واحد فقط. محفوظة إلى الأبد في الذهب الياباني. كل قطعة هي الوحيدة من نوعها في العالم، مصنوعة يدوياً بالكامل في اليابان، لك وحدك.",
     unique_badge:"الجوهرة الوحيدة من نوعها في العالم",hero_cta1:"ابدأ طلبك",hero_cta2:"تواصل عبر واتساب",
     social_proof:"موثوق به من عائلات في دبي والكويت واليابان",
     float1:"فريدة من نوعها",float2:"شحن إلى الإمارات",float3:"ذهب 18K · بلاتين · ألماس",
-    scar1:"قطع قيد الإنتاج",scar2:"كل قطعة تستغرق 4-8 أسابيع",scar3:"شحن مجاني مؤمَّن · دبي والإمارات",scar4:"شهادة الأصالة مضمّنة",
-    tr1_h:"فريدة من نوعها",tr1_p:"كل قطعة فريدة — لا توجد قطعتان متشابهتان. جوهرتك لا توجد في أي مكان آخر في العالم.",
+    scar1:"قطع قيد الإنتاج",scar2:"سم واحد من الشعر فقط هو كل ما نحتاجه",scar3:"شحن مجاني مؤمَّن إلى دبي والإمارات",scar4:"شهادة أصالة وتقرير صوري مضمّنان",
+    tr1_h:"فريدة من نوعها",tr1_p:"كل قطعة فريدة. لا توجد قطعتان متشابهتان. جوهرتك لا توجد في أي مكان آخر في العالم.",
     tr2_h:"صُنع بالكامل في اليابان",tr2_p:"الذهب والبلاتين والألماس والإطار — كل عنصر مصدره ومصنوع يدوياً في اليابان.",
-    tr3_h:"توصيل آمن",tr3_p:"شحن مؤمَّن بالكامل عبر Brink's. يُسلَّم إلى دبي في صندوق خشب الكيري.",
+    tr3_h:"تقرير صوري",tr3_p:"نصوّر كل خطوة من عملية إغلاق الشعر ونرسل لك الصور قبل التسليم.",
     tr4_h:"ضمان 7 أيام",tr4_p:"امتثالاً لقانون حماية المستهلك الإماراتي، نقف خلف كل قطعة نصنعها.",
     story_label:"قصتنا",
     story_title:"وُلد من <em>الخسارة.</em><br>صُنع من الحب.",
     story_p1:"في عام 2011، أمسكت مؤسستنا بابنها المولود لثلاثة أيام — ثم ودّعته. في تلك الحزن، وُلد سؤال: كيف نحمل من نحب عندما لا يستطيعون السير إلى جانبنا بعد الآن؟",
-    story_p2:"بعد سبع سنوات، وُلد Rion&Rings. سُمي على اسم ذلك الابن، بُني على ذلك الحب. كل قطعة تبدأ ليس بالذهب، بل بقصتك أنت.",
+    story_p2:"اكتشفت مجوهرات الذكرى — خاتماً يحمل جزءاً من ابنها قريباً من قلبها إلى الأبد. بعد سبع سنوات، في 2018، أسست Rion — سُمي على اسم ذلك الابن. كل قطعة نصنعها تبدأ ليس بالذهب، بل بقصتك أنت.",
     story_quote:'"شكل الحب لا يختفي.<br>إنه ببساطة يتغير."',
-    story_p3:"خصلة شعر من شخص عزيز — طفل، والد، شريك، حيوان أليف — تصبح جوهرة تحملها إلى الأبد. الوحيدة من نوعها في العالم.",
+    story_p3:"خصلة شعر من شخص عزيز — طفل، والد، شريك، حيوان أليف — تصبح جوهرة تحملها إلى الأبد. سم واحد. خصلة واحدة. هذا كل ما نحتاجه لتحملهم معك دائماً.",
     process_title:"من <em>شعرك</em><br>إلى قلبك.",
-    process_intro:"نتولى كل شيء نيابةً عنك — من دبي إلى اليابان والعودة. إليك كيف يعمل النظام بالضبط.",
+    process_intro:"نتولى كل شيء نيابةً عنك — من دبي إلى اليابان والعودة. إليك كيف يعمل بالضبط.",
     phase1_label:"المرحلة 1 — طقم تجميع الشعر · Hair Collection Kit · 採取キット",
-    kit1_t:"نرسل لك الطقم",kit1_b:"بعد تأكيد طلبك، نرسل طقم تجميع آمن إلى عنوانك في دبي عبر DHL — ظرف مختوم، تعليمات بالعربية والإنجليزية، وملصق إرجاع مدفوع الأجر. يصل خلال 3-5 أيام.",kit1_tag:"دبي ← اليابان",
-    kit2_t:"تجمع الشعر",kit2_b:"اتبع التعليمات البسيطة لجمع كمية صغيرة من الشعر (حوالي 1-2 سم، بضع خصلات). ضعها في الظرف المختوم. لا تحتاج أي معدات خاصة.",kit2_tag:"في منزلك",
-    kit3_t:"الإرجاع إلى اليابان",kit3_b:"أرسل الظرف المختوم إلى مرسمنا باستخدام ملصق DHL المدفوع مسبقاً. جميع إقرارات الجمارك مكتملة مسبقاً من قِبَلنا — فقط اتركه عند أي نقطة DHL في دبي.",kit3_tag:"اليابان ← المرسم",
-    phase_divider:"يصل الشعر إلى مرسمنا الياباني · تبدأ الصياغة",
+    kit1_t:"نرسل لك الطقم",kit1_b:"بعد تأكيد طلبك، نرسل طقم تجميع آمن إلى دبي عبر DHL — ظرف مختوم، تعليمات بالعربية والإنجليزية، وملصق إرجاع مدفوع. يصل خلال 3-5 أيام.",kit1_tag:"اليابان → دبي",
+    kit2_t:"تجمع الشعر",kit2_b:"اجمع سم واحداً من الشعر — بضع خصلات. حتى أقل من ذلك مقبول. ضعه في الظرف المختوم. لا تحتاج أي معدات خاصة. للحيوانات الأليفة، نفس العملية.",kit2_tag:"في منزلك",
+    kit3_t:"الإرجاع إلى اليابان",kit3_b:"اتركه في أي نقطة DHL في دبي باستخدام ملصقنا المدفوع مسبقاً. جميع الإقرارات الجمركية مكتملة مسبقاً من قبلنا. يصل إلى مرسمنا خلال 3-5 أيام.",kit3_tag:"دبي → اليابان",
+    amount_title:"كم من الشعر نحتاج؟",
+    amount1_label:"شعر إنساني",amount1_val:"سم واحد، خصلة واحدة. حتى أقل من ذلك مقبول تماماً.",
+    amount2_label:"فراء الحيوانات",amount2_val:"سم واحد، خصلة واحدة. نفس الكمية البسيطة.",
+    phase_divider:"يصل الشعر إلى مرسمنا · تبدأ الصياغة",
     phase2_label:"المرحلة 2 — الصياغة اليابانية · Japanese Craftsmanship · 日本の職人技",
-    s1_t:"تصميم حصري",s1_b:"يقترح حرفيّنا تصميماً من ذهب 18K أو البلاتين. توافق قبل بدء أي عمل. الألماس والياقوت متاحان.",
+    s1_t:"تصميم حصري",s1_b:"يقترح حرفيّنا تصميماً من ذهب 18K أو البلاتين. الألماس والياقوت متاحان. توافق قبل بدء أي عمل.",
     s2_t:"الصياغة اليدوية",s2_b:"يُثبَّت الشعر يدوياً داخل الجوهرة. كل مادة مصدرها ومشغولة في اليابان. 4-8 أسابيع.",
-    s3_t:"الجودة والشهادة",s3_b:"تُفحص كل قطعة وتُصوَّر. تُعدّ شهادة الأصالة، تؤكد جوهرتك الفريدة وقصتها.",
-    s4_t:"توصيل إلى دبي",s4_b:"الشحن عبر Brink's Global Services في صندوق خشب الكيري. مؤمَّن بالكامل. DDP — لا رسوم عند التسليم.",
-    shipping_note:"<strong>الشحن والجمارك — نتولاه بالكامل.</strong> طقم التجميع يسافر دبي←اليابان عبر DHL. جوهرتك تعود عبر Brink's. جميع الجمارك والرسوم (5%) وضريبة القيمة المضافة الإماراتية (5%) مدفوعة مسبقاً. لا تدفع شيئاً إضافياً عند التسليم.",
-    col_title:"<em>المجموعة</em>",
-    col_sub:"كل قطعة مصنوعة حسب طلبك. لا توجد قطعتان متشابهتان. جميع الأسعار بالدرهم شاملة رسوم الاستيراد وضريبة القيمة المضافة (DDP — لا رسوم عند التسليم).",
+    s3_t:"التقرير الصوري",s3_b:"نصوّر الشعر قبل الإغلاق وأثناءه وبعده. تُرسَل الصور عبر واتساب — لترى بعينيك.",
+    s4_t:"توصيل إلى دبي",s4_b:"الشحن عبر Brink's في صندوق خشب الكيري مع شهادة الأصالة. مؤمَّن بالكامل. DDP — لا رسوم عند التسليم.",
+    shipping_note:"<strong>الشحن والجمارك — نتولاه بالكامل.</strong> الطقم يسافر دبي→اليابان عبر DHL. جوهرتك تعود عبر Brink's. الرسوم الإماراتية (5%) وضريبة القيمة المضافة (5%) مدفوعة مسبقاً من Rion. لا تدفع شيئاً إضافياً.",
+    col_title:"<em>المجموعة</em>",col_sub:"كل قطعة مصنوعة حسب طلبك. لا توجد قطعتان متشابهتان. جميع الأسعار بالدرهم شاملة الرسوم (DDP — لا رسوم عند التسليم).",
     badge1:"الأكثر اختياراً",badge3:"مميز",
-    p1_name:"الخاتم",p1_sub:"خاتم الذكرى · 記念リング",p1_body:"حلقة من ذهب 18K أو البلاتين مع غرفة مختومة تحتوي على خصلة شعر. أقرب طريقة لإبقاء عزيزك معك دائماً.",
-    p2_name:"القلادة",p2_sub:"قلادة الحب · ペンダント",p2_body:"قلادة بشكل هندسي أو عضوي تحتوي على خصلة قريبة من قلبك. متاحة مع إعداد الألماس.",
-    p3_name:"تصميم خاص",p3_sub:"تصميم خاص · フルオーダー",p3_body:"تصميم مخصص بالكامل مع حرفيّنا. الألماس والياقوت. الجوهرة الفريدة المطلقة.",
+    p1_name:"الخاتم",p1_sub:"خاتم الذكرى · 記念リング",p1_body:"حلقة من ذهب 18K أو البلاتين مع غرفة مختومة. ارتدِه قريباً منك دائماً. متوفر بجميع المقاسات — مقياس الخاتم مضمّن في الطقم.",
+    p2_name:"القلادة",p2_sub:"قلادة الحب · ペンダント",p2_body:"قلادة بشكل هندسي أو عضوي قريبة من قلبك. متاحة مع إعداد الألماس. تتسع لشعر أكثر من شخص في تصاميم مختارة.",
+    p3_name:"تصميم خاص",p3_sub:"تصميم خاص · フルオーダー",p3_body:"تصميم مخصص بالكامل مع حرفيّنا. الألماس والياقوت. يمكن أن يحتوي شعراً من أكثر من شخص. الجوهرة الفريدة المطلقة.",
     p_ddp:"DDP شامل جميع الرسوم",p_cta:"استفسر عبر واتساب →",
-    unique_stmt:"<strong>كل جوهرة من Rion&Rings هي الوحيدة من نوعها في العالم.</strong> لأنها مصنوعة من شعرك وحده، بتصميم حصري لك. جوهرة واحدة. قصة واحدة. عالم واحد.",
-    rev_title:"تُرتدى بـ<em>حب</em>",rev_sub:"عائلات في دبي والكويت واليابان",
-    rev1_text:'"أرتدي شعر ابنتي كل يوم. لا أحد يعرف ما تحتويه. لا يوجد شيء أثمن لديّ."',rev1_name:"ف. الراشدي",rev1_loc:"دبي، الإمارات",
-    rev2_text:'"وصل الطقم خلال أيام. التعليمات كانت واضحة بالعربية. والخاتم — لا أملك كلمات. إنه استثنائي."',rev2_name:"ن. المطوع",rev2_loc:"مدينة الكويت",
-    rev3_text:'"توفيت أمي العام الماضي. هذا الخاتم يحمل شعرها. لا أخلعه أبداً. شكراً Rion&Rings."',rev3_name:"س. تاناكا",rev3_loc:"طوكيو، اليابان",
+    advance_title:"✦ الطلب المسبق متاح",advance_body:"يمكنك طلب الجوهرة الآن وإرسال الشعر لاحقاً — في وقتك المناسب. مثالي لمن يريد تحضير القطعة مسبقاً. اسألنا عبر واتساب.",
+    unique_stmt:"<strong>كل جوهرة من Rion هي الوحيدة من نوعها في العالم.</strong> لأنها مصنوعة من شعرك وحده، بتصميم حصري لك. جوهرة واحدة. قصة واحدة. عالم واحد.",
+    voices_title:"تُرتدى بـ<em>حب</em>",voices_sub:"قصص حقيقية من عائلات تحمل أحباءها معها",
+    v1_text:'"توفي أخي فجأة. ارتديت الخاتم في حفل زفافي — وكان معي. التصميم جميل وأقدّره بلا حدود."',v1_name:"ف. الراشدي",v1_loc:"دبي، الإمارات",v1_tag:"أخ · خاتم",
+    v2_text:'"توفي ابني في حادث. صنعت أربعة خواتم — أحدها لصديقته منذ الطفولة. حين أعطيتها إياه، ابتسمت لأول مرة منذ فقدانه."',v2_name:"ن. المطوع",v2_loc:"مدينة الكويت",v2_tag:"ابن · خاتم × 4",
+    v3_text:'"قبل عامين فقدت ابنتي. كل عام نزور حقول الزهور التي كنا نذهب إليها معاً. الآن أرتدي الخاتم وتأتي معنا."',v3_name:"س. تاناكا",v3_loc:"طوكيو، اليابان",v3_tag:"ابنة · خاتم",
+    v4_text:'"38 سنة من الزواج. رحل فجأة. أمسك هذا الخاتم وما زلت أشعر بيده. كان يحبني في أي مكان. الآن آخذه معي في كل مكان."',v4_name:"م. يوشيدا",v4_loc:"أوساكا، اليابان",v4_tag:"زوج · خاتم",
+    v5_text:'"توفي زوجي في حادث وهو في الثامنة والعشرين. كنت حاملاً. حين وصل الخاتم قالت ابنتي الصغيرة ما أجمله. الآن نحن دائماً معاً."',v5_name:"ي. كيمورا",v5_loc:"ناغويا، اليابان",v5_tag:"زوج · خاتم",
+    v6_text:'"وصل الطقم خلال أيام. التعليمات واضحة بالعربية. التقرير الصوري الذي أرسلوه وهم يغلقون الشعر أبكاني من التأثر."',v6_name:"أ. السيد",v6_loc:"أبوظبي، الإمارات",v6_tag:"أم · خاتم",
     faq_title:"أسئلتك، <em>مُجابة</em>",
-    fq1:"كيف يعمل تجميع الشعر من دبي؟",fa1:"نرسل طقماً آمناً إلى عنوانك في دبي عبر DHL (3-5 أيام). يحتوي على ظرف مختوم وتعليمات بالعربية والإنجليزية وملصق إرجاع مدفوع. تجمع الشعر وتتركه عند أي نقطة DHL — نتولى جميع إجراءات الجمارك.",
-    fq2:"هل إرسال الشعر من الإمارات إلى اليابان قانوني؟",fa2:"نعم، تماماً. الشعر المقطوع ليس مادة مقيدة في جمارك الإمارات أو اليابان. جميع الإقرارات الجمركية على ظرف الإرجاع مكتملة مسبقاً من قِبَلنا.",
-    fq3:"كم يستغرق الفرايند بالكامل؟",fa3:"حوالي 6-10 أسابيع: شحن الطقم (أسبوع)، إرجاع الشعر (أسبوع)، الصياغة (4-8 أسابيع). نقدم تحديثات طوال الفترة.",
-    fq4:"هل هناك رسوم إضافية عند التسليم؟",fa4:"لا شيء. جميع الأسعار DDP — رسوم الاستيراد الإمارات (5%) وضريبة القيمة المضافة (5%) مدفوعة مسبقاً من قِبَلنا.",
-    fq5:"ما سياسة الإرجاع؟",fa5:"وفقاً لقانون حماية المستهلك الإماراتي، نقدم نافذة إرجاع 7 أيام. نعمل معك طوال الإنتاج لضمان رضاك التام.",
-    fq6:"هل يمكنني الطلب لشعر حيوان أليف؟",fa6:"نعم. كثير من عملائنا يطلبون قطعاً لحيواناتهم. الطقم يعمل لوبر الحيوانات أيضاً — التعليمات بالعربية والإنجليزية مضمّنة.",
-    con_title:"ابدأ<br><em>قصتك.</em>",
-    con_body:"كل قطعة تبدأ بمحادثة. تواصل معنا عبر واتساب أو إنستغرام — نرد شخصياً بالعربية والإنجليزية واليابانية.",
-    con_sub:"شحن مجاني مؤمَّن · أسعار DDP · سياسة إرجاع 7 أيام · صُنع بالكامل في اليابان",
+    fq1:"كم من الشعر تحتاجون؟",fa1:"سم واحد، خصلة واحدة. حتى أقل من ذلك مقبول تماماً. لفراء الحيوانات نفس الشيء. نعمل مع أي كمية تستطيع تقديمها.",
+    fq2:"كيف يعمل التجميع من دبي؟",fa2:"نرسل طقماً آمناً إلى دبي عبر DHL (3-5 أيام). يحتوي: ظرف مختوم، تعليمات بالعربية والإنجليزية، ملصق إرجاع مدفوع. اتركه في أي نقطة DHL — نتولى الجمارك.",
+    fq3:"هل يمكنني رؤية إغلاق الشعر؟",fa3:"نعم. نصوّر الشعر قبل الإغلاق وأثناءه وبعده — محكم الإغلاق. نرسل الصور عبر واتساب قبل الشحن. راحة بال كاملة.",
+    fq4:"كم يستغرق؟",fa4:"حوالي 6-10 أسابيع: توصيل الطقم (أسبوع) + إرجاع الشعر (أسبوع) + الصياغة (4-8 أسابيع). نرسل تحديثات طوال الفترة.",
+    fq5:"هل يمكنني الطلب الآن وإرسال الشعر لاحقاً؟",fa5:"نعم. نقدم الطلب المسبق — تُصنع الجوهرة أولاً وترسل الشعر لاحقاً في وقتك. اسألنا عبر واتساب.",
+    fq6:"هل يمكن وضع شعر أكثر من شخص في قطعة واحدة؟",fa6:"نعم، في تصاميم مختارة. يمكن إغلاق شعر أكثر من شخص معاً. اسألنا عن التصاميم المتاحة.",
+    fq7:"هل هناك رسوم إضافية عند التسليم؟",fa7:"لا شيء. جميع الأسعار DDP — رسوم الاستيراد (5%) وضريبة القيمة المضافة (5%) مدفوعة مسبقاً. لا تدفع شيئاً عند الاستلام.",
+    fq8:"هل يمكنني الطلب لحيوان أليف؟",fa8:"نعم. كثير من عملائنا يطلبون قطعاً لحيواناتهم. الطقم والعملية متطابقان. سم واحد من الفراء هو كل ما نحتاجه.",
+    fq9:"ما سياسة الإرجاع؟",fa9:"قانون حماية المستهلك الإماراتي — نافذة إرجاع 7 أيام. نعمل معك طوال الإنتاج لضمان رضاك التام.",
+    fq10:"ماذا يحدث للشعر المتبقي؟",fa10:"أي شعر متبقٍّ — مهما كانت الكمية — يُعاد إليك في حاوية مخصصة مع جوهرتك المكتملة. لا يُتخلص من أي شيء ثمين.",
+    con_title:"ابدأ<br><em>قصتك.</em>",con_body:"كل قطعة من Rion تبدأ بمحادثة. تواصل معنا عبر واتساب أو إنستغرام — نرد شخصياً بالعربية والإنجليزية واليابانية.",
+    con_sub:"شحن مجاني مؤمَّن · أسعار DDP شاملة · إرجاع 7 أيام · صُنع بالكامل في اليابان",
     mij_label:"100% Made in Japan · صُنع في اليابان · 100%日本製",
     mij_body:"كل عنصر مصدره ومصنوع بالكامل في اليابان. حرفيونا يجمعون عقوداً من صياغة الذهب التقليدية مع التصميم الحديث.",
-    wa_sub:"أسرع رد · عربي وإنجليزي وياباني",ship_label:"شحن مجاني مؤمَّن عبر Brink's",
+    wa_sub:"أسرع رد · عربي وإنجليزي وياباني",ship_label:"شحن مجاني مؤمَّن عبر Brink's",hours_label:"ساعات الرد",hours_val:"9:00–19:00 بتوقيت اليابان · خارج الأوقات أيضاً متاح",
     legal_title:"المعلومات القانونية وبيانات الامتثال",
-    leg1_h:"حقوق المستهلك (الإمارات)",leg1_p:"جميع الأسعار بالدرهم شاملة DDP، امتثالاً للمرسوم رقم 15/2020. نافذة إرجاع 7 أيام.",
-    leg2_h:"المنتج والشحن",leg2_1:"جميع القطع مصنوعة بالكامل في اليابان",leg2_2:"شهادة أصالة مع كل طلب",leg2_3:"الشحن عبر Brink's Global Services",leg2_4:"الشعر: غير خطر بيولوجياً، متوافق مع الجمارك",leg2_5:"لا رسوم إضافية عند التسليم (شروط DDP)",
-    leg3_h:"معلومات الأعمال",leg3_p:"Rion&Rings · تأسس 2018، اليابان · المرسوم رقم 14/2023 · متوافق مع AML.",
-    footer_r:"تأسس 2018 · اليابان · شحن إلى الإمارات والخليج",
-    sticky_text:"<strong>الجوهرة الوحيدة من نوعها في العالم.</strong> &nbsp;من AED 8,800 DDP · طقم مجاني إلى دبي.",
+    leg1_h:"حقوق المستهلك (الإمارات)",leg1_p:"جميع الأسعار بالدرهم DDP، امتثالاً للمرسوم رقم 15/2020. نافذة إرجاع 7 أيام. فواتير بالعربية والإنجليزية.",
+    leg2_h:"المنتج والشحن",leg2_1:"جميع القطع مصنوعة بالكامل في اليابان",leg2_2:"شهادة أصالة مع كل طلب",leg2_3:"تقرير صوري لعملية الإغلاق مضمّن",leg2_4:"الشحن عبر Brink's (مؤمَّن بالكامل)",leg2_5:"الشعر: غير خطر، متوافق مع الجمارك",leg2_6:"لا رسوم إضافية عند التسليم (DDP)",
+    leg3_h:"معلومات الأعمال",leg3_p:"Rion (المعروف سابقاً بـ Rion&Rings) · تأسس 2018، اليابان · المرسوم رقم 14/2023 · متوافق مع AML.",
+    footer_r:"تأسس 2018 · اليابان · الإمارات والخليج",
+    gallery_label:"أعمالنا · Our Work · 作品集",
+    ps1_title:"ذهب 18K، بلاتين<br>و<em>أحجار كريمة</em>",
+    ps1_body:"كل مادة في جوهرة Rion مصدرها ومصنوعة يدوياً بالكامل في اليابان. ذهب أصفر وأبيض ووردي وبلاتين — جميعها متاحة. الألماس والياقوت والياقوت الأزرق متوفرة لأي تصميم.",
+    ps2_title:"مصنوع بعناية،<br><em>مُسلَّم بحب.</em>",
+    ps2_body:"تصل كل قطعة مكتملة في صندوق خشب الكيري الياباني — صندوق خشبي تقليدي يُستخدم للأشياء الثمينة في اليابان منذ قرون. بداخله: جوهرتك الفريدة، شهادة الأصالة، والتقرير الصوري لعملية الإغلاق.",
+    sticky_text:"<strong>الجوهرة الوحيدة من نوعها في العالم.</strong> &nbsp;من AED 22,000 DDP · سم واحد من الشعر فقط.",
     sticky_wa:"💬 واتساب",sticky_order:"ابدأ الطلب →"
   },
   ja:{
-    announce:"ドバイ・UAE・クウェートへ無料保険付き配送 &nbsp;|&nbsp; <span>すべて日本製</span>",
-    nav_story:"ストーリー",nav_process:"制作工程",nav_collection:"コレクション",nav_faq:"FAQ",nav_contact:"お問い合わせ",nav_cta:"ご注文",
+    announce:"ドバイ・UAE・クウェートへ保険付き無料配送 &nbsp;|&nbsp; <span>100% 日本製</span>",
+    nav_story:"ストーリー",nav_process:"ご注文の流れ",nav_collection:"コレクション",nav_voices:"お客様の声",nav_faq:"よくある質問",nav_contact:"お問い合わせ",nav_cta:"ご注文",
     chip1:"2018年創業 · 日本",chip2:"100% 日本製",chip3:"K18ゴールド · プラチナ",
     hero_eyebrow:"ドバイ限定 · オーダーメイド メモリアルジュエリー",
     hero_title:"愛する人を、<br><em>永遠に。</em>",
-    hero_body:"一本の毛髪。一生分の愛。日本の金の中に永遠に。すべての作品は世界にひとつだけ——日本で完全に手作りで、あなただけのために。",
+    hero_body:"たった1cmの毛髪——1本。日本の金の中に永遠に封じ込めて。すべての作品は世界にひとつだけ、日本で完全に手作りで、あなただけのために。",
     unique_badge:"世界に一点だけの、唯一無二のジュエリー",hero_cta1:"ご注文はこちら",hero_cta2:"WhatsAppで相談",
     social_proof:"ドバイ・クウェート・日本のご家族から信頼されています",
     float1:"世界に一点だけ",float2:"UAE発送対応",float3:"K18 · プラチナ · ダイヤ",
-    scar1:"点が現在制作中",scar2:"各作品の完成まで4〜8週間",scar3:"ドバイ・UAE 保険付き無料配送",scar4:"真正証明書付き",
+    scar1:"点が現在制作中",scar2:"必要な毛髪はたった1cm・1本",scar3:"ドバイ・UAE 保険付き無料配送",scar4:"真正証明書＋納骨写真レポート付き",
     tr1_h:"世界に一点だけ",tr1_p:"すべての作品はオーダーメイドの一点もの。同じものは世界に二つとありません。",
-    tr2_h:"100% 日本製",tr2_p:"金・プラチナ・ダイヤ・セッティングまで、すべての素材が日本産・日本加工です。",
-    tr3_h:"安全なお届け",tr3_p:"Brink's Global Servicesによる保険付き配送。桐箱に入れてドバイへ。",
+    tr2_h:"100% 日本製",tr2_p:"金・プラチナ・ダイヤ・セッティングまで、すべての素材が日本産・日本加工。",
+    tr3_h:"納骨写真レポート",tr3_p:"毛髪の封入前・封入中・封入後の写真を撮影し、お届け前にお送りします。",
     tr4_h:"7日間保証",tr4_p:"UAE消費者保護法に準拠し、すべての作品に責任を持っています。",
     story_label:"ブランドストーリー",
     story_title:"<em>悲しみ</em>から生まれ、<br>愛で作られた。",
     story_p1:"2011年、創業者は生後3日の息子を腕の中で看取りました。その悲しみの中で問いが生まれました——「大切な人が傍にいられなくなったとき、どうすれば一緒にいられるのか」",
-    story_p2:"7年後、Rion&Ringsが誕生。息子「リオン」の名を冠し、その愛の上に築かれています。すべての作品はあなたのストーリーから始まります。",
+    story_p2:"遺骨ジュエリーに出会い、息子を心の近くに感じられるリングを作りました。それから7年後、2018年に「Rion」を創業——息子リオンの名を冠したブランドです。すべての作品はあなたのストーリーから始まります。",
     story_quote:'「愛の形は消えない。<br>ただ、変わるだけ。」',
-    story_p3:"大切な人の一本の毛髪が、永遠に身につけるジュエリーになります。完全に日本製。世界にひとつだけの存在。",
+    story_p3:"大切な人の毛髪——お子様、ご両親、パートナー、愛するペット——が、永遠に身につけるジュエリーになります。たった1cm・1本。それだけで、いつも一緒にいられます。",
     process_title:"あなたの<em>毛髪</em>から、<br>心へ。",
     process_intro:"ドバイから日本、そして再びドバイへ——すべてこちらで対応します。具体的な流れをご説明します。",
     phase1_label:"Phase 1 — 毛髪採取キット · Hair Collection Kit · طقم تجميع الشعر",
-    kit1_t:"採取キットをお届け",kit1_b:"ご注文確定後、DHLにてドバイのご住所に採取キットをお送りします——密封封筒・英語&アラビア語説明書・返送用プリペイドラベル入り。3〜5日でお届けします。",kit1_tag:"ドバイ → 日本",
-    kit2_t:"毛髪を採取",kit2_b:"説明書に従い、少量の毛髪（約1〜2cm、数本）を採取して密封封筒に入れてください。特別な道具は一切不要です。",kit2_tag:"ご自宅で",
-    kit3_t:"日本のアトリエへ返送",kit3_b:"同封のDHLプリペイドラベルを貼って、ドバイの任意のDHL拠点に持ち込むだけ。通関書類はすべてこちらで記入済みです。",kit3_tag:"日本のアトリエへ",
+    kit1_t:"採取キットをお届け",kit1_b:"ご注文確定後、DHLにてドバイのご住所に採取キットをお送りします——密封封筒・英語&アラビア語説明書・返送用プリペイドラベル入り。3〜5日でお届け。",kit1_tag:"日本 → ドバイ",
+    kit2_t:"毛髪を採取",kit2_b:"説明書に従い、1cm・1本の毛髪を採取して密封封筒に入れてください。それより少なくても問題ありません。特別な道具は不要。ペットの毛も同じ手順です。",kit2_tag:"ご自宅で",
+    kit3_t:"日本のアトリエへ返送",kit3_b:"ドバイの任意のDHL拠点にプリペイドラベル付きで持ち込むだけ。通関書類はすべてこちらで記入済みです。3〜5日で日本に到着。",kit3_tag:"ドバイ → 日本",
+    amount_title:"どのくらいの毛髪が必要ですか？",
+    amount1_label:"人間の毛髪",amount1_val:"1cm・1本。それより少なくても問題ありません。",
+    amount2_label:"ペットの毛",amount2_val:"1cm・1本。同じくとても少量で大丈夫です。",
     phase_divider:"毛髪が日本のアトリエに到着 · 制作開始",
     phase2_label:"Phase 2 — 日本の職人技 · Japanese Craftsmanship · الصياغة اليابانية",
     s1_t:"デザイン提案",s1_b:"職人がK18ゴールドまたはプラチナでのデザインをご提案。制作前にご承認いただきます。ダイヤ・ルビー・サファイヤも対応。",
     s2_t:"手作業での制作",s2_b:"毛髪を手作業でジュエリーに封入。すべての素材が日本産・日本加工。完成まで4〜8週間。",
-    s3_t:"品質確認と証明書",s3_b:"完成品を検査・撮影。あなたの唯一無二のジュエリーを証明する真正証明書を発行します。",
-    s4_t:"ドバイへお届け",s4_b:"Brink's Global Servicesにて桐箱に入れて発送。完全保険付き。DDP——お届け時の追加費用なし。",
-    shipping_note:"<strong>配送と通関——すべてこちらで対応。</strong>採取キットはDHLでドバイ→日本へ。完成作品はBrink'sで日本→ドバイへ。UAE輸入関税（5%）・VAT（5%）はすべてRion&Ringsが事前支払い済みです。お届け時の追加費用は一切ありません。",
-    col_title:"<em>コレクション</em>",
-    col_sub:"すべてオーダーメイドの一点もの。価格はUAE輸入関税・VATを含むDDP表示です——お届け時の追加費用なし。",
+    s3_t:"納骨写真レポート",s3_b:"封入前・封入中・封入後の写真を撮影し、発送前にWhatsAppでお送りします。ご自身の目で確認できます。",
+    s4_t:"ドバイへお届け",s4_b:"Brink's Global Servicesにて桐箱・真正証明書とともに発送。完全保険付き。DDP——お届け時の追加費用なし。",
+    shipping_note:"<strong>配送と通関——すべてこちらで対応。</strong>採取キットはDHLでドバイ→日本へ。完成作品はBrink'sで日本→ドバイへ。UAE関税（5%）・VAT（5%）はRionが事前支払い済み。お届け時の追加費用は一切ありません。",
+    col_title:"<em>コレクション</em>",col_sub:"すべてオーダーメイドの一点もの。価格はUAE関税・VAT込みのDDP表示です——お届け時の追加費用なし。",
     badge1:"人気No.1",badge3:"プレミアム",
-    p1_name:"リング",p1_sub:"خاتم الذكرى · 記念リング",p1_body:"K18ゴールドまたはプラチナのバンドに毛髪を封入。大切な人を最も身近に感じられる方法。",
-    p2_name:"ペンダント",p2_sub:"قلادة الحب · ペンダント",p2_body:"幾何学的またはオーガニックなフォルムのネックレス。ダイヤセッティングも対応。",
-    p3_name:"フルオーダー",p3_sub:"تصميم خاص · フルオーダー",p3_body:"ヘッドアーティザンとの完全コラボレーション。ダイヤ・ルビー・サファイヤ対応。究極の一点もの。",
+    p1_name:"リング",p1_sub:"خاتم الذكرى · 記念リング",p1_body:"K18ゴールドまたはプラチナのバンドに毛髪を封入。全サイズ対応——リングゲージが採取キットに同封されています。",
+    p2_name:"ペンダント",p2_sub:"قلادة الحب · ペンダント",p2_body:"幾何学的またはオーガニックなフォルムのネックレス。ダイヤセッティングも対応。一部デザインは複数人の毛髪を封入可能。",
+    p3_name:"フルオーダー",p3_sub:"تصميم خاص · フルオーダー",p3_body:"ヘッドアーティザンとの完全コラボレーション。ダイヤ・ルビー・サファイヤ対応。複数人の毛髪も封入可能。究極の一点もの。",
     p_ddp:"DDP・全税込み",p_cta:"WhatsAppで問い合わせる →",
-    unique_stmt:"<strong>Rion&Ringsのジュエリーはすべて、世界にひとつだけの存在です。</strong>あなたの毛髪だけで作られ、あなただけのためにデザインされるため、同一の作品は過去にも未来にも存在しません。一つのジュエリー。一つのストーリー。一つの世界。",
-    rev_title:"<em>愛</em>とともに",rev_sub:"ドバイ・クウェート・日本のご家族から",
-    rev1_text:"「毎日娘の髪を身につけています。中に何が入っているか、誰も知らない。私だけが知っています。」",rev1_name:"F. アル＝ラシディ",rev1_loc:"ドバイ、UAE",
-    rev2_text:"「キットが数日で届きました。説明書がアラビア語で分かりやすかった。そしてリング——言葉がありません。素晴らしい。」",rev2_name:"N. アル＝ムタワ",rev2_loc:"クウェートシティ",
-    rev3_text:"「昨年母が亡くなりました。このリングには母の髪が入っています。絶対に外しません。ありがとう。」",rev3_name:"田中 S.",rev3_loc:"東京、日本",
+    advance_title:"✦ 先行製作（後日納毛）も承ります",advance_body:"先にジュエリーを作成し、ご自身のタイミングで毛髪を送っていただく「先行製作」も対応しています。まだ準備ができていない方にも最適です。WhatsAppでお気軽にご相談ください。",
+    unique_stmt:"<strong>Rionのジュエリーはすべて、世界にひとつだけの存在です。</strong>あなたの毛髪だけで作られ、あなただけのためにデザインされるため、同一の作品は過去にも未来にも存在しません。一つのジュエリー。一つのストーリー。一つの世界。",
+    voices_title:"<em>愛</em>とともに",voices_sub:"大切な人を一緒に連れているご家族の実際の声",
+    v1_text:"「弟が突然亡くなりました。結婚式にリングをつけて弟も一緒に参加できました。指輪のデザインも可愛くて、とても気に入りました。」",v1_name:"F. アル＝ラシディ",v1_loc:"ドバイ、UAE",v1_tag:"弟 · リング",
+    v2_text:"「息子が事故で突如いなくなって。4つ製作した指輪の一つを息子の彼女に渡したら、凄くキラキラした笑顔で『ありがとう』って言ってくれました。」",v2_name:"N. アル＝ムタワ",v2_loc:"クウェートシティ",v2_tag:"息子 · リング×4",
+    v3_text:"「2年前に娘を亡くしました。毎年コスモス畑に行くのですが、今はリングをつけて一緒に行けます。本当に作ってよかったと思っています。」",v3_name:"田中 S.",v3_loc:"東京、日本",v3_tag:"娘 · リング",
+    v4_text:"「主人と38年。あっという間に逝ってしまいました。リングを握りしめて何処でも一緒に出かけたいと思っています。」",v4_name:"吉田 M.",v4_loc:"大阪、日本",v4_tag:"夫 · リング",
+    v5_text:"「事故で夫が28歳で亡くなり、2歳の子と妊娠中で。届いたリングを見て娘が『可愛いね』と言っておりました。これでずーっと一緒にいられます！」",v5_name:"木村 Y.",v5_loc:"名古屋、日本",v5_tag:"夫 · リング",
+    v6_text:"「採取キットが数日で届きました。説明書がアラビア語で分かりやすかった。納骨時の写真が送られてきたとき、感動で涙が出ました。」",v6_name:"A. アル＝サイード",v6_loc:"アブダビ、UAE",v6_tag:"母 · リング",
     faq_title:"よくある質問への<em>回答</em>",
-    fq1:"ドバイから毛髪の採取・送付はどうするの？",fa1:"ご注文後、DHLにてドバイのご住所に採取キットをお送りします（3〜5日）。密封封筒・日本語&英語&アラビア語説明書・返送用プリペイドラベル付き。毛髪を入れて任意のDHL拠点に持ち込むだけ——通関書類はすべてこちらで記入済みです。",
-    fq2:"UAEから日本への毛髪の送付は合法ですか？",fa2:"はい、完全に合法です。カットした毛髪はUAE・日本いずれの税関でも規制対象外です。生物学的検体でも危険物でもありません。返送封筒の通関書類はすべてこちらで記入済みです。",
-    fq3:"全体でどのくらいかかりますか？",fa3:"ご注文から納品まで約6〜10週間です。採取キット送付（1週間）＋毛髪返送（1週間）＋制作（4〜8週間）。随時進捗をご連絡します。",
-    fq4:"お届け時に追加費用はかかりますか？",fa4:"一切かかりません。すべてDDP表示で、UAE輸入関税（5%）・VAT（5%）はRion&Ringsが事前支払い済みです。",
-    fq5:"返品ポリシーは？",fa5:"UAE消費者保護法（連邦法令第15/2020号）に準拠し、7日間の返品窓口を設けています。制作前後を通じて完全なご満足をいただけるよう密に連携します。",
-    fq6:"ペットの毛でも注文できますか？",fa6:"はい。多くのお客様がペットのために制作を依頼されています。採取キットはペットの毛にも対応しており、説明書（英語・アラビア語）が付属しています。",
-    con_title:"あなたの<br><em>ストーリー</em>を始めよう。",
-    con_body:"Rion&Ringsのすべての作品は会話から始まります。WhatsAppまたはInstagram DMでお気軽に。日本語・英語・アラビア語で対応します。",
-    con_sub:"UAE 保険付き無料配送 · DDP価格 · 7日間返品 · 100%日本製",
+    fq1:"どのくらいの毛髪が必要ですか？",fa1:"1cm・1本で十分です。それより少なくても問題ありません。ペットの毛も同じくらいで大丈夫です。どんな少量でも対応します。",
+    fq2:"ドバイから毛髪はどうやって送りますか？",fa2:"ご注文後、DHLにてドバイのご住所に採取キットをお送りします（3〜5日）。密封封筒・説明書・返送用プリペイドラベル付き。任意のDHL拠点に持ち込むだけ——通関書類はすべてこちらで記入済みです。",
+    fq3:"納骨の様子を確認できますか？",fa3:"はい。毛髪の封入前・封入中・封入後の写真を撮影し、発送前にWhatsAppでお送りします。ご自身の目で確認できます。",
+    fq4:"全体でどのくらいかかりますか？",fa4:"採取キット送付（1週間）＋毛髪返送（1週間）＋制作（4〜8週間）で合計約6〜10週間です。随時進捗をご連絡します。",
+    fq5:"先にジュエリーを作って後で毛髪を送ることはできますか？",fa5:"はい、「先行製作」を承っています。先にジュエリーを作成し、ご自身のタイミングで毛髪をお送りいただける形です。WhatsAppでご相談ください。",
+    fq6:"複数人の毛髪を一つに入れることはできますか？",fa6:"はい、一部のデザインで対応しています。ご注文の際にどのデザインが対応しているかお聞かせください。",
+    fq7:"お届け時に追加費用はかかりますか？",fa7:"一切かかりません。すべてDDP表示で、UAE関税（5%）・VAT（5%）はRionが事前支払い済みです。",
+    fq8:"ペットの毛でも注文できますか？",fa8:"はい。多くのお客様がペットのために制作を依頼されています。採取キットと手順は同じです。1cmの毛があれば大丈夫です。",
+    fq9:"返品ポリシーは？",fa9:"UAE消費者保護法（連邦法令第15/2020号）に準拠し、7日間の返品窓口を設けています。制作前後を通じて完全なご満足をいただけるよう密に連携します。",
+    fq10:"制作後に残った毛髪はどうなりますか？",fa10:"どんな少量でも残った毛髪は、完成したジュエリーと一緒に専用容器に入れてお返しします。大切なものは決して処分しません。",
+    con_title:"あなたの<br><em>ストーリー</em>を始めよう。",con_body:"Rionのすべての作品は会話から始まります。WhatsAppまたはInstagram DMでお気軽に。日本語・英語・アラビア語で対応します。",
+    con_sub:"UAE 保険付き無料配送 · DDP全込み価格 · 7日間返品 · 100%日本製",
     mij_label:"100% Made in Japan · صُنع في اليابان · 100%日本製",
     mij_body:"金・プラチナ・宝石・セッティングまで、すべての素材が日本産・日本加工。職人たちは数十年の伝統的な金細工の技術を現代デザインと融合させています。",
-    wa_sub:"最も早い対応 · 日本語・英語・アラビア語",ship_label:"Brink's経由 保険付き無料配送",
+    wa_sub:"最も早い対応 · 日本語・英語・アラビア語",ship_label:"Brink's経由 保険付き無料配送",hours_label:"対応時間",hours_val:"9:00〜19:00（JST）· 時間外も対応可能",
     legal_title:"法的情報・コンプライアンス情報",
-    leg1_h:"消費者権利（UAE）",leg1_p:"すべての価格はDDP・全税込みのAED表示（連邦法令第15/2020号準拠）。すべての注文に7日間返品窓口が適用されます。",
-    leg2_h:"製品・配送",leg2_1:"すべての作品を日本で完全に製作",leg2_2:"すべての注文に真正証明書",leg2_3:"Brink's Global Servicesで配送（保険付き）",leg2_4:"毛髪：生物学的危険物ではなく通関適合",leg2_5:"お届け時の追加費用なし（DDP）",
-    leg3_h:"事業者情報",leg3_p:"Rion&Rings · 2018年創業・日本 · 連邦法令第14/2023号準拠 · AML対応。",
-    footer_r:"2018年創業 · 日本 · UAE・湾岸地域発送",
-    sticky_text:"<strong>世界にひとつだけのジュエリー。</strong> &nbsp;AED 8,800〜 DDP · ドバイへ採取キット無料送付。",
+    leg1_h:"消費者権利（UAE）",leg1_p:"すべての価格はDDP・全税込みのAED表示（連邦法令第15/2020号準拠）。7日間返品窓口適用。英語・アラビア語の請求書発行。",
+    leg2_h:"製品・配送",leg2_1:"すべての作品を日本で完全に製作",leg2_2:"すべての注文に真正証明書",leg2_3:"納骨写真レポート付き",leg2_4:"Brink's Global Servicesで配送（保険付き）",leg2_5:"毛髪：生物学的危険物ではなく通関適合",leg2_6:"お届け時の追加費用なし（DDP）",
+    leg3_h:"事業者情報",leg3_p:"Rion（旧Rion&Rings）· 2018年創業・日本 · 連邦法令第14/2023号準拠 · AML対応。",
+    footer_r:"2018年創業 · 日本 · UAE・湾岸地域",
+    gallery_label:"作品集 · Our Work · أعمالنا",
+    ps1_title:"K18ゴールド、プラチナ<br>& <em>宝石</em>",
+    ps1_body:"Rionのジュエリーに使用するすべての素材は日本産・日本加工です。K18イエローゴールド・ホワイトゴールド・ピンクゴールド・プラチナすべてに対応。ダイヤ・ルビー・サファイヤも追加できます。",
+    ps2_title:"心を込めて作り、<br><em>愛を込めてお届け。</em>",
+    ps2_body:"完成した作品は、日本で古くから貴重品の保管に使われてきた伝統的な桐箱に入れてお届けします。中には唯一無二のジュエリー・真正証明書・納骨写真レポートが入っています。",
+    sticky_text:"<strong>世界にひとつだけのジュエリー。</strong> &nbsp;AED 8,800〜 DDP · 必要な毛髪はたった1cm。",
     sticky_wa:"💬 WhatsApp",sticky_order:"ご注文を始める →"
   }
 };
