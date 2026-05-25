@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Care Guide — Rion Memorial Jewellery | K18 Gold & Platinum</title>
+<meta name="description" content="How to care for your Rion bespoke memorial jewel. K18 gold and Pt900 platinum maintenance, daily wear, water resistance, and complimentary lifetime polishing service.">
+<meta name="theme-color" content="#1A1714">
+<link rel="canonical" href="https://rion.jewelry/care.html">
+<link rel="icon" type="image/jpeg" href="images/collection/ring.jpg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rion Care Guide — Made to Last for Generations">
+<meta property="og:description" content="Daily care, water tips, and lifetime polishing service for your Rion memorial jewel.">
+<meta property="og:image" content="images/packaging/box.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&family=Noto+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#8B6914;
+  --cream:#FAF7F2;--ink:#1A1714;--ink-soft:#4A4540;--ink-muted:#8A8480;
+  --border:rgba(201,169,110,0.25);--green:#128C7E;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:hidden}
+body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:1.25rem}
+.lang-switcher{display:flex;gap:2px}
+.lang-btn{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:4px 9px;border:0.5px solid var(--border);background:none;cursor:pointer;color:var(--ink-muted);font-family:'Jost',sans-serif;transition:all .2s}
+.lang-btn:hover{color:var(--gold);border-color:var(--gold)}
+.lang-btn.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s}
+.nav-cta:hover{background:var(--ink)}
+
+/* HAMBURGER */
+.hamburger{display:flex;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;position:relative;z-index:401;margin-left:0.5rem}
+.hamburger span{display:block;width:100%;height:1px;background:var(--ink);transition:all .35s ease}
+.hamburger:hover span{background:var(--gold-dark)}
+
+/* MENU OVERLAY */
+.menu-overlay{position:fixed;inset:0;background:var(--cream);z-index:400;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;overflow-y:auto}
+.menu-overlay.active{opacity:1;visibility:visible}
+.menu-inner{padding:6rem 4rem 3rem;min-height:100%;display:flex;flex-direction:column;justify-content:space-between;max-width:1200px;margin:0 auto}
+.menu-eyebrow{font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2.5rem;display:block}
+.menu-links{display:flex;flex-direction:column;gap:0}
+.menu-links a{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:300;color:var(--ink);text-decoration:none;letter-spacing:0.02em;transition:color .3s,padding-left .35s ease,background .3s;line-height:1;padding:1.2rem 0.5rem 1.2rem 0;display:flex;align-items:baseline;gap:1.5rem;border-bottom:0.5px solid rgba(26,23,20,0.12)}
+.menu-links a:first-child{border-top:0.5px solid rgba(26,23,20,0.12)}
+.menu-links a:hover{color:var(--gold-dark);padding-left:1.25rem;background:rgba(201,169,110,0.08)}
+.menu-links a em{font-style:italic;color:inherit}
+.menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
+.menu-links a.menu-active{color:var(--gold-dark)}
+.menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
+.menu-lang{display:flex;gap:0.4rem}
+.menu-lang button{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:8px 16px;border:0.5px solid rgba(26,23,20,0.3);background:transparent;cursor:pointer;color:var(--ink-soft);font-family:'Jost',sans-serif;transition:all .2s}
+.menu-lang button:hover,.menu-lang button.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#0E7567}
+.menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
+.menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
+.menu-close::before{transform:rotate(45deg)}
+.menu-close::after{transform:rotate(-45deg)}
+.menu-close:hover::before,.menu-close:hover::after{background:var(--gold-dark)}
+
+/* PAGE HERO */
+.page-hero{padding:7rem 6rem 5rem;text-align:center;background:linear-gradient(to bottom, #F0EBE0 0%, var(--cream) 100%);border-bottom:0.5px solid var(--border)}
+.page-eyebrow{font-size:0.65rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:block}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--ink);margin-bottom:1.5rem}
+.page-title em{font-style:italic;color:var(--gold-dark)}
+.page-lead{font-size:1rem;line-height:1.9;color:var(--ink-soft);max-width:680px;margin:0 auto;font-weight:300}
+
+/* PROMISE */
+.promise{padding:5rem 6rem;background:var(--ink);color:var(--cream);text-align:center;border-bottom:0.5px solid rgba(201,169,110,0.2)}
+.promise-eyebrow{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:block}
+.promise h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.3;max-width:780px;margin:0 auto 1rem}
+.promise h2 em{font-style:italic;color:var(--gold)}
+.promise p{font-size:0.95rem;line-height:1.9;color:rgba(250,247,242,0.65);max-width:640px;margin:0 auto}
+
+/* CARE STEPS */
+.care-section{padding:6rem 6rem;border-bottom:0.5px solid var(--border)}
+.care-header{text-align:center;margin-bottom:4rem}
+.care-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:0.75rem}
+.care-header h2 em{font-style:italic;color:var(--gold-dark)}
+.care-header p{font-size:0.92rem;line-height:1.85;color:var(--ink-soft);max-width:580px;margin:0 auto}
+
+.care-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:1100px;margin:0 auto}
+.care-card{background:#F7F3EC;border:0.5px solid var(--border);padding:2.5rem 2rem;position:relative;transition:border-color .3s}
+.care-card:hover{border-color:var(--gold)}
+.care-icon{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-style:italic;line-height:1;margin-bottom:1rem}
+.care-num{position:absolute;top:1.5rem;right:1.75rem;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:rgba(201,169,110,0.4);font-style:italic}
+.care-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;margin-bottom:1rem;line-height:1.3}
+.care-card h3 em{font-style:italic;color:var(--gold-dark)}
+.care-card p{font-size:0.88rem;line-height:1.9;color:var(--ink-soft)}
+
+/* DO / DONT */
+.dodont{padding:6rem 6rem;background:#F7F3EC;border-bottom:0.5px solid var(--border)}
+.dodont-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto}
+.dodont-col{padding:2.5rem;background:var(--cream);border:0.5px solid var(--border)}
+.dodont-col.do{border-top:3px solid var(--gold)}
+.dodont-col.dont{border-top:3px solid var(--ink)}
+.dodont-col h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;margin-bottom:1.5rem}
+.dodont-col h3 em{font-style:italic;color:var(--gold-dark)}
+.dodont-col ul{list-style:none;padding:0}
+.dodont-col li{font-size:0.92rem;line-height:1.7;color:var(--ink-soft);padding:0.85rem 0;border-bottom:0.5px dashed var(--border);display:flex;gap:12px;align-items:flex-start}
+.dodont-col li:last-child{border-bottom:none}
+.dodont-col li::before{font-family:'Cormorant Garamond',serif;font-size:1.1rem;line-height:1;flex-shrink:0;width:1.2rem}
+.dodont-col.do li::before{content:'✓';color:var(--gold-dark);font-weight:500}
+.dodont-col.dont li::before{content:'✕';color:#A85D5D}
+
+/* SERVICE */
+.service{padding:6rem 6rem;border-bottom:0.5px solid var(--border)}
+.service-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center}
+.service-grid img{width:100%;object-fit:cover;max-height:500px}
+.service-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
+.service-text h2 em{font-style:italic;color:var(--gold-dark)}
+.service-text p{font-size:0.92rem;line-height:1.95;color:var(--ink-soft);margin-bottom:1.5rem}
+.service-list{margin-top:2rem;padding-top:2rem;border-top:0.5px solid var(--border)}
+.service-list-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:0.5px solid var(--border)}
+.service-list-item:last-child{border-bottom:none}
+.service-list-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);font-style:italic;flex-shrink:0;width:2rem}
+.service-list-content h4{font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);margin-bottom:0.4rem}
+.service-list-content p{font-size:0.85rem;line-height:1.75;color:var(--ink-soft);margin:0}
+
+/* WATER */
+.water-section{padding:6rem 6rem;background:#F0EBE0;border-bottom:0.5px solid var(--border);text-align:center}
+.water-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:1000px;margin:3rem auto 0}
+.water-item{background:var(--cream);padding:2rem 1.25rem;border:0.5px solid var(--border)}
+.water-item.ok{border-top:2px solid var(--gold)}
+.water-item.no{border-top:2px solid #A85D5D}
+.water-icon{font-size:2rem;margin-bottom:0.75rem;display:block}
+.water-item h4{font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);margin-bottom:0.4rem}
+.water-item p{font-size:0.75rem;line-height:1.6;color:var(--ink-muted)}
+
+/* CTA */
+.cta-section{padding:7rem 6rem;text-align:center}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.25rem}
+.cta-section h2 em{font-style:italic;color:var(--gold-dark)}
+.cta-section p{font-size:0.95rem;line-height:1.9;color:var(--ink-soft);max-width:540px;margin:0 auto 2.5rem}
+.cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:var(--ink);padding:1rem 2.5rem;text-decoration:none;transition:background .3s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--gold-dark)}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
+.btn-wa:hover{background:#075E54}
+
+/* FOOTER */
+footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem}
+.footer-col h5{font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:400}
+.footer-brand .footer-logo{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);letter-spacing:0.16em;text-decoration:none;display:block;margin-bottom:1rem}
+.footer-brand p{font-size:0.78rem;line-height:1.85;color:rgba(250,247,242,0.55);margin-bottom:1.25rem;max-width:280px}
+.footer-brand .footer-est{font-size:0.65rem;letter-spacing:0.18em;color:rgba(201,169,110,0.5);text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul a{font-size:0.8rem;color:rgba(250,247,242,0.55);text-decoration:none;transition:color .25s}
+.footer-col ul a:hover{color:var(--gold-light)}
+.footer-social{display:flex;flex-direction:column;gap:0.6rem}
+.footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;color:rgba(250,247,242,0.55);text-decoration:none;transition:color .25s}
+.footer-social a:hover{color:var(--gold-light)}
+.footer-social-ico{display:inline-block;width:14px;text-align:center;color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;border-top:0.5px solid rgba(201,169,110,0.15);flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.65rem;color:rgba(250,247,242,0.3);letter-spacing:0.04em}
+.footer-right{font-size:0.65rem;color:rgba(201,169,110,0.35);letter-spacing:0.1em;text-transform:uppercase}
+
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);border:0.5px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:250;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s;font-size:1rem}
+.scroll-top:hover{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-top::before{content:'↑'}
+
+@media(max-width:1024px){
+  nav{padding:1.2rem 2rem}
+  .page-hero{padding:5rem 2rem 3rem}
+  .promise,.care-section,.dodont,.service,.water-section,.cta-section{padding:4rem 2rem}
+  .care-grid{grid-template-columns:1fr;gap:1.5rem}
+  .dodont-grid{grid-template-columns:1fr;gap:1.5rem}
+  .service-grid{grid-template-columns:1fr;gap:2.5rem}
+  .water-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  footer{padding:3rem 1.5rem 1.5rem}
+  .footer-grid{grid-template-columns:1fr;gap:2.5rem;margin-bottom:2rem}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:0.5rem}
+}
+
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:1.5rem;left:1.5rem;right:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;background:var(--ink);color:var(--cream);padding:1.25rem 1.5rem;border:0.5px solid var(--gold);z-index:380;display:none;align-items:center;gap:1.25rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,0.25)}
+.cookie-banner.visible{display:flex}
+.cookie-banner-text{flex:1;font-size:0.8rem;line-height:1.65;color:rgba(250,247,242,0.85);min-width:240px}
+.cookie-banner-text strong{color:var(--gold-light);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500}
+.cookie-banner-text a{color:var(--gold);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:0.5rem}
+.cookie-btn{padding:8px 16px;border:0.5px solid var(--gold);background:transparent;color:var(--gold);font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:all .25s}
+.cookie-btn:hover{background:var(--gold);color:var(--ink)}
+.cookie-btn-primary{background:var(--gold);color:var(--ink)}
+.cookie-btn-primary:hover{background:var(--gold-light)}
+
+</style>
+</head>
+<body class="lang-en">
+
+<nav>
+  <a href="rion-rings.html" class="nav-logo">Rion</a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ja')">JA</button>
+    </div>
+    <a href="rion-rings.html#contact" class="nav-cta">Order Now</a>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
+  <div class="menu-inner">
+    <div>
+      <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
+      <nav class="menu-links">
+        <a href="rion-rings.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
+        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span>FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span>Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">07</span><span>Care <em>Guide</em></span></a>
+        <a href="rion-rings.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span>Contact</span></a>
+      </nav>
+    </div>
+    <div class="menu-footer">
+      <div class="menu-lang">
+        <button onclick="setLang('en');closeMenu()">EN</button>
+        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ja');closeMenu()">JA</button>
+      </div>
+      <a href="https://wa.me/" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <span class="page-eyebrow" data-i18n="hero_eyebrow">Care Guide</span>
+  <h1 class="page-title" data-i18n="hero_title">Made to last<br><em>for generations.</em></h1>
+  <p class="page-lead" data-i18n="hero_lead">Your Rion jewel is solid K18 gold or Pt900 platinum, hermetically sealed in Japan. With simple daily care, it will remain as beautiful as the day it was made — and far beyond.</p>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+  <span class="promise-eyebrow" data-i18n="promise_eyebrow">The Rion Promise</span>
+  <h2 data-i18n="promise_title">Complimentary lifetime <em>polishing.</em><br>Forever.</h2>
+  <p data-i18n="promise_body">Every Rion piece comes with our lifetime maintenance service — free of charge, for as long as you own it. Polish, refresh, or refinish your jewel anytime by sending it to our Japanese atelier via DHL. We handle the rest.</p>
+</section>
+
+<!-- DAILY CARE -->
+<section class="care-section">
+  <div class="care-header">
+    <h2 data-i18n="daily_title">Daily <em>care.</em></h2>
+    <p data-i18n="daily_body">Four simple habits to keep your jewel looking exceptional.</p>
+  </div>
+  <div class="care-grid">
+    <div class="care-card">
+      <div class="care-num">01</div>
+      <div class="care-icon">✦</div>
+      <h3 data-i18n="d1_t">Wipe after <em>wearing</em></h3>
+      <p data-i18n="d1_b">After each use, gently wipe your jewel with a soft, lint-free cloth. This removes natural skin oils, sweat, and dust — keeping the metal lustrous and the hair chamber clear.</p>
+    </div>
+    <div class="care-card">
+      <div class="care-num">02</div>
+      <div class="care-icon">◯</div>
+      <h3 data-i18n="d2_t">Store with <em>care</em></h3>
+      <p data-i18n="d2_b">Place your jewel in the Rion exclusive case when not worn. Avoid storing alongside other jewellery to prevent scratches. Keep away from direct sunlight and humidity.</p>
+    </div>
+    <div class="care-card">
+      <div class="care-num">03</div>
+      <div class="care-icon">◇</div>
+      <h3 data-i18n="d3_t">Remove for <em>activities</em></h3>
+      <p data-i18n="d3_b">Take off before swimming pools, hot springs, saunas, and intense workouts. Apply perfume, lotion, and sunscreen before putting on the jewel — never directly on it.</p>
+    </div>
+    <div class="care-card">
+      <div class="care-num">04</div>
+      <div class="care-icon">✧</div>
+      <h3 data-i18n="d4_t">Clean <em>gently</em></h3>
+      <p data-i18n="d4_b">For light cleaning, use a soft cloth or a gentle jewellery polishing cloth. Avoid ultrasonic cleaners and harsh chemicals. For deep cleaning, send to our Japanese atelier.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DO / DONT -->
+<section class="dodont">
+  <div class="care-header">
+    <h2 data-i18n="dodont_title">Do &amp; <em>Don't.</em></h2>
+    <p data-i18n="dodont_body">A quick reference for your everyday wear.</p>
+  </div>
+  <div class="dodont-grid">
+    <div class="dodont-col do">
+      <h3 data-i18n="do_title"><em>Do</em></h3>
+      <ul>
+        <li data-i18n="do1">Wipe with a soft cloth after each wear</li>
+        <li data-i18n="do2">Store in the Rion exclusive case</li>
+        <li data-i18n="do3">Remove before swimming, sauna, hot spring</li>
+        <li data-i18n="do4">Apply perfume / lotion before putting on</li>
+        <li data-i18n="do5">Send to Japan for free lifetime polishing</li>
+        <li data-i18n="do6">Wear daily — it is made for it</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h3 data-i18n="dont_title"><em>Don't</em></h3>
+      <ul>
+        <li data-i18n="dont1">Expose to chlorine (pools, bleach)</li>
+        <li data-i18n="dont2">Spray perfume directly on the jewel</li>
+        <li data-i18n="dont3">Use ultrasonic cleaners</li>
+        <li data-i18n="dont4">Use abrasive cloths or toothpaste</li>
+        <li data-i18n="dont5">Knock against hard surfaces</li>
+        <li data-i18n="dont6">Attempt to open the hair chamber</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WATER GUIDANCE -->
+<section class="water-section">
+  <div class="care-header">
+    <h2 data-i18n="water_title">Water <em>guidance.</em></h2>
+    <p data-i18n="water_body">The hair chamber is hermetically sealed in Japan — water-resistant for daily life. Here's what's safe and what to avoid.</p>
+  </div>
+  <div class="water-grid">
+    <div class="water-item ok">
+      <span class="water-icon">🚿</span>
+      <h4 data-i18n="w1_t">Handwashing</h4>
+      <p data-i18n="w1_b">Safe</p>
+    </div>
+    <div class="water-item ok">
+      <span class="water-icon">🌧</span>
+      <h4 data-i18n="w2_t">Light Rain</h4>
+      <p data-i18n="w2_b">Safe</p>
+    </div>
+    <div class="water-item no">
+      <span class="water-icon">🏊</span>
+      <h4 data-i18n="w3_t">Pool / Sea</h4>
+      <p data-i18n="w3_b">Remove first</p>
+    </div>
+    <div class="water-item no">
+      <span class="water-icon">♨</span>
+      <h4 data-i18n="w4_t">Sauna / Hot Spring</h4>
+      <p data-i18n="w4_b">Remove first</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIFETIME SERVICE -->
+<section class="service">
+  <div class="service-grid">
+    <img src="images/packaging/box.jpg" alt="Rion exclusive case and lifetime service">
+    <div class="service-text">
+      <span class="page-eyebrow" data-i18n="srv_eyebrow">Lifetime Service</span>
+      <h2 data-i18n="srv_title">Returns to Japan,<br>returns to <em>new.</em></h2>
+      <p data-i18n="srv_body">Each Rion jewel can return to our Japanese atelier any time during its lifetime. Polishing is complimentary. Major repairs are quoted privately. The hair chamber and seal are inspected and refreshed at no additional cost.</p>
+      <div class="service-list">
+        <div class="service-list-item">
+          <div class="service-list-num">i</div>
+          <div class="service-list-content">
+            <h4 data-i18n="sl1_t">Message Us on WhatsApp</h4>
+            <p data-i18n="sl1_b">Tell us what your jewel needs. We respond personally with shipping instructions.</p>
+          </div>
+        </div>
+        <div class="service-list-item">
+          <div class="service-list-num">ii</div>
+          <div class="service-list-content">
+            <h4 data-i18n="sl2_t">Send Your Jewel via DHL</h4>
+            <p data-i18n="sl2_b">We provide return shipping guidance. Insure for the value (we'll help estimate).</p>
+          </div>
+        </div>
+        <div class="service-list-item">
+          <div class="service-list-num">iii</div>
+          <div class="service-list-content">
+            <h4 data-i18n="sl3_t">Refreshed &amp; Returned</h4>
+            <p data-i18n="sl3_b">Polishing takes 2–3 weeks. Repairs vary. We photograph the work and return fully insured.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 data-i18n="cta_title">Questions about your <em>jewel?</em></h2>
+  <p data-i18n="cta_body">Whether your piece needs a refresh, repair, or you just have a question — we're always here. Send us a message on WhatsApp.</p>
+  <div class="cta-group">
+    <a href="https://wa.me/" class="btn-wa" target="_blank">💬 <span data-i18n="cta_wa">Message Us on WhatsApp</span></a>
+    <a href="faq.html" class="btn-primary" data-i18n="cta_faq">Read FAQ</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="rion-rings.html" class="footer-logo">Rion</a>
+      <p>Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
+      <p class="footer-est">Est. 2018 · Japan</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="rion-rings.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About Rion</a></li>
+        <li><a href="rion-rings.html#process">How It Works</a></li>
+        <li><a href="rion-rings.html#voices">Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Help</h5>
+      <ul>
+        <li><a href="order.html">How to Order</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="care.html">Care Guide</a></li>
+        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+        <li><a href="legal.html">Legal &amp; Privacy</a></li>
+        <li><a href="rion-rings.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <div class="footer-social">
+        <a href="https://wa.me/" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
+        <a href="https://instagram.com/rion.rings_official" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
+        <a href="rion-rings.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — All prices incl. UAE duty & import VAT</div>
+    <div class="footer-right">Est. 2018 · Japan · UAE & Gulf</div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
+
+<script>
+// Cookie consent
+function acceptCookies(){
+  localStorage.setItem('rion_cookies_accepted','1');
+  const b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('visible');
+}
+(function(){
+  if(localStorage.getItem('rion_cookies_accepted') === '1') return;
+  setTimeout(()=>{
+    const b = document.getElementById('cookieBanner');
+    if(b) b.classList.add('visible');
+  }, 1200);
+})();
+
+document.querySelectorAll('img').forEach((img, i) => {
+  if (i >= 2 && !img.loading) img.loading = 'lazy';
+  if (!img.decoding) img.decoding = 'async';
+});
+
+function toggleMenu(){
+  const o = document.getElementById('menuOverlay');
+  const b = document.querySelector('.hamburger');
+  const a = o.classList.toggle('active');
+  b.classList.toggle('active', a);
+  o.setAttribute('aria-hidden', a ? 'false' : 'true');
+  document.body.style.overflow = a ? 'hidden' : '';
+}
+function closeMenu(){
+  document.getElementById('menuOverlay').classList.remove('active');
+  document.querySelector('.hamburger').classList.remove('active');
+  document.getElementById('menuOverlay').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
+
+window.addEventListener('scroll',()=>{
+  const t=document.getElementById('scrollTop');
+  window.scrollY>500?t.classList.add('visible'):t.classList.remove('visible');
+});
+
+const T={
+  en:{
+    menu_eyebrow:"Navigation",
+    hero_eyebrow:"Care Guide",
+    hero_title:"Made to last<br><em>for generations.</em>",
+    hero_lead:"Your Rion jewel is solid K18 gold or Pt900 platinum, hermetically sealed in Japan. With simple daily care, it will remain as beautiful as the day it was made — and far beyond.",
+    promise_eyebrow:"The Rion Promise",promise_title:"Complimentary lifetime <em>polishing.</em><br>Forever.",
+    promise_body:"Every Rion piece comes with our lifetime maintenance service — free of charge, for as long as you own it. Polish, refresh, or refinish your jewel anytime by sending it to our Japanese atelier via DHL. We handle the rest.",
+    daily_title:"Daily <em>care.</em>",daily_body:"Four simple habits to keep your jewel looking exceptional.",
+    d1_t:"Wipe after <em>wearing</em>",d1_b:"After each use, gently wipe your jewel with a soft, lint-free cloth. This removes natural skin oils, sweat, and dust — keeping the metal lustrous and the hair chamber clear.",
+    d2_t:"Store with <em>care</em>",d2_b:"Place your jewel in the Rion exclusive case when not worn. Avoid storing alongside other jewellery to prevent scratches. Keep away from direct sunlight and humidity.",
+    d3_t:"Remove for <em>activities</em>",d3_b:"Take off before swimming pools, hot springs, saunas, and intense workouts. Apply perfume, lotion, and sunscreen before putting on the jewel — never directly on it.",
+    d4_t:"Clean <em>gently</em>",d4_b:"For light cleaning, use a soft cloth or a gentle jewellery polishing cloth. Avoid ultrasonic cleaners and harsh chemicals. For deep cleaning, send to our Japanese atelier.",
+    dodont_title:"Do &amp; <em>Don't.</em>",dodont_body:"A quick reference for your everyday wear.",
+    do_title:"<em>Do</em>",
+    do1:"Wipe with a soft cloth after each wear",do2:"Store in the Rion exclusive case",do3:"Remove before swimming, sauna, hot spring",do4:"Apply perfume / lotion before putting on",do5:"Send to Japan for free lifetime polishing",do6:"Wear daily — it is made for it",
+    dont_title:"<em>Don't</em>",
+    dont1:"Expose to chlorine (pools, bleach)",dont2:"Spray perfume directly on the jewel",dont3:"Use ultrasonic cleaners",dont4:"Use abrasive cloths or toothpaste",dont5:"Knock against hard surfaces",dont6:"Attempt to open the hair chamber",
+    water_title:"Water <em>guidance.</em>",water_body:"The hair chamber is hermetically sealed in Japan — water-resistant for daily life. Here's what's safe and what to avoid.",
+    w1_t:"Handwashing",w1_b:"Safe",w2_t:"Light Rain",w2_b:"Safe",w3_t:"Pool / Sea",w3_b:"Remove first",w4_t:"Sauna / Hot Spring",w4_b:"Remove first",
+    srv_eyebrow:"Lifetime Service",srv_title:"Returns to Japan,<br>returns to <em>new.</em>",
+    srv_body:"Each Rion jewel can return to our Japanese atelier any time during its lifetime. Polishing is complimentary. Major repairs are quoted privately. The hair chamber and seal are inspected and refreshed at no additional cost.",
+    sl1_t:"Message Us on WhatsApp",sl1_b:"Tell us what your jewel needs. We respond personally with shipping instructions.",
+    sl2_t:"Send Your Jewel via DHL",sl2_b:"We provide return shipping guidance. Insure for the value (we'll help estimate).",
+    sl3_t:"Refreshed &amp; Returned",sl3_b:"Polishing takes 2–3 weeks. Repairs vary. We photograph the work and return fully insured.",
+    cta_title:"Questions about your <em>jewel?</em>",
+    cta_body:"Whether your piece needs a refresh, repair, or you just have a question — we're always here. Send us a message on WhatsApp.",
+    cta_wa:"Message Us on WhatsApp",cta_faq:"Read FAQ"
+  },
+  ar:{
+    menu_eyebrow:"القائمة",
+    hero_eyebrow:"دليل العناية",
+    hero_title:"مصنوعة لتدوم<br><em>لأجيال.</em>",
+    hero_lead:"جوهرة Rion مصنوعة من ذهب 18K أو بلاتين Pt900 خالص، مختومة هرمسياً في اليابان. مع عناية يومية بسيطة، ستبقى جميلة كما يوم صنعها — وأبعد بكثير.",
+    promise_eyebrow:"وعد Rion",promise_title:"خدمة التلميع <em>مدى الحياة.</em><br>إلى الأبد.",
+    promise_body:"كل قطعة Rion تأتي مع خدمة الصيانة مدى الحياة — مجاناً، طالما تمتلكها. لمّعي، جدّدي، أو أعيدي تلميع جوهرتك في أي وقت بإرسالها إلى مرسمنا الياباني عبر DHL. نتولى الباقي.",
+    daily_title:"العناية <em>اليومية.</em>",daily_body:"أربع عادات بسيطة تحافظ على مظهر جوهرتك استثنائياً.",
+    d1_t:"المسح بعد <em>الارتداء</em>",d1_b:"بعد كل استخدام، امسحي جوهرتك برفق بقطعة قماش ناعمة خالية من الوبر. هذا يزيل الزيوت الطبيعية والعرق والغبار — مما يحافظ على لمعان المعدن ووضوح غرفة الشعر.",
+    d2_t:"التخزين <em>بعناية</em>",d2_b:"ضعي جوهرتك في صندوق Rion الحصري عند عدم ارتدائها. تجنّبي تخزينها مع مجوهرات أخرى لمنع الخدوش. ابعديها عن أشعة الشمس المباشرة والرطوبة.",
+    d3_t:"النزع لـ<em>الأنشطة</em>",d3_b:"اخلعيها قبل المسابح والساونا والحمامات الساخنة والتمارين المكثفة. ضعي العطر والكريم والواقي الشمسي قبل ارتداء الجوهرة — وليس مباشرة عليها.",
+    d4_t:"التنظيف <em>برفق</em>",d4_b:"للتنظيف الخفيف، استخدمي قطعة قماش ناعمة أو قطعة تلميع المجوهرات. تجنّبي أجهزة التنظيف بالموجات فوق الصوتية والمواد الكيميائية القاسية. للتنظيف العميق، أرسليها إلى مرسمنا الياباني.",
+    dodont_title:"افعلي و<em>لا تفعلي.</em>",dodont_body:"مرجع سريع لارتدائك اليومي.",
+    do_title:"<em>افعلي</em>",
+    do1:"امسحي بقطعة قماش ناعمة بعد كل استخدام",do2:"احفظيها في صندوق Rion الحصري",do3:"اخلعيها قبل السباحة والساونا والحمامات الساخنة",do4:"ضعي العطر / الكريم قبل ارتدائها",do5:"أرسليها إلى اليابان للتلميع المجاني مدى الحياة",do6:"ارتديها يومياً — مصنوعة لذلك",
+    dont_title:"<em>لا تفعلي</em>",
+    dont1:"تعريضها للكلور (المسابح، المبيضات)",dont2:"رش العطر مباشرة على الجوهرة",dont3:"استخدام أجهزة التنظيف بالموجات فوق الصوتية",dont4:"استخدام أقمشة كاشطة أو معجون أسنان",dont5:"الاصطدام بالأسطح الصلبة",dont6:"محاولة فتح غرفة الشعر",
+    water_title:"إرشادات <em>الماء.</em>",water_body:"غرفة الشعر مختومة هرمسياً في اليابان — مقاومة للماء للحياة اليومية. إليك ما هو آمن وما يجب تجنبه.",
+    w1_t:"غسل اليدين",w1_b:"آمن",w2_t:"مطر خفيف",w2_b:"آمن",w3_t:"مسبح / بحر",w3_b:"اخلعي أولاً",w4_t:"ساونا / حمام ساخن",w4_b:"اخلعي أولاً",
+    srv_eyebrow:"خدمة مدى الحياة",srv_title:"تعود إلى اليابان،<br>تعود <em>جديدة.</em>",
+    srv_body:"يمكن لكل جوهرة Rion العودة إلى مرسمنا الياباني في أي وقت خلال حياتها. التلميع مجاني. الإصلاحات الكبيرة بسعر خاص. غرفة الشعر والختم يتم فحصها وتجديدها بدون رسوم إضافية.",
+    sl1_t:"راسلينا عبر واتساب",sl1_b:"أخبرينا ما تحتاجه جوهرتك. نرد شخصياً مع تعليمات الشحن.",
+    sl2_t:"أرسلي جوهرتك عبر DHL",sl2_b:"نقدم إرشادات الشحن المرتجع. أمّنيها بقيمتها (نساعدك في التقدير).",
+    sl3_t:"مجدّدة و<em>مُرجعة</em>",sl3_b:"التلميع يستغرق 2-3 أسابيع. الإصلاحات تختلف. نصوّر العمل ونرجعها مؤمّنة بالكامل.",
+    cta_title:"أسئلة عن <em>جوهرتك؟</em>",
+    cta_body:"سواء كانت قطعتك تحتاج تجديداً أو إصلاحاً، أو لديك سؤال فقط — نحن هنا دائماً. راسلينا عبر واتساب.",
+    cta_wa:"راسلينا عبر واتساب",cta_faq:"اقرئي الأسئلة الشائعة"
+  },
+  ja:{
+    menu_eyebrow:"メニュー",
+    hero_eyebrow:"お手入れガイド",
+    hero_title:"世代を超えて<br><em>受け継ぐ。</em>",
+    hero_lead:"Rionのジュエリーは無垢のK18ゴールドまたはPt900プラチナ製で、日本にて完全密封処理されています。簡単な日常のお手入れで、作られた日と変わらない美しさを——そしてそれ以上に、長くお使いいただけます。",
+    promise_eyebrow:"Rionの約束",promise_title:"生涯<em>無償</em>の<br>磨き直しサービス。",
+    promise_body:"すべてのRion作品には生涯メンテナンスサービスが付帯します——お持ちいただく限り、無償で。DHLにて日本のアトリエへお送りいただければ、いつでも磨き直し・リフレッシュ・仕上げ直しを承ります。あとはこちらで対応します。",
+    daily_title:"日々の<em>お手入れ。</em>",daily_body:"美しさを保つための、シンプルな4つの習慣。",
+    d1_t:"使用後の<em>拭き取り</em>",d1_b:"ご使用後は、柔らかいリントフリークロスで優しく拭いてください。皮脂・汗・ホコリを除去し、金属の輝きと毛の封入部分の透明感を保ちます。",
+    d2_t:"丁寧な<em>保管</em>",d2_b:"使用しないときはRion専用ケースに保管してください。他のジュエリーと一緒に置かないでください（傷防止）。直射日光・湿気は避けてください。",
+    d3_t:"場面に応じた<em>着脱</em>",d3_b:"プール・温泉・サウナ・激しい運動の前には外してください。香水・ローション・日焼け止めは、ジュエリーを着ける前に肌に塗ってください——直接かけないでください。",
+    d4_t:"優しい<em>クリーニング</em>",d4_b:"軽い汚れには柔らかい布またはジュエリー専用クロスをお使いください。超音波洗浄機や強い化学薬品は避けてください。本格的なクリーニングは日本のアトリエへ。",
+    dodont_title:"<em>する・しない。</em>",dodont_body:"日常使いの簡単リファレンス。",
+    do_title:"<em>する</em>",
+    do1:"使用後は柔らかい布で拭く",do2:"Rion専用ケースに保管する",do3:"プール・サウナ・温泉前に外す",do4:"香水・ローションは着ける前に塗布",do5:"日本へ送って無償メンテナンスを受ける",do6:"毎日着用——そのために作られています",
+    dont_title:"<em>しない</em>",
+    dont1:"塩素（プール・漂白剤）に触れさせる",dont2:"香水を直接吹きかける",dont3:"超音波洗浄機を使う",dont4:"研磨剤入り布や歯磨き粉を使う",dont5:"硬い表面にぶつける",dont6:"毛の封入部分を開けようとする",
+    water_title:"水と<em>のつきあい方。</em>",water_body:"毛の封入部分は日本にて完全密封処理されており、日常生活では耐水性があります。安全な場面と避けるべき場面のガイドです。",
+    w1_t:"手洗い",w1_b:"問題なし",w2_t:"小雨",w2_b:"問題なし",w3_t:"プール / 海",w3_b:"事前に外す",w4_t:"サウナ / 温泉",w4_b:"事前に外す",
+    srv_eyebrow:"生涯メンテナンス",srv_title:"日本に戻り、<br><em>新品同様</em>に。",
+    srv_body:"すべてのRionジュエリーは、お使いの間いつでも日本のアトリエへお送りいただけます。磨き直しは無償。本格的な修理は別途お見積もり。毛の封入部分とシールは無償で点検・リフレッシュします。",
+    sl1_t:"WhatsAppでメッセージ",sl1_b:"ジュエリーの状態をお知らせください。配送方法を個別にご案内します。",
+    sl2_t:"DHLで日本へ発送",sl2_b:"発送方法をご案内します。価値分の保険をお掛けください（金額の目安もご案内します）。",
+    sl3_t:"リフレッシュして<em>返送</em>",sl3_b:"磨き直しは2〜3週間。修理は内容により異なります。作業を写真で記録し、完全保険付きで返送します。",
+    cta_title:"ジュエリーについて<em>ご質問</em>は？",
+    cta_body:"リフレッシュ・修理・ちょっとした質問——いつでもお問い合わせください。WhatsAppでお気軽に。",
+    cta_wa:"WhatsAppでメッセージ",cta_faq:"よくある質問を見る"
+  }
+};
+
+function setLang(lang){
+  document.querySelectorAll('.lang-btn,.menu-lang button').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
+  document.body.className='lang-'+lang;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  const t=T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(t[k]!==undefined)el.innerHTML=t[k];
+  });
+}
+</script>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-text">
+    <strong>Cookie Notice</strong>
+    <span>This site uses only essential cookies for language preference. We do not use tracking or advertising cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
+  </div>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+
+</body>
+</html>

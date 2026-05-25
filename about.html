@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Rion — Our Story & Japanese Atelier | Memorial Jewellery</title>
+<meta name="description" content="Founded in 2018 in Japan, Rion creates the world's only bespoke hair memorial jewellery. Born from loss, made with love — discover our story, atelier, and philosophy.">
+<meta name="theme-color" content="#1A1714">
+<link rel="canonical" href="https://rion.jewelry/about.html">
+<link rel="icon" type="image/jpeg" href="images/collection/ring.jpg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About Rion — Born from Loss, Made with Love">
+<meta property="og:description" content="The story of Rion's founding, our Japanese atelier, and the philosophy behind every piece we create.">
+<meta property="og:image" content="images/story/main.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&family=Noto+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#8B6914;
+  --cream:#FAF7F2;--ink:#1A1714;--ink-soft:#4A4540;--ink-muted:#8A8480;
+  --border:rgba(201,169,110,0.25);--green:#128C7E;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:hidden}
+body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:1.25rem}
+.lang-switcher{display:flex;gap:2px}
+.lang-btn{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:4px 9px;border:0.5px solid var(--border);background:none;cursor:pointer;color:var(--ink-muted);font-family:'Jost',sans-serif;transition:all .2s}
+.lang-btn:hover{color:var(--gold);border-color:var(--gold)}
+.lang-btn.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s}
+.nav-cta:hover{background:var(--ink)}
+
+/* HAMBURGER */
+.hamburger{display:flex;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;position:relative;z-index:401;margin-left:0.5rem}
+.hamburger span{display:block;width:100%;height:1px;background:var(--ink);transition:all .35s ease}
+.hamburger:hover span{background:var(--gold-dark)}
+
+/* MENU OVERLAY */
+.menu-overlay{position:fixed;inset:0;background:var(--cream);z-index:400;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;overflow-y:auto}
+.menu-overlay.active{opacity:1;visibility:visible}
+.menu-inner{padding:6rem 4rem 3rem;min-height:100%;display:flex;flex-direction:column;justify-content:space-between;max-width:1200px;margin:0 auto}
+.menu-eyebrow{font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2.5rem;display:block}
+.menu-links{display:flex;flex-direction:column;gap:0}
+.menu-links a{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:300;color:var(--ink);text-decoration:none;letter-spacing:0.02em;transition:color .3s,padding-left .35s ease,background .3s;line-height:1;padding:1.2rem 0.5rem 1.2rem 0;display:flex;align-items:baseline;gap:1.5rem;border-bottom:0.5px solid rgba(26,23,20,0.12)}
+.menu-links a:first-child{border-top:0.5px solid rgba(26,23,20,0.12)}
+.menu-links a:hover{color:var(--gold-dark);padding-left:1.25rem;background:rgba(201,169,110,0.08)}
+.menu-links a em{font-style:italic;color:inherit}
+.menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
+.menu-links a.menu-active{color:var(--gold-dark)}
+.menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
+.menu-lang{display:flex;gap:0.4rem}
+.menu-lang button{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:8px 16px;border:0.5px solid rgba(26,23,20,0.3);background:transparent;cursor:pointer;color:var(--ink-soft);font-family:'Jost',sans-serif;transition:all .2s}
+.menu-lang button:hover,.menu-lang button.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#0E7567}
+.menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
+.menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
+.menu-close::before{transform:rotate(45deg)}
+.menu-close::after{transform:rotate(-45deg)}
+.menu-close:hover::before,.menu-close:hover::after{background:var(--gold-dark)}
+
+/* HERO */
+.page-hero{padding:7rem 6rem 5rem;text-align:center;background:linear-gradient(to bottom, #F0EBE0 0%, var(--cream) 100%);border-bottom:0.5px solid var(--border)}
+.page-eyebrow{font-size:0.65rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:block}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--ink);margin-bottom:1.5rem}
+.page-title em{font-style:italic;color:var(--gold-dark)}
+.page-lead{font-size:1rem;line-height:1.9;color:var(--ink-soft);max-width:640px;margin:0 auto;font-weight:300}
+
+/* SECTIONS */
+.section{padding:6rem 6rem;border-bottom:0.5px solid var(--border)}
+.section-dark{background:var(--ink);color:var(--cream)}
+.section-dark .section-title{color:var(--cream)}
+.section-dark .section-body{color:rgba(250,247,242,0.7)}
+.section-eyebrow{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:block}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem;color:var(--ink)}
+.section-title em{font-style:italic;color:var(--gold-dark)}
+.section-dark .section-title em{color:var(--gold)}
+.section-body{font-size:0.92rem;line-height:2;color:var(--ink-soft);max-width:680px;margin-bottom:1.5rem}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center}
+.two-col-rev{grid-template-columns:1.4fr 1fr}
+.two-col img{width:100%;display:block;object-fit:cover;max-height:560px}
+.two-col-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
+.two-col-text h2 em{font-style:italic;color:var(--gold-dark)}
+.two-col-text p{font-size:0.92rem;line-height:2;color:var(--ink-soft);margin-bottom:1.5rem}
+.section-dark .two-col-text p{color:rgba(250,247,242,0.65)}
+
+/* QUOTE */
+.quote-block{padding:6rem 6rem;background:#F7F3EC;text-align:center;border-bottom:0.5px solid var(--border)}
+.quote-mark{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);line-height:1;margin-bottom:0.5rem}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;font-style:italic;line-height:1.5;color:var(--ink);max-width:780px;margin:0 auto 2rem}
+.quote-author{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted)}
+.quote-author strong{color:var(--gold-dark);font-weight:400;display:block;margin-top:6px;font-size:0.78rem}
+
+/* VALUES GRID */
+.values{padding:6rem 6rem;border-bottom:0.5px solid var(--border)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-top:3rem}
+.value{padding:2rem;background:#F7F3EC;border:0.5px solid var(--border)}
+.value-icon{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-style:italic;margin-bottom:1rem;line-height:1}
+.value h3{font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);margin-bottom:0.75rem}
+.value p{font-size:0.85rem;line-height:1.85;color:var(--ink-soft)}
+
+/* TIMELINE */
+.timeline{padding:6rem 6rem;background:var(--ink);color:var(--cream);border-bottom:0.5px solid rgba(201,169,110,0.2)}
+.timeline-header{text-align:center;margin-bottom:4rem}
+.timeline-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2}
+.timeline-header h2 em{font-style:italic;color:var(--gold)}
+.timeline-list{max-width:780px;margin:0 auto;position:relative}
+.timeline-list::before{content:'';position:absolute;left:120px;top:0;bottom:0;width:0.5px;background:rgba(201,169,110,0.3)}
+.timeline-item{display:grid;grid-template-columns:120px 1fr;gap:3rem;padding-bottom:3rem;position:relative}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-year{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;color:var(--gold);text-align:right;padding-right:1rem;position:relative}
+.timeline-year::after{content:'◆';position:absolute;right:-1.5rem;top:0.5rem;color:var(--gold);font-size:0.7rem}
+.timeline-content h3{font-size:0.85rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.5rem}
+.timeline-content p{font-size:0.88rem;line-height:1.9;color:rgba(250,247,242,0.65)}
+
+/* CTA SECTION */
+.cta-section{padding:7rem 6rem;text-align:center}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.25rem}
+.cta-section h2 em{font-style:italic;color:var(--gold-dark)}
+.cta-section p{font-size:0.95rem;line-height:1.9;color:var(--ink-soft);max-width:540px;margin:0 auto 2.5rem}
+.cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:var(--ink);padding:1rem 2.5rem;text-decoration:none;transition:background .3s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--gold-dark)}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
+.btn-wa:hover{background:#075E54}
+
+/* FOOTER */
+footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem}
+.footer-col h5{font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:400}
+.footer-brand .footer-logo{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);letter-spacing:0.16em;text-decoration:none;display:block;margin-bottom:1rem}
+.footer-brand p{font-size:0.78rem;line-height:1.85;color:rgba(250,247,242,0.55);margin-bottom:1.25rem;max-width:280px}
+.footer-brand .footer-est{font-size:0.65rem;letter-spacing:0.18em;color:rgba(201,169,110,0.5);text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul a{font-size:0.8rem;color:rgba(250,247,242,0.55);text-decoration:none;transition:color .25s}
+.footer-col ul a:hover{color:var(--gold-light)}
+.footer-social{display:flex;flex-direction:column;gap:0.6rem}
+.footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;color:rgba(250,247,242,0.55);text-decoration:none;transition:color .25s}
+.footer-social a:hover{color:var(--gold-light)}
+.footer-social-ico{display:inline-block;width:14px;text-align:center;color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;border-top:0.5px solid rgba(201,169,110,0.15);flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.65rem;color:rgba(250,247,242,0.3);letter-spacing:0.04em}
+.footer-right{font-size:0.65rem;color:rgba(201,169,110,0.35);letter-spacing:0.1em;text-transform:uppercase}
+
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);border:0.5px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:250;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s;font-size:1rem}
+.scroll-top:hover{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-top::before{content:'↑'}
+
+@media(max-width:1024px){
+  nav{padding:1.2rem 2rem}
+  .page-hero{padding:5rem 2rem 3rem}
+  .section,.quote-block,.values,.timeline,.cta-section{padding:4rem 2rem}
+  .two-col,.two-col-rev{grid-template-columns:1fr;gap:2.5rem}
+  .values-grid{grid-template-columns:1fr;gap:1.5rem}
+  .timeline-list::before{left:60px}
+  .timeline-item{grid-template-columns:60px 1fr;gap:1.5rem}
+  .timeline-year{font-size:1.3rem}
+  footer{padding:3rem 1.5rem 1.5rem}
+  .footer-grid{grid-template-columns:1fr;gap:2.5rem;margin-bottom:2rem}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:0.5rem}
+}
+
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:1.5rem;left:1.5rem;right:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;background:var(--ink);color:var(--cream);padding:1.25rem 1.5rem;border:0.5px solid var(--gold);z-index:380;display:none;align-items:center;gap:1.25rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,0.25)}
+.cookie-banner.visible{display:flex}
+.cookie-banner-text{flex:1;font-size:0.8rem;line-height:1.65;color:rgba(250,247,242,0.85);min-width:240px}
+.cookie-banner-text strong{color:var(--gold-light);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500}
+.cookie-banner-text a{color:var(--gold);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:0.5rem}
+.cookie-btn{padding:8px 16px;border:0.5px solid var(--gold);background:transparent;color:var(--gold);font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:all .25s}
+.cookie-btn:hover{background:var(--gold);color:var(--ink)}
+.cookie-btn-primary{background:var(--gold);color:var(--ink)}
+.cookie-btn-primary:hover{background:var(--gold-light)}
+
+</style>
+</head>
+<body class="lang-en">
+
+<nav>
+  <a href="rion-rings.html" class="nav-logo">Rion</a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ja')">JA</button>
+    </div>
+    <a href="rion-rings.html#contact" class="nav-cta">Order Now</a>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
+  <div class="menu-inner">
+    <div>
+      <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
+      <nav class="menu-links">
+        <a href="rion-rings.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
+        <a href="about.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span>FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span>Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Care <em>Guide</em></span></a>
+        <a href="rion-rings.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span>Contact</span></a>
+      </nav>
+    </div>
+    <div class="menu-footer">
+      <div class="menu-lang">
+        <button onclick="setLang('en');closeMenu()">EN</button>
+        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ja');closeMenu()">JA</button>
+      </div>
+      <a href="https://wa.me/" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="page-eyebrow" data-i18n="hero_eyebrow">Our Story</span>
+  <h1 class="page-title" data-i18n="hero_title">Born from <em>loss.</em><br>Made with <em>love.</em></h1>
+  <p class="page-lead" data-i18n="hero_lead">Rion is not a brand. Rion is a son's name — and every jewel we make begins not with gold, but with someone you love.</p>
+</section>
+
+<!-- THE BEGINNING -->
+<section class="section">
+  <div class="two-col">
+    <img src="images/story/main.jpg" alt="Rion founder atelier">
+    <div class="two-col-text">
+      <span class="section-eyebrow" data-i18n="s1_eyebrow">Chapter One · 2011</span>
+      <h2 data-i18n="s1_title">A mother. A son.<br>Three <em>days.</em></h2>
+      <p data-i18n="s1_p1">In 2011, our founder gave birth to her son. She held him in her arms for three days. Then she said goodbye.</p>
+      <p data-i18n="s1_p2">In the silence that followed, a question emerged: how do we keep the people we love close when they can no longer walk beside us? She searched — for an object that could hold not just a memory, but a fragment of who they were. Something to wear. Something to touch. Something that says — you are still here.</p>
+      <p data-i18n="s1_p3">She found memorial jewellery. And in finding it, she found her purpose.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-block">
+  <div class="quote-mark">"</div>
+  <p class="quote-text" data-i18n="quote1">A jewel is more than gold. It is a place where love can rest — and travel with you, always.</p>
+  <p class="quote-author" data-i18n="quote1_author">The Founder<br><strong>Rion · Est. 2018, Japan</strong></p>
+</section>
+
+<!-- THE FOUNDING -->
+<section class="section">
+  <div class="two-col two-col-rev">
+    <div class="two-col-text">
+      <span class="section-eyebrow" data-i18n="s2_eyebrow">Chapter Two · 2018</span>
+      <h2 data-i18n="s2_title">Seven years later, <em>Rion</em><br>was born.</h2>
+      <p data-i18n="s2_p1">For seven years, she studied. She visited artisans. She learned the techniques of Japanese goldsmithing passed down through generations. She tested. She refined. She wept and she built.</p>
+      <p data-i18n="s2_p2">In 2018, she founded Rion — named after her son. The brand exists for one reason only: so that no parent, partner, child, or friend ever has to feel that the people they love are gone.</p>
+      <p data-i18n="s2_p3">Every piece we create is bespoke. Every piece is made entirely in Japan. Every piece holds a story that is yours alone.</p>
+    </div>
+    <img src="images/packaging/box.jpg" alt="Rion atelier in Japan">
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div style="text-align:center;margin-bottom:2rem">
+    <span class="section-eyebrow" data-i18n="val_eyebrow">Our Philosophy</span>
+    <h2 class="section-title" data-i18n="val_title">What we <em>believe.</em></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value">
+      <div class="value-icon">◯</div>
+      <h3 data-i18n="val1_t">One of One</h3>
+      <p data-i18n="val1_b">Every Rion jewel is one-of-a-kind. Made from your hair alone, with a design created for you. No identical piece has ever existed or ever will.</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">✦</div>
+      <h3 data-i18n="val2_t">Entirely Japanese</h3>
+      <p data-i18n="val2_b">Gold, platinum, diamonds, and setting — every element sourced and handcrafted in Japan by master artisans with decades of experience.</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">◇</div>
+      <h3 data-i18n="val3_t">Forever Transparent</h3>
+      <p data-i18n="val3_b">We photograph every step of the sealing process and send the photos to you. Nothing is hidden. Nothing is rushed. Nothing is ever discarded.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="timeline-header">
+    <span class="section-eyebrow" data-i18n="tl_eyebrow">Our Journey</span>
+    <h2 data-i18n="tl_title">A history of <em>love.</em></h2>
+  </div>
+  <div class="timeline-list">
+    <div class="timeline-item">
+      <div class="timeline-year">2011</div>
+      <div class="timeline-content">
+        <h3 data-i18n="tl1_t">The Beginning</h3>
+        <p data-i18n="tl1_b">Our founder loses her newborn son. In her grief, the seed of Rion is planted.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2018</div>
+      <div class="timeline-content">
+        <h3 data-i18n="tl2_t">Rion is Founded</h3>
+        <p data-i18n="tl2_b">After seven years of study and craftsmanship training, Rion is established in Japan — named after her son.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2020</div>
+      <div class="timeline-content">
+        <h3 data-i18n="tl3_t">First International Orders</h3>
+        <p data-i18n="tl3_b">The first overseas pieces are commissioned. Word of mouth begins to carry Rion beyond Japan.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2023</div>
+      <div class="timeline-content">
+        <h3 data-i18n="tl4_t">Expansion to the Gulf</h3>
+        <p data-i18n="tl4_b">Demand from Dubai and Kuwait grows. We begin offering Arabic-language service and DDP shipping to the UAE.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">Today</div>
+      <div class="timeline-content">
+        <h3 data-i18n="tl5_t">Trusted by Families Worldwide</h3>
+        <p data-i18n="tl5_b">From Tokyo to Dubai to Kuwait City — families across cultures choose Rion to carry their loved ones with them, always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATELIER -->
+<section class="section">
+  <div class="two-col">
+    <img src="images/materials/main.jpg" alt="Materials at Rion atelier">
+    <div class="two-col-text">
+      <span class="section-eyebrow" data-i18n="s3_eyebrow">Our Atelier</span>
+      <h2 data-i18n="s3_title">Where every jewel is <em>made.</em></h2>
+      <p data-i18n="s3_p1">Our atelier is in Japan. Every piece — without exception — is handcrafted here. Our head artisan personally oversees the sealing of every hair strand. There are no factories. There are no shortcuts. There is only craftsmanship, time, and care.</p>
+      <p data-i18n="s3_p2">We work in K18 gold (yellow, white, pink), Pt900 platinum, and high-grade diamonds, rubies, and sapphires — all sourced within Japan. The hair chamber technique was perfected over years of iteration: each piece is hermetically sealed by hand, designed to last for generations.</p>
+      <p data-i18n="s3_p3">From the time a kit leaves our atelier to the moment your finished jewel returns to your hands, every step is touched by one of three master artisans. Your jewel is, quite literally, made by people who know your story.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 data-i18n="cta_title">Begin your <em>story</em><br>with Rion.</h2>
+  <p data-i18n="cta_body">Every Rion piece begins with a conversation. Reach us on WhatsApp — we respond personally in English, Arabic, and Japanese.</p>
+  <div class="cta-group">
+    <a href="rion-rings.html#contact" class="btn-primary" data-i18n="cta1">Begin Your Order</a>
+    <a href="https://wa.me/" class="btn-wa" target="_blank">💬 <span data-i18n="cta2">Message Us on WhatsApp</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="rion-rings.html" class="footer-logo">Rion</a>
+      <p>Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
+      <p class="footer-est">Est. 2018 · Japan</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="rion-rings.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About Rion</a></li>
+        <li><a href="rion-rings.html#process">How It Works</a></li>
+        <li><a href="rion-rings.html#voices">Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Help</h5>
+      <ul>
+        <li><a href="order.html">How to Order</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="care.html">Care Guide</a></li>
+        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+        <li><a href="legal.html">Legal &amp; Privacy</a></li>
+        <li><a href="rion-rings.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <div class="footer-social">
+        <a href="https://wa.me/" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
+        <a href="https://instagram.com/rion.rings_official" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
+        <a href="rion-rings.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — All prices incl. UAE duty & import VAT</div>
+    <div class="footer-right">Est. 2018 · Japan · UAE & Gulf</div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
+
+<script>
+// Cookie consent
+function acceptCookies(){
+  localStorage.setItem('rion_cookies_accepted','1');
+  const b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('visible');
+}
+(function(){
+  if(localStorage.getItem('rion_cookies_accepted') === '1') return;
+  setTimeout(()=>{
+    const b = document.getElementById('cookieBanner');
+    if(b) b.classList.add('visible');
+  }, 1200);
+})();
+
+// Lazy load
+document.querySelectorAll('img').forEach((img, i) => {
+  if (i >= 2 && !img.loading) img.loading = 'lazy';
+  if (!img.decoding) img.decoding = 'async';
+});
+
+
+// Hamburger
+function toggleMenu(){
+  const o = document.getElementById('menuOverlay');
+  const b = document.querySelector('.hamburger');
+  const a = o.classList.toggle('active');
+  b.classList.toggle('active', a);
+  o.setAttribute('aria-hidden', a ? 'false' : 'true');
+  document.body.style.overflow = a ? 'hidden' : '';
+}
+function closeMenu(){
+  document.getElementById('menuOverlay').classList.remove('active');
+  document.querySelector('.hamburger').classList.remove('active');
+  document.getElementById('menuOverlay').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
+
+// Scroll top
+window.addEventListener('scroll',()=>{
+  const t=document.getElementById('scrollTop');
+  window.scrollY>500?t.classList.add('visible'):t.classList.remove('visible');
+});
+
+// I18n
+const T={
+  en:{
+    menu_eyebrow:"Navigation",
+    hero_eyebrow:"Our Story",
+    hero_title:"Born from <em>loss.</em><br>Made with <em>love.</em>",
+    hero_lead:"Rion is not a brand. Rion is a son's name — and every jewel we make begins not with gold, but with someone you love.",
+    s1_eyebrow:"Chapter One · 2011",
+    s1_title:"A mother. A son.<br>Three <em>days.</em>",
+    s1_p1:"In 2011, our founder gave birth to her son. She held him in her arms for three days. Then she said goodbye.",
+    s1_p2:"In the silence that followed, a question emerged: how do we keep the people we love close when they can no longer walk beside us? She searched — for an object that could hold not just a memory, but a fragment of who they were. Something to wear. Something to touch. Something that says — you are still here.",
+    s1_p3:"She found memorial jewellery. And in finding it, she found her purpose.",
+    quote1:"A jewel is more than gold. It is a place where love can rest — and travel with you, always.",
+    quote1_author:"The Founder<br><strong>Rion · Est. 2018, Japan</strong>",
+    s2_eyebrow:"Chapter Two · 2018",
+    s2_title:"Seven years later, <em>Rion</em><br>was born.",
+    s2_p1:"For seven years, she studied. She visited artisans. She learned the techniques of Japanese goldsmithing passed down through generations. She tested. She refined. She wept and she built.",
+    s2_p2:"In 2018, she founded Rion — named after her son. The brand exists for one reason only: so that no parent, partner, child, or friend ever has to feel that the people they love are gone.",
+    s2_p3:"Every piece we create is bespoke. Every piece is made entirely in Japan. Every piece holds a story that is yours alone.",
+    val_eyebrow:"Our Philosophy",val_title:"What we <em>believe.</em>",
+    val1_t:"One of One",val1_b:"Every Rion jewel is one-of-a-kind. Made from your hair alone, with a design created for you. No identical piece has ever existed or ever will.",
+    val2_t:"Entirely Japanese",val2_b:"Gold, platinum, diamonds, and setting — every element sourced and handcrafted in Japan by master artisans with decades of experience.",
+    val3_t:"Forever Transparent",val3_b:"We photograph every step of the sealing process and send the photos to you. Nothing is hidden. Nothing is rushed. Nothing is ever discarded.",
+    tl_eyebrow:"Our Journey",tl_title:"A history of <em>love.</em>",
+    tl1_t:"The Beginning",tl1_b:"Our founder loses her newborn son. In her grief, the seed of Rion is planted.",
+    tl2_t:"Rion is Founded",tl2_b:"After seven years of study and craftsmanship training, Rion is established in Japan — named after her son.",
+    tl3_t:"First International Orders",tl3_b:"The first overseas pieces are commissioned. Word of mouth begins to carry Rion beyond Japan.",
+    tl4_t:"Expansion to the Gulf",tl4_b:"Demand from Dubai and Kuwait grows. We begin offering Arabic-language service and DDP shipping to the UAE.",
+    tl5_t:"Trusted by Families Worldwide",tl5_b:"From Tokyo to Dubai to Kuwait City — families across cultures choose Rion to carry their loved ones with them, always.",
+    s3_eyebrow:"Our Atelier · Japan",s3_title:"Where every jewel is <em>made.</em>",
+    s3_p1:"Our atelier is in Japan. Every piece — without exception — is handcrafted here. Our head artisan personally oversees the sealing of every hair strand. There are no factories. There are no shortcuts. There is only craftsmanship, time, and care.",
+    s3_p2:"We work in K18 gold (yellow, white, pink), Pt900 platinum, and high-grade diamonds, rubies, and sapphires — all sourced within Japan. The hair chamber technique was perfected over years of iteration: each piece is hermetically sealed by hand, designed to last for generations.",
+    s3_p3:"From the time a kit leaves our atelier to the moment your finished jewel returns to your hands, every step is touched by one of three master artisans. Your jewel is, quite literally, made by people who know your story.",
+    cta_title:"Begin your <em>story</em><br>with Rion.",
+    cta_body:"Every Rion piece begins with a conversation. Reach us on WhatsApp — we respond personally in English, Arabic, and Japanese.",
+    cta1:"Begin Your Order",cta2:"Message Us on WhatsApp"
+  },
+  ar:{
+    menu_eyebrow:"القائمة",
+    hero_eyebrow:"قصتنا",
+    hero_title:"وُلد من <em>الخسارة.</em><br>صُنع من <em>الحب.</em>",
+    hero_lead:"Rion ليست علامة تجارية. Rion هو اسم ابن — وكل جوهرة نصنعها لا تبدأ بالذهب، بل بشخص تحبه.",
+    s1_eyebrow:"الفصل الأول · 2011",
+    s1_title:"أم. ابن.<br>ثلاثة <em>أيام.</em>",
+    s1_p1:"في عام 2011، أنجبت مؤسستنا ابنها. حملته في ذراعيها لثلاثة أيام. ثم ودّعته.",
+    s1_p2:"في الصمت الذي تلا ذلك، ظهر سؤال: كيف نحافظ على من نحب قريباً منا عندما لا يستطيعون السير إلى جانبنا بعد الآن؟ بحثت — عن شيء يمكنه أن يحمل ليس فقط ذكرى، بل جزءاً مما كانوا. شيء يُرتدى. شيء يُلمس. شيء يقول — أنت لا تزال هنا.",
+    s1_p3:"وجدت مجوهرات الذكرى. وفي إيجادها، وجدت هدفها.",
+    quote1:"الجوهرة أكثر من ذهب. إنها مكان حيث يستطيع الحب أن يستريح — ويسافر معك إلى الأبد.",
+    quote1_author:"المؤسسة<br><strong>Rion · تأسس 2018، اليابان</strong>",
+    s2_eyebrow:"الفصل الثاني · 2018",
+    s2_title:"بعد سبع سنوات، وُلدت <em>Rion.</em>",
+    s2_p1:"لسبع سنوات، درست. زارت الحرفيين. تعلمت تقنيات صياغة الذهب اليابانية المتوارثة عبر الأجيال. اختبرت. صقلت. بكت وبنت.",
+    s2_p2:"في 2018، أسست Rion — سُمي على اسم ابنها. توجد العلامة لسبب واحد فقط: حتى لا يضطر أي والد أو شريك أو طفل أو صديق إلى الشعور بأن من يحبهم قد ذهبوا.",
+    s2_p3:"كل قطعة نصنعها حصرية. كل قطعة مصنوعة بالكامل في اليابان. كل قطعة تحمل قصة لك وحدك.",
+    val_eyebrow:"فلسفتنا",val_title:"ما <em>نؤمن به.</em>",
+    val1_t:"فريدة من نوعها",val1_b:"كل جوهرة Rion فريدة من نوعها. مصنوعة من شعرك وحده، بتصميم مخصص لك. لا توجد قطعة مطابقة من قبل ولن توجد.",
+    val2_t:"يابانية بالكامل",val2_b:"الذهب والبلاتين والألماس والإطار — كل عنصر مصدره ومصنوع يدوياً في اليابان من قبل حرفيين خبراء بعقود من الخبرة.",
+    val3_t:"شفافية للأبد",val3_b:"نصوّر كل خطوة من عملية الإغلاق ونرسل الصور إليك. لا شيء مخفي. لا شيء متعجّل. لا شيء يُتخلص منه أبداً.",
+    tl_eyebrow:"رحلتنا",tl_title:"تاريخ من <em>الحب.</em>",
+    tl1_t:"البداية",tl1_b:"تفقد مؤسستنا ابنها المولود. في حزنها، تُزرع بذرة Rion.",
+    tl2_t:"تأسيس Rion",tl2_b:"بعد سبع سنوات من الدراسة وتدريب الصياغة، تأسست Rion في اليابان — سُميت على اسم ابنها.",
+    tl3_t:"أول الطلبات الدولية",tl3_b:"تُطلب أول القطع من الخارج. تنتشر شهرة Rion بالكلمة الشفهية خارج اليابان.",
+    tl4_t:"التوسع إلى الخليج",tl4_b:"يزداد الطلب من دبي والكويت. نبدأ تقديم الخدمة بالعربية والشحن DDP إلى الإمارات.",
+    tl5_t:"موثوق من عائلات حول العالم",tl5_b:"من طوكيو إلى دبي إلى مدينة الكويت — تختار العائلات عبر الثقافات Rion لحمل أحبائها معها دائماً.",
+    s3_eyebrow:"مرسمنا · اليابان",s3_title:"حيث تُصنع كل <em>جوهرة.</em>",
+    s3_p1:"مرسمنا في اليابان. كل قطعة — بدون استثناء — مصنوعة هنا يدوياً. يشرف حرفينا الرئيسي شخصياً على إغلاق كل خصلة شعر. لا توجد مصانع. لا توجد اختصارات. توجد الحرفية والوقت والعناية فقط.",
+    s3_p2:"نعمل بذهب 18K (أصفر وأبيض ووردي) وبلاتين Pt900 وألماس وياقوت وياقوت أزرق عالي الجودة — كلها من مصادر داخل اليابان. تقنية غرفة الشعر تم إتقانها على سنوات من التجارب: كل قطعة مختومة هرمسياً يدوياً، مصممة لتدوم لأجيال.",
+    s3_p3:"من وقت مغادرة الطقم لمرسمنا إلى لحظة عودة جوهرتك المكتملة إلى يديك، كل خطوة يلمسها أحد ثلاثة حرفيين خبراء. جوهرتك، بمعنى حرفي، مصنوعة من قبل أشخاص يعرفون قصتك.",
+    cta_title:"ابدأ <em>قصتك</em><br>مع Rion.",
+    cta_body:"كل قطعة من Rion تبدأ بمحادثة. تواصل معنا عبر واتساب — نرد شخصياً بالعربية والإنجليزية واليابانية.",
+    cta1:"ابدأ طلبك",cta2:"راسلنا عبر واتساب"
+  },
+  ja:{
+    menu_eyebrow:"メニュー",
+    hero_eyebrow:"ストーリー",
+    hero_title:"<em>悲しみ</em>から生まれ、<br><em>愛</em>で作られた。",
+    hero_lead:"Rionはブランドではありません。Rionは息子の名前——私たちが作るすべてのジュエリーは、金からではなく、あなたの愛する誰かから始まります。",
+    s1_eyebrow:"第一章 · 2011年",
+    s1_title:"母。息子。<br><em>3日間。</em>",
+    s1_p1:"2011年、創業者は息子を産みました。3日間、彼を腕に抱きました。そして、お別れを告げました。",
+    s1_p2:"続く静寂の中で、ひとつの問いが生まれました——大切な人がもう傍にいられなくなったとき、どうすれば近くに感じられるのか？彼女は探しました——記憶だけでなく、その人の一片を抱ける何かを。身につけるもの。触れられるもの。「あなたはまだここにいる」と語りかけてくれるものを。",
+    s1_p3:"彼女はメモリアルジュエリーに出会いました。そしてそこで、自分の使命を見つけました。",
+    quote1:"ジュエリーは金以上のもの。それは愛が休める場所——そして、いつまでもあなたと旅をする場所。",
+    quote1_author:"創業者<br><strong>Rion · 2018年創業、日本</strong>",
+    s2_eyebrow:"第二章 · 2018年",
+    s2_title:"7年後、<em>Rion</em><br>が誕生した。",
+    s2_p1:"7年間、彼女は学びました。職人を訪ね、世代を超えて受け継がれる日本の金細工技術を学びました。試して、磨いて、泣いて、築き上げました。",
+    s2_p2:"2018年、彼女はRionを創業——息子の名を冠して。このブランドが存在する理由はただひとつ。親も、パートナーも、子も、友も、愛する人がいなくなったと感じないために。",
+    s2_p3:"私たちが作るすべての作品はオーダーメイド。すべて日本で完全に手作り。すべての作品があなただけのストーリーを宿しています。",
+    val_eyebrow:"私たちの哲学",val_title:"私たちが<em>信じる</em>こと。",
+    val1_t:"一点もの",val1_b:"すべてのRionジュエリーは一点もの。あなたの毛髪のみから、あなたのために創られたデザインで。同じものは世界に二つと存在しません。",
+    val2_t:"完全日本製",val2_b:"金・プラチナ・ダイヤ・セッティング——すべての素材が日本産・日本加工。数十年の経験を持つ職人による完全手作業です。",
+    val3_t:"永遠の透明性",val3_b:"封入工程のすべてを写真で記録し、お客様にお送りします。隠すものなし、急ぐものなし、捨てるものなし。",
+    tl_eyebrow:"私たちの歩み",tl_title:"愛の<em>歴史。</em>",
+    tl1_t:"始まり",tl1_b:"創業者が生まれたばかりの息子を失う。その悲しみの中で、Rionの種が蒔かれる。",
+    tl2_t:"Rion創業",tl2_b:"7年間の学びと職人技の修練を経て、Rionが日本で創業——息子の名を冠して。",
+    tl3_t:"初の海外注文",tl3_b:"最初の海外向け作品が依頼される。口コミでRionが日本の外へ広がり始める。",
+    tl4_t:"湾岸地域への展開",tl4_b:"ドバイ・クウェートからの需要が拡大。アラビア語対応とUAEへのDDP配送を開始。",
+    tl5_t:"世界中の家族から信頼を",tl5_b:"東京からドバイ、クウェートシティへ——文化を超えた家族が、愛する人をいつも連れているためにRionを選んでくださっています。",
+    s3_eyebrow:"私たちのアトリエ · 日本",s3_title:"すべてのジュエリーが<em>作られる</em>場所。",
+    s3_p1:"アトリエは日本にあります。すべての作品——例外なく——ここで手作りされます。職人長が毎本の毛髪封入を直接監督します。工場はありません。近道はありません。あるのは職人技と、時間と、心遣いだけです。",
+    s3_p2:"K18ゴールド（イエロー・ホワイト・ピンク）、Pt900プラチナ、高品位ダイヤ・ルビー・サファイヤ——すべて日本国内で調達。毛の封入技術は何年もの試行錯誤で完成させました。各作品は手作業で完全密封され、世代を超えて受け継がれるよう設計されています。",
+    s3_p3:"採取キットがアトリエを出発してから、完成したジュエリーがお手元に戻るまで、すべての工程を3人のマスター職人のいずれかが手がけます。あなたのジュエリーは、文字通り、あなたのストーリーを知っている人の手で作られているのです。",
+    cta_title:"あなたの<em>ストーリー</em>を<br>Rionと始めよう。",
+    cta_body:"Rionのすべての作品は会話から始まります。WhatsAppでお気軽に——日本語・英語・アラビア語で対応します。",
+    cta1:"ご注文を始める",cta2:"WhatsAppでメッセージ"
+  }
+};
+
+function setLang(lang){
+  document.querySelectorAll('.lang-btn,.menu-lang button').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
+  document.body.className='lang-'+lang;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  const t=T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(t[k]!==undefined)el.innerHTML=t[k];
+  });
+}
+</script>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-text">
+    <strong>Cookie Notice</strong>
+    <span>This site uses only essential cookies for language preference. We do not use tracking or advertising cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
+  </div>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+
+</body>
+</html>

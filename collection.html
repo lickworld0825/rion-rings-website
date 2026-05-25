@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rion — Collection | Bespoke Memorial Jewellery from Japan</title>
+<meta name="description" content="Browse the Rion collection — handcrafted memorial rings and pendants in K18 gold and Pt900 platinum. From AED 22,000 DDP. Free insured shipping to Dubai & UAE.">
+<meta name="theme-color" content="#1A1714">
+<link rel="canonical" href="https://rion.jewelry/collection.html">
+<link rel="icon" type="image/jpeg" href="images/collection/ring.jpg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rion">
+<meta property="og:title" content="Rion Collection — Memorial Jewellery from Japan">
+<meta property="og:description" content="Browse the Rion collection — handcrafted memorial rings and pendants in K18 gold and Pt900 platinum. From AED 22,000 DDP.">
+<meta property="og:image" content="images/series-a/a1.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rion Collection — Memorial Jewellery from Japan">
+<meta name="twitter:description" content="Handcrafted memorial rings and pendants in K18 gold and Pt900 platinum. From AED 22,000 DDP.">
+<meta name="twitter:image" content="images/series-a/a1.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&family=Noto+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -20,10 +37,46 @@ body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
 /* NAV */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;transition:color .3s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-right{display:flex;align-items:center;gap:1.5rem}
+.nav-links{display:none !important}
+.nav-right{display:flex;align-items:center;gap:1.25rem}
+
+/* HAMBURGER */
+.hamburger{display:flex;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;position:relative;z-index:401;margin-left:0.5rem}
+.hamburger span{display:block;width:100%;height:1px;background:var(--ink);transition:all .35s ease}
+.hamburger:hover span{background:var(--gold-dark)}
+.hamburger.active span{background:var(--gold-light)}
+.hamburger.active span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0;transform:translateX(-20px)}
+.hamburger.active span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+
+/* MENU OVERLAY */
+.menu-overlay{position:fixed;inset:0;background:var(--cream);z-index:400;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;overflow-y:auto}
+.menu-overlay.active{opacity:1;visibility:visible}
+.menu-inner{padding:6rem 4rem 3rem;min-height:100%;display:flex;flex-direction:column;justify-content:space-between;max-width:1200px;margin:0 auto}
+.menu-eyebrow{font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2.5rem;display:block}
+.menu-links{display:flex;flex-direction:column;gap:0}
+.menu-links a{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:300;color:var(--ink);text-decoration:none;letter-spacing:0.02em;transition:color .3s,padding-left .35s ease,background .3s;line-height:1;padding:1.2rem 0.5rem 1.2rem 0;display:flex;align-items:baseline;gap:1.5rem;border-bottom:0.5px solid rgba(26,23,20,0.12)}
+.menu-links a:first-child{border-top:0.5px solid rgba(26,23,20,0.12)}
+.menu-links a:hover{color:var(--gold-dark);padding-left:1.25rem;background:rgba(201,169,110,0.08)}
+.menu-links a em{font-style:italic;color:inherit}
+.menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
+.menu-links a.menu-active{color:var(--gold-dark)}
+.menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
+.menu-lang{display:flex;gap:0.4rem}
+.menu-lang button{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:8px 16px;border:0.5px solid rgba(26,23,20,0.3);background:transparent;cursor:pointer;color:var(--ink-soft);font-family:'Jost',sans-serif;transition:all .2s}
+.menu-lang button:hover,.menu-lang button.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:#128C7E;color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#0E7567}
+
+/* Hamburger color when menu is active */
+.hamburger.active span{background:var(--ink)}
+
+/* Close button inside menu */
+.menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
+.menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
+.menu-close::before{transform:rotate(45deg)}
+.menu-close::after{transform:rotate(-45deg)}
+.menu-close:hover::before,.menu-close:hover::after{background:var(--gold-dark)}
 .lang-switcher{display:flex;gap:2px}
 .lang-btn{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:4px 9px;border:0.5px solid var(--border);background:none;cursor:pointer;color:var(--ink-muted);font-family:'Jost',sans-serif;transition:all .2s}
 .lang-btn:hover{color:var(--gold);border-color:var(--gold)}
@@ -72,14 +125,18 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .price-table .multi-note{font-size:0.72rem;color:var(--gold-dark);font-style:italic}
 
 /* PRODUCT GRID */
-.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);margin-bottom:2rem}
-.product-card{background:var(--cream);position:relative;cursor:pointer;overflow:hidden}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:2rem}
+.product-card{background:var(--cream);position:relative;cursor:pointer;overflow:hidden;display:block;text-decoration:none;color:inherit;transition:background .25s}
+.product-card:hover{background:#FDFAF5}
 .product-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .4s}
 .product-card:hover img{transform:scale(1.04)}
 .product-info{padding:1rem}
 .product-code{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:3px}
 .product-material{font-size:0.75rem;color:var(--ink-soft)}
 .product-price-tag{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold-dark);font-style:italic;margin-top:4px}
+.product-order-cta{margin-top:8px;padding-top:8px;border-top:0.5px solid var(--border);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:#128C7E;display:flex;align-items:center;gap:6px;font-weight:500}
+.product-order-cta::before{content:'💬';font-size:0.85rem}
+.product-card:hover .product-order-cta{color:#0a5d4f}
 
 /* ORDER CTA */
 .series-cta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
@@ -107,6 +164,12 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .bespoke-price-note{font-size:0.75rem;color:rgba(250,247,242,0.4)}
 .bespoke-img img{width:100%;display:block;object-fit:cover;max-height:500px}
 
+/* SCROLL TO TOP */
+.scroll-top{position:fixed;bottom:6rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);border:0.5px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:250;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s;font-size:1rem;font-family:'Cormorant Garamond',serif}
+.scroll-top:hover{background:var(--gold-dark);color:var(--cream);border-color:var(--gold-dark)}
+.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-top::before{content:'↑'}
+
 /* STICKY ENQUIRE */
 .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--ink);border-top:0.5px solid rgba(201,169,110,0.3);padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;transform:translateY(100%);transition:transform .4s}
 .sticky-bar.visible{transform:translateY(0)}
@@ -117,12 +180,23 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .s-back{background:rgba(250,247,242,0.1);color:var(--gold-light);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;border:0.5px solid rgba(201,169,110,0.3)}
 
 /* FOOTER */
-footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid rgba(201,169,110,0.15)}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--gold);letter-spacing:0.16em;text-decoration:none}
-.footer-copy{font-size:0.68rem;color:rgba(250,247,242,0.25)}
-.footer-nav{display:flex;gap:2rem;list-style:none}
-.footer-nav a{font-size:0.68rem;color:rgba(250,247,242,0.35);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color .3s}
-.footer-nav a:hover{color:var(--gold)}
+footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem}
+.footer-col h5{font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:400}
+.footer-brand .footer-logo{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);letter-spacing:0.16em;text-decoration:none;display:block;margin-bottom:1rem}
+.footer-brand p{font-size:0.78rem;line-height:1.85;color:rgba(250,247,242,0.55);margin-bottom:1.25rem;max-width:280px}
+.footer-brand .footer-est{font-size:0.65rem;letter-spacing:0.18em;color:rgba(201,169,110,0.5);text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul a{font-size:0.8rem;color:rgba(250,247,242,0.55);text-decoration:none;transition:color .25s}
+.footer-col ul a:hover{color:var(--gold-light)}
+.footer-social{display:flex;flex-direction:column;gap:0.6rem}
+.footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;color:rgba(250,247,242,0.55);text-decoration:none;transition:color .25s}
+.footer-social a:hover{color:var(--gold-light)}
+.footer-social-ico{display:inline-block;width:14px;text-align:center;color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;border-top:0.5px solid rgba(201,169,110,0.15);flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.65rem;color:rgba(250,247,242,0.3);letter-spacing:0.04em}
+.footer-right{font-size:0.65rem;color:rgba(201,169,110,0.35);letter-spacing:0.1em;text-transform:uppercase}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -135,13 +209,28 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
   .bespoke-section{padding:4rem 2rem}
   .bespoke-inner{grid-template-columns:1fr}
   .bespoke-img{display:none}
-  footer{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
+  footer{padding:3rem 1.5rem 1.5rem}
+  .footer-grid{grid-template-columns:1fr;gap:2.5rem;margin-bottom:2rem;text-align:left}
+  .footer-bottom{flex-direction:column;align-items:flex-start;text-align:left;gap:0.5rem}
   .sticky-bar{padding:1rem 1.5rem}
 }
 @media(max-width:640px){
   .product-grid{grid-template-columns:repeat(2,1fr)}
   .price-table{font-size:0.8rem}
 }
+
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:1.5rem;left:1.5rem;right:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;background:var(--ink);color:var(--cream);padding:1.25rem 1.5rem;border:0.5px solid var(--gold);z-index:380;display:none;align-items:center;gap:1.25rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,0.25)}
+.cookie-banner.visible{display:flex}
+.cookie-banner-text{flex:1;font-size:0.8rem;line-height:1.65;color:rgba(250,247,242,0.85);min-width:240px}
+.cookie-banner-text strong{color:var(--gold-light);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500}
+.cookie-banner-text a{color:var(--gold);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:0.5rem}
+.cookie-btn{padding:8px 16px;border:0.5px solid var(--gold);background:transparent;color:var(--gold);font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:all .25s}
+.cookie-btn:hover{background:var(--gold);color:var(--ink)}
+.cookie-btn-primary{background:var(--gold);color:var(--ink)}
+.cookie-btn-primary:hover{background:var(--gold-light)}
+
 </style>
 </head>
 <body class="lang-en">
@@ -149,97 +238,124 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <!-- NAV -->
 <nav>
   <a href="rion-rings.html" class="nav-logo">Rion</a>
-  <ul class="nav-links">
-    <li><a href="rion-rings.html#story">Our Story</a></li>
-    <li><a href="collection.html" class="active">Collection</a></li>
-    <li><a href="rion-rings.html#process">How It Works</a></li>
-    <li><a href="rion-rings.html#voices">Stories</a></li>
-    <li><a href="rion-rings.html#faq">FAQ</a></li>
-    <li><a href="rion-rings.html#contact">Contact</a></li>
-  </ul>
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('ar')">AR</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
-    <a href="https://wa.me/" class="nav-cta">Order Now</a>
+    <a href="https://wa.me/" class="nav-cta" data-i18n="nav_cta">Order Now</a>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
+  <div class="menu-inner">
+    <div>
+      <span class="menu-eyebrow">Navigation · القائمة · メニュー</span>
+      <nav class="menu-links">
+        <a href="rion-rings.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
+        <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
+        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span>FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span>Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Care <em>Guide</em></span></a>
+        <a href="rion-rings.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span>Contact</span></a>
+      </nav>
+    </div>
+    <div class="menu-footer">
+      <div class="menu-lang">
+        <button onclick="setLang('en');closeMenu()">EN</button>
+        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ja');closeMenu()">JA</button>
+      </div>
+      <a href="https://wa.me/" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+    </div>
+  </div>
+</div>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-inner">
     <div>
-      <h1>The<br><em>Collection</em></h1>
+      <h1 data-i18n="page_title">The<br><em>Collection</em></h1>
     </div>
     <div class="page-header-right">
-      <p>Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and enquire via WhatsApp. We will guide you through the rest.</p>
-      <div class="page-header-note">✦ All prices DDP — UAE import duty & VAT included · No extra charges on delivery</div>
+      <p data-i18n="page_lead">Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and enquire via WhatsApp. We will guide you through the rest.</p>
+      <div class="page-header-note" data-i18n="page_note">✦ All prices DDP — UAE import duty & VAT included · No extra charges on delivery</div>
     </div>
   </div>
 </div>
 
 <!-- FILTER BAR -->
 <div class="filter-bar">
-  <span class="filter-label">Filter:</span>
-  <button class="filter-btn active" onclick="filterSeries('all')">All Series</button>
-  <button class="filter-btn" onclick="filterSeries('ring')">Rings</button>
-  <button class="filter-btn" onclick="filterSeries('necklace')">Necklaces</button>
-  <button class="filter-btn" onclick="filterSeries('A')">Series A</button>
-  <button class="filter-btn" onclick="filterSeries('B')">Series B</button>
-  <button class="filter-btn" onclick="filterSeries('C')">Series C</button>
-  <button class="filter-btn" onclick="filterSeries('D')">Series D</button>
-  <button class="filter-btn" onclick="filterSeries('F')">Series F</button>
-  <button class="filter-btn" onclick="filterSeries('G')">Series G</button>
-  <button class="filter-btn" onclick="filterSeries('H')">Series H</button>
-  <button class="filter-btn" onclick="filterSeries('J')">Series J</button>
+  <span class="filter-label" data-i18n="filter_label">Filter:</span>
+  <button class="filter-btn active" onclick="filterSeries('all')" data-i18n="f_all">All Series</button>
+  <button class="filter-btn" onclick="filterSeries('ring')" data-i18n="f_ring">Rings</button>
+  <button class="filter-btn" onclick="filterSeries('necklace')" data-i18n="f_necklace">Necklaces</button>
+  <button class="filter-btn" onclick="filterSeries('A')" data-i18n="f_a">Series A</button>
+  <button class="filter-btn" onclick="filterSeries('B')" data-i18n="f_b">Series B</button>
+  <button class="filter-btn" onclick="filterSeries('C')" data-i18n="f_c">Series C</button>
+  <button class="filter-btn" onclick="filterSeries('D')" data-i18n="f_d">Series D</button>
+  <button class="filter-btn" onclick="filterSeries('F')" data-i18n="f_f">Series F</button>
+  <button class="filter-btn" onclick="filterSeries('G')" data-i18n="f_g">Series G</button>
+  <button class="filter-btn" onclick="filterSeries('H')" data-i18n="f_h">Series H</button>
+  <button class="filter-btn" onclick="filterSeries('J')" data-i18n="f_j">Series J</button>
 </div>
 
 <!-- SERIES A -->
 <section class="series-section" data-series="A" data-type="ring">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series A · سلسلة A · Aシリーズ</p>
-      <h2 class="series-name">The <em>Classic</em> Ring</h2>
-      <p class="series-desc">A timeless band with a sealed inner chamber. The most chosen design — elegant, wearable every day, available in four precious materials.</p>
+      <p class="series-eyebrow" data-i18n="se_a">Series A</p>
+      <h2 class="series-name" data-i18n="sa_name">The <em>Classic</em> Ring</h2>
+      <p class="series-desc" data-i18n="sa_desc">A timeless band with a sealed inner chamber. The most chosen design — elegant, wearable every day, available in four precious materials.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング</span>
+    <span class="series-type" data-i18n="st_ring">Ring</span>
   </div>
 
   <div class="product-grid">
-    <div class="product-card">
-      <img src="images/84ed3d2af49635114fc044219c66cb98.jpg" alt="A-1 Yellow Gold">
+    <a class="product-card" data-code="A-1" data-material="K18 Yellow Gold" data-price="22,600">
+      <img src="images/series-a/a1.jpg" alt="A-1 Yellow Gold">
       <div class="product-info">
         <p class="product-code">A-1</p>
         <p class="product-material">K18 Yellow Gold</p>
         <p class="product-price-tag">AED 22,600</p>
+        <p class="product-order-cta">View Details →</p>
       </div>
-    </div>
-    <div class="product-card">
-      <img src="images/133e35bddd48cfe7644a85dc7fa54b6f-1.jpg" alt="A-2 White Gold">
+    </a>
+    <a class="product-card" data-code="A-2" data-material="K18 White Gold" data-price="23,200">
+      <img src="images/series-a/a2.jpg" alt="A-2 White Gold">
       <div class="product-info">
         <p class="product-code">A-2</p>
         <p class="product-material">K18 White Gold</p>
         <p class="product-price-tag">AED 23,200</p>
+        <p class="product-order-cta">View Details →</p>
       </div>
-    </div>
-    <div class="product-card">
-      <img src="images/c93109a64256c6e228439551c0bec605.jpg" alt="A-3 Pink Gold">
+    </a>
+    <a class="product-card" data-code="A-3" data-material="K18 Pink Gold" data-price="22,600">
+      <img src="images/series-a/a3.jpg" alt="A-3 Pink Gold">
       <div class="product-info">
         <p class="product-code">A-3</p>
         <p class="product-material">K18 Pink Gold</p>
         <p class="product-price-tag">AED 22,600</p>
+        <p class="product-order-cta">View Details →</p>
       </div>
-    </div>
-    <div class="product-card">
-      <img src="images/IMG_0005-1.jpg" alt="A-4 Platinum">
+    </a>
+    <a class="product-card" data-code="A-4" data-material="Platinum Pt900" data-price="22,000">
+      <img src="images/series-a/a4.jpg" alt="A-4 Platinum">
       <div class="product-info">
         <p class="product-code">A-4</p>
         <p class="product-material">Platinum Pt900</p>
         <p class="product-price-tag">AED 22,000</p>
+        <p class="product-order-cta">View Details →</p>
       </div>
-    </div>
+    </a>
   </div>
 
   <div class="price-table-wrap">
@@ -248,7 +364,7 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
       <thead>
         <tr>
           <th>Code</th>
-          <th>Material · المادة · 素材</th>
+          <th data-i18n="th_material_v">Material</th>
           <th>Price (AED) · DDP incl. all taxes</th>
           <th>Delivery</th>
         </tr>
@@ -258,31 +374,32 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
           <td>A-1</td>
           <td><span class="material-name">K18 Yellow Gold</span></td>
           <td><span class="price-aed">AED 22,600</span></td>
-          <td><span class="price-note">4–8 weeks</span></td>
+          <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
         <tr>
           <td>A-2</td>
           <td><span class="material-name">K18 White Gold</span></td>
           <td><span class="price-aed">AED 23,200</span></td>
-          <td><span class="price-note">4–8 weeks</span></td>
+          <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
         <tr>
           <td>A-3</td>
           <td><span class="material-name">K18 Pink Gold</span></td>
           <td><span class="price-aed">AED 22,600</span></td>
-          <td><span class="price-note">4–8 weeks</span></td>
+          <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
         <tr>
           <td>A-4</td>
           <td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td>
           <td><span class="price-aed">AED 22,000</span></td>
-          <td><span class="price-note">4–8 weeks</span></td>
+          <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-a.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
     <span class="cta-note">We will confirm design, size, and send your invoice.</span>
   </div>
 </section>
@@ -291,30 +408,30 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="B" data-type="necklace" style="background:#F7F3EC">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series B · سلسلة B · Bシリーズ</p>
-      <h2 class="series-name">The <em>Pendant</em> Necklace</h2>
-      <p class="series-desc">A delicate necklace with a sealed pendant enclosing a strand of hair. Worn near the heart. Available in four precious materials.</p>
+      <p class="series-eyebrow" data-i18n="se_b">Series B</p>
+      <h2 class="series-name" data-i18n="sb_name">The <em>Pendant</em> Necklace</h2>
+      <p class="series-desc" data-i18n="sb_desc">A delicate necklace with a sealed pendant enclosing a strand of hair. Worn near the heart. Available in four precious materials.</p>
     </div>
-    <span class="series-type">Necklace · قلادة · ネックレス</span>
+    <span class="series-type" data-i18n="st_neck">Necklace</span>
   </div>
 
   <div class="product-grid">
-    <div class="product-card">
-      <img src="images/c91aede2ae5cfbb156b96ad010980d9e.jpg" alt="B-1 Yellow Gold">
-      <div class="product-info"><p class="product-code">B-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 26,800</p></div>
-    </div>
-    <div class="product-card">
-      <img src="images/9f92bbae64067b08dbfe79bc1c72cc6e.jpg" alt="B-2 White Gold">
-      <div class="product-info"><p class="product-code">B-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 28,800</p></div>
-    </div>
-    <div class="product-card">
-      <img src="images/54ad2e06ac7cc109216548a7afb45235.jpg" alt="B-3 Pink Gold">
-      <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 26,800</p></div>
-    </div>
-    <div class="product-card">
-      <img src="images/IMG_0676.jpg" alt="B-4 Platinum">
-      <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 25,000</p></div>
-    </div>
+    <a class="product-card" data-code="B-1" data-material="K18 Yellow Gold" data-price="26,800">
+      <img src="images/series-b/b1.jpg" alt="B-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">B-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 26,800</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="B-2" data-material="K18 White Gold" data-price="28,800">
+      <img src="images/series-b/b2.jpg" alt="B-2 White Gold">
+      <div class="product-info"><p class="product-code">B-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 28,800</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="B-3" data-material="K18 Pink Gold" data-price="26,800">
+      <img src="images/series-b/b3.jpg" alt="B-3 Pink Gold">
+      <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 26,800</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="B-4" data-material="Platinum Pt900" data-price="25,000">
+      <img src="images/series-b/b4.jpg" alt="B-4 Platinum">
+      <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 25,000</p><p class="product-order-cta">View Details →</p></div>
+    </a>
   </div>
 
   <div class="price-table-wrap">
@@ -322,15 +439,16 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>B-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 26,800</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>B-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 28,800</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>B-3</td><td><span class="material-name">K18 Pink Gold</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">AED 26,800</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>B-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 25,000</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>B-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 26,800</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 28,800</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-3</td><td><span class="material-name">K18 Pink Gold</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">AED 26,800</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 25,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-b.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
     <span class="cta-note">We will confirm design, length, and send your invoice.</span>
   </div>
 </section>
@@ -339,28 +457,49 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="C" data-type="ring">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series C · سلسلة C · Cシリーズ</p>
-      <h2 class="series-name">The <em>Birthstone</em> Ring</h2>
-      <p class="series-desc">A ring with a sealed chamber and two birthstones of your choice — diamond, ruby, sapphire, emerald, and more. Perfect for commemorating a date or a person.</p>
+      <p class="series-eyebrow" data-i18n="se_c">Series C</p>
+      <h2 class="series-name" data-i18n="sc_name">The <em>Birthstone</em> Ring</h2>
+      <p class="series-desc" data-i18n="sc_desc">A ring with a sealed chamber and two birthstones of your choice — diamond, ruby, sapphire, emerald, and more. Perfect for commemorating a date or a person.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング · 2 Birthstones</span>
+    <span class="series-type" data-i18n="st_ring_bs">Ring · 2 Birthstones</span>
   </div>
+
+  <div class="product-grid">
+    <a class="product-card" data-code="C-1" data-material="K18 Yellow Gold (2 birthstones)" data-price="28,600">
+      <img src="images/series-c/c1.jpg" alt="C-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">C-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 28,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="C-2" data-material="K18 White Gold (2 birthstones)" data-price="30,400">
+      <img src="images/series-c/c2.jpg" alt="C-2 White Gold">
+      <div class="product-info"><p class="product-code">C-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 30,400</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="C-3" data-material="K18 Pink Gold (2 birthstones)" data-price="28,600">
+      <img src="images/series-c/c3.jpg" alt="C-3 Pink Gold">
+      <div class="product-info"><p class="product-code">C-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 28,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="C-4" data-material="Platinum Pt900 (2 birthstones)" data-price="27,800">
+      <img src="images/series-c/c4.jpg" alt="C-4 Platinum">
+      <div class="product-info"><p class="product-code">C-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 27,800</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+  </div>
+
   <div class="price-table-wrap">
     <p class="price-table-label">Series C — Price by Material (2 birthstones included)</p>
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>C-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 28,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>C-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 30,400</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>C-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 28,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>C-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">AED 27,800</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>C-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 28,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 30,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 28,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">AED 27,800</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="special-note">✦ <strong>Birthstones:</strong> Choose any 2 from diamond, ruby, sapphire, emerald, amethyst, aquamarine, garnet, peridot, topaz, tourmaline, citrine, or tanzanite. Tell us your selection when you enquire.</div>
   <br>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-c.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
     <span class="cta-note">Tell us your 2 birthstone choices when enquiring.</span>
   </div>
 </section>
@@ -369,26 +508,47 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="D" data-type="ring" style="background:#F7F3EC">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series D · سلسلة D · Dシリーズ</p>
-      <h2 class="series-name">The <em>Half Eternity</em> Ring</h2>
-      <p class="series-desc">A half eternity ring set with diamonds across the band, with a sealed inner chamber for hair. Exceptional brilliance, eternal meaning.</p>
+      <p class="series-eyebrow" data-i18n="se_d">Series D</p>
+      <h2 class="series-name" data-i18n="sd_name">The <em>Half Eternity</em> Ring</h2>
+      <p class="series-desc" data-i18n="sd_desc">A half eternity ring set with diamonds across the band, with a sealed inner chamber for hair. Exceptional brilliance, eternal meaning.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング · Diamond Band</span>
+    <span class="series-type" data-i18n="st_ring_dia">Ring · Diamond Band</span>
   </div>
+
+  <div class="product-grid">
+    <a class="product-card" data-code="D-1" data-material="K18 Yellow Gold (Half Eternity, diamonds)" data-price="35,000">
+      <img src="images/series-d/d1.jpg" alt="D-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">D-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 35,000</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="D-2" data-material="K18 White Gold (Half Eternity, diamonds)" data-price="36,600">
+      <img src="images/series-d/d2.jpg" alt="D-2 White Gold">
+      <div class="product-info"><p class="product-code">D-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 36,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="D-3" data-material="K18 Pink Gold (Half Eternity, diamonds)" data-price="35,000">
+      <img src="images/series-d/d3.jpg" alt="D-3 Pink Gold">
+      <div class="product-info"><p class="product-code">D-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 35,000</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="D-4" data-material="Platinum Pt900 (Half Eternity, diamonds)" data-price="34,600">
+      <img src="images/series-d/d4.jpg" alt="D-4 Platinum">
+      <div class="product-info"><p class="product-code">D-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 34,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+  </div>
+
   <div class="price-table-wrap">
     <p class="price-table-label">Series D — Price by Material (diamonds included)</p>
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>D-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 35,000</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>D-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 36,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>D-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 35,000</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>D-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">AED 34,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>D-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 35,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 36,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 35,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">AED 34,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-d.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
   </div>
 </section>
 
@@ -396,26 +556,47 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="F" data-type="ring">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series F · سلسلة F · Fシリーズ</p>
-      <h2 class="series-name">The <em>Sculptural</em> Ring</h2>
-      <p class="series-desc">A more architectural, sculptural form. Bold lines, refined finish. For those who want a jewel that commands presence.</p>
+      <p class="series-eyebrow" data-i18n="se_f">Series F</p>
+      <h2 class="series-name" data-i18n="sf_name">The <em>Sculptural</em> Ring</h2>
+      <p class="series-desc" data-i18n="sf_desc">A more architectural, sculptural form. Bold lines, refined finish. For those who want a jewel that commands presence.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング</span>
+    <span class="series-type" data-i18n="st_ring">Ring</span>
   </div>
+
+  <div class="product-grid">
+    <a class="product-card" data-code="F-1" data-material="K18 Yellow Gold (Sculptural)" data-price="30,600">
+      <img src="images/series-f/f1.jpg" alt="F-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">F-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 30,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="F-2" data-material="K18 White Gold (Sculptural)" data-price="31,800">
+      <img src="images/series-f/f2.jpg" alt="F-2 White Gold">
+      <div class="product-info"><p class="product-code">F-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 31,800</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="F-3" data-material="K18 Pink Gold (Sculptural)" data-price="30,600">
+      <img src="images/series-f/f3.jpg" alt="F-3 Pink Gold">
+      <div class="product-info"><p class="product-code">F-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 30,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="F-4" data-material="Platinum Pt900 (Sculptural)" data-price="28,800">
+      <img src="images/series-f/f4.jpg" alt="F-4 Platinum">
+      <div class="product-info"><p class="product-code">F-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 28,800</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+  </div>
+
   <div class="price-table-wrap">
     <p class="price-table-label">Series F — Price by Material</p>
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>F-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 30,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>F-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 31,800</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>F-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 30,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>F-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 28,800</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>F-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 30,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 31,800</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 30,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 28,800</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-f.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
   </div>
 </section>
 
@@ -423,26 +604,47 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="G" data-type="ring" style="background:#F7F3EC">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series G · سلسلة G · Gシリーズ</p>
-      <h2 class="series-name">The <em>Refined</em> Ring</h2>
-      <p class="series-desc">A refined, elegant design with subtle detailing. Understated luxury — for those who carry their story quietly.</p>
+      <p class="series-eyebrow" data-i18n="se_g">Series G</p>
+      <h2 class="series-name" data-i18n="sg_name">The <em>Refined</em> Ring</h2>
+      <p class="series-desc" data-i18n="sg_desc">A refined, elegant design with subtle detailing. Understated luxury — for those who carry their story quietly.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング</span>
+    <span class="series-type" data-i18n="st_ring">Ring</span>
   </div>
+
+  <div class="product-grid">
+    <a class="product-card" data-code="G-1" data-material="K18 Yellow Gold (Refined)" data-price="26,200">
+      <img src="images/series-g/g1.jpg" alt="G-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">G-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 26,200</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="G-2" data-material="K18 White Gold (Refined)" data-price="27,500">
+      <img src="images/series-g/g2.jpg" alt="G-2 White Gold">
+      <div class="product-info"><p class="product-code">G-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 27,500</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="G-3" data-material="K18 Pink Gold (Refined)" data-price="26,200">
+      <img src="images/series-g/g3.jpg" alt="G-3 Pink Gold">
+      <div class="product-info"><p class="product-code">G-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 26,200</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="G-4" data-material="Platinum Pt900 (Refined)" data-price="25,400">
+      <img src="images/series-g/g4.jpg" alt="G-4 Platinum">
+      <div class="product-info"><p class="product-code">G-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 25,400</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+  </div>
+
   <div class="price-table-wrap">
     <p class="price-table-label">Series G — Price by Material</p>
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>G-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 26,200</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>G-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 27,500</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>G-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 26,200</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>G-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 25,400</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>G-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 26,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 27,500</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 26,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 25,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-g.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
   </div>
 </section>
 
@@ -450,26 +652,47 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="H" data-type="ring">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series H · سلسلة H · Hシリーズ</p>
-      <h2 class="series-name">The <em>Modern</em> Ring</h2>
-      <p class="series-desc">A contemporary form with clean geometry. Strong, modern, and deeply personal. The design that speaks without words.</p>
+      <p class="series-eyebrow" data-i18n="se_h">Series H</p>
+      <h2 class="series-name" data-i18n="sh_name">The <em>Modern</em> Ring</h2>
+      <p class="series-desc" data-i18n="sh_desc">A contemporary form with clean geometry. Strong, modern, and deeply personal. The design that speaks without words.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング</span>
+    <span class="series-type" data-i18n="st_ring">Ring</span>
   </div>
+
+  <div class="product-grid">
+    <a class="product-card" data-code="H-1" data-material="K18 Yellow Gold (Modern)" data-price="28,200">
+      <img src="images/series-h/h1.jpg" alt="H-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">H-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 28,200</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="H-2" data-material="K18 White Gold (Modern)" data-price="29,400">
+      <img src="images/series-h/h2.jpg" alt="H-2 White Gold">
+      <div class="product-info"><p class="product-code">H-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 29,400</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="H-3" data-material="K18 Pink Gold (Modern)" data-price="28,200">
+      <img src="images/series-h/h3.jpg" alt="H-3 Pink Gold">
+      <div class="product-info"><p class="product-code">H-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">AED 28,200</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="H-4" data-material="Platinum Pt900 (Modern)" data-price="27,500">
+      <img src="images/series-h/h4.jpg" alt="H-4 Platinum">
+      <div class="product-info"><p class="product-code">H-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 27,500</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+  </div>
+
   <div class="price-table-wrap">
     <p class="price-table-label">Series H — Price by Material</p>
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>H-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 28,200</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>H-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 29,400</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>H-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 28,200</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>H-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 27,500</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>H-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 28,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 29,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">AED 28,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 27,500</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-h.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
   </div>
 </section>
 
@@ -477,25 +700,42 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="series-section" data-series="J" data-type="ring" style="background:#F7F3EC">
   <div class="series-header">
     <div class="series-title-block">
-      <p class="series-eyebrow">Series J · سلسلة J · Jシリーズ</p>
-      <h2 class="series-name">The <em>Statement</em> Ring</h2>
-      <p class="series-desc">A bold, distinctive form — our most expressive design. For those who want their love to be seen as well as felt.</p>
+      <p class="series-eyebrow" data-i18n="se_j">Series J</p>
+      <h2 class="series-name" data-i18n="sj_name">The <em>Statement</em> Ring</h2>
+      <p class="series-desc" data-i18n="sj_desc">A bold, distinctive form — our most expressive design. For those who want their love to be seen as well as felt.</p>
     </div>
-    <span class="series-type">Ring · خاتم · リング · Statement</span>
+    <span class="series-type" data-i18n="st_ring_st">Ring · Statement</span>
   </div>
+
+  <div class="product-grid">
+    <a class="product-card" data-code="J-1" data-material="K18 Yellow Gold (Statement)" data-price="33,400">
+      <img src="images/series-j/j1.jpg" alt="J-1 Yellow Gold">
+      <div class="product-info"><p class="product-code">J-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">AED 33,400</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="J-2" data-material="K18 White Gold (Statement)" data-price="34,600">
+      <img src="images/series-j/j2.jpg" alt="J-2 White Gold">
+      <div class="product-info"><p class="product-code">J-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">AED 34,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+    <a class="product-card" data-code="J-4" data-material="Platinum Pt900 (Statement)" data-price="32,600">
+      <img src="images/series-j/j4.jpg" alt="J-4 Platinum">
+      <div class="product-info"><p class="product-code">J-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">AED 32,600</p><p class="product-order-cta">View Details →</p></div>
+    </a>
+  </div>
+
   <div class="price-table-wrap">
     <p class="price-table-label">Series J — Price by Material</p>
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (AED) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>J-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 33,400</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>J-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 34,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
-        <tr><td>J-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 32,600</span></td><td><span class="price-note">4–8 weeks</span></td></tr>
+        <tr><td>J-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">AED 33,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>J-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">AED 34,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>J-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">AED 32,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="series-cta">
-    <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="https://wa.me/" class="btn-enquire btn-series-enquire" target="_blank">💬 <span data-i18n="enquire_wa">Enquire via WhatsApp</span></a>
+    <a href="series-j.html" class="btn-view-series" data-i18n="view_series">View Series →</a>
   </div>
 </section>
 
@@ -503,51 +743,154 @@ footer{background:var(--ink);padding:2.5rem 6rem;display:flex;justify-content:sp
 <section class="bespoke-section" id="bespoke">
   <div class="bespoke-inner">
     <div class="bespoke-text">
-      <h2>Fully <em>Bespoke</em><br>Commission</h2>
-      <p>None of the above feels quite right? We create entirely custom designs — from your vision, with our master artisan. No template, no limit. Just your story, in gold.</p>
+      <h2 data-i18n="bsp_title">Fully <em>Bespoke</em><br>Commission</h2>
+      <p data-i18n="bsp_body">None of the above feels quite right? We create entirely custom designs — from your vision, with our master artisan. No template, no limit. Just your story, in gold.</p>
       <div class="bespoke-features">
-        <div class="bespoke-feat"><h4>Design</h4><p>Created from scratch with our head artisan. Unlimited forms, fully original.</p></div>
-        <div class="bespoke-feat"><h4>Materials</h4><p>K18 Gold, Platinum, Diamonds, Rubies, Sapphires, Emeralds — any combination.</p></div>
-        <div class="bespoke-feat"><h4>Multiple Hairs</h4><p>Seal hair from multiple loved ones — family members, pets — in one single jewel.</p></div>
-        <div class="bespoke-feat"><h4>Timeline</h4><p>Approximately 6 months. We update you at every stage of the process.</p></div>
+        <div class="bespoke-feat"><h4 data-i18n="bsp_f1_t">Design</h4><p data-i18n="bsp_f1_b">Created from scratch with our head artisan. Unlimited forms, fully original.</p></div>
+        <div class="bespoke-feat"><h4 data-i18n="bsp_f2_t">Materials</h4><p data-i18n="bsp_f2_b">K18 Gold, Platinum, Diamonds, Rubies, Sapphires, Emeralds — any combination.</p></div>
+        <div class="bespoke-feat"><h4 data-i18n="bsp_f3_t">Multiple Hairs</h4><p data-i18n="bsp_f3_b">Seal hair from multiple loved ones — family members, pets — in one single jewel.</p></div>
+        <div class="bespoke-feat"><h4 data-i18n="bsp_f4_t">Timeline</h4><p data-i18n="bsp_f4_b">Approximately 6 months. We update you at every stage of the process.</p></div>
       </div>
-      <div class="bespoke-price">From AED 70,000</div>
-      <div class="bespoke-price-note">DDP · all taxes included · Price depends on design complexity & materials</div>
+      <div class="bespoke-price" data-i18n="bsp_price">From AED 70,000</div>
+      <div class="bespoke-price-note" data-i18n="bsp_price_note">DDP · all taxes included · Price depends on design complexity & materials</div>
       <br><br>
-      <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 Begin Your Bespoke Journey</a>
+      <a href="https://wa.me/" class="btn-enquire" target="_blank">💬 <span data-i18n="bsp_cta">Begin Your Bespoke Journey</span></a>
     </div>
     <div class="bespoke-img">
-      <img src="images/IMG_0750.JPG" alt="Bespoke Jewellery Craftsmanship">
+      <img src="images/bespoke/main.jpg" alt="Bespoke Jewellery Craftsmanship">
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a href="rion-rings.html" class="footer-logo">Rion</a>
-  <div class="footer-copy">© 2025 Rion · 100% Made in Japan · All prices DDP incl. UAE duty & VAT</div>
-  <ul class="footer-nav">
-    <li><a href="rion-rings.html">Home</a></li>
-    <li><a href="rion-rings.html#process">How It Works</a></li>
-    <li><a href="rion-rings.html#faq">FAQ</a></li>
-    <li><a href="https://wa.me/" target="_blank">WhatsApp</a></li>
-  </ul>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="rion-rings.html" class="footer-logo">Rion</a>
+      <p>Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
+      <p class="footer-est">Est. 2018 · Japan</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="rion-rings.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html">About Rion</a></li>
+        <li><a href="rion-rings.html#process">How It Works</a></li>
+        <li><a href="rion-rings.html#voices">Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Help</h5>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="care.html">Care Guide</a></li>
+        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+        <li><a href="legal.html">Legal &amp; Privacy</a></li>
+        <li><a href="rion-rings.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <div class="footer-social">
+        <a href="https://wa.me/" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
+        <a href="https://instagram.com/rion.rings_official" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
+        <a href="rion-rings.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — All prices incl. UAE duty & import VAT</div>
+    <div class="footer-right">Est. 2018 · Japan · UAE & Gulf</div>
+  </div>
 </footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
 
 <!-- STICKY BAR -->
 <div class="sticky-bar" id="stickyBar">
-  <div class="sticky-text"><strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From AED 22,000 DDP</div>
+  <div class="sticky-text" data-i18n="sticky_text"><strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From AED 22,000 DDP</div>
   <div class="sticky-ctas">
-    <a href="https://wa.me/" class="s-wa" target="_blank">💬 WhatsApp</a>
-    <a href="rion-rings.html" class="s-back">← Back to Home</a>
+    <a href="https://wa.me/" class="s-wa" target="_blank">💬 <span data-i18n="sticky_wa">WhatsApp</span></a>
+    <a href="rion-rings.html" class="s-back" data-i18n="sticky_back">← Back to Home</a>
   </div>
 </div>
 
 <script>
-// Sticky bar
+// Cookie consent
+function acceptCookies(){
+  localStorage.setItem('rion_cookies_accepted','1');
+  const b = document.getElementById('cookieBanner');
+  if(b) b.classList.remove('visible');
+}
+(function(){
+  if(localStorage.getItem('rion_cookies_accepted') === '1') return;
+  setTimeout(()=>{
+    const b = document.getElementById('cookieBanner');
+    if(b) b.classList.add('visible');
+  }, 1200);
+})();
+
+// Lazy load all product images
+document.querySelectorAll('img').forEach((img, i) => {
+  if (i >= 4 && !img.loading) img.loading = 'lazy';
+  if (!img.decoding) img.decoding = 'async';
+});
+
+// Hamburger menu
+function toggleMenu(){
+  const overlay = document.getElementById('menuOverlay');
+  const burger = document.querySelector('.hamburger');
+  const isActive = overlay.classList.toggle('active');
+  burger.classList.toggle('active', isActive);
+  overlay.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+  document.body.style.overflow = isActive ? 'hidden' : '';
+}
+function closeMenu(){
+  const overlay = document.getElementById('menuOverlay');
+  const burger = document.querySelector('.hamburger');
+  overlay.classList.remove('active');
+  burger.classList.remove('active');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
+
+// WhatsApp number — replace with Rion's actual number when ready (digits only, with country code)
+const WA_NUMBER = '';
+
+function buildWaUrl(text){
+  return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+}
+
+// Product card → product detail page
+document.querySelectorAll('.product-card[data-code]').forEach(card => {
+  const code = card.dataset.code;
+  card.setAttribute('href', `product.html?code=${encodeURIComponent(code)}`);
+});
+
+// Series / Bespoke enquire buttons
+document.querySelectorAll('.btn-series-enquire').forEach(btn => {
+  const section = btn.closest('section');
+  if(!section) return;
+  let msg;
+  if(section.classList.contains('bespoke-section')){
+    msg = `Hello Rion, I'd like to begin a fully bespoke commission. Please tell me about the process and what's possible.`;
+  } else {
+    const series = section.dataset.series || '';
+    const nameEl = section.querySelector('.series-name');
+    const name = nameEl ? nameEl.textContent.replace(/\s+/g,' ').trim() : '';
+    msg = `Hello Rion, I'd like to enquire about Series ${series} — ${name}. Please send me more details.`;
+  }
+  btn.setAttribute('href', buildWaUrl(msg));
+});
+
+// Sticky bar + scroll top
 window.addEventListener('scroll',()=>{
   const b=document.getElementById('stickyBar');
+  const t=document.getElementById('scrollTop');
   window.scrollY>400?b.classList.add('visible'):b.classList.remove('visible');
+  window.scrollY>800?t.classList.add('visible'):t.classList.remove('visible');
 });
 
 // Filter
@@ -565,13 +908,150 @@ function filterSeries(filter){
   });
 }
 
+// ===== I18N =====
+const T = {
+  en: {
+    delivery_note:"Approx. 5.5 months",
+    nav_cta:"Order Now",
+    page_title:"The<br><em>Collection</em>",
+    page_lead:"Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and enquire via WhatsApp. We will guide you through the rest.",
+    page_note:"✦ All prices DDP — UAE import duty & VAT included · No extra charges on delivery",
+    filter_label:"Filter:",f_all:"All Series",f_ring:"Rings",f_necklace:"Necklaces",
+    f_a:"Series A",f_b:"Series B",f_c:"Series C",f_d:"Series D",f_f:"Series F",f_g:"Series G",f_h:"Series H",f_j:"Series J",se_a:"Series A",se_b:"Series B",se_c:"Series C",se_d:"Series D",se_f:"Series F",se_g:"Series G",se_h:"Series H",se_j:"Series J",st_ring:"Ring",st_neck:"Necklace",st_ring_bs:"Ring · 2 Birthstones",st_ring_dia:"Ring · Diamond Band",st_ring_st:"Ring · Statement",
+    sa_name:"The <em>Classic</em> Ring",
+    sa_desc:"A timeless band with a sealed inner chamber. The most chosen design — elegant, wearable every day, available in four precious materials.",
+    sb_name:"The <em>Pendant</em> Necklace",
+    sb_desc:"A delicate necklace with a sealed pendant enclosing a strand of hair. Worn near the heart. Available in four precious materials.",
+    sc_name:"The <em>Birthstone</em> Ring",
+    sc_desc:"A ring with a sealed chamber and two birthstones of your choice — diamond, ruby, sapphire, emerald, and more. Perfect for commemorating a date or a person.",
+    sd_name:"The <em>Half Eternity</em> Ring",
+    sd_desc:"A half eternity ring set with diamonds across the band, with a sealed inner chamber for hair. Exceptional brilliance, eternal meaning.",
+    sf_name:"The <em>Sculptural</em> Ring",
+    sf_desc:"A more architectural, sculptural form. Bold lines, refined finish. For those who want a jewel that commands presence.",
+    sg_name:"The <em>Refined</em> Ring",
+    sg_desc:"A refined, elegant design with subtle detailing. Understated luxury — for those who carry their story quietly.",
+    sh_name:"The <em>Modern</em> Ring",
+    sh_desc:"A contemporary form with clean geometry. Strong, modern, and deeply personal. The design that speaks without words.",
+    sj_name:"The <em>Statement</em> Ring",
+    sj_desc:"A bold, distinctive form — our most expressive design. For those who want their love to be seen as well as felt.",
+    enquire_wa:"Enquire via WhatsApp",
+    view_series:"View Series →",
+    bsp_title:"Fully <em>Bespoke</em><br>Commission",
+    bsp_body:"None of the above feels quite right? We create entirely custom designs — from your vision, with our master artisan. No template, no limit. Just your story, in gold.",
+    bsp_f1_t:"Design",bsp_f1_b:"Created from scratch with our head artisan. Unlimited forms, fully original.",
+    bsp_f2_t:"Materials",bsp_f2_b:"K18 Gold, Platinum, Diamonds, Rubies, Sapphires, Emeralds — any combination.",
+    bsp_f3_t:"Multiple Hairs",bsp_f3_b:"Seal hair from multiple loved ones — family members, pets — in one single jewel.",
+    bsp_f4_t:"Timeline",bsp_f4_b:"Approximately 6 months. We update you at every stage of the process.",
+    bsp_price:"From AED 70,000",
+    bsp_price_note:"DDP · all taxes included · Price depends on design complexity & materials",
+    bsp_cta:"Begin Your Bespoke Journey",
+    sticky_text:"<strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From AED 22,000 DDP",
+    sticky_wa:"WhatsApp",sticky_back:"← Back to Home"
+  ,th_material_v:"Material"},
+  ar: {
+    delivery_note:"حوالي 5.5 أشهر",
+    nav_cta:"اطلب الآن",
+    page_title:"<em>المجموعة</em>",
+    page_lead:"كل قطعة مصنوعة بالكامل حسب طلبك — مصنوعة يدوياً في اليابان من شعرك وحده. اختاري السلسلة والمادة، واستفسري عبر واتساب. سنرشدك في كل خطوة.",
+    page_note:"✦ جميع الأسعار DDP — رسوم الاستيراد الإماراتية وضريبة القيمة المضافة مضمّنة · لا رسوم إضافية عند التسليم",
+    filter_label:"تصفية:",f_all:"كل السلاسل",f_ring:"خواتم",f_necklace:"قلائد",
+    f_a:"سلسلة A",f_b:"سلسلة B",f_c:"سلسلة C",f_d:"سلسلة D",f_f:"سلسلة F",f_g:"سلسلة G",f_h:"سلسلة H",f_j:"سلسلة J",se_a:"سلسلة A",se_b:"سلسلة B",se_c:"سلسلة C",se_d:"سلسلة D",se_f:"سلسلة F",se_g:"سلسلة G",se_h:"سلسلة H",se_j:"سلسلة J",st_ring:"خاتم",st_neck:"قلادة",st_ring_bs:"خاتم · حجران كريمان",st_ring_dia:"خاتم · حلقة ألماس",st_ring_st:"خاتم · تميّز",
+    sa_name:"الخاتم <em>الكلاسيكي</em>",
+    sa_desc:"حلقة خالدة بغرفة داخلية مختومة. التصميم الأكثر اختياراً — أنيق، قابل للارتداء يومياً، متوفر بأربع مواد ثمينة.",
+    sb_name:"قلادة <em>المعلّقة</em>",
+    sb_desc:"قلادة رقيقة بقلادة مختومة تحوي خصلة شعر. تُرتدى قريباً من القلب. متوفرة بأربع مواد ثمينة.",
+    sc_name:"خاتم <em>حجر الميلاد</em>",
+    sc_desc:"خاتم بغرفة مختومة وحجرين من اختياركم — ألماس، ياقوت، ياقوت أزرق، زمرد، وأكثر. مثالي لإحياء ذكرى تاريخ أو شخص.",
+    sd_name:"خاتم <em>نصف الأبدية</em>",
+    sd_desc:"خاتم نصف أبدي مرصع بالألماس عبر الحلقة، مع غرفة داخلية مختومة للشعر. تألق استثنائي ومعنى أبدي.",
+    sf_name:"الخاتم <em>المنحوت</em>",
+    sf_desc:"شكل أكثر معمارية ونحتاً. خطوط جريئة وتشطيب راقٍ. لأولئك الذين يريدون جوهرة تفرض حضورها.",
+    sg_name:"الخاتم <em>الراقي</em>",
+    sg_desc:"تصميم راقٍ وأنيق بتفاصيل دقيقة. فخامة هادئة — لمن يحملون قصتهم بهدوء.",
+    sh_name:"الخاتم <em>العصري</em>",
+    sh_desc:"شكل معاصر بهندسة نظيفة. قوي وعصري وشخصي. التصميم الذي يتحدث بلا كلمات.",
+    sj_name:"خاتم <em>التميّز</em>",
+    sj_desc:"شكل جريء ومميز — تصميمنا الأكثر تعبيراً. لأولئك الذين يريدون أن يُرى حبهم كما يُحس.",
+    enquire_wa:"استفسر عبر واتساب",
+    view_series:"عرض السلسلة →",
+    bsp_title:"تكليف <em>حصري</em><br>بالكامل",
+    bsp_body:"لا شيء من السابق يناسبك تماماً؟ نصنع تصاميم مخصصة بالكامل — من رؤيتك، مع حرفينا الرئيسي. لا قالب، لا حدود. فقط قصتك، بالذهب.",
+    bsp_f1_t:"التصميم",bsp_f1_b:"من الصفر مع حرفينا الرئيسي. أشكال غير محدودة، أصلية بالكامل.",
+    bsp_f2_t:"المواد",bsp_f2_b:"ذهب 18K، بلاتين، ألماس، ياقوت، ياقوت أزرق، زمرد — أي تركيبة.",
+    bsp_f3_t:"شعور متعدد",bsp_f3_b:"إغلاق شعر من أحباء متعددين — أفراد العائلة، الحيوانات الأليفة — في جوهرة واحدة.",
+    bsp_f4_t:"الجدول الزمني",bsp_f4_b:"حوالي 6 أشهر. نقدم تحديثات في كل مرحلة.",
+    bsp_price:"من AED 70,000",
+    bsp_price_note:"DDP · جميع الضرائب مضمّنة · السعر يعتمد على تعقيد التصميم والمواد",
+    bsp_cta:"ابدأي رحلتك الحصرية",
+    sticky_text:"<strong>مجموعة Rion</strong> &nbsp;·&nbsp; جميع القطع مصنوعة يدوياً في اليابان · من AED 22,000 DDP",
+    sticky_wa:"واتساب",sticky_back:"← العودة للرئيسية"
+  ,th_material_v:"المادة"},
+  ja: {
+    delivery_note:"約5.5ヶ月",
+    nav_cta:"ご注文",
+    page_title:"<em>コレクション</em>",
+    page_lead:"すべての作品はお客様のためだけのオーダーメイド——日本で完全に手作り、あなたの毛髪のみから。シリーズと素材をお選びいただき、WhatsAppでお問い合わせください。残りはこちらでご案内します。",
+    page_note:"✦ 全価格 DDP — UAE関税・VAT込み · お届け時の追加費用なし",
+    filter_label:"絞り込み：",f_all:"全シリーズ",f_ring:"リング",f_necklace:"ネックレス",
+    f_a:"Aシリーズ",f_b:"Bシリーズ",f_c:"Cシリーズ",f_d:"Dシリーズ",f_f:"Fシリーズ",f_g:"Gシリーズ",f_h:"Hシリーズ",f_j:"Jシリーズ",se_a:"Aシリーズ",se_b:"Bシリーズ",se_c:"Cシリーズ",se_d:"Dシリーズ",se_f:"Fシリーズ",se_g:"Gシリーズ",se_h:"Hシリーズ",se_j:"Jシリーズ",st_ring:"リング",st_neck:"ネックレス",st_ring_bs:"リング · 誕生石2石入り",st_ring_dia:"リング · ダイヤバンド",st_ring_st:"リング · ステートメント",
+    sa_name:"<em>クラシック</em>リング",
+    sa_desc:"内側に毛髪を密封する、時を超えるバンド。最も選ばれているデザイン——上品で、毎日身に着けられ、4つの貴重な素材でご用意。",
+    sb_name:"<em>ペンダント</em>ネックレス",
+    sb_desc:"毛髪を封入した繊細なネックレス。心に近い位置で。4つの貴重な素材でご用意。",
+    sc_name:"<em>誕生石</em>リング",
+    sc_desc:"密封された内側と、お選びいただける2つの誕生石——ダイヤ・ルビー・サファイヤ・エメラルドほか。記念日や大切な方の追悼に。",
+    sd_name:"<em>ハーフエタニティ</em>リング",
+    sd_desc:"バンド全体にダイヤを配置し、毛髪を封入する内側を備えたハーフエタニティリング。比類なき輝きと、永遠の意味を。",
+    sf_name:"<em>スカルプチュラル</em>リング",
+    sf_desc:"より建築的・彫刻的なフォルム。大胆なラインと洗練された仕上げ。存在感のあるジュエリーをお求めの方へ。",
+    sg_name:"<em>リファインド</em>リング",
+    sg_desc:"繊細なディテールを備えた上品で洗練されたデザイン。控えめな贅沢——物語を静かに身に着ける方へ。",
+    sh_name:"<em>モダン</em>リング",
+    sh_desc:"クリーンなジオメトリーの現代的フォルム。力強く、モダンで、深くパーソナル。言葉なく語るデザイン。",
+    sj_name:"<em>ステートメント</em>リング",
+    sj_desc:"大胆で印象的——もっとも表現力豊かなデザイン。愛を感じるだけでなく、見せたい方へ。",
+    enquire_wa:"WhatsAppで問い合わせる",
+    view_series:"シリーズを見る →",
+    bsp_title:"完全<em>オーダーメイド</em><br>フルカスタム",
+    bsp_body:"どれもしっくりこない？ヘッドアーティザンとともに、完全カスタムのデザインを創ります。テンプレートも、制限もありません。あなたのストーリーを、金で。",
+    bsp_f1_t:"デザイン",bsp_f1_b:"ヘッドアーティザンとゼロから創作。無制限のフォルム、完全オリジナル。",
+    bsp_f2_t:"素材",bsp_f2_b:"K18ゴールド・プラチナ・ダイヤ・ルビー・サファイヤ・エメラルド——あらゆる組み合わせ。",
+    bsp_f3_t:"複数人の毛髪",bsp_f3_b:"ご家族・ペットなど、複数の大切な方の毛髪を1つのジュエリーに封入。",
+    bsp_f4_t:"制作期間",bsp_f4_b:"約6ヶ月。各段階で進捗をご報告します。",
+    bsp_price:"AED 70,000〜",
+    bsp_price_note:"DDP · 全税込み · デザインの複雑さと素材により価格は変動",
+    bsp_cta:"オーダーメイドを始める",
+    sticky_text:"<strong>Rion コレクション</strong> &nbsp;·&nbsp; すべての作品を日本で手作り · AED 22,000〜 DDP",
+    sticky_wa:"WhatsApp",sticky_back:"← ホームへ戻る"
+  ,th_material_v:"素材"}
+};
+
 // Lang switcher
 function setLang(lang){
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.body.className = 'lang-' + lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  const t = T[lang];
+  if(!t) return;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(t[k] !== undefined) el.innerHTML = t[k];
+  });
 }
 </script>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-text">
+    <strong>Cookie Notice</strong>
+    <span>This site uses only essential cookies for language preference. We do not use tracking or advertising cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
+  </div>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+
 </body>
 </html>

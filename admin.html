@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rion Admin — 注文管理</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/jpeg" href="images/collection/ring.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#8B6914;
+  --cream:#FAF7F2;--ink:#1A1714;--ink-soft:#4A4540;--ink-muted:#8A8480;
+  --border:rgba(201,169,110,0.25);--green:#128C7E;
+  --red:#A85D5D;--amber:#C68C2F;--blue:#5B7C99;
+  --bg:#F5F1E8;--card:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);font-weight:300;min-height:100vh}
+
+/* LOGIN */
+.login-wrap{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--ink)}
+.login-card{background:var(--cream);padding:3rem 3rem;max-width:420px;width:90%;border:0.5px solid var(--border);text-align:center}
+.login-logo{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ink);letter-spacing:0.18em;margin-bottom:0.5rem}
+.login-eyebrow{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2rem}
+.login-form{display:flex;flex-direction:column;gap:1rem}
+.login-form input{padding:0.85rem 1rem;border:0.5px solid var(--ink-muted);background:transparent;font-size:0.9rem;font-family:'Jost',sans-serif;color:var(--ink);letter-spacing:0.04em}
+.login-form input:focus{outline:none;border-color:var(--gold-dark)}
+.login-form button{padding:0.85rem 1rem;background:var(--ink);color:var(--gold);border:none;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:background .3s}
+.login-form button:hover{background:var(--gold-dark);color:var(--cream)}
+.login-error{color:var(--red);font-size:0.78rem;margin-top:0.5rem;min-height:1rem}
+.login-hint{font-size:0.7rem;color:var(--ink-muted);margin-top:1.5rem;line-height:1.6}
+
+/* APP */
+.app{display:none}
+.app.active{display:block}
+header.admin-header{background:var(--ink);color:var(--gold-light);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:0.5px solid var(--border)}
+.admin-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);letter-spacing:0.16em;text-decoration:none}
+.admin-logo-sub{font-size:0.6rem;letter-spacing:0.24em;text-transform:uppercase;color:rgba(201,169,110,0.6);margin-left:0.75rem}
+.header-right{display:flex;align-items:center;gap:1rem}
+.header-clock{font-size:0.75rem;color:rgba(250,247,242,0.5);letter-spacing:0.06em}
+.btn-logout{background:transparent;color:rgba(250,247,242,0.5);border:0.5px solid rgba(201,169,110,0.3);padding:6px 14px;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all .25s}
+.btn-logout:hover{color:var(--gold);border-color:var(--gold)}
+
+/* TABS */
+.tabs{display:flex;background:var(--card);border-bottom:0.5px solid var(--border);padding:0 2rem;gap:0}
+.tab{padding:1rem 1.5rem;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);cursor:pointer;border-bottom:2px solid transparent;background:none;border-left:none;border-right:none;border-top:none;font-family:'Jost',sans-serif;font-weight:400;transition:all .25s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--gold-dark);border-bottom-color:var(--gold-dark);font-weight:500}
+.tab-count{display:inline-block;background:var(--gold-light);color:var(--gold-dark);font-size:0.65rem;padding:1px 7px;margin-left:6px;font-weight:500}
+
+/* MAIN */
+.tab-content{padding:2rem;display:none;max-width:1400px;margin:0 auto}
+.tab-content.active{display:block}
+
+/* DASHBOARD */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2.5rem}
+.stat-card{background:var(--card);padding:1.5rem;border:0.5px solid var(--border)}
+.stat-label{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.5rem}
+.stat-value{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--ink);font-weight:300;line-height:1}
+.stat-sub{font-size:0.7rem;color:var(--gold-dark);margin-top:0.5rem;letter-spacing:0.06em}
+
+.section-h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;letter-spacing:0.02em;display:flex;justify-content:space-between;align-items:baseline}
+.section-h2 .sub{font-size:0.72rem;font-family:'Jost',sans-serif;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);font-weight:400}
+
+/* RECENT */
+.recent-list{background:var(--card);border:0.5px solid var(--border)}
+.recent-item{display:grid;grid-template-columns:auto 1fr auto auto auto;gap:1.25rem;padding:0.9rem 1.25rem;border-bottom:0.5px solid var(--border);align-items:center;font-size:0.85rem;cursor:pointer;transition:background .15s}
+.recent-item:last-child{border-bottom:none}
+.recent-item:hover{background:#FBF9F4}
+.recent-id{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold-dark);font-style:italic;min-width:90px}
+.recent-name{font-weight:500}
+.recent-date{color:var(--ink-muted);font-size:0.78rem}
+.recent-product{color:var(--ink-soft);font-size:0.8rem;font-family:'Cormorant Garamond',serif;font-style:italic}
+
+/* STATUS PILL */
+.pill{display:inline-block;padding:3px 10px;font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;border-radius:2px;font-weight:500;white-space:nowrap}
+.pill-new{background:#E8F0F6;color:var(--blue)}
+.pill-invoiced{background:#FAEED9;color:var(--amber)}
+.pill-paid{background:var(--gold-light);color:var(--gold-dark)}
+.pill-kit_sent{background:#F0E8F2;color:#7B4D8E}
+.pill-hair_returned{background:#E0EBE3;color:#3E7A5A}
+.pill-crafting{background:#F4DBC4;color:#A56B2D}
+.pill-shipped{background:#D8E5F0;color:#3A6790}
+.pill-completed{background:#E5E5E0;color:var(--ink-soft)}
+.pill-cancelled{background:#F0DEDE;color:var(--red)}
+
+/* TOOLBAR */
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;gap:1rem;flex-wrap:wrap}
+.toolbar-left{display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap}
+.search-input{padding:8px 12px;border:0.5px solid var(--ink-muted);background:var(--card);font-size:0.85rem;font-family:'Jost',sans-serif;width:260px}
+.filter-select{padding:8px 12px;border:0.5px solid var(--ink-muted);background:var(--card);font-size:0.78rem;font-family:'Jost',sans-serif;cursor:pointer}
+.btn{padding:8px 18px;border:none;cursor:pointer;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-family:'Jost',sans-serif;transition:all .25s;font-weight:500}
+.btn-primary{background:var(--ink);color:var(--gold)}
+.btn-primary:hover{background:var(--gold-dark);color:var(--cream)}
+.btn-secondary{background:var(--card);color:var(--ink);border:0.5px solid var(--ink-muted)}
+.btn-secondary:hover{border-color:var(--gold-dark);color:var(--gold-dark)}
+.btn-danger{background:transparent;color:var(--red);border:0.5px solid var(--red)}
+.btn-danger:hover{background:var(--red);color:var(--cream)}
+
+/* TABLE */
+.table-wrap{background:var(--card);border:0.5px solid var(--border);overflow-x:auto}
+table.orders{width:100%;border-collapse:collapse;font-size:0.85rem}
+table.orders th{background:var(--ink);color:var(--gold);padding:10px 14px;text-align:left;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:400;white-space:nowrap}
+table.orders td{padding:10px 14px;border-bottom:0.5px solid var(--border);vertical-align:middle}
+table.orders tr:hover td{background:#FBF9F4;cursor:pointer}
+table.orders tr:last-child td{border-bottom:none}
+.order-id{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--gold-dark);font-style:italic;white-space:nowrap}
+.order-customer{font-weight:500}
+.order-meta{font-size:0.72rem;color:var(--ink-muted);margin-top:2px}
+.order-product{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-soft)}
+.order-price{font-family:'Cormorant Garamond',serif;color:var(--gold-dark);font-style:italic;white-space:nowrap}
+
+.empty{text-align:center;padding:4rem 2rem;color:var(--ink-muted);font-size:0.85rem;background:var(--card);border:0.5px dashed var(--border)}
+.empty-icon{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);font-style:italic;line-height:1;margin-bottom:1rem}
+.empty p{margin-bottom:1.5rem}
+
+/* PIPELINE (KANBAN) */
+.pipeline{display:grid;grid-template-columns:repeat(8,minmax(220px,1fr));gap:0.75rem;overflow-x:auto;padding-bottom:1rem}
+.pipeline-col{background:#EFEAE0;padding:0.85rem;border-top:3px solid;min-width:220px}
+.pipeline-col[data-status="new"]{border-color:var(--blue)}
+.pipeline-col[data-status="invoiced"]{border-color:var(--amber)}
+.pipeline-col[data-status="paid"]{border-color:var(--gold-dark)}
+.pipeline-col[data-status="kit_sent"]{border-color:#7B4D8E}
+.pipeline-col[data-status="hair_returned"]{border-color:#3E7A5A}
+.pipeline-col[data-status="crafting"]{border-color:#A56B2D}
+.pipeline-col[data-status="shipped"]{border-color:#3A6790}
+.pipeline-col[data-status="completed"]{border-color:var(--ink-soft)}
+.pipeline-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink)}
+.pipeline-h .cnt{background:var(--ink);color:var(--gold);padding:1px 8px;font-size:0.62rem;font-weight:500}
+.pipeline-card{background:var(--card);padding:0.85rem;margin-bottom:0.6rem;border:0.5px solid var(--border);cursor:pointer;transition:all .2s;font-size:0.78rem}
+.pipeline-card:hover{border-color:var(--gold);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.pipeline-card .pc-id{font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:var(--gold-dark);font-style:italic;margin-bottom:3px}
+.pipeline-card .pc-name{font-weight:500;color:var(--ink);margin-bottom:3px}
+.pipeline-card .pc-meta{font-size:0.7rem;color:var(--ink-muted)}
+.pipeline-card .pc-product{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-dark);font-size:0.78rem;margin-top:4px}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(26,23,20,0.8);z-index:500;display:none;align-items:flex-start;justify-content:center;padding:2rem;overflow-y:auto}
+.modal.active{display:flex}
+.modal-card{background:var(--card);max-width:760px;width:100%;border:0.5px solid var(--border);position:relative;margin-top:2rem}
+.modal-head{padding:1.5rem 2rem;border-bottom:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--gold)}
+.modal-head h2{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400}
+.modal-close{background:none;border:none;color:var(--gold);font-size:1.4rem;cursor:pointer;padding:0;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{color:var(--gold-light)}
+.modal-body{padding:2rem}
+.modal-foot{padding:1.25rem 2rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;gap:0.75rem;background:#FBF9F4}
+
+/* FORM */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+.form-row.full{grid-template-columns:1fr}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);font-weight:500}
+.form-group input,.form-group select,.form-group textarea{padding:0.7rem 0.85rem;border:0.5px solid var(--ink-muted);background:var(--card);font-size:0.85rem;font-family:'Jost',sans-serif;color:var(--ink);letter-spacing:0.02em}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold-dark)}
+.form-group textarea{resize:vertical;min-height:80px;font-family:inherit}
+
+/* QUICK ACTIONS */
+.quick-actions{background:#FBF9F4;border:0.5px solid var(--border);padding:1.25rem;margin-bottom:1.5rem;display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center}
+.quick-actions-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);font-weight:500}
+.quick-actions-buttons{display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center}
+.btn-wa-quick{display:inline-flex;align-items:center;gap:6px;background:var(--green);color:#FFF;border:none;padding:8px 14px;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:background .25s;text-decoration:none}
+.btn-wa-quick:hover{background:#0E7567}
+.btn-wa-quick:disabled{background:var(--ink-muted);cursor:not-allowed}
+.template-wrap{position:relative;display:inline-block}
+.template-btn{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--gold);border:none;padding:8px 14px;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:background .25s}
+.template-btn:hover{background:var(--gold-dark);color:#FFF}
+.template-dropdown{position:absolute;top:100%;left:0;margin-top:4px;background:var(--card);border:0.5px solid var(--ink-muted);min-width:260px;z-index:10;display:none;box-shadow:0 4px 16px rgba(0,0,0,0.15)}
+.template-dropdown.open{display:block}
+.template-dropdown button{display:block;width:100%;text-align:left;padding:9px 14px;background:none;border:none;cursor:pointer;font-size:0.78rem;color:var(--ink);font-family:'Jost',sans-serif;border-bottom:0.5px solid var(--border)}
+.template-dropdown button:last-child{border-bottom:none}
+.template-dropdown button:hover{background:#FBF9F4;color:var(--gold-dark)}
+.copy-toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--gold);padding:12px 24px;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;z-index:1000;opacity:0;visibility:hidden;transition:all .3s}
+.copy-toast.show{opacity:1;visibility:visible}
+
+/* BACKUP BANNER */
+.backup-banner{background:#FAEED9;border:0.5px solid #C68C2F;padding:1rem 1.5rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.backup-banner-text{font-size:0.85rem;color:#7A5A0F;line-height:1.6;flex:1;min-width:240px}
+.backup-banner-text strong{display:block;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:3px;color:#A56B2D}
+.backup-banner-actions{display:flex;gap:0.5rem;flex-shrink:0}
+.btn-banner{padding:8px 14px;border:none;cursor:pointer;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;font-family:'Jost',sans-serif;font-weight:500}
+.btn-banner-primary{background:#A56B2D;color:#FFF}
+.btn-banner-primary:hover{background:#7A5A0F}
+.btn-banner-dismiss{background:transparent;color:#A56B2D;border:0.5px solid #A56B2D}
+.btn-banner-dismiss:hover{background:#F4DBC4}
+
+/* HISTORY */
+.history-list{margin-top:1rem;padding-top:1rem;border-top:0.5px solid var(--border)}
+.history-item{padding:0.6rem 0;border-bottom:0.5px dashed var(--border);font-size:0.78rem;display:grid;grid-template-columns:120px 1fr;gap:1rem}
+.history-item:last-child{border-bottom:none}
+.history-date{color:var(--ink-muted);font-size:0.72rem}
+.history-content strong{color:var(--gold-dark);font-weight:500;display:block;margin-bottom:2px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .tabs{overflow-x:auto;padding:0 1rem}
+  .tab-content{padding:1rem}
+  .pipeline{grid-template-columns:repeat(8, 250px)}
+  .form-row{grid-template-columns:1fr}
+  .recent-item{grid-template-columns:1fr;gap:0.5rem}
+  .toolbar{flex-direction:column;align-items:stretch}
+  .search-input{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">Rion</div>
+    <div class="login-eyebrow">Admin · 管理画面</div>
+    <form class="login-form" onsubmit="login(event)">
+      <input type="password" id="pwInput" placeholder="Password / パスワード" autocomplete="current-password" required>
+      <button type="submit">Sign In · ログイン</button>
+      <div class="login-error" id="loginError"></div>
+    </form>
+    <p class="login-hint">初期パスワード: <strong>rion2018</strong><br>※「Settings」タブから変更できます</p>
+  </div>
+</div>
+
+<!-- APP -->
+<div class="app" id="app">
+  <header class="admin-header">
+    <div>
+      <a href="#" class="admin-logo">Rion</a>
+      <span class="admin-logo-sub">Admin · 注文管理</span>
+    </div>
+    <div class="header-right">
+      <span class="header-clock" id="clock"></span>
+      <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="dashboard" onclick="switchTab('dashboard')">Dashboard</button>
+    <button class="tab" data-tab="orders" onclick="switchTab('orders')">Orders <span class="tab-count" id="cntOrders">0</span></button>
+    <button class="tab" data-tab="pipeline" onclick="switchTab('pipeline')">Pipeline</button>
+    <button class="tab" data-tab="settings" onclick="switchTab('settings')">Settings</button>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <div class="tab-content active" id="tab-dashboard">
+    <div id="backupBanner"></div>
+    <div class="stats-grid" id="statsGrid"></div>
+    <h2 class="section-h2">Recent Orders <span class="sub">直近10件</span></h2>
+    <div id="recentList"></div>
+  </div>
+
+  <!-- ORDERS -->
+  <div class="tab-content" id="tab-orders">
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <input type="text" class="search-input" id="searchInput" placeholder="検索: 名前 / コード / 国 / メモ" oninput="renderOrders()">
+        <select class="filter-select" id="filterStatus" onchange="renderOrders()">
+          <option value="">全てのステータス</option>
+          <option value="new">新規</option>
+          <option value="invoiced">請求書送付</option>
+          <option value="paid">入金確認</option>
+          <option value="kit_sent">キット送付</option>
+          <option value="hair_returned">毛髪受領</option>
+          <option value="crafting">制作中</option>
+          <option value="shipped">発送済</option>
+          <option value="completed">完了</option>
+          <option value="cancelled">キャンセル</option>
+        </select>
+        <select class="filter-select" id="filterCountry" onchange="renderOrders()">
+          <option value="">全ての国</option>
+          <option value="UAE">UAE</option>
+          <option value="Kuwait">Kuwait</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Bahrain">Bahrain</option>
+          <option value="Japan">Japan</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <button class="btn btn-secondary" onclick="exportCSV()">Export CSV</button>
+        <button class="btn btn-primary" onclick="openNewOrder()">+ New Order</button>
+      </div>
+    </div>
+    <div id="ordersTable"></div>
+  </div>
+
+  <!-- PIPELINE -->
+  <div class="tab-content" id="tab-pipeline">
+    <div class="toolbar">
+      <h2 class="section-h2" style="margin:0">Pipeline <span class="sub">ステータス別 · ドラッグ不要、カードクリックで変更</span></h2>
+      <button class="btn btn-primary" onclick="openNewOrder()">+ New Order</button>
+    </div>
+    <div class="pipeline" id="pipeline"></div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="tab-content" id="tab-settings">
+    <h2 class="section-h2">Settings <span class="sub">設定</span></h2>
+
+    <div class="table-wrap" style="margin-bottom:2rem;padding:2rem">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:1rem">パスワード変更</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>新しいパスワード</label>
+          <input type="password" id="newPw" placeholder="6文字以上">
+        </div>
+        <div class="form-group">
+          <label>確認</label>
+          <input type="password" id="newPwConfirm" placeholder="もう一度入力">
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="changePassword()">パスワードを更新</button>
+      <div id="pwMsg" style="margin-top:0.75rem;font-size:0.8rem"></div>
+    </div>
+
+    <div class="table-wrap" style="margin-bottom:2rem;padding:2rem">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:1rem">データ管理</h3>
+      <p style="font-size:0.85rem;color:var(--ink-soft);margin-bottom:1rem;line-height:1.7">注文データは本ブラウザの localStorage に保存されています。データのバックアップ・復元・初期化ができます。</p>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+        <button class="btn btn-secondary" onclick="exportJSON()">📥 全データ JSON エクスポート</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📤 JSON インポート</button>
+        <input type="file" id="importFile" accept=".json" style="display:none" onchange="importJSON(event)">
+        <button class="btn btn-danger" onclick="clearAll()">🗑 全データ削除</button>
+      </div>
+      <div id="dataMsg" style="margin-top:0.75rem;font-size:0.8rem"></div>
+    </div>
+
+    <div class="table-wrap" style="padding:2rem">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:1rem">ステータス一覧</h3>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
+        <span class="pill pill-new">新規</span>
+        <span class="pill pill-invoiced">請求書送付</span>
+        <span class="pill pill-paid">入金確認</span>
+        <span class="pill pill-kit_sent">キット送付</span>
+        <span class="pill pill-hair_returned">毛髪受領</span>
+        <span class="pill pill-crafting">制作中</span>
+        <span class="pill pill-shipped">発送済</span>
+        <span class="pill pill-completed">完了</span>
+        <span class="pill pill-cancelled">キャンセル</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COPY TOAST -->
+<div class="copy-toast" id="copyToast">✓ コピーしました</div>
+
+<!-- ORDER MODAL -->
+<div class="modal" id="orderModal">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="modalTitle">New Order</h2>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="orderId">
+
+      <!-- QUICK ACTIONS -->
+      <div class="quick-actions" id="quickActions" style="display:none">
+        <div class="quick-actions-label">Quick<br>Actions</div>
+        <div class="quick-actions-buttons">
+          <a class="btn-wa-quick" id="btnWaQuick" href="#" target="_blank">💬 この顧客にWhatsApp</a>
+          <div class="template-wrap">
+            <button class="template-btn" type="button" onclick="toggleTemplateMenu(event)">📋 テンプレートをコピー ▾</button>
+            <div class="template-dropdown" id="templateDropdown">
+              <button onclick="copyTemplate('invoiced')">請求書送付メッセージ</button>
+              <button onclick="copyTemplate('paid')">入金確認メッセージ</button>
+              <button onclick="copyTemplate('kit_sent')">キット発送通知</button>
+              <button onclick="copyTemplate('hair_returned')">毛髪受領のお礼</button>
+              <button onclick="copyTemplate('crafting')">制作進捗のご報告</button>
+              <button onclick="copyTemplate('shipped')">商品発送のお知らせ</button>
+              <button onclick="copyTemplate('completed')">フォローアップ（お届け後）</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>注文日</label>
+          <input type="date" id="orderDate">
+        </div>
+        <div class="form-group">
+          <label>ステータス</label>
+          <select id="orderStatus">
+            <option value="new">新規</option>
+            <option value="invoiced">請求書送付</option>
+            <option value="paid">入金確認</option>
+            <option value="kit_sent">キット送付</option>
+            <option value="hair_returned">毛髪受領</option>
+            <option value="crafting">制作中</option>
+            <option value="shipped">発送済</option>
+            <option value="completed">完了</option>
+            <option value="cancelled">キャンセル</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>お客様名</label>
+          <input type="text" id="custName" placeholder="例: F. Al-Rashidi">
+        </div>
+        <div class="form-group">
+          <label>国</label>
+          <select id="custCountry">
+            <option value="UAE">UAE</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Japan">Japan</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>WhatsApp / 電話</label>
+          <input type="text" id="custPhone" placeholder="+971...">
+        </div>
+        <div class="form-group">
+          <label>メール</label>
+          <input type="email" id="custEmail" placeholder="example@email.com">
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="form-group">
+          <label>配送先住所</label>
+          <input type="text" id="custAddress" placeholder="フル住所">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>商品コード</label>
+          <select id="prodCode">
+            <optgroup label="Series A — Classic Ring">
+              <option value="A-1">A-1 / K18 Yellow Gold / AED 22,600</option>
+              <option value="A-2">A-2 / K18 White Gold / AED 23,200</option>
+              <option value="A-3">A-3 / K18 Pink Gold / AED 22,600</option>
+              <option value="A-4">A-4 / Platinum Pt900 / AED 22,000</option>
+            </optgroup>
+            <optgroup label="Series B — Pendant">
+              <option value="B-1">B-1 / K18 Yellow Gold / AED 26,800</option>
+              <option value="B-2">B-2 / K18 White Gold / AED 28,800</option>
+              <option value="B-3">B-3 / K18 Pink Gold / AED 26,800</option>
+              <option value="B-4">B-4 / Platinum Pt900 / AED 25,000</option>
+            </optgroup>
+            <optgroup label="Series C — Birthstone Ring">
+              <option value="C-1">C-1 / K18 Yellow Gold / AED 28,600</option>
+              <option value="C-2">C-2 / K18 White Gold / AED 30,400</option>
+              <option value="C-3">C-3 / K18 Pink Gold / AED 28,600</option>
+              <option value="C-4">C-4 / Platinum Pt900 / AED 27,800</option>
+            </optgroup>
+            <optgroup label="Series D — Half Eternity">
+              <option value="D-1">D-1 / K18 Yellow Gold / AED 35,000</option>
+              <option value="D-2">D-2 / K18 White Gold / AED 36,600</option>
+              <option value="D-3">D-3 / K18 Pink Gold / AED 35,000</option>
+              <option value="D-4">D-4 / Platinum Pt900 / AED 34,600</option>
+            </optgroup>
+            <optgroup label="Series F — Sculptural">
+              <option value="F-1">F-1 / K18 Yellow Gold / AED 30,600</option>
+              <option value="F-2">F-2 / K18 White Gold / AED 31,800</option>
+              <option value="F-3">F-3 / K18 Pink Gold / AED 30,600</option>
+              <option value="F-4">F-4 / Platinum Pt900 / AED 28,800</option>
+            </optgroup>
+            <optgroup label="Series G — Refined">
+              <option value="G-1">G-1 / K18 Yellow Gold / AED 26,200</option>
+              <option value="G-2">G-2 / K18 White Gold / AED 27,500</option>
+              <option value="G-3">G-3 / K18 Pink Gold / AED 26,200</option>
+              <option value="G-4">G-4 / Platinum Pt900 / AED 25,400</option>
+            </optgroup>
+            <optgroup label="Series H — Modern">
+              <option value="H-1">H-1 / K18 Yellow Gold / AED 28,200</option>
+              <option value="H-2">H-2 / K18 White Gold / AED 29,400</option>
+              <option value="H-3">H-3 / K18 Pink Gold / AED 28,200</option>
+              <option value="H-4">H-4 / Platinum Pt900 / AED 27,500</option>
+            </optgroup>
+            <optgroup label="Series J — Statement">
+              <option value="J-1">J-1 / K18 Yellow Gold / AED 33,400</option>
+              <option value="J-2">J-2 / K18 White Gold / AED 34,600</option>
+              <option value="J-4">J-4 / Platinum Pt900 / AED 32,600</option>
+            </optgroup>
+            <optgroup label="Bespoke">
+              <option value="BESPOKE">Bespoke Commission</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>金額 (AED)</label>
+          <input type="number" id="prodPrice" placeholder="22600">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>リングサイズ (US)</label>
+          <input type="text" id="ringSize" placeholder="例: US 6½">
+        </div>
+        <div class="form-group">
+          <label>言語</label>
+          <select id="lang">
+            <option value="EN">English</option>
+            <option value="AR">Arabic</option>
+            <option value="JA">Japanese</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="form-group">
+          <label>メモ / 特別なご要望</label>
+          <textarea id="notes" placeholder="誕生石の選択、彫刻、毛髪の出所、その他..."></textarea>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="form-group">
+          <label>新しい履歴を追加</label>
+          <textarea id="newHistory" placeholder="例: WhatsAppで問い合わせ受領 / 請求書送付 / 入金確認..." style="min-height:50px"></textarea>
+        </div>
+      </div>
+      <div class="history-list" id="historyList"></div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-danger" id="btnDelete" onclick="deleteOrder()" style="display:none">削除</button>
+      <div style="margin-left:auto;display:flex;gap:0.5rem">
+        <button class="btn btn-secondary" onclick="closeModal()">キャンセル</button>
+        <button class="btn btn-primary" onclick="saveOrder()">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== MESSAGE TEMPLATES =====
+const TEMPLATES = {
+  EN: {
+    invoiced: "Hello {{name}},\n\nThank you for choosing Rion. Please find attached the invoice for your {{code}} ({{material}}) — AED {{price}} DDP (all UAE duty and VAT included).\n\nOnce payment is confirmed, we will dispatch your hair collection kit to your address via DHL. Please let us know if you have any questions.\n\nWith warmth,\nRion",
+    paid: "Hello {{name}},\n\nWe have received your payment for {{code}}. Thank you sincerely.\n\nYour hair collection kit will be dispatched within 2 business days via DHL Express. You should receive it in approximately 3–5 days. The kit includes a sealed envelope, US-sized ring gauge, bilingual instructions, and a prepaid return label.\n\nWe will send you the tracking number shortly.\n\nWith warmth,\nRion",
+    kit_sent: "Hello {{name}},\n\nYour hair collection kit has been dispatched via DHL Express.\n\nTracking number: [INSERT TRACKING NUMBER]\nExpected arrival: 3–5 days\n\nPlease follow the bilingual instructions inside. Once you have collected the hair (just 1cm), drop the package at any DHL point using the prepaid return label. All customs paperwork is pre-completed.\n\nLet us know once it's on its way back.\n\nWith warmth,\nRion",
+    hair_returned: "Hello {{name}},\n\nYour hair has arrived safely at our Japanese atelier. Thank you for entrusting us with such precious material.\n\nCrafting of your {{code}} will now begin. We will photograph each step — before, during, and after the hair sealing — and send the photos to you for your peace of mind.\n\nEstimated completion: Approx. 5.5 months.\n\nWith warmth,\nRion",
+    crafting: "Hello {{name}},\n\nA gentle update — your {{code}} is now in active crafting.\n\nPlease find attached photos of the work in progress. We continue to handle every detail with the care it deserves.\n\nWe will update you again at the next milestone.\n\nWith warmth,\nRion",
+    shipped: "Hello {{name}},\n\nWonderful news — your {{code}} is complete and has been shipped from Japan via DHL Global Services.\n\nTracking number: [INSERT TRACKING NUMBER]\nExpected arrival: 3–5 days\n\nAll UAE import duty (5%) and VAT (5%) have been prepaid by us. There are no additional charges on delivery.\n\nInside the parcel: your unique jewel, Certificate of Authenticity, and the photo report of the hair sealing process.\n\nWith warmth,\nRion",
+    completed: "Hello {{name}},\n\nWe hope your Rion piece has arrived safely and brings you the comfort it was made to give.\n\nA gentle reminder — we offer complimentary lifetime polishing service. Whenever your jewel needs a refresh, simply message us and we will guide you through the return process.\n\nThank you for trusting us with your story.\n\nWith warmth,\nRion"
+  },
+  AR: {
+    invoiced: "مرحباً {{name}}،\n\nشكراً لاختياركم Rion. مرفق الفاتورة الخاصة بـ {{code}} ({{material}}) — AED {{price}} DDP (شامل جميع رسوم الإمارات وضريبة القيمة المضافة).\n\nبعد تأكيد الدفع، سنرسل طقم جمع الشعر إلى عنوانكم عبر DHL. لا تترددوا في التواصل لأي استفسار.\n\nمع التقدير،\nRion",
+    paid: "مرحباً {{name}}،\n\nتم استلام دفعتكم لـ {{code}}. شكراً جزيلاً لكم.\n\nسيتم إرسال طقم جمع الشعر خلال يومي عمل عبر DHL Express. ستصلكم في غضون 3-5 أيام. يحتوي الطقم على ظرف مختوم، مقياس خاتم بنظام US، تعليمات ثنائية اللغة، وملصق إرجاع مدفوع.\n\nسنرسل لكم رقم التتبع قريباً.\n\nمع التقدير،\nRion",
+    kit_sent: "مرحباً {{name}}،\n\nتم إرسال طقم جمع الشعر عبر DHL Express.\n\nرقم التتبع: [أدخل رقم التتبع]\nالوصول المتوقع: 3-5 أيام\n\nيرجى اتباع التعليمات في الداخل. بعد جمع الشعر (1 سم فقط)، اتركوا الطرد في أي نقطة DHL باستخدام ملصق الإرجاع المدفوع. جميع الأوراق الجمركية مكتملة مسبقاً.\n\nأخبرونا عند الإرسال.\n\nمع التقدير،\nRion",
+    hair_returned: "مرحباً {{name}}،\n\nوصل الشعر بسلام إلى مرسمنا الياباني. شكراً لائتمانكم لنا بهذه المادة الثمينة.\n\nستبدأ الآن صياغة {{code}}. سنصور كل خطوة — قبل وأثناء وبعد إغلاق الشعر — ونرسل لكم الصور لراحة بالكم.\n\nالاكتمال المتوقع: حوالي 5.5 أشهر.\n\nمع التقدير،\nRion",
+    crafting: "مرحباً {{name}}،\n\nتحديث لطيف — {{code}} الخاصة بكم الآن قيد الصياغة الفعلية.\n\nمرفق صور للعمل قيد التنفيذ. نواصل التعامل مع كل تفصيل بالعناية التي يستحقها.\n\nسنقوم بتحديثكم في المرحلة التالية.\n\nمع التقدير،\nRion",
+    shipped: "مرحباً {{name}}،\n\nأخبار رائعة — {{code}} الخاصة بكم اكتملت وتم شحنها من اليابان عبر DHL Global Services.\n\nرقم التتبع: [أدخل رقم التتبع]\nالوصول المتوقع: 3-5 أيام\n\nجميع رسوم الاستيراد الإماراتية (5%) وضريبة القيمة المضافة عند الاستيراد (5%) مدفوعة مسبقاً من Rion عبر DHL. لا توجد رسوم إضافية عند التسليم.\n\nداخل الطرد: جوهرتكم الفريدة، شهادة الأصالة، والتقرير الصوري لعملية إغلاق الشعر.\n\nمع التقدير،\nRion",
+    completed: "مرحباً {{name}}،\n\nنأمل أن تكون قطعة Rion قد وصلت بسلام وتقدم لكم الراحة التي صُنعت من أجلها.\n\nتذكير لطيف — نقدم خدمة التلميع مدى الحياة مجاناً. عندما تحتاج جوهرتكم إلى التجديد، راسلونا وسنرشدكم خلال عملية الإرجاع.\n\nشكراً لكم على ائتمانكم لنا بقصتكم.\n\nمع التقدير،\nRion"
+  },
+  JA: {
+    invoiced: "{{name}} 様\n\nRion をお選びいただき、誠にありがとうございます。\n\n{{code}}（{{material}}）の請求書をお送りいたします——AED {{price}}（DDP：UAE関税・VAT全て込み）。\n\nお支払い確認後、DHL にて採取キットをご住所へ発送いたします。ご不明な点がございましたら、お気軽にお知らせください。\n\n心を込めて\nRion",
+    paid: "{{name}} 様\n\nお振込みを確認いたしました。誠にありがとうございます。\n\n2営業日以内に DHL Express にて採取キットを発送いたします。3〜5日でお手元にお届け予定です。キットには密封封筒、US規格リングゲージ、二言語の説明書、返送用プリペイドラベルが入っております。\n\n追跡番号は別途お送りいたします。\n\n心を込めて\nRion",
+    kit_sent: "{{name}} 様\n\n採取キットを DHL Express にて発送いたしました。\n\n追跡番号：[追跡番号を入力]\n到着予定：3〜5日\n\n同封の説明書に従って、1cm の毛髪をご採取の上、プリペイドラベルで任意の DHL 拠点へお持ち込みください。通関書類はすべて記入済みです。\n\nご発送いただきましたらお知らせいただけますと幸いです。\n\n心を込めて\nRion",
+    hair_returned: "{{name}} 様\n\n大切な毛髪が日本のアトリエに無事到着いたしました。お任せいただき、誠にありがとうございます。\n\nこれより {{code}} の制作を開始いたします。封入前・封入中・封入後の各段階を写真でご報告いたしますので、ご安心ください。\n\n完成予定：約5.5ヶ月\n\n心を込めて\nRion",
+    crafting: "{{name}} 様\n\n進捗のご報告です——{{code}} は現在制作中でございます。\n\n進行中の作業写真を添付いたします。一つひとつ、心を込めて丁寧に進めさせていただいております。\n\n次の段階でも改めてご報告いたします。\n\n心を込めて\nRion",
+    shipped: "{{name}} 様\n\n嬉しいお知らせです——{{code}} が完成し、日本より DHL Global Services にて発送いたしました。\n\n追跡番号：[追跡番号を入力]\n到着予定：3〜5日\n\nUAE 関税（5%）・VAT（5%）はすべて当社が事前にお支払い済みです。お届け時の追加費用は一切ございません。\n\n中身：唯一無二のジュエリー、真正証明書、毛の封入工程の写真レポート\n\n心を込めて\nRion",
+    completed: "{{name}} 様\n\nお手元に Rion の作品が無事に届き、お役に立てておりますことを願っております。\n\n大切なお知らせ——生涯無償の磨き直しサービスをご利用いただけます。リフレッシュが必要な際は、いつでも WhatsApp でご連絡ください。\n\nお客様の大切なストーリーをお任せいただき、心より感謝申し上げます。\n\n心を込めて\nRion"
+  }
+};
+
+// ===== STATE =====
+const STATUSES = {
+  new:'新規', invoiced:'請求書送付', paid:'入金確認', kit_sent:'キット送付',
+  hair_returned:'毛髪受領', crafting:'制作中', shipped:'発送済',
+  completed:'完了', cancelled:'キャンセル'
+};
+const PIPELINE_STATUSES = ['new','invoiced','paid','kit_sent','hair_returned','crafting','shipped','completed'];
+
+let orders = [];
+let currentEditId = null;
+
+// ===== STORAGE =====
+function loadOrders(){
+  const raw = localStorage.getItem('rion_orders');
+  orders = raw ? JSON.parse(raw) : [];
+}
+function saveOrders(){
+  localStorage.setItem('rion_orders', JSON.stringify(orders));
+}
+
+// ===== AUTH =====
+function getStoredPw(){
+  return localStorage.getItem('rion_admin_pw') || 'rion2018';
+}
+function login(e){
+  e.preventDefault();
+  const input = document.getElementById('pwInput').value;
+  if(input === getStoredPw()){
+    sessionStorage.setItem('rion_admin_session', '1');
+    document.getElementById('loginScreen').style.display='none';
+    document.getElementById('app').classList.add('active');
+    init();
+  } else {
+    document.getElementById('loginError').textContent='パスワードが違います';
+    document.getElementById('pwInput').value='';
+  }
+}
+function logout(){
+  sessionStorage.removeItem('rion_admin_session');
+  location.reload();
+}
+function changePassword(){
+  const newPw = document.getElementById('newPw').value;
+  const confirm = document.getElementById('newPwConfirm').value;
+  const msg = document.getElementById('pwMsg');
+  if(newPw.length < 6){ msg.style.color='var(--red)'; msg.textContent='6文字以上で入力してください'; return; }
+  if(newPw !== confirm){ msg.style.color='var(--red)'; msg.textContent='パスワードが一致しません'; return; }
+  localStorage.setItem('rion_admin_pw', newPw);
+  msg.style.color='var(--gold-dark)'; msg.textContent='✓ パスワードを更新しました';
+  document.getElementById('newPw').value=''; document.getElementById('newPwConfirm').value='';
+}
+
+// ===== TABS =====
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector(`.tab[data-tab="${name}"]`).classList.add('active');
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  if(name==='dashboard') renderDashboard();
+  if(name==='orders') renderOrders();
+  if(name==='pipeline') renderPipeline();
+}
+
+// ===== ID GENERATION =====
+function newId(){
+  const year = new Date().getFullYear();
+  const yrOrders = orders.filter(o=>o.id.startsWith('O-'+year));
+  const next = yrOrders.length + 1;
+  return `O-${year}-${String(next).padStart(3,'0')}`;
+}
+
+// ===== DASHBOARD =====
+function renderDashboard(){
+  renderBackupBanner();
+  const total = orders.length;
+  const active = orders.filter(o=>!['completed','cancelled'].includes(o.status)).length;
+  const thisMonth = orders.filter(o=>{
+    const d = new Date(o.date);
+    const n = new Date();
+    return d.getMonth()===n.getMonth() && d.getFullYear()===n.getFullYear();
+  }).length;
+  const revenue = orders.filter(o=>['paid','kit_sent','hair_returned','crafting','shipped','completed'].includes(o.status))
+    .reduce((sum,o)=>sum+(parseInt(o.price)||0),0);
+  const crafting = orders.filter(o=>o.status==='crafting').length;
+
+  document.getElementById('statsGrid').innerHTML = `
+    <div class="stat-card"><div class="stat-label">Total Orders</div><div class="stat-value">${total}</div><div class="stat-sub">全注文</div></div>
+    <div class="stat-card"><div class="stat-label">Active</div><div class="stat-value">${active}</div><div class="stat-sub">進行中</div></div>
+    <div class="stat-card"><div class="stat-label">This Month</div><div class="stat-value">${thisMonth}</div><div class="stat-sub">今月の新規</div></div>
+    <div class="stat-card"><div class="stat-label">In Production</div><div class="stat-value">${crafting}</div><div class="stat-sub">制作中</div></div>
+    <div class="stat-card"><div class="stat-label">Confirmed Revenue</div><div class="stat-value" style="font-size:1.6rem">AED ${revenue.toLocaleString()}</div><div class="stat-sub">入金確認以降</div></div>
+  `;
+
+  document.getElementById('cntOrders').textContent = total;
+
+  const recent = [...orders].sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,10);
+  const recentList = document.getElementById('recentList');
+  if(recent.length===0){
+    recentList.innerHTML = `<div class="empty"><div class="empty-icon">○</div><p>まだ注文がありません</p><button class="btn btn-primary" onclick="switchTab('orders');setTimeout(openNewOrder,100)">+ 最初の注文を追加</button></div>`;
+    return;
+  }
+  recentList.innerHTML = `<div class="recent-list">` + recent.map(o=>`
+    <div class="recent-item" onclick="openEditOrder('${o.id}')">
+      <span class="recent-id">${o.id}</span>
+      <div><div class="recent-name">${esc(o.customer.name || '—')}</div><div class="recent-date">${o.date} · ${esc(o.customer.country||'')}</div></div>
+      <span class="recent-product">${esc(o.product.code)}</span>
+      <span class="order-price">AED ${(parseInt(o.price)||0).toLocaleString()}</span>
+      <span class="pill pill-${o.status}">${STATUSES[o.status]}</span>
+    </div>`).join('') + `</div>`;
+}
+
+// ===== ORDERS LIST =====
+function renderOrders(){
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const statusFilter = document.getElementById('filterStatus').value;
+  const countryFilter = document.getElementById('filterCountry').value;
+
+  let filtered = orders.filter(o=>{
+    if(statusFilter && o.status!==statusFilter) return false;
+    if(countryFilter && o.customer.country!==countryFilter) return false;
+    if(search){
+      const hay = `${o.id} ${o.customer.name||''} ${o.customer.email||''} ${o.customer.phone||''} ${o.product.code||''} ${o.customer.country||''} ${o.notes||''}`.toLowerCase();
+      if(!hay.includes(search)) return false;
+    }
+    return true;
+  }).sort((a,b)=>new Date(b.date)-new Date(a.date));
+
+  const tableEl = document.getElementById('ordersTable');
+  if(filtered.length===0){
+    tableEl.innerHTML = `<div class="empty"><div class="empty-icon">○</div><p>${orders.length===0?'まだ注文がありません':'該当する注文がありません'}</p>${orders.length===0?'<button class="btn btn-primary" onclick="openNewOrder()">+ 最初の注文を追加</button>':''}</div>`;
+    return;
+  }
+  tableEl.innerHTML = `<div class="table-wrap"><table class="orders"><thead>
+    <tr><th>ID</th><th>日付</th><th>お客様</th><th>商品</th><th>金額</th><th>サイズ</th><th>言語</th><th>ステータス</th></tr>
+  </thead><tbody>` + filtered.map(o=>`
+    <tr onclick="openEditOrder('${o.id}')">
+      <td><span class="order-id">${o.id}</span></td>
+      <td>${o.date}</td>
+      <td><div class="order-customer">${esc(o.customer.name||'—')}</div><div class="order-meta">${esc(o.customer.country||'')} · ${esc(o.customer.phone||'')}</div></td>
+      <td><span class="order-product">${esc(o.product.code)}</span><div class="order-meta">${esc(o.product.material||'')}</div></td>
+      <td><span class="order-price">AED ${(parseInt(o.price)||0).toLocaleString()}</span></td>
+      <td>${esc(o.ringSize||'—')}</td>
+      <td>${o.lang||'EN'}</td>
+      <td><span class="pill pill-${o.status}">${STATUSES[o.status]}</span></td>
+    </tr>`).join('') + `</tbody></table></div>`;
+}
+
+// ===== PIPELINE =====
+function renderPipeline(){
+  const pipe = document.getElementById('pipeline');
+  pipe.innerHTML = PIPELINE_STATUSES.map(s=>{
+    const cards = orders.filter(o=>o.status===s).sort((a,b)=>new Date(b.date)-new Date(a.date));
+    return `<div class="pipeline-col" data-status="${s}">
+      <div class="pipeline-h"><span>${STATUSES[s]}</span><span class="cnt">${cards.length}</span></div>
+      ${cards.map(o=>`
+        <div class="pipeline-card" onclick="openEditOrder('${o.id}')">
+          <div class="pc-id">${o.id}</div>
+          <div class="pc-name">${esc(o.customer.name||'—')}</div>
+          <div class="pc-meta">${o.date} · ${esc(o.customer.country||'')}</div>
+          <div class="pc-product">${esc(o.product.code)} · AED ${(parseInt(o.price)||0).toLocaleString()}</div>
+        </div>
+      `).join('')}
+    </div>`;
+  }).join('');
+}
+
+// ===== MODAL =====
+function openNewOrder(){
+  currentEditId = null;
+  document.getElementById('modalTitle').textContent = 'New Order · 新規注文';
+  document.getElementById('orderId').value = '';
+  document.getElementById('orderDate').value = new Date().toISOString().substring(0,10);
+  document.getElementById('orderStatus').value = 'new';
+  document.getElementById('custName').value = '';
+  document.getElementById('custCountry').value = 'UAE';
+  document.getElementById('custPhone').value = '';
+  document.getElementById('custEmail').value = '';
+  document.getElementById('custAddress').value = '';
+  document.getElementById('prodCode').value = 'A-1';
+  document.getElementById('prodPrice').value = '22600';
+  document.getElementById('ringSize').value = '';
+  document.getElementById('lang').value = 'EN';
+  document.getElementById('notes').value = '';
+  document.getElementById('newHistory').value = '';
+  document.getElementById('historyList').innerHTML = '';
+  document.getElementById('btnDelete').style.display = 'none';
+  document.getElementById('quickActions').style.display = 'none';
+  document.getElementById('orderModal').classList.add('active');
+  // Auto-update price when code changes
+  document.getElementById('prodCode').onchange = (e)=>{
+    const t = e.target.selectedOptions[0].textContent;
+    const m = t.match(/AED ([\d,]+)/);
+    if(m) document.getElementById('prodPrice').value = m[1].replace(/,/g,'');
+  };
+}
+function openEditOrder(id){
+  const o = orders.find(x=>x.id===id);
+  if(!o) return;
+  currentEditId = id;
+  document.getElementById('modalTitle').textContent = `Edit · ${o.id}`;
+  document.getElementById('orderId').value = o.id;
+  document.getElementById('orderDate').value = o.date;
+  document.getElementById('orderStatus').value = o.status;
+  document.getElementById('custName').value = o.customer.name || '';
+  document.getElementById('custCountry').value = o.customer.country || 'UAE';
+  document.getElementById('custPhone').value = o.customer.phone || '';
+  document.getElementById('custEmail').value = o.customer.email || '';
+  document.getElementById('custAddress').value = o.customer.address || '';
+  document.getElementById('prodCode').value = o.product.code || 'A-1';
+  document.getElementById('prodPrice').value = o.price || '';
+  document.getElementById('ringSize').value = o.ringSize || '';
+  document.getElementById('lang').value = o.lang || 'EN';
+  document.getElementById('notes').value = o.notes || '';
+  document.getElementById('newHistory').value = '';
+  renderHistory(o);
+  document.getElementById('btnDelete').style.display = '';
+
+  // Quick actions: WhatsApp URL
+  const phone = (o.customer.phone || '').replace(/[^\d]/g,'');
+  const waBtn = document.getElementById('btnWaQuick');
+  if(phone){
+    waBtn.href = `https://wa.me/${phone}`;
+    waBtn.style.opacity = '1';
+    waBtn.style.pointerEvents = 'auto';
+    waBtn.title = `WhatsApp: +${phone}`;
+  } else {
+    waBtn.href = 'https://wa.me/';
+    waBtn.style.opacity = '0.5';
+    waBtn.style.pointerEvents = 'none';
+    waBtn.title = '電話番号が未登録です';
+  }
+  document.getElementById('quickActions').style.display = 'grid';
+
+  document.getElementById('orderModal').classList.add('active');
+}
+
+// ===== TEMPLATES =====
+function toggleTemplateMenu(e){
+  e.stopPropagation();
+  document.getElementById('templateDropdown').classList.toggle('open');
+}
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.template-wrap')) document.getElementById('templateDropdown')?.classList.remove('open');
+});
+
+function copyTemplate(status){
+  const o = orders.find(x=>x.id===currentEditId);
+  if(!o) return;
+  const lang = o.lang || 'EN';
+  const tpl = TEMPLATES[lang]?.[status] || TEMPLATES.EN[status];
+  if(!tpl) return;
+  const msg = tpl
+    .replace(/\{\{name\}\}/g, o.customer.name || '')
+    .replace(/\{\{code\}\}/g, o.product.code || '')
+    .replace(/\{\{material\}\}/g, (o.product.material || '').replace(/\s*\([^)]*\)\s*/g,'').trim())
+    .replace(/\{\{price\}\}/g, (parseInt(o.price)||0).toLocaleString());
+  navigator.clipboard.writeText(msg).then(()=>{
+    showToast(`✓ ${lang} テンプレートをコピーしました`);
+    document.getElementById('templateDropdown').classList.remove('open');
+  }).catch(()=>{
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = msg; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showToast(`✓ ${lang} テンプレートをコピーしました`);
+    document.getElementById('templateDropdown').classList.remove('open');
+  });
+}
+
+function showToast(msg){
+  const t = document.getElementById('copyToast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+// ===== BACKUP REMINDER =====
+function renderBackupBanner(){
+  const banner = document.getElementById('backupBanner');
+  if(!banner) return;
+  if(orders.length === 0){ banner.innerHTML=''; return; }
+  const last = localStorage.getItem('rion_last_backup');
+  const dismissed = localStorage.getItem('rion_backup_dismissed_until');
+  const now = Date.now();
+
+  if(dismissed && parseInt(dismissed) > now){ banner.innerHTML=''; return; }
+
+  let daysSince = null;
+  if(last){
+    daysSince = Math.floor((now - parseInt(last)) / (1000*60*60*24));
+    if(daysSince < 7){ banner.innerHTML=''; return; }
+  }
+
+  const msg = last
+    ? `前回のバックアップから <strong style="font-size:0.92rem;letter-spacing:0">${daysSince}日</strong> 経過しています。`
+    : `<strong style="font-size:0.92rem;letter-spacing:0">バックアップを取っていません。</strong> ${orders.length}件の注文データを保護してください。`;
+  banner.innerHTML = `
+    <div class="backup-banner">
+      <div class="backup-banner-text">
+        <strong>💾 データバックアップのお知らせ</strong>
+        ${msg} JSON ファイルをダウンロードして安全な場所に保管することをお勧めします。
+      </div>
+      <div class="backup-banner-actions">
+        <button class="btn-banner btn-banner-primary" onclick="exportJSON()">今すぐバックアップ</button>
+        <button class="btn-banner btn-banner-dismiss" onclick="dismissBackupBanner()">3日後に再通知</button>
+      </div>
+    </div>`;
+}
+function dismissBackupBanner(){
+  localStorage.setItem('rion_backup_dismissed_until', String(Date.now() + 3*24*60*60*1000));
+  renderBackupBanner();
+}
+function closeModal(){
+  document.getElementById('orderModal').classList.remove('active');
+  currentEditId = null;
+}
+function renderHistory(o){
+  const list = document.getElementById('historyList');
+  if(!o.history || o.history.length===0){ list.innerHTML=''; return; }
+  list.innerHTML = '<h4 style="font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.5rem">History · 履歴</h4>' +
+    o.history.slice().reverse().map(h=>`
+      <div class="history-item">
+        <span class="history-date">${h.date}</span>
+        <div class="history-content"><strong>${esc(h.status||'')}</strong>${esc(h.note||'')}</div>
+      </div>`).join('');
+}
+
+function saveOrder(){
+  const data = {
+    id: currentEditId || newId(),
+    date: document.getElementById('orderDate').value,
+    status: document.getElementById('orderStatus').value,
+    customer: {
+      name: document.getElementById('custName').value.trim(),
+      country: document.getElementById('custCountry').value,
+      phone: document.getElementById('custPhone').value.trim(),
+      email: document.getElementById('custEmail').value.trim(),
+      address: document.getElementById('custAddress').value.trim()
+    },
+    product: {
+      code: document.getElementById('prodCode').value,
+      material: document.getElementById('prodCode').selectedOptions[0].textContent.split('/')[1]?.trim() || ''
+    },
+    price: document.getElementById('prodPrice').value,
+    ringSize: document.getElementById('ringSize').value.trim(),
+    lang: document.getElementById('lang').value,
+    notes: document.getElementById('notes').value.trim(),
+    history: currentEditId ? (orders.find(o=>o.id===currentEditId)?.history || []) : [],
+    updatedAt: new Date().toISOString()
+  };
+
+  if(!data.customer.name){ alert('お客様名を入力してください'); return; }
+
+  // Track status change
+  if(currentEditId){
+    const old = orders.find(o=>o.id===currentEditId);
+    if(old && old.status !== data.status){
+      data.history.push({date:new Date().toISOString().substring(0,16).replace('T',' '),status:'Status →',note:`${STATUSES[old.status]} → ${STATUSES[data.status]}`});
+    }
+  } else {
+    data.history.push({date:new Date().toISOString().substring(0,16).replace('T',' '),status:'Created',note:`新規注文作成`});
+  }
+
+  const newNote = document.getElementById('newHistory').value.trim();
+  if(newNote){
+    data.history.push({date:new Date().toISOString().substring(0,16).replace('T',' '),status:'Note',note:newNote});
+  }
+
+  if(currentEditId){
+    const idx = orders.findIndex(o=>o.id===currentEditId);
+    orders[idx] = data;
+  } else {
+    orders.push(data);
+  }
+  saveOrders();
+  closeModal();
+  renderDashboard();
+  renderOrders();
+  renderPipeline();
+}
+function deleteOrder(){
+  if(!currentEditId) return;
+  if(!confirm('この注文を削除しますか？この操作は取り消せません。')) return;
+  orders = orders.filter(o=>o.id!==currentEditId);
+  saveOrders();
+  closeModal();
+  renderDashboard();
+  renderOrders();
+  renderPipeline();
+}
+
+// ===== EXPORT =====
+function exportCSV(){
+  if(orders.length===0){ alert('エクスポートする注文がありません'); return; }
+  const headers = ['ID','Date','Status','Customer','Country','Phone','Email','Address','Code','Material','Price','RingSize','Lang','Notes'];
+  const rows = orders.map(o=>[
+    o.id, o.date, STATUSES[o.status], o.customer.name, o.customer.country,
+    o.customer.phone, o.customer.email, o.customer.address,
+    o.product.code, o.product.material, o.price, o.ringSize, o.lang, o.notes
+  ].map(v=>`"${(v||'').toString().replace(/"/g,'""')}"`).join(','));
+  const csv = '﻿' + [headers.join(','), ...rows].join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `rion-orders-${new Date().toISOString().substring(0,10)}.csv`;
+  a.click(); URL.revokeObjectURL(url);
+}
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(orders, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `rion-orders-backup-${new Date().toISOString().substring(0,10)}.json`;
+  a.click(); URL.revokeObjectURL(url);
+  localStorage.setItem('rion_last_backup', String(Date.now()));
+  localStorage.removeItem('rion_backup_dismissed_until');
+  renderBackupBanner();
+  const dm = document.getElementById('dataMsg');
+  if(dm){ dm.style.color='var(--gold-dark)'; dm.textContent='✓ バックアップをダウンロードしました'; }
+  showToast('✓ バックアップを保存しました');
+}
+function importJSON(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev)=>{
+    try{
+      const data = JSON.parse(ev.target.result);
+      if(!Array.isArray(data)) throw new Error('Invalid');
+      if(!confirm(`${data.length}件の注文を読み込みます。既存データに追加されますがよろしいですか？`)) return;
+      orders = orders.concat(data);
+      saveOrders();
+      renderDashboard(); renderOrders(); renderPipeline();
+      document.getElementById('dataMsg').style.color='var(--gold-dark)';
+      document.getElementById('dataMsg').textContent=`✓ ${data.length}件をインポートしました`;
+    } catch(err){
+      document.getElementById('dataMsg').style.color='var(--red)';
+      document.getElementById('dataMsg').textContent='✕ ファイルの形式が不正です';
+    }
+  };
+  reader.readAsText(file);
+  e.target.value='';
+}
+function clearAll(){
+  if(!confirm('本当に全データを削除しますか？この操作は取り消せません。')) return;
+  if(!confirm('もう一度確認: 全 ' + orders.length + ' 件の注文が削除されます。続行しますか？')) return;
+  orders = [];
+  saveOrders();
+  renderDashboard(); renderOrders(); renderPipeline();
+  document.getElementById('dataMsg').style.color='var(--red)';
+  document.getElementById('dataMsg').textContent='✓ 全データを削除しました';
+}
+
+// ===== UTILS =====
+function esc(s){
+  if(s===undefined||s===null) return '';
+  return s.toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ===== CLOCK =====
+function updateClock(){
+  const now = new Date();
+  const jst = new Date(now.toLocaleString('en-US',{timeZone:'Asia/Tokyo'}));
+  const uae = new Date(now.toLocaleString('en-US',{timeZone:'Asia/Dubai'}));
+  const f = d=>d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false});
+  document.getElementById('clock').innerHTML = `JST ${f(jst)} · UAE ${f(uae)}`;
+}
+
+// ===== INIT =====
+function init(){
+  loadOrders();
+  renderDashboard();
+  updateClock();
+  setInterval(updateClock, 30000);
+}
+
+// Auto-login if session exists
+if(sessionStorage.getItem('rion_admin_session')){
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('app').classList.add('active');
+  init();
+}
+
+// Close modal on backdrop click
+document.getElementById('orderModal').addEventListener('click', e=>{
+  if(e.target.id==='orderModal') closeModal();
+});
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape') closeModal();
+});
+</script>
+</body>
+</html>
