@@ -16,7 +16,7 @@
   --cream:#FAF7F2;--ink:#1A1714;--ink-soft:#4A4540;--ink-muted:#8A8480;
   --border:rgba(201,169,110,0.25);--green:#128C7E;
 }
-html{scroll-behavior:smooth}
+html{overflow-x:hidden;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:hidden}
 body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
 
@@ -188,7 +188,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 .scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
 .scroll-top::before{content:'↑'}
 
-@media(max-width:1024px){
+@media(max-width:1024px){.nav-cta{display:none}
   nav{padding:1.2rem 2rem}
   .breadcrumb{padding:1rem 1.5rem}
   .product-hero{padding:2.5rem 1.5rem;grid-template-columns:1fr;gap:2.5rem}

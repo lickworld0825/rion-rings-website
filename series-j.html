@@ -21,7 +21,7 @@
   --cream:#FAF7F2;--ink:#1A1714;--ink-soft:#4A4540;--ink-muted:#8A8480;
   --border:rgba(201,169,110,0.25);--green:#128C7E;
 }
-html{scroll-behavior:smooth}
+html{overflow-x:hidden;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:hidden}
 body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
@@ -177,7 +177,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 .scroll-top:hover{background:var(--gold-dark);color:var(--cream)}
 .scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
 .scroll-top::before{content:'↑'}
-@media(max-width:1024px){
+@media(max-width:1024px){.nav-cta{display:none}
   nav{padding:1.2rem 2rem}.breadcrumb{padding:0.75rem 2rem}
   .series-hero{grid-template-columns:1fr;min-height:auto}.hero-info{padding:2.5rem 2rem}
   .variants-section,.price-table-section,.specs-section,.craft-section,.enquire-section,.related-section{padding:3rem 2rem}
