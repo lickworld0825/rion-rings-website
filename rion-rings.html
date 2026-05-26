@@ -126,7 +126,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .btn-wa:hover{background:#075E54}
 .social-proof{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink-muted)}
 .stars{color:var(--gold);font-size:0.9rem;letter-spacing:2px}
-.hero-right{position:relative;background:var(--ink);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-right{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;padding:0}
 .hero-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;padding:4rem 0}
 .hero-circle{width:320px;height:320px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.4);display:flex;align-items:center;justify-content:center;position:relative}
 .hero-circle::before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.2)}
@@ -333,8 +333,18 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 
 @media(max-width:1024px){.nav-cta{display:none}
   nav{padding:1.2rem 2rem}.nav-links{display:none}
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{padding:5rem 2rem 3rem}.hero-right{min-height:55vh}
+  .hero{grid-template-columns:1fr;min-height:100vh;min-height:100svh;position:relative;overflow:hidden}
+  .hero-right{position:absolute;inset:0;min-height:0;display:block;z-index:0}
+  .hero-right img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-right img:not(:first-child){display:none}
+  .hero-left{position:relative;z-index:1;min-height:100vh;min-height:100svh;padding:5rem 2rem 7rem;justify-content:flex-end;background:linear-gradient(to top,rgba(26,23,20,.9) 45%,rgba(26,23,20,.35) 75%,rgba(26,23,20,.5) 100%)}
+  .hero-left .hero-eyebrow{color:var(--gold-light)}
+  .hero-left .hero-title{color:var(--cream)}
+  .hero-left .hero-title em{color:var(--gold-light)}
+  .hero-left .hero-body{color:rgba(250,247,242,.85);max-width:100%}
+  .hero-left .trust-chip{border-color:rgba(201,169,110,.4);color:rgba(250,247,242,.7)}
+  .hero-left .social-proof{color:rgba(250,247,242,.65)}
+  .hero-left .stars{color:var(--gold-light)}
   .scarcity,.trust-section,.story,.process,.collection,.voices,.faq,.contact,.legal{padding:4rem 2rem}
   .trust-section{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr}
   .kit-flow{grid-template-columns:1fr}.craft-steps{grid-template-columns:1fr 1fr}
@@ -430,7 +440,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
       <span data-i18n="social_proof">Trusted by families across Dubai, Kuwait & Japan</span>
     </div>
   </div>
-  <div class="hero-right" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;padding:0;">
+  <div class="hero-right">
     <img src="images/hero/01.jpg" alt="Luxury Gold Ring" style="width:100%;height:100%;object-fit:cover;">
     <img src="images/hero/02.jpg" alt="Diamond Necklace" style="width:100%;height:100%;object-fit:cover;">
     <img src="images/hero/03.jpg" alt="Platinum Ring" style="width:100%;height:100%;object-fit:cover;">
