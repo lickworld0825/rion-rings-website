@@ -362,7 +362,26 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
   .footer-grid{grid-template-columns:1fr;gap:2.5rem;margin-bottom:2rem;text-align:left}
   .footer-bottom{flex-direction:column;align-items:flex-start;text-align:left;gap:0.5rem}
   .sticky-order{padding:1rem 1.5rem}.sticky-order-text{display:none}.sticky-ctas{width:100%;gap:0.5rem}.s-wa,.s-order{flex:1;text-align:center;padding:0.85rem 0.5rem;font-size:0.62rem}
+  .img-band{height:160px}
+  .story-img-grid{grid-template-columns:1fr}
+  .story-img-grid img{height:200px}
+  .kit-step-img,.cstep-img{height:100px}
 }
+
+/* IMAGE BAND SEPARATORS */
+.img-band{height:220px;overflow:hidden;border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)}
+.img-band>img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:saturate(0.88) brightness(0.93)}
+
+/* TRUST BLOCK IMAGES */
+.trust-block-img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:1rem}
+
+/* STORY IMAGE GRID */
+.story-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:2rem}
+.story-img-grid img{width:100%;height:240px;object-fit:cover;display:block}
+
+/* PROCESS STEP IMAGES */
+.kit-step-img{display:block;width:100%;height:130px;object-fit:cover;object-position:center;margin-bottom:1.25rem;filter:saturate(0.8) brightness(0.85)}
+.cstep-img{display:block;width:100%;height:130px;object-fit:cover;object-position:center;margin-bottom:1.25rem;filter:saturate(0.8) brightness(0.85)}
 
 /* COOKIE BANNER */
 .cookie-banner{position:fixed;bottom:1.5rem;left:1.5rem;right:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;background:var(--ink);color:var(--cream);padding:1.25rem 1.5rem;border:0.5px solid var(--gold);z-index:380;display:none;align-items:center;gap:1.25rem;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,0.25)}
@@ -464,11 +483,36 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 
 <!-- TRUST -->
 <section class="trust-section">
-  <div class="trust-block"><div class="trust-icon">◯</div><h3 data-i18n="tr1_h">One of a Kind</h3><p data-i18n="tr1_p">Every piece is unique. No two are ever alike. Your jewel exists nowhere else in the world.</p></div>
-  <div class="trust-block"><div class="trust-icon">✦</div><h3 data-i18n="tr2_h">100% Made in Japan</h3><p data-i18n="tr2_p">Gold, platinum, diamonds and setting — every element sourced and handcrafted in Japan.</p></div>
-  <div class="trust-block"><div class="trust-icon">◇</div><h3 data-i18n="tr3_h">Photo Report</h3><p data-i18n="tr3_p">We photograph every step of the hair sealing process and send you the photos before delivery.</p></div>
-  <div class="trust-block"><div class="trust-icon">◈</div><h3 data-i18n="tr4_h">Pre-Approval Process</h3><p data-i18n="tr4_p">Design, materials and specifications are confirmed in writing before any work begins. Your approval starts production.</p></div>
+  <div class="trust-block">
+    <img src="images/story/main.jpg" class="trust-block-img" alt="One of a Kind Jewel">
+    <div class="trust-icon">◯</div>
+    <h3 data-i18n="tr1_h">One of a Kind</h3>
+    <p data-i18n="tr1_p">Every piece is unique. No two are ever alike. Your jewel exists nowhere else in the world.</p>
+  </div>
+  <div class="trust-block">
+    <img src="images/hero/02.jpg" class="trust-block-img" alt="100% Made in Japan">
+    <div class="trust-icon">✦</div>
+    <h3 data-i18n="tr2_h">100% Made in Japan</h3>
+    <p data-i18n="tr2_p">Gold, platinum, diamonds and setting — every element sourced and handcrafted in Japan.</p>
+  </div>
+  <div class="trust-block">
+    <img src="images/hero/04.jpg" class="trust-block-img" alt="Photo Report">
+    <div class="trust-icon">◇</div>
+    <h3 data-i18n="tr3_h">Photo Report</h3>
+    <p data-i18n="tr3_p">We photograph every step of the hair sealing process and send you the photos before delivery.</p>
+  </div>
+  <div class="trust-block">
+    <img src="images/bespoke/main.jpg" class="trust-block-img" alt="Pre-Approval Process">
+    <div class="trust-icon">◈</div>
+    <h3 data-i18n="tr4_h">Pre-Approval Process</h3>
+    <p data-i18n="tr4_p">Design, materials and specifications are confirmed in writing before any work begins. Your approval starts production.</p>
+  </div>
 </section>
+
+<!-- IMG BAND 1 -->
+<div class="img-band">
+  <img src="images/IMG_0681.jpg" alt="Rion pendant being worn">
+</div>
 
 <!-- STORY -->
 <section class="story" id="story">
@@ -479,7 +523,10 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
     <p data-i18n="story_p2">He discovered memorial jewellery — a ring that could hold a piece of his son close to his heart forever. Seven years later, in 2018, he founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.</p>
     <div class="story-quote"><p data-i18n="story_quote">"Eternal love.<br>A bond that continues forever."</p></div>
     <p data-i18n="story_p3">A strand of hair from someone dear — a child, a parent, a partner, a beloved pet — becomes a jewel you wear forever. Just 1cm. One strand. That is all we need to carry them with you, always.</p>
-    <img src="images/story/main.jpg" alt="Rion Memorial Jewellery" style="width:100%;margin-top:1.5rem;object-fit:cover;max-height:320px;display:block;">
+    <div class="story-img-grid">
+      <img src="images/materials/main.jpg" alt="Rion — handcrafted in Japan">
+      <img src="images/IMG_0648-4.jpg" alt="Rion memorial ring">
+    </div>
   </div>
 </section>
 
@@ -493,6 +540,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
   <span class="phase-label" data-i18n="phase_order_label">Phase 1 — Order & Design</span>
   <div class="kit-flow" style="grid-template-columns:1fr;max-width:680px">
     <div class="kit-step">
+      <img src="images/hero/02.jpg" class="kit-step-img" alt="Bespoke design">
       <div class="kit-step-num">01</div>
       <h4 data-i18n="s1_t">Order & Design</h4>
       <p data-i18n="s1_b">Place your order via WhatsApp or Instagram. Our artisan then proposes a bespoke design in K18 gold or platinum. Diamonds, rubies, sapphires available. You approve in writing before any work begins.</p>
@@ -505,18 +553,21 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
   <span class="phase-label" data-i18n="phase1_label">Phase 2 — Hair Collection Kit</span>
   <div class="kit-flow">
     <div class="kit-step">
+      <img src="images/hero/01.jpg" class="kit-step-img" alt="Hair collection kit">
       <div class="kit-step-num">02</div>
       <h4 data-i18n="kit1_t">We Send You a Kit</h4>
       <p data-i18n="kit1_b">After your order is confirmed, we send a secure hair collection kit to your Dubai address via DHL — a sealed envelope, instructions in English & Arabic, and a prepaid return label. Arrives in 3–5 days.</p>
       <span class="ktag" data-i18n="kit1_tag">Japan → Dubai</span>
     </div>
     <div class="kit-step">
+      <img src="images/IMG_0005-1.jpg" class="kit-step-img" alt="Collecting the hair">
       <div class="kit-step-num">03</div>
       <h4 data-i18n="kit2_t">You Collect the Hair</h4>
       <p data-i18n="kit2_b">Follow the simple instructions. Collect just 1cm of hair — a few strands. Even less is fine. Place it in the sealed envelope. No special equipment needed. For pets, the same process applies.</p>
       <span class="ktag" data-i18n="kit2_tag">At Your Home</span>
     </div>
     <div class="kit-step">
+      <img src="images/hero/04.jpg" class="kit-step-img" alt="Return to Japan">
       <div class="kit-step-num">04</div>
       <h4 data-i18n="kit3_t">Return to Japan</h4>
       <p data-i18n="kit3_b">Drop the sealed envelope at any DHL point in Dubai using our prepaid label. All customs declarations are pre-completed by us — you do nothing extra. Arrives at our Japanese atelier in 3–5 days.</p>
@@ -536,9 +587,24 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 
   <span class="phase-label" data-i18n="phase2_label">Phase 3 — Japanese Craftsmanship</span>
   <div class="craft-steps">
-    <div class="cstep"><div class="cstep-num">05</div><h3 data-i18n="s2_t">Handcrafting</h3><p data-i18n="s2_b">The hair is carefully sealed inside the jewel by hand. Every material is sourced and finished entirely in Japan. Takes Approx. 5.5 months.</p></div>
-    <div class="cstep"><div class="cstep-num">06</div><h3 data-i18n="s3_t">Photo Report</h3><p data-i18n="s3_b">We photograph the hair before sealing, during sealing, and after. These photos are sent to you via WhatsApp — so you can see with your own eyes.</p></div>
-    <div class="cstep"><div class="cstep-num">07</div><h3 data-i18n="s4_t">Delivered to Dubai</h3><p data-i18n="s4_b">Shipped via DHL Global Services in a handcrafted Rion exclusive case with Certificate of Authenticity. Fully insured. DDP — no charges on delivery.</p></div>
+    <div class="cstep">
+      <img src="images/hero/03.jpg" class="cstep-img" alt="Japanese handcrafting">
+      <div class="cstep-num">05</div>
+      <h3 data-i18n="s2_t">Handcrafting</h3>
+      <p data-i18n="s2_b">The hair is carefully sealed inside the jewel by hand. Every material is sourced and finished entirely in Japan. Takes Approx. 5.5 months.</p>
+    </div>
+    <div class="cstep">
+      <img src="images/IMG_0648-4.jpg" class="cstep-img" alt="Photo documentation">
+      <div class="cstep-num">06</div>
+      <h3 data-i18n="s3_t">Photo Report</h3>
+      <p data-i18n="s3_b">We photograph the hair before sealing, during sealing, and after. These photos are sent to you via WhatsApp — so you can see with your own eyes.</p>
+    </div>
+    <div class="cstep">
+      <img src="images/IMG_0750.JPG" class="cstep-img" alt="Delivered to Dubai">
+      <div class="cstep-num">07</div>
+      <h3 data-i18n="s4_t">Delivered to Dubai</h3>
+      <p data-i18n="s4_b">Shipped via DHL Global Services in a handcrafted Rion exclusive case with Certificate of Authenticity. Fully insured. DDP — no charges on delivery.</p>
+    </div>
   </div>
 
   <div class="shipping-note">
@@ -620,6 +686,11 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
   </div>
 </section>
 
+<!-- IMG BAND 2 -->
+<div class="img-band">
+  <img src="images/IMG_0648-4.jpg" alt="Rion — crafted with love">
+</div>
+
 <!-- PHOTO STORY -->
 <section class="photo-story">
   <div class="photo-story-grid">
@@ -644,6 +715,11 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
     </div>
   </div>
 </section>
+
+<!-- IMG BAND 3 -->
+<div class="img-band">
+  <img src="images/IMG_0750.JPG" alt="Rion worn with love">
+</div>
 
 <!-- VOICES -->
 <section class="voices" id="voices">
