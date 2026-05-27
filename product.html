@@ -67,6 +67,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .product-hero{padding:4rem 6rem;display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:start;border-bottom:0.5px solid var(--border)}
 .product-images{position:sticky;top:6rem}
 .product-main-img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#F0EBE0}
+.product-wear-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#F0EBE0;margin-top:6px}
 .product-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
 .product-thumb{aspect-ratio:1;object-fit:cover;width:100%;cursor:pointer;border:0.5px solid transparent;transition:border-color .2s;display:block;background:#F0EBE0}
 .product-thumb:hover,.product-thumb.active{border-color:var(--gold)}
@@ -272,6 +273,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <section class="product-hero">
   <div class="product-images">
     <img class="product-main-img" id="mainImg" src="" alt="">
+    <img class="product-wear-img" id="wearImg" src="" alt="" style="display:none" onerror="this.style.display='none'">
   </div>
   <div class="product-info-col">
     <span class="product-eyebrow" id="prodEyebrow"></span>
@@ -692,6 +694,13 @@ function renderProduct(code, lang){
   // Main image
   document.getElementById('mainImg').src = 'images/' + p.img;
   document.getElementById('mainImg').alt = `${code} ${seriesName}`;
+
+  // Wearing photo (e.g. series-a/a1-wear.jpg) — shown only if file exists
+  const wearImg = document.getElementById('wearImg');
+  const wearSrc = 'images/' + p.img.replace(/(\.\w+)$/, '-wear$1');
+  wearImg.alt = `${code} ${seriesName} — wearing`;
+  wearImg.style.display = '';
+  wearImg.src = wearSrc;
 
   // Info
   document.getElementById('prodEyebrow').textContent = `Series ${p.series} · ${TYPE_LABEL[series.type][lang]}`;
