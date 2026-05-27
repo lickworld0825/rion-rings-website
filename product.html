@@ -190,7 +190,8 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 @media(max-width:1024px){.nav-cta{display:none}
   nav{padding:1.2rem 2rem}
-  .breadcrumb{padding:1rem 1.5rem}
+  .breadcrumb{padding:1rem 1.5rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .breadcrumb-current{overflow:hidden;text-overflow:ellipsis}
   .product-hero{padding:2.5rem 1.5rem;grid-template-columns:1fr;gap:2.5rem}
   .product-images{position:static}
   .section,.trust-row{padding:3rem 1.5rem}
@@ -217,6 +218,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 .cookie-btn-primary{background:var(--gold);color:var(--ink)}
 .cookie-btn-primary:hover{background:var(--gold-light)}
 
+@media(max-width:768px){.scroll-top{display:none!important}}
 </style>
 </head>
 <body class="lang-en">
@@ -549,7 +551,7 @@ const T = {
   en:{
     menu_eyebrow:"Navigation",nav_cta:"Order Now",
     m_home:"Home",m_collection:"Collection",m_about:"About <em>Rion</em>",m_care:"Care <em>Guide</em>",m_shipping:"Shipping &amp; <em>Returns</em>",m_contact:"Contact",menu_cta:"Message Us on WhatsApp",
-    ddp_note:"DDP · all taxes included",stock_status:"● Made to order · Approx. 5.5 months",
+    ddp_note:"DDP · all taxes included",stock_status:"Made to order · Approx. 5.5 months",
     pill1:"100% Made in Japan",pill2:"Free DDP shipping",pill3:"Photo report included",pill4:"Lifetime polishing",
     cta_order:"Order via WhatsApp",cta_enquire:"Ask a question first",cta_order_short:"Order",
     spec_code:"Code",spec_material:"Material",spec_type:"Type",
@@ -583,7 +585,7 @@ const T = {
   ar:{
     menu_eyebrow:"القائمة",nav_cta:"اطلب الآن",
     m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_care:"دليل <em>العناية</em>",m_shipping:"الشحن و<em>الإرجاع</em>",m_contact:"تواصل",menu_cta:"راسلنا عبر واتساب",
-    ddp_note:"DDP · جميع الضرائب مضمّنة",stock_status:"● صنع حسب الطلب · حوالي 5.5 أشهر",
+    ddp_note:"DDP · جميع الضرائب مضمّنة",stock_status:"صنع حسب الطلب · حوالي 5.5 أشهر",
     pill1:"100% صنع في اليابان",pill2:"شحن DDP مجاني",pill3:"تقرير صوري مضمّن",pill4:"تلميع مدى الحياة",
     cta_order:"اطلب عبر واتساب",cta_enquire:"اسأل سؤالاً أولاً",cta_order_short:"اطلب",
     spec_code:"الكود",spec_material:"المادة",spec_type:"النوع",
@@ -617,7 +619,7 @@ const T = {
   ja:{
     menu_eyebrow:"メニュー",nav_cta:"ご注文",
     m_home:"ホーム",m_collection:"コレクション",m_about:"Rion<em>について</em>",m_care:"お手入れ<em>ガイド</em>",m_shipping:"配送・<em>返品</em>",m_contact:"お問い合わせ",menu_cta:"WhatsAppでメッセージ",
-    ddp_note:"DDP · 全税込み",stock_status:"● 受注生産 · 約5.5ヶ月",
+    ddp_note:"DDP · 全税込み",stock_status:"受注生産 · 約5.5ヶ月",
     pill1:"100% 日本製",pill2:"DDP無料配送",pill3:"封入写真レポート付き",pill4:"生涯磨き直し",
     cta_order:"WhatsAppで注文",cta_enquire:"まず質問する",cta_order_short:"注文",
     spec_code:"商品コード",spec_material:"素材",spec_type:"種類",
