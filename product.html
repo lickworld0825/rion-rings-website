@@ -718,9 +718,29 @@ function renderProduct(code, lang){
   document.getElementById('stickyPrice').textContent = 'AED ' + p.price.toLocaleString();
   document.getElementById('stickyWa').href = buildWaUrl(orderMsg);
 
-  // Birthstone card visibility (only Series C)
-  document.getElementById('birthstoneCard').style.display = p.series==='C' ? '' : '';
-  document.getElementById('birthstoneCalendar').style.display = ''; // Always show — available on all rings as option
+  // Birthstone card — C series: 2 stones included in base price
+  const bsBody  = document.querySelector('#birthstoneCard p[data-i18n="ct2_b"]');
+  const bsPrice = document.querySelector('#birthstoneCard .custom-price[data-i18n="ct2_p"]');
+  const bsLabel = document.querySelector('#birthstoneCalendar [data-i18n="bs_label"]');
+  if(p.series === 'C'){
+    const cBody  = {en:'Your choice of two birthstones is already included in the price of this ring. Choose any two from the 12 monthly stones.',
+                    ar:'حجرا ميلاد من اختيارك مضمّنان في سعر هذا الخاتم. اختاري أيًّا من أحجار الأشهر الاثني عشر.',
+                    ja:'お好きな誕生石2個がこのリングの価格に含まれています。12ヶ月の誕生石からお選びください。'};
+    const cPrice = {en:'2 birthstones of your choice — Included in price',
+                    ar:'حجران من اختيارك — مضمّنان في السعر',
+                    ja:'誕生石2個 · 価格に含まれます'};
+    const cLabel = {en:'Choose your 2 birthstones · المواليد · 誕生石',
+                    ar:'اختاري حجري ميلادك · birthstones · 誕生石',
+                    ja:'誕生石を2つお選びください · birthstones · المواليد'};
+    if(bsBody)  bsBody.textContent  = cBody[lang];
+    if(bsPrice) bsPrice.textContent = cPrice[lang];
+    if(bsLabel) bsLabel.textContent = cLabel[lang];
+  } else {
+    if(bsBody)  bsBody.innerHTML  = t.ct2_b;
+    if(bsPrice) bsPrice.innerHTML = t.ct2_p;
+    if(bsLabel) bsLabel.innerHTML = t.bs_label;
+  }
+  document.getElementById('birthstoneCalendar').style.display = ''; // Always show
 
   // Related (same series)
   const related = Object.entries(PRODUCTS)
