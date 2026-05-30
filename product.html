@@ -205,7 +205,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   .product-images{position:static}
   .section,.trust-row{padding:3rem 1.5rem}
   .craft-grid,.custom-grid{grid-template-columns:1fr;gap:1rem}
-  .related-grid{grid-template-columns:1fr 1fr}
+  .related-grid{grid-template-columns:repeat(3,1fr)}
   .trust-row-inner{grid-template-columns:1fr 1fr;gap:1.5rem}
   .bs-calendar{grid-template-columns:repeat(3,1fr)}
   .sticky-bar{padding:0.85rem 1.5rem;flex-direction:row;flex-wrap:nowrap}
@@ -880,7 +880,7 @@ function renderProduct(code, lang){
   // Related (same series)
   const related = Object.entries(PRODUCTS)
     .filter(([c,o])=>o.series===p.series && c!==code)
-    .slice(0,4);
+    .slice(0,3);
   const grid = document.getElementById('relatedGrid');
   if(related.length){
     grid.innerHTML = related.map(([c,o])=>`
