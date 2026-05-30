@@ -315,6 +315,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
       <div class="spec-row"><span class="spec-label" data-i18n="spec_material">Material</span><span class="spec-value" id="specMaterial"></span></div>
       <div class="spec-row"><span class="spec-label" data-i18n="spec_type">Type</span><span class="spec-value" id="specType"></span></div>
       <div class="spec-row" id="specSizingRow"><span class="spec-label" data-i18n="spec_sizing">Sizing</span><span class="spec-value" data-i18n="spec_sizing_v">US 4 – 12 (half sizes available) · Ring gauge included in kit</span></div>
+      <div class="spec-row" id="specChainRow" style="display:none"><span class="spec-label" data-i18n="spec_chain">Chain</span><span class="spec-value" id="specChainVal"></span></div>
       <div class="spec-row"><span class="spec-label" data-i18n="spec_seal">Hair Chamber</span><span class="spec-value" data-i18n="spec_seal_v">Hermetically sealed by hand in Japan</span></div>
       <div class="spec-row"><span class="spec-label" data-i18n="spec_production">Production</span><span class="spec-value" data-i18n="spec_production_v">Approx. 5.5 months after hair receipt</span></div>
       <div class="spec-row"><span class="spec-label" data-i18n="spec_shipping">Shipping</span><span class="spec-value" data-i18n="spec_shipping_v">DHL Express · Fully insured · DDP to UAE</span></div>
@@ -567,6 +568,7 @@ const T = {
     cta_order:"Order via WhatsApp",cta_enquire:"Ask a question first",cta_order_short:"Order",
     spec_code:"Code",spec_material:"Material",spec_type:"Type",
     spec_sizing:"Sizing",spec_sizing_v:"US 4 – 12 (half sizes available) · Ring gauge included in kit",
+    spec_chain:"Chain",
     spec_seal:"Hair Chamber",spec_seal_v:"Hermetically sealed by hand in Japan",
     spec_production:"Production",spec_production_v:"Approx. 5.5 months after hair receipt",
     spec_shipping:"Shipping",spec_shipping_v:"DHL Express · Fully insured · DDP to UAE",
@@ -601,6 +603,7 @@ const T = {
     cta_order:"اطلب عبر واتساب",cta_enquire:"اسأل سؤالاً أولاً",cta_order_short:"اطلب",
     spec_code:"الكود",spec_material:"المادة",spec_type:"النوع",
     spec_sizing:"المقاس",spec_sizing_v:"US 4 – 12 (أنصاف المقاسات متاحة) · مقياس خاتم مضمّن",
+    spec_chain:"السلسلة",
     spec_seal:"غرفة الشعر",spec_seal_v:"مختومة هرمسياً يدوياً في اليابان",
     spec_production:"الإنتاج",spec_production_v:"حوالي 5.5 أشهر بعد استلام الشعر",
     spec_shipping:"الشحن",spec_shipping_v:"DHL Express · مؤمَّن بالكامل · DDP إلى الإمارات",
@@ -635,6 +638,7 @@ const T = {
     cta_order:"WhatsAppで注文",cta_enquire:"まず質問する",cta_order_short:"注文",
     spec_code:"商品コード",spec_material:"素材",spec_type:"種類",
     spec_sizing:"サイズ",spec_sizing_v:"US 4 – 12（ハーフサイズ対応）· リングゲージ同梱",
+    spec_chain:"チェーン",
     spec_seal:"毛髪封入部",spec_seal_v:"日本にて手作業で完全密封処理",
     spec_production:"制作期間",spec_production_v:"毛髪受領後 約5.5ヶ月",
     spec_shipping:"配送",spec_shipping_v:"DHL Express · 完全保険付き · UAEへ DDP",
@@ -761,15 +765,30 @@ function renderProduct(code, lang){
   const ct1bEl         = document.querySelector('[data-i18n="ct1_b"]');
 
   if(isNecklace){
-    // Hide ring-only cards
-    birthstoneCard.style.display = 'none';
-    bsCalendar.style.display     = 'none';
+    // Show chain spec row; hide ring sizing row
+    document.getElementById('specChainRow').style.display = '';
+    const chainVal = document.getElementById('specChainVal');
+    if(chainVal){
+      // B-4 (Pt900) has Pt850 chain; all others match pendant material
+      const isB4 = (code === 'B-4');
+      chainVal.textContent = {
+        en: isB4
+          ? '45 cm included · Top: Pt900, Chain: Pt850 · Length options: 50 / 55 / 60 cm'
+          : '45 cm included · Same material as pendant · Length options: 50 / 55 / 60 cm',
+        ar: isB4
+          ? '45 سم مضمّنة · القلادة: Pt900، السلسلة: Pt850 · أطوال: 50 / 55 / 60 سم'
+          : '45 سم مضمّنة · نفس مادة القلادة · أطوال: 50 / 55 / 60 سم',
+        ja: isB4
+          ? '45cm付属 · トップ: Pt900、チェーン: Pt850 · 変更可: 50 / 55 / 60 cm'
+          : '45cm付属 · トップと同素材 · 変更可: 50 / 55 / 60 cm'
+      }[lang] || '';
+    }
 
     // Update section intro
     if(custBodyEl) custBodyEl.textContent = {
-      en:'Personalise your pendant with engraving and chain length selection.',
-      ar:'خصصي قلادتك بالنقش واختيار طول السلسلة.',
-      ja:'刻印とチェーン長さの選択でペンダントをパーソナライズ。'
+      en:'Personalise your pendant with engraving, birthstone, and chain length.',
+      ar:'خصصي قلادتك بالنقش وحجر الميلاد واختيار طول السلسلة.',
+      ja:'刻印・誕生石・チェーン長さでペンダントをパーソナライズ。'
     }[lang];
 
     // Engraving card: pendant-specific wording
@@ -779,15 +798,37 @@ function renderProduct(code, lang){
       ja:'名前・日付・短いメッセージをペンダント背面に追加——英字のみ。空白は文字数に含まれません。'
     }[lang];
 
-    // Replace sizing card with chain length
+    // Birthstone card: pendant surface setting (show with necklace-specific wording)
+    birthstoneCard.style.display = '';
+    bsCalendar.style.display     = '';
+    const bsBody  = document.querySelector('#birthstoneCard p[data-i18n="ct2_b"]');
+    const bsPrice = document.querySelector('#birthstoneCard .custom-price[data-i18n="ct2_p"]');
+    const bsLabel = document.querySelector('#birthstoneCalendar [data-i18n="bs_label"]');
+    if(bsBody)  bsBody.textContent  = {
+      en:'Add a birthstone to the surface of the pendant top — set by hand in Japan. Choose from any of the 12 monthly stones.',
+      ar:'أضيفي حجر ميلاد على سطح القلادة — يُركَّب يدوياً في اليابان. اختاري من أيٍّ من أحجار الأشهر الاثني عشر.',
+      ja:'ペンダントトップの表面に誕生石を留めることができます——日本にて手作業でセット。12ヶ月の誕生石からお選びください。'
+    }[lang];
+    if(bsPrice) bsPrice.textContent = {
+      en:'+ AED 90 per stone',
+      ar:'+ ٩٠ درهم لكل حجر',
+      ja:'+ AED 90 / 石'
+    }[lang];
+    if(bsLabel) bsLabel.textContent = {
+      en:'Available birthstones',
+      ar:'المواليد المتاحة',
+      ja:'誕生石一覧'
+    }[lang];
+
+    // Chain length card (ct3)
     if(sizingCard){
       sizingCard.querySelector('[data-i18n="ct3_t"]').innerHTML = {
         en:'Chain <em>Length</em>', ar:'طول <em>السلسلة</em>', ja:'チェーン<em>長さ</em>'
       }[lang];
       sizingCard.querySelector('[data-i18n="ct3_b"]').textContent = {
-        en:'Standard chain is 45 cm. Options: 50, 55, or 60 cm available.',
-        ar:'السلسلة القياسية 45 سم. خيارات: 50 أو 55 أو 60 سم متاحة.',
-        ja:'標準チェーンは45cm。50cm・55cm・60cmへの変更も可能。'
+        en:'Standard chain is 45 cm. Upgrade to 50, 55, or 60 cm. Chain material matches the pendant (B-4: chain is Pt850).',
+        ar:'السلسلة القياسية 45 سم. يمكن الترقية إلى 50 أو 55 أو 60 سم. مادة السلسلة تطابق القلادة (B-4: السلسلة Pt850).',
+        ja:'標準チェーンは45cm。50cm・55cm・60cmへの変更も可能。チェーン素材はトップと同素材（B-4はチェーンPt850）。'
       }[lang];
       sizingCard.querySelector('[data-i18n="ct3_p"]').textContent = {
         en:'Enquire for pricing · Specify at order confirmation',
@@ -796,6 +837,8 @@ function renderProduct(code, lang){
       }[lang];
     }
   } else {
+    // Ring: hide chain row
+    document.getElementById('specChainRow').style.display = 'none';
     // Ring: show all cards with standard content
     birthstoneCard.style.display = '';
     bsCalendar.style.display     = '';
