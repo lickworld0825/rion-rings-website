@@ -117,10 +117,12 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2rem);font-weight:300}
 .section-title em{font-style:italic;color:var(--gold-dark)}
 .variants-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
-.variant-card{background:var(--cream);text-decoration:none;color:inherit;cursor:pointer;transition:background .25s}
-.variant-card:hover{background:#FBF9F4}
-.variant-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .4s}
-.variant-card:hover img{transform:scale(1.04)}
+.variant-card{background:var(--cream);text-decoration:none;color:inherit;cursor:pointer;transition:background .3s,box-shadow .3s;position:relative;overflow:hidden}
+.variant-card:hover{background:#FDFAF5;box-shadow:0 8px 28px rgba(201,169,110,0.1)}
+.variant-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+.variant-card:hover img{transform:scale(1.06)}
+.variant-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(201,169,110,0.08) 0%,transparent 50%);opacity:0;transition:opacity .3s;pointer-events:none}
+.variant-card:hover::after{opacity:1}
 .variant-info{padding:1.25rem 1rem}
 .variant-code{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px}
 .variant-material{font-size:0.82rem;color:var(--ink-soft);margin-bottom:4px}
@@ -130,12 +132,15 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 
 /* PRICE TABLE */
 .price-table-section{padding:4rem 6rem;border-bottom:0.5px solid var(--border)}
-.price-table{width:100%;border-collapse:collapse;font-size:0.85rem}
-.price-table th{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dark);padding:0.75rem 1rem;border-bottom:0.5px solid var(--border);text-align:left;font-weight:400}
-.price-table td{padding:1rem 1rem;border-bottom:0.5px solid var(--border);color:var(--ink-soft)}
+.price-table{width:100%;border-collapse:collapse}
+.price-table thead{border-bottom:1px solid var(--gold)}
+.price-table th{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);padding:0 1rem 0.85rem;text-align:left;font-weight:400}
+.price-table th:first-child{padding-left:0}
+.price-table td{padding:1.25rem 1rem;border-bottom:0.5px solid rgba(201,169,110,0.12);color:var(--ink-soft);font-size:0.88rem}
+.price-table td:first-child{padding-left:0}
 .price-table tr:last-child td{border-bottom:none}
 .price-table tr:hover td{background:rgba(201,169,110,0.05)}
-.price-aed{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold-dark);font-style:italic}
+.price-aed{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold-dark);font-style:italic}
 .material-tag{display:inline-block;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;background:var(--gold-light);color:var(--gold-dark);padding:2px 8px;margin-left:6px}
 
 /* SPECS */

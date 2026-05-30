@@ -167,7 +167,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .phase-label{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:0.5px solid rgba(201,169,110,0.3);display:block}
 .kit-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
 .kit-step{background:rgba(250,247,242,0.04);border:0.5px solid rgba(201,169,110,0.2);padding:1.75rem 1.5rem;position:relative}
-.kit-step-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:rgba(201,169,110,0.2);line-height:1;margin-bottom:0.75rem}
+.kit-step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:rgba(201,169,110,0.4);line-height:1;margin-bottom:0.75rem;font-style:italic;letter-spacing:-0.02em}
 .kit-step h4{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
 .kit-step p{font-size:0.8rem;line-height:1.75;color:rgba(250,247,242,0.5)}
 .kit-step .ktag{position:absolute;top:1rem;right:1rem;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(201,169,110,0.12);color:var(--gold);padding:2px 8px}
@@ -197,8 +197,8 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .collection-header h2 em{font-style:italic;color:var(--gold-dark)}
 .collection-header p{font-size:0.88rem;line-height:1.9;color:var(--ink-soft);max-width:600px}
 .collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.piece{border:0.5px solid var(--border);padding:2.5rem 2rem 2rem;position:relative;transition:border-color .3s,box-shadow .3s}
-.piece:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(201,169,110,0.1)}
+.piece{border:0.5px solid var(--border);padding:2.5rem 2rem 2rem;position:relative;transition:border-color .3s,box-shadow .3s,transform .3s}
+.piece:hover{border-color:var(--gold);box-shadow:0 12px 40px rgba(201,169,110,0.12);transform:translateY(-3px)}
 .piece-badge{position:absolute;top:1.25rem;right:1.25rem;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:3px 10px}
 .piece-icon{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-style:italic;margin-bottom:1.25rem}
 .piece h3{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:0.4rem}
@@ -225,22 +225,30 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .voices h2 em{font-style:italic;color:var(--gold-dark)}
 .voices-sub{font-size:0.82rem;color:var(--ink-muted);margin-bottom:3rem}
 .voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.voice-card{background:var(--cream);border:0.5px solid var(--border);padding:2rem}
+.voice-card{background:var(--cream);border:0.5px solid var(--border);padding:2rem;transition:border-color .3s,transform .3s,box-shadow .3s}
+.voice-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,169,110,0.1)}
 .voice-stars{color:var(--gold);font-size:0.85rem;letter-spacing:3px;margin-bottom:1rem}
 .voice-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;line-height:1.7;color:var(--ink);margin-bottom:1.25rem}
 .voice-author{font-size:0.72rem;letter-spacing:0.14em;color:var(--ink-muted)}
 .voice-location{font-size:0.68rem;color:var(--gold);margin-top:2px}
 .voice-tag{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;display:inline-block;margin-top:6px}
 
-/* FAQ */
+/* FAQ ACCORDION */
 .faq{padding:7rem 6rem;border-bottom:0.5px solid var(--border)}
 .faq h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;margin-bottom:3rem}
 .faq h2 em{font-style:italic;color:var(--gold-dark)}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
-.faq-item{background:var(--cream);padding:2rem}
-.faq-q{font-size:0.82rem;font-weight:500;color:var(--ink);margin-bottom:0.75rem;display:flex;align-items:start;gap:0.75rem}
-.faq-q::before{content:'Q';font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);font-style:italic;flex-shrink:0}
-.faq-a{font-size:0.82rem;line-height:1.8;color:var(--ink-soft);padding-left:1.5rem}
+.faq-list{max-width:900px}
+.faq-item{border-bottom:0.5px solid var(--border)}
+.faq-item:first-child{border-top:0.5px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:1.4rem 0;display:flex;align-items:center;gap:1rem;font-family:'Jost',sans-serif;font-size:0.88rem;font-weight:400;color:var(--ink);letter-spacing:0.02em;transition:color .25s}
+.faq-q:hover{color:var(--gold-dark)}
+.faq-q::before{content:'Q';font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);font-style:italic;flex-shrink:0;line-height:1}
+.faq-q-text{flex:1;text-align:left}
+.faq-q-icon{width:22px;height:22px;flex-shrink:0;border:0.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--gold);line-height:1;transition:all .3s;font-family:'Jost',sans-serif;font-weight:300}
+.faq-item.open .faq-q-icon{background:var(--gold);color:var(--ink);border-color:var(--gold);transform:rotate(45deg)}
+.faq-panel{overflow:hidden;max-height:0;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.faq-item.open .faq-panel{max-height:700px}
+.faq-a{font-size:0.85rem;line-height:1.95;color:var(--ink-soft);padding:0 3rem 1.75rem 1.75rem}
 
 /* CONTACT */
 .contact{background:#F0EBE0;padding:7rem 6rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;border-bottom:0.5px solid var(--border)}
@@ -268,8 +276,8 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 .legal-col li::before{content:'·';margin-right:6px;color:var(--gold)}
 
 /* FOOTER */
-footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem}
+footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgba(201,169,110,0.15)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:5rem;margin-bottom:4rem}
 .footer-col h5{font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:400}
 .footer-brand .footer-logo{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);letter-spacing:0.16em;text-decoration:none;display:block;margin-bottom:1rem}
 .footer-brand p{font-size:0.78rem;line-height:1.85;color:rgba(250,247,242,0.55);margin-bottom:1.25rem;max-width:280px}
@@ -305,8 +313,8 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 .gallery{padding:5rem 6rem;border-bottom:0.5px solid var(--border);background:var(--cream)}
 .gallery-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:opacity .3s}
-.gallery-grid img:hover{opacity:0.85}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
+.gallery-grid img:hover{transform:scale(1.04);opacity:0.9}
 .gallery-wide{grid-column:span 2;aspect-ratio:2/1 !important}
 .gallery-tall{grid-row:span 2;aspect-ratio:1/2 !important}
 
@@ -355,7 +363,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
   .unique-statement{flex-direction:column;gap:1rem;padding:1.5rem;text-align:center}
   .unique-statement-icon{font-size:2rem}
   .unique-statement p{font-size:0.82rem}
-  .faq-grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
   .concierge{padding:4rem 2rem!important}
   .concierge-grid{grid-template-columns:1fr!important;gap:3rem!important}
   .legal-grid{grid-template-columns:1fr}
@@ -513,7 +521,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 
 <!-- IMG BAND 1 -->
 <div class="img-band">
-  <img src="images/IMG_0681.jpg" alt="Rion pendant being worn">
+  <img src="images/IMG_0676.jpg" alt="Rion pendant being worn">
 </div>
 
 <!-- STORY -->
@@ -682,7 +690,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 
 <!-- IMG BAND 3 -->
 <div class="img-band">
-  <img src="images/IMG_0750.JPG" alt="Rion worn with love">
+  <img src="images/IMG_0755.JPG" alt="Rion worn with love">
 </div>
 
 <!-- VOICES -->
@@ -732,19 +740,55 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 <!-- FAQ -->
 <section class="faq" id="faq">
   <h2 data-i18n="faq_title">Your questions, <em>answered</em></h2>
-  <div class="faq-grid">
-    <div class="faq-item"><p class="faq-q" data-i18n="fq1">How much hair do you need?</p><p class="faq-a" data-i18n="fa1">Just 1cm in length, one strand. Even less is perfectly fine. For pet fur, the same — 1cm, one strand. We work with whatever you can provide, no matter how little.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq_size">How do I know my ring size?</p><p class="faq-a" data-i18n="fa_size">A US-sized ring gauge (sizes 4 to 12, including half sizes) is included in your kit. Simply try each ring and tell us which fits best. If you already know your US ring size — for example "US 6½" — just tell us and you can skip the gauge.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq2">How does the collection work from Dubai?</p><p class="faq-a" data-i18n="fa2">We send a secure kit to your Dubai address via DHL (3–5 days). Inside: a sealed envelope, English & Arabic instructions, and a prepaid return label. Drop it at any DHL point — we handle all customs paperwork.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq3">Can I see the hair being sealed?</p><p class="faq-a" data-i18n="fa3">Yes. We photograph the hair before sealing, during sealing, and after — showing it fully enclosed and hermetically sealed. We send these photos to you via WhatsApp or email before shipping. Complete peace of mind.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq4">How long does it take?</p><p class="faq-a" data-i18n="fa4">Approximately 5.5 months in total. We send progress updates via WhatsApp throughout the entire process.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq6">Can I put hair from multiple loved ones in one piece?</p><p class="faq-a" data-i18n="fa6">Yes, on select designs. Multiple people's hair can be sealed together in one jewel — including hair from family members and pets. Ask us which designs support this when you enquire.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq7">Are there any extra charges on delivery?</p><p class="faq-a" data-i18n="fa7">None at all. All prices are DDP — UAE import duty (5%) and import VAT (5%) are prepaid by Rion via DHL and included in the displayed price. You pay nothing extra when your jewel arrives at your door.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq8">Can I order for a pet?</p><p class="faq-a" data-i18n="fa8">Yes. Many clients commission pieces for beloved pets. The kit and process are identical — the instructions for pet fur are included. 1cm of fur is all we need.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq9">What is your return policy?</p><p class="faq-a" data-i18n="fa9">Because each piece is made entirely to your personal order — incorporating your hair, your chosen design, and your approved specifications — we do not accept cancellations, returns, or refunds once production has begun. Before any work starts, we obtain your written approval of the design and materials. In case of a manufacturing defect on our part, please notify us within 3 days of receipt via WhatsApp, email, or Instagram DM — we will remake the piece at no charge. Refunds are not offered.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq10">What happens to leftover hair after crafting?</p><p class="faq-a" data-i18n="fa10">Any remaining hair — no matter how little — is returned to you in a dedicated container, together with your completed jewel. Nothing precious is ever discarded.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq_care">How do I care for my Rion jewel?</p><p class="faq-a" data-i18n="fa_care">Your piece is solid K18 gold or Pt900 platinum — exceptionally durable for daily wear. Wipe gently with a soft cloth after wearing. Avoid chlorine, perfume direct contact, and hard impacts. We provide complimentary lifetime polishing service in Japan — simply WhatsApp us to arrange.</p></div>
-    <div class="faq-item"><p class="faq-q" data-i18n="fq_water">Can I wear my Rion jewel in water?</p><p class="faq-a" data-i18n="fa_water">The hair chamber is hermetically sealed in Japan — water-resistant for daily life (handwashing, light rain). For longevity, we recommend removing before swimming pools (chlorine), hot springs, and saunas.</p></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq1">How much hair do you need?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa1">Just 1cm in length, one strand. Even less is perfectly fine. For pet fur, the same — 1cm, one strand. We work with whatever you can provide, no matter how little.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq_size">How do I know my ring size?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa_size">A US-sized ring gauge (sizes 4 to 12, including half sizes) is included in your kit. Simply try each ring and tell us which fits best. If you already know your US ring size — for example "US 6½" — just tell us and you can skip the gauge.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq2">How does the collection work from Dubai?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa2">We send a secure kit to your Dubai address via DHL (3–5 days). Inside: a sealed envelope, English & Arabic instructions, and a prepaid return label. Drop it at any DHL point — we handle all customs paperwork.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq3">Can I see the hair being sealed?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa3">Yes. We photograph the hair before sealing, during sealing, and after — showing it fully enclosed and hermetically sealed. We send these photos to you via WhatsApp or email before shipping. Complete peace of mind.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq4">How long does it take?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa4">Approximately 5.5 months in total. We send progress updates via WhatsApp throughout the entire process.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq6">Can I put hair from multiple loved ones in one piece?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa6">Yes, on select designs. Multiple people's hair can be sealed together in one jewel — including hair from family members and pets. Ask us which designs support this when you enquire.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq7">Are there any extra charges on delivery?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa7">None at all. All prices are DDP — UAE import duty (5%) and import VAT (5%) are prepaid by Rion via DHL and included in the displayed price. You pay nothing extra when your jewel arrives at your door.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq8">Can I order for a pet?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa8">Yes. Many clients commission pieces for beloved pets. The kit and process are identical — the instructions for pet fur are included. 1cm of fur is all we need.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq9">What is your return policy?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa9">Because each piece is made entirely to your personal order — incorporating your hair, your chosen design, and your approved specifications — we do not accept cancellations, returns, or refunds once production has begun. Before any work starts, we obtain your written approval of the design and materials. In case of a manufacturing defect on our part, please notify us within 3 days of receipt via WhatsApp, email, or Instagram DM — we will remake the piece at no charge. Refunds are not offered.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq10">What happens to leftover hair after crafting?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa10">Any remaining hair — no matter how little — is returned to you in a dedicated container, together with your completed jewel. Nothing precious is ever discarded.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq_care">How do I care for my Rion jewel?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa_care">Your piece is solid K18 gold or Pt900 platinum — exceptionally durable for daily wear. Wipe gently with a soft cloth after wearing. Avoid chlorine, perfume direct contact, and hard impacts. We provide complimentary lifetime polishing service in Japan — simply WhatsApp us to arrange.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="fq_water">Can I wear my Rion jewel in water?</span><span class="faq-q-icon">+</span></button>
+      <div class="faq-panel"><p class="faq-a" data-i18n="fa_water">The hair chamber is hermetically sealed in Japan — water-resistant for daily life (handwashing, light rain). For longevity, we recommend removing before swimming pools (chlorine), hot springs, and saunas.</p></div>
+    </div>
   </div>
 </section>
 
@@ -955,6 +999,20 @@ document.querySelectorAll('.piece-wa').forEach(btn => {
   const msg = `Hello Rion, I'm interested in ${piece} (from AED ${from}).\n\nPlease tell me more and send the next steps to proceed. Thank you.`;
   btn.setAttribute('href', buildWaUrl(msg));
 });
+
+// FAQ accordion
+function toggleFaq(btn){
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.faq-q-icon').textContent = '+';
+  });
+  if(!wasOpen){
+    item.classList.add('open');
+    btn.querySelector('.faq-q-icon').textContent = '×';
+  }
+}
 
 window.addEventListener('scroll',()=>{
   const b=document.getElementById('stickyOrder');
