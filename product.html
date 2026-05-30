@@ -366,7 +366,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
       <p data-i18n="ct2_b">Add a single birthstone — diamond, ruby, sapphire, emerald, or any month's stone — to commemorate a loved one.</p>
       <p class="custom-price" data-i18n="ct2_p">+ AED 90 per stone</p>
     </div>
-    <div class="custom-card">
+    <div class="custom-card" id="sizingCard">
       <div class="custom-card-num">03</div>
       <h3 data-i18n="ct3_t">Custom <em>Sizing</em></h3>
       <p data-i18n="ct3_b">US ring gauge (sizes 1–12) sent in your collection kit. Or tell us your US size if you already know.</p>
@@ -752,29 +752,87 @@ function renderProduct(code, lang){
   document.getElementById('stickyPrice').textContent = 'AED ' + p.price.toLocaleString();
   document.getElementById('stickyWa').href = buildWaUrl(orderMsg);
 
-  // Birthstone card — C series: 2 stones included in base price
-  const bsBody  = document.querySelector('#birthstoneCard p[data-i18n="ct2_b"]');
-  const bsPrice = document.querySelector('#birthstoneCard .custom-price[data-i18n="ct2_p"]');
-  const bsLabel = document.querySelector('#birthstoneCalendar [data-i18n="bs_label"]');
-  if(p.series === 'C'){
-    const cBody  = {en:'Your choice of two birthstones is already included in the price of this ring. Choose any two from the 12 monthly stones.',
-                    ar:'حجرا ميلاد من اختيارك مضمّنان في سعر هذا الخاتم. اختاري أيًّا من أحجار الأشهر الاثني عشر.',
-                    ja:'お好きな誕生石2個がこのリングの価格に含まれています。12ヶ月の誕生石からお選びください。'};
-    const cPrice = {en:'2 birthstones of your choice — Included in price',
-                    ar:'حجران من اختيارك — مضمّنان في السعر',
-                    ja:'誕生石2個 · 価格に含まれます'};
-    const cLabel = {en:'Choose your 2 birthstones · المواليد · 誕生石',
-                    ar:'اختاري حجري ميلادك · birthstones · 誕生石',
-                    ja:'誕生石を2つお選びください · birthstones · المواليد'};
-    if(bsBody)  bsBody.textContent  = cBody[lang];
-    if(bsPrice) bsPrice.textContent = cPrice[lang];
-    if(bsLabel) bsLabel.textContent = cLabel[lang];
+  // Customization cards — necklace vs ring
+  const isNecklace = series.type === 'necklace';
+  const birthstoneCard = document.getElementById('birthstoneCard');
+  const sizingCard     = document.getElementById('sizingCard');
+  const bsCalendar     = document.getElementById('birthstoneCalendar');
+  const custBodyEl     = document.querySelector('[data-i18n="cust_body"]');
+  const ct1bEl         = document.querySelector('[data-i18n="ct1_b"]');
+
+  if(isNecklace){
+    // Hide ring-only cards
+    birthstoneCard.style.display = 'none';
+    bsCalendar.style.display     = 'none';
+
+    // Update section intro
+    if(custBodyEl) custBodyEl.textContent = {
+      en:'Personalise your pendant with engraving and chain length selection.',
+      ar:'خصصي قلادتك بالنقش واختيار طول السلسلة.',
+      ja:'刻印とチェーン長さの選択でペンダントをパーソナライズ。'
+    }[lang];
+
+    // Engraving card: pendant-specific wording
+    if(ct1bEl) ct1bEl.textContent = {
+      en:'Add a name, date, or short message on the back of the pendant bar — English characters only. Spaces are not counted as characters.',
+      ar:'أضيفي اسماً أو تاريخاً أو رسالة قصيرة على الجانب الخلفي من القلادة — أحرف إنجليزية فقط. المسافات لا تُحسب ضمن الأحرف.',
+      ja:'名前・日付・短いメッセージをペンダント背面に追加——英字のみ。空白は文字数に含まれません。'
+    }[lang];
+
+    // Replace sizing card with chain length
+    if(sizingCard){
+      sizingCard.querySelector('[data-i18n="ct3_t"]').innerHTML = {
+        en:'Chain <em>Length</em>', ar:'طول <em>السلسلة</em>', ja:'チェーン<em>長さ</em>'
+      }[lang];
+      sizingCard.querySelector('[data-i18n="ct3_b"]').textContent = {
+        en:'Standard chain is 45 cm. Options: 50, 55, or 60 cm available.',
+        ar:'السلسلة القياسية 45 سم. خيارات: 50 أو 55 أو 60 سم متاحة.',
+        ja:'標準チェーンは45cm。50cm・55cm・60cmへの変更も可能。'
+      }[lang];
+      sizingCard.querySelector('[data-i18n="ct3_p"]').textContent = {
+        en:'Enquire for pricing · Specify at order confirmation',
+        ar:'استفسري عن السعر · يُحدَّد عند تأكيد الطلب',
+        ja:'料金はお問い合わせください · ご注文確定時にご指定'
+      }[lang];
+    }
   } else {
-    if(bsBody)  bsBody.innerHTML  = t.ct2_b;
-    if(bsPrice) bsPrice.innerHTML = t.ct2_p;
-    if(bsLabel) bsLabel.innerHTML = t.bs_label;
+    // Ring: show all cards with standard content
+    birthstoneCard.style.display = '';
+    bsCalendar.style.display     = '';
+
+    // Restore engraving body for ring
+    if(ct1bEl) ct1bEl.innerHTML = t.ct1_b;
+
+    // Birthstone card — C series: 2 stones included in base price
+    const bsBody  = document.querySelector('#birthstoneCard p[data-i18n="ct2_b"]');
+    const bsPrice = document.querySelector('#birthstoneCard .custom-price[data-i18n="ct2_p"]');
+    const bsLabel = document.querySelector('#birthstoneCalendar [data-i18n="bs_label"]');
+    if(p.series === 'C'){
+      const cBody  = {en:'Your choice of two birthstones is already included in the price of this ring. Choose any two from the 12 monthly stones.',
+                      ar:'حجرا ميلاد من اختيارك مضمّنان في سعر هذا الخاتم. اختاري أيًّا من أحجار الأشهر الاثني عشر.',
+                      ja:'お好きな誕生石2個がこのリングの価格に含まれています。12ヶ月の誕生石からお選びください。'};
+      const cPrice = {en:'2 birthstones of your choice — Included in price',
+                      ar:'حجران من اختيارك — مضمّنان في السعر',
+                      ja:'誕生石2個 · 価格に含まれます'};
+      const cLabel = {en:'Choose your 2 birthstones · المواليد · 誕生石',
+                      ar:'اختاري حجري ميلادك · birthstones · 誕生石',
+                      ja:'誕生石を2つお選びください · birthstones · المواليد'};
+      if(bsBody)  bsBody.textContent  = cBody[lang];
+      if(bsPrice) bsPrice.textContent = cPrice[lang];
+      if(bsLabel) bsLabel.textContent = cLabel[lang];
+    } else {
+      if(bsBody)  bsBody.innerHTML  = t.ct2_b;
+      if(bsPrice) bsPrice.innerHTML = t.ct2_p;
+      if(bsLabel) bsLabel.innerHTML = t.bs_label;
+    }
+
+    // Restore sizing card for ring
+    if(sizingCard){
+      sizingCard.querySelector('[data-i18n="ct3_t"]').innerHTML = t.ct3_t;
+      sizingCard.querySelector('[data-i18n="ct3_b"]').innerHTML = t.ct3_b;
+      sizingCard.querySelector('[data-i18n="ct3_p"]').innerHTML = t.ct3_p;
+    }
   }
-  document.getElementById('birthstoneCalendar').style.display = ''; // Always show
 
   // Related (same series)
   const related = Object.entries(PRODUCTS)
