@@ -118,23 +118,25 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .nav-cta:hover{background:var(--ink)}
 
 /* HERO */
-.hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr}
-.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 6rem}
+.hero{min-height:92vh;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background:linear-gradient(to right,rgba(26,23,20,.95) 35%,rgba(26,23,20,.6) 65%,rgba(26,23,20,.35) 100%)}
+.hero-left{position:relative;z-index:2;width:55%;min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:5rem 5rem 5rem 6rem}
 .trust-bar{display:flex;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
-.trust-chip{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);border:0.5px solid var(--gold);padding:4px 12px}
-.hero-eyebrow{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--ink);margin-bottom:1.5rem}
-.hero-title em{font-style:italic;color:var(--gold-dark)}
-.hero-body{font-size:0.9rem;line-height:1.9;color:var(--ink-soft);max-width:420px;margin-bottom:2rem}
+.trust-chip{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,247,242,.7);border:0.5px solid rgba(201,169,110,.4);padding:4px 12px}
+.hero-eyebrow{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.5rem}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--gold-light)}
+.hero-body{font-size:0.9rem;line-height:1.9;color:rgba(250,247,242,.85);max-width:420px;margin-bottom:2rem}
 .unique-badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--gold-light);padding:0.75rem 1.5rem;margin-bottom:2rem;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase}
 .hero-cta-group{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
 .btn-primary{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:var(--ink);padding:1rem 2.5rem;text-decoration:none;transition:background .3s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--gold-dark)}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
 .btn-wa:hover{background:#075E54}
-.social-proof{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink-muted)}
-.stars{color:var(--gold);font-size:0.9rem;letter-spacing:2px}
-.hero-right{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;padding:0}
+.social-proof{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:rgba(250,247,242,.65)}
+.stars{color:var(--gold-light);font-size:0.9rem;letter-spacing:2px}
+.hero-right{position:absolute;top:0;left:0;width:100%;height:100%;min-height:92vh;z-index:0}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;padding:4rem 0}
 .hero-circle{width:320px;height:320px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.4);display:flex;align-items:center;justify-content:center;position:relative}
 .hero-circle::before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.2)}
@@ -349,18 +351,11 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 
 @media(max-width:1024px){.nav-cta{display:none}
   nav{padding:1.2rem 2rem}.nav-links{display:none}
-  .hero{grid-template-columns:1fr;min-height:100vh;min-height:100svh;position:relative;overflow:hidden}
-  .hero-right{position:absolute;inset:0;min-height:0;display:block;z-index:0}
-  .hero-right img{width:100%;height:100%;object-fit:cover;display:block}
-  .hero-right img:not(:first-child){display:none}
-  .hero-left{position:relative;z-index:1;min-height:100vh;min-height:100svh;padding:5rem 2rem 7rem;justify-content:flex-end;background:linear-gradient(to top,rgba(26,23,20,.9) 45%,rgba(26,23,20,.35) 75%,rgba(26,23,20,.5) 100%)}
-  .hero-left .hero-eyebrow{color:var(--gold-light)}
-  .hero-left .hero-title{color:var(--cream)}
-  .hero-left .hero-title em{color:var(--gold-light)}
-  .hero-left .hero-body{color:rgba(250,247,242,.85);max-width:100%}
-  .hero-left .trust-chip{border-color:rgba(201,169,110,.4);color:rgba(250,247,242,.7)}
-  .hero-left .social-proof{color:rgba(250,247,242,.65)}
-  .hero-left .stars{color:var(--gold-light)}
+  .hero{min-height:100vh;min-height:100svh}
+  .hero::before{background:linear-gradient(to top,rgba(26,23,20,.92) 40%,rgba(26,23,20,.4) 75%,rgba(26,23,20,.15) 100%)}
+  .hero-right{min-height:0}
+  .hero-left{width:100%;min-height:100vh;min-height:100svh;padding:5rem 2rem 7rem;justify-content:flex-end;background:none}
+  .hero-body{max-width:100%}
   .scarcity,.trust-section,.story,.process,.photo-story,.collection,.voices,.faq,.contact,.legal,.gallery{padding:4rem 2rem}
   .gallery-grid{grid-template-columns:repeat(2,1fr);gap:6px}
   .trust-section{grid-template-columns:1fr}.story{grid-template-columns:1fr}
@@ -469,11 +464,6 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="trust-bar">
-      <div class="trust-chip">✦ <span data-i18n="chip1">Est. 2018 · Japan</span></div>
-      <div class="trust-chip">✦ <span data-i18n="chip2">100% Made in Japan</span></div>
-      <div class="trust-chip">✦ <span data-i18n="chip3">K18 Gold · Platinum</span></div>
-    </div>
     <p class="hero-eyebrow" data-i18n="hero_eyebrow">Bespoke Memorial Jewellery · Japan</p>
     <h1 class="hero-title" data-i18n="hero_title">Carry their<br><em>love.</em><br>Forever.</h1>
     <p class="hero-body" data-i18n="hero_body">A single strand of hair — just 1cm, one strand. Sealed forever in Japanese gold. Each piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone.</p>
@@ -488,10 +478,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
     </div>
   </div>
   <div class="hero-right">
-    <img src="images/hero/01.jpg" alt="Luxury Gold Ring" style="width:100%;height:100%;object-fit:cover;" loading="eager">
-    <img src="images/hero/02.jpg" alt="Diamond Necklace" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-    <img src="images/hero/03.jpg" alt="Platinum Ring" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-    <img src="images/hero/04.jpg" alt="Gold Jewelry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    <img src="images/hero/04.jpg" alt="Memorial Jewellery" loading="eager">
   </div>
 </section>
 
