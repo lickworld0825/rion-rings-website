@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rion Admin — 注文管理</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://api.jsonbin.io; img-src 'self' data:; object-src 'none'; base-uri 'self';">
+<script>if(top!==self)top.location=self.location;</script>
 <link rel="icon" type="image/jpeg" href="images/collection/ring.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -204,6 +207,15 @@ table.orders tr:last-child td{border-bottom:none}
   .search-input{width:100%}
 }
 
+/* SECURITY */
+.lockout-msg{background:#F0DEDE;border:0.5px solid var(--red);color:var(--red);padding:0.75rem 1rem;font-size:0.78rem;margin-top:0.75rem;line-height:1.6;text-align:center}
+.attempts-warn{color:var(--amber);font-size:0.72rem;margin-top:0.4rem;text-align:center}
+.timeout-bar{position:fixed;bottom:0;left:0;right:0;background:var(--amber);color:#fff;text-align:center;padding:0.6rem 1rem;font-size:0.78rem;letter-spacing:0.12em;z-index:999;display:none}
+.sec-log-item{display:grid;grid-template-columns:140px 80px 1fr;gap:0.75rem;padding:0.5rem 0;border-bottom:0.5px dashed var(--border);font-size:0.75rem;align-items:start}
+.sec-log-item:last-child{border-bottom:none}
+.sec-log-ok{color:#3E7A5A}
+.sec-log-fail{color:var(--red)}
+.sec-log-warn{color:var(--amber)}
 /* ETA */
 .eta-ok{display:inline-block;padding:2px 8px;font-size:0.65rem;letter-spacing:0.1em;border-radius:2px;white-space:nowrap;background:#E0EBE3;color:#3E7A5A}
 .eta-soon{display:inline-block;padding:2px 8px;font-size:0.65rem;letter-spacing:0.1em;border-radius:2px;white-space:nowrap;background:#FAEED9;color:var(--amber)}
@@ -397,6 +409,12 @@ canvas.chart{display:block;width:100%;height:200px}
       <div id="dataMsg" style="margin-top:0.75rem;font-size:0.8rem"></div>
     </div>
 
+    <div class="table-wrap" style="margin-bottom:2rem;padding:2rem">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:1rem">セキュリティログ <span style="font-size:0.65rem;letter-spacing:0.16em;font-family:'Jost',sans-serif;color:var(--ink-muted);text-transform:uppercase;font-weight:400">直近20件</span></h3>
+      <div id="securityLogList"></div>
+      <button class="btn btn-secondary" style="margin-top:1rem;font-size:0.65rem" onclick="clearSecLog()">ログを消去</button>
+    </div>
+
     <div class="table-wrap" style="padding:2rem">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:1rem">ステータス一覧</h3>
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
@@ -413,6 +431,9 @@ canvas.chart{display:block;width:100%;height:200px}
     </div>
   </div>
 </div>
+
+<!-- TIMEOUT WARNING BAR -->
+<div class="timeout-bar" id="timeoutBar">⚠ セキュリティのため5分後に自動ログアウトします &nbsp;<button onclick="extendSession()" style="background:#fff;color:var(--amber);border:none;padding:3px 12px;cursor:pointer;font-family:'Jost',sans-serif;font-size:0.72rem;letter-spacing:0.1em;margin-left:0.5rem">延長</button></div>
 
 <!-- COPY TOAST -->
 <div class="copy-toast" id="copyToast">✓ コピーしました</div>
@@ -657,34 +678,78 @@ function saveOrders(){
   localStorage.setItem('rion_orders', JSON.stringify(orders));
 }
 
-// ===== AUTH =====
-function getStoredPw(){
-  return localStorage.getItem('rion_admin_pw') || 'rion2018';
+// ===== AUTH (HASHED + BRUTE FORCE PROTECTED) =====
+async function hashPw(pw){
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
-function loginStep1(e){
+async function getStoredPwHash(){
+  let h = localStorage.getItem('rion_admin_pw_hash');
+  if(!h){
+    const plain = localStorage.getItem('rion_admin_pw') || 'rion2018';
+    h = await hashPw(plain);
+    localStorage.setItem('rion_admin_pw_hash', h);
+    localStorage.removeItem('rion_admin_pw');
+  }
+  return h;
+}
+async function checkPw(input){ return (await hashPw(input)) === (await getStoredPwHash()); }
+
+// ----- Brute Force -----
+const MAX_ATTEMPTS=5, LOCKOUT_MS=15*60*1000;
+function getBruteState(){ return JSON.parse(localStorage.getItem('rion_brute')||'{"count":0,"lockUntil":0}'); }
+function recordFailedAttempt(){
+  const s=getBruteState(); s.count++;
+  if(s.count>=MAX_ATTEMPTS) s.lockUntil=Date.now()+LOCKOUT_MS;
+  localStorage.setItem('rion_brute',JSON.stringify(s)); return s;
+}
+function resetAttempts(){ localStorage.removeItem('rion_brute'); }
+function isLockedOut(){
+  const s=getBruteState();
+  if(s.lockUntil>Date.now()) return Math.ceil((s.lockUntil-Date.now())/60000);
+  if(s.lockUntil>0) resetAttempts();
+  return 0;
+}
+
+// ----- Login Flow -----
+async function loginStep1(e){
   e.preventDefault();
-  const input = document.getElementById('pwInput').value;
-  if(input !== getStoredPw()){
-    document.getElementById('loginError').textContent='パスワードが違います';
-    document.getElementById('pwInput').value='';
+  const lockMins=isLockedOut();
+  if(lockMins>0){
+    document.getElementById('loginError').textContent=`アカウントがロックされています。約${lockMins}分後にお試しください。`;
     return;
   }
-  const secret = localStorage.getItem('rion_2fa_secret');
-  if(secret){
-    document.getElementById('step1').style.display='none';
-    document.getElementById('step2').style.display='block';
-    document.getElementById('totpInput').focus();
+  const input=document.getElementById('pwInput').value;
+  if(await checkPw(input)){
+    resetAttempts();
+    secLog('login_pw_ok','パスワード認証成功');
+    const secret=localStorage.getItem('rion_2fa_secret');
+    if(secret){
+      document.getElementById('step1').style.display='none';
+      document.getElementById('step2').style.display='block';
+      document.getElementById('totpInput').focus();
+    } else { completeLogin(); }
   } else {
-    completeLogin();
+    const s=recordFailedAttempt();
+    const remaining=MAX_ATTEMPTS-s.count;
+    secLog('login_fail',`パスワード失敗 (${s.count}/${MAX_ATTEMPTS}回)`);
+    if(s.lockUntil>Date.now()){
+      document.getElementById('loginError').textContent=`${MAX_ATTEMPTS}回失敗のためロックされました。15分後にお試しください。`;
+    } else {
+      document.getElementById('loginError').textContent=`パスワードが違います。残り${remaining}回でロックされます。`;
+    }
+    document.getElementById('pwInput').value='';
   }
 }
 async function loginStep2(e){
   e.preventDefault();
-  const secret = localStorage.getItem('rion_2fa_secret');
-  const code = document.getElementById('totpInput').value.replace(/\s/g,'');
-  if(await verifyTOTP(secret, code)){
+  const secret=localStorage.getItem('rion_2fa_secret');
+  const code=document.getElementById('totpInput').value.replace(/\s/g,'');
+  if(await verifyTOTP(secret,code)){
+    secLog('login_2fa_ok','2FA認証成功 — ログイン完了');
     completeLogin();
   } else {
+    secLog('login_2fa_fail','2FAコード失敗');
     document.getElementById('totpError').textContent='コードが正しくありません。もう一度お試しください。';
     document.getElementById('totpInput').value='';
     document.getElementById('totpInput').focus();
@@ -698,24 +763,70 @@ function backToStep1(){
 }
 function completeLogin(){
   sessionStorage.setItem('rion_admin_session','1');
+  sessionStorage.setItem('rion_login_time', new Date().toISOString());
   document.getElementById('loginScreen').style.display='none';
   document.getElementById('app').classList.add('active');
+  resetActivityTimer();
   init();
 }
 function logout(){
-  sessionStorage.removeItem('rion_admin_session');
+  clearTimers();
+  sessionStorage.clear();
   location.reload();
 }
-function changePassword(){
-  const newPw = document.getElementById('newPw').value;
-  const confirm = document.getElementById('newPwConfirm').value;
-  const msg = document.getElementById('pwMsg');
-  if(newPw.length < 6){ msg.style.color='var(--red)'; msg.textContent='6文字以上で入力してください'; return; }
-  if(newPw !== confirm){ msg.style.color='var(--red)'; msg.textContent='パスワードが一致しません'; return; }
-  localStorage.setItem('rion_admin_pw', newPw);
-  msg.style.color='var(--gold-dark)'; msg.textContent='✓ パスワードを更新しました';
+async function changePassword(){
+  const newPw=document.getElementById('newPw').value;
+  const confirm=document.getElementById('newPwConfirm').value;
+  const msg=document.getElementById('pwMsg');
+  if(newPw.length<8){ msg.style.color='var(--red)'; msg.textContent='8文字以上で入力してください'; return; }
+  if(newPw!==confirm){ msg.style.color='var(--red)'; msg.textContent='パスワードが一致しません'; return; }
+  const h=await hashPw(newPw);
+  localStorage.setItem('rion_admin_pw_hash',h);
+  localStorage.removeItem('rion_admin_pw');
+  msg.style.color='var(--gold-dark)'; msg.textContent='✓ パスワードを更新しました（ハッシュ保存済み）';
   document.getElementById('newPw').value=''; document.getElementById('newPwConfirm').value='';
+  secLog('pw_change','パスワードを変更しました');
 }
+
+// ===== SESSION TIMEOUT =====
+const TIMEOUT_MS=30*60*1000, WARN_MS=5*60*1000;
+let actTimer=null, warnTimer=null, hiddenTimer=null;
+function clearTimers(){
+  clearTimeout(actTimer); clearTimeout(warnTimer); clearTimeout(hiddenTimer);
+  const tb=document.getElementById('timeoutBar'); if(tb) tb.style.display='none';
+}
+function resetActivityTimer(){
+  if(!sessionStorage.getItem('rion_admin_session')) return;
+  clearTimers();
+  warnTimer=setTimeout(()=>{ document.getElementById('timeoutBar').style.display='block'; }, TIMEOUT_MS-WARN_MS);
+  actTimer=setTimeout(()=>{ secLog('timeout','30分無操作のため自動ログアウト'); alert('セキュリティのため自動的にログアウトしました。'); logout(); }, TIMEOUT_MS);
+}
+function extendSession(){ document.getElementById('timeoutBar').style.display='none'; resetActivityTimer(); }
+['click','keydown','mousemove','touchstart','scroll'].forEach(ev=>{
+  document.addEventListener(ev,()=>{ if(sessionStorage.getItem('rion_admin_session')) resetActivityTimer(); },{passive:true});
+});
+document.addEventListener('visibilitychange',()=>{
+  if(!sessionStorage.getItem('rion_admin_session')) return;
+  if(document.hidden){
+    hiddenTimer=setTimeout(()=>{ secLog('hidden_lock','タブ非表示10分のためロック'); logout(); }, 10*60*1000);
+  } else { clearTimeout(hiddenTimer); resetActivityTimer(); }
+});
+
+// ===== SECURITY LOG =====
+function secLog(type,detail){
+  const log=JSON.parse(localStorage.getItem('rion_sec_log')||'[]');
+  log.unshift({ts:new Date().toISOString(),type,detail});
+  if(log.length>100) log.splice(100);
+  localStorage.setItem('rion_sec_log',JSON.stringify(log));
+}
+function renderSecLog(){
+  const el=document.getElementById('securityLogList'); if(!el) return;
+  const log=JSON.parse(localStorage.getItem('rion_sec_log')||'[]').slice(0,20);
+  if(!log.length){ el.innerHTML='<p style="font-size:0.82rem;color:var(--ink-muted)">記録なし</p>'; return; }
+  const cls=t=>t.includes('fail')||t.includes('lock')||t.includes('timeout')||t.includes('hidden')?'sec-log-fail':t.includes('warn')?'sec-log-warn':'sec-log-ok';
+  el.innerHTML=log.map(e=>`<div class="sec-log-item"><span style="color:var(--ink-muted)">${e.ts.replace('T',' ').substring(0,16)}</span><span class="${cls(e.type)}">${esc(e.type)}</span><span>${esc(e.detail)}</span></div>`).join('');
+}
+function clearSecLog(){ if(!confirm('セキュリティログを消去しますか？')) return; localStorage.removeItem('rion_sec_log'); renderSecLog(); }
 
 // ===== TABS =====
 function switchTab(name){
@@ -727,6 +838,7 @@ function switchTab(name){
   if(name==='orders') renderOrders();
   if(name==='pipeline') renderPipeline();
   if(name==='reports') renderReports();
+  if(name==='settings'){ loadSyncConfig(); render2FASettings(); renderSecLog(); }
 }
 
 // ===== ID GENERATION =====
@@ -1164,12 +1276,16 @@ function init(){
   setInterval(updateClock, 30000);
   loadSyncConfig();
   render2FASettings();
+  renderSecLog();
+  const loginTime = sessionStorage.getItem('rion_login_time');
+  if(loginTime) document.getElementById('clock').title = `ログイン: ${loginTime.replace('T',' ').substring(0,16)}`;
 }
 
 // Auto-login if session exists
 if(sessionStorage.getItem('rion_admin_session')){
   document.getElementById('loginScreen').style.display='none';
   document.getElementById('app').classList.add('active');
+  resetActivityTimer();
   init();
 }
 
