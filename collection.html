@@ -895,6 +895,12 @@ const WA_NUMBER = '819054621246';
 function buildWaUrl(text){
   return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 }
+function getLang(){return document.documentElement.lang||'en';}
+function makeMsg(en,ar,ja){
+  const l=getLang();
+  if(l==='ja')return ja;
+  return(l==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+}
 
 // Product card → product detail page
 document.querySelectorAll('.product-card[data-code]').forEach(card => {
@@ -902,21 +908,27 @@ document.querySelectorAll('.product-card[data-code]').forEach(card => {
   card.setAttribute('href', `product.html?code=${encodeURIComponent(code)}`);
 });
 
-// Series / Bespoke enquire buttons
-document.querySelectorAll('.btn-series-enquire').forEach(btn => {
-  const section = btn.closest('section');
-  if(!section) return;
-  let msg;
-  if(section.classList.contains('bespoke-section')){
-    msg = `Hello Rion, I'd like to begin a fully bespoke commission. Please tell me about the process and what's possible.`;
-  } else {
-    const series = section.dataset.series || '';
-    const nameEl = section.querySelector('.series-name');
-    const name = nameEl ? nameEl.textContent.replace(/\s+/g,' ').trim() : '';
-    msg = `Hello Rion, I'd like to enquire about Series ${series} — ${name}. Please send me more details.`;
-  }
-  btn.setAttribute('href', buildWaUrl(msg));
-});
+function updateSeriesWaLinks(){
+  document.querySelectorAll('.btn-series-enquire').forEach(btn=>{
+    const section=btn.closest('section');
+    if(!section)return;
+    let en,ar,ja;
+    if(section.classList.contains('bespoke-section')){
+      en=`Hello Rion, I'd like to begin a fully bespoke commission. Please tell me about the process and what's possible.`;
+      ar=`مرحباً Rion، أود البدء في تكليف حصري كامل. يرجى إخباري عن العملية وما هو ممكن.`;
+      ja=`Rionさん、完全オーダーメイドの作品を始めたいです。制作の流れと可能なことについてお聞かせください。`;
+    }else{
+      const series=section.dataset.series||'';
+      const nameEl=section.querySelector('.series-name');
+      const name=nameEl?nameEl.textContent.replace(/\s+/g,' ').trim():'';
+      en=`Hello Rion, I'd like to enquire about Series ${series} — ${name}. Please send me more details.`;
+      ar=`مرحباً Rion، أود الاستفسار عن السلسلة ${series} — ${name}. يرجى إرسال مزيد من التفاصيل.`;
+      ja=`Rionさん、シリーズ${series} — ${name}についてお問い合わせしたいです。詳細をお送りください。`;
+    }
+    btn.setAttribute('href',buildWaUrl(makeMsg(en,ar,ja)));
+  });
+}
+updateSeriesWaLinks();
 
 // Sticky bar + scroll top
 window.addEventListener('scroll',()=>{
@@ -1081,6 +1093,7 @@ function setLang(lang){
     const k = el.getAttribute('data-i18n');
     if(t[k] !== undefined) el.innerHTML = t[k];
   });
+  updateSeriesWaLinks();
 }
 </script>
 

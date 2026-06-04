@@ -538,11 +538,27 @@ const WA_NUMBER = '819054621246';
 function buildWaUrl(msg){
   return 'https://wa.me/' + WA_NUMBER + (msg ? '?text=' + encodeURIComponent(msg) : '');
 }
-const waMsg = "Hello Rion, I have a question I couldn't find in the FAQ:";
-document.getElementById('helpWaLink').href = buildWaUrl(waMsg);
-document.getElementById('menuWaLink').href = buildWaUrl('');
-document.getElementById('footerWaLink').href = buildWaUrl('');
-document.getElementById('navCtaLink').href = buildWaUrl("Hello Rion, I'd like to enquire about placing an order.");
+function getLang(){return document.documentElement.lang||'en';}
+function makeMsg(en,ar,ja){
+  const l=getLang();
+  if(l==='ja')return ja;
+  return(l==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+}
+function updateWaLinks(){
+  document.getElementById('helpWaLink').href=buildWaUrl(makeMsg(
+    "Hello Rion, I have a question I couldn't find in the FAQ:",
+    "مرحباً Rion، لدي سؤال لم أجده في الأسئلة الشائعة:",
+    "Rionさん、FAQで見つけられなかった質問があります："
+  ));
+  document.getElementById('navCtaLink').href=buildWaUrl(makeMsg(
+    "Hello Rion, I'd like to enquire about placing an order.",
+    "مرحباً Rion، أود الاستفسار عن تقديم طلب.",
+    "Rionさん、ご注文についてお問い合わせしたいです。"
+  ));
+  document.getElementById('menuWaLink').href=buildWaUrl('');
+  document.getElementById('footerWaLink').href=buildWaUrl('');
+}
+updateWaLinks();
 
 function toggleMenu(){
   const overlay=document.getElementById('menuOverlay');
@@ -693,6 +709,7 @@ function setLang(lang){
     const k=el.getAttribute('data-i18n');
     if(t[k]!==undefined)el.innerHTML=t[k];
   });
+  updateWaLinks();
 }
 </script>
 </body>

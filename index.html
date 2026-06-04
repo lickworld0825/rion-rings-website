@@ -985,14 +985,26 @@ const WA_NUMBER = '819054621246';
 function buildWaUrl(text){
   return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 }
+function getLang(){return document.documentElement.lang||'en';}
+function makeMsg(en,ar,ja){
+  const l=getLang();
+  if(l==='ja')return ja;
+  return(l==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+}
 
-// Collection piece CTAs → pre-filled enquiry
-document.querySelectorAll('.piece-wa').forEach(btn => {
-  const piece = btn.dataset.piece;
-  const from = btn.dataset.from;
-  const msg = `Hello Rion, I'm interested in ${piece} (from AED ${from}).\n\nPlease tell me more and send the next steps to proceed. Thank you.`;
-  btn.setAttribute('href', buildWaUrl(msg));
-});
+function updatePieceWaLinks(){
+  document.querySelectorAll('.piece-wa').forEach(btn=>{
+    const piece=btn.dataset.piece;
+    const from=btn.dataset.from;
+    const msg=makeMsg(
+      `Hello Rion, I'm interested in ${piece} (from AED ${from}).\n\nPlease tell me more and send the next steps to proceed. Thank you.`,
+      `مرحباً Rion، أنا مهتم بـ ${piece} (من AED ${from}).\n\nيرجى إخباري بالمزيد وإرسال الخطوات التالية للمضي قدماً. شكراً.`,
+      `Rionさん、${piece}（AED ${from}〜）に興味があります。\n\n詳細と次のステップをお送りください。ありがとうございます。`
+    );
+    btn.setAttribute('href',buildWaUrl(msg));
+  });
+}
+updatePieceWaLinks();
 
 // FAQ accordion
 function toggleFaq(btn){
@@ -1311,6 +1323,7 @@ function setLang(lang){
     const k=el.getAttribute('data-i18n');
     if(t[k]!==undefined)el.innerHTML=t[k];
   });
+  updatePieceWaLinks();
 }
 </script>
 

@@ -753,8 +753,20 @@ function renderProduct(code, lang){
   }
 
   // CTAs
-  const orderMsg = `Hello Rion, I'd like to order: ${code} (${matName}) — AED ${p.price.toLocaleString()}.\n\nPlease send me the invoice and details to proceed. Thank you.`;
-  const enquireMsg = `Hello Rion, I'd like to ask a question about ${code} (${matName}).`;
+  function mkMsg(en,ar,ja){
+    if(lang==='ja')return ja;
+    return(lang==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+  }
+  const orderMsg=mkMsg(
+    `Hello Rion, I'd like to order: ${code} (${matName}) — AED ${p.price.toLocaleString()}.\n\nPlease send me the invoice and details to proceed. Thank you.`,
+    `مرحباً Rion، أود طلب: ${code} (${matName}) — AED ${p.price.toLocaleString()}.\n\nيرجى إرسال الفاتورة والتفاصيل للمضي قدماً. شكراً.`,
+    `Rionさん、${code}（${matName}）— AED ${p.price.toLocaleString()}を注文したいです。\n\n請求書と詳細をお送りください。ありがとうございます。`
+  );
+  const enquireMsg=mkMsg(
+    `Hello Rion, I'd like to ask a question about ${code} (${matName}).`,
+    `مرحباً Rion، أود طرح سؤال حول ${code} (${matName}).`,
+    `Rionさん、${code}（${matName}）についてお聞きしたいことがあります。`
+  );
   document.getElementById('btnOrder').href = buildWaUrl(orderMsg);
   document.getElementById('btnEnquire').href = buildWaUrl(enquireMsg);
 
@@ -764,6 +776,7 @@ function renderProduct(code, lang){
   document.getElementById('stickyMat').textContent = matName;
   document.getElementById('stickyPrice').textContent = 'AED ' + p.price.toLocaleString();
   document.getElementById('stickyWa').href = buildWaUrl(orderMsg);
+
 
   // Customization cards — necklace vs ring
   const isNecklace = series.type === 'necklace';

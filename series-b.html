@@ -549,9 +549,20 @@ const MATERIALS={
 };
 let cur='pg';
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
+function getLang(){return document.documentElement.lang||'en';}
+function makeMsg(en,ar,ja){
+  const l=getLang();
+  if(l==='ja')return ja;
+  return(l==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+}
 function updateWa(){
   const m=MATERIALS[cur];
-  const msg='Hello Rion, I\'d like to enquire about '+m.code+' — '+SERIES_NAME_FULL+' in '+m.label+'. Could you guide me?';
+  const sn=SERIES_NAME_FULL;
+  const msg=makeMsg(
+    `Hello Rion, I'd like to enquire about ${m.code} — ${sn} in ${m.label}. Could you guide me through the ordering process?`,
+    `مرحباً Rion، أود الاستفسار عن ${m.code} — ${sn} (${m.label}). هل يمكنك إرشادي خلال عملية الطلب؟`,
+    `Rionさん、${m.code} — ${sn}（${m.label}）についてお問い合わせしたいです。ご注文の流れをご案内いただけますか？`
+  );
   document.getElementById('heroWa').href=buildWa(msg);
   document.getElementById('enquireWa').href=buildWa(msg);
   document.getElementById('menuWa').href=buildWa('');
@@ -723,6 +734,7 @@ function setLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.innerHTML=t[k];
   });
+  updateWa();
 }
 </script>
 </body>

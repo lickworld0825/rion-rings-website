@@ -509,10 +509,22 @@ const WA_NUMBER = '819054621246';
 function buildWaUrl(msg){
   return 'https://wa.me/' + WA_NUMBER + (msg ? '?text=' + encodeURIComponent(msg) : '');
 }
-const waMsg = "Hello Rion, I'd like to enquire about placing an order. Could you guide me through the process?";
-document.getElementById('ctaWaLink').href = buildWaUrl(waMsg);
-document.getElementById('menuWaLink').href = buildWaUrl('');
-document.getElementById('footerWaLink').href = buildWaUrl('');
+function getLang(){return document.documentElement.lang||'en';}
+function makeMsg(en,ar,ja){
+  const l=getLang();
+  if(l==='ja')return ja;
+  return(l==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+}
+function updateWaLinks(){
+  document.getElementById('ctaWaLink').href=buildWaUrl(makeMsg(
+    "Hello Rion, I'd like to enquire about placing an order. Could you guide me through the process?",
+    "مرحباً Rion، أود الاستفسار عن تقديم طلب. هل يمكنك إرشادي خلال العملية؟",
+    "Rionさん、ご注文についてお問い合わせしたいです。ご注文の流れをご案内いただけますか？"
+  ));
+  document.getElementById('menuWaLink').href=buildWaUrl('');
+  document.getElementById('footerWaLink').href=buildWaUrl('');
+}
+updateWaLinks();
 
 function toggleMenu(){
   const overlay=document.getElementById('menuOverlay');
@@ -639,6 +651,7 @@ function setLang(lang){
     const k=el.getAttribute('data-i18n');
     if(t[k]!==undefined)el.innerHTML=t[k];
   });
+  updateWaLinks();
 }
 </script>
 </body>
