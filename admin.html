@@ -324,6 +324,7 @@ canvas.chart{display:block;width:100%;height:200px}
     <div class="login-eyebrow">Admin · 管理画面</div>
     <div id="step1">
       <form class="login-form" onsubmit="loginStep1(event)">
+        <input type="text" id="idInput" placeholder="User ID / ユーザーID" autocomplete="username" required>
         <input type="password" id="pwInput" placeholder="Password / パスワード" autocomplete="current-password" required>
         <button type="submit">Sign In · ログイン</button>
         <div class="login-error" id="loginError"></div>
@@ -774,6 +775,15 @@ async function getStoredPwHash(){
   return h;
 }
 async function checkPw(input){ return (await hashPw(input)) === (await getStoredPwHash()); }
+async function getStoredIdHash(){
+  let h = localStorage.getItem('rion_admin_id_hash');
+  if(!h){
+    h = await hashPw('lickworld0825');
+    localStorage.setItem('rion_admin_id_hash', h);
+  }
+  return h;
+}
+async function checkId(input){ return (await hashPw(input)) === (await getStoredIdHash()); }
 
 // ----- Brute Force -----
 const MAX_ATTEMPTS=5, LOCKOUT_MS=15*60*1000;
@@ -799,10 +809,11 @@ async function loginStep1(e){
     document.getElementById('loginError').textContent=`アカウントがロックされています。約${lockMins}分後にお試しください。`;
     return;
   }
-  const input=document.getElementById('pwInput').value;
-  if(await checkPw(input)){
+  const idVal=document.getElementById('idInput').value;
+  const pwVal=document.getElementById('pwInput').value;
+  if((await checkId(idVal)) && (await checkPw(pwVal))){
     resetAttempts();
-    secLog('login_pw_ok','パスワード認証成功');
+    secLog('login_pw_ok','ID・パスワード認証成功');
     const secret=localStorage.getItem('rion_2fa_secret');
     if(secret){
       document.getElementById('step1').style.display='none';
@@ -812,11 +823,11 @@ async function loginStep1(e){
   } else {
     const s=recordFailedAttempt();
     const remaining=MAX_ATTEMPTS-s.count;
-    secLog('login_fail',`パスワード失敗 (${s.count}/${MAX_ATTEMPTS}回)`);
+    secLog('login_fail',`ID/パスワード失敗 (${s.count}/${MAX_ATTEMPTS}回)`);
     if(s.lockUntil>Date.now()){
       document.getElementById('loginError').textContent=`${MAX_ATTEMPTS}回失敗のためロックされました。15分後にお試しください。`;
     } else {
-      document.getElementById('loginError').textContent=`パスワードが違います。残り${remaining}回でロックされます。`;
+      document.getElementById('loginError').textContent=`IDまたはパスワードが違います。残り${remaining}回でロックされます。`;
     }
     document.getElementById('pwInput').value='';
   }
