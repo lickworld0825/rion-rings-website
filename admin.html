@@ -197,78 +197,91 @@ table.orders tr:last-child td{border-bottom:none}
 .history-content strong{color:var(--gold-dark);font-weight:500;display:block;margin-bottom:2px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em}
 
 /* RESPONSIVE */
-body{overflow-x:hidden}
+html,body{overflow-x:hidden;max-width:100%}
 @media(max-width:768px){
   /* Header */
-  .admin-header{padding:0.75rem 1rem;gap:0.5rem}
-  .admin-logo-sub{display:none}
-  .header-clock{font-size:0.65rem;letter-spacing:0.03em}
-  .btn-logout{padding:5px 10px;font-size:0.6rem}
+  .admin-header{padding:0.7rem 1rem}
+  .admin-logo-sub,.header-clock{display:none}
+  .btn-logout{padding:5px 10px;font-size:0.6rem;letter-spacing:0.1em}
   /* Tabs */
-  .tabs{overflow-x:auto;padding:0 0.75rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs{overflow-x:auto;padding:0 0.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
-  .tab{padding:0.85rem 0.9rem;font-size:0.65rem;letter-spacing:0.1em;white-space:nowrap}
+  .tab{padding:0.85rem 0.85rem;font-size:0.62rem;letter-spacing:0.09em;white-space:nowrap;flex-shrink:0}
+  /* Tab content */
   .tab-content{padding:1rem}
-  /* Dashboard */
+  /* Stats */
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat-value{font-size:1.8rem}
-  .recent-item{grid-template-columns:1fr;gap:0.35rem}
-  .recent-date,.recent-product{font-size:0.72rem}
-  /* Orders table — hide less critical columns on small screens */
-  table.orders th:nth-child(6),table.orders td:nth-child(6),
-  table.orders th:nth-child(7),table.orders td:nth-child(7),
-  table.orders th:nth-child(9),table.orders td:nth-child(9){display:none}
+  .stat-card{padding:1rem}
+  /* Recent items: ID + pill on top row, name+meta on second */
+  .recent-item{display:flex;flex-wrap:wrap;gap:0.3rem 0.75rem;padding:0.75rem 1rem;align-items:center}
+  .recent-id{min-width:0;font-size:0.85rem;flex:1}
+  .recent-item .pill{flex-shrink:0}
+  .recent-item>div{width:100%;order:2}
+  .recent-product,.order-price{order:3}
   /* Toolbar */
   .toolbar{flex-direction:column;align-items:stretch;gap:0.5rem}
   .toolbar-left{flex-direction:column;gap:0.5rem}
-  .search-input,.filter-select{width:100%}
-  /* Pipeline — horizontal scroll is intentional */
+  .search-input,.filter-select{width:100%;box-sizing:border-box}
+  /* Table — hide less critical columns, allow cell wrapping */
+  table.orders th:nth-child(6),table.orders td:nth-child(6),
+  table.orders th:nth-child(7),table.orders td:nth-child(7),
+  table.orders th:nth-child(9),table.orders td:nth-child(9){display:none}
+  table.orders td{word-break:break-word;overflow-wrap:break-word}
+  .order-id,.order-price{white-space:normal}
+  /* Pipeline — intentional horizontal scroll */
   .pipeline{grid-template-columns:repeat(8,250px)}
-  /* Modal */
-  .modal{padding:0.5rem;align-items:flex-start}
-  .modal-card{margin-top:0.25rem;width:100%}
+  /* Modal — full screen on mobile */
+  .modal{padding:0;align-items:flex-start}
+  .modal-card{margin:0;width:100%;min-height:100dvh;border-radius:0}
   .modal-head{padding:1rem 1.25rem}
-  .modal-body{padding:1rem}
+  .modal-body{padding:1rem;overflow-x:hidden}
   .modal-foot{padding:0.75rem 1rem;flex-wrap:wrap;gap:0.5rem}
   /* Quick actions */
   .quick-actions{grid-template-columns:1fr;gap:0.6rem}
   .quick-actions-buttons{flex-wrap:wrap;gap:0.4rem}
-  .btn-wa-quick,.template-btn{font-size:0.62rem;padding:7px 10px}
-  .template-dropdown{min-width:220px;right:0;left:auto}
+  .btn-wa-quick,.template-btn{font-size:0.62rem;padding:6px 10px;letter-spacing:0.1em}
+  .template-dropdown{min-width:min(240px,80vw);left:0;right:auto;max-width:calc(100vw - 2rem)}
   /* Form rows */
   .form-row{grid-template-columns:1fr}
-  /* Settings panels */
-  .table-wrap[style*="padding:2rem"]{padding:1.25rem!important}
+  /* Settings panels — override inline padding */
+  #tab-settings .table-wrap{padding:1.1rem!important}
+  /* Long strings in settings (TOTP key, API key) */
+  code{word-break:break-all;font-size:0.8rem;letter-spacing:0.06em;display:inline-block;max-width:100%}
   /* Reports */
   .reports-grid{grid-template-columns:1fr}
   /* Security log */
-  .sec-log-item{grid-template-columns:120px 1fr;gap:0.4rem}
+  .sec-log-item{grid-template-columns:1fr;gap:0.1rem;padding:0.5rem 0}
+  .sec-log-item span:first-child{font-size:0.65rem;color:var(--ink-muted)}
   /* Backup banner */
   .backup-banner{flex-direction:column}
+  .backup-banner-text{min-width:0}
   .backup-banner-actions{flex-wrap:wrap}
   /* History */
-  .history-item{grid-template-columns:100px 1fr}
+  .history-item{grid-template-columns:90px 1fr;gap:0.5rem}
   /* Sync row */
   .sync-row{flex-direction:column}
   /* Reminder */
-  .reminder-card{flex-direction:column;align-items:flex-start;gap:0.4rem}
+  .reminder-card{flex-direction:column;align-items:flex-start;gap:0.35rem}
   .reminder-dismiss{align-self:flex-end}
+  /* Section h2 */
+  .section-h2{font-size:1.2rem;flex-wrap:wrap;row-gap:0.25rem}
+  /* ETA bar */
+  #etaBar{font-size:0.78rem}
+  /* Section h2 sub label */
+  .section-h2 .sub{font-size:0.65rem}
 }
 @media(max-width:480px){
-  .login-card{padding:2rem 1.25rem;width:92%}
+  .login-card{padding:1.75rem 1.25rem;width:92%}
   .login-logo{font-size:1.8rem}
   .admin-header{padding:0.6rem 0.75rem}
-  .header-right{gap:0.5rem}
-  .tab{padding:0.75rem 0.65rem;font-size:0.6rem}
+  .header-right{gap:0.4rem}
+  .tab{padding:0.75rem 0.6rem;font-size:0.58rem;letter-spacing:0.07em}
   .tab-count{display:none}
   .tab-content{padding:0.75rem}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .stat-card{padding:1rem}
-  .modal{padding:0}
-  .modal-card{margin:0;min-height:100dvh;border-radius:0}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:0.6rem}
   .form-group input,.form-group select,.form-group textarea{font-size:0.9rem}
-  .section-h2{font-size:1.2rem}
-  .pipeline-h{font-size:0.58rem}
+  .section-h2 .sub{display:none}
 }
 
 /* SECURITY */
