@@ -209,11 +209,12 @@ body{overflow-x:hidden;overscroll-behavior-x:none;position:relative;width:100%}
   .tabs::-webkit-scrollbar{display:none}
   .tab{padding:0.85rem 0.85rem;font-size:0.62rem;letter-spacing:0.09em;white-space:nowrap;flex-shrink:0}
   /* Tab content */
-  .tab-content{padding:1rem}
+  .tab-content{padding:1rem;overflow-x:hidden}
   /* Stats */
   .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-card{padding:1rem;min-width:0}
+  .stats-grid>.stat-card:nth-child(odd):last-child{grid-column:span 2}
   .stat-value{font-size:1.8rem}
-  .stat-card{padding:1rem}
   /* Recent items: ID + pill on top row, name+meta on second */
   .recent-item{display:flex;flex-wrap:wrap;gap:0.3rem 0.75rem;padding:0.75rem 1rem;align-items:center}
   .recent-id{min-width:0;font-size:0.85rem;flex:1}
@@ -279,8 +280,9 @@ body{overflow-x:hidden;overscroll-behavior-x:none;position:relative;width:100%}
   .header-right{gap:0.4rem}
   .tab{padding:0.75rem 0.6rem;font-size:0.58rem;letter-spacing:0.07em}
   .tab-count{display:none}
-  .tab-content{padding:0.75rem}
+  .tab-content{padding:0.75rem;overflow-x:hidden}
   .stats-grid{grid-template-columns:1fr 1fr;gap:0.6rem}
+  .stat-card{min-width:0}
   .form-group input,.form-group select,.form-group textarea{font-size:0.9rem}
   .section-h2 .sub{display:none}
 }
