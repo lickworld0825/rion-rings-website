@@ -755,7 +755,8 @@ function renderProduct(code, lang){
   // CTAs
   function mkMsg(en,ar,ja){
     if(lang==='ja')return ja;
-    return(lang==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+    if(lang==='ar')return ar;
+    return en;
   }
   const orderMsg=mkMsg(
     `Hello Rion, I'd like to order: ${code} (${matName}) — AED ${p.price.toLocaleString()}.\n\nPlease send me the invoice and details to proceed. Thank you.`,

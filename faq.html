@@ -542,7 +542,8 @@ function getLang(){return document.documentElement.lang||'en';}
 function makeMsg(en,ar,ja){
   const l=getLang();
   if(l==='ja')return ja;
-  return(l==='ar'?ar:en)+'\n\n---\n（日本語訳）\n'+ja;
+  if(l==='ar')return ar;
+  return en;
 }
 function updateWaLinks(){
   document.getElementById('helpWaLink').href=buildWaUrl(makeMsg(
