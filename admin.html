@@ -230,11 +230,24 @@ canvas.chart{display:block;width:100%;height:200px}
   <div class="login-card">
     <div class="login-logo">Rion</div>
     <div class="login-eyebrow">Admin · 管理画面</div>
-    <form class="login-form" onsubmit="login(event)">
-      <input type="password" id="pwInput" placeholder="Password / パスワード" autocomplete="current-password" required>
-      <button type="submit">Sign In · ログイン</button>
-      <div class="login-error" id="loginError"></div>
-    </form>
+    <div id="step1">
+      <form class="login-form" onsubmit="loginStep1(event)">
+        <input type="password" id="pwInput" placeholder="Password / パスワード" autocomplete="current-password" required>
+        <button type="submit">Sign In · ログイン</button>
+        <div class="login-error" id="loginError"></div>
+      </form>
+    </div>
+    <div id="step2" style="display:none">
+      <p style="font-size:0.78rem;color:var(--ink-soft);margin-bottom:1.25rem;line-height:1.8;text-align:center">Google Authenticator / Authy の<br>認証コードを入力してください</p>
+      <form class="login-form" onsubmit="loginStep2(event)">
+        <input type="text" id="totpInput" placeholder="000000" maxlength="6" autocomplete="one-time-code" inputmode="numeric" style="letter-spacing:0.3em;font-size:1.3rem;text-align:center">
+        <button type="submit">確認 · Verify</button>
+        <div class="login-error" id="totpError"></div>
+      </form>
+      <div style="text-align:center;margin-top:1rem">
+        <button type="button" onclick="backToStep1()" style="background:none;border:none;color:var(--ink-muted);font-size:0.68rem;cursor:pointer;letter-spacing:0.14em;text-transform:uppercase;font-family:'Jost',sans-serif">← 戻る</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -342,6 +355,16 @@ canvas.chart{display:block;width:100%;height:200px}
       </div>
       <button class="btn btn-primary" onclick="changePassword()">パスワードを更新</button>
       <div id="pwMsg" style="margin-top:0.75rem;font-size:0.8rem"></div>
+    </div>
+
+    <div class="table-wrap" style="margin-bottom:2rem;padding:2rem">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:0.75rem">2段階認証 (TOTP)</h3>
+      <p style="font-size:0.82rem;color:var(--ink-soft);margin-bottom:1.25rem;line-height:1.8">Google Authenticator または Authy を使ってログインを2段階にします。</p>
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;font-size:0.85rem">
+        <span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted)">ステータス</span>
+        <span id="twoFAStatus"></span>
+      </div>
+      <div id="twoFASetupArea"></div>
     </div>
 
     <div class="table-wrap" style="margin-bottom:2rem;padding:2rem">
@@ -638,18 +661,46 @@ function saveOrders(){
 function getStoredPw(){
   return localStorage.getItem('rion_admin_pw') || 'rion2018';
 }
-function login(e){
+function loginStep1(e){
   e.preventDefault();
   const input = document.getElementById('pwInput').value;
-  if(input === getStoredPw()){
-    sessionStorage.setItem('rion_admin_session', '1');
-    document.getElementById('loginScreen').style.display='none';
-    document.getElementById('app').classList.add('active');
-    init();
-  } else {
+  if(input !== getStoredPw()){
     document.getElementById('loginError').textContent='パスワードが違います';
     document.getElementById('pwInput').value='';
+    return;
   }
+  const secret = localStorage.getItem('rion_2fa_secret');
+  if(secret){
+    document.getElementById('step1').style.display='none';
+    document.getElementById('step2').style.display='block';
+    document.getElementById('totpInput').focus();
+  } else {
+    completeLogin();
+  }
+}
+async function loginStep2(e){
+  e.preventDefault();
+  const secret = localStorage.getItem('rion_2fa_secret');
+  const code = document.getElementById('totpInput').value.replace(/\s/g,'');
+  if(await verifyTOTP(secret, code)){
+    completeLogin();
+  } else {
+    document.getElementById('totpError').textContent='コードが正しくありません。もう一度お試しください。';
+    document.getElementById('totpInput').value='';
+    document.getElementById('totpInput').focus();
+  }
+}
+function backToStep1(){
+  document.getElementById('step2').style.display='none';
+  document.getElementById('step1').style.display='block';
+  document.getElementById('totpInput').value='';
+  document.getElementById('totpError').textContent='';
+}
+function completeLogin(){
+  sessionStorage.setItem('rion_admin_session','1');
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('app').classList.add('active');
+  init();
 }
 function logout(){
   sessionStorage.removeItem('rion_admin_session');
@@ -1112,6 +1163,7 @@ function init(){
   updateClock();
   setInterval(updateClock, 30000);
   loadSyncConfig();
+  render2FASettings();
 }
 
 // Auto-login if session exists
@@ -1119,6 +1171,130 @@ if(sessionStorage.getItem('rion_admin_session')){
   document.getElementById('loginScreen').style.display='none';
   document.getElementById('app').classList.add('active');
   init();
+}
+
+// ===== TOTP / 2FA =====
+function base32Decode(s){
+  const CHARS='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+  const clean=s.toUpperCase().replace(/=+$/,'').replace(/\s/g,'');
+  let bits=0,val=0;
+  const out=[];
+  for(const c of clean){
+    const idx=CHARS.indexOf(c);
+    if(idx<0) continue;
+    val=(val<<5)|idx; bits+=5;
+    if(bits>=8){ out.push((val>>>(bits-8))&0xff); bits-=8; }
+  }
+  return new Uint8Array(out);
+}
+async function getTOTP(secret, timeMs){
+  const key=base32Decode(secret);
+  const T=Math.floor((timeMs!==undefined?timeMs:Date.now())/30000);
+  const buf=new ArrayBuffer(8);
+  const v=new DataView(buf);
+  v.setUint32(0,Math.floor(T/0x100000000),false);
+  v.setUint32(4,T>>>0,false);
+  const ck=await crypto.subtle.importKey('raw',key.buffer,{name:'HMAC',hash:{name:'SHA-1'}},false,['sign']);
+  const sig=await crypto.subtle.sign('HMAC',ck,buf);
+  const h=new Uint8Array(sig);
+  const off=h[19]&0xf;
+  const code=(((h[off]&0x7f)<<24)|((h[off+1]&0xff)<<16)|((h[off+2]&0xff)<<8)|(h[off+3]&0xff))%1000000;
+  return code.toString().padStart(6,'0');
+}
+async function verifyTOTP(secret, input){
+  const code=input.replace(/\s/g,'');
+  if(!/^\d{6}$/.test(code)) return false;
+  const now=Date.now();
+  for(const d of [-1,0,1]){
+    if((await getTOTP(secret,now+d*30000))===code) return true;
+  }
+  return false;
+}
+function generateTOTPSecret(){
+  const CHARS='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+  const bytes=new Uint8Array(20);
+  crypto.getRandomValues(bytes);
+  let s='';
+  for(let i=0;i<bytes.length;i+=5){
+    const b=bytes.slice(i,i+5);
+    s+=CHARS[b[0]>>3];
+    s+=CHARS[((b[0]&7)<<2)|(b[1]>>6)];
+    s+=CHARS[(b[1]>>1)&31];
+    s+=CHARS[((b[1]&1)<<4)|(b[2]>>4)];
+    s+=CHARS[((b[2]&15)<<1)|(b[3]>>7)];
+    s+=CHARS[(b[3]>>2)&31];
+    s+=CHARS[((b[3]&3)<<3)|(b[4]>>5)];
+    s+=CHARS[b[4]&31];
+  }
+  return s;
+}
+
+function render2FASettings(){
+  const secret=localStorage.getItem('rion_2fa_secret');
+  const statusEl=document.getElementById('twoFAStatus');
+  const areaEl=document.getElementById('twoFASetupArea');
+  if(!statusEl) return;
+  if(secret){
+    statusEl.innerHTML='<span style="color:#3E7A5A;font-weight:500">✓ 有効</span>';
+    areaEl.innerHTML=`<button class="btn btn-danger" onclick="disable2FA()">2段階認証を無効にする</button>`;
+  } else {
+    statusEl.innerHTML='<span style="color:var(--ink-muted)">無効（未設定）</span>';
+    areaEl.innerHTML=`<button class="btn btn-primary" onclick="setup2FA()">設定を開始する</button>`;
+  }
+}
+function setup2FA(){
+  const secret=generateTOTPSecret();
+  const formatted=secret.match(/.{1,4}/g).join(' ');
+  const uri=`otpauth://totp/Rion%20Admin?secret=${secret}&issuer=Rion%20Admin`;
+  localStorage.setItem('rion_2fa_pending',secret);
+  document.getElementById('twoFASetupArea').innerHTML=`
+    <div style="background:#F5F1E8;border:0.5px solid var(--border);padding:1.25rem;margin-bottom:1rem">
+      <p style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.75rem">ステップ 1 — アプリに追加</p>
+      <p style="font-size:0.82rem;color:var(--ink-soft);margin-bottom:1rem;line-height:1.8">Google Authenticator または Authy を開き、<strong>「セットアップキーを入力」</strong>を選択して以下を入力してください。</p>
+      <div style="margin-bottom:0.75rem;font-size:0.78rem;color:var(--ink-muted)">アカウント名: <strong style="color:var(--ink)">Rion Admin</strong> &nbsp; 種類: <strong style="color:var(--ink)">時間ベース</strong></div>
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem">
+        <code style="background:#fff;border:0.5px solid var(--border);padding:0.5rem 1rem;font-size:1rem;letter-spacing:0.18em;color:var(--gold-dark);font-family:monospace">${formatted}</code>
+        <button class="btn btn-secondary" style="padding:6px 14px" onclick="navigator.clipboard.writeText('${secret}').then(()=>showToast('✓ コピーしました'))">コピー</button>
+      </div>
+      <p style="font-size:0.78rem;color:var(--ink-muted)">スマートフォンの場合は <a href="${uri}" style="color:var(--gold-dark)">このリンクをタップ</a> するとアプリに直接追加できます。</p>
+    </div>
+    <div style="background:#F5F1E8;border:0.5px solid var(--border);padding:1.25rem">
+      <p style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.75rem">ステップ 2 — 確認</p>
+      <p style="font-size:0.82rem;color:var(--ink-soft);margin-bottom:1rem">アプリに表示された6桁のコードを入力してください。</p>
+      <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap">
+        <input type="text" id="totpVerifyInput" placeholder="000000" maxlength="6" inputmode="numeric" style="padding:0.7rem 1rem;border:0.5px solid var(--ink-muted);font-size:1.1rem;letter-spacing:0.2em;width:140px;text-align:center;font-family:'Jost',sans-serif">
+        <button class="btn btn-primary" onclick="confirm2FASetup()">設定完了</button>
+        <button class="btn btn-secondary" onclick="cancel2FASetup()">キャンセル</button>
+      </div>
+      <div id="totpVerifyMsg" style="margin-top:0.75rem;font-size:0.8rem"></div>
+    </div>`;
+}
+async function confirm2FASetup(){
+  const secret=localStorage.getItem('rion_2fa_pending');
+  const code=document.getElementById('totpVerifyInput').value;
+  const msg=document.getElementById('totpVerifyMsg');
+  if(!secret){ msg.style.color='var(--red)'; msg.textContent='エラー: セットアップを最初からやり直してください'; return; }
+  if(await verifyTOTP(secret,code)){
+    localStorage.setItem('rion_2fa_secret',secret);
+    localStorage.removeItem('rion_2fa_pending');
+    render2FASettings();
+    showToast('✓ 2段階認証を有効にしました');
+  } else {
+    msg.style.color='var(--red)'; msg.textContent='コードが正しくありません。もう一度お試しください。';
+    document.getElementById('totpVerifyInput').value='';
+    document.getElementById('totpVerifyInput').focus();
+  }
+}
+function cancel2FASetup(){
+  localStorage.removeItem('rion_2fa_pending');
+  render2FASettings();
+}
+function disable2FA(){
+  if(!confirm('2段階認証を無効にしますか？')) return;
+  localStorage.removeItem('rion_2fa_secret');
+  localStorage.removeItem('rion_2fa_pending');
+  render2FASettings();
+  showToast('2段階認証を無効にしました');
 }
 
 // ===== ETA =====
