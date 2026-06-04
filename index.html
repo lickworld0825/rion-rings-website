@@ -810,7 +810,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
           <p style="font-size:0.78rem;line-height:1.7;color:rgba(250,247,242,0.5)" data-i18n="feat4_b">Available at an additional travel fee. Contact us via WhatsApp to discuss dates and arrangements.</p>
         </div>
       </div>
-      <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:#128C7E;padding:1rem 2rem;text-decoration:none">💬 &nbsp;<span data-i18n="con_cta2">Enquire About VIP Service</span></a>
+      <a href="https://wa.me/819054621246" id="vipWaLink" class="btn-wa" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:#128C7E;padding:1rem 2rem;text-decoration:none">💬 &nbsp;<span data-i18n="con_cta2">Enquire About VIP Service</span></a>
     </div>
     <div style="position:relative">
       <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Dubai skyline" style="width:100%;display:block;object-fit:cover;max-height:560px;filter:brightness(0.7)" loading="lazy">
@@ -1003,6 +1003,12 @@ function updatePieceWaLinks(){
     );
     btn.setAttribute('href',buildWaUrl(msg));
   });
+  const vipEl=document.getElementById('vipWaLink');
+  if(vipEl) vipEl.href=buildWaUrl(makeMsg(
+    "Hello Rion, I'd like to enquire about the VIP personal delivery service. Could you tell me more?",
+    "مرحباً Rion، أود الاستفسار عن خدمة التسليم الشخصي VIP. هل يمكنك إخباري بالمزيد؟",
+    "Rionさん、VIP直接手渡しサービスについてお問い合わせしたいです。詳しく教えていただけますか？"
+  ));
 }
 updatePieceWaLinks();
 
