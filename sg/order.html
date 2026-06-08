@@ -31,8 +31,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
@@ -216,7 +214,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="#cta" class="nav-cta" data-i18n="nav_cta">Order Now</a>
@@ -231,7 +229,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
   <div class="menu-inner">
     <div>
-      <span class="menu-eyebrow">Navigation · القائمة · メニュー</span>
+      <span class="menu-eyebrow">Navigation · Menu · メニュー</span>
       <nav class="menu-links">
         <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="m_home">Home</span></a>
         <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="m_collection">Collection</span></a>
@@ -247,7 +245,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" id="menuWaLink" target="_blank">💬 <span data-i18n="menu_wa">Message Us on WhatsApp</span></a>
@@ -510,16 +508,16 @@ function buildWaUrl(msg){
   return 'https://wa.me/' + WA_NUMBER + (msg ? '?text=' + encodeURIComponent(msg) : '');
 }
 function getLang(){return document.documentElement.lang||'en';}
-function makeMsg(en,ar,ja){
+function makeMsg(en,ms,ja){
   const l=getLang();
   if(l==='ja')return ja;
-  if(l==='ar')return ar;
+  if(l==='ms')return ms;
   return en;
 }
 function updateWaLinks(){
   document.getElementById('ctaWaLink').href=buildWaUrl(makeMsg(
     "Hello Rion, I'd like to enquire about placing an order. Could you guide me through the process?",
-    "مرحباً Rion، أود الاستفسار عن تقديم طلب. هل يمكنك إرشادي خلال العملية؟",
+    "Hello Rion, saya ingin bertanya tentang membuat pesanan. Bolehkah anda membimbing saya melalui prosesnya?",
     "Rionさん、ご注文についてお問い合わせしたいです。ご注文の流れをご案内いただけますか？"
   ));
   document.getElementById('menuWaLink').href=buildWaUrl('');
@@ -580,35 +578,7 @@ const T={
     cta_h:"Ready to begin<br>your <em>journey?</em>",cta_p:"Send us a message via WhatsApp, Instagram DM, or <a href='mailto:info@art-rings.com'>email</a>. No commitment required — just a conversation about what you have in mind.",cta_wa:"Start on WhatsApp",cta_coll:"Browse the Collection",
     ft_brand:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.",ft_explore:"Explore",ft_home:"Home",ft_coll:"Collection",ft_about:"About Rion",ft_order:"How to Order",ft_help:"Help",ft_care:"Care Guide",ft_ship:"Shipping & Returns",ft_contact:"Contact",ft_connect:"Connect",ft_enquiry:"Send Enquiry"
   },
-  ar:{
-    nav_cta:"اطلب الآن",m_home:"الرئيسية",m_collection:"المجموعة",m_order:"طريقة الطلب",m_contact:"اتصل بنا",menu_wa:"راسلنا عبر واتساب",
-    eyebrow:"كيفية الطلب",
-    h1:"ستة خطوات بسيطة<br>إلى جوهرتك<br><em>الأبدية.</em>",
-    lead:"كل قطعة من Rion مصنوعة بالكامل وفق طلبك. فريقنا يرشدك من أول استفسار حتى التسليم على باب منزلك — بدون أي تكاليف إضافية. جميع الأسعار DDP: ضريبة السلع والخدمات السنغافورية (GST) مضمّنة.",
-    trust1:"شحن DDP مجاني لسنغافورة",trust2:"دعم واتساب",trust3:"تحديثات بالصور",
-    steps_h:"الرحلة — <em>خطوة بخطوة</em>",
-    steps_p:"من اختيار تصميمك إلى استلام جوهرتك في سنغافورة، كل خطوة يرشدها فريقنا. يتطلب الأمر شجاعة للبدء — نحن نجعله سهلاً.",
-    s1_ey:"الخطوة الأولى",s1_t:"تصفّح <em>المجموعة</em>",s1_b:"استكشفي سلاسلنا — من الخاتم الكلاسيكي (السلسلة A) إلى خاتم التميّز (السلسلة J) — واختاري التصميم الذي يتحدث إلى قلبك. كل سلسلة متوفرة بذهب K18 أصفر وأبيض وزهري وبلاتين Pt900. إذا لم يناسبك أي منها، يتيح خيارنا المخصص بالكامل أي تصميم تتخيلينه.",s1_cta:"عرض المجموعة ←",
-    s2_ey:"الخطوة الثانية",s2_t:"استفسري عبر <em>واتساب / DM / بريد</em>",s2_b:"أرسلي لنا رسالة عبر واتساب أو Instagram DM أو البريد الإلكتروني مع السلسلة والمادة التي تهتمين بها. يسعدنا الإجابة على أي سؤال — حول التصميم أو العملية أو المقاس أو النقش أو أي شيء آخر. يرد فريقنا خلال 24 ساعة، بالعربية أو الإنجليزية أو اليابانية.",s2_note:"لا التزام مطلوب — مجرد محادثة",
-    s3_ey:"الخطوة الثالثة",s3_t:"تأكيد تصميمك <em>والدفع</em>",s3_b:"عندما تكونين مستعدة، نؤكد جميع التفاصيل معاً: السلسلة والمادة ووجود الأحجار الكريمة من عدمه والنقش (النص إن رغبت) والسعر النهائي DDP. ثم نُصدر فاتورتك — قابلة للدفع بالتحويل المصرفي الدولي أو بطاقة الائتمان (فيزا · ماستركارد · أمريكان إكسبريس · دايرز كلوب · JCB — عبر رابط Stripe الآمن). يُشترط السداد الكامل قبل بدء الإنتاج.",s3_note:"السداد الكامل قبل الإنتاج · جميع الأسعار DDP",
-    s4_ey:"الخطوة الرابعة",s4_t:"استلام <em>طقم الشعر</em>",s4_b:"نرسل إليك طقم Rion لجمع الشعر بالبريد — مظروف معقّم مع تعليمات واضحة ومقياس مقاس الخاتم لتأكيد المقاس وملصق إعادة مدفوع مسبقاً. ما عليك سوى وضع بعض خصلات الشعر داخله (لا حاجة للقص — الشعر المتساقط طبيعياً مقبول) وتأكيد مقاسك باستخدام المقياس وإعادة إرساله إلى أتيليه في اليابان. تستغرق العملية بأكملها بضع دقائق فقط.",s4_note:"الطقم يُرسل من اليابان · مقياس الخاتم مضمّن · ملصق الإعادة مضمّن · أي شعر مقبول",
-    s5_ey:"الخطوة الخامسة",s5_t:"مصنوعة يدوياً <em>في اليابان</em>",s5_b:"عند استلام شعرك، يبدأ فريقنا في صنع قطعتك يدوياً في أتيليه الياباني. تستغرق كل جوهرة حوالي 5.5 أشهر للاكتمال. خلال هذه الفترة، نرسل لك تقرير صور يوثّق عملية إغلاق الشعر عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> — حتى تتابعي كل خطوة في صنع جوهرتك.",s5_note:"حوالي 5.5 أشهر · تحديثات بالصور عبر واتساب / Instagram DM / <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> · 100% صنع في اليابان",
-    s6_ey:"الخطوة السادسة",s6_t:"التسليم <em>إلى بابك</em>",s6_b:"بمجرد اجتياز جوهرتك للفحص النهائي، نشحنها إليك عبر DHL Express — مؤمّنة بالكامل مع تتبع. التسليم DDP: جميع ضريبة السلع والخدمات السنغافورية (GST) مدفوعة مسبقاً من Rion. مهمتك الوحيدة هي فتح الباب.",s6_note:"DHL Express · مؤمّن بالكامل · DDP — لا رسوم عند الاستلام",
-    inc_h:"كل شيء <em>مضمّن.</em>",inc_p:"كل طلب من Rion يتضمن ما يلي بشكل قياسي — بدون أي تكلفة إضافية.",
-    ic1_t:"طقم جمع الشعر",ic1_b:"مظروف معقّم مع تعليمات كاملة، يُرسل بالبريد إلى عنوانك. ملصق الإعادة مضمّن.",
-    ic2_t:"تقرير الصور",ic2_b:"صور شعرك وهو يُوضع ويُختم داخل جوهرتك — تُرسل عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> أثناء الإنتاج.",
-    ic3_t:"مقياس الخاتم",ic3_b:"مقياس للمقاس مضمّن في طقم الشعر — لتأكيد مقاس خاتمك بدقة قبل بدء الإنتاج.",
-    ic4_t:"تغليف هدية",ic4_b:"تصل جوهرتك في صندوق عرض Rion مع ورق أنسجة وشهادة أصالة موقّعة.",
-    ic5_t:"توصيل DDP",ic5_b:"DHL Express، مؤمّن بالكامل. جميع ضريبة السلع والخدمات السنغافورية (GST) مدفوعة مسبقاً — لا رسوم عند الاستلام أبداً.",
-    ic6_t:"تلميع مدى الحياة",ic6_b:"خدمة تلميع مجانية في اليابان، طالما تملكين قطعة Rion. أرسليها في أي وقت.",
-    tl_h:"جدول <em>5.5 أشهر</em><br>الزمني",tl_p:"صنع جوهرة تذكارية في اليابان يستغرق وقتاً. كل عنصر — من سبك المعدن إلى إغلاق الشعر — يُنجز يدوياً بواسطة حرفي واحد. نؤمن أن هذه العناية هي ما يصنع الفارق.",tl_p2:"نبقيك على اطلاع عند كل مرحلة رئيسية عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a>. لن تتساءلي أبداً عن مكان جوهرتك.",
-    tl_label:"جدول الإنتاج التقريبي",tl_b1:"الطلب والطقم",tl_b2:"إغلاق الشعر",tl_b3:"سبك المعدن",tl_b4:"التركيب والتشطيب",tl_b5:"الجودة والتسليم",tl_w1:"الأسابيع 1-3",tl_w2:"الأسبوع 4",tl_w3:"الشهران 2-3",tl_w4:"الشهران 4-5",tl_w5:"الشهر 5.5",
-    pay_h:"الدفع <em>والعملة</em>",pay_p:"نقبل مجموعة من طرق الدفع لتسهيل العملية قدر الإمكان لعملائنا في سنغافورة ومنطقة الخليج.",
-    pm1:"تحويل مصرفي دولي (SWIFT)",pm2:"بطاقة ائتمان (فيزا · ماستركارد · أمريكان إكسبريس · دايرز كلوب · JCB — عبر Stripe)",pm3:"دولار سنغافوري (SGD، أساس) · دولار أمريكي (USD) — السعر يُحدَّد وقت الطلب",
-    pay_sched_h:"جدول الدفع",pi1_l:"السداد الكامل — قبل بدء الإنتاج",pi1_s:"الفاتورة تُصدر بعد الموافقة على التصميم",pi3_l:"رسوم استيراد سنغافورة وضريبة القيمة المضافة",pi3_s:"مدفوعة مسبقاً من Rion — مضمّنة في جميع أسعار DDP",pi3_v:"مضمّن",
-    cta_h:"جاهزة للبدء<br>في <em>رحلتك؟</em>",cta_p:"أرسلي لنا رسالة على واتساب. لا التزام مطلوب — مجرد محادثة حول ما تفكرين فيه.",cta_wa:"ابدأي على واتساب",cta_coll:"تصفّح المجموعة",
-    ft_brand:"مجوهرات تذكارية مخصصة، مصنوعة يدوياً بالكامل في اليابان. شعرة واحدة. جوهرة واحدة. حب واحد — لك، للأبد.",ft_explore:"استكشف",ft_home:"الرئيسية",ft_coll:"المجموعة",ft_about:"عن Rion",ft_order:"كيفية الطلب",ft_help:"مساعدة",ft_care:"دليل العناية",ft_ship:"الشحن والإرجاع",ft_contact:"اتصل بنا",ft_connect:"تواصل",ft_enquiry:"أرسل استفساراً"
-  },
+  ms:{nav_cta:"Tempah Sekarang",m_home:"Laman Utama",m_collection:"Koleksi",m_order:"Cara Menempah",m_contact:"Hubungi",menu_wa:"Hantar Mesej kepada Kami di WhatsApp",eyebrow:"Cara Menempah",h1:"Enam langkah<br>mudah menuju<br><em>perhiasan abadi anda.</em>",lead:"Setiap perhiasan Rion dibuat sepenuhnya mengikut tempahan anda. Pasukan kami akan membimbing anda dari pertanyaan pertama hingga penghantaran ke pintu rumah — tanpa sebarang kos tambahan. Semua harga adalah DDP: GST import Singapura termasuk.",trust1:"DDP Percuma ke Singapura",trust2:"Sokongan WhatsApp",trust3:"Kemas kini foto",steps_h:"<em>Perjalanan</em> — langkah demi langkah",steps_p:"Dari memilih reka bentuk anda hingga menerima perhiasan anda di Singapura, setiap langkah dibimbing oleh pasukan kami. Memulakannya memerlukan keberanian — kami memudahkannya.",s1_ey:"Langkah Satu",s1_t:"Layari <em>Koleksi</em>",s1_b:"Terokai siri kami — dari Cincin Classic (Siri A) hingga Cincin Statement (Siri J) — dan pilih reka bentuk yang berbicara kepada hati anda. Setiap siri tersedia dalam Emas Kuning K18, Emas Putih, Emas Merah Jambu, dan Platinum Pt900. Jika tiada satu pun yang benar-benar sesuai, pilihan sepenuhnya tersuai kami membolehkan sebarang reka bentuk yang anda bayangkan.",s1_cta:"Lihat Koleksi →",s2_ey:"Langkah Dua",s2_t:"Bertanya melalui <em>WhatsApp / DM / <a href='mailto:info@art-rings.com'>E-mel</a></em>",s2_b:"Hantar mesej kepada kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> dengan siri dan bahan yang anda minati. Anda dialu-alukan untuk bertanya apa-apa sahaja — tentang reka bentuk, proses, saiz, ukiran, atau perkara lain. Pasukan kami akan membalas dalam masa 24 jam, dalam Bahasa Inggeris, Arab, atau Jepun.",s2_note:"Tiada komitmen diperlukan — sekadar perbualan",s3_ey:"Langkah Tiga",s3_t:"Sahkan <em>Reka Bentuk &amp; Bayar</em> Anda",s3_b:"Apabila anda sudah bersedia, kami akan mengesahkan semua butiran bersama-sama: siri, bahan, pilihan batu (dengan atau tanpa batu permata), ukiran (teks jika dikehendaki), dan harga DDP akhir. Kami kemudiannya akan mengeluarkan invois anda — boleh dibayar melalui pemindahan bank antarabangsa atau kad kredit (Visa · Mastercard · American Express · Diners Club · JCB — melalui pautan Stripe yang selamat). Pembayaran penuh diperlukan sebelum penghasilan bermula.",s3_note:"pembayaran penuh sebelum penghasilan · semua harga DDP",s4_ey:"Langkah Empat",s4_t:"Terima <em>Kit Rambut</em> Anda",s4_b:"Kami akan menghantar Kit Pengumpulan Rambut Rion kepada anda melalui pos — sebuah sampul steril dengan arahan yang jelas, tolok cincin untuk pengesahan saiz, dan label pemulangan prabayar. Anda hanya perlu meletakkan beberapa helai rambut di dalamnya (tiada pemotongan diperlukan — rambut yang gugur secara semula jadi adalah sesuai), sahkan saiz cincin anda menggunakan tolok tersebut, dan poskan kembali ke bengkel kami di Jepun. Keseluruhan proses ini hanya mengambil masa beberapa minit.",s4_note:"Kit dihantar dari Jepun · tolok cincin disertakan · label pemulangan disertakan · sebarang jenis rambut diterima",s5_ey:"Langkah Lima",s5_t:"Dibuat dengan Tangan <em>di Jepun</em>",s5_b:"Setelah menerima rambut anda, kakitangan kami akan mula membuat perhiasan anda dengan tangan di bengkel Jepun kami. Setiap perhiasan mengambil masa kira-kira 5.5 bulan untuk disiapkan. Sepanjang masa ini, kami akan menghantar laporan foto yang mendokumenkan proses pemeteraian rambut melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> — supaya anda dapat menyaksikan setiap langkah penciptaan perhiasan anda.",s5_note:"Kira-kira 5.5 bulan · kemas kini foto melalui WhatsApp / Instagram DM / e-mel · 100% Dibuat di Jepun",s6_ey:"Langkah Enam",s6_t:"Dihantar ke <em>Pintu Rumah Anda</em>",s6_b:"Setelah perhiasan anda lulus pemeriksaan kualiti akhir kami, kami akan menghantarnya kepada anda melalui DHL Express — berinsurans sepenuhnya, dengan penjejakan. Penghantaran adalah DDP: semua GST import Singapura dibayar terlebih dahulu oleh Rion. Tugas anda hanyalah membuka pintu. ",s6_note:"DHL Express · berinsurans sepenuhnya · DDP — tiada caj semasa ketibaan",inc_h:"Semuanya <em>termasuk.</em>",inc_p:"Setiap tempahan Rion merangkumi perkara berikut secara standard — tanpa sebarang kos tambahan.",ic1_t:"Kit Pengumpulan Rambut",ic1_b:"Sampul pengumpulan steril dengan arahan lengkap, dihantar melalui pos ke alamat anda. Label pemulangan disertakan.",ic2_t:"Laporan Foto",ic2_b:"Foto rambut anda diletakkan dan dimeteraikan di dalam perhiasan anda — dihantar melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> semasa penghasilan.",ic3_t:"Tolok Saiz Cincin",ic3_b:"Tolok saiz disertakan dalam kit rambut anda — supaya anda dapat mengesahkan saiz cincin tepat anda sebelum penghasilan bermula.",ic4_t:"Pembungkusan Hadiah",ic4_b:"Perhiasan anda akan tiba dalam kotak persembahan Rion berserta tisu dan sijil keaslian yang ditandatangani.",ic5_t:"Penghantaran DDP",ic5_b:"DHL Express, berinsurans sepenuhnya. Semua GST import Singapura dibayar terlebih dahulu — tiada caj semasa ketibaan, sama sekali.",ic6_t:"Penggilapan Seumur Hidup",ic6_b:"Perkhidmatan penggilapan percuma di Jepun, selagi anda memiliki perhiasan Rion anda. Hantar kembali pada bila-bila masa.",tl_h:"<em>Garis masa</em><br>5.5 bulan",tl_p:"Menghasilkan sebuah perhiasan peringatan dengan tangan di Jepun memerlukan masa. Setiap elemen — daripada menuang logam hingga memeteraikan rambut — dilakukan dengan tangan, oleh seorang tukang seni. Kami percaya ketelitian inilah yang membuat perbezaan.",tl_p2:"Kami akan mengemas kini anda pada setiap pencapaian penting melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>. Anda tidak akan tertanya-tanya di mana perhiasan anda berada.",tl_label:"Anggaran Jadual Penghasilan",tl_b1:"Tempahan & Kit",tl_b2:"Pemeteraian Rambut",tl_b3:"Tuangan Logam",tl_b4:"Tetapan & Kemasan",tl_b5:"Kawalan Kualiti & Penghantaran",tl_w1:"Minggu 1–3",tl_w2:"Minggu ke-4",tl_w3:"Bulan 2–3",tl_w4:"Bulan 4–5",tl_w5:"Bulan ke-5.5",pay_h:"Pembayaran &amp; <em>Mata Wang</em>",pay_p:"Kami menerima pelbagai kaedah pembayaran untuk memudahkan proses ini bagi pelanggan kami di seluruh Singapura dan rantau sekitarnya.",pm1:"Pemindahan Bank Antarabangsa (SWIFT)",pm2:"Kad Kredit (Visa · Mastercard · American Express · Diners Club · JCB — melalui Stripe)",pm3:"SGD (asas) · USD — kadar disahkan pada masa tempahan",pay_sched_h:"Jadual pembayaran",pi1_l:"Pembayaran penuh — sebelum penghasilan bermula",pi1_s:"Invois dikeluarkan selepas reka bentuk diluluskan",pi3_l:"GST Import Singapura",pi3_s:"Dibayar terlebih dahulu oleh Rion — termasuk dalam semua harga DDP",pi3_v:"Termasuk",cta_h:"Bersedia untuk memulakan<br><em>perjalanan</em> anda?",cta_p:"Hantar mesej kepada kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>. Tiada komitmen diperlukan — sekadar perbualan tentang apa yang anda fikirkan.",cta_wa:"Mula di WhatsApp",cta_coll:"Layari Koleksi",ft_brand:"Perhiasan peringatan tersuai, dibuat sepenuhnya dengan tangan di Jepun. Satu rambut. Satu perhiasan. Satu cinta — milik anda, selamanya.",ft_explore:"Terokai",ft_home:"Laman Utama",ft_coll:"Koleksi",ft_about:"Tentang Rion",ft_order:"Cara Menempah",ft_help:"Bantuan",ft_care:"Panduan Penjagaan",ft_ship:"Penghantaran & Pemulangan",ft_contact:"Hubungi",ft_connect:"Hubungkan",ft_enquiry:"Hantar Pertanyaan"},
   ja:{
     nav_cta:"ご注文",m_home:"ホーム",m_collection:"コレクション",m_order:"ご注文の流れ",m_contact:"お問い合わせ",menu_wa:"WhatsAppでメッセージ",
     eyebrow:"ご注文の流れ",
@@ -645,7 +615,7 @@ function setLang(lang){
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
   document.body.className='lang-'+lang;
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir='ltr';
   const t=T[lang];
   if(!t)return;
   document.querySelectorAll('[data-i18n]').forEach(el=>{

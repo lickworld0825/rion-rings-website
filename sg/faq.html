@@ -31,8 +31,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
@@ -94,7 +92,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 /* ACCORDION */
 .faq-item{border-bottom:0.5px solid var(--border)}
 .faq-q{width:100%;background:none;border:none;padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;cursor:pointer;text-align:left;font-family:'Jost',sans-serif;font-weight:300}
-body.lang-ar .faq-q{text-align:right}
 .faq-q-text{font-size:0.96rem;color:var(--ink);line-height:1.5;flex:1}
 .faq-q-ico{width:20px;height:20px;flex-shrink:0;position:relative;color:var(--gold)}
 .faq-q-ico::before,.faq-q-ico::after{content:'';position:absolute;background:currentColor;transition:transform .3s,opacity .3s}
@@ -169,7 +166,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta" id="navCtaLink" data-i18n="nav_cta">Order Now</a>
@@ -184,7 +181,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
   <div class="menu-inner">
     <div>
-      <span class="menu-eyebrow">Navigation · القائمة · メニュー</span>
+      <span class="menu-eyebrow">Navigation · Menu · メニュー</span>
       <nav class="menu-links">
         <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
         <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
@@ -199,7 +196,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" id="menuWaLink" target="_blank">💬 <span data-i18n="menu_wa">Message Us on WhatsApp</span></a>
@@ -539,21 +536,21 @@ function buildWaUrl(msg){
   return 'https://wa.me/' + WA_NUMBER + (msg ? '?text=' + encodeURIComponent(msg) : '');
 }
 function getLang(){return document.documentElement.lang||'en';}
-function makeMsg(en,ar,ja){
+function makeMsg(en,ms,ja){
   const l=getLang();
   if(l==='ja')return ja;
-  if(l==='ar')return ar;
+  if(l==='ms')return ms;
   return en;
 }
 function updateWaLinks(){
   document.getElementById('helpWaLink').href=buildWaUrl(makeMsg(
     "Hello Rion, I have a question I couldn't find in the FAQ:",
-    "مرحباً Rion، لدي سؤال لم أجده في الأسئلة الشائعة:",
+    "Hello Rion, saya ada soalan yang tidak dapat saya temui dalam Soalan Lazim:",
     "Rionさん、FAQで見つけられなかった質問があります："
   ));
   document.getElementById('navCtaLink').href=buildWaUrl(makeMsg(
     "Hello Rion, I'd like to enquire about placing an order.",
-    "مرحباً Rion، أود الاستفسار عن تقديم طلب.",
+    "Hello Rion, saya ingin bertanya tentang membuat pesanan.",
     "Rionさん、ご注文についてお問い合わせしたいです。"
   ));
   document.getElementById('menuWaLink').href=buildWaUrl('');
@@ -632,38 +629,7 @@ const T={
     q24:"How is my privacy protected?",a24:"All personal information is handled with complete discretion and is never shared with third parties. We understand the deeply personal nature of what we do.",a24_link:"Privacy Policy",
     help_h:"Still have a <em>question?</em>",help_p:"Our team is available on WhatsApp in English, Arabic, and Japanese. We typically respond within a few hours.",help_wa:"Message Us on WhatsApp",help_l1:"How to Order →",help_l2:"Shipping & Returns →",help_l3:"Care Guide →"
   },
-  ar:{
-    nav_cta:"اطلب الآن",menu_wa:"راسلنا عبر واتساب",
-    eyebrow:"الأسئلة الشائعة",h1:"أسئلتك،<br><em>مُجابة.</em>",
-    lead:"كل ما تحتاجين معرفته عن Rion — الشعر والعملية والجوهرة والتسليم. إذا لم تجدي سؤالك هنا، أرسلي لنا رسالة على واتساب.",
-    cat_all:"الكل",cat_hair:"الشعر والعملية",cat_jewel:"الجوهرة",cat_order:"الطلب",cat_ship:"الشحن والدفع",
-    sec_hair:"الشعر <em>والعملية</em>",sec_jewel:"<em>الجوهرة</em>",sec_order:"<em>الطلب</em>",sec_ship:"الشحن <em>والدفع</em>",
-    q1:"ما هي المجوهرات التذكارية بالضبط؟",a1:"المجوهرات التذكارية هي جوهرة تحتوي على شعر شخص عزيز عليك أو حيوانك الأليف. يُختم الشعر بإحكام داخل الخاتم أو الميدالية — غير مرئي من الخارج لكنه قريب منك دائماً.",
-    q2:"شعر من يمكن استخدامه؟",a2a:"شعر أي شخص — والد أو طفل أو زوج أو جد أو صديق مقرب. نقبل أيضاً شعر الحيوانات الأليفة (كلاب وقطط وغيرها).",a2b:"نقبل شعر من فارق الحياة، وكذلك شعر شخص حي — كثير من عملائنا يصنعون قطعاً لتكريم من لا يزالون في حياتهم، بينما يستطيعون ذلك.",a2note:"يمكن ختم شعر أشخاص متعددين معاً في قطعة واحدة — اسألينا عن هذا الخيار.",
-    q3:"كم كمية الشعر المطلوبة؟",a3:"القليل جداً — تكفي من 1 إلى 5 خصلات تقريباً. لا حاجة للقص؛ الشعر المتساقط طبيعياً (من مشط أو فرشاة) مقبول تماماً. حتى خصلة واحدة بطول 1 سم أو أقل كافية. تعليمات كاملة مضمّنة في طقم جمع الشعر.",
-    q4:"كيف يُختم الشعر داخل الجوهرة؟",a4a:"يُحفر ثقب صغير دقيق في الخاتم أو الميدالية. يُوضع الشعر بعناية بداخله يدوياً، ثم يُغلق الفتحة بغطاء من نفس المادة — ذهب 18K أو بلاتين Pt900. ثم يُختم الجوهرة هرمسياً بحيث تكون محكمة الغلق تماماً ومقاومة للماء. الشعر غير مرئي من الخارج؛ تبدو الجوهرة كجوهرة فاخرة تقليدية.",a4b:"نصوّر العملية قبل ختم الشعر وخلاله وبعده، ونرسل هذه الصور إليك عبر واتساب. يضمّ هذا التقرير الصوري كل طلب.",
-    q5:"هل سيتدهور الشعر مع مرور الوقت؟",a5:"لا. الختم المحكم دائم وكامل. الشعر من أكثر المواد البيولوجية متانة — لا يتحلل في غياب الرطوبة والأكسجين، وكلاهما مستبعد بالختم. صُممت قطع Rion للارتداء اليومي مدى الحياة وما بعدها.",
-    q6:"هل يمكنني تضمين شعر أكثر من شخص في جوهرة واحدة؟",a6:"نعم. يمكننا ختم شعر أكثر من شخص — أو شخص وحيوان أليف — داخل نفس الغرفة. هذا متاح في جميع السلاسل القياسية وخيار شائع لمن يرغبن في حمل أكثر من شخص عزيز قريباً.",a6note:"يرجى إعلامنا عند الاستفسار حتى نتحضّر وفق ذلك.",
-    q7:"ماذا لو لم أستطع جمع الشعر بنفسي؟",a7:"إذا كنت تجمعين شعر شخص فقدتيه، يمكن لدار تشييع الجنازات أو دار الرعاية أو أحد أفراد العائلة المساعدة. الشعر المحفوظ — من قص الشعر أو فرشاة أو ما شابه — مقبول تماماً. تواصلي معنا وسنساعدك شخصياً في أفضل نهج.",
-    q8:"ما المواد التي تُصنع منها الجواهر؟",a8:"جميع جواهر Rion مصنوعة من ذهب K18 (أصفر أو أبيض أو زهري) أو بلاتين Pt900 — كلاهما بأعلى جودة، مصدره ومصنوع بالكامل في اليابان. لسلسلتي C (خاتم حجر الميلاد) و D (خاتم نصف الأبدية)، تضمّ ألماساً طبيعياً أو أحجاراً كريمة حسب المحدد.",
-    q9:"هل يمكنني إضافة نقش لجوهرتي؟",a9:"نعم. النقش الداخلي متاح لجميع تصاميم الخواتم — أحرف إنجليزية فقط. اسم أو تاريخ أو عبارة قصيرة أو أي مزيج. النقش على الجزء الداخلي من الحلقة ويظهر فقط عند خلعها. المسافات لا تُحسب ضمن عدد الأحرف.",a9note:"١–١٠ أحرف: ٢٣٠ درهم · من الحرف الحادي عشر: + ٢٣ درهم/حرف · يرجى التحديد عند تأكيد الطلب.",
-    q10:"كيف أختار مقاس خاتمي؟",a10:"مقياس حجم الخاتم مضمّن في طقم جمع الشعر. جرّبيه وأكّدي مقاسك عند إعادة الشعر. نعمل بمقاسات US (1-12، بنصف مقاس). إذا كنت تعرفين مقاسك، يمكنك إخبارنا وقت الطلب.",
-    q11:"هل يمكن تغيير مقاس الخاتم لاحقاً؟",a11:"ممكن في بعض الحالات حسب التصميم. لكن بما أن غرفة الشعر المختومة مدمجة في الحلقة، يتطلب تغيير المقاس إعادة القطعة إلى اليابان وقد يستغرق 2-3 أشهر. نوصي بشدة بتأكيد مقاسك بعناية قبل بدء الإنتاج.",
-    q12:"هل الجوهرة مناسبة للارتداء اليومي؟",a12:"نعم. صُممت قطع Rion للارتداء اليومي مدى الحياة. الختم المحكم مقاوم للماء — الجوهرة آمنة لغسل اليدين والمطر الخفيف والاستخدام اليومي. نوصي بخلعها أثناء السباحة والتمارين الشاقة والتعرض للمواد الكيميائية، وهو نصيحة قياسية لجميع المجوهرات الفاخرة.",
-    q13:"ما هي خدمة التلميع مدى الحياة؟",a13:"كل قطعة من Rion تأتي مع خدمة تلميع مجانية مدى الحياة في اليابان. في أي وقت — بعد سنوات أو عقود من الشراء — يمكنك إرسال جوهرتك إلى أتيليه Rion، وسنلمّعها ونجدّدها مجاناً. تدفعين فقط تكاليف الشحن.",
-    q14:"كيف أقدّم طلبي؟",a14:"جميع الطلبات تُقدَّم عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a>. تصفّحي مجموعتنا، اختاري السلسلة والمادة المفضلة، وأرسلي لنا رسالة. سيرشدك فريقنا في كل خطوة.",a14_link:"كيفية الطلب",
-    q15:"كم يستغرق الإنتاج؟",a15:"حوالي 5.5 أشهر من تاريخ استلام شعرك. يشمل ذلك عملية الصناعة اليدوية الكاملة: ختم الشعر، سبك المعدن، تركيب الأحجار (حيث ينطبق)، التشطيب، النقش، ومراقبة الجودة.",
-    q16:"هل يمكنني إلغاء طلبي أو تغييره بعد تقديمه؟",a16a:"يمكن تغيير النقش واختيار حجر الميلاد حتى بدء الإنتاج. لا يمكن تغيير التصميم أو المادة بعد تأكيد الطلب.",a16b:"نظراً لأن كل قطعة مصنوعة وفق طلبك تحديداً ولا يمكن إعادة بيعها، لا يُقدَّم استرداد للمبلغ بعد بدء الإنتاج.",a16_link:"الشحن والإرجاع",
-    q17:"ما اللغات التي تدعمها Rion؟",a17:"نتواصل بالعربية والإنجليزية واليابانية. موقعنا أيضاً متاح بالثلاث لغات. يسعدنا التواصل معك بأي لغة تفضّلين.",
-    q18:"هل التصميم المخصص بالكامل ممكن؟",a18:"نعم. إذا لم تناسبك أي سلسلة من سلاسلنا القياسية، نصنع تكاليف حصرية بالكامل — مصممة من الصفر مع فريقنا. لا قوالب ولا حدود: أي شكل، أي مادة، أي مجموعة أحجار. تبدأ التكاليف الحصرية من SGD 28,000 DDP وتستغرق حوالي 6 أشهر.",a18note:"تواصلي معنا عبر واتساب لبدء استشارة حصرية — بدون التزام.",
-    q19:"ماذا يعني DDP؟",a19a:"DDP تعني Delivered Duty Paid أي 'التسليم مع دفع الرسوم'. يعني أن جميع رسوم الاستيراد والضرائب — بما في ذلك ضريبة السلع والخدمات السنغافورية (GST 9%) — مضمّنة في السعر الذي تدفعينه. لا رسوم إضافية عند التسليم أبداً.",a19b:"هذا هو معيارنا لجميع الطلبات إلى سنغافورة. السعر الذي تريه هو السعر الذي تدفعينه.",
-    q20:"كيف تُشحن الجوهرة إليّ؟",a20:"تُشحن جوهرتك عبر DHL Express من اليابان — مؤمّنة بالكامل بقيمتها الكاملة مع تتبع. ستتلقين رقم تتبع فور شحن طلبك.",
-    q21:"إلى أي دول تشحنون؟",a21:"نشحن إلى سنغافورة بالكامل — DDP، مع دفع جميع رسوم الاستيراد وضريبة السلع والخدمات (GST) مسبقاً، بدون رسوم عند التسليم. كما نشحن دولياً إلى دول ومناطق أخرى عند الطلب. قد تختلف شروط الشحن حسب الوجهة. راسلونا عبر واتساب لتأكيد التوفر لبلدكم.",
-    q22:"ما العملات وطرق الدفع التي تقبلونها؟",a22:"نقبل الدولار السنغافوري (SGD) والدولار الأمريكي (USD). جميع الأسعار مُدرجة بالدولار السنغافوري كعملة أساسية — ويُقدَّم ما يعادلها بالدولار الأمريكي وفق سعر الصرف السائد وقت طلبك. طرق الدفع تشمل التحويل المصرفي الدولي (SWIFT) وبطاقة الائتمان (فيزا · ماستركارد · أمريكان إكسبريس · دايرز كلوب · JCB — عبر رابط فاتورة Stripe آمن). يُشترط السداد الكامل قبل بدء الإنتاج.",
-    q23:"ما هي سياسة الإرجاع؟",a23a:"نظراً لأن كل قطعة مصنوعة وفق طلبك تحديداً — بشعرك وحسب مواصفاتك — لا يمكن إرجاعها أو استبدالها إلا في حالة وجود عيب تصنيعي.",a23b:"إذا كان هناك عيب، سنقوم بإصلاح القطعة أو إعادة صنعها مجاناً.",a23_link:"الشحن والإرجاع",
-    q24:"كيف تُحمى خصوصيتي؟",a24:"يُتعامل مع جميع المعلومات الشخصية بتقدير تام ولا تُشارَك مع أطراف ثالثة أبداً. نفهم الطابع الشخصي العميق لما نقوم به.",a24_link:"سياسة الخصوصية",
-    help_h:"هل لديك <em>سؤال آخر؟</em>",help_p:"فريقنا متاح على واتساب بالعربية والإنجليزية واليابانية. نرد عادةً في غضون ساعات قليلة.",help_wa:"راسلينا على واتساب",help_l1:"كيفية الطلب ←",help_l2:"الشحن والإرجاع ←",help_l3:"دليل العناية ←"
-  },
+  ms:{nav_cta:"Tempah Sekarang",menu_wa:"Hantar Mesej kepada Kami di WhatsApp",eyebrow:"Soalan Lazim",h1:"Soalan anda,<br><em>dijawab.</em>",lead:"Segala yang anda perlu tahu tentang Rion — rambut, proses, perhiasan, dan penghantaran. Jika soalan anda tiada di sini, hantar mesej kepada kami di WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>.",cat_all:"Semua",cat_hair:"Rambut & Proses",cat_jewel:"Perhiasan Itu",cat_order:"Tempahan",cat_ship:"Penghantaran & Pembayaran",sec_hair:"Rambut & <em>Proses</em>",sec_jewel:"<em>Perhiasan</em> Itu",sec_order:"<em>Tempahan</em>",sec_ship:"Penghantaran & <em>Pembayaran</em>",q1:"Apakah sebenarnya perhiasan peringatan?",a1:"Perhiasan peringatan ialah sebuah perhiasan yang menyimpan rambut seseorang tersayang atau haiwan peliharaan tersayang. Rambut tersebut dimeterai kedap udara di dalam cincin atau loket — tidak kelihatan dari luar tetapi sentiasa dekat dengan anda.",q2:"Rambut siapa yang boleh digunakan?",a2a:"Rambut sesiapa sahaja — ibu bapa, anak, pasangan, datuk nenek, sahabat karib. Kami juga menerima bulu haiwan peliharaan (anjing, kucing, dan lain-lain).",a2b:"Rambut daripada seseorang yang telah meninggal dunia diterima, begitu juga rambut daripada seseorang yang masih hidup — ramai pelanggan kami mencipta perhiasan untuk menghormati seseorang tersayang yang masih bersama mereka, selagi mereka mampu.",a2note:"Rambut daripada beberapa orang boleh dimeteraikan bersama dalam satu perhiasan — tanya kami tentang pilihan ini.",q3:"Berapa banyak rambut yang diperlukan?",a3:"Sangat sedikit — kira-kira 1 hingga 5 helai sudah memadai. Tiada pemotongan diperlukan; rambut yang gugur secara semula jadi (daripada sikat atau berus) adalah amat sesuai. Walaupun satu helai sepanjang 1 cm atau kurang sudah memadai. Kami menyertakan arahan lengkap dalam kit pengumpulan rambut anda.",q4:"Bagaimana rambut dimeteraikan di dalam perhiasan?",a4a:"Sebuah lubang kecil digerudi pada cincin atau rantai leher. Rambut anda diletakkan dengan teliti dan tangan di dalamnya, kemudian lubang tersebut dimeteraikan dengan penutup daripada bahan yang sama — emas K18 atau platinum Pt900. Perhiasan tersebut kemudiannya dimeterai kedap udara, menjadikannya sepenuhnya kedap udara dan kalis air. Rambut tidak kelihatan dari luar; perhiasan itu kelihatan seperti perhiasan halus yang biasa.",a4b:"Kami memfoto proses sebelum, semasa, dan selepas pemeteraian, dan menghantarnya kepada anda melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>. Laporan foto ini disertakan dengan setiap tempahan.",q5:"Adakah rambut akan rosak dengan masa?",a5:"Tidak. Meterai kedap udara ini bersifat kedap dan kekal. Rambut adalah salah satu bahan biologi yang paling tahan lama — ia tidak terurai tanpa kelembapan dan oksigen, yang kedua-duanya tersingkir oleh meterai tersebut. Perhiasan Rion direka untuk pemakaian harian seumur hidup dan jauh lebih lama lagi.",q6:"Bolehkah saya menyertakan rambut daripada beberapa orang dalam satu perhiasan?",a6:"Ya. Kami boleh memeteraikan rambut daripada lebih daripada seorang — atau daripada seseorang dan haiwan peliharaan — di dalam ruang yang sama. Ini tersedia pada semua siri standard dan menjadi pilihan popular bagi mereka yang ingin membawa lebih daripada seorang tersayang dekat dengan mereka.",a6note:"Sila beritahu kami semasa pertanyaan supaya kami dapat membuat persediaan sewajarnya.",q7:"Bagaimana jika saya tidak dapat mengumpul rambut sendiri?",a7:"Jika anda mengumpul rambut daripada seseorang tersayang yang telah meninggal dunia, rumah pengebumian, hospis, atau ahli keluarga selalunya boleh membantu. Bagi rambut yang telah disimpan — daripada potongan rambut, berus, atau yang seumpamanya — ini adalah amat boleh diterima. Sila hubungi kami dan kami akan menasihati anda secara peribadi tentang pendekatan terbaik.",q8:"Bahan apakah yang digunakan untuk membuat perhiasan?",a8:"Semua perhiasan Rion dibuat daripada Emas K18 (Kuning, Putih, atau Merah Jambu) atau Platinum Pt900 — kedua-duanya berkualiti tertinggi, diperoleh dan dibuat sepenuhnya di Jepun. Untuk Siri C (Cincin Batu Kelahiran) dan Siri D (Cincin Half Eternity), berlian atau batu permata semula jadi disertakan mengikut spesifikasi.",q9:"Bolehkah saya menambah ukiran pada perhiasan saya?",a9:"Ya. Ukiran dalaman tersedia pada semua reka bentuk cincin — hanya aksara Inggeris. Sebuah nama, tarikh, ungkapan ringkas, atau sebarang kombinasi. Ukiran dilakukan pada jalur dalaman dan hanya kelihatan oleh anda apabila anda menanggalkan cincin. Ruang tidak dikira sebagai aksara.",a9note:"1–10 aksara: SGD 90 · Dari aksara ke-11: + SGD 9 setiap satu · Sila nyatakan semasa pengesahan tempahan.",q10:"Bagaimana saya memilih saiz cincin saya?",a10:"Sebuah tolok saiz cincin disertakan dalam kit pengumpulan rambut anda. Cuba sahaja tolok tersebut dan sahkan saiz anda apabila anda memulangkan rambut anda. Kami menggunakan saiz US (1–12, separuh saiz tersedia). Jika anda sudah tahu saiz anda, anda boleh memberitahu kami semasa membuat tempahan.",q11:"Bolehkah cincin disaiz semula kemudian?",a11:"Penyaizan semula adalah mungkin dalam sesetengah kes, bergantung pada reka bentuk. Walau bagaimanapun, kerana ruang rambut termeterai dibina ke dalam jalur, penyaizan semula memerlukan perhiasan dipulangkan ke Jepun dan boleh mengambil masa 2–3 bulan. Kami amat mengesyorkan agar anda mengesahkan saiz anda dengan teliti sebelum penghasilan bermula.",q12:"Adakah perhiasan ini sesuai untuk pemakaian harian?",a12:"Ya. Perhiasan Rion direka untuk pemakaian harian seumur hidup. Meterai kedap udara ini kalis air — perhiasan ini selamat untuk mencuci tangan, hujan renyai, dan penggunaan harian. Kami mengesyorkan agar ia ditanggalkan semasa berenang, senaman berat, atau bersentuhan dengan bahan kimia keras, yang merupakan nasihat standard untuk semua perhiasan halus.",q13:"Apakah perkhidmatan penggilapan seumur hidup?",a13:"Setiap perhiasan Rion disertakan dengan penggilapan seumur hidup percuma di Jepun. Pada bila-bila masa — bertahun-tahun atau berdekad-dekad selepas pembelian — anda boleh menghantar perhiasan anda kembali ke bengkel kami, dan kami akan menggilap serta memulihkannya tanpa sebarang caj. Anda hanya membayar kos pos. Perkhidmatan ini disertakan dengan semua perhiasan, tanpa sebarang kos tambahan.",q14:"Bagaimana saya membuat tempahan?",a14:"Semua tempahan dibuat melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>. Layari koleksi kami, pilih siri dan bahan kegemaran anda, dan hantar mesej kepada kami. Pasukan kami akan membimbing anda melalui setiap langkah — mengesahkan reka bentuk, saiz, dan ukiran, kemudian mengeluarkan invois anda.",a14_link:"Cara Menempah",q15:"Berapa lama masa penghasilan?",a15:"Kira-kira 5.5 bulan dari tarikh kami menerima rambut anda. Ini merangkumi keseluruhan proses penghasilan dengan tangan: pemeteraian rambut, penuangan logam, tetapan batu (jika berkenaan), kemasan, ukiran, dan kawalan kualiti. Kami akan mengemas kini anda melalui WhatsApp pada setiap peringkat penting.",q16:"Bolehkah saya membatalkan atau menukar tempahan saya selepas membuatnya?",a16a:"Ukiran dan pemilihan batu kelahiran boleh diubah sehingga ke tahap penghasilan bermula. Reka bentuk dan bahan tidak boleh diubah setelah tempahan disahkan.",a16b:"Oleh kerana setiap perhiasan dibuat sepenuhnya mengikut tempahan anda dan tidak boleh dijual semula, tiada bayaran balik ditawarkan setelah penghasilan bermula. Sila lihat halaman Penghantaran &amp; Pemulangan kami untuk butiran polisi lengkap.",a16_link:"Penghantaran & Pemulangan",q17:"Bahasa apakah yang disokong oleh Rion?",a17:"Kami berkomunikasi dalam Bahasa Inggeris, Arab, dan Jepun. Laman web kami juga tersedia dalam ketiga-tiga bahasa tersebut. Anda dialu-alukan menghubungi kami dalam bahasa pilihan anda.",q18:"Adakah reka bentuk sepenuhnya tersuai mungkin?",a18:"Ya. Jika tiada satu pun siri standard kami yang sesuai, kami mencipta tempahan yang sepenuhnya tersuai — direka dari awal bersama kakitangan kami. Tiada templat dan tiada had: sebarang bentuk, sebarang bahan, sebarang kombinasi batu. Tempahan tersuai bermula dari SGD 28,000 DDP dan mengambil masa kira-kira 6 bulan.",a18note:"Hubungi kami melalui WhatsApp untuk memulakan rundingan tersuai — tiada komitmen diperlukan.",q19:"Apakah maksud DDP?",a19a:"DDP bermaksud Delivered Duty Paid. Ini bermakna semua duti dan cukai import — termasuk GST import Singapura (9%) — telah termasuk dalam harga yang anda bayar. Tiada caj tambahan semasa penghantaran, sama sekali.",a19b:"Inilah standard kami untuk semua tempahan ke Singapura. Harga yang anda lihat adalah harga yang anda bayar.",q20:"Bagaimana perhiasan dihantar kepada saya?",a20:"Perhiasan anda dihantar melalui DHL Express dari Jepun — berinsurans sepenuhnya mengikut nilai penuh, dengan penjejakan. Anda akan menerima nombor penjejakan sebaik sahaja tempahan anda dihantar.",q21:"Negara manakah yang anda hantar ke?",a21:"Kami menghantar ke Singapura — DDP, dengan semua GST import dibayar terlebih dahulu, tiada caj semasa penghantaran. Kami juga menghantar secara antarabangsa ke negara dan rantau lain atas permintaan. Terma penghantaran mungkin berbeza mengikut destinasi. Hantar mesej kepada kami di WhatsApp untuk mengesahkan ketersediaan bagi negara anda.",q22:"Mata wang dan kaedah pembayaran apakah yang anda terima?",a22:"Kami menerima SGD dan USD. Semua harga disenaraikan dalam SGD sebagai mata wang asas — nilai setara USD disediakan mengikut kadar pertukaran semasa pada masa tempahan anda. Kaedah pembayaran termasuk pemindahan bank antarabangsa (SWIFT) dan kad kredit (Visa · Mastercard · American Express · Diners Club · JCB — melalui pautan invois Stripe yang selamat). Pembayaran penuh diperlukan sebelum penghasilan bermula.",q23:"Apakah polisi pemulangan anda?",a23a:"Oleh kerana setiap perhiasan dibuat sepenuhnya mengikut tempahan anda — dengan rambut anda, mengikut spesifikasi anda — ia tidak boleh dipulangkan atau ditukar kecuali terdapat kecacatan pembuatan.",a23b:"Jika terdapat kecacatan, kami akan membaiki atau membuat semula perhiasan tanpa sebarang caj.",a23_link:"Penghantaran & Pemulangan",q24:"Bagaimana privasi saya dilindungi?",a24:"Semua maklumat peribadi dikendalikan dengan kerahsiaan penuh dan tidak akan dikongsi dengan pihak ketiga. Kami memahami sifat sangat peribadi kerja yang kami lakukan.",a24_link:"Dasar Privasi",help_h:"Masih ada <em>soalan?</em>",help_p:"Pasukan kami tersedia di WhatsApp dalam Bahasa Inggeris, Arab, dan Jepun. Kami biasanya membalas dalam masa beberapa jam.",help_wa:"Hantar Mesej kepada Kami di WhatsApp",help_l1:"Cara Menempah →",help_l2:"Penghantaran & Pemulangan →",help_l3:"Panduan Penjagaan →"},
   ja:{
     nav_cta:"ご注文",menu_wa:"WhatsAppでメッセージ",
     eyebrow:"よくある質問",h1:"お客様のご質問に<br><em>お答えします。</em>",
@@ -703,7 +669,7 @@ function setLang(lang){
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
   document.body.className='lang-'+lang;
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir='ltr';
   const t=T[lang];
   if(!t)return;
   document.querySelectorAll('[data-i18n]').forEach(el=>{

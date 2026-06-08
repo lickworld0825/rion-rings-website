@@ -61,8 +61,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 /* ANNOUNCE */
 .announce{background:var(--ink);color:var(--gold-light);text-align:center;padding:10px 2rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase}
 .announce span{color:var(--gold)}
@@ -166,7 +164,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .story-content p{font-size:0.92rem;line-height:2;color:var(--ink-soft);margin-bottom:1.5rem;max-width:580px}
 .story-quote{border-left:1px solid var(--gold);padding-left:2rem;margin:2.5rem 0}
 .story-quote p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--ink);line-height:1.6;margin:0}
-html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);padding-left:0;padding-right:2rem}
 
 /* PROCESS */
 .process{background:var(--ink);padding:7rem 6rem;color:var(--cream)}
@@ -347,7 +344,6 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 .social-proof{animation:fadeUp .8s .52s ease both}
 .hero-circle{animation:fadeUp 1s .3s ease both}
 
-html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);padding-left:0;padding-right:2rem}
 
 @media(max-width:1024px){footer{padding-bottom:7rem!important}.nav-cta{display:none}
   .menu-inner{padding:4rem 4rem 2rem!important}
@@ -426,7 +422,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta" data-i18n="nav_cta">Order Now</a>
@@ -457,7 +453,7 @@ html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);p
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 <span data-i18n="menu_cta">Message Us on WhatsApp</span></a>
@@ -986,10 +982,10 @@ function buildWaUrl(text){
   return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 }
 function getLang(){return document.documentElement.lang||'en';}
-function makeMsg(en,ar,ja){
+function makeMsg(en,ms,ja){
   const l=getLang();
   if(l==='ja')return ja;
-  if(l==='ar')return ar;
+  if(l==='ms')return ms;
   return en;
 }
 
@@ -999,7 +995,7 @@ function updatePieceWaLinks(){
     const from=btn.dataset.from;
     const msg=makeMsg(
       `Hello Rion, I'm interested in ${piece} (from SGD ${from}).\n\nPlease tell me more and send the next steps to proceed. Thank you.`,
-      `مرحباً Rion، أنا مهتم بـ ${piece} (من SGD ${from}).\n\nيرجى إخباري بالمزيد وإرسال الخطوات التالية للمضي قدماً. شكراً.`,
+      `Hello Rion, saya berminat dengan ${piece} (dari SGD ${from}).\n\nSila beritahu saya lebih lanjut dan hantar langkah seterusnya untuk meneruskan. Terima kasih.`,
       `Rionさん、${piece}（SGD ${from}〜）に興味があります。\n\n詳細と次のステップをお送りください。ありがとうございます。`
     );
     btn.setAttribute('href',buildWaUrl(msg));
@@ -1007,7 +1003,7 @@ function updatePieceWaLinks(){
   const vipEl=document.getElementById('vipWaLink');
   if(vipEl) vipEl.href=buildWaUrl(makeMsg(
     "Hello Rion, I'd like to enquire about the VIP personal delivery service. Could you tell me more?",
-    "مرحباً Rion، أود الاستفسار عن خدمة التسليم الشخصي VIP. هل يمكنك إخباري بالمزيد؟",
+    "Hello Rion, saya ingin bertanya tentang perkhidmatan penghantaran peribadi VIP. Bolehkah anda memberitahu saya lebih lanjut?",
     "Rionさん、VIP直接手渡しサービスについてお問い合わせしたいです。詳しく教えていただけますか？"
   ));
 }
@@ -1129,100 +1125,7 @@ const T={
     sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From SGD 6,800 DDP · Handcrafted in Japan.",
     sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
   },
-  ar:{
-    announce:"شحن مجاني ومؤمَّن إلى سنغافورة &nbsp;|&nbsp; <span>مصنوع يدوياً بالكامل في اليابان</span>",
-    nav_home:"الرئيسية",nav_story:"<em>قصتنا</em>",nav_process:"كيف <em>يعمل</em>",nav_collection:"المجموعة",nav_voices:"قصص",nav_faq:"أسئلة",nav_contact:"تواصل",nav_cta:"اطلب الآن",
-    nav_about:"عن <em>Rion</em>",nav_care:"دليل <em>العناية</em>",nav_shipping:"الشحن و<em>الإرجاع</em>",
-    menu_eyebrow:"القائمة",menu_cta:"راسلنا عبر واتساب",
-    footer_brand_p:"مجوهرات تذكارية حصرية، مصنوعة يدوياً بالكامل في اليابان. شعرة واحدة. جوهرة واحدة. حب واحد — لك إلى الأبد.",
-    footer_explore:"استكشف",footer_help:"المساعدة",footer_connect:"تواصل",
-    footer_care:"دليل العناية",footer_shipping:"الشحن والإرجاع",footer_email:"إرسال استفسار",
-    chip1:"تأسس 2018 · اليابان",chip2:"صُنع بالكامل في اليابان",chip3:"ذهب 18K · بلاتين",
-    hero_eyebrow:"مجوهرات تذكارية حرفية · اليابان",
-    hero_title:"احمل<br><em>حبهم.</em><br>إلى الأبد.",
-    hero_body:"خصلة شعر من شخص عزيز — تُدرَج داخل خاتم أو قلادة، مصنوعة يدوياً بالكامل في اليابان. جوهرة واحدة. قصة واحدة. حب واحد. لك وحدك، إلى الأبد.",
-    unique_badge:"شعرة واحدة. جوهرة واحدة. حب واحد.",hero_cta1:"ابدأ طلبك",hero_cta2:"تواصل عبر واتساب",
-    social_proof:"موثوق به من عائلات في سنغافورة",
-    float1:"شعرة واحدة. حب واحد.",float2:"شحن إلى سنغافورة",float3:"ذهب 18K · بلاتين · ألماس",
-    scar1:"شعرك العزيز في الداخل · تحفة فريدة مصنوعة لك وحدك",scar2:"سم واحد من الشعر فقط هو كل ما نحتاجه",scar3:"شحن مجاني مؤمَّن إلى سنغافورة",scar4:"شهادة أصالة وتقرير صوري مضمّنان",
-    tr1_h:"شعرة واحدة. حب واحد.",tr1_p:"كل قطعة تحتضن شعرك العزيز — تحفة فريدة مصنوعة خصيصاً لك وحدك، في كل أنحاء العالم.",
-    tr2_h:"صُنع بالكامل في اليابان",tr2_p:"الذهب والبلاتين والألماس والإطار — كل عنصر مصدره ومصنوع يدوياً في اليابان.",
-    tr3_h:"تقرير صوري",tr3_p:"نصوّر كل خطوة من عملية إغلاق الشعر ونرسل لك الصور قبل التسليم.",
-    tr4_h:"عملية الموافقة المسبقة",tr4_p:"يتم تأكيد التصميم والمواد والمواصفات كتابياً قبل بدء أي عمل. موافقتك تبدأ الإنتاج.",
-    story_label:"قصتنا",
-    story_title:"وُلد من <em>الخسارة.</em><br>صُنع من الحب.",
-    story_p1:"في عام 2011، أمسك مؤسسنا بابنه الصغير لثلاثة أيام — ثم ودّعه. في ذلك الحزن، وُلد سؤال: كيف نحمل من نحب عندما لا يستطيعون السير إلى جانبنا بعد الآن؟",
-    story_p2:"اكتشف مجوهرات الذكرى — خاتماً يحمل جزءاً من ابنه قريباً من قلبه إلى الأبد. بعد سبع سنوات، في 2018، أسّس Rion — سُمّيت على اسم ذلك الابن. كل قطعة نصنعها تبدأ ليس بالذهب، بل بقصتك أنت.",
-    story_quote:'"حب أبدي.<br>رابط يستمر إلى الأبد."',
-    story_p3:"خصلة شعر من شخص عزيز — طفل، والد، شريك، حيوان أليف — تُدرَج داخل خاتم أو قلادة، مصنوعة يدوياً في اليابان. جوهرة واحدة. قصة واحدة. حب واحد. معك دائماً.",
-    process_title:"من <em>شعر</em> عزيز<br>إلى قلبك.",
-    process_intro:"ستة خطوات بسيطة — من اختيار تصميمك إلى استلام جوهرتك في سنغافورة.",
-    ps1_t:"تصفّح المجموعة",ps1_b:"اختاري سلسلتك وموادك — ذهب K18 أصفر أو أبيض أو زهري أو بلاتين Pt900.",
-    ps2_t:"استفسري عبر واتساب / DM / بريد",ps2_b:"أرسلي رسالة عبر واتساب أو Instagram DM أو البريد الإلكتروني بالسلسلة التي تعجبك. لا التزام مطلوب — مجرد محادثة. يرد فريقنا خلال 24 ساعة.",
-    ps3_t:"تأكيد وسداد",ps3_b:"نؤكد التصميم والنقش والسعر النهائي DDP. السداد الكامل قبل بدء الإنتاج.",
-    ps4_t:"استلام طقم الشعر",ps4_b:"يصل طقم معقّم ومقياس الخاتم إلى بابك مع ملصق الإعادة. ضعي بضع خصلات وأرسليه إلى اليابان.",
-    ps5_t:"مصنوعة يدوياً في اليابان",ps5_b:"يصنع فريقنا جوهرتك يدوياً. حوالي 5.5 أشهر مع تحديثات بالصور عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a>.",
-    ps6_t:"التسليم إلى بابك",ps6_b:"DHL Express، مؤمَّن بالكامل. ضريبة السلع والخدمات السنغافورية (GST) مدفوعة مسبقاً — DDP، لا رسوم عند الاستلام.",
-    process_cta:"دليل الطلب الكامل — خطوة بخطوة →",
-    col_title:"<em>المجموعة</em>",col_sub:"كل قطعة تحتضن شعرك العزيز — تحفة فريدة مصنوعة لك وحدك. الأسعار بالدرهم شاملة الرسوم.",
-    badge1:"الأكثر اختياراً",badge3:"مميز",
-    p1_name:"الخاتم",p1_sub:"خاتم الذكرى",p1_body:"يُحفر ثقب صغير في حلقة ذهب 18K أو البلاتين، يُوضع الشعر بداخله ويُغلق بنفس المعدن — محكم الغلق تماماً. متوفر بجميع مقاسات US.",
-    p2_name:"القلادة",p2_sub:"قلادة الحب",p2_body:"قلادة بشكل هندسي أو عضوي قريبة من قلبك. متاحة مع إعداد الألماس. تتسع لشعر أكثر من شخص في تصاميم مختارة.",
-    p3_name:"تصميم خاص",p3_sub:"تصميم خاص",p3_body:"تصميم مخصص بالكامل مع حرفيّنا. الألماس والياقوت. يمكن أن يحتوي شعراً من أكثر من شخص. الجوهرة الفريدة المطلقة.",
-    p_ddp:"DDP شامل جميع الرسوم",p_cta:"استفسر عبر واتساب →",
-    advance_title:"✦ الطلب المسبق متاح",advance_body:"يمكنك طلب الجوهرة الآن وإرسال الشعر لاحقاً — في وقتك المناسب. مثالي لمن يريد تحضير القطعة مسبقاً. اسألنا عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a>.",
-    unique_stmt:"<strong>تحفة فريدة تحتضن شعرك العزيز — مصنوعة خصيصاً لك وحدك.</strong> في كل أنحاء العالم.",
-    voices_title:"تُرتدى بـ<em>حب</em>",voices_sub:"قصص حقيقية من عائلات تحمل أحباءها معها",
-    v1_text:'"توفي أخي فجأة. ارتديت الخاتم في حفل زفافي — وكان معي. التصميم جميل وأقدّره بلا حدود."',v1_age:"الثلاثينيات",v1_tag:"أخ · خاتم",
-    v2_text:'"توفي ابني في حادث. صنعت أربعة خواتم — أحدها لصديقته منذ الطفولة. حين أعطيتها إياه، ابتسمت لأول مرة منذ فقدانه."',v2_age:"الخمسينيات",v2_tag:"ابن · خاتم × 4",
-    v3_text:'"قبل عامين فقدت ابنتي. كل عام نزور حقول الزهور التي كنا نذهب إليها معاً. الآن أرتدي الخاتم وتأتي معنا."',v3_age:"الأربعينيات",v3_tag:"ابنة · خاتم",
-    v4_text:'"38 سنة من الزواج. رحل فجأة. أمسك هذا الخاتم وما زلت أشعر بيده. كان يحبني في أي مكان. الآن آخذه معي في كل مكان."',v4_age:"الستينيات",v4_tag:"زوج · خاتم",
-    v5_text:'"توفي زوجي في حادث وهو في الثامنة والعشرين. كنت حاملاً. حين وصل الخاتم قالت ابنتي الصغيرة ما أجمله. الآن نحن دائماً معاً."',v5_age:"العشرينيات",v5_tag:"زوج · خاتم",
-    v6_text:'"رحل كلبي العزيز بعد 13 عاماً معاً. صنعت خاتماً من شعره. أضعه كل يوم وأشعر أنه معي دائماً. ممتنة جداً لوجود هذا."',v6_age:"الثلاثينيات",v6_tag:"كلب · خاتم",
-    faq_title:"أسئلتك، <em>مُجابة</em>",
-    fq1:"كم من الشعر تحتاجون؟",fa1:"1 سم، 5 خصلات. حتى أقل من ذلك مقبول تماماً. لفراء الحيوانات نفس الشيء. نعمل مع أي كمية تستطيع تقديمها.",
-    fq_size:"كيف أعرف مقاس خاتمي؟",fa_size:"مقياس خاتم بنظام US (المقاسات من 1 إلى 12 بما فيها أنصاف المقاسات) مضمّن في الطقم. جرّب كل خاتم وأخبرنا أيها يناسبك. إذا كنت تعرف مقاسك بنظام US — مثل \"US 6½\" — فقط أخبرنا ولا حاجة لاستخدام المقياس.",
-    fq_care:"كيف أعتني بجوهرة Rion؟",fa_care:"قطعتك مصنوعة من ذهب 18K أو بلاتين Pt900 خالص — متينة للغاية للارتداء اليومي. امسحيها برفق بقطعة قماش ناعمة بعد الارتداء. تجنّبي الكلور والعطور المباشرة والصدمات القوية. نقدم خدمة التلميع مدى الحياة مجاناً في اليابان — تواصلي معنا عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> للترتيب.",
-    fq_water:"هل يمكنني ارتداء جوهرتي في الماء؟",fa_water:"غرفة الشعر مختومة هرمسياً في اليابان — مقاومة للماء للحياة اليومية (غسل اليدين، المطر الخفيف). للحفاظ على عمرها الطويل، ننصح بنزعها قبل المسبح (الكلور) والساونا والحمامات الساخنة.",
-    fq2:"كيف تعمل الشحنة إلى سنغافورة؟",fa2:"نشحن إلى سنغافورة بالكامل — DDP، بدون رسوم عند التسليم. نرسل طقماً آمناً إلى عنوانك عبر بريد سنغافورة (SingPost): ظرف مختوم، تعليمات ثنائية اللغة، ملصق إرجاع مدفوع. اتركه في أقرب مكتب بريد. تُشحن جوهرتك المكتملة عبر DHL Express، مؤمَّنة بالكامل. كما نشحن إلى دول أخرى عند الطلب — راسلنا عبر واتساب.",
-    fq3:"هل يمكنني رؤية إغلاق الشعر؟",fa3:"نعم. نصوّر الشعر قبل الإغلاق وأثناءه وبعده — محكم الإغلاق. نرسل الصور عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> قبل الشحن. راحة بال كاملة.",
-    fq4:"كم يستغرق؟",fa4:"حوالي 5.5 أشهر إجمالاً. نرسل تحديثات عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> طوال فترة الصنع.",
-    fq5:"هل يمكنني الطلب الآن وإرسال الشعر لاحقاً؟",fa5:"نعم. نقدم الطلب المسبق — تُصنع الجوهرة أولاً وترسل الشعر لاحقاً في وقتك. اسألنا عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a>.",
-    fq6:"هل يمكن وضع شعر أكثر من شخص في قطعة واحدة؟",fa6:"نعم، في تصاميم مختارة. يمكن إغلاق شعر أكثر من شخص معاً. اسألنا عن التصاميم المتاحة.",
-    fq7:"هل هناك رسوم إضافية عند التسليم؟",fa7:"لا شيء. جميع الأسعار DDP — ضريبة السلع والخدمات السنغافورية (GST 9%) مدفوعة مسبقاً. لا تدفع شيئاً عند الاستلام.",
-    fq8:"هل يمكنني الطلب لحيوان أليف؟",fa8:"نعم. كثير من عملائنا يطلبون قطعاً لحيواناتهم. الطقم والعملية متطابقان. 1 سم، 5 خصلات من الفراء هو كل ما نحتاجه.",
-    fq9:"هل يمكنني إلغاء طلبي أو إرجاعه؟",fa9:"لأن كل قطعة مصنوعة خصيصاً لك — بشعرك وتصميمك ومواصفاتك المعتمدة — لا نقبل الإلغاء أو الإرجاع أو الاسترداد بعد بدء الإنتاج. قبل البدء، نحصل على موافقتك الكتابية على التصميم والمواد والمواصفات. في حال وجود خلل في التصنيع من جانبنا، يرجى إبلاغنا خلال 3 أيام من الاستلام عبر واتساب أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> أو Instagram DM — سنعيد التصنيع مجاناً. لا نقدم استرداداً.",
-    fq10:"ماذا يحدث للشعر المتبقي؟",fa10:"أي شعر متبقٍّ — مهما كانت الكمية — يُعاد إليك في حاوية مخصصة مع جوهرتك المكتملة. لا يُتخلص من أي شيء ثمين.",
-    con_title:"ابدأ<br><em>قصتك.</em>",con_body:"كل قطعة من Rion تبدأ بمحادثة. تواصل معنا عبر واتساب أو إنستغرام — نرد شخصياً بالعربية والإنجليزية واليابانية.",
-    con_sub:"شحن مجاني مؤمَّن · أسعار DDP شاملة · موافقة على التصميم قبل الإنتاج · صُنع بالكامل في اليابان",
-    mij_label:"صُنع في اليابان 100%",
-    mij_body:"كل عنصر مصدره ومصنوع بالكامل في اليابان. حرفيونا يجمعون عقوداً من صياغة الذهب التقليدية مع التصميم الحديث.",
-    email_label:"بريد إلكتروني",wa_sub:"أسرع رد · عربي وإنجليزي وياباني",ship_label:"شحن مجاني مؤمَّن عبر DHL",hours_label:"ساعات الرد",hours_val:"9:00–19:00 بتوقيت اليابان · خارج الأوقات أيضاً متاح",
-    legal_title:"المعلومات القانونية والامتثال",
-    leg1_h:"حقوق المستهلك (سنغافورة)",leg1_p:"جميع الأسعار بالدرهم شاملة الرسوم (DDP). كل قطعة حصرية ومصنوعة حسب الطلب الشخصي. يتم الحصول على موافقة كتابية على التصميم قبل بدء الإنتاج. لا إرجاع على الطلبات الحصرية المكتملة. في حال خلل في التصنيع، يُعاد التصنيع مجاناً.",
-    leg2_h:"المنتج والشحن",leg2_1:"جميع القطع مصنوعة بالكامل في اليابان",leg2_2:"شهادة أصالة مع كل طلب",leg2_3:"تقرير صوري لعملية الإغلاق مضمّن",leg2_4:"الشحن عبر DHL (مؤمَّن بالكامل)",leg2_5:"الشعر: غير خطر، متوافق مع الجمارك",leg2_6:"لا رسوم إضافية عند التسليم (DDP)",
-    leg3_h:"معلومات الأعمال",leg3_p:"Rion (المعروف سابقاً بـ Rion&Rings) · تأسس 2018، اليابان · المرسوم رقم 14/2023 · متوافق مع AML.",
-    footer_r:"تأسس 2018 · اليابان · سنغافورة",
-    con_eyebrow:"خدمة VIP",
-    con_title2:"نأتي<br>إلى <em style='font-style:italic;color:var(--gold)'>سنغافورة.</em>",
-    con_body2:"للعملاء الذين يرغبون في تجربة شخصية حقيقية، يسافر مؤسسنا من اليابان إلى سنغافورة — للقاء بك شخصياً، وتقديم جوهرتك المكتملة، ووضعها في يديك مباشرة.",
-    con_body3:"هذه ليست خدمة بريد. هذا لقاء بين شخصين يفهمان ما تحتويه الجوهرة — وماذا تعني.",
-    con_quote2:'"الجوهرة تستحق أن تُهدى<br>بيد صنعتها بحب."',
-    feat1_t:"تقديم شخصي",feat1_b:"تُقدَّم جوهرتك شخصياً من المؤسس — وليس عبر ساعي البريد.",
-    feat2_t:"مكانك المفضل",feat2_b:"نلتقي في مكان من اختيارك — منزلك، جناح فندقي خاص، أو أي مكان تفضله في سنغافورة.",
-    feat3_t:"استقبال طلبات جديدة",feat3_b:"خلال الزيارة، يمكن تقديم طلبات جديدة شخصياً — بما في ذلك التكليفات العائلية والتصاميم الحصرية.",
-    feat4_t:"رسوم إضافية",feat4_b:"متاح برسوم سفر إضافية. تواصل معنا عبر واتساب أو Instagram DM أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> لمناقشة المواعيد والترتيبات.",
-    con_cta2:"استفسر عن خدمة VIP",
-    con_tag:"خدمة VIP",
-    con_tag_body:"اليابان → سنغافورة · توصيل شخصي من المؤسس · بطلب مسبق · رسوم سفر إضافية",
-    gallery_label:"أعمالنا",
-    ps1_title:"ذهب 18K، بلاتين<br>و<em>أحجار كريمة</em>",
-    ps1_body:"كل مادة في جوهرة Rion مصدرها ومصنوعة يدوياً بالكامل في اليابان. ذهب أصفر وأبيض ووردي وبلاتين — جميعها متاحة. الألماس والياقوت والياقوت الأزرق متوفرة لأي تصميم.",
-    ps2_title:"مصنوع بعناية،<br><em>مُسلَّم بحب.</em>",
-    ps2_body:"تصل كل قطعة مكتملة في حقيبة Rion الحصرية — صندوق خشبي تقليدي يُستخدم للأشياء الثمينة في اليابان منذ قرون. بداخله: جوهرتك الفريدة وشهادة الأصالة.",
-    sticky_text:"<strong>شعرة واحدة. جوهرة واحدة. حب واحد.</strong> &nbsp;من SGD 6,800 DDP · مصنوعة يدوياً في اليابان.",
-    sticky_wa:"💬 واتساب",sticky_order:"ابدأ الطلب →"
-  },
+  ms:{announce:"Penghantaran berinsurans percuma ke Singapura &nbsp;|&nbsp; <span>100% Dibuat dengan Tangan di Jepun</span>",nav_home:"Laman Utama",nav_story:"Kisah <em>Kami</em>",nav_process:"Cara Ia <em>Berfungsi</em>",nav_collection:"Koleksi",nav_voices:"Kisah",nav_faq:"Soalan Lazim",nav_contact:"Hubungi",nav_cta:"Tempah Sekarang",nav_about:"Tentang <em>Rion</em>",nav_care:"<em>Panduan</em> Penjagaan",nav_shipping:"Penghantaran &amp; <em>Pemulangan</em>",menu_eyebrow:"Navigasi",menu_cta:"Hantar Mesej kepada Kami di WhatsApp",footer_brand_p:"Perhiasan peringatan tersuai, dibuat sepenuhnya dengan tangan di Jepun. Satu rambut. Satu perhiasan. Satu cinta — milik anda, selamanya.",footer_explore:"Terokai",footer_help:"Bantuan",footer_connect:"Hubungkan",footer_care:"Panduan Penjagaan",footer_shipping:"Penghantaran & Pemulangan",footer_email:"Hantar Pertanyaan",chip1:"Ditubuhkan 2018 · Jepun",chip2:"100% Dibuat di Jepun",chip3:"Emas K18 · Platinum",hero_eyebrow:"Perhiasan Peringatan Tersuai · Jepun",hero_title:"Bawa<br><em>cinta mereka.</em><br>Selamanya.",hero_body:"Satu helai rambut daripada seseorang yang berharga — disimpan di dalam cincin atau rantai leher, dibuat sepenuhnya dengan tangan di Jepun. Satu perhiasan. Satu kisah. Satu cinta. Hanya milik anda, selamanya.",unique_badge:"Satu Rambut. Satu Perhiasan. Satu Cinta.",hero_cta1:"Mulakan Tempahan Anda",hero_cta2:"WhatsApp Kami",social_proof:"Dipercayai oleh keluarga di seluruh Singapura",float1:"Satu Rambut. Satu Cinta.",float2:"Dihantar ke Singapura",float3:"K18 · Platinum · Berlian",scar1:"Rambut berharga tersimpan · Unik, dibuat khas untuk anda",scar2:"Hanya 1cm rambut yang kami perlukan",scar3:"Penghantaran berinsurans percuma ke Singapura",scar4:"Sijil keaslian & laporan foto disertakan",tr1_h:"Satu Rambut. Satu Cinta.",tr1_p:"Setiap perhiasan menyimpan rambut berharga anda — sebuah perhiasan unik yang dibuat khas untuk anda, di mana-mana sahaja di dunia.",tr2_h:"100% Dibuat di Jepun",tr2_p:"Emas, platinum, berlian dan tetapan — setiap elemen diperoleh dan dibuat dengan tangan di Jepun.",tr3_h:"Laporan Foto",tr3_p:"Kami memfoto setiap langkah proses pemeteraian rambut dan menghantar foto tersebut kepada anda sebelum penghantaran.",tr4_h:"Proses Kelulusan Awal",tr4_p:"Reka bentuk, bahan dan spesifikasi disahkan secara bertulis sebelum sebarang kerja bermula. Kelulusan anda memulakan penghasilan.",story_label:"Kisah Kami",story_title:"Lahir daripada <em>kehilangan.</em><br>Dibuat daripada cinta.",story_p1:"Pada tahun 2011, pengasas kami mendukung anak lelaki kecilnya selama tiga hari — dan kemudian mengucapkan selamat tinggal. Dalam kesedihan itu, satu persoalan tercetus: bagaimana kita membawa orang yang kita sayangi apabila mereka tidak lagi dapat berjalan di sisi kita?",story_p2:"Dia menemui perhiasan peringatan — sebentuk cincin yang dapat menyimpan sebahagian daripada anaknya dekat dengan hatinya selamanya. Tujuh tahun kemudian, pada tahun 2018, dia menubuhkan Rion — dinamakan sempena anak itu. Setiap perhiasan yang kami cipta bermula bukan dengan emas, tetapi dengan sebuah kisah. Kisah anda.",story_quote:'"Cinta abadi.<br>Ikatan yang berterusan selamanya."',story_p3:"Satu helai rambut daripada seseorang yang tersayang — seorang anak, ibu bapa, pasangan, haiwan peliharaan tersayang — disimpan di dalam cincin atau rantai leher, dibuat sepenuhnya dengan tangan di Jepun. Satu perhiasan. Satu kisah. Satu cinta. Dibawa bersama anda, selamanya.",process_title:"Daripada <em>rambut</em> berharga<br>ke hati anda.",process_intro:"Enam langkah mudah — dari memilih reka bentuk anda hingga menerima perhiasan anda di Singapura.",ps1_t:"Layari Koleksi",ps1_b:"Pilih siri dan bahan anda — Emas Kuning K18, Emas Putih, Emas Merah Jambu, atau Platinum Pt900.",ps2_t:"Bertanya melalui WhatsApp / DM / <a href='mailto:info@art-rings.com'>E-mel</a>",ps2_b:"Hantar mesej kepada kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> dengan siri yang anda gemari. Tiada komitmen diperlukan — sekadar perbualan. Kami akan membalas dalam masa 24 jam.",ps3_t:"Sahkan &amp; Bayar",ps3_b:"Kami akan mengesahkan reka bentuk, ukiran, dan harga DDP akhir. Pembayaran penuh sebelum penghasilan bermula.",ps4_t:"Terima Kit Rambut Anda",ps4_b:"Sebuah kit steril dan tolok cincin dihantar ke pintu rumah anda berserta label pemulangan. Letakkan beberapa helai rambut di dalamnya dan poskan kembali ke Jepun.",ps5_t:"Dihasilkan di Jepun",ps5_b:"Kakitangan kami akan membuat perhiasan anda dengan tangan. Kira-kira 5.5 bulan, dengan kemas kini foto melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>.",ps6_t:"Dihantar ke Pintu Rumah Anda",ps6_b:"DHL Express, berinsurans sepenuhnya. Semua GST import Singapura dibayar terlebih dahulu oleh Rion — DDP, tiada caj semasa ketibaan.",process_cta:"Panduan Tempahan Penuh — Langkah demi Langkah →",col_title:"Koleksi<br><em>Itu</em>",col_sub:"Setiap perhiasan menyimpan rambut berharga anda — ciptaan unik yang dibuat khas untuk anda. Semua harga dalam SGD, termasuk GST import Singapura (DDP — tiada caj semasa penghantaran).",badge1:"Paling Dipilih",badge3:"Premium",p1_name:"Cincin Itu",p1_sub:"Cincin Peringatan",p1_body:"Sebuah lubang kecil digerudi pada jalur emas K18 atau platinum, rambut anda diletakkan di dalamnya, dan dimeteraikan dengan logam yang sama — kedap udara sepenuhnya. Tersedia dalam semua saiz US.",p2_name:"Loket Itu",p2_sub:"Loket Cinta",p2_body:"Loket rantai leher dalam bentuk geometri atau organik, menyimpan satu helai berdekatan dengan hati anda. Tetapan berlian tersedia. Menyimpan rambut daripada beberapa orang tersayang pada reka bentuk terpilih.",p3_name:"Tempahan Eksklusif",p3_sub:"Tempahan Tersuai",p3_body:"Reka bentuk sepenuhnya tersuai yang dicipta bersama kakitangan kami. Berlian, ruby, nilam. Boleh menyimpan rambut daripada beberapa orang tersayang. Perhiasan unik yang paling istimewa.",p_ddp:"DDP · semua cukai termasuk",p_cta:"Bertanya melalui WhatsApp →",advance_title:"✦ Tempahan Awal Tersedia",advance_body:"Anda boleh menempah perhiasan sekarang dan menghantar rambut kemudian — pada masa yang anda sendiri tetapkan. Ini sesuai jika anda ingin menyediakan perhiasan terlebih dahulu, atau jika anda belum bersedia untuk mengumpul rambut. Tanya kami tentang pilihan ini melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>.",unique_stmt:"<strong>Sebuah perhiasan unik yang menyimpan rambut berharga anda — dibuat khas untuk anda.</strong> Di mana-mana sahaja anda berada di dunia.",voices_title:"Dipakai dengan <em>cinta</em>",voices_sub:"Kisah benar daripada keluarga yang membawa orang tersayang mereka bersama",v1_text:'"Abang saya meninggal dunia secara mengejut. Saya memakai cincin ini ke majlis perkahwinan saya — dan dia ada bersama saya. Reka bentuknya cantik dan saya menghargainya melebihi kata-kata."',v1_age:"30-an",v1_tag:"Adik-beradik Lelaki · Cincin",v2_text:'"Anak lelaki saya meninggal dunia dalam kemalangan. Saya menempah empat buah cincin — satu untuk teman wanitanya yang telah bersamanya sejak kecil. Apabila saya berikan kepadanya, dia tersenyum buat kali pertama sejak pemergian anak saya."',v2_age:"50-an",v2_tag:"Anak Lelaki · Cincin × 4",v3_text:'"Dua tahun lalu saya kehilangan anak perempuan saya. Setiap tahun kami melawat ladang bunga yang dahulu kami kunjungi bersama. Kini saya memakai cincin ini dan dia turut serta bersama kami. Saya amat bersyukur kerana membuatnya."',v3_age:"40-an",v3_tag:"Anak Perempuan · Cincin",v4_text:'"38 tahun berumah tangga. Dia pergi begitu mendadak. Saya menggenggam cincin ini dan masih dapat merasakan tangannya. Dia suka membawa saya ke mana-mana sahaja. Kini saya membawanya ke mana-mana sahaja."',v4_age:"60-an",v4_tag:"Suami · Cincin",v5_text:'"Suami saya meninggal dunia dalam kemalangan pada usia 28 tahun. Saya sedang hamil dengan anak kedua kami. Cincin itu tiba dan anak perempuan saya yang berusia 2 tahun berkata betapa cantiknya. Kini kami sentiasa bersama."',v5_age:"20-an",v5_tag:"Suami · Cincin",v6_text:'"Anjing saya yang berusia 13 tahun meninggal dunia tahun lepas. Saya menempah sebentuk cincin dengan bulunya. Saya memakainya setiap hari dan merasakan kehadirannya bersama saya selamanya. Saya amat bersyukur perkara ini wujud."',v6_age:"30-an",v6_tag:"Anjing · Cincin",faq_title:"Soalan anda, <em>dijawab</em>",fq1:"Berapa banyak rambut yang anda perlukan?",fa1:"Hanya 1cm panjang, satu helai. Kurang daripada itu pun tidak mengapa. Untuk bulu haiwan peliharaan, sama juga — 1cm, satu helai. Kami akan bekerja dengan apa sahaja yang anda boleh berikan.",fq_size:"Bagaimana saya tahu saiz cincin saya?",fa_size:"Sebuah tolok cincin bersaiz US (saiz 1 hingga 12, termasuk separuh saiz) disertakan dalam kit anda. Cuba setiap cincin dan beritahu kami yang mana paling sesuai. Jika anda sudah tahu saiz cincin US anda — contohnya \"US 6½\" — beritahu kami sahaja dan anda boleh melangkau tolok tersebut.",fq_care:"Bagaimana saya menjaga perhiasan Rion saya?",fa_care:"Perhiasan anda adalah emas K18 tulen atau platinum Pt900 — amat tahan lama untuk pemakaian harian. Lap dengan lembut menggunakan kain lembut selepas memakai. Elakkan klorin, sentuhan langsung dengan minyak wangi, dan hentakan keras. Kami menyediakan perkhidmatan penggilapan seumur hidup percuma di Jepun — hubungi kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> untuk membuat persiapan.",fq_water:"Bolehkah saya memakai perhiasan Rion saya di dalam air?",fa_water:"Ruang rambut dimeterai kedap udara di Jepun — kalis air untuk kehidupan seharian (mencuci tangan, hujan renyai). Untuk ketahanan jangka panjang, kami mengesyorkan menanggalkannya sebelum ke kolam renang (klorin), mata air panas, dan sauna.",fq2:"Bagaimana penghantaran ke Singapura berfungsi?",fa2:"Kami menghantar ke Singapura — DDP, tiada caj semasa penghantaran. Kami akan menghantar kit rambut yang selamat ke alamat anda melalui SingPost: sampul termeterai, arahan dwibahasa, label pemulangan prabayar. Hantar di pejabat pos terdekat anda. Perhiasan siap anda dihantar melalui DHL Express, berinsurans sepenuhnya. Kami juga menghantar ke negara lain atas permintaan — hantar mesej kepada kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>.",fq3:"Bolehkah saya melihat rambut dimeteraikan?",fa3:"Ya. Kami memfoto rambut sebelum pemeteraian, semasa pemeteraian, dan selepasnya — tersimpan sepenuhnya dan dimeterai kedap udara. Foto dihantar melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> sebelum penghantaran. Ketenangan fikiran sepenuhnya.",fq4:"Berapa lama masa yang diperlukan?",fa4:"Kira-kira 5.5 bulan secara keseluruhan. Kami akan menghantar kemas kini kemajuan melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> sepanjang keseluruhan proses.",fq5:"Bolehkah saya menempah sekarang dan menghantar rambut kemudian?",fa5:"Ya. Kami menawarkan Tempahan Awal — perhiasan dibuat terlebih dahulu, dan anda menghantar rambut pada masa yang anda sendiri tetapkan apabila anda sudah bersedia. Tanya kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>.",fq6:"Bolehkah saya meletakkan rambut daripada beberapa orang tersayang dalam satu perhiasan?",fa6:"Ya, pada reka bentuk terpilih. Rambut daripada beberapa orang boleh dimeteraikan bersama dalam satu perhiasan — termasuk rambut daripada ahli keluarga dan haiwan peliharaan. Tanya kami reka bentuk mana yang menyokong ini semasa anda bertanya.",fq7:"Adakah terdapat sebarang caj tambahan semasa penghantaran?",fa7:"Tiada langsung. Semua harga adalah DDP — GST import Singapura (9%) dibayar terlebih dahulu oleh Rion melalui DHL. Anda tidak membayar apa-apa lagi apabila perhiasan anda tiba.",fq8:"Bolehkah saya menempah untuk haiwan peliharaan?",fa8:"Ya. Ramai pelanggan menempah perhiasan untuk haiwan peliharaan tersayang. Kit dan prosesnya adalah sama. 1cm, 5 helai bulu sudah memadai.",fq9:"Bolehkah saya membatalkan atau memulangkan tempahan saya?",fa9:"Oleh kerana setiap perhiasan dibuat sepenuhnya mengikut tempahan peribadi anda — menggabungkan rambut anda, reka bentuk pilihan anda, dan spesifikasi yang anda luluskan — kami tidak menerima pembatalan, pemulangan, atau bayaran balik setelah penghasilan bermula. Sebelum sebarang kerja bermula, kami akan mendapatkan kelulusan bertulis anda terhadap reka bentuk, bahan, dan spesifikasi. Sekiranya berlaku kecacatan pembuatan daripada pihak kami, sila maklumkan kepada kami dalam masa 3 hari selepas penerimaan melalui WhatsApp, <a href='mailto:info@art-rings.com'>e-mel</a>, atau Instagram DM — kami akan membuat semula perhiasan tersebut tanpa sebarang caj. Bayaran balik tidak ditawarkan.",fq10:"Apa yang berlaku kepada rambut yang berlebihan?",fa10:"Sebarang baki rambut akan dipulangkan kepada anda dalam bekas khas, bersama-sama dengan perhiasan siap anda. Tiada apa-apa yang berharga akan dibuang.",con_title:"Mulakan<br><em>kisah anda.</em>",con_body:"Setiap perhiasan Rion bermula dengan satu perbualan. Hubungi kami melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a> — kami akan membalas secara peribadi dalam Bahasa Inggeris, Arab, dan Jepun.",con_sub:"Penghantaran berinsurans percuma · Harga DDP semua termasuk · Reka bentuk diluluskan sebelum penghasilan · 100% Dibuat di Jepun",mij_label:"100% Dibuat di Jepun",mij_body:"Setiap elemen — emas, platinum, batu permata, dan tetapan — diperoleh dan dibuat sepenuhnya dengan tangan di Jepun. Tukang seni kami menggabungkan kepakaran tukang emas tradisional berdekad-dekad dengan reka bentuk moden.",email_label:"E-mel",wa_sub:"Respons terpantas · Bahasa Inggeris, Arab, Jepun",ship_label:"Penghantaran Berinsurans Percuma melalui DHL",hours_label:"Waktu Respons",hours_val:"9:00–19:00 JST · Di luar waktu juga tersedia",legal_title:"Undang-undang & Pematuhan",leg1_h:"Polisi Tempahan Eksklusif",leg1_p:"Semua harga dalam SGD, DDP (semua duti dan GST termasuk). Kelulusan reka bentuk bertulis diperoleh sebelum penghasilan bermula. Tiada pemulangan untuk tempahan tersuai yang telah siap. Kecacatan pembuatan akan dibuat semula tanpa sebarang caj.",leg2_h:"Produk & Penghantaran",leg2_1:"Semua perhiasan dibuat sepenuhnya dengan tangan di Jepun",leg2_2:"Sijil Keaslian dengan setiap tempahan",leg2_3:"Laporan foto proses pemeteraian disertakan",leg2_4:"Dihantar melalui DHL Express (berinsurans sepenuhnya)",leg2_5:"Rambut: bukan bahaya biologi, mematuhi kastam",leg2_6:"Tiada caj tambahan semasa penghantaran (terma DDP)",leg3_h:"Maklumat Perniagaan",leg3_p:"Rion · Ditubuhkan 2018, Jepun · E-dagang Singapura ditadbir oleh Akta Transaksi Elektronik · Mematuhi AML.",footer_r:"Ditubuhkan 2018 · Jepun · Singapura",con_eyebrow:"Perkhidmatan VIP",con_title2:"Kami datang<br>ke <em style='font-style:italic;color:var(--gold)'>Singapura.</em>",con_body2:"Untuk pelanggan yang menginginkan pengalaman yang benar-benar peribadi, pengasas kami akan datang dari Jepun ke Singapura — untuk bertemu anda secara peribadi, menyerahkan perhiasan siap anda, dan meletakkannya terus ke tangan anda.",con_body3:"Ini bukanlah perkhidmatan kurier. Ini adalah pertemuan antara dua individu yang memahami apa yang disimpan oleh perhiasan ini — dan apa maknanya.",con_quote2:'"Perhiasan ini wajar diberikan<br>oleh tangan yang membuatnya dengan cinta."',feat1_t:"Persembahan Peribadi",feat1_b:"Perhiasan anda diserahkan secara peribadi oleh pengasas — bukan dihantar melalui kurier.",feat2_t:"Tempat Pilihan Anda",feat2_b:"Kami akan bertemu di lokasi pilihan anda — rumah anda, suit hotel peribadi, atau tempat pilihan anda di Singapura.",feat3_t:"Tempahan Baharu Dialu-alukan",feat3_b:"Semasa lawatan, tempahan baharu boleh dibuat secara peribadi — termasuk tempahan keluarga dan reka bentuk tersuai.",feat4_t:"Yuran Tambahan",feat4_b:"Tersedia dengan yuran perjalanan tambahan. Hubungi kami melalui WhatsApp untuk membincangkan tarikh dan persiapan.",con_cta2:"Bertanya Tentang Perkhidmatan VIP",con_tag:"Perkhidmatan VIP",con_tag_body:"Jepun → Singapura · Penghantaran peribadi oleh pengasas · Tersedia atas permintaan · Yuran perjalanan tambahan dikenakan",gallery_label:"Hasil Kerja Kami",ps1_title:"Emas K18, Platinum<br>& <em>Batu Berharga</em>",ps1_body:"Setiap bahan yang digunakan dalam perhiasan Rion diperoleh dan dibuat sepenuhnya dengan tangan di Jepun. Emas kuning K18, emas putih, emas merah jambu, dan platinum — semuanya tersedia. Berlian, ruby, dan nilam boleh ditambah pada mana-mana reka bentuk. Setiap batu dipilih oleh kakitangan kami berdasarkan kilauan dan kualiti.",ps2_title:"Dibuat dengan teliti,<br><em>dihantar dengan cinta.</em>",ps2_body:"Setiap perhiasan siap akan tiba dalam kotak eksklusif Rion — sebuah kotak kayu tradisional yang digunakan untuk barangan berharga di Jepun selama berabad-abad. Di dalamnya: perhiasan unik anda dan Sijil Keaslian. Sebuah hadiah yang setara dengan apa yang disimpannya.",sticky_text:"<strong>Satu rambut. Satu perhiasan. Satu cinta.</strong> &nbsp;Dari SGD 6,800 DDP · Dibuat dengan tangan di Jepun.",sticky_wa:"💬 WhatsApp",sticky_order:"Mula Tempahan →"},
   ja:{
     announce:"シンガポールへ保険付き無料配送 &nbsp;|&nbsp; <span>100% 日本製</span>",
     nav_home:"ホーム",nav_story:"<em>ストーリー</em>",nav_process:"ご注文の<em>流れ</em>",nav_collection:"コレクション",nav_voices:"お客様の声",nav_faq:"よくある質問",nav_contact:"お問い合わせ",nav_cta:"ご注文",
@@ -1324,7 +1227,7 @@ function setLang(lang){
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
   document.body.className='lang-'+lang;
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir='ltr';
   const t=T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');

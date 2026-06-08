@@ -29,8 +29,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 /* NAV (same pattern) */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
@@ -175,7 +173,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta" data-i18n="nav_cta">Order Now</a>
@@ -205,7 +203,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 <span data-i18n="menu_cta">Message Us on WhatsApp</span></a>
@@ -600,84 +598,7 @@ const T = {
     f_explore:"探す",f_help:"ヘルプ",f_connect:"つながる",
     f_home:"ホーム",f_collection:"コレクション",f_about:"Rionについて",f_process:"ご注文の流れ",f_care:"お手入れガイド",f_shipping:"配送・返品",f_legal:"法的情報・プライバシー"
   },
-  ar: {
-    nav_cta:"اطلب الآن",menu_eyebrow:"القائمة",menu_cta:"راسلنا عبر واتساب",
-    m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_care:"دليل <em>العناية</em>",m_shipping:"الشحن و<em>الإرجاع</em>",m_contact:"تواصل",
-    hero_eye:"معلومات قانونية وخصوصية",hero_title:"معلومات الشركة، <em>الشروط</em> و<em>الخصوصية</em>",
-    hero_lead:"معلومات الشركة، إشعار المعاملات التجارية المحددة (اليابان)، وسياسة الخصوصية. نحترم بياناتك وثقتك.",
-    toc1:"① معلومات الشركة",toc2:"② المعاملات التجارية المحددة",toc3:"③ سياسة الخصوصية",
-    b_eye:"القسم 1",b_title:"معلومات <em>الشركة</em>",
-    b_intro:"Rion علامة تجارية مسجلة تديرها شركة My Art المحدودة، ومقرها هيروشيما، اليابان. جميع المجوهرات الحصرية مصنوعة يدوياً في مرسمنا الياباني.",
-    b_company:"اسم الشركة",b_company_v:"شركة My Art المحدودة (My Art Inc.)",
-    b_brand:"اسم العلامة التجارية",b_brand_v:"Rion",
-    
-    b_address:"العنوان المسجل",b_address_v:"〒733-0801<br>20-3 شينجو-تشو، نيشي-كو، هيروشيما-شي، هيروشيما، اليابان",
-    
-    b_email:"البريد الإلكتروني",b_email_v:'وسائل الاتصال الرئيسية: <a href="https://wa.me/819054621246" target="_blank">واتساب</a> · البريد الإلكتروني · <a href="https://instagram.com/rion.rings_official" target="_blank">Instagram DM</a>',
-    b_hours:"ساعات العمل",b_hours_v:"9:00 – 19:00 بتوقيت اليابان · الرد خارج هذه الساعات متاح عبر واتساب",
-    b_founded:"سنة التأسيس",b_founded_v:"2018، اليابان",
-    b_business:"النشاط",b_business_v:"تصميم وتصنيع وبيع مجوهرات تذكارية حصرية (مختومة بالشعر) من ذهب 18K وبلاتين Pt900 على الصعيد الدولي.",
-    c_eye:"القسم 2",c_title:"المعاملات <em>التجارية المحددة</em>",
-    c_intro:"الإفصاح المطلوب بموجب قانون المعاملات التجارية المحددة (特定商取引法) في اليابان. يتمتع المستهلكون في سنغافورة بحماية إضافية بموجب المرسوم بقانون اتحادي رقم 14/2023.",
-    c_seller:"البائع",c_seller_v:"شركة My Art المحدودة — انظر معلومات الشركة أعلاه",
-    c_price:"سعر البيع",c_price_v:"يتم تسعير كل قطعة بشكل فردي. الأسعار المعروضة في صفحة المجموعة <strong>شاملة DDP (التسليم مع دفع الرسوم)</strong> — ضريبة السلع والخدمات السنغافورية (GST 9%) مدفوعة مسبقاً من قبل Rion عبر DHL عند التخليص الجمركي. النطاق: SGD 6,800 إلى SGD 28,000+.",
-    c_addl:"الرسوم الإضافية",c_addl_v:"لا توجد على الطلبات القياسية. النقش (1–10 أحرف: + SGD 90، من الحرف الـ11: + SGD 9/حرف) وإعداد حجر الميلاد (+ SGD 35/حجر) اختياريان. رسوم التحويل المصرفي الدولي، إن وجدت، يتحملها العميل.",
-    c_payment:"طرق الدفع",c_payment_v:"<ul><li>بطاقة ائتمان (Visa · Mastercard · American Express · Diners Club · JCB — عبر رابط فاتورة Stripe الآمن)</li><li>تحويل مصرفي (دولي، SGD / USD / JPY مقبولة)</li></ul>",
-    c_timing:"وقت الدفع",c_timing_v:"تصدر الفاتورة بعد الموافقة على التصميم. الدفع الكامل مطلوب قبل بدء الإنتاج.",
-    c_delivery:"وقت التسليم",c_delivery_v:"حوالي 5.5 أشهر من تأكيد الطلب إلى التسليم — بما في ذلك إرسال طقم جمع الشعر، إرجاعك للشعر، الصياغة، والشحن.",
-    c_shipping:"تكلفة الشحن",c_shipping_v:"شحن دولي مجاني مؤمَّن عبر DHL Express. شروط DDP — لا رسوم عند التسليم.",
-    c_returns:"الإرجاع والاسترداد — غير مقبول",c_returns_v:"<strong>الإرجاع والاسترداد غير مقبولين</strong> بمجرد بدء الإنتاج. هذا مسموح به بموجب <strong>قانون حماية المستهلك (التجارة العادلة) في سنغافورة (CPFTA)</strong>، الذي يستثني السلع المصنوعة حسب الطلب والمخصصة (مثل المجوهرات التذكارية المختومة بالشعر) من حق التراجع القياسي لمدة 14 يوماً. كل قطعة مصنوعة بالكامل حسب طلبك الشخصي بشعرك وتصميمك المعتمد ومواصفاتك. في حالة وجود عيب تصنيع من جانبنا، سنعيد صنع القطعة مجاناً.",
-    c_defect:"سياسة العيوب",c_defect_v:"أبلغنا خلال 3 أيام من الاستلام بالصور عبر <strong>واتساب أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> أو Instagram DM</strong>. سنعيد صنع القطعة مجاناً في حالة وجود عيب تصنيع من جانبنا. <strong>لا نقدم استرداداً</strong> — إعادة الصنع فقط لعيوب التصنيع.",
-    c_force:"القوة القاهرة",c_force_v:"التأخيرات الناجمة عن أحداث القوة القاهرة (الكوارث الطبيعية، الحرب، الأوبئة، إضرابات الجمارك، إلخ) ليست من مسؤولية Rion. سنبلغك بأي تأخير على الفور ونستأنف الإنتاج في أقرب وقت ممكن. يمكن تمديد مواعيد التسليم بالاتفاق المتبادل.",
-    c_price_change:"تغييرات الأسعار",c_price_change_v:"قد تتغير الأسعار دون إشعار مسبق بسبب تكاليف المواد أو تقلبات العملة. الطلبات المؤكدة (الفواتير المدفوعة) قبل أي تغيير في السعر لا تتأثر — السعر الذي دفعته هو السعر النهائي.",
-    c_law:"القانون والاختصاص القضائي",c_law_v:"يخضع هذا العقد لقوانين اليابان. يحتفظ المستهلكون المقيمون في سنغافورة بحماية المرسوم بقانون اتحادي رقم 15/2020 بشأن حماية المستهلك. تُحل النزاعات بشكل أساسي عبر التفاوض على واتساب؛ وفي حال الإخفاق، تختص محاكم هيروشيما باليابان ما لم يقتضِ قانون المستهلك سنغافورةي خلاف ذلك.",
-    c_warranty:"الضمان",c_warranty_v:"خدمة تلميع مجانية مدى الحياة في مرسمنا الياباني. <strong>تكاليف الشحن ذهاباً وإياباً للخدمة بعد البيع يتحملها العميل.</strong> الإصلاحات الكبرى بأسعار خاصة.",
-    p_eye:"القسم 3",p_title:"سياسة <em>الخصوصية</em>",
-    p_intro:"شركة My Art المحدودة (Rion) ملتزمة بحماية معلوماتك الشخصية. نعمل بموجب قانون اليابان لحماية المعلومات الشخصية (APPI) ونحترم قانون حماية البيانات الشخصية لسنغافورة لعام 2012 (PDPA).",
-    p1_t:"1. المعلومات التي نجمعها",p1_b:"لكل طلب، نجمع:",
-    p1_l1:"الاسم وعنوان الشحن ورقم الهاتف والبريد الإلكتروني (أو رقم واتساب)",
-    p1_l2:"الشعر الذي تقدمها للإغلاق في الجوهرة",
-    p1_l3:"تفاصيل تأكيد الدفع (لا نخزن أرقام البطاقات)",
-    p1_l4:"صور عملية إغلاق الشعر (تُشارك معك، تُحتفظ كسجلات إنتاج)",
-    p1_l5:"سجلات الاتصال عبر واتساب وإنستغرام والبريد الإلكتروني",
-    p2_t:"2. كيف نستخدم معلوماتك",
-    p2_l1:"تصنيع وتسليم جوهرتك الحصرية",
-    p2_l2:"إرسال تقارير صور عملية الإنتاج",
-    p2_l3:"معالجة شحن DHL والإقرارات الجمركية سنغافورةية",
-    p2_l4:"إصدار الفواتير ومعالجة المدفوعات",
-    p2_l5:"تقديم الرعاية اللاحقة (خدمة التلميع مدى الحياة)",
-    p2_l6:"الرد على استفساراتك",
-    p3_t:"3. مشاركة الأطراف الثالثة",p3_b:"نشارك المعلومات فقط مع:",
-    p3_l1:"<strong>DHL Express</strong> — للشحن الدولي والجمارك (الاسم، العنوان، الهاتف)",
-    p3_l2:"<strong>معالجات الدفع</strong> — لتسوية الفواتير (مشفرة)",
-    p3_l3:"<strong>حرفيونا اليابانيون</strong> — للإنتاج (لا تُشارك العناوين، فقط الأسماء الأولى وتفاصيل الطلب)",
-    p3_b2:"لا نبيع أو نؤجر أو نشارك معلوماتك الشخصية أبداً لأغراض التسويق.",
-    p4_t:"4. التعامل مع الشعر",
-    p4_b:"يُعامل الشعر بأقصى احترام وعناية. الشعر الفائض المتبقي بعد الإغلاق يُعاد إليك مع القطعة المكتملة في حاوية مخصصة. لا يُتخلص من أي شيء أبداً.",
-    p_photo_t:"5. حقوق التصوير والصور",p_photo_b:"حقوق الطبع والنشر للصور الملتقطة أثناء عملية الإغلاق وللقطعة المكتملة مملوكة لشركة My Art Inc. تُشارك معك كجزء من تقرير الصور لسجلاتك ومشاهدتك الشخصية. <strong>يمكنك مشاركة هذه الصور على وسائل التواصل الاجتماعي الشخصية</strong> مع الإشارة إلى Rion (@rion.rings_official). الاستخدام للأغراض التجارية أو منصات إعادة البيع أو المواد التسويقية للعلامات التجارية المنافسة يتطلب موافقة كتابية مسبقة من Rion.",
-    p_intl_t:"6. النقل الدولي للبيانات (سنغافورة → اليابان)",p_intl_b:"تُخزن معلوماتك الشخصية وتُعالج في مرسمنا في اليابان. بتقديم طلب، فإنك توافق على النقل الدولي لبياناتك من بلد إقامتك (سنغافورة / غيرها) إلى اليابان. اليابان معترف بها كدولة تقدم مستوى كافٍ من حماية البيانات الشخصية بموجب قانون حماية البيانات الشخصية لسنغافورة لعام 2012 (PDPA). يوفر قانون اليابان لحماية المعلومات الشخصية (APPI) ضمانات معادلة.",
-    p5_t:"7. الاحتفاظ بالبيانات",
-    p5_b:"تُحتفظ سجلات الطلب (بما في ذلك صور عملية الإغلاق) لمدة 10 سنوات لأغراض الضمان والرعاية اللاحقة. يمكنك طلب الحذف المبكر كتابياً.",
-    p6_t:"8. حقوقك",p6_b:"لديك الحق في:",
-    p6_l1:"الوصول إلى المعلومات الشخصية التي نحتفظ بها عنك",
-    p6_l2:"تصحيح أو تحديث المعلومات غير الدقيقة",
-    p6_l3:"طلب حذف بياناتك (مع مراعاة متطلبات الاحتفاظ القانونية)",
-    p6_l4:"سحب الموافقة على المعالجة (حيثما ينطبق)",
-    p6_b2:"لممارسة هذه الحقوق، تواصل معنا عبر واتساب.",
-    p7_t:"9. الأمان",
-    p7_b:"نستخدم تدابير أمنية بمعايير الصناعة بما في ذلك HTTPS والاتصالات المشفرة والأنظمة الداخلية المحدودة الوصول. تُخزن الشعر والطلبات المادية في مرسمنا الياباني الآمن.",
-    p8_t:"10. ملفات تعريف الارتباط والتحليلات",
-    p8_b:"يستخدم موقعنا الحد الأدنى من ملفات تعريف الارتباط لتفضيل اللغة. لا نستخدم ملفات تعريف ارتباط تتبع أو إعلانات من أطراف ثالثة.",
-    p9_t:"11. التواصل بشأن مخاوف الخصوصية",
-    p9_b:"للأسئلة أو الطلبات المتعلقة بالخصوصية، تواصل معنا عبر واتساب أو على عنواننا المسجل (انظر معلومات الشركة أعلاه).",
-    updated:"آخر تحديث: مايو 2026",
-    cta_title:"أسئلة حول <em>سياساتنا</em>؟",
-    cta_body:"يسعدنا توضيح أي مما سبق. تواصل معنا عبر واتساب بالإنجليزية أو العربية أو اليابانية.",
-    cta_wa:"راسلنا عبر واتساب",
-    footer_p:"مجوهرات تذكارية حصرية، مصنوعة يدوياً بالكامل في اليابان. شعرة واحدة. جوهرة واحدة. حب واحد — لك إلى الأبد.",
-    f_explore:"استكشف",f_help:"المساعدة",f_connect:"تواصل",
-    f_home:"الرئيسية",f_collection:"المجموعة",f_about:"عن Rion",f_process:"كيف يعمل",f_care:"دليل العناية",f_shipping:"الشحن والإرجاع",f_legal:"معلومات قانونية وخصوصية"
-  }
+  ms:{nav_cta:"Tempah Sekarang",menu_eyebrow:"Navigasi",menu_cta:"Hantar Mesej kepada Kami di WhatsApp",m_home:"Laman Utama",m_collection:"Koleksi",m_about:"Tentang <em>Rion</em>",m_care:"<em>Panduan</em> Penjagaan",m_shipping:"Penghantaran &amp; <em>Pemulangan</em>",m_contact:"Hubungi",hero_eye:"Undang-undang & Privasi",hero_title:"Maklumat Perniagaan, <em>Terma</em> &amp; <em>Privasi</em>",hero_lead:"Maklumat perniagaan, notis transaksi komersial yang ditetapkan (Jepun), dan dasar privasi kami. Kami menghormati data dan kepercayaan anda.",toc1:"① Maklumat Perniagaan",toc2:"② Transaksi Komersial yang Ditetapkan",toc3:"③ Dasar Privasi",b_eye:"Bahagian 1",b_title:"<em>Maklumat</em> Perniagaan",b_intro:"Rion ialah jenama berdaftar yang dikendalikan oleh My Art Inc., berpangkalan di Hiroshima, Jepun. Semua perhiasan tersuai dibuat dengan tangan di bengkel Jepun kami.",b_company:"Nama Syarikat",b_company_v:"My Art Inc. (My Art Inc.)",b_brand:"Nama Jenama",b_brand_v:"Rion",b_address:"Alamat Berdaftar",b_address_v:"〒733-0801<br>20-3 Shinjo-cho, Nishi-ku, Hiroshima-shi, Hiroshima, Jepun",b_email:"E-mel / Hubungan",b_email_v:'Hubungan utama: <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> · E-mel · <a href="https://instagram.com/rion.rings_official" target="_blank">Instagram DM</a>',b_hours:"Waktu Perniagaan",b_hours_v:"9:00 – 19:00 JST · Respons di luar waktu juga tersedia melalui WhatsApp",b_founded:"Diasaskan",b_founded_v:"2018, Jepun",b_business:"Perniagaan",b_business_v:"Reka bentuk, pembuatan, dan jualan antarabangsa perhiasan peringatan tersuai (termeterai rambut) dalam emas K18 dan platinum Pt900.",c_eye:"Bahagian 2",c_title:"<em>Transaksi</em> Komersial yang Ditetapkan",c_intro:"Pendedahan yang diperlukan di bawah Akta Transaksi Komersial yang Ditetapkan (特定商取引法), Jepun. Pengguna Singapura turut dilindungi di bawah Akta Transaksi Elektronik.",c_seller:"Penjual",c_seller_v:"My Art Inc. — lihat Maklumat Perniagaan di atas",c_price:"Harga Jualan",c_price_v:"Setiap perhiasan diberi harga secara individu. Harga yang dipaparkan pada halaman Koleksi adalah <strong>termasuk DDP (Delivered Duty Paid)</strong> — GST import Singapura (9%) dibayar terlebih dahulu oleh Rion melalui DHL semasa pelepasan kastam. Julat: SGD 6,800 hingga SGD 28,000+.",c_addl:"Yuran Tambahan",c_addl_v:"Tiada untuk tempahan standard. Ukiran (1–10 aksara: + SGD 90, dari aksara ke-11: + SGD 9 setiap satu) dan tetapan batu kelahiran (+ SGD 35/batu) adalah pilihan. Yuran pemindahan bank antarabangsa, jika ada, ditanggung oleh pelanggan.",c_payment:"Kaedah Pembayaran",c_payment_v:"<ul><li>Kad kredit (Visa · Mastercard · American Express · Diners Club · JCB — melalui pautan invois Stripe yang selamat)</li><li>Pemindahan bank (antarabangsa, SGD / USD / JPY diterima)</li></ul>",c_timing:"Masa Pembayaran",c_timing_v:"Invois dikeluarkan selepas reka bentuk diluluskan. Pembayaran penuh diperlukan sebelum penghasilan bermula.",c_delivery:"Masa Penghantaran",c_delivery_v:"Kira-kira 5.5 bulan dari pengesahan tempahan hingga penghantaran — termasuk penghantaran kit pengumpulan rambut, pemulangan rambut anda, penghasilan, dan penghantaran.",c_shipping:"Kos Penghantaran",c_shipping_v:"Penghantaran berinsurans percuma ke seluruh dunia melalui DHL Express. Terma DDP — tiada caj semasa penghantaran.",c_returns:"Pemulangan &amp; Bayaran Balik — Tidak Diterima",c_returns_v:"<strong>Pemulangan dan bayaran balik tidak diterima</strong> setelah penghasilan bermula. Ini dibenarkan di bawah <strong>Akta Perlindungan Pengguna (Perdagangan Adil) Singapura (CPFTA)</strong>, yang mengecualikan barangan tempahan khas dan diperibadikan (seperti perhiasan peringatan termeterai rambut) daripada hak tempoh penyejukan 14 hari standard. Setiap perhiasan dibuat sepenuhnya mengikut tempahan peribadi anda dengan rambut anda, reka bentuk yang anda luluskan, dan spesifikasi anda. Sekiranya berlaku kecacatan pembuatan daripada pihak kami, kami akan membuat semula perhiasan tersebut tanpa sebarang caj.",c_defect:"Polisi Kecacatan",c_defect_v:"Maklumkan kepada kami dalam masa 3 hari selepas penerimaan berserta foto melalui <strong>WhatsApp, <a href='mailto:info@art-rings.com'>e-mel</a>, atau Instagram DM</strong>. Kami akan membuat semula perhiasan tersebut tanpa sebarang caj. <strong>Bayaran balik tidak ditawarkan</strong> — hanya pembuatan semula untuk kecacatan pembuatan daripada pihak kami.",c_force:"Force Majeure",c_force_v:"Kelewatan yang disebabkan oleh peristiwa force majeure (bencana alam, peperangan, wabak, mogok kastam, dan lain-lain) bukanlah tanggungjawab Rion. Kami akan memaklumkan sebarang kelewatan dengan segera dan menyambung semula penghasilan secepat mungkin. Tarikh penghantaran boleh dilanjutkan melalui persetujuan bersama.",c_price_change:"Perubahan Harga",c_price_change_v:"Harga boleh berubah tanpa notis disebabkan kos bahan atau turun naik mata wang. Tempahan yang telah disahkan (invois dibayar) sebelum sebarang perubahan harga tidak terjejas — harga yang anda bayar adalah harga muktamad.",c_law:"Undang-undang Yang Mentadbir &amp; Bidang Kuasa",c_law_v:"Kontrak ini ditadbir oleh undang-undang Jepun. Pengguna yang menetap di Singapura tetap mempunyai perlindungan di bawah Akta Perlindungan Pengguna (Perdagangan Adil) Singapura (CPFTA). Pertikaian diselesaikan terutamanya melalui rundingan WhatsApp; jika gagal, mahkamah Hiroshima, Jepun mempunyai bidang kuasa kecuali undang-undang pengguna Singapura menetapkan sebaliknya.",c_warranty:"Waranti",c_warranty_v:"Perkhidmatan penggilapan seumur hidup percuma di bengkel Jepun kami. <strong>Penghantaran pergi-balik untuk perkhidmatan susulan ditanggung oleh pelanggan.</strong> Pembaikan besar disebut harga secara peribadi.",p_eye:"Bahagian 3",p_title:"<em>Dasar</em> Privasi",p_intro:"My Art Inc. (Rion) komited untuk melindungi maklumat peribadi anda. Kami beroperasi di bawah Akta Perlindungan Maklumat Peribadi Jepun (個人情報保護法 / APPI) dan menghormati Akta Perlindungan Data Peribadi Singapura 2012 (PDPA).",p1_t:"1. Maklumat yang Kami Kumpulkan",p1_b:"Untuk setiap tempahan, kami mengumpul:",p1_l1:"Nama, alamat penghantaran, nombor telefon, e-mel (atau nombor WhatsApp)",p1_l2:"Rambut yang anda berikan untuk dimeteraikan dalam perhiasan",p1_l3:"Butiran pengesahan pembayaran (kami tidak menyimpan nombor kad)",p1_l4:"Foto proses pemeteraian rambut (dikongsi dengan anda, disimpan sebagai rekod penghasilan)",p1_l5:"Rekod komunikasi melalui WhatsApp, Instagram, atau e-mel",p2_t:"2. Cara Kami Menggunakan Maklumat Anda",p2_l1:"Menghasilkan dan menghantar perhiasan tersuai anda",p2_l2:"Menghantar laporan foto proses penghasilan",p2_l3:"Mengendalikan penghantaran DHL dan pengisytiharan kastam Singapura",p2_l4:"Mengeluarkan invois dan memproses pembayaran",p2_l5:"Menyediakan penjagaan selepas (perkhidmatan penggilapan seumur hidup)",p2_l6:"Membalas pertanyaan anda",p3_t:"3. Perkongsian Pihak Ketiga",p3_b:"Kami berkongsi maklumat hanya dengan:",p3_l1:"<strong>DHL Express</strong> — untuk penghantaran antarabangsa dan kastam (nama, alamat, telefon)",p3_l2:"<strong>Pemproses pembayaran</strong> — untuk penyelesaian invois (disulitkan)",p3_l3:"<strong>Tukang seni Jepun kami</strong> — untuk penghasilan (tiada alamat dikongsi; hanya nama pertama dan butiran tempahan)",p3_b2:"Kami tidak akan menjual, menyewa, atau berkongsi maklumat peribadi anda untuk tujuan pemasaran.",p4_t:"4. Pengendalian Rambut",p4_b:"Rambut dilayan dengan penuh hormat dan teliti. Lebihan rambut selepas pemeteraian akan dipulangkan kepada anda bersama perhiasan siap dalam bekas khas. Tiada apa-apa yang akan dibuang.",p_photo_t:"5. Fotografi &amp; Hak Imej",p_photo_b:"Foto yang diambil semasa proses pemeteraian dan foto perhiasan siap adalah hak cipta My Art Inc. Foto-foto ini dikongsi dengan anda sebagai sebahagian daripada laporan foto untuk rekod dan tontonan peribadi anda. <strong>Anda boleh berkongsi foto-foto ini di media sosial peribadi</strong> dengan kredit kepada Rion (@rion.rings_official). Penggunaan untuk tujuan komersial, platform jualan semula, atau bahan pemasaran jenama pesaing memerlukan kebenaran bertulis terlebih dahulu daripada Rion.",p_intl_t:"6. Pemindahan Data Antarabangsa (Singapura → Jepun)",p_intl_b:"Maklumat peribadi anda disimpan dan diproses di bengkel kami di Jepun. Dengan membuat tempahan, anda bersetuju dengan pemindahan antarabangsa data anda daripada negara kediaman anda (Singapura / lain-lain) ke Jepun. Jepun diiktiraf sebagai menyediakan tahap perlindungan data peribadi yang mencukupi di bawah Akta Perlindungan Data Peribadi Singapura 2012 (PDPA). Akta Perlindungan Maklumat Peribadi Jepun (APPI) menyediakan perlindungan yang setara.",p5_t:"7. Penyimpanan Data",p5_b:"Rekod tempahan (termasuk foto proses pemeteraian) disimpan selama 10 tahun untuk tujuan waranti dan penjagaan selepas. Anda boleh memohon pemadaman lebih awal secara bertulis.",p6_t:"8. Hak Anda",p6_b:"Anda mempunyai hak untuk:",p6_l1:"Mengakses maklumat peribadi yang kami simpan tentang anda",p6_l2:"Membetulkan atau mengemas kini maklumat yang tidak tepat",p6_l3:"Memohon pemadaman data anda (tertakluk kepada keperluan penyimpanan undang-undang)",p6_l4:"Menarik balik persetujuan untuk pemprosesan (jika berkenaan)",p6_b2:"Untuk menggunakan hak ini, hubungi kami melalui WhatsApp.",p7_t:"9. Keselamatan",p7_b:"Kami menggunakan langkah keselamatan standard industri termasuk HTTPS, komunikasi yang disulitkan, dan sistem dalaman dengan akses terhad. Rambut dan tempahan fizikal disimpan di bengkel Jepun kami yang selamat.",p8_t:"10. Kuki &amp; Analitik",p8_b:"Laman web kami menggunakan kuki minimum untuk keutamaan bahasa. Kami tidak menggunakan kuki penjejakan atau pengiklanan pihak ketiga.",p9_t:"11. Hubungi untuk Kebimbangan Privasi",p9_b:"Untuk soalan atau permintaan berkaitan privasi, hubungi kami melalui WhatsApp atau di alamat berdaftar kami (lihat Maklumat Perniagaan di atas).",updated:"Kemas kini terakhir: Mei 2026",cta_title:"Soalan tentang <em>polisi</em> kami?",cta_body:"Kami sedia menjelaskan mana-mana perkara di atas. Hubungi kami di WhatsApp dalam Bahasa Inggeris, Arab, atau Jepun.",cta_wa:"Hantar Mesej kepada Kami di WhatsApp",footer_p:"Perhiasan peringatan tersuai, dibuat sepenuhnya dengan tangan di Jepun. Satu rambut. Satu perhiasan. Satu cinta — milik anda, selamanya.",f_explore:"Terokai",f_help:"Bantuan",f_connect:"Hubungkan",f_home:"Laman Utama",f_collection:"Koleksi",f_about:"Tentang Rion",f_process:"Cara Ia Berfungsi",f_care:"Panduan Penjagaan",f_shipping:"Penghantaran & Pemulangan",f_legal:"Undang-undang & Privasi"}
 };
 
 function setLang(lang){
@@ -685,7 +606,7 @@ function setLang(lang){
   document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
   document.body.className = 'lang-' + lang;
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir='ltr';
   const t = T[lang];
   if(!t) return;
   document.querySelectorAll('[data-i18n]').forEach(el=>{

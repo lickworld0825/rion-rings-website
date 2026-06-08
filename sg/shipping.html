@@ -32,8 +32,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
@@ -214,7 +212,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta">Order Now</a>
@@ -244,7 +242,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
@@ -521,41 +519,7 @@ const T={
     cta_body:"Whether you're in Singapore or elsewhere — message us on WhatsApp and we'll guide you through every step.",
     cta_wa:"Message Us on WhatsApp",cta_contact:"Contact Us"
   },
-  ar:{
-    menu_eyebrow:"القائمة",
-    hero_eyebrow:"الشحن والإرجاع",
-    hero_title:"مجاناً، مؤمَّن،<br><em>من باب إلى باب.</em>",
-    hero_lead:"كل قطعة Rion تُشحن من اليابان عبر DHL Express بشروط DDP — جميع رسوم الاستيراد وضريبة القيمة المضافة مدفوعة مسبقاً من قبلنا. لا تدفع شيئاً إضافياً عند التسليم. نشحن حالياً إلى سنغافورة. للدول الأخرى، تواصلوا معنا.",
-    ddp1:"رسوم إضافية<br>عند التسليم",ddp2:"مؤمَّن<br>من DHL",ddp4:"منطقة<br>التوصيل",
-    tl_title:"كيف <em>يعمل.</em>",tl_body:"رحلة الشحن الكاملة من تأكيد الطلب إلى التسليم — كلها تدار من قبل Rion.",
-    t1_t:"<em>طقم جمع الشعر</em> يُشحن من اليابان",t1_b:"بعد تأكيد طلبك ودفع الفاتورة، نرسل طقم جمع شعر آمن إلى عنوانك في سنغافورة عبر بريد سنغافورة (SingPost). يحتوي الطقم على ظرف مختوم، مقياس خاتم (مقاسات US من 4 إلى 12)، تعليمات ثنائية اللغة، وملصق إرجاع مدفوع.",t1_meta:"اليابان → سنغافورة · مجاناً",
-    t2_t:"<em>تُرجعون</em> الشعر إلينا",t2_b:"ضعوا الشعر في الظرف المختوم واتركوا الطرد في أي مكتب بريد (SingPost) باستخدام ملصقنا المدفوع. جميع الإقرارات الجمركية مكتملة مسبقاً من قبلنا.",t2_meta:"سنغافورة → اليابان · مجاناً",
-    t3_t:"الصياغة في <em>مرسمنا الياباني</em>",t3_b:"يصل الشعر إلى مرسمنا في اليابان. تبدأ الصياغة. نرسل صوراً في كل مرحلة عبر واتساب — بما في ذلك قبل وأثناء وبعد عملية إغلاق الشعر.",t3_meta:"في اليابان · حوالي 5.5 أشهر",
-    t4_t:"جوهرتك المكتملة <em>تصل</em>",t4_b:"تُشحن عبر DHL Global Services في صندوق Rion الحصري المصنوع يدوياً مع شهادة الأصالة. مؤمَّنة بالكامل. DDP — جميع رسوم الاستيراد والضرائب مدفوعة مسبقاً من Rion عبر DHL.",t4_meta:"اليابان → سنغافورة · DDP · مؤمَّنة",
-    cov_title:"أين <em>نشحن.</em>",cov_body:"شحن DDP مجاني إلى سنغافورة. للدول الأخرى، تواصلوا معنا عبر واتساب.",
-    cov1_t:"سنغافورة",cov1_b:"جزيرة سنغافورة بالكامل — جميع المناطق البريدية",cov1_m:"DDP · ضريبة GST مدفوعة مسبقاً",
-    cov_other:"للدول الأخرى — يرجى <a href=\"https://wa.me/819054621246\" style=\"color:var(--gold-dark)\">التواصل معنا عبر واتساب</a>.",
-    fees_title:"ما <em>يتضمن.</em>",fees_body:"كل ما يلي مضمّن في السعر المُدرج. لا مفاجآت عند الباب.",
-    th_item:"البند",th_status:"من يدفع",th_notes:"ملاحظات",
-    fee1_t:"طقم جمع الشعر (اليابان → سنغافورة)",fee1_w:"Rion",fee1_n:"يُرسل عبر SingPost مجاناً",
-    fee2_t:"إرجاع الشعر (سنغافورة → اليابان)",fee2_w:"Rion",fee2_n:"ملصق إرجاع مدفوع مضمّن",
-    fee3_t:"شحن الجوهرة المكتملة (اليابان → سنغافورة)",fee3_w:"Rion",fee3_n:"DHL Global Services، مؤمَّن بالكامل",
-    fee4_t:"ضريبة السلع والخدمات السنغافورية (GST 9%)",fee4_w:"Rion",fee4_n:"DDP — يتحملها Rion بالكامل",
-    fee6_t:"الأوراق الجمركية",fee6_w:"Rion",fee6_n:"مكتملة مسبقاً، لا شيء عليك تقديمه",
-    fee7_t:"تأمين الشحن",fee7_w:"Rion",fee7_n:"قيمة القطعة كاملة، مدعوم من DHL",
-    ret_title:"الإرجاع و<em>العيوب.</em>",ret_body:"لأن كل قطعة Rion حصرية، يرجى قراءة هذه الشروط بعناية قبل الطلب.",
-    ret1_t:"سياسة <em>الطلب الحصري</em>",
-    ret1_p:"كل جوهرة Rion مصنوعة بالكامل حسب طلبك الشخصي — تتضمن شعرك وتصميمك المختار ومواصفاتك المعتمدة.",
-    ret1_p2:"قبل بدء الإنتاج، نحصل على موافقتك الكتابية على التصميم والمواد والمواصفات. بمجرد الموافقة، يبدأ الإنتاج.",
-    ret1_l1:"لا إلغاءات بعد بدء الإنتاج",ret1_l2:"لا استرداد أو إرجاع للقطع الحصرية المكتملة",ret1_l4:"دفع الفاتورة يؤكد الطلب",
-    ret2_t:"<em>عيوب</em> التصنيع",
-    ret2_p:"إذا اكتشفت عيباً في التصنيع من جانبنا، سنعيد صنع القطعة مجاناً — بما في ذلك الشحن والجمارك لإعادة الصنع. <strong>لا نقدم استرداداً.</strong>",
-    ret2_p2:"تواصل معنا عبر <strong>واتساب أو <a href='mailto:info@art-rings.com'>البريد الإلكتروني</a> أو Instagram DM</strong> خلال 3 أيام من استلام جوهرتك مع صور للمشكلة. نرد شخصياً.",
-    ret2_l1:"إعادة صنع مجانية لعيوب التصنيع",ret2_l2:"جميع رسوم الشحن والجمارك تتحملها Rion",ret2_l3:"تواصل خلال 3 أيام من الاستلام (واتساب · البريد الإلكتروني · Instagram DM)",ret2_l4:"خدمة التلميع مدى الحياة مجانية (يتحمل العميل الشحن)",
-    cta_title:"أسئلة عن <em>الشحن؟</em>",
-    cta_body:"سواء كنت في سنغافورة أو غيرها — راسلنا عبر واتساب وسنرشدك في كل خطوة.",
-    cta_wa:"راسلنا عبر واتساب",cta_contact:"تواصل معنا"
-  },
+  ms:{menu_eyebrow:"Navigasi",hero_eyebrow:"Penghantaran & Pemulangan",hero_title:"Percuma, berinsurans,<br><em>dari pintu ke pintu.</em>",hero_lead:"Setiap perhiasan Rion dihantar dari Jepun melalui DHL Express dengan terma DDP — semua GST import dibayar terlebih dahulu oleh kami. Anda tidak membayar apa-apa lagi semasa penghantaran. Kini menghantar ke Singapura. Untuk negara lain, sila hubungi kami.",ddp1:"Caj Tambahan<br>semasa Penghantaran",ddp2:"Diinsuranskan<br>oleh DHL",ddp4:"Kawasan<br>Penghantaran",tl_title:"Cara ia <em>berfungsi.</em>",tl_body:"Perjalanan penghantaran lengkap dari pengesahan tempahan hingga penghantaran — dikendalikan sepenuhnya oleh Rion.",t1_t:"<em>Kit pengumpulan rambut</em> dihantar dari Jepun",t1_b:"Setelah tempahan anda disahkan dan invois dibayar, kami akan menghantar kit pengumpulan rambut yang selamat ke alamat anda di Singapura melalui SingPost. Kit ini termasuk sampul termeterai, tolok cincin (saiz US 1–12), arahan dwibahasa, dan label pemulangan prabayar.",t1_meta:"Jepun → Singapura · Percuma",t2_t:"Anda <em>memulangkan</em> rambut kepada kami",t2_b:"Letakkan rambut dalam sampul termeterai dan hantar bungkusan tersebut di mana-mana pejabat pos (SingPost) menggunakan label prabayar kami. Semua pengisytiharan kastam telah dilengkapkan terlebih dahulu oleh kami — tiada apa-apa untuk anda tulis atau uruskan.",t2_meta:"Singapura → Jepun · Percuma",t3_t:"Penghasilan di <em>bengkel Jepun</em> kami",t3_b:"Rambut tiba di bengkel kami di Jepun. Penghasilan bermula. Kami akan menghantar foto pada setiap pencapaian penting melalui WhatsApp — termasuk sebelum, semasa, dan selepas proses pemeteraian rambut.",t3_meta:"Di Jepun · Kira-kira 5.5 bulan",t4_t:"Perhiasan siap anda <em>tiba</em>",t4_b:"Dihantar melalui DHL Global Services dalam kotak eksklusif Rion buatan tangan berserta Sijil Keaslian. Berinsurans sepenuhnya. DDP — semua duti dan cukai import dibayar terlebih dahulu oleh Rion melalui DHL. Anda tidak membayar apa-apa lagi di pintu rumah.",t4_meta:"Jepun → Singapura · DDP · Berinsurans",cov_title:"Tempat kami <em>menghantar.</em>",cov_body:"Penghantaran DDP percuma ke Singapura. Untuk negara lain, hubungi kami melalui WhatsApp.",cov1_t:"Singapura",cov1_b:"Seluruh pulau — semua daerah pos",cov1_m:"DDP · GST dibayar terlebih dahulu",cov_other:"Untuk negara lain — sila <a href=\"https://wa.me/819054621246\" style=\"color:var(--gold-dark)\">hubungi kami melalui WhatsApp</a>.",fees_title:"Apa yang <em>termasuk.</em>",fees_body:"Semua yang di bawah termasuk dalam harga yang disenaraikan. Tiada kejutan di pintu rumah.",th_item:"Item",th_status:"Siapa Bayar",th_notes:"Nota",fee1_t:"Kit pengumpulan rambut (Jepun → Singapura)",fee1_w:"Rion",fee1_n:"Dihantar melalui SingPost, percuma",fee2_t:"Pemulangan rambut (Singapura → Jepun)",fee2_w:"Rion",fee2_n:"Label pemulangan prabayar disertakan",fee3_t:"Penghantaran perhiasan siap (Jepun → Singapura)",fee3_w:"Rion",fee3_n:"DHL Global Services, berinsurans sepenuhnya",fee4_t:"GST import Singapura (9%)",fee4_w:"Rion",fee4_n:"DDP — Ditanggung oleh Rion",fee6_t:"Kerja kertas kastam",fee6_w:"Rion",fee6_n:"Sudah dilengkapkan; tiada apa-apa untuk anda failkan",fee7_t:"Insurans penghantaran",fee7_w:"Rion",fee7_n:"Nilai penuh perhiasan, disokong DHL",ret_title:"Pemulangan &amp; <em>Kecacatan.</em>",ret_body:"Oleh kerana setiap perhiasan Rion adalah tersuai, sila baca terma ini dengan teliti sebelum menempah.",ret1_t:"<em>Polisi Tempahan</em> Tersuai",ret1_p:"Setiap perhiasan Rion dibuat sepenuhnya mengikut tempahan peribadi anda — menggabungkan rambut anda, reka bentuk pilihan anda, dan spesifikasi yang anda luluskan.",ret1_p2:"Sebelum penghasilan bermula, kami akan mendapatkan kelulusan bertulis anda terhadap reka bentuk, bahan, dan spesifikasi. Setelah diluluskan, penghasilan bermula.",ret1_l1:"Tiada pembatalan selepas penghasilan bermula",ret1_l2:"Tiada bayaran balik atau pemulangan untuk perhiasan tersuai yang telah siap",ret1_l4:"Pembayaran invois mengesahkan tempahan",ret2_t:"<em>Kecacatan</em> Pembuatan",ret2_p:"Jika anda menemui kecacatan pembuatan daripada pihak kami, kami akan membuat semula perhiasan tersebut tanpa sebarang caj — termasuk penghantaran dan kastam untuk pembuatan semula. <strong>Bayaran balik tidak ditawarkan.</strong>",ret2_p2:"Hubungi kami melalui <strong>WhatsApp, <a href='mailto:info@art-rings.com'>e-mel</a>, atau Instagram DM</strong> dalam masa 3 hari selepas menerima perhiasan anda berserta foto isu tersebut. Kami akan membalas secara peribadi.",ret2_l1:"Pembuatan semula percuma untuk kecacatan pembuatan",ret2_l2:"Semua penghantaran &amp; kastam ditanggung oleh Rion",ret2_l3:"Hubungi dalam masa 3 hari selepas penerimaan (WhatsApp · E-mel · Instagram DM)",ret2_l4:"Perkhidmatan penggilapan seumur hidup percuma (pelanggan membayar penghantaran)",cta_title:"Soalan tentang <em>penghantaran?</em>",cta_body:"Sama ada anda berada di Singapura atau di tempat lain — hantar mesej kepada kami di WhatsApp dan kami akan membimbing anda melalui setiap langkah.",cta_wa:"Hantar Mesej kepada Kami di WhatsApp",cta_contact:"Hubungi Kami"},
   ja:{
     menu_eyebrow:"メニュー",
     hero_eyebrow:"配送・返品",
@@ -598,7 +562,7 @@ function setLang(lang){
   document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
   document.body.className='lang-'+lang;
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir='ltr';
   const t=T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');

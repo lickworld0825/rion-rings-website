@@ -32,8 +32,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 /* NAV */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
@@ -222,7 +220,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta">Order Now</a>
@@ -252,7 +250,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
@@ -539,50 +537,7 @@ const T={
     cta_body:"We are happy to answer anything — no question is too small. Message us on WhatsApp or browse our full FAQ.",
     cta_wa:"Message Us on WhatsApp",cta_faq:"Read FAQ"
   },
-  ar:{
-    menu_eyebrow:"القائمة",
-    hero_eyebrow:"عملية الختم",
-    hero_title:"كيف يصبح الشعر<br><em>جوهرة.</em>",
-    hero_lead:"كل قطعة Rion تبدأ بخصلة واحدة. ما يحدث بعد ذلك هو عملية دقة ورعاية وديمومة لا رجعة فيها — تُنفَّذ بالكامل على يد حرفيين مهرة في مرسمنا الياباني.",
-    concept_eyebrow:"ليست ميدالية فتحية",
-    concept_title:"الشعر مختوم <em>داخل</em> الجوهرة.",
-    concept_p1:"Rion ليست ميدالية فتحية. الشعر لا يُوضع خلف زجاج، ولا يُحفظ في حجرة يمكن فتحها.",
-    concept_p2:"في مرسمنا، يختم حرفي ماهر كل خصلة مباشرة في الإطار — محاطة بالراتنج الدقيق، مثبّتة في ذهب 18 قيراطاً أو بلاتين، محكمة ودائمة. يصبح الشعر جزءاً من الجوهرة نفسها. لا يُرى من الخارج. إنه يعيش هناك، إلى الأبد، قريباً من من يرتديه.",
-    process_title:"الست <em>خطوات.</em>",
-    process_lead:"من لحظة وصول طقم الجمع إلى اليابان حتى لحظة استعداد جوهرتك المنتهية للشحن.",
-    s1_t:"<em>وصول</em> الشعر",
-    s1_b:"يصل طقم الجمع المختوم إلى مرسمنا الياباني عبر البريد. بداخله شعر من تحب — محفوظ بعناية في المظروف المحكم المرفق. حتى خصلة واحدة أقل من 1 سم كافية. نتعامل معه منذ لحظة وصوله بنفس الرعاية التي نوليها للجوهرة نفسها.",
-    s2_t:"<em>الاستعداد</em> للإنتاج",
-    s2_b:"يُؤكَّد التصميم، وتُختار المواد، وتُحدَّد جميع المواصفات. يراجع الحرفي الذي سيصنع قطعتك كل تفاصيل طلبك قبل بدء أي عمل. لا يُتابَع حتى نتيقن من أن القطعة ستكون بالضبط كما تصوّرتِها.",
-    s3_t:"<em>إنتاج</em> الجوهرة",
-    s3_b:"يصنع حرفيونا المهرة القطعة من ذهب 18 قيراطاً أو بلاتين. كل منحنى ونسبة وسطح يُشكَّل وفق تصميمك المعتمد — سواء كان خاتماً أو قلادة أو تحفة مخصصة بالكامل. يجب أن تكتمل القطعة وتكون مثالية قبل ختم الشعر بداخلها.",
-    s4_t:"ختم الشعر <em>بالداخل</em>",
-    s4_b:"يُحفر ثقب صغير دقيق في الجوهرة. يُوضع الشعر بداخله يدوياً، ثم يُغلق الفتحة بغطاء من نفس المعدن — ذهب 18K أو بلاتين Pt900. ثم يُختم الجوهرة هرمسياً: محكم الغلق، دائم، ومصمم للصمود أجيالاً. بمجرد الختم، لا يمكن فتح الحجرة دون إتلاف القطعة. هذا مقصود: الختم وعد.",
-    s5_t:"<em>تقرير</em> الصور",
-    s5_b:"قبل التشطيب النهائي، نصوّر الجوهرة المختومة — قبل وأثناء وبعد الختم — ونرسل السجل الكامل إليك عبر واتساب. هذه الصور لك تحتفظين بها. كثيرات من عميلاتنا يخبرننا أنهن يقدّرن صور الختم بقدر تقديرهن للجوهرة نفسها.",
-    s6_t:"<em>التشطيب</em> النهائي",
-    s6_b:"تُلمَّع الجوهرة وفق معيار Rion، وتخضع لفحص جودة نهائي، وتُوضع في صندوق وتغليف Rion الحصريين. عندها فقط تُهيَّأ للشحن. تستغرق العملية كاملة — من وصول الشعر إلى اليابان — نحو خمسة أشهر ونصف.",
-    photo_eyebrow:"دليل على الرعاية",
-    photo_title:"قبل. أثناء. <em>بعد.</em>",
-    photo_p1:"نؤمن أنك يجب أن ترى بالضبط كيف تم التعامل مع شعرك الثمين. قبل شحن جوهرتك، نرسل لك سجلاً فوتوغرافياً كاملاً لعملية الختم — مُلتقَطاً في كل مرحلة رئيسية من قبل الحرفي الذي صنع قطعتك.",
-    photo_p2:"لا شيء يؤخذ على الثقة. ترين الشعر قبل دخوله في الجوهرة. ترينه وهو يُختم. ترين الحجرة المنتهية. هذه الصور لك، وتبقى معك إلى الأبد إلى جانب الجوهرة نفسها.",
-    photo_s1_label:"المرحلة 1",photo_s1:"قبل",
-    photo_s2_label:"المرحلة 2",photo_s2:"أثناء",
-    photo_s3_label:"المرحلة 3",photo_s3:"بعد",
-    qty_title:"كم من الشعر<br><em>مطلوب؟</em>",
-    qty_lead:"أقل مما تتخيلين. نعمل مع أصغر الكميات — لأننا ندرك أن ما تحملينه ثمين ومحدود.",
-    q1_t:"<em>شعر</em> بشري",q1_b:"1 سم · خصلة واحدة. الأقل مقبول أيضاً. إذا كان ما لديك أقصر أو أقل، تواصلي معنا — سنفعل دائماً ما في وسعنا.",
-    q2_t:"<em>شعر</em> الحيوان الأليف",q2_b:"نفسه — حوالي 1 سم · خصلة واحدة. الشعر الناعم أو القصير أو الدقيق من أي حيوان مقبول. نعامله بنفس الرعاية التي نوليها للشعر البشري.",
-    q3_t:"<em>أشخاص</em> متعددون",q3_b:"بعض التصاميم تقبل شعراً من شخصين أو أكثر — أو شخص وحيوان أليف معاً. اسألينا عند الاستفسار وسنرشدك إلى التصميم المناسب.",
-    perm_eyebrow:"مصنوعة للدوام",
-    perm_title:"مختومة هرمسياً.<br><em>لأجيال.</em>",
-    perm_p1:"تقنية الختم المستخدمة في Rion تطورت عبر سنوات من الإتقان. بمجرد الختم، يُحمى الشعر بحاجز محكم — مصمم للصمود أجيالاً من الارتداء اليومي دون تدهور.",
-    perm_p2:"الحجرة المختومة لن تتأثر بالماء أو العرق أو الضوء أو الزمن. يمكنك ارتداء الجوهرة كل يوم من حياتك، وسيبقى الشعر في الداخل تماماً كما كان يوم ختمه.",
-    perm_note:"يُرجى التنبيه: يجب عدم العبث بالختم. محاولة فتح حجرة الشعر ستتلف الجوهرة بشكل دائم وتُلغي جميع ضمانات الخدمة. إذا كان لديك أي مخاوف حول قطعتك، تواصلي معنا عبر واتساب.",
-    cta_title:"أي أسئلة حول<br><em>عملية الختم؟</em>",
-    cta_body:"يسعدنا الإجابة على أي شيء — لا سؤال صغير. راسلينا عبر واتساب أو تصفحي الأسئلة الشائعة الكاملة.",
-    cta_wa:"راسلينا عبر واتساب",cta_faq:"اقرئي الأسئلة الشائعة"
-  },
+  ms:{menu_eyebrow:"Navigasi",hero_eyebrow:"Proses Pemeteraian",hero_title:"Bagaimana rambut anda<br>menjadi sebuah <em>perhiasan.</em>",hero_lead:"Setiap perhiasan Rion bermula dengan satu helai rambut. Apa yang berlaku seterusnya adalah satu proses ketepatan, ketelitian, dan kekekalan yang tidak boleh diubah — dilaksanakan sepenuhnya oleh tukang seni mahir di bengkel Jepun kami.",concept_eyebrow:"Bukan Loket Biasa",concept_title:"Rambut dimeteraikan <em>di dalam</em> perhiasan.",concept_p1:"Rion bukanlah loket biasa. Rambut tidak diletakkan di sebalik kaca, atau disimpan dalam petak yang boleh dibuka.",concept_p2:"Di bengkel kami, seorang tukang seni mahir akan memeteraikan setiap helai terus ke dalam tetapan — terbalut dalam resin yang tepat, ditatah dalam emas K18 atau platinum, kedap udara dan kekal. Rambut menjadi sebahagian daripada perhiasan itu sendiri. Ia tidak dapat dilihat dari luar. Ia hanya tinggal di situ, selamanya, dekat dengan orang yang memakainya.",process_title:"Enam <em>langkah.</em>",process_lead:"Dari saat kit pengumpulan anda tiba di Jepun sehingga saat perhiasan siap anda sedia untuk dihantar.",s1_t:"Rambut <em>tiba</em>",s1_b:"Kit pengumpulan termeterai anda tiba di bengkel Jepun kami melalui pos. Di dalamnya ialah rambut orang tersayang atau haiwan peliharaan anda — disimpan dengan teliti dalam sampul kedap udara yang disediakan. Walaupun satu helai sepanjang kurang daripada 1 cm sudah memadai. Kami melayaninya sejak ia tiba dengan ketelitian yang sama seperti yang kami berikan kepada perhiasan itu sendiri.",s2_t:"<em>Persediaan</em> penghasilan",s2_b:"Reka bentuk anda disahkan, bahan dipilih, dan semua spesifikasi dimuktamadkan. Tukang seni yang akan membuat perhiasan anda akan menyemak setiap perincian tempahan anda sebelum sebarang kerja bermula. Tiada apa-apa diteruskan sehingga kami pasti perhiasan tersebut akan persis seperti yang anda bayangkan.",s3_t:"<em>Penghasilan</em> perhiasan",s3_b:"Perhiasan emas K18 atau platinum dibuat oleh tukang seni mahir kami. Setiap lengkung, perkadaran, dan permukaan dibentuk mengikut reka bentuk yang anda luluskan — sama ada cincin, loket, atau ciptaan yang sepenuhnya tersuai. Perhiasan tersebut mesti lengkap dan sempurna sebelum rambut dimeteraikan di dalamnya.",s4_t:"Memeteraikan rambut <em>di dalam</em>",s4_b:"Sebuah lubang kecil digerudi dengan tepat pada perhiasan tersebut. Rambut diletakkan di dalamnya dengan tangan, kemudian lubang tersebut dimeteraikan dengan penutup daripada logam yang sama — emas K18 atau platinum Pt900. Perhiasan tersebut kemudiannya dimeterai kedap udara: kedap, kekal, dan direka untuk bertahan selama beberapa generasi. Setelah dimeteraikan, ruang tersebut tidak boleh dibuka tanpa merosakkan perhiasan itu. Ini adalah sengaja: meterai adalah satu janji.",s5_t:"<em>Laporan foto</em>",s5_b:"Sebelum kemasan akhir, kami memfoto perhiasan termeterai — sebelum, semasa, dan selepas pemeteraian — dan menghantar rekod lengkap tersebut kepada anda di WhatsApp. Imej-imej ini adalah milik anda untuk disimpan. Ramai pelanggan kami memberitahu kami bahawa mereka menghargai foto pemeteraian seperti mana mereka menghargai perhiasan itu sendiri.",s6_t:"Kemasan <em>akhir</em>",s6_b:"Perhiasan digilap mengikut standard kemasan Rion, menjalani pemeriksaan kualiti akhir, dan diletakkan dalam kotak serta pembungkusan eksklusif Rion. Hanya selepas itu ia disediakan untuk penghantaran. Keseluruhan proses — dari saat rambut anda tiba di Jepun — mengambil masa kira-kira lima setengah bulan.",photo_eyebrow:"Bukti Penjagaan",photo_title:"Sebelum. Semasa. <em>Selepas.</em>",photo_p1:"Kami percaya anda harus melihat dengan tepat bagaimana rambut berharga anda dilayan. Sebelum perhiasan anda dihantar, kami akan menghantar kepada anda rekod fotografi lengkap proses pemeteraian — dirakam pada setiap peringkat penting oleh tukang seni yang membuat perhiasan anda.",photo_p2:"Tiada apa-apa yang perlu dipercayai begitu sahaja. Anda melihat rambut sebelum ia memasuki perhiasan. Anda melihat ia dimeteraikan. Anda melihat ruang yang siap. Foto-foto ini adalah milik anda, dan ia kekal bersama anda selamanya seiring dengan perhiasan itu sendiri.",photo_s1_label:"Peringkat 1",photo_s1:"Sebelum",photo_s2_label:"Peringkat 2",photo_s2:"Semasa",photo_s3_label:"Peringkat 3",photo_s3:"Selepas",qty_title:"Berapa banyak rambut<br>yang <em>diperlukan?</em>",qty_lead:"Lebih sedikit daripada yang anda fikirkan. Kami bekerja dengan serpihan terkecil — kerana kami memahami bahawa apa yang anda miliki adalah berharga dan terhad.",q1_t:"Rambut <em>manusia</em>",q1_b:"1 cm · 1 helai. Kurang daripada itu juga tidak mengapa. Jika yang anda ada lebih pendek atau lebih sedikit, sila hubungi kami — kami akan sentiasa berusaha sedaya upaya.",q2_t:"Bulu <em>haiwan</em>",q2_b:"Sama — kira-kira 1 cm · 1 helai. Bulu yang halus, pendek, atau lembut daripada mana-mana haiwan diterima. Kami melayaninya dengan teliti yang sama seperti rambut manusia.",q3_t:"Pelbagai <em>orang</em>",q3_b:"Reka bentuk terpilih boleh menerima rambut daripada dua orang atau lebih — atau seseorang dan haiwan peliharaan bersama-sama. Tanya kami semasa bertanya dan kami akan membimbing anda kepada reka bentuk yang sesuai.",perm_eyebrow:"Dibuat untuk Bertahan",perm_title:"Dimeterai kedap udara.<br><em>Untuk beberapa generasi.</em>",perm_p1:"Teknik pemeteraian yang digunakan oleh Rion telah disempurnakan melalui bertahun-tahun penambahbaikan. Setelah dimeteraikan, rambut dilindungi oleh sempadan kedap udara — direka untuk bertahan selama beberapa generasi pemakaian harian tanpa kerosakan.",perm_p2:"Ruang termeterai ini tidak akan terjejas oleh air, peluh, cahaya, atau masa. Anda boleh memakai perhiasan ini setiap hari sepanjang hidup anda, dan rambut di dalamnya akan kekal sama seperti pada hari ia dimeteraikan.",perm_note:"Sila ambil perhatian: meterai tidak boleh diganggu sama sekali. Cubaan untuk membuka ruang rambut akan merosakkan perhiasan secara kekal dan membatalkan semua jaminan perkhidmatan. Jika anda mempunyai sebarang kebimbangan tentang perhiasan anda, hubungi kami di WhatsApp.",cta_title:"Sebarang soalan tentang<br><em>proses pemeteraian?</em>",cta_body:"Kami sedia menjawab apa-apa sahaja — tiada soalan yang terlalu kecil. Hantar mesej kepada kami di WhatsApp atau layari Soalan Lazim penuh kami.",cta_wa:"Hantar Mesej kepada Kami di WhatsApp",cta_faq:"Baca Soalan Lazim"},
   ja:{
     menu_eyebrow:"メニュー",
     hero_eyebrow:"毛の封入プロセス",
@@ -634,7 +589,7 @@ function setLang(lang){
   document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
   document.body.className='lang-'+lang;
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir='ltr';
   const t=T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');

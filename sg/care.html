@@ -32,8 +32,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 /* NAV */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
@@ -217,7 +215,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta">Order Now</a>
@@ -247,7 +245,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
@@ -526,34 +524,7 @@ const T={
     cta_body:"Whether your piece needs a refresh, repair, or you just have a question — we're always here. Send us a message on WhatsApp.",
     cta_wa:"Message Us on WhatsApp",cta_faq:"Read FAQ"
   },
-  ar:{
-    menu_eyebrow:"القائمة",
-    hero_eyebrow:"دليل العناية",
-    hero_title:"مصنوعة لتدوم<br><em>لأجيال.</em>",
-    hero_lead:"جوهرة Rion مصنوعة من ذهب 18K أو بلاتين Pt900 خالص، مختومة هرمسياً في اليابان. مع عناية يومية بسيطة، ستبقى جميلة كما يوم صنعها — وأبعد بكثير.",
-    promise_eyebrow:"وعد Rion",promise_title:"خدمة التلميع <em>مدى الحياة.</em><br>إلى الأبد.",
-    promise_body:"كل قطعة Rion تأتي مع خدمة التلميع مجانية مدى الحياة. أرسلي جوهرتك إلى مرسمنا الياباني عبر DHL في أي وقت — نتولى الباقي. <strong>تكاليف الشحن ذهاباً وإياباً يتحملها العميل.</strong>",
-    daily_title:"العناية <em>اليومية.</em>",daily_body:"أربع عادات بسيطة تحافظ على مظهر جوهرتك استثنائياً.",
-    d1_t:"المسح بعد <em>الارتداء</em>",d1_b:"بعد كل استخدام، امسحي جوهرتك برفق بقطعة قماش ناعمة خالية من الوبر. هذا يزيل الزيوت الطبيعية والعرق والغبار — مما يحافظ على لمعان المعدن ووضوح غرفة الشعر.",
-    d2_t:"التخزين <em>بعناية</em>",d2_b:"ضعي جوهرتك في صندوق Rion الحصري عند عدم ارتدائها. تجنّبي تخزينها مع مجوهرات أخرى لمنع الخدوش. ابعديها عن أشعة الشمس المباشرة والرطوبة.",
-    d3_t:"النزع لـ<em>الأنشطة</em>",d3_b:"اخلعيها قبل المسابح والساونا والحمامات الساخنة والتمارين المكثفة. ضعي العطر والكريم والواقي الشمسي قبل ارتداء الجوهرة — وليس مباشرة عليها.",
-    d4_t:"التنظيف <em>برفق</em>",d4_b:"للتنظيف الخفيف، استخدمي قطعة قماش ناعمة أو قطعة تلميع المجوهرات. تجنّبي أجهزة التنظيف بالموجات فوق الصوتية والمواد الكيميائية القاسية. للتنظيف العميق، أرسليها إلى مرسمنا الياباني.",
-    dodont_title:"افعلي و<em>لا تفعلي.</em>",dodont_body:"مرجع سريع لارتدائك اليومي.",
-    do_title:"<em>افعلي</em>",
-    do1:"امسحي بقطعة قماش ناعمة بعد كل استخدام",do2:"احفظيها في صندوق Rion الحصري",do3:"اخلعيها قبل السباحة والساونا والحمامات الساخنة",do4:"ضعي العطر / الكريم قبل ارتدائها",do5:"أرسليها إلى اليابان للتلميع المجاني (الشحن على العميل)",do6:"ارتديها يومياً — مصنوعة لذلك",
-    dont_title:"<em>لا تفعلي</em>",
-    dont1:"تعريضها للكلور (المسابح، المبيضات)",dont2:"رش العطر مباشرة على الجوهرة",dont3:"استخدام أجهزة التنظيف بالموجات فوق الصوتية",dont4:"استخدام أقمشة كاشطة أو معجون أسنان",dont5:"الاصطدام بالأسطح الصلبة",dont6:"محاولة فتح غرفة الشعر",
-    water_title:"إرشادات <em>الماء.</em>",water_body:"غرفة الشعر مختومة هرمسياً في اليابان — مقاومة للماء للحياة اليومية. إليك ما هو آمن وما يجب تجنبه.",
-    w1_t:"غسل اليدين",w1_b:"آمن",w2_t:"مطر خفيف",w2_b:"آمن",w3_t:"مسبح / بحر",w3_b:"اخلعي أولاً",w4_t:"ساونا / حمام ساخن",w4_b:"اخلعي أولاً",
-    srv_eyebrow:"خدمة مدى الحياة",srv_title:"تعود إلى اليابان،<br>تعود <em>جديدة.</em>",
-    srv_body:"يمكن لكل جوهرة Rion العودة إلى مرسمنا الياباني في أي وقت خلال حياتها. التلميع مجاني. الإصلاحات الكبيرة بسعر خاص. غرفة الشعر والختم يتم فحصها وتجديدها بدون رسوم إضافية. <strong>تكاليف الشحن ذهاباً وإياباً يتحملها العميل.</strong>",
-    sl1_t:"راسلينا عبر واتساب",sl1_b:"أخبرينا ما تحتاجه جوهرتك. نرد شخصياً مع تعليمات الشحن.",
-    sl2_t:"أرسلي جوهرتك عبر DHL",sl2_b:"نقدم إرشادات الشحن المرتجع. أمّنيها بقيمتها (نساعدك في التقدير).",
-    sl3_t:"مجدّدة و<em>مُرجعة</em>",sl3_b:"التلميع يستغرق 2-3 أسابيع. الإصلاحات تختلف. نصوّر العمل ونرجعها مؤمّنة بالكامل.",
-    cta_title:"أسئلة عن <em>جوهرتك؟</em>",
-    cta_body:"سواء كانت قطعتك تحتاج تجديداً أو إصلاحاً، أو لديك سؤال فقط — نحن هنا دائماً. راسلينا عبر واتساب.",
-    cta_wa:"راسلينا عبر واتساب",cta_faq:"اقرئي الأسئلة الشائعة"
-  },
+  ms:{menu_eyebrow:"Navigasi",hero_eyebrow:"Panduan Penjagaan",hero_title:"Dibuat untuk bertahan<br><em>selama beberapa generasi.</em>",hero_lead:"Perhiasan Rion anda adalah emas K18 tulen atau platinum Pt900, dimeterai kedap udara di Jepun. Dengan penjagaan harian yang ringkas, ia akan kekal secantik hari ia dibuat — dan jauh lebih lama lagi.",promise_eyebrow:"Janji Rion",promise_title:"<em>Penggilapan</em> seumur hidup percuma.<br>Selamanya.",promise_body:"Setiap perhiasan Rion disertakan dengan perkhidmatan penyelenggaraan seumur hidup kami — penggilapan adalah percuma, selagi anda memilikinya. Hantar perhiasan anda ke bengkel Jepun kami melalui DHL pada bila-bila masa. Kami akan uruskan selebihnya. <strong>Penghantaran pergi-balik ditanggung oleh pelanggan.</strong>",daily_title:"<em>Penjagaan</em> harian.",daily_body:"Empat tabiat mudah untuk memastikan perhiasan anda kelihatan menawan.",d1_t:"Lap selepas <em>memakai</em>",d1_b:"Selepas setiap pemakaian, lap perhiasan anda dengan lembut menggunakan kain lembut yang bebas habuk. Ini menghilangkan minyak kulit semula jadi, peluh, dan habuk — mengekalkan logam berkilauan dan ruang rambut jernih.",d2_t:"Simpan dengan <em>teliti</em>",d2_b:"Letakkan perhiasan anda dalam kotak eksklusif Rion apabila tidak dipakai. Elakkan menyimpan bersama perhiasan lain untuk mengelakkan calar. Jauhkan daripada cahaya matahari secara langsung dan kelembapan.",d3_t:"Tanggalkan untuk <em>aktiviti</em>",d3_b:"Tanggalkan sebelum ke kolam renang, mata air panas, sauna, dan senaman intensif. Sapukan minyak wangi, losyen, dan pelindung matahari sebelum memakai perhiasan — jangan sekali-kali terus pada perhiasan tersebut.",d4_t:"Bersihkan dengan <em>lembut</em>",d4_b:"Untuk pembersihan ringan, gunakan kain lembut atau kain penggilap perhiasan yang lembut. Elakkan pembersih ultrasonik dan bahan kimia keras. Untuk pembersihan mendalam, hantar ke bengkel Jepun kami.",dodont_title:"Buat &amp; <em>Jangan.</em>",dodont_body:"Rujukan ringkas untuk pemakaian harian anda.",do_title:"<em>Boleh</em>",do1:"Lap dengan kain lembut selepas setiap pemakaian",do2:"Simpan dalam kotak eksklusif Rion",do3:"Tanggalkan sebelum berenang, sauna, mata air panas",do4:"Sapukan minyak wangi / losyen sebelum memakai",do5:"Hantar ke Jepun untuk penggilapan percuma (anda menanggung penghantaran)",do6:"Pakai setiap hari — ia dibuat untuk itu",dont_title:"<em>Jangan</em>",dont1:"Terdedah kepada klorin (kolam, peluntur)",dont2:"Menyembur minyak wangi terus pada perhiasan",dont3:"Gunakan pembersih ultrasonik",dont4:"Gunakan kain kasar atau ubat gigi",dont5:"Berlanggar dengan permukaan keras",dont6:"Cuba membuka ruang rambut",water_title:"Panduan <em>air.</em>",water_body:"Ruang rambut dimeterai kedap udara di Jepun — kalis air untuk kehidupan seharian. Inilah yang selamat dan yang perlu dielakkan.",w1_t:"Mencuci Tangan",w1_b:"Selamat",w2_t:"Hujan Renyai",w2_b:"Selamat",w3_t:"Kolam / Laut",w3_b:"Tanggalkan dahulu",w4_t:"Sauna / Mata Air Panas",w4_b:"Tanggalkan dahulu",srv_eyebrow:"Perkhidmatan Seumur Hidup",srv_title:"Kembali ke Jepun,<br>kembali <em>seperti baharu.</em>",srv_body:"Setiap perhiasan Rion boleh dipulangkan ke bengkel Jepun kami pada bila-bila masa sepanjang hayatnya. Penggilapan adalah percuma. Pembaikan besar disebut harga secara peribadi. Ruang rambut dan meterai diperiksa serta disegarkan semula tanpa sebarang kos tambahan. <strong>Penghantaran pergi-balik ditanggung oleh pelanggan.</strong>",sl1_t:"Hantar Mesej kepada Kami di WhatsApp",sl1_b:"Beritahu kami keperluan perhiasan anda. Kami akan membalas secara peribadi dengan arahan penghantaran.",sl2_t:"Hantar Perhiasan Anda melalui DHL",sl2_b:"Kami menyediakan panduan penghantaran pemulangan. Insuranskan mengikut nilai (kami akan bantu menganggarkan).",sl3_t:"Disegarkan &amp; Dikembalikan",sl3_b:"Penggilapan mengambil masa 2–3 minggu. Pembaikan berbeza-beza. Kami akan memfoto kerja tersebut dan memulangkannya dengan insurans penuh.",cta_title:"Soalan tentang <em>perhiasan</em> anda?",cta_body:"Sama ada perhiasan anda memerlukan penyegaran, pembaikan, atau anda hanya mempunyai soalan — kami sentiasa di sini. Hantar mesej kepada kami di WhatsApp.",cta_wa:"Hantar Mesej kepada Kami di WhatsApp",cta_faq:"Baca Soalan Lazim"},
   ja:{
     menu_eyebrow:"メニュー",
     hero_eyebrow:"お手入れガイド",
@@ -589,7 +560,7 @@ function setLang(lang){
   document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
   document.body.className='lang-'+lang;
   document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir='ltr';
   const t=T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');

@@ -40,8 +40,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 /* NAV */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
@@ -268,7 +266,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="order.html" class="nav-cta" data-i18n="nav_cta">Order Now</a>
@@ -283,7 +281,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
   <div class="menu-inner">
     <div>
-      <span class="menu-eyebrow">Navigation · القائمة · メニュー</span>
+      <span class="menu-eyebrow">Navigation · Menu · メニュー</span>
       <nav class="menu-links">
         <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
         <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
@@ -299,7 +297,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
@@ -896,10 +894,10 @@ function buildWaUrl(text){
   return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 }
 function getLang(){return document.documentElement.lang||'en';}
-function makeMsg(en,ar,ja){
+function makeMsg(en,ms,ja){
   const l=getLang();
   if(l==='ja')return ja;
-  if(l==='ar')return ar;
+  if(l==='ms')return ms;
   return en;
 }
 
@@ -916,14 +914,14 @@ function updateSeriesWaLinks(){
     let en,ar,ja;
     if(section.classList.contains('bespoke-section')){
       en=`Hello Rion, I'd like to begin a fully bespoke commission. Please tell me about the process and what's possible.`;
-      ar=`مرحباً Rion، أود البدء في تكليف حصري كامل. يرجى إخباري عن العملية وما هو ممكن.`;
+      ar=`Hello Rion, saya ingin memulakan tempahan eksklusif sepenuhnya. Sila beritahu saya tentang proses dan apa yang mungkin.`;
       ja=`Rionさん、完全オーダーメイドの作品を始めたいです。制作の流れと可能なことについてお聞かせください。`;
     }else{
       const series=section.dataset.series||'';
       const nameEl=section.querySelector('.series-name');
       const name=nameEl?nameEl.textContent.replace(/\s+/g,' ').trim():'';
       en=`Hello Rion, I'd like to enquire about Series ${series} — ${name}. Please send me more details.`;
-      ar=`مرحباً Rion، أود الاستفسار عن السلسلة ${series} — ${name}. يرجى إرسال مزيد من التفاصيل.`;
+      ar=`Hello Rion, saya ingin bertanya tentang Siri ${series} — ${name}. Sila hantar maklumat lanjut.`;
       ja=`Rionさん、シリーズ${series} — ${name}についてお問い合わせしたいです。詳細をお送りください。`;
     }
     btn.setAttribute('href',buildWaUrl(makeMsg(en,ar,ja)));
@@ -997,47 +995,7 @@ const T = {
     cta_note_neck:"We will confirm design, length, and send your invoice.",
     cta_note_bs:"Tell us your 2 birthstone choices when enquiring."
   ,th_material_v:"Material"},
-  ar: {
-    delivery_note:"حوالي 5.5 أشهر",
-    nav_cta:"اطلب الآن",
-    page_title:"<em>المجموعة</em>",
-    page_lead:"كل قطعة مصنوعة بالكامل حسب طلبك — مصنوعة يدوياً في اليابان من شعرك وحده. اختاري السلسلة والمادة، واستفسري عبر واتساب. سنرشدك في كل خطوة.",
-    page_note:"✦ جميع الأسعار DDP — ضريبة السلع والخدمات السنغافورية (GST) مضمّنة · لا رسوم إضافية عند التسليم",
-    filter_label:"تصفية:",f_all:"كل السلاسل",f_ring:"خواتم",f_necklace:"قلائد",
-    f_a:"سلسلة A",f_b:"سلسلة B",f_c:"سلسلة C",f_d:"سلسلة D",f_f:"سلسلة F",f_g:"سلسلة G",f_h:"سلسلة H",f_j:"سلسلة J",se_a:"سلسلة A",se_b:"سلسلة B",se_c:"سلسلة C",se_d:"سلسلة D",se_f:"سلسلة F",se_g:"سلسلة G",se_h:"سلسلة H",se_j:"سلسلة J",st_ring:"خاتم",st_neck:"قلادة",st_ring_bs:"خاتم · حجران كريمان",st_ring_dia:"خاتم · حلقة ألماس",st_ring_st:"خاتم · تميّز",
-    sa_name:"الخاتم <em>الكلاسيكي</em>",
-    sa_desc:"خاتم بشكل عضوي متموج، نُحت يدوياً في اليابان. بسيط وخالد، صُنع ليُرتدى كل يوم.",
-    sb_name:"قلادة <em>البار</em>",
-    sb_desc:"قضيب ذهبي أنيق معلق على سلسلة دقيقة. خصلة الشعر مختومة داخل القضيب — مخفية عن العالم، قريبة من قلبك.",
-    sc_name:"خاتم <em>حجر الميلاد</em>",
-    sc_desc:"خاتم ذو أقسام هندسية تعكس الضوء بدقة. حجران من اختيارك مثبتان في الخاتم — يُخلّدان الأشخاص أو اللحظات الأعز.",
-    sd_name:"خاتم <em>نصف الأبدية</em>",
-    sd_desc:"خاتم نصف أبدية، مرصّع بالماس في إطارات مربعة على الجزء الأمامي. بريق منظم ومعنى أبدي. أحجار خالية من النزاعات من اليابان.",
-    sf_name:"خاتم <em>شيفرون</em>",
-    sf_desc:"خاتم نصف أبدية على شكل V، مرصّع بالأحجار على طول منحنى الجزء الأمامي. رشيق ومضيء — يضفي شكل الشيفرون حركةً وضياءً على كل إيماءة.",
-    sg_name:"خاتم <em>ميلغرين</em>",
-    sg_desc:"خاتم مصقول ومسطح تتزين حوافه بنقوش ميلغرين المطبقة يدوياً — أسلوب صياغة ذهبية عريق. هادئ، راسخ، مصنوع ليدوم.",
-    sh_name:"خاتم <em>الانسياب</em>",
-    sh_desc:"منحنيان ذهبيان يلتقيان عند نقطة واحدة، حيث تُرصّع خمسة ماسات في تجمّع مستطيل. شكل يوحي بالحركة والتواصل — حياتان تتدفقان في واحدة.",
-    sj_name:"خاتم <em>التميّز</em>",
-    sj_desc:"شريطان ذهبيان متشابكان، مرصّع أحدهما بالماس. جريء في الشكل، حميم في المعنى. لمن يريد أن يفرض حبه حضوراً.",
-    enquire_wa:"استفسر عبر واتساب",
-    view_series:"عرض السلسلة →",
-    bsp_title:"تكليف <em>حصري</em><br>بالكامل",
-    bsp_body:"لا شيء من السابق يناسبك تماماً؟ نصنع تصاميم مخصصة بالكامل — من رؤيتك، مع فريقنا. لا قالب، لا حدود. فقط قصتك، بالذهب.",
-    bsp_f1_t:"التصميم",bsp_f1_b:"من الصفر مع فريقنا. أشكال غير محدودة، أصلية بالكامل.",
-    bsp_f2_t:"المواد",bsp_f2_b:"ذهب 18K، بلاتين، ألماس، ياقوت، ياقوت أزرق، زمرد — أي تركيبة.",
-    bsp_f3_t:"شعور متعدد",bsp_f3_b:"إغلاق شعر من أحباء متعددين — أفراد العائلة، الحيوانات الأليفة — في جوهرة واحدة.",
-    bsp_f4_t:"الجدول الزمني",bsp_f4_b:"حوالي 6 أشهر. نقدم تحديثات في كل مرحلة.",
-    bsp_price:"من SGD 28,000",
-    bsp_price_note:"DDP · جميع الضرائب مضمّنة · السعر يعتمد على تعقيد التصميم والمواد",
-    bsp_cta:"ابدأي رحلتك الحصرية",
-    sticky_text:"<strong>مجموعة Rion</strong> &nbsp;·&nbsp; جميع القطع مصنوعة يدوياً في اليابان · من SGD 6,800 DDP",
-    sticky_wa:"واتساب",sticky_back:"← العودة للرئيسية",
-    cta_note_ring:"سنؤكد التصميم والمقاس ونرسل فاتورتك.",
-    cta_note_neck:"سنؤكد التصميم والطول ونرسل فاتورتك.",
-    cta_note_bs:"أخبرينا باختيارك لحجري الميلاد عند الاستفسار."
-  ,th_material_v:"المادة"},
+  ms:{delivery_note:"Kira-kira 5.5 bulan",nav_cta:"Tempah Sekarang",page_title:"Koleksi<br><em>Itu</em>",page_lead:"Setiap perhiasan dibuat sepenuhnya mengikut tempahan anda — dibuat dengan tangan di Jepun, hanya daripada rambut anda. Pilih satu siri, pilih bahan anda, dan bertanya melalui WhatsApp. Kami akan membimbing anda untuk selebihnya.",page_note:"✦ Semua harga DDP — GST import Singapura (9%) termasuk · Tiada caj tambahan semasa penghantaran",filter_label:"Tapis:",f_all:"Semua Siri",f_ring:"Cincin",f_necklace:"Rantai Leher",f_a:"Siri A",f_b:"Siri B",f_c:"Siri C",f_d:"Siri D",f_f:"Siri F",f_g:"Siri G",f_h:"Siri H",f_j:"Siri J",se_a:"Siri A",se_b:"Siri B",se_c:"Siri C",se_d:"Siri D",se_f:"Siri F",se_g:"Siri G",se_h:"Siri H",se_j:"Siri J",st_ring:"Cincin",st_neck:"Rantai Leher",st_ring_bs:"Cincin · 2 Batu Kelahiran",st_ring_dia:"Cincin · Jalur Berlian",st_ring_st:"Cincin · Statement",sa_name:"Cincin <em>Classic</em>",sa_desc:"Jalur yang lembut dan terbentuk secara organik — gelombang lembutnya dibentuk dengan tangan di Jepun. Minimalis, abadi, dibuat untuk dipakai setiap hari seumur hidup.",sb_name:"Loket <em>Bar</em>",sb_desc:"Sebatang bar emas tulen yang ramping pada rantai bulat yang halus. Helai rambut dimeteraikan di dalam bar tersebut — tersembunyi daripada dunia, dekat dengan hati anda.",sc_name:"Cincin <em>Batu Kelahiran</em>",sc_desc:"Sebentuk cincin dengan segmen geometri, setiap segi menangkap cahaya dengan tepat. Dua batu kelahiran pilihan anda ditatah dalam jalur — memperingati orang atau detik yang paling bermakna.",sd_name:"Cincin <em>Half Eternity</em>",sd_desc:"Jalur half eternity, berlian ditatah dalam bingkai segi empat di sepanjang bahagian depan. Kilauan berstruktur, makna abadi. Batu bebas konflik diperoleh sepenuhnya dari Jepun.",sf_name:"Cincin <em>Chevron</em>",sf_desc:"Sebentuk cincin half eternity berbentuk V, ditatah dengan batu di sepanjang lengkung penuh bahagian depan. Anggun dan bercahaya — bentuk chevron membawa cahaya dan pergerakan pada setiap gerak.",sg_name:"Jalur <em>Milgrain</em>",sg_desc:"Jalur licin yang digilap dan ditepi dengan milgrain buatan tangan — teknik tukang emas yang berusia berabad-abad. Tenang, kukuh, dibina untuk bertahan lama.",sh_name:"Cincin <em>Flow</em>",sh_desc:"Dua lengkung emas bertemu pada satu titik, di mana lima berlian ditatah dalam kluster memanjang. Bentuk yang menggambarkan pergerakan dan hubungan — dua kehidupan mengalir menjadi satu.",sj_name:"Cincin <em>Statement</em>",sj_desc:"Dua reben emas, dijalin bersama dan ditatah dengan berlian di sepanjang satu helai. Berani dari segi bentuk, intim dari segi makna. Untuk mereka yang cintanya menuntut kehadiran.",enquire_wa:"Bertanya melalui WhatsApp",view_series:"Lihat Siri →",bsp_title:"Tempahan<br><em>Sepenuhnya Tersuai</em>",bsp_body:"Tiada satu pun di atas yang sesuai? Kami mencipta reka bentuk yang sepenuhnya tersuai — daripada visi anda, bersama kakitangan kami. Tiada templat, tiada had. Hanya kisah anda, dalam emas.",bsp_f1_t:"Reka Bentuk",bsp_f1_b:"Dicipta dari awal bersama kakitangan kami. Bentuk tanpa had, sepenuhnya asli.",bsp_f2_t:"Bahan",bsp_f2_b:"Emas K18, Platinum, Berlian, Ruby, Nilam, Zamrud — sebarang kombinasi.",bsp_f3_t:"Pelbagai Helai Rambut",bsp_f3_b:"Meterai rambut daripada beberapa orang tersayang — ahli keluarga, haiwan peliharaan — dalam satu perhiasan.",bsp_f4_t:"Garis Masa",bsp_f4_b:"Kira-kira 6 bulan. Kami akan mengemas kini anda pada setiap peringkat proses.",bsp_price:"Dari SGD 28,000",bsp_price_note:"DDP · semua cukai termasuk · Harga bergantung pada kerumitan reka bentuk & bahan",bsp_cta:"Mulakan Perjalanan Tersuai Anda",sticky_text:"<strong>Koleksi Rion</strong> &nbsp;·&nbsp; Semua perhiasan dibuat dengan tangan di Jepun · Dari SGD 6,800 DDP",sticky_wa:"WhatsApp",sticky_back:"← Kembali ke Laman Utama",cta_note_ring:"Kami akan mengesahkan reka bentuk, saiz, dan menghantar invois anda.",cta_note_neck:"Kami akan mengesahkan reka bentuk, panjang, dan menghantar invois anda.",cta_note_bs:"Beritahu kami 2 pilihan batu kelahiran anda semasa bertanya.",th_material_v:"Bahan"},
   ja: {
     delivery_note:"約5.5ヶ月",
     nav_cta:"ご注文",
@@ -1087,7 +1045,7 @@ function setLang(lang){
   document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
   document.body.className = 'lang-' + lang;
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir='ltr';
   const t = T[lang];
   if(!t) return;
   document.querySelectorAll('[data-i18n]').forEach(el=>{

@@ -31,8 +31,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 /* NAV */
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
@@ -245,7 +243,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="#cta" class="nav-cta" data-i18n="nav_cta">Order Now</a>
@@ -275,7 +273,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 <span data-i18n="menu_cta">Message Us on WhatsApp</span></a>
@@ -386,7 +384,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <!-- BIRTHSTONE CALENDAR -->
   <div id="birthstoneCalendar" style="max-width:900px;margin:3rem auto 0">
-    <p style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:1rem;text-align:center" data-i18n="bs_label">Available birthstones · المواليد · 誕生石</p>
+    <p style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:1rem;text-align:center" data-i18n="bs_label">Available birthstones · Batu Kelahiran · 誕生石</p>
     <div class="bs-calendar">
       <div class="bs-item"><span class="bs-month">Jan</span><span class="bs-stone" data-i18n="bs_jan">Garnet</span></div>
       <div class="bs-item"><span class="bs-month">Feb</span><span class="bs-stone" data-i18n="bs_feb">Amethyst</span></div>
@@ -486,45 +484,45 @@ function acceptCookies(){
 
 // ===== PRODUCT DATA =====
 const SERIES_INFO = {
-  A: { name:{en:'The Classic Ring',ar:'الخاتم الكلاسيكي',ja:'クラシックリング'}, type:'ring',
+  A: { name:{en:'The Classic Ring',ms:'Cincin Klasik',ja:'クラシックリング'}, type:'ring',
        desc:{en:'A fluid, organically formed band — its gentle wave shaped by hand in Japan. The hair strand is sealed within, invisible to the eye. Minimal, timeless, made to be worn every day for a lifetime.',
-             ar:'خاتم بشكل عضوي متموج، نُحت يدوياً في اليابان. خصلة الشعر مختومة بداخله — غير مرئية للعين. بسيط وخالد، صُنع ليُرتدى كل يوم.',
+             ms:'Sebentuk cincin organik beralun yang dibentuk dengan tangan di Jepun. Helaian rambut dimeterai di dalamnya — tidak kelihatan oleh mata. Minimalis dan abadi, direka untuk dipakai setiap hari seumur hidup.',
              ja:'日本で手作りされた、有機的なウェーブを描く細身のバンド。毛髪は内側に密封され、外からは見えない。ミニマルで時を超えるデザイン。毎日の着用に。'} },
-  B: { name:{en:'The Bar Pendant',ar:'قلادة البار',ja:'バーペンダント'}, type:'necklace',
+  B: { name:{en:'The Bar Pendant',ms:'Loket Bar',ja:'バーペンダント'}, type:'necklace',
        desc:{en:'A sleek vertical bar of solid gold, suspended from a refined round-link chain. The hair strand is sealed within the bar — hidden from the world, close to your heart. Chain length is customisable.',
-             ar:'قضيب ذهبي أنيق معلق على سلسلة دقيقة. خصلة الشعر مختومة داخل القضيب — مخفية عن العالم، قريبة من قلبك. طول السلسلة قابل للتخصيص.',
+             ms:'Sebatang bar emas yang elegan, tergantung pada rantai bulat yang halus. Helaian rambut dimeterai di dalam bar — tersembunyi daripada dunia, dekat dengan hati anda. Panjang rantai boleh disesuaikan.',
              ja:'シンプルな縦型ゴールドバーを繊細なチェーンに下げたネックレス。毛髪はバーの内部に密封され、世界から隠され、心のそばにある。チェーンの長さはカスタマイズ可能。'} },
-  C: { name:{en:'The Birthstone Ring',ar:'خاتم حجر الميلاد',ja:'誕生石リング'}, type:'ring',
+  C: { name:{en:'The Birthstone Ring',ms:'Cincin Batu Kelahiran',ja:'誕生石リング'}, type:'ring',
        desc:{en:'A ring of geometric segments, each facet catching light with precision. Two birthstones of your choice are set within the band — marking the people, dates, or moments that matter most.',
-             ar:'خاتم ذو أقسام هندسية، كل واجهة تعكس الضوء بدقة. حجران من اختيارك مثبتان في الخاتم — يُخلّدان الأشخاص أو التواريخ أو اللحظات الأعز.',
+             ms:'Sebentuk cincin dengan segmen geometri, setiap permukaan memantulkan cahaya dengan tepat. Dua batu kelahiran pilihan anda ditetapkan pada cincin — memperingati insan, tarikh, atau detik yang paling bermakna.',
              ja:'幾何学的なセグメントが光を精密に捉えるリング。お好きな誕生石2つがバンドに設定され、大切な人・日付・最も大切な瞬間を刻む。'} },
-  D: { name:{en:'The Half Eternity Ring',ar:'خاتم نصف الأبدية',ja:'ハーフエタニティリング'}, type:'ring',
+  D: { name:{en:'The Half Eternity Ring',ms:'Cincin Separuh Keabadian',ja:'ハーフエタニティリング'}, type:'ring',
        desc:{en:'A half eternity band, diamonds bezel-set in square frames across the front. Structured brilliance, eternal meaning. Conflict-free stones sourced entirely within Japan.',
-             ar:'خاتم نصف أبدية، مرصّع بالماس في إطارات مربعة على الجزء الأمامي. بريق منظم ومعنى أبدي. أحجار خالية من النزاعات، مصدرها اليابان بالكامل.',
+             ms:'Sebentuk cincin separuh keabadian, bertatahkan berlian dalam bingkai segi empat di bahagian hadapan. Kilauan yang tersusun, makna yang abadi. Batu permata bebas konflik yang diperoleh sepenuhnya dari Jepun.',
              ja:'正方形のベゼルセッティングでダイヤが前面に連なるハーフエタニティバンド。構造的な輝きと永遠の意味を。紛争フリーで日本国内調達のダイヤを使用。'} },
-  F: { name:{en:'The Chevron Ring',ar:'خاتم شيفرون',ja:'シェブロンリング'}, type:'ring',
+  F: { name:{en:'The Chevron Ring',ms:'Cincin Chevron',ja:'シェブロンリング'}, type:'ring',
        desc:{en:'A V-shaped half eternity ring, paved with stones along the full curve of the front. Graceful and luminous — the chevron form brings light and movement to every gesture.',
-             ar:'خاتم نصف أبدية على شكل V، مرصّع بالأحجار على طول منحنى الجزء الأمامي. رشيق ومضيء — يضفي شكل الشيفرون حركةً وضياءً على كل إيماءة.',
+             ms:'Sebentuk cincin separuh keabadian berbentuk V, bertatahkan batu permata di sepanjang lengkung bahagian hadapan. Anggun dan bercahaya — bentuk chevron membawa pergerakan dan cahaya pada setiap gerak-geri.',
              ja:'V字型のハーフエタニティリング。前面のカーブ全体に宝石をパヴェした、優雅で輝かしいデザイン。あらゆる仕草に光と動きをもたらす。'} },
-  G: { name:{en:'The Milgrain Band',ar:'خاتم ميلغرين',ja:'ミルグレインバンド'}, type:'ring',
+  G: { name:{en:'The Milgrain Band',ms:'Jalur Milgrain',ja:'ミルグレインバンド'}, type:'ring',
        desc:{en:'A flat polished band edged with hand-applied milgrain — a centuries-old goldsmithing technique. Quiet, substantial, built to endure.',
-             ar:'خاتم مصقول ومسطح تتزين حوافه بنقوش ميلغرين المطبقة يدوياً — أسلوب صياغة ذهبية عريق. هادئ، راسخ، مصنوع ليدوم.',
+             ms:'Sebentuk jalur rata bergilap dengan tepi berhias milgrain yang diaplikasikan dengan tangan — sebuah teknik tukang emas berusia berabad-abad. Tenang, kukuh, dibuat untuk bertahan lama.',
              ja:'職人が手作業でミルグレインを施した、フラットな鏡面仕上げのバンド。数世紀にわたる金細工の技法を纏った、静かで存在感のある一品。'} },
-  H: { name:{en:'The Flow Ring',ar:'خاتم الانسياب',ja:'フローリング'}, type:'ring',
+  H: { name:{en:'The Flow Ring',ms:'Cincin Aliran',ja:'フローリング'}, type:'ring',
        desc:{en:'Two gold curves meet at a single point, where five diamonds are set in an elongated cluster. A form that suggests movement and connection — two lives flowing into one.',
-             ar:'منحنيان ذهبيان يلتقيان عند نقطة واحدة، حيث تُرصّع خمسة ماسات في تجمّع مستطيل. شكل يوحي بالحركة والتواصل — حياتان تتدفقان في واحدة.',
+             ms:'Dua lengkung emas bertemu pada satu titik, di mana lima berlian ditetapkan dalam kelompok memanjang. Bentuk yang menggambarkan pergerakan dan ikatan — dua kehidupan mengalir menjadi satu.',
              ja:'2本のゴールドの曲線が一点で交わり、そこに5石のダイヤが細長いクラスターで留められている。動きと繋がりを象徴するフォルム——2つの命が1つに流れ込む。'} },
-  J: { name:{en:'The Statement Ring',ar:'خاتم التميّز',ja:'ステートメントリング'}, type:'ring',
+  J: { name:{en:'The Statement Ring',ms:'Cincin Pernyataan',ja:'ステートメントリング'}, type:'ring',
        desc:{en:'Two ribbons of gold, interwoven and set with diamonds along one strand. Bold in form, intimate in meaning. For those whose love commands presence.',
-             ar:'شريطان ذهبيان متشابكان، مرصّع أحدهما بالماس. جريء في الشكل، حميم في المعنى. لمن يريد أن يفرض حبه حضوراً.',
+             ms:'Dua jalur emas yang saling berjalin, salah satu bertatahkan berlian di sepanjang satu lapisan. Berani dari segi bentuk, intim dari segi makna. Untuk mereka yang cintanya menuntut kehadiran.',
              ja:'2本のゴールドリボンが絡み合い、一方にダイヤが留められた太めのバンド。形は大胆で、意味は深く親密。愛に存在感を与えたい方へ。'} }
 };
 
 const MATERIALS = {
-  ygold: {en:'K18 Yellow Gold',ar:'ذهب 18 قيراط أصفر',ja:'K18イエローゴールド'},
-  wgold: {en:'K18 White Gold',ar:'ذهب 18 قيراط أبيض',ja:'K18ホワイトゴールド'},
-  pgold: {en:'K18 Pink Gold',ar:'ذهب 18 قيراط وردي',ja:'K18ピンクゴールド'},
-  pt:    {en:'Platinum Pt900',ar:'بلاتين Pt900',ja:'プラチナ Pt900'}
+  ygold: {en:'K18 Yellow Gold',ms:'Emas Kuning K18',ja:'K18イエローゴールド'},
+  wgold: {en:'K18 White Gold',ms:'Emas Putih K18',ja:'K18ホワイトゴールド'},
+  pgold: {en:'K18 Pink Gold',ms:'Emas Pink K18',ja:'K18ピンクゴールド'},
+  pt:    {en:'Platinum Pt900',ms:'Platinum Pt900',ja:'プラチナ Pt900'}
 };
 
 const PRODUCTS = {
@@ -563,8 +561,8 @@ const PRODUCTS = {
 };
 
 const TYPE_LABEL = {
-  ring: {en:'Ring', ar:'خاتم', ja:'リング'},
-  necklace: {en:'Necklace', ar:'قلادة', ja:'ネックレス'}
+  ring: {en:'Ring', ms:'Cincin', ja:'リング'},
+  necklace: {en:'Necklace', ms:'Loket', ja:'ネックレス'}
 };
 
 // ===== I18N (labels) =====
@@ -604,41 +602,7 @@ const T = {
     footer_p:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.",
     f_explore:"Explore",f_help:"Help",f_connect:"Connect",f_home:"Home",f_collection:"Collection",f_about:"About Rion",f_process:"How It Works",f_care:"Care Guide",f_shipping:"Shipping & Returns",f_contact:"Contact"
   },
-  ar:{
-    menu_eyebrow:"القائمة",nav_cta:"اطلب الآن",
-    m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_care:"دليل <em>العناية</em>",m_shipping:"الشحن و<em>الإرجاع</em>",m_contact:"تواصل",menu_cta:"راسلنا عبر واتساب",
-    ddp_note:"DDP · جميع الضرائب مضمّنة",stock_status:"صنع حسب الطلب · حوالي 5.5 أشهر",
-    pill1:"100% صنع في اليابان",pill2:"شحن DDP مجاني",pill3:"تقرير صوري مضمّن",pill4:"تلميع مدى الحياة",
-    cta_order:"اطلب عبر واتساب",cta_enquire:"اسأل سؤالاً أولاً",cta_order_short:"اطلب",
-    spec_code:"الكود",spec_material:"المادة",spec_type:"النوع",
-    spec_sizing:"المقاس",spec_sizing_v:"US 1 – 12 (أنصاف المقاسات متاحة) · مقياس خاتم مضمّن",
-    spec_chain:"السلسلة",
-    spec_seal:"غرفة الشعر",spec_seal_v:"مختومة هرمسياً يدوياً في اليابان",
-    spec_production:"الإنتاج",spec_production_v:"حوالي 5.5 أشهر بعد استلام الشعر",
-    spec_shipping:"الشحن",spec_shipping_v:"DHL Express · مؤمَّن بالكامل · DDP إلى سنغافورة",
-    spec_origin:"المنشأ",spec_origin_v:"مصنوع يدوياً بالكامل في اليابان",
-    t1_t:"فريد من نوعه",t1_b:"مصنوع من شعرك وحده",
-    t2_t:"100% صنع اليابان",t2_b:"كل عنصر، كل خطوة",
-    t3_t:"تقرير صوري",t3_b:"إغلاق الشعر موثق",
-    t4_t:"DDP إلى سنغافورة",t4_b:"لا رسوم عند التسليم",
-    craft_title:"مصنوع <em>ليدوم.</em>",
-    craft_body:"كل قطعة Rion مختومة هرمسياً يدوياً في مرسمنا الياباني. مصممة لتدوم مدى الحياة من الارتداء اليومي.",
-    cr1_t:"إغلاق يدوي",cr1_b:"يُحفر ثقب صغير في الجوهرة، يُوضع الشعر بداخله يدوياً، ثم يُغلق بغطاء من نفس المادة — محكم الغلق بشكل دائم.",
-    cr2_t:"مقاومة للماء",cr2_b:"مختومة هرمسياً — آمنة للارتداء اليومي وغسل اليدين والمطر الخفيف.",
-    cr3_t:"موثقة بالصور",cr3_b:"نصور قبل وأثناء وبعد الإغلاق — تُرسل إليك عبر واتساب.",
-    cr4_t:"خدمة مدى الحياة",cr4_b:"تلميع مجاني في اليابان، طالما تمتلك القطعة.",
-    cust_title:"اجعليها <em>لك.</em>",
-    cust_body:"خصصي قطعتك بالنقش واختيار حجر الميلاد والمقاس المخصص.",
-    ct1_t:"النقش <em>الداخلي</em>",ct1_b:"أضيفي اسماً أو تاريخاً أو رسالة قصيرة على الجزء الداخلي — أحرف إنجليزية فقط. المسافات لا تُحسب ضمن الأحرف.",ct1_p:"١–١٠ أحرف: ٢٣٠ درهم · من الحرف الحادي عشر: + ٢٣ درهم/حرف",
-    ct2_t:"إعداد <em>حجر الميلاد</em>",ct2_b:"أضيفي حجر ميلاد واحد — ألماس، ياقوت، ياقوت أزرق، زمرد، أو أي حجر شهري — لإحياء ذكرى حبيب.",ct2_p:"+ ٩٠ درهم لكل حجر",
-    ct3_t:"المقاس <em>المخصص</em>",ct3_b:"مقياس خاتم US (المقاسات 1-12) يُرسل في طقم الجمع. أو أخبرينا بمقاسك US إذا كنت تعرفينه.",ct3_p:"مضمّن · لا رسوم إضافية",
-    bs_label:"المواليد المتاحة",
-    bs_jan:"العقيق",bs_feb:"الجمشت",bs_mar:"الزبرجد",bs_apr:"الألماس",bs_may:"الزمرد",bs_jun:"حجر القمر",bs_jul:"الياقوت",bs_aug:"الزبرجد الزيتي",bs_sep:"الياقوت الأزرق",bs_oct:"التورمالين",bs_nov:"التوباز",bs_dec:"التنزانيت",
-    rel_title:"مواد <em>أخرى</em> في هذه السلسلة",rel_body:"التصميم نفسه، بمعادن ثمينة مختلفة.",
-    bc_home:"الرئيسية",bc_collection:"المجموعة",
-    footer_p:"مجوهرات تذكارية حصرية، مصنوعة يدوياً بالكامل في اليابان. شعرة واحدة. جوهرة واحدة. حب واحد — لك إلى الأبد.",
-    f_explore:"استكشف",f_help:"المساعدة",f_connect:"تواصل",f_home:"الرئيسية",f_collection:"المجموعة",f_about:"عن Rion",f_process:"كيف يعمل",f_care:"دليل العناية",f_shipping:"الشحن والإرجاع",f_contact:"تواصل"
-  },
+  ms:{menu_eyebrow:"Navigasi",nav_cta:"Tempah Sekarang",m_home:"Laman Utama",m_collection:"Koleksi",m_about:"Tentang <em>Rion</em>",m_care:"<em>Panduan</em> Penjagaan",m_shipping:"Penghantaran &amp; <em>Pemulangan</em>",m_contact:"Hubungi",menu_cta:"Hantar Mesej kepada Kami di WhatsApp",ddp_note:"DDP · semua cukai termasuk",stock_status:"Dibuat mengikut tempahan · Kira-kira 5.5 bulan",pill1:"100% Dibuat di Jepun",pill2:"Penghantaran DDP Percuma",pill3:"Laporan foto disertakan",pill4:"Penggilapan seumur hidup",cta_order:"Tempah melalui WhatsApp",cta_enquire:"Tanya soalan dahulu",cta_order_short:"Tempahan",spec_code:"Kod",spec_material:"Bahan",spec_type:"Jenis",spec_sizing:"Saiz",spec_sizing_v:"US 1 – 12 (separuh saiz tersedia) · Tolok cincin disertakan dalam kit",spec_chain:"Rantai",spec_seal:"Ruang Rambut",spec_seal_v:"Dimeterai kedap udara dengan tangan di Jepun",spec_production:"Penghasilan",spec_production_v:"Kira-kira 5.5 bulan selepas penerimaan rambut",spec_shipping:"Penghantaran",spec_shipping_v:"DHL Express · Berinsurans sepenuhnya · DDP ke Singapura",spec_origin:"Asal",spec_origin_v:"Dibuat sepenuhnya dengan tangan di Jepun",t1_t:"Tiada Tandingan",t1_b:"Dibuat hanya daripada rambut anda",t2_t:"100% Dibuat di Jepun",t2_b:"Setiap elemen, setiap langkah",t3_t:"Laporan Foto",t3_b:"Pemeteraian rambut didokumenkan",t4_t:"DDP ke Singapura",t4_b:"Tiada caj semasa penghantaran",craft_title:"Dibuat untuk <em>bertahan selamanya.</em>",craft_body:"Setiap perhiasan Rion dimeterai kedap udara dengan tangan di bengkel Jepun kami. Direka untuk pemakaian harian seumur hidup.",cr1_t:"Dimeterai Tangan",cr1_b:"Sebuah lubang kecil digerudi pada perhiasan, rambut diletakkan di dalamnya dengan tangan, kemudian dimeteraikan dengan penutup daripada bahan yang sama — kedap udara secara kekal.",cr2_t:"Kalis Air",cr2_b:"Dimeterai kedap udara — selamat untuk pemakaian harian, mencuci tangan, dan hujan renyai.",cr3_t:"Didokumenkan dengan Foto",cr3_b:"Kami memfoto sebelum, semasa, dan selepas pemeteraian — dihantar kepada anda melalui WhatsApp, Instagram DM, atau <a href='mailto:info@art-rings.com'>e-mel</a>.",cr4_t:"Perkhidmatan Seumur Hidup",cr4_b:"Penggilapan percuma di Jepun, selagi anda memiliki perhiasan tersebut.",cust_title:"Jadikan ia <em>milik anda.</em>",cust_body:"Personalisasikan perhiasan anda dengan ukiran, pemilihan batu kelahiran, dan saiz tersuai.",ct1_t:"Ukiran <em>Dalaman</em>",ct1_b:"Tambahkan nama, tarikh, atau mesej ringkas pada jalur dalaman — hanya aksara Inggeris. Ruang tidak dikira sebagai aksara.",ct1_p:"1–10 aksara: SGD 90 · Dari aksara ke-11: + SGD 9 setiap satu",ct2_t:"<em>Tetapan</em> Batu Kelahiran",ct2_b:"Tambahkan satu batu kelahiran — berlian, ruby, nilam, zamrud, atau batu bulan kelahiran — untuk memperingati seseorang yang tersayang.",ct2_p:"+ SGD 35 setiap batu",ct3_t:"<em>Saiz</em> Tersuai",ct3_b:"Tolok cincin US (saiz 1–12) dihantar dalam kit pengumpulan anda. Atau beritahu kami saiz US anda jika anda sudah tahu.",ct3_p:"Termasuk · Tiada yuran tambahan",bs_label:"Batu kelahiran yang tersedia",bs_jan:"Garnet",bs_feb:"Kecubung",bs_mar:"Akuamarin",bs_apr:"Berlian",bs_may:"Zamrud",bs_jun:"Batu Bulan",bs_jul:"Ruby",bs_aug:"Peridot",bs_sep:"Nilam",bs_oct:"Turmalin",bs_nov:"Topaz",bs_dec:"Tanzanit",rel_title:"<em>Bahan</em> lain dalam siri ini",rel_body:"Reka bentuk yang sama, dalam logam berharga yang berbeza.",bc_home:"Laman Utama",bc_collection:"Koleksi",footer_p:"Perhiasan peringatan tersuai, dibuat sepenuhnya dengan tangan di Jepun. Satu rambut. Satu perhiasan. Satu cinta — milik anda, selamanya.",f_explore:"Terokai",f_help:"Bantuan",f_connect:"Hubungkan",f_home:"Laman Utama",f_collection:"Koleksi",f_about:"Tentang Rion",f_process:"Cara Ia Berfungsi",f_care:"Panduan Penjagaan",f_shipping:"Penghantaran & Pemulangan",f_contact:"Hubungi"},
   ja:{
     menu_eyebrow:"メニュー",nav_cta:"ご注文",
     m_home:"ホーム",m_collection:"コレクション",m_about:"Rion<em>について</em>",m_care:"お手入れ<em>ガイド</em>",m_shipping:"配送・<em>返品</em>",m_contact:"お問い合わせ",menu_cta:"WhatsAppでメッセージ",
@@ -746,26 +710,26 @@ function renderProduct(code, lang){
     const sizingEl = document.querySelector('#specSizingRow .spec-value');
     const sizeTexts = {
       en: hasHalf ? 'US 1 – 12 (half sizes available) · Ring gauge included in kit' : 'US 1 – 12 · Ring gauge included in kit',
-      ar: hasHalf ? 'US 1 – 12 (أنصاف المقاسات متاحة) · مقياس خاتم مضمّن' : 'US 1 – 12 · مقياس خاتم مضمّن',
+      ms: hasHalf ? 'US 1 – 12 (separuh saiz tersedia) · Tolok cincin disertakan' : 'US 1 – 12 · Tolok cincin disertakan',
       ja: hasHalf ? 'US 1〜12（ハーフサイズ対応）· リングゲージ同梱' : 'US 1〜12 · リングゲージ同梱'
     };
     if(sizingEl) sizingEl.textContent = sizeTexts[lang] || sizeTexts.en;
   }
 
   // CTAs
-  function mkMsg(en,ar,ja){
+  function mkMsg(en,ms,ja){
     if(lang==='ja')return ja;
-    if(lang==='ar')return ar;
+    if(lang==='ms')return ms;
     return en;
   }
   const orderMsg=mkMsg(
     `Hello Rion, I'd like to order: ${code} (${matName}) — SGD ${p.price.toLocaleString()}.\n\nPlease send me the invoice and details to proceed. Thank you.`,
-    `مرحباً Rion، أود طلب: ${code} (${matName}) — SGD ${p.price.toLocaleString()}.\n\nيرجى إرسال الفاتورة والتفاصيل للمضي قدماً. شكراً.`,
+    `Hello Rion, saya ingin membuat pesanan: ${code} (${matName}) — SGD ${p.price.toLocaleString()}.\n\nSila hantar invois dan butiran untuk meneruskan. Terima kasih.`,
     `Rionさん、${code}（${matName}）— SGD ${p.price.toLocaleString()}を注文したいです。\n\n請求書と詳細をお送りください。ありがとうございます。`
   );
   const enquireMsg=mkMsg(
     `Hello Rion, I'd like to ask a question about ${code} (${matName}).`,
-    `مرحباً Rion، أود طرح سؤال حول ${code} (${matName}).`,
+    `Hello Rion, saya ingin bertanya soalan tentang ${code} (${matName}).`,
     `Rionさん、${code}（${matName}）についてお聞きしたいことがあります。`
   );
   document.getElementById('btnOrder').href = buildWaUrl(orderMsg);
@@ -798,9 +762,9 @@ function renderProduct(code, lang){
         en: isB4
           ? '45 cm included · Top: Pt900, Chain: Pt850 · Length options: 50 / 55 / 60 cm'
           : '45 cm included · Same material as pendant · Length options: 50 / 55 / 60 cm',
-        ar: isB4
-          ? '45 سم مضمّنة · القلادة: Pt900، السلسلة: Pt850 · أطوال: 50 / 55 / 60 سم'
-          : '45 سم مضمّنة · نفس مادة القلادة · أطوال: 50 / 55 / 60 سم',
+        ms: isB4
+          ? '45 cm disertakan · Loket: Pt900, Rantai: Pt850 · Pilihan panjang: 50 / 55 / 60 cm'
+          : '45 cm disertakan · Bahan sama seperti loket · Pilihan panjang: 50 / 55 / 60 cm',
         ja: isB4
           ? '45cm付属 · トップ: Pt900、チェーン: Pt850 · 変更可: 50 / 55 / 60 cm'
           : '45cm付属 · トップと同素材 · 変更可: 50 / 55 / 60 cm'
@@ -810,14 +774,14 @@ function renderProduct(code, lang){
     // Update section intro
     if(custBodyEl) custBodyEl.textContent = {
       en:'Personalise your pendant with engraving, birthstone, and chain length.',
-      ar:'خصصي قلادتك بالنقش وحجر الميلاد واختيار طول السلسلة.',
+      ms:'Peribadikan loket anda dengan ukiran, batu kelahiran, dan pilihan panjang rantai.',
       ja:'刻印・誕生石・チェーン長さでペンダントをパーソナライズ。'
     }[lang];
 
     // Engraving card: pendant-specific wording
     if(ct1bEl) ct1bEl.textContent = {
       en:'Add a name, date, or short message on the back of the pendant bar — English characters only. Spaces are not counted as characters.',
-      ar:'أضيفي اسماً أو تاريخاً أو رسالة قصيرة على الجانب الخلفي من القلادة — أحرف إنجليزية فقط. المسافات لا تُحسب ضمن الأحرف.',
+      ms:'Tambahkan nama, tarikh, atau mesej ringkas pada bahagian belakang bar loket — hanya aksara Inggeris. Ruang tidak dikira sebagai aksara.',
       ja:'名前・日付・短いメッセージをペンダント背面に追加——英字のみ。空白は文字数に含まれません。'
     }[lang];
 
@@ -829,33 +793,33 @@ function renderProduct(code, lang){
     const bsLabel = document.querySelector('#birthstoneCalendar [data-i18n="bs_label"]');
     if(bsBody)  bsBody.textContent  = {
       en:'Add a birthstone to the surface of the pendant top — set by hand in Japan. Choose from any of the 12 monthly stones.',
-      ar:'أضيفي حجر ميلاد على سطح القلادة — يُركَّب يدوياً في اليابان. اختاري من أيٍّ من أحجار الأشهر الاثني عشر.',
+      ms:'Tambahkan batu kelahiran pada permukaan bahagian atas loket — ditetapkan dengan tangan di Jepun. Pilih daripada mana-mana 12 batu bulanan.',
       ja:'ペンダントトップの表面に誕生石を留めることができます——日本にて手作業でセット。12ヶ月の誕生石からお選びください。'
     }[lang];
     if(bsPrice) bsPrice.textContent = {
       en:'+ SGD 35 per stone',
-      ar:'+ ٩٠ درهم لكل حجر',
+      ms:'+ SGD 35 setiap batu',
       ja:'+ SGD 35 / 石'
     }[lang];
     if(bsLabel) bsLabel.textContent = {
       en:'Available birthstones',
-      ar:'المواليد المتاحة',
+      ms:'Batu kelahiran tersedia',
       ja:'誕生石一覧'
     }[lang];
 
     // Chain length card (ct3)
     if(sizingCard){
       sizingCard.querySelector('[data-i18n="ct3_t"]').innerHTML = {
-        en:'Chain <em>Length</em>', ar:'طول <em>السلسلة</em>', ja:'チェーン<em>長さ</em>'
+        en:'Chain <em>Length</em>', ms:'Panjang <em>Rantai</em>', ja:'チェーン<em>長さ</em>'
       }[lang];
       sizingCard.querySelector('[data-i18n="ct3_b"]').textContent = {
         en:'Standard chain is 45 cm. Upgrade to 50, 55, or 60 cm. Chain material matches the pendant (B-4: chain is Pt850).',
-        ar:'السلسلة القياسية 45 سم. يمكن الترقية إلى 50 أو 55 أو 60 سم. مادة السلسلة تطابق القلادة (B-4: السلسلة Pt850).',
+        ms:'Rantai standard ialah 45 cm. Naik taraf kepada 50, 55, atau 60 cm. Bahan rantai sepadan dengan loket (B-4: rantai ialah Pt850).',
         ja:'標準チェーンは45cm。50cm・55cm・60cmへの変更も可能。チェーン素材はトップと同素材（B-4はチェーンPt850）。'
       }[lang];
       sizingCard.querySelector('[data-i18n="ct3_p"]').textContent = {
         en:'Enquire for pricing · Specify at order confirmation',
-        ar:'استفسري عن السعر · يُحدَّد عند تأكيد الطلب',
+        ms:'Tanya tentang harga · Ditentukan semasa pengesahan pesanan',
         ja:'料金はお問い合わせください · ご注文確定時にご指定'
       }[lang];
     }
@@ -875,14 +839,14 @@ function renderProduct(code, lang){
     const bsLabel = document.querySelector('#birthstoneCalendar [data-i18n="bs_label"]');
     if(p.series === 'C'){
       const cBody  = {en:'Your choice of two birthstones is already included in the price of this ring. Choose any two from the 12 monthly stones.',
-                      ar:'حجرا ميلاد من اختيارك مضمّنان في سعر هذا الخاتم. اختاري أيًّا من أحجار الأشهر الاثني عشر.',
+                      ms:'Dua batu kelahiran pilihan anda sudah termasuk dalam harga cincin ini. Pilih mana-mana dua daripada 12 batu bulanan.',
                       ja:'お好きな誕生石2個がこのリングの価格に含まれています。12ヶ月の誕生石からお選びください。'};
       const cPrice = {en:'2 birthstones of your choice — Included in price',
-                      ar:'حجران من اختيارك — مضمّنان في السعر',
+                      ms:'2 batu kelahiran pilihan anda — Termasuk dalam harga',
                       ja:'誕生石2個 · 価格に含まれます'};
-      const cLabel = {en:'Choose your 2 birthstones · المواليد · 誕生石',
-                      ar:'اختاري حجري ميلادك · birthstones · 誕生石',
-                      ja:'誕生石を2つお選びください · birthstones · المواليد'};
+      const cLabel = {en:'Choose your 2 birthstones · Batu Kelahiran · 誕生石',
+                      ms:'Pilih 2 batu kelahiran anda · birthstones · 誕生石',
+                      ja:'誕生石を2つお選びください · birthstones · Batu Kelahiran'};
       if(bsBody)  bsBody.textContent  = cBody[lang];
       if(bsPrice) bsPrice.textContent = cPrice[lang];
       if(bsLabel) bsLabel.textContent = cLabel[lang];
@@ -928,7 +892,7 @@ function setLang(lang){
   document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
   document.body.className = 'lang-' + lang;
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir='ltr';
   const t = T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k = el.getAttribute('data-i18n');

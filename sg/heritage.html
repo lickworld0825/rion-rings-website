@@ -32,8 +32,6 @@
 }
 html{overflow-x:clip;scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-weight:300;overflow-x:clip}
-body.lang-ar{font-family:'Noto Sans Arabic',sans-serif}
-
 nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(250,247,242,0.96);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.16em;color:var(--ink);text-decoration:none}
 .nav-right{display:flex;align-items:center;gap:1.25rem}
@@ -230,7 +228,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="nav-right">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('ms')">MS</button>
       <button class="lang-btn" onclick="setLang('ja')">JA</button>
     </div>
     <a href="collection.html" class="nav-cta" data-i18n="nav_cta">Order Now</a>
@@ -260,7 +258,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="menu-footer">
       <div class="menu-lang">
         <button onclick="setLang('en');closeMenu()">EN</button>
-        <button onclick="setLang('ar');closeMenu()">AR</button>
+        <button onclick="setLang('ms');closeMenu()">MS</button>
         <button onclick="setLang('ja');closeMenu()">JA</button>
       </div>
       <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 <span data-i18n="menu_cta">Message Us on WhatsApp</span></a>
@@ -617,53 +615,7 @@ const T = {
     f_explore:"探す",f_help:"ヘルプ",f_connect:"つながる",
     f_home:"ホーム",f_collection:"コレクション",f_about:"Rionについて",f_heritage:"メモリアルジュエリーとは",f_process:"ご注文の流れ",f_care:"お手入れガイド",f_shipping:"配送・返品",f_legal:"法的情報・プライバシー"
   },
-  ar:{
-    nav_cta:"اطلب الآن",menu_eyebrow:"القائمة",menu_cta:"راسلنا عبر واتساب",
-    m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_heritage:"ما هي المجوهرات <em>التذكارية</em>",m_care:"دليل <em>العناية</em>",m_shipping:"الشحن و<em>الإرجاع</em>",m_contact:"تواصل",
-    hero_eye:"التراث والمعنى",
-    hero_title:"ما هي <em>المجوهرات التذكارية؟</em>",
-    hero_lead:"تقليد عمره قرون لحمل شخص محبوب — أو حيوان أليف عزيز — معك — منسوج في الذهب، مختوم في البلاتين، يُرتدى قرب القلب. من إنجلترا الفيكتورية إلى اليابان الحديثة، اختارت العائلات عبر الثقافات المجوهرات وسيلةً للحفاظ على الحب حياً عبر الزمن.",
-    def_text:"المجوهرات التذكارية هي قطعة مجوهرات راقية تحمل قطعة ملموسة من شخص أو حيوان أليف تحبه — في أغلب الأحيان خصلة شعر أو فراء — مختومة بالداخل أو مدمجة في التصميم. هي حضور يُرتدى، وليست تذكاراً في إطار.",
-    def_sub:"تعريف",
-    why_title:"لماذا <em>الشعر؟</em>",
-    why_body:"من بين كل طرق تذكر شخص ما، يوفر الشعر شيئاً فريداً — قطعة مما كانوا عليه حقاً، محفوظة دون فقدان معناها عبر الزمن.",
-    w1_t:"حمض نووي إلى الأبد",w1_b:"يحتوي الشعر على الجوهر الجيني للشخص. ليس ذكرى — هو هم.",
-    w2_t:"لا تحلل",w2_b:"بختم مناسب، يدوم الشعر قروناً. لا تزال مومياوات مصر تحتفظ بشعرها بعد 4000 عام.",
-    w3_t:"صحي وآمن",w3_b:"الشعر كيراتين — بروتين مستقر. لا يحمل سوائل جسدية، ولا تلوث، ولا قلق صحي.",
-    w4_t:"مقبول عالمياً",w4_b:"المجوهرات التذكارية المختومة بالشعر مقبولة عبر معظم الأديان، بما في ذلك التقاليد الإسلامية والمسيحية والبوذية والهندوسية والشنتو.",
-    who_title:"من يختار <em>المجوهرات التذكارية؟</em>",
-    who_body:"من الحزن إلى الاحتفال، من العائلة إلى الحيوانات الأليفة المحبوبة، يأتي عملاؤنا لأسباب عديدة. كل قطعة تحمل قصتها الخاصة.",
-    who1_t:"بعد الفقد",who1_b:"آباء فقدوا طفلاً. أطفال فقدوا والداً. شركاء فقدوا حب حياتهم. عائلات فقدت حيواناً أليفاً محبوباً. طريقة للحزن مع البقاء قريبين.",
-
-    who4_t:"الحيوانات الأليفة المحبوبة",who4_b:"كلاب، قطط، خيول — فراء من رفيق محبوب مختوم في الذهب. للكثيرين، الحيوانات الأليفة عائلة.",
-    who5_t:"الإرث العائلي",who5_b:"قطع متعددة الأجيال تحتوي على شعر من الأجداد والآباء والأطفال — إرث مصمم ليُورّث.",
-    who6_t:"المعالم الشخصية",who6_b:"تخليد ذكرى التغلب على مرض، أو تحول شخصي، أو فصل ذي معنى — بقطعة تحتوي على شعرك أنت.",
-    rel_title:"اعتبارات <em>دينية وثقافية</em>.",
-    rel_intro:"مُورست المجوهرات التذكارية عبر معظم الثقافات والأديان. فيما يلي نظرة عامة عامة — نشجع جميع العملاء على استشارة مستشاريهم الدينيين أو الثقافيين للحصول على إرشادات شخصية.",
-    r1_tag:"التقليد الإسلامي",r1_t:"لعملائنا <em>المسلمين</em>",
-    r1_b1:"لا يُعتبر الشعر جزءاً من الجسد يجب أن يصاحب الجنازة. بمجرد سقوطه أو قطعه، يمكن الاحتفاظ بالشعر بكل احترام أو إهداؤه أو وضعه في المجوهرات دون انتهاك المبادئ الإسلامية.",
-    r1_b2:"المجوهرات التذكارية التي تحتوي على شعر شخص محبوب هي خيار حديث نسبياً في سنغافورة وعبر جنوب شرق آسيا، يتبناه بهدوء العائلات الذين يرغبون في الحفاظ على قرب أحد الأحباء. كما هو الحال مع أي أمر يتعلق بالحزن والذاكرة، نشجعك على استشارة إمامك أو عائلتك للحصول على إرشادات شخصية.",
-    r2_tag:"التقليد المسيحي",r2_t:"لعملائنا <em>المسيحيين</em>",
-    r2_b1:"المجوهرات التذكارية المختومة بالشعر جزء من التقليد المسيحي لأكثر من 500 عام — من الذخائر المقدسة في العصور الوسطى إلى مجوهرات الحداد الفيكتورية، المحبوبة من الملكات والعامة على حد سواء.",
-    r2_b2:"عبر الممارسات الكاثوليكية والأرثوذكسية والبروتستانتية، تُقبل المجوهرات التذكارية على نطاق واسع كطريقة محترمة للتذكر.",
-    r4_tag:"الهندوسية والسيخ وتقاليد أخرى",r4_t:"لتقاليد <em>أخرى</em>",
-    r4_b1:"عبر التقاليد الهندوسية والسيخية واليهودية والبهائية وغيرها الكثير، يُحترم على نطاق واسع مبدأ الاحتفاظ بتذكار ملموس لشخص محبوب — وإن اختلفت العادات المحددة.",
-    r4_b2:"إذا كانت لديك أسئلة محددة عن تقليدك، راسلنا — نتعامل مع كل طلب باحترام وانفتاح.",
-    disc_t:"ملاحظة بشأن الإرشاد الديني",
-    disc_b:"Rion هي مرسم مجوهرات، وليست سلطة دينية. المعلومات الواردة أعلاه مقدمة كسياق عام فقط. للإرشاد الديني الملزم، يرجى استشارة إمامك أو كاهنك أو حاخامك أو مستشار عائلتك الروحي. نحترم جميع الأديان ونتعامل مع كل طلب بعناية.",
-    ap_eye:"نهج Rion",ap_title:"المجوهرات التذكارية المختومة بالشعر، <em>متقنة في اليابان</em>.",
-    ap_body:"تتخصص Rion في شيء واحد: ختم خصلة شعر هرمسياً داخل ذهب 18K أو بلاتين Pt900 صلب، يدوياً، في مرسمنا الياباني. صقلنا هذه العملية على مدى سنوات لإنتاج قطع مصممة لتدوم لأجيال.",
-    ap1_t:"مختوم يدوياً في اليابان",ap1_b:"لا مصانع، لا اختصارات. تُوضع كل خصلة وتُختم يدوياً من قبل حرفي خبير.",
-    ap2_t:"تقرير صوري",ap2_b:"كل خطوة موثقة ومُرسلة إليك. شفافية كاملة، لا عملية مخفية.",
-    ap3_t:"فريد من نوعه",ap3_b:"شعرك العزيز في الداخل — تحفة فريدة مصنوعة خصيصاً لك وحدك.",
-    ap4_t:"خدمة مدى الحياة",ap4_b:"تلميع مجاني في مرسمنا الياباني، طالما تمتلك القطعة.",
-    cta_title:"ابدأ <em>قصتك الخاصة</em>.",
-    cta_body:"إذا كنت تفكر في قطعة تذكارية — لشخص محبوب، لحيوان أليف عزيز، للحب، لمعلم في حياتك — نحن هنا للاستماع والإرشاد. تواصل معنا عبر واتساب بالإنجليزية أو العربية أو اليابانية.",
-    cta1:"شاهد المجموعة",cta2:"راسلنا عبر واتساب",
-    footer_p:"مجوهرات تذكارية حصرية، مصنوعة يدوياً بالكامل في اليابان. شعرة واحدة. جوهرة واحدة. حب واحد — لك إلى الأبد.",
-    f_explore:"استكشف",f_help:"المساعدة",f_connect:"تواصل",
-    f_home:"الرئيسية",f_collection:"المجموعة",f_about:"عن Rion",f_heritage:"ما هي المجوهرات التذكارية",f_process:"كيف يعمل",f_care:"دليل العناية",f_shipping:"الشحن والإرجاع",f_legal:"معلومات قانونية وخصوصية"
-  }
+  ms:{nav_cta:"Tempah Sekarang",menu_eyebrow:"Navigasi",menu_cta:"Hantar Mesej kepada Kami di WhatsApp",m_home:"Laman Utama",m_collection:"Koleksi",m_about:"Tentang <em>Rion</em>",m_heritage:"Apakah <em>Perhiasan Peringatan</em>",m_care:"<em>Panduan</em> Penjagaan",m_shipping:"Penghantaran &amp; <em>Pemulangan</em>",m_contact:"Hubungi",hero_eye:"Warisan &amp; Makna",hero_title:"Apakah <em>Perhiasan Peringatan?</em>",hero_lead:"Sebuah tradisi yang berusia berabad-abad untuk membawa seseorang tersayang — atau haiwan peliharaan yang dikasihi — bersama anda — dijalin ke dalam emas, dimeterai dalam platinum, dipakai dekat dengan hati. Dari England era Victoria hingga Jepun moden, keluarga merentasi budaya telah memilih perhiasan sebagai cara untuk mengekalkan cinta hidup sepanjang masa.",def_text:"Perhiasan peringatan ialah sekeping perhiasan halus yang menyimpan sebahagian ketara daripada seseorang yang anda sayangi — pasangan, ibu bapa, anak, sahabat, atau haiwan peliharaan tersayang — selalunya satu helai rambut atau bulu — dimeterai di dalam atau ditatah sebagai sebahagian daripada reka bentuk. Ia adalah kehadiran yang boleh dipakai, bukan sebuah peringatan dalam bingkai.",def_sub:"Satu definisi",why_title:"Kenapa <em>rambut?</em>",why_body:"Daripada semua cara untuk mengenang seseorang, rambut menawarkan sesuatu yang unik — sebahagian daripada diri mereka yang sebenar, terpelihara tanpa kehilangan maknanya walau dengan berlalunya masa.",w1_t:"DNA Selamanya",w1_b:"Rambut mengandungi intipati genetik seseorang. Ia bukan sekadar kenangan — ia adalah mereka.",w2_t:"Tidak Reput",w2_b:"Apabila dimeterai dengan betul, rambut bertahan selama berabad-abad. Mumia Mesir masih mengekalkan rambut mereka selepas 4,000 tahun.",w3_t:"Higienik &amp; Selamat",w3_b:"Rambut adalah keratin — protein yang stabil dan tidak terasa organik. Tidak membawa cecair badan, tiada pencemaran, tiada kebimbangan kesihatan.",w4_t:"Diterima Secara Sejagat",w4_b:"Perhiasan peringatan termeterai rambut diterima dalam kebanyakan agama, termasuk tradisi Islam, Kristian, Buddha, Hindu, dan Shinto.",who_title:"Siapa yang memilih <em>perhiasan peringatan?</em>",who_body:"Dari kesedihan kepada perayaan, dari keluarga kepada haiwan peliharaan tersayang, pelanggan kami datang dengan pelbagai sebab. Setiap perhiasan menyimpan kisahnya tersendiri.",who1_t:"Selepas Kehilangan",who1_b:"Ibu bapa yang kehilangan anak. Anak yang kehilangan ibu bapa. Pasangan yang kehilangan cinta hidup mereka. Keluarga yang kehilangan haiwan peliharaan tersayang. Satu cara untuk berduka sambil terus berdekatan.",who4_t:"Haiwan Peliharaan Tersayang",who4_b:"Anjing, kucing, kuda — bulu daripada teman tersayang dimeteraikan dalam emas. Bagi ramai, haiwan peliharaan adalah keluarga.",who5_t:"Pusaka Keluarga",who5_b:"Perhiasan merentasi generasi yang menyimpan rambut daripada datuk nenek, ibu bapa, dan anak-anak — pusaka yang direka untuk diwariskan.",who6_t:"Detik Bermakna Peribadi",who6_b:"Memperingati kesembuhan daripada penyakit, transformasi peribadi, atau bab yang bermakna — dengan perhiasan yang menyimpan rambut anda sendiri.",rel_title:"<em>Pertimbangan</em> agama &amp; budaya.",rel_intro:"Perhiasan peringatan telah diamalkan dalam hampir semua budaya dan agama. Berikut adalah gambaran umum — kami menggalakkan semua pelanggan berunding dengan penasihat agama atau budaya mereka untuk panduan peribadi.",r1_tag:"Tradisi Islam",r1_t:"Untuk pelanggan <em>Muslim</em> kami",r1_b1:"Rambut tidak dianggap sebagai sebahagian daripada tubuh yang mesti disertakan dalam pengebumian (jenazah). Setelah gugur atau dipotong, rambut boleh disimpan, dihadiahkan, atau ditatah ke dalam perhiasan dengan penuh hormat tanpa melanggar prinsip Islam.",r1_b2:"Perhiasan peringatan yang menyimpan rambut seseorang tersayang adalah pilihan yang agak moden di Singapura dan di seluruh Asia Tenggara, diterima secara senyap oleh keluarga yang ingin mengekalkan seseorang dekat dengan mereka. Seperti mana-mana perkara yang menyentuh kesedihan dan kenangan, kami menggalakkan anda berunding dengan imam atau keluarga anda untuk panduan peribadi.",r2_tag:"Tradisi Kristian",r2_t:"Untuk pelanggan <em>Kristian</em> kami",r2_b1:"Perhiasan peringatan termeterai rambut telah menjadi sebahagian daripada tradisi Kristian selama lebih 500 tahun — dari relikuari zaman pertengahan hingga perhiasan perkabungan era Victoria, digemari oleh permaisuri dan rakyat biasa.",r2_b2:"Merentasi amalan Katolik, Ortodoks, dan Protestan, perhiasan peringatan diterima secara meluas sebagai cara yang penuh hormat untuk mengenang.",r4_tag:"Tradisi Hindu, Sikh, dan Lain-lain",r4_t:"Untuk <em>tradisi</em> lain",r4_b1:"Merentasi tradisi Hindu, Sikh, Yahudi, Bahá'í, dan banyak lagi, prinsip menyimpan peringatan ketara seseorang tersayang dihormati secara meluas — walaupun adat khusus berbeza-beza.",r4_b2:"Jika anda mempunyai sebarang soalan khusus tentang tradisi anda, hantar mesej kepada kami — kami melayani setiap tempahan dengan rasa hormat dan keterbukaan.",disc_t:"Nota Mengenai Panduan Agama",disc_b:"Rion adalah sebuah bengkel perhiasan, bukan sebuah pihak berkuasa agama. Maklumat di atas disediakan hanya sebagai konteks umum. Untuk panduan agama yang muktamad, sila berunding dengan imam, paderi, rabai, atau penasihat kerohanian keluarga anda. Kami menghormati semua agama dan melayani setiap tempahan dengan teliti.",ap_eye:"Pendekatan Rion",ap_title:"Perhiasan peringatan termeterai rambut, <em>disempurnakan di Jepun.</em>",ap_body:"Rion mengkhusus dalam satu perkara: memeteraikan kedap udara satu helai rambut di dalam emas K18 tulen atau platinum Pt900, dengan tangan, di bengkel Jepun kami. Kami telah menyempurnakan proses ini selama bertahun-tahun untuk menghasilkan perhiasan yang direka bertahan selama beberapa generasi.",ap1_t:"Dimeterai Tangan di Jepun",ap1_b:"Tiada kilang, tiada jalan pintas. Setiap helai diletakkan dan dimeteraikan oleh kakitangan kami.",ap2_t:"Laporan Foto",ap2_b:"Setiap langkah didokumenkan dan dihantar kepada anda. Telus sepenuhnya, tiada proses tersembunyi.",ap3_t:"Tiada Tandingan",ap3_b:"Rambut berharga anda tersimpan — perhiasan unik yang dibuat khas untuk anda.",ap4_t:"Perkhidmatan Seumur Hidup",ap4_b:"Penggilapan percuma di bengkel Jepun kami, selagi anda memiliki perhiasan tersebut.",cta_title:"Mulakan <em>kisah anda sendiri.</em>",cta_body:"Jika anda sedang mempertimbangkan sebuah perhiasan peringatan — untuk seseorang tersayang, untuk haiwan peliharaan tersayang, untuk cinta, untuk satu detik bermakna — kami sedia mendengar dan membimbing. Hubungi kami di WhatsApp dalam Bahasa Inggeris, Arab, atau Jepun.",cta1:"Lihat Koleksi",cta2:"Hantar Mesej kepada Kami di WhatsApp",footer_p:"Perhiasan peringatan tersuai, dibuat sepenuhnya dengan tangan di Jepun. Satu rambut. Satu perhiasan. Satu cinta — milik anda, selamanya.",f_explore:"Terokai",f_help:"Bantuan",f_connect:"Hubungkan",f_home:"Laman Utama",f_collection:"Koleksi",f_about:"Tentang Rion",f_heritage:"Apakah Perhiasan Peringatan",f_process:"Cara Ia Berfungsi",f_care:"Panduan Penjagaan",f_shipping:"Penghantaran &amp; Pemulangan",f_legal:"Undang-undang &amp; Privasi"}
 };
 
 function setLang(lang){
@@ -671,7 +623,7 @@ function setLang(lang){
   document.querySelectorAll(`.lang-btn[onclick*="${lang}"],.menu-lang button[onclick*="${lang}"]`).forEach(b=>b.classList.add('active'));
   document.body.className = 'lang-' + lang;
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir='ltr';
   const t = T[lang];
   if(!t) return;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
