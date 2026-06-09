@@ -143,6 +143,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 .scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
 .scroll-top::before{content:'↑'}
 
+/* LANG SWITCH */
+.lang-switch{display:flex;align-items:center;gap:0.5rem}
+.lang-btn{background:none;border:none;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.14em;cursor:pointer;color:var(--ink-muted);transition:color .25s;padding:4px 0;font-weight:400}
+.lang-btn.active{color:var(--gold-dark);font-weight:500}
+.lang-btn:hover{color:var(--gold-dark)}
+
 @media(max-width:1024px){
   footer{padding-bottom:7rem!important}.nav-cta{display:none}
   .menu-inner{padding:4rem 4rem 2rem!important}
@@ -168,6 +174,11 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
     <a href="collection.html" class="nav-cta">Order Now</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -176,10 +187,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
-  <span class="trust-item">Free Shipping to the USA</span>
-  <span class="trust-item">No Import Duties</span>
-  <span class="trust-item">Handcrafted in Japan</span>
-  <span class="trust-item">Secure Payment</span>
+  <span class="trust-item" data-i18n="trust_ship">Free Shipping to the USA</span>
+  <span class="trust-item" data-i18n="trust_duty">No Import Duties</span>
+  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
+  <span class="trust-item" data-i18n="trust_pay">Secure Payment</span>
 </div>
 
 <!-- MENU OVERLAY -->
@@ -209,20 +220,20 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <!-- PAGE HEADER -->
 <header class="page-header">
   <div class="page-header-inner">
-    <span class="page-eyebrow">Frequently Asked Questions</span>
-    <h1>Your questions,<br><em>answered.</em></h1>
-    <p class="page-lead">Everything you need to know about Rion — the hair, the process, the jewel, and delivery to the USA. If your question isn't here, we'd genuinely love to hear from you. Reach us on WhatsApp or <a href="mailto:info@art-rings.com" style="color:var(--gold-dark)">email</a> — we respond personally.</p>
+    <span class="page-eyebrow" data-i18n="page_eyebrow">Frequently Asked Questions</span>
+    <h1 data-i18n="page_h1">Your questions,<br><em>answered.</em></h1>
+    <p class="page-lead" data-i18n="page_lead">Everything you need to know about Rion — the hair, the process, the jewel, and delivery to the USA. If your question isn't here, we'd genuinely love to hear from you. Reach us on WhatsApp or <a href="mailto:info@art-rings.com" style="color:var(--gold-dark)">email</a> — we respond personally.</p>
   </div>
 </header>
 
 <!-- CATEGORY TABS -->
 <div class="cat-tabs" role="tablist">
-  <button class="cat-tab active" onclick="showCat('all')">All</button>
-  <button class="cat-tab" onclick="showCat('hair')">Hair &amp; Process</button>
-  <button class="cat-tab" onclick="showCat('jewel')">The Jewel</button>
-  <button class="cat-tab" onclick="showCat('order')">Ordering</button>
-  <button class="cat-tab" onclick="showCat('shipping')">Shipping &amp; Payment</button>
-  <button class="cat-tab" onclick="showCat('usa')">US-Specific</button>
+  <button class="cat-tab active" onclick="showCat('all')" data-i18n="tab_all">All</button>
+  <button class="cat-tab" onclick="showCat('hair')" data-i18n="tab_hair">Hair &amp; Process</button>
+  <button class="cat-tab" onclick="showCat('jewel')" data-i18n="tab_jewel">The Jewel</button>
+  <button class="cat-tab" onclick="showCat('order')" data-i18n="tab_order">Ordering</button>
+  <button class="cat-tab" onclick="showCat('shipping')" data-i18n="tab_shipping">Shipping &amp; Payment</button>
+  <button class="cat-tab" onclick="showCat('usa')" data-i18n="tab_usa">US-Specific</button>
 </div>
 
 <!-- FAQ CONTENT -->
@@ -254,10 +265,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">
-      <span class="faq-q-text">How much hair is needed?</span>
+      <span class="faq-q-text" data-i18n="q_hair_amount">How much hair is needed?</span>
       <span class="faq-q-ico"></span>
     </button>
-    <div class="faq-a"><p>Very little — approximately 1 to 5 strands is sufficient. No cutting required. Naturally shed hair from a comb, brush, or saved from a haircut is perfectly fine. Even a single strand of 1 cm or less works. We include clear instructions in your hair collection kit, so there's no guesswork.</p></div>
+    <div class="faq-a"><p data-i18n="a_hair_amount">Very little — approximately 1 to 5 strands is sufficient. No cutting required. Naturally shed hair from a comb, brush, or saved from a haircut is perfectly fine. Even a single strand of 1 cm or less works. We include clear instructions in your hair collection kit, so there's no guesswork.</p></div>
   </div>
 
   <div class="faq-item">
@@ -306,10 +317,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">
-      <span class="faq-q-text">What materials are the jewels made from?</span>
+      <span class="faq-q-text" data-i18n="q_materials">What materials are the jewels made from?</span>
       <span class="faq-q-ico"></span>
     </button>
-    <div class="faq-a"><p>All Rion jewels are made in K18 Gold (Yellow, White, or Rose) or Platinum Pt900 — the highest quality, sourced and handcrafted entirely in Japan. For Series C (Birthstone Ring) and Series D (Half Eternity Ring), natural diamonds or gemstones are included as specified. Every element — gold, platinum, diamonds, setting — is Japanese.</p></div>
+    <div class="faq-a"><p data-i18n="a_materials">All Rion jewels are made in K18 Gold (Yellow, White, or Rose) or Platinum Pt900 — the highest quality, sourced and handcrafted entirely in Japan. For Series C (Birthstone Ring) and Series D (Half Eternity Ring), natural diamonds or gemstones are included as specified. Every element — gold, platinum, diamonds, setting — is Japanese.</p></div>
   </div>
 
   <div class="faq-item">
@@ -373,10 +384,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">
-      <span class="faq-q-text">How long does production take?</span>
+      <span class="faq-q-text" data-i18n="q_production_time">How long does production take?</span>
       <span class="faq-q-ico"></span>
     </button>
-    <div class="faq-a"><p>Approximately 5.5 months from the date we receive your hair. This covers the full handcrafting process: hair sealing, metal casting, stone setting (where applicable), finishing, engraving, and quality control. We send you updates at each major stage via WhatsApp or email, so you always know where things stand.</p></div>
+    <div class="faq-a"><p data-i18n="a_production_time">Approximately 5.5 months from the date we receive your hair. This covers the full handcrafting process: hair sealing, metal casting, stone setting (where applicable), finishing, engraving, and quality control. We send you updates at each major stage via WhatsApp or email, so you always know where things stand.</p></div>
   </div>
 
   <div class="faq-item">
@@ -392,7 +403,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">
-      <span class="faq-q-text">Is a fully bespoke design possible?</span>
+      <span class="faq-q-text" data-i18n="q_bespoke">Is a fully bespoke design possible?</span>
       <span class="faq-q-ico"></span>
     </button>
     <div class="faq-a">
@@ -451,7 +462,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">
-      <span class="faq-q-text">Do I pay import duties or customs fees when my jewel arrives?</span>
+      <span class="faq-q-text" data-i18n="q_import_duty">Do I pay import duties or customs fees when my jewel arrives?</span>
       <span class="faq-q-ico"></span>
     </button>
     <div class="faq-a">
@@ -464,7 +475,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
   <div class="faq-item">
     <button class="faq-q" onclick="toggleFaq(this)">
-      <span class="faq-q-text">Is it legal to ship hair through the US mail or via international courier?</span>
+      <span class="faq-q-text" data-i18n="q_legal_ship">Is it legal to ship hair through the US mail or via international courier?</span>
       <span class="faq-q-ico"></span>
     </button>
     <div class="faq-a">
@@ -530,8 +541,8 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- STILL NEED HELP -->
 <section class="help-section">
-  <h2>Still have a <em>question?</em></h2>
-  <p>Our team is available on WhatsApp in English and responds personally — typically within a few hours. We genuinely want to help.</p>
+  <h2 data-i18n="cta_h2">Still have a <em>question?</em></h2>
+  <p data-i18n="cta_p">Our team is available on WhatsApp in English and responds personally — typically within a few hours. We genuinely want to help.</p>
   <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%20have%20a%20question%20I%20couldn't%20find%20in%20the%20FAQ%3A" class="btn-wa" target="_blank">💬 Message Us on WhatsApp</a>
   <div class="help-links">
     <a href="order.html" class="help-link">How to Order &rarr;</a>
@@ -586,6 +597,73 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <button class="scroll-top" id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
 
 <script>
+const T = {
+  en: {
+    trust_ship: 'Free Shipping to the USA',
+    trust_duty: 'No Import Duties',
+    trust_made: 'Handcrafted in Japan',
+    trust_pay: 'Secure Payment',
+    page_eyebrow: 'Frequently Asked Questions',
+    page_h1: 'Your questions,<br><em>answered.</em>',
+    page_lead: 'Everything you need to know about Rion — the hair, the process, the jewel, and delivery to the USA. If your question isn\'t here, we\'d genuinely love to hear from you. Reach us on WhatsApp or <a href="mailto:info@art-rings.com" style="color:var(--gold-dark)">email</a> — we respond personally.',
+    tab_all: 'All',
+    tab_hair: 'Hair &amp; Process',
+    tab_jewel: 'The Jewel',
+    tab_order: 'Ordering',
+    tab_shipping: 'Shipping &amp; Payment',
+    tab_usa: 'US-Specific',
+    q_hair_amount: 'How much hair is needed?',
+    a_hair_amount: 'Very little — approximately 1 to 5 strands is sufficient. No cutting required. Naturally shed hair from a comb, brush, or saved from a haircut is perfectly fine. Even a single strand of 1 cm or less works. We include clear instructions in your hair collection kit, so there\'s no guesswork.',
+    q_production_time: 'How long does production take?',
+    a_production_time: 'Approximately 5.5 months from the date we receive your hair. This covers the full handcrafting process: hair sealing, metal casting, stone setting (where applicable), finishing, engraving, and quality control. We send you updates at each major stage via WhatsApp or email, so you always know where things stand.',
+    q_materials: 'What materials are the jewels made from?',
+    a_materials: 'All Rion jewels are made in K18 Gold (Yellow, White, or Rose) or Platinum Pt900 — the highest quality, sourced and handcrafted entirely in Japan. For Series C (Birthstone Ring) and Series D (Half Eternity Ring), natural diamonds or gemstones are included as specified. Every element — gold, platinum, diamonds, setting — is Japanese.',
+    q_bespoke: 'Is a fully bespoke design possible?',
+    q_import_duty: 'Do I pay import duties or customs fees when my jewel arrives?',
+    q_legal_ship: 'Is it legal to ship hair through the US mail or via international courier?',
+    cta_h2: 'Still have a <em>question?</em>',
+    cta_p: 'Our team is available on WhatsApp in English and responds personally — typically within a few hours. We genuinely want to help.'
+  },
+  ja: {
+    trust_ship: 'アメリカへ無料配送',
+    trust_duty: '輸入関税なし',
+    trust_made: '日本で手作り',
+    trust_pay: '安全なお支払い',
+    page_eyebrow: 'よくあるご質問',
+    page_h1: 'ご質問に<br><em>お答えします。</em>',
+    page_lead: 'Rionについてのよくあるご質問をまとめました。髪の毛のこと、制作工程、ジュエル、そして米国への配送についてご説明しています。こちらに掲載のない疑問点は、WhatsAppまたは<a href="mailto:info@art-rings.com" style="color:var(--gold-dark)">メール</a>よりお気軽にお問い合わせください。',
+    tab_all: 'すべて',
+    tab_hair: '髪・制作工程',
+    tab_jewel: 'ジュエルについて',
+    tab_order: 'ご注文',
+    tab_shipping: '配送・お支払い',
+    tab_usa: 'US在住のお客様',
+    q_hair_amount: 'どのくらいの量の髪が必要ですか？',
+    a_hair_amount: 'ごく少量で大丈夫です。長さ1cm程度、1〜5本の髪があれば十分です。カットの必要もなく、コームやブラシから自然に取れた髪でも構いません。詳しい手順はヘアコレクションキットに同封の説明書に記載しています。',
+    q_production_time: 'どのくらい時間がかかりますか？',
+    a_production_time: '髪を受け取ってから約5.5ヶ月です。髪の封入・鋳造・石留め（該当の場合）・仕上げ・彫刻・品質管理など、すべての工程が含まれます。各工程の節目にWhatsAppまたはメールで進捗をご報告します。',
+    q_materials: 'どのような素材がありますか？',
+    a_materials: 'すべてのRionジュエルはK18ゴールド（イエロー・ホワイト・ローズ）またはPt900プラチナで制作されます。最高品質の素材を日本国内で調達し、日本の職人が手作りします。Series C（誕生石リング）・Series D（ハーフエタニティリング）には天然ダイヤモンドまたは宝石が含まれます。',
+    q_bespoke: 'フルオーダーのデザインは可能ですか？',
+    q_import_duty: 'ジュエルが届く際に輸入関税やカスタム手数料はかかりますか？',
+    q_legal_ship: '米国から日本へ髪を郵送することは合法ですか？',
+    cta_h2: 'ご不明な点はございますか？',
+    cta_p: 'WhatsAppでお気軽にお問い合わせください。日本語・英語でご対応いたします。通常数時間以内にご返信します。'
+  }
+};
+function setLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
+  });
+  localStorage.setItem('rion_us_lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+(function(){
+  const saved=localStorage.getItem('rion_us_lang')||'en';
+  if(saved!=='en') setLang(saved);
+})();
+
 function toggleMenu(){
   const overlay=document.getElementById('menuOverlay');
   const burger=document.querySelector('.hamburger');
