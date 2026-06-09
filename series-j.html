@@ -350,9 +350,9 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <p class="series-desc">Two ribbons of gold, woven together and set with diamonds along one strand. A ring for those whose grief is too profound for subtlety. Your loved one's hair sealed inside — a love that cannot be contained, worn proudly on your hand every day.</p>
 
     <div class="material-tabs">
-      <button class="mat-tab" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
+      <button class="mat-tab active" onclick="selectMat(\'yg\',event)" data-i18n="mat_yg">Yellow Gold</button>
       <button class="mat-tab" onclick="selectMat('wg',event)" data-i18n="mat_wg">White Gold</button>
-      <button class="mat-tab active" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
+      <button class="mat-tab" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
     </div>
 
     <div class="price-display">
@@ -652,7 +652,7 @@ const MATERIALS={
   pt:{code:'J-4',price:'$7,400',label:'Platinum Pt900'}
 };
 let currentMat='yg';
-(function(){const p=new URLSearchParams(location.search).get('mat');if(p&&['yg','wg','pg','pt'].includes(p)){currentMat=p;}})();
+(function(){const p=new URLSearchParams(location.search).get('mat');if(p&&['yg', 'wg', 'pt'].includes(p)){currentMat=p;}})();
 
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 
@@ -673,17 +673,7 @@ function selectMat(mat,e){
   document.querySelectorAll('.mat-tab').forEach(b=>b.classList.remove('active'));
   if(e&&e.target)e.target.classList.add('active');
   updateWaLinks();
-document.addEventListener('DOMContentLoaded',function(){
-  const m=MATERIALS[currentMat];
-  if(m){
-    const pd=document.getElementById('priceDisplay');
-    const cd=document.getElementById('codeDisplay');
-    if(pd)pd.textContent=m.price;
-    if(cd)cd.textContent=m.code;
-    document.querySelectorAll('.mat-tab').forEach(b=>{
-      const match=b.getAttribute('onclick')||'';
-      b.classList.toggle('active',match.includes("'"+currentMat+"'"));
-    });
+
     updateWaLinks();
   }
 });
@@ -707,6 +697,21 @@ window.addEventListener('scroll',()=>{
 });
 
 updateWaLinks();
+
+document.addEventListener('DOMContentLoaded',function(){
+  const _m=MATERIALS[currentMat];
+  if(_m){
+    var pd=document.getElementById('priceDisplay');
+    var cd=document.getElementById('codeDisplay');
+    if(pd)pd.textContent=_m.price;
+    if(cd)cd.textContent=_m.code;
+    document.querySelectorAll('.mat-tab').forEach(function(b){
+      var oc=b.getAttribute('onclick')||'';
+      b.classList.toggle('active',oc.indexOf("'"+currentMat+"'")>-1);
+    });
+    updateWaLinks();
+  }
+});
 </script>
 </body>
 </html>
