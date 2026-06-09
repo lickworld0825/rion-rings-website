@@ -350,10 +350,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <p class="series-desc">A timeless band with a sealed inner chamber — the most chosen Rion design. Elegant, wearable every day, available in four precious materials. One strand of hair, held inside, protected for eternity.</p>
 
     <div class="material-tabs">
-      <button class="mat-tab" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
+      <button class="mat-tab active" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
       <button class="mat-tab" onclick="selectMat('wg',event)" data-i18n="mat_wg">White Gold</button>
       <button class="mat-tab" onclick="selectMat('pg',event)" data-i18n="mat_pg">Pink Gold</button>
-      <button class="mat-tab active" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
+      <button class="mat-tab" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
     </div>
 
     <div class="price-display">
@@ -667,7 +667,7 @@ const MATERIALS={
   pg:{code:'A-3',price:'$5,200',img:'images/series-a/a3.jpg',label:'K18 Pink Gold'},
   pt:{code:'A-4',price:'$5,100',img:'images/series-a/a4.jpg',label:'Platinum Pt900'}
 };
-let currentMat='pt';
+let currentMat='yg';
 
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 

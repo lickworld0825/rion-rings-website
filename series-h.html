@@ -350,10 +350,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <p class="series-desc">Two curves of gold converge at a five-diamond cluster — a shape that speaks of movement and reunion. Your loved one's hair is sealed inside, hidden from the world, held close to you. Handcrafted entirely by hand at our Japanese atelier.</p>
 
     <div class="material-tabs">
-      <button class="mat-tab" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
+      <button class="mat-tab active" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
       <button class="mat-tab" onclick="selectMat('wg',event)" data-i18n="mat_wg">White Gold</button>
       <button class="mat-tab" onclick="selectMat('pg',event)" data-i18n="mat_pg">Pink Gold</button>
-      <button class="mat-tab active" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
+      <button class="mat-tab" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
     </div>
 
     <div class="price-display">
@@ -668,7 +668,7 @@ const MATERIALS={
   pg:{code:'H-3',price:'$6,400',label:'K18 Pink Gold'},
   pt:{code:'H-4',price:'$6,200',label:'Platinum Pt900'}
 };
-let currentMat='pt';
+let currentMat='yg';
 
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 

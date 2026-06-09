@@ -260,10 +260,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <p class="series-desc">A geometric band set with two birthstones of your choice — each stone commemorating someone or a moment that mattered most. Your loved one's hair sealed within. Handcrafted entirely by hand in Japan, built to be worn every day.</p>
 
     <div class="material-tabs">
-      <button class="mat-tab" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
+      <button class="mat-tab active" onclick="selectMat('yg',event)" data-i18n="mat_yg">Yellow Gold</button>
       <button class="mat-tab" onclick="selectMat('wg',event)" data-i18n="mat_wg">White Gold</button>
       <button class="mat-tab" onclick="selectMat('pg',event)" data-i18n="mat_pg">Pink Gold</button>
-      <button class="mat-tab active" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
+      <button class="mat-tab" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum</button>
     </div>
 
     <div class="price-display">
@@ -476,7 +476,7 @@ const MATERIALS={
   pg:{code:'C-3',price:'$6,400',img:'images/series-c/c3.jpg',label:'K18 Pink Gold'},
   pt:{code:'C-4',price:'$6,200',img:'images/series-c/c4.jpg',label:'Platinum Pt900'}
 };
-let currentMat='pt';
+let currentMat='yg';
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 function updateWaLinks(){
   const m=MATERIALS[currentMat];
