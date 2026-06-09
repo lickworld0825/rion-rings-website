@@ -668,6 +668,7 @@ const MATERIALS={
   pt:{code:'A-4',price:'$5,100',img:'images/series-a/a4.jpg',label:'Platinum Pt900'}
 };
 let currentMat='yg';
+(function(){const p=new URLSearchParams(location.search).get('mat');if(p&&['yg','wg','pg','pt'].includes(p)){currentMat=p;}})();
 
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 
@@ -688,6 +689,20 @@ function selectMat(mat,e){
   document.querySelectorAll('.mat-tab').forEach(b=>b.classList.remove('active'));
   if(e&&e.target)e.target.classList.add('active');
   updateWaLinks();
+document.addEventListener('DOMContentLoaded',function(){
+  const m=MATERIALS[currentMat];
+  if(m){
+    const pd=document.getElementById('priceDisplay');
+    const cd=document.getElementById('codeDisplay');
+    if(pd)pd.textContent=m.price;
+    if(cd)cd.textContent=m.code;
+    document.querySelectorAll('.mat-tab').forEach(b=>{
+      const match=b.getAttribute('onclick')||'';
+      b.classList.toggle('active',match.includes("'"+currentMat+"'"));
+    });
+    updateWaLinks();
+  }
+});
 }
 
 function toggleMenu(){

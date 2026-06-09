@@ -560,7 +560,8 @@ const MATERIALS={
   pg:{code:'F-3',price:'$7,200',img:'images/series-f/f3.jpg',label:'K18 Pink Gold',popular:false},
   pt:{code:'F-4',price:'$6,800',img:'images/series-f/f4.jpg',label:'Platinum Pt900',popular:true}
 };
-let cur='pt';
+let cur='yg';
+(function(){const p=new URLSearchParams(location.search).get('mat');if(p&&['yg','wg','pg','pt'].includes(p)){cur=p;}})();
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 function updateWa(){
   const m=MATERIALS[cur];
@@ -628,6 +629,20 @@ function setLang(l){
   const saved=localStorage.getItem('rion_us_lang')||'en';
   if(saved!=='en') setLang(saved);
 })();
+document.addEventListener('DOMContentLoaded',function(){
+  const m=MATERIALS[currentMat];
+  if(m){
+    const pd=document.getElementById('priceDisplay');
+    const cd=document.getElementById('codeDisplay');
+    if(pd)pd.textContent=m.price;
+    if(cd)cd.textContent=m.code;
+    document.querySelectorAll('.mat-tab').forEach(b=>{
+      const match=b.getAttribute('onclick')||'';
+      b.classList.toggle('active',match.includes("'"+currentMat+"'"));
+    });
+    updateWaLinks();
+  }
+});
 </script>
 </body>
 </html>
