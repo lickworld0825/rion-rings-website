@@ -699,6 +699,41 @@ window.addEventListener('scroll',()=>{
 });
 
 updateWaLinks();
+
+const T={
+  en:{
+    trust_strip:'Free Shipping to the USA &nbsp;·&nbsp; No Import Duties &nbsp;·&nbsp; Handcrafted in Japan &nbsp;·&nbsp; Secure Payment',
+    nav_order:'Order Now',
+    menu_home:'Home',menu_collection:'Collection',menu_order:'How to <em>Order</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',
+    mat_yg:'Yellow Gold',mat_wg:'White Gold',mat_pg:'Pink Gold',mat_pt:'Platinum',
+    price_ddp:'Free US Shipping · No Duties',
+    price_note:'Approx. 5.5 months · Made to order in Japan · Handcrafted entirely by hand',
+    code_label:'Code:',
+    btn_wa:'💬 Order via WhatsApp',btn_back:'← Back to Collection'
+  },
+  ja:{
+    trust_strip:'アメリカへ無料配送 &nbsp;·&nbsp; 輸入関税なし &nbsp;·&nbsp; 日本で手作り &nbsp;·&nbsp; 安全なお支払い',
+    nav_order:'ご注文',
+    menu_home:'ホーム',menu_collection:'コレクション',menu_order:'ご注文<em>方法</em>',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',
+    mat_yg:'イエローゴールド',mat_wg:'ホワイトゴールド',mat_pg:'ピンクゴールド',mat_pt:'プラチナ',
+    price_ddp:'アメリカへ無料配送・関税なし',
+    price_note:'約5.5ヶ月・日本で受注制作・完全ハンドメイド',
+    code_label:'商品コード:',
+    btn_wa:'💬 WhatsAppでお問い合わせ',btn_back:'← コレクションへ戻る'
+  }
+};
+function setLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
+  });
+  localStorage.setItem('rion_us_lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+(function(){
+  const saved=localStorage.getItem('rion_us_lang')||'en';
+  if(saved!=='en') setLang(saved);
+})();
 </script>
 </body>
 </html>
