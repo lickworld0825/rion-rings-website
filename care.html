@@ -39,6 +39,10 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s;white-space:nowrap}
 .nav-cta:hover{background:var(--ink)}
+.lang-switch{display:flex;align-items:center;gap:0.5rem}
+.lang-btn{background:none;border:none;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.14em;cursor:pointer;color:var(--ink-muted);transition:color .25s;padding:4px 0;font-weight:400}
+.lang-btn.active{color:var(--gold-dark);font-weight:500}
+.lang-btn:hover{color:var(--gold-dark)}
 .hamburger{display:flex;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;position:relative;z-index:401;margin-left:0.5rem}
 .hamburger span{display:block;width:100%;height:1px;background:var(--ink);transition:all .35s ease}
 .hamburger:hover span{background:var(--gold-dark)}
@@ -213,7 +217,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <nav>
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
-    <a href="collection.html" class="nav-cta">Order Now</a>
+    <a href="collection.html" class="nav-cta" data-i18n="nav_order">Order Now</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -226,15 +235,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div>
       <span class="menu-eyebrow">Navigation</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span>Our <em>Heritage</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span>Legal &amp; <em>Privacy</em></span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
+        <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
+        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -245,56 +254,56 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
-  <span class="trust-item">Free Shipping to the USA</span>
-  <span class="trust-item">No Import Duties</span>
-  <span class="trust-item">Handcrafted in Japan</span>
-  <span class="trust-item">Secure Payment</span>
+  <span class="trust-item" data-i18n="trust_shipping">Free Shipping to the USA</span>
+  <span class="trust-item" data-i18n="trust_duties">No Import Duties</span>
+  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
+  <span class="trust-item" data-i18n="trust_payment">Secure Payment</span>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <span class="page-eyebrow">Care Guide</span>
-  <h1 class="page-title">Made to last<br><em>for generations.</em></h1>
-  <p class="page-lead">Your Rion jewel is solid K18 gold or Pt900 platinum, hermetically sealed in Japan. With a few simple habits, it'll stay as beautiful as the day it arrived — and long beyond that.</p>
+  <span class="page-eyebrow" data-i18n="hero_eyebrow">Care Guide</span>
+  <h1 class="page-title" data-i18n="hero_title">Made to last<br><em>for generations.</em></h1>
+  <p class="page-lead" data-i18n="hero_lead">Your Rion jewel is solid K18 gold or Pt900 platinum, hermetically sealed in Japan. With a few simple habits, it'll stay as beautiful as the day it arrived — and long beyond that.</p>
 </section>
 
 <!-- PROMISE -->
 <section class="promise">
-  <span class="promise-eyebrow">The Rion Promise</span>
-  <h2>Complimentary lifetime <em>polishing.</em><br>For as long as you own it.</h2>
-  <p>Every Rion piece includes our lifetime polishing service — completely free of charge. Whenever your jewel needs refreshing, simply send it to our Japanese atelier via DHL. We'll restore it to its original luster and return it to you fully insured. You cover the round-trip shipping; we handle everything else.</p>
+  <span class="promise-eyebrow" data-i18n="promise_eyebrow">The Rion Promise</span>
+  <h2 data-i18n="promise_title">Complimentary lifetime <em>polishing.</em><br>For as long as you own it.</h2>
+  <p data-i18n="promise_body">Every Rion piece includes our lifetime polishing service — completely free of charge. Whenever your jewel needs refreshing, simply send it to our Japanese atelier via DHL. We'll restore it to its original luster and return it to you fully insured. You cover the round-trip shipping; we handle everything else.</p>
 </section>
 
 <!-- DAILY CARE -->
 <section class="care-section">
   <div class="care-header">
-    <h2>Daily <em>care.</em></h2>
-    <p>Four simple habits that keep your piece looking exceptional every day.</p>
+    <h2 data-i18n="daily_title">Daily <em>care.</em></h2>
+    <p data-i18n="daily_lead">Four simple habits that keep your piece looking exceptional every day.</p>
   </div>
   <div class="care-grid">
     <div class="care-card">
       <div class="care-num">01</div>
       <div class="care-icon">&#10022;</div>
-      <h3>Wipe after <em>wearing</em></h3>
-      <p>After each wear, give your jewel a gentle wipe with a soft, lint-free cloth. This removes skin oils, perspiration, and everyday dust — keeping the metal lustrous and the sealed hair chamber perfectly clear.</p>
+      <h3 data-i18n="c1_title">Wipe after <em>wearing</em></h3>
+      <p data-i18n="c1_body">After each wear, give your jewel a gentle wipe with a soft, lint-free cloth. This removes skin oils, perspiration, and everyday dust — keeping the metal lustrous and the sealed hair chamber perfectly clear.</p>
     </div>
     <div class="care-card">
       <div class="care-num">02</div>
       <div class="care-icon">&#9711;</div>
-      <h3>Store with <em>care</em></h3>
-      <p>When you're not wearing it, place your jewel in the Rion exclusive case. Store it separately from other jewelry to prevent scratches. Keep it away from direct sunlight, heat, and excess humidity.</p>
+      <h3 data-i18n="c2_title">Store with <em>care</em></h3>
+      <p data-i18n="c2_body">When you're not wearing it, place your jewel in the Rion exclusive case. Store it separately from other jewelry to prevent scratches. Keep it away from direct sunlight, heat, and excess humidity.</p>
     </div>
     <div class="care-card">
       <div class="care-num">03</div>
       <div class="care-icon">&#9671;</div>
-      <h3>Remove for <em>activities</em></h3>
-      <p>Take it off before swimming pools, the beach, hot tubs, saunas, and heavy workouts. Apply perfume, lotion, and sunscreen before putting on the jewel — never spray or apply products directly onto it.</p>
+      <h3 data-i18n="c3_title">Remove for <em>activities</em></h3>
+      <p data-i18n="c3_body">Take it off before swimming pools, the beach, hot tubs, saunas, and heavy workouts. Apply perfume, lotion, and sunscreen before putting on the jewel — never spray or apply products directly onto it.</p>
     </div>
     <div class="care-card">
       <div class="care-num">04</div>
       <div class="care-icon">&#10023;</div>
-      <h3>Clean <em>gently</em></h3>
-      <p>For light cleaning at home, a soft polishing cloth is all you need. Avoid ultrasonic cleaners, steamers, and harsh chemicals. For a deep clean or polish, send it to us in Japan — it's free and the results are extraordinary.</p>
+      <h3 data-i18n="c4_title">Clean <em>gently</em></h3>
+      <p data-i18n="c4_body">For light cleaning at home, a soft polishing cloth is all you need. Avoid ultrasonic cleaners, steamers, and harsh chemicals. For a deep clean or polish, send it to us in Japan — it's free and the results are extraordinary.</p>
     </div>
   </div>
 </section>
@@ -302,30 +311,30 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <!-- DO / DONT -->
 <section class="dodont">
   <div class="care-header">
-    <h2>Do &amp; <em>Don't.</em></h2>
-    <p>A quick reference for everyday wear.</p>
+    <h2 data-i18n="dodont_title">Do &amp; <em>Don't.</em></h2>
+    <p data-i18n="dodont_lead">A quick reference for everyday wear.</p>
   </div>
   <div class="dodont-grid">
     <div class="dodont-col do">
-      <h3><em>Do</em></h3>
+      <h3 data-i18n="do_title"><em>Do</em></h3>
       <ul>
-        <li>Wipe with a soft cloth after each wear</li>
-        <li>Store in the Rion exclusive case</li>
-        <li>Remove before swimming, hot tubs, or saunas</li>
-        <li>Apply perfume and lotion before putting it on</li>
-        <li>Send to Japan for free lifetime polishing (you cover shipping)</li>
-        <li>Wear it every day — it's built for it</li>
+        <li data-i18n="do1">Wipe with a soft cloth after each wear</li>
+        <li data-i18n="do2">Store in the Rion exclusive case</li>
+        <li data-i18n="do3">Remove before swimming, hot tubs, or saunas</li>
+        <li data-i18n="do4">Apply perfume and lotion before putting it on</li>
+        <li data-i18n="do5">Send to Japan for free lifetime polishing (you cover shipping)</li>
+        <li data-i18n="do6">Wear it every day — it's built for it</li>
       </ul>
     </div>
     <div class="dodont-col dont">
-      <h3><em>Don't</em></h3>
+      <h3 data-i18n="dont_title"><em>Don't</em></h3>
       <ul>
-        <li>Expose to chlorine (pools, bleach-based cleaners)</li>
-        <li>Spray perfume or hairspray directly on the jewel</li>
-        <li>Use ultrasonic jewelry cleaners or steamers</li>
-        <li>Scrub with abrasive cloths or toothpaste</li>
-        <li>Knock against hard surfaces or store loosely</li>
-        <li>Try to open or tamper with the hair chamber</li>
+        <li data-i18n="dont1">Expose to chlorine (pools, bleach-based cleaners)</li>
+        <li data-i18n="dont2">Spray perfume or hairspray directly on the jewel</li>
+        <li data-i18n="dont3">Use ultrasonic jewelry cleaners or steamers</li>
+        <li data-i18n="dont4">Scrub with abrasive cloths or toothpaste</li>
+        <li data-i18n="dont5">Knock against hard surfaces or store loosely</li>
+        <li data-i18n="dont6">Try to open or tamper with the hair chamber</li>
       </ul>
     </div>
   </div>
@@ -403,11 +412,11 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Questions about your <em>jewel?</em></h2>
-  <p>Whether it needs a polish, a repair, or you just have a question — we're always here and happy to help. Send us a message on WhatsApp anytime.</p>
+  <h2 data-i18n="cta_title">Questions about your <em>jewel?</em></h2>
+  <p data-i18n="cta_body">Whether it needs a polish, a repair, or you just have a question — we're always here and happy to help. Send us a message on WhatsApp anytime.</p>
   <div class="cta-group">
-    <a href="https://wa.me/819054621246" class="btn-wa" target="_blank">&#128172; Message Us on WhatsApp</a>
-    <a href="faq.html" class="btn-primary">Read FAQ</a>
+    <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">&#128172; Message Us on WhatsApp</a>
+    <a href="faq.html" class="btn-primary" data-i18n="cta_faq">Read FAQ</a>
   </div>
 </section>
 
