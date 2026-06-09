@@ -39,6 +39,10 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s;white-space:nowrap}
 .nav-cta:hover{background:var(--ink)}
+.lang-switch{display:flex;align-items:center;gap:0.5rem}
+.lang-btn{background:none;border:none;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.14em;cursor:pointer;color:var(--ink-muted);transition:color .25s;padding:4px 0;font-weight:400}
+.lang-btn.active{color:var(--gold-dark);font-weight:500}
+.lang-btn:hover{color:var(--gold-dark)}
 .hamburger{display:flex;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;position:relative;z-index:401;margin-left:0.5rem}
 .hamburger span{display:block;width:100%;height:1px;background:var(--ink);transition:all .35s ease}
 .hamburger:hover span{background:var(--gold-dark)}
@@ -224,7 +228,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <nav>
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
-    <a href="collection.html" class="nav-cta">Order Now</a>
+    <a href="collection.html" class="nav-cta" data-i18n="nav_order">Order Now</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -237,15 +246,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div>
       <span class="menu-eyebrow">Navigation</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="heritage.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">03</span><span>Our <em>Heritage</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span>Legal &amp; <em>Privacy</em></span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
+        <a href="heritage.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
+        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -256,17 +265,17 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
-  <span class="trust-item">Free Shipping to the USA</span>
-  <span class="trust-item">No Import Duties</span>
-  <span class="trust-item">Handcrafted in Japan</span>
-  <span class="trust-item">Secure Payment</span>
+  <span class="trust-item" data-i18n="trust_shipping">Free Shipping to the USA</span>
+  <span class="trust-item" data-i18n="trust_duties">No Import Duties</span>
+  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
+  <span class="trust-item" data-i18n="trust_payment">Secure Payment</span>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <span class="page-eyebrow">Heritage &amp; Craft</span>
-  <h1 class="page-title">Why <em>Japan?</em><br>Why <em>Rion?</em></h1>
-  <p class="page-lead">Memorial jewelry has a centuries-old tradition across cultures and continents. Rion was founded in Hiroshima, Japan in 2018 to bring that tradition to its highest possible expression — combining ancient goldsmithing craft with a sealing technique refined to last for generations. Here's what that means for your piece.</p>
+  <span class="page-eyebrow" data-i18n="hero_eyebrow">Heritage &amp; Craft</span>
+  <h1 class="page-title" data-i18n="hero_title">Why <em>Japan?</em><br>Why <em>Rion?</em></h1>
+  <p class="page-lead" data-i18n="hero_lead">Memorial jewelry has a centuries-old tradition across cultures and continents. Rion was founded in Hiroshima, Japan in 2018 to bring that tradition to its highest possible expression — combining ancient goldsmithing craft with a sealing technique refined to last for generations. Here's what that means for your piece.</p>
 </section>
 
 <!-- DEFINITION -->
@@ -309,23 +318,23 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <!-- HIROSHIMA ORIGIN STORY -->
 <section class="story-section">
   <div class="story-inner">
-    <span class="story-eyebrow">Founded 2018 &middot; Hiroshima, Japan</span>
-    <h2>A small atelier<br>in a city that knows <em>the weight of memory.</em></h2>
-    <p>Rion was founded in Hiroshima, Japan in 2018 — a city with a singular relationship to remembrance, resilience, and the human need to hold on to what matters most. It felt like the right place to begin.</p>
-    <p>My Art Inc. started with one conviction: that memorial jewelry should be made with the same reverence it's meant to hold. No production lines. No compromises on material or process. Just skilled artisans, solid precious metal, and the irreplaceable strand of hair you've placed in our care.</p>
-    <p>We ship to customers across the United States and around the world — but every piece is still made in Hiroshima, by hand, one at a time. That will never change.</p>
+    <span class="story-eyebrow" data-i18n="story_eyebrow">Founded 2018 &middot; Hiroshima, Japan</span>
+    <h2 data-i18n="story_title">A small atelier<br>in a city that knows <em>the weight of memory.</em></h2>
+    <p data-i18n="story_p1">Rion was founded in Hiroshima, Japan in 2018 — a city with a singular relationship to remembrance, resilience, and the human need to hold on to what matters most. It felt like the right place to begin.</p>
+    <p data-i18n="story_p2">My Art Inc. started with one conviction: that memorial jewelry should be made with the same reverence it's meant to hold. No production lines. No compromises on material or process. Just skilled artisans, solid precious metal, and the irreplaceable strand of hair you've placed in our care.</p>
+    <p data-i18n="story_p3">We ship to customers across the United States and around the world — but every piece is still made in Hiroshima, by hand, one at a time. That will never change.</p>
     <div class="story-stat-grid">
       <div class="story-stat">
         <span class="story-stat-number">2018</span>
-        <span class="story-stat-label">Founded in Hiroshima</span>
+        <span class="story-stat-label" data-i18n="stat1_label">Founded in Hiroshima</span>
       </div>
       <div class="story-stat">
         <span class="story-stat-number">K18</span>
-        <span class="story-stat-label">Gold &amp; Pt900 Platinum</span>
+        <span class="story-stat-label" data-i18n="stat2_label">Gold &amp; Pt900 Platinum</span>
       </div>
       <div class="story-stat">
         <span class="story-stat-number">&#8734;</span>
-        <span class="story-stat-label">Lifetime Polishing Guarantee</span>
+        <span class="story-stat-label" data-i18n="stat3_label">Lifetime Polishing Guarantee</span>
       </div>
     </div>
   </div>
@@ -474,11 +483,11 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Begin your <em>own story.</em></h2>
-  <p>If you're thinking about a memorial piece — for a person you love, a pet you've lost, or a milestone you want to carry with you — we'd love to hear your story. Reach us on WhatsApp anytime.</p>
+  <h2 data-i18n="cta_title">Begin your <em>own story.</em></h2>
+  <p data-i18n="cta_body">If you're thinking about a memorial piece — for a person you love, a pet you've lost, or a milestone you want to carry with you — we'd love to hear your story. Reach us on WhatsApp anytime.</p>
   <div class="cta-group">
-    <a href="collection.html" class="btn-primary">View the Collection</a>
-    <a href="https://wa.me/819054621246" class="btn-wa" target="_blank">&#128172; Message Us on WhatsApp</a>
+    <a href="collection.html" class="btn-primary" data-i18n="cta_collection">View the Collection</a>
+    <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">&#128172; Message Us on WhatsApp</a>
   </div>
 </section>
 
@@ -573,6 +582,39 @@ window.addEventListener('scroll',()=>{
   const t=document.getElementById('scrollTop');
   window.scrollY>500?t.classList.add('visible'):t.classList.remove('visible');
 });
+
+const T = {
+  en: {
+    nav_order:'Order Now',
+    trust_shipping:'Free Shipping to the USA',trust_duties:'No Import Duties',trust_made:'Handcrafted in Japan',trust_payment:'Secure Payment',
+    menu_home:'Home',menu_collection:'Collection',menu_heritage:'Our <em>Heritage</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_legal:'Legal &amp; <em>Privacy</em>',
+    hero_eyebrow:'Heritage &amp; Craft',hero_title:'Why <em>Japan?</em><br>Why <em>Rion?</em>',hero_lead:'Memorial jewelry has a centuries-old tradition across cultures and continents. Rion was founded in Hiroshima, Japan in 2018 to bring that tradition to its highest possible expression — combining ancient goldsmithing craft with a sealing technique refined to last for generations. Here\'s what that means for your piece.',
+    story_eyebrow:'Founded 2018 · Hiroshima, Japan',story_title:'A small atelier<br>in a city that knows <em>the weight of memory.</em>',story_p1:'Rion was founded in Hiroshima, Japan in 2018 — a city with a singular relationship to remembrance, resilience, and the human need to hold on to what matters most. It felt like the right place to begin.',story_p2:'My Art Inc. started with one conviction: that memorial jewelry should be made with the same reverence it\'s meant to hold. No production lines. No compromises on material or process. Just skilled artisans, solid precious metal, and the irreplaceable strand of hair you\'ve placed in our care.',story_p3:'We ship to customers across the United States and around the world — but every piece is still made in Hiroshima, by hand, one at a time. That will never change.',
+    stat1_label:'Founded in Hiroshima',stat2_label:'Gold &amp; Pt900 Platinum',stat3_label:'Lifetime Polishing Guarantee',
+    cta_title:'Begin your <em>own story.</em>',cta_body:'If you\'re thinking about a memorial piece — for a person you love, a pet you\'ve lost, or a milestone you want to carry with you — we\'d love to hear your story. Reach us on WhatsApp anytime.',cta_collection:'View the Collection',cta_wa:'💬 Message Us on WhatsApp'
+  },
+  ja: {
+    nav_order:'ご注文',
+    trust_shipping:'アメリカへ無料配送',trust_duties:'輸入関税なし',trust_made:'日本で手作り',trust_payment:'安全なお支払い',
+    menu_home:'ホーム',menu_collection:'コレクション',menu_heritage:'ブランドの<em>歴史</em>',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_legal:'法律・<em>プライバシー</em>',
+    hero_eyebrow:'ブランドの歴史',hero_title:'なぜ<em>日本？</em><br>なぜ<em>Rion？</em>',hero_lead:'メモリアルジュエリーには、文化と大陸を超えた何世紀もの伝統があります。Rionは2018年、広島でその伝統を最高の表現へと昇華させるために設立されました。古来の金細工の技と、世代を超えて持続するよう洗練された封入技術を組み合わせて。それがあなたのジュエルにとって何を意味するかをご説明します。',
+    story_eyebrow:'2018年設立 · 広島、日本',story_title:'記憶の重みを知る街に<br><em>ある小さなアトリエ。</em>',story_p1:'Rionは2018年、広島で設立されました。広島は追悼、回復力、そして大切なものを手放したくないという人間の欲求と特別な関係を持つ街です。ここが始まりにふさわしい場所だと感じました。',story_p2:'My Art Inc.は一つの信念から始まりました：メモリアルジュエリーは、それが持つべき敬意と同じ敬意を持って作られるべきだという信念です。生産ラインなし。素材やプロセスの妥協なし。ただ熟練した職人、無垢の貴金属、そしてあなたが私たちに預けた、かけがえのない一本の髪の毛だけ。',story_p3:'米国および世界中のお客様に発送していますが、すべてのジュエルは今でも広島で、手作業で、一つずつ作られています。それは変わることはありません。',
+    stat1_label:'広島で設立',stat2_label:'ゴールド &amp; Pt900プラチナ',stat3_label:'生涯研磨保証',
+    cta_title:'あなた自身の<em>物語を始めましょう。</em>',cta_body:'大切な方のために、亡くなったペットのために、または自分の節目を形にしたい方のために――メモリアルジュエルをお考えでしたら、あなたの物語をぜひお聞かせください。いつでもWhatsAppでご連絡ください。',cta_collection:'コレクションを見る',cta_wa:'💬 WhatsAppでメッセージ'
+  }
+};
+function setLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
+  });
+  localStorage.setItem('rion_us_lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+(function(){
+  const saved=localStorage.getItem('rion_us_lang')||'en';
+  if(saved!=='en') setLang(saved);
+})();
 </script>
 </body>
 </html>

@@ -39,6 +39,10 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s;white-space:nowrap}
 .nav-cta:hover{background:var(--ink)}
+.lang-switch{display:flex;align-items:center;gap:0.5rem}
+.lang-btn{background:none;border:none;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.14em;cursor:pointer;color:var(--ink-muted);transition:color .25s;padding:4px 0;font-weight:400}
+.lang-btn.active{color:var(--gold-dark);font-weight:500}
+.lang-btn:hover{color:var(--gold-dark)}
 .hamburger{display:flex;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;position:relative;z-index:401;margin-left:0.5rem}
 .hamburger span{display:block;width:100%;height:1px;background:var(--ink);transition:all .35s ease}
 .hamburger:hover span{background:var(--gold-dark)}
@@ -239,7 +243,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <nav>
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
-    <a href="collection.html" class="nav-cta">Order Now</a>
+    <a href="collection.html" class="nav-cta" data-i18n="nav_order">Order Now</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -252,15 +261,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div>
       <span class="menu-eyebrow">Navigation</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span>Our <em>Heritage</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span>Legal &amp; <em>Privacy</em></span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
+        <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
+        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -271,17 +280,17 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
-  <span class="trust-item">Free Shipping to the USA</span>
-  <span class="trust-item">No Import Duties</span>
-  <span class="trust-item">Handcrafted in Japan</span>
-  <span class="trust-item">Secure Payment</span>
+  <span class="trust-item" data-i18n="trust_shipping">Free Shipping to the USA</span>
+  <span class="trust-item" data-i18n="trust_duties">No Import Duties</span>
+  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
+  <span class="trust-item" data-i18n="trust_payment">Secure Payment</span>
 </div>
 
 <!-- HERO -->
 <section class="page-hero">
-  <span class="page-eyebrow">The Sealing Process</span>
-  <h1 class="page-title">How your hair<br>becomes a <em>jewel.</em></h1>
-  <p class="page-lead">Every Rion piece begins with something irreplaceable — a strand of hair that holds your love. What happens next is a process of precision, reverence, and permanent beauty, carried out entirely by hand at our Japanese atelier in Hiroshima.</p>
+  <span class="page-eyebrow" data-i18n="hero_eyebrow">The Sealing Process</span>
+  <h1 class="page-title" data-i18n="hero_title">How your hair<br>becomes a <em>jewel.</em></h1>
+  <p class="page-lead" data-i18n="hero_lead">Every Rion piece begins with something irreplaceable — a strand of hair that holds your love. What happens next is a process of precision, reverence, and permanent beauty, carried out entirely by hand at our Japanese atelier in Hiroshima.</p>
 </section>
 
 <!-- CORE CONCEPT -->
@@ -289,10 +298,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <div class="concept-inner">
     <img src="images/craft/main.jpg" alt="Rion memorial ring — hair sealed inside" class="concept-img" loading="lazy" decoding="async">
     <div class="concept-text">
-      <span class="page-eyebrow">Not a Locket</span>
-      <h2>The hair is sealed <em>inside</em> the jewel.</h2>
-      <p>Rion is not a locket. The hair isn't placed behind glass or stored in a compartment that can be opened, lost, or exposed.</p>
-      <p>At our atelier, a skilled artisan seals each strand directly into the body of the jewel — set within precision resin, enclosed in solid K18 gold or Pt900 platinum, hermetically sealed, and permanent. The hair becomes part of the jewelry itself. It can't be seen from the outside. It simply lives there — forever — close to the person wearing it.</p>
+      <span class="page-eyebrow" data-i18n="concept_eyebrow">Not a Locket</span>
+      <h2 data-i18n="concept_title">The hair is sealed <em>inside</em> the jewel.</h2>
+      <p data-i18n="concept_p1">Rion is not a locket. The hair isn't placed behind glass or stored in a compartment that can be opened, lost, or exposed.</p>
+      <p data-i18n="concept_p2">At our atelier, a skilled artisan seals each strand directly into the body of the jewel — set within precision resin, enclosed in solid K18 gold or Pt900 platinum, hermetically sealed, and permanent. The hair becomes part of the jewelry itself. It can't be seen from the outside. It simply lives there — forever — close to the person wearing it.</p>
     </div>
   </div>
 </section>
@@ -330,53 +339,53 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <!-- PROCESS STEPS -->
 <section class="process-section">
   <div class="section-header">
-    <h2>The six <em>steps.</em></h2>
-    <p>From the moment your hair collection kit arrives in Japan to the moment your finished jewel is ready to ship to the United States.</p>
+    <h2 data-i18n="process_title">The six <em>steps.</em></h2>
+    <p data-i18n="process_lead">From the moment your hair collection kit arrives in Japan to the moment your finished jewel is ready to ship to the United States.</p>
   </div>
 
   <div class="steps">
     <div class="step">
       <div class="step-num">01</div>
       <div class="step-body">
-        <h3>The hair <em>arrives</em></h3>
-        <p>Your sealed collection kit arrives at our Japanese atelier via international post. Inside is the hair of your loved one or pet, carefully enclosed in the airtight envelope we provided. Even a single strand under 1 cm is sufficient. From the moment it arrives, we handle it with the same care we give the jewel itself.</p>
+        <h3 data-i18n="ps1_title">The hair <em>arrives</em></h3>
+        <p data-i18n="ps1_body">Your sealed collection kit arrives at our Japanese atelier via international post. Inside is the hair of your loved one or pet, carefully enclosed in the airtight envelope we provided. Even a single strand under 1 cm is sufficient. From the moment it arrives, we handle it with the same care we give the jewel itself.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <div class="step-body">
-        <h3>Production <em>preparation</em></h3>
-        <p>Your design is confirmed, materials are selected, and every specification is finalized. The artisan who will make your piece reviews every detail before any work begins. Nothing moves forward until we're certain the piece will be exactly as you envisioned — down to the last millimeter.</p>
+        <h3 data-i18n="ps2_title">Production <em>preparation</em></h3>
+        <p data-i18n="ps2_body">Your design is confirmed, materials are selected, and every specification is finalized. The artisan who will make your piece reviews every detail before any work begins. Nothing moves forward until we're certain the piece will be exactly as you envisioned — down to the last millimeter.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">03</div>
       <div class="step-body">
-        <h3>Jewelry <em>production</em></h3>
-        <p>The K18 gold or Pt900 platinum piece is crafted entirely by hand by our skilled Japanese artisans. Every curve, proportion, and surface is shaped to your approved design — whether a ring, pendant, or fully bespoke creation. The piece must be complete and perfect before the hair is sealed inside.</p>
+        <h3 data-i18n="ps3_title">Jewelry <em>production</em></h3>
+        <p data-i18n="ps3_body">The K18 gold or Pt900 platinum piece is crafted entirely by hand by our skilled Japanese artisans. Every curve, proportion, and surface is shaped to your approved design — whether a ring, pendant, or fully bespoke creation. The piece must be complete and perfect before the hair is sealed inside.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">04</div>
       <div class="step-body">
-        <h3>Sealing the hair <em>inside</em></h3>
-        <p>A small opening is precision-drilled into the jewel. Your hair is placed inside by hand — one strand at a time — with all the care and focus this moment deserves. The opening is then sealed with a cap of the exact same metal: K18 gold or Pt900 platinum. The chamber is then hermetically sealed: airtight, permanent, and designed to last for generations.</p>
-        <p>Once sealed, the chamber cannot be opened without destroying the piece. This is intentional. The seal is a promise — to you, and to the person whose hair lives inside.</p>
-        <div class="step-note">We recommend sending 20–30 strands of hair. This gives the artisan flexibility to select the best strands and ensures nothing is wasted. Any excess is returned to you with the finished piece.</div>
+        <h3 data-i18n="ps4_title">Sealing the hair <em>inside</em></h3>
+        <p data-i18n="ps4_body1">A small opening is precision-drilled into the jewel. Your hair is placed inside by hand — one strand at a time — with all the care and focus this moment deserves. The opening is then sealed with a cap of the exact same metal: K18 gold or Pt900 platinum. The chamber is then hermetically sealed: airtight, permanent, and designed to last for generations.</p>
+        <p data-i18n="ps4_body2">Once sealed, the chamber cannot be opened without destroying the piece. This is intentional. The seal is a promise — to you, and to the person whose hair lives inside.</p>
+        <div class="step-note" data-i18n="ps4_note">We recommend sending 20–30 strands of hair. This gives the artisan flexibility to select the best strands and ensures nothing is wasted. Any excess is returned to you with the finished piece.</div>
       </div>
     </div>
     <div class="step">
       <div class="step-num">05</div>
       <div class="step-body">
-        <h3><em>Photo report</em></h3>
-        <p>Before the final polish, we photograph the sealing at every key stage — before the hair enters the jewel, during the sealing, and after the chamber is closed. This complete photographic record is sent to you via WhatsApp. These images are yours to keep, forever. Many of our customers tell us they treasure the sealing photographs as much as the jewel itself.</p>
+        <h3 data-i18n="ps5_title"><em>Photo report</em></h3>
+        <p data-i18n="ps5_body">Before the final polish, we photograph the sealing at every key stage — before the hair enters the jewel, during the sealing, and after the chamber is closed. This complete photographic record is sent to you via WhatsApp. These images are yours to keep, forever. Many of our customers tell us they treasure the sealing photographs as much as the jewel itself.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">06</div>
       <div class="step-body">
-        <h3>Final <em>finishing &amp; shipment</em></h3>
-        <p>The jewel is polished to Rion's exacting standard, passes a final quality inspection, and is placed in the Rion exclusive presentation case and packaging. Only then is it prepared for free insured DHL Express shipment to your US address. The entire process — from the moment your hair arrives in Japan — takes approximately five and a half months.</p>
+        <h3 data-i18n="ps6_title">Final <em>finishing &amp; shipment</em></h3>
+        <p data-i18n="ps6_body">The jewel is polished to Rion's exacting standard, passes a final quality inspection, and is placed in the Rion exclusive presentation case and packaging. Only then is it prepared for free insured DHL Express shipment to your US address. The entire process — from the moment your hair arrives in Japan — takes approximately five and a half months.</p>
       </div>
     </div>
   </div>
@@ -389,10 +398,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <section class="photo-section">
   <div class="photo-inner">
     <div class="photo-text">
-      <span class="page-eyebrow">Proof of Care</span>
-      <h2>Before. During. <em>After.</em></h2>
-      <p>You deserve to see exactly how your precious hair was handled. Before your jewel ships to you in the US, we send you a complete photographic record of the entire sealing process — captured at every key moment by the artisan who made your piece.</p>
-      <p>There's nothing to take on faith alone. You see the hair before it enters the jewel. You see it being placed. You see the finished, sealed chamber. These photographs belong to you, and they stay with you forever alongside the jewel itself.</p>
+      <span class="page-eyebrow" data-i18n="photo_eyebrow">Proof of Care</span>
+      <h2 data-i18n="photo_title">Before. During. <em>After.</em></h2>
+      <p data-i18n="photo_p1">You deserve to see exactly how your precious hair was handled. Before your jewel ships to you in the US, we send you a complete photographic record of the entire sealing process — captured at every key moment by the artisan who made your piece.</p>
+      <p data-i18n="photo_p2">There's nothing to take on faith alone. You see the hair before it enters the jewel. You see it being placed. You see the finished, sealed chamber. These photographs belong to you, and they stay with you forever alongside the jewel itself.</p>
       <div class="photo-stages">
         <div class="photo-stage">
           <span class="photo-stage-label">Stage 1</span>
@@ -479,20 +488,20 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- PERMANENCE -->
 <section class="permanence">
-  <span class="page-eyebrow">Made to Last</span>
-  <h2>Hermetically sealed.<br><em>For generations.</em></h2>
-  <p>The sealing technique used at Rion has been refined over years of practice and iteration. Once sealed, the hair is enclosed in an airtight barrier within solid precious metal — designed to withstand a lifetime of daily wear without any degradation.</p>
-  <p>The sealed chamber is unaffected by water, perspiration, light, or the passage of time. You can wear your Rion jewel every single day, and the hair inside will remain exactly as it was on the day it was sealed — as close to you as your heartbeat.</p>
-  <p class="permanence-note">Important: the seal should never be tampered with. Attempting to open the hair chamber will permanently damage the jewel and void all service warranties. If you ever have a concern about your piece, please contact us on WhatsApp before doing anything else.</p>
+  <span class="page-eyebrow" data-i18n="perm_eyebrow">Made to Last</span>
+  <h2 data-i18n="perm_title">Hermetically sealed.<br><em>For generations.</em></h2>
+  <p data-i18n="perm_p1">The sealing technique used at Rion has been refined over years of practice and iteration. Once sealed, the hair is enclosed in an airtight barrier within solid precious metal — designed to withstand a lifetime of daily wear without any degradation.</p>
+  <p data-i18n="perm_p2">The sealed chamber is unaffected by water, perspiration, light, or the passage of time. You can wear your Rion jewel every single day, and the hair inside will remain exactly as it was on the day it was sealed — as close to you as your heartbeat.</p>
+  <p class="permanence-note" data-i18n="perm_note">Important: the seal should never be tampered with. Attempting to open the hair chamber will permanently damage the jewel and void all service warranties. If you ever have a concern about your piece, please contact us on WhatsApp before doing anything else.</p>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Questions about<br>the <em>sealing process?</em></h2>
-  <p>We're happy to answer anything — no question is too small or too personal. Message us on WhatsApp or browse our full FAQ.</p>
+  <h2 data-i18n="cta_title">Questions about<br>the <em>sealing process?</em></h2>
+  <p data-i18n="cta_body">We're happy to answer anything — no question is too small or too personal. Message us on WhatsApp or browse our full FAQ.</p>
   <div class="cta-group">
-    <a href="https://wa.me/819054621246" class="btn-wa" target="_blank">&#128172; Message Us on WhatsApp</a>
-    <a href="faq.html" class="btn-primary">Read FAQ</a>
+    <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">&#128172; Message Us on WhatsApp</a>
+    <a href="faq.html" class="btn-primary" data-i18n="cta_faq">Read FAQ</a>
   </div>
 </section>
 
@@ -587,6 +596,55 @@ window.addEventListener('scroll',()=>{
   const t=document.getElementById('scrollTop');
   window.scrollY>500?t.classList.add('visible'):t.classList.remove('visible');
 });
+
+const T = {
+  en: {
+    nav_order:'Order Now',
+    trust_shipping:'Free Shipping to the USA',trust_duties:'No Import Duties',trust_made:'Handcrafted in Japan',trust_payment:'Secure Payment',
+    menu_home:'Home',menu_collection:'Collection',menu_heritage:'Our <em>Heritage</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_legal:'Legal &amp; <em>Privacy</em>',
+    hero_eyebrow:'The Sealing Process',hero_title:'How your hair<br>becomes a <em>jewel.</em>',hero_lead:'Every Rion piece begins with something irreplaceable — a strand of hair that holds your love. What happens next is a process of precision, reverence, and permanent beauty, carried out entirely by hand at our Japanese atelier in Hiroshima.',
+    concept_eyebrow:'Not a Locket',concept_title:'The hair is sealed <em>inside</em> the jewel.',concept_p1:'Rion is not a locket. The hair isn\'t placed behind glass or stored in a compartment that can be opened, lost, or exposed.',concept_p2:'At our atelier, a skilled artisan seals each strand directly into the body of the jewel — set within precision resin, enclosed in solid K18 gold or Pt900 platinum, hermetically sealed, and permanent. The hair becomes part of the jewelry itself. It can\'t be seen from the outside. It simply lives there — forever — close to the person wearing it.',
+    process_title:'The six <em>steps.</em>',process_lead:'From the moment your hair collection kit arrives in Japan to the moment your finished jewel is ready to ship to the United States.',
+    ps1_title:'The hair <em>arrives</em>',ps1_body:'Your sealed collection kit arrives at our Japanese atelier via international post. Inside is the hair of your loved one or pet, carefully enclosed in the airtight envelope we provided. Even a single strand under 1 cm is sufficient. From the moment it arrives, we handle it with the same care we give the jewel itself.',
+    ps2_title:'Production <em>preparation</em>',ps2_body:'Your design is confirmed, materials are selected, and every specification is finalized. The artisan who will make your piece reviews every detail before any work begins. Nothing moves forward until we\'re certain the piece will be exactly as you envisioned — down to the last millimeter.',
+    ps3_title:'Jewelry <em>production</em>',ps3_body:'The K18 gold or Pt900 platinum piece is crafted entirely by hand by our skilled Japanese artisans. Every curve, proportion, and surface is shaped to your approved design — whether a ring, pendant, or fully bespoke creation. The piece must be complete and perfect before the hair is sealed inside.',
+    ps4_title:'Sealing the hair <em>inside</em>',ps4_body1:'A small opening is precision-drilled into the jewel. Your hair is placed inside by hand — one strand at a time — with all the care and focus this moment deserves. The opening is then sealed with a cap of the exact same metal: K18 gold or Pt900 platinum. The chamber is then hermetically sealed: airtight, permanent, and designed to last for generations.',ps4_body2:'Once sealed, the chamber cannot be opened without destroying the piece. This is intentional. The seal is a promise — to you, and to the person whose hair lives inside.',ps4_note:'We recommend sending 20–30 strands of hair. This gives the artisan flexibility to select the best strands and ensures nothing is wasted. Any excess is returned to you with the finished piece.',
+    ps5_title:'<em>Photo report</em>',ps5_body:'Before the final polish, we photograph the sealing at every key stage — before the hair enters the jewel, during the sealing, and after the chamber is closed. This complete photographic record is sent to you via WhatsApp. These images are yours to keep, forever. Many of our customers tell us they treasure the sealing photographs as much as the jewel itself.',
+    ps6_title:'Final <em>finishing &amp; shipment</em>',ps6_body:'The jewel is polished to Rion\'s exacting standard, passes a final quality inspection, and is placed in the Rion exclusive presentation case and packaging. Only then is it prepared for free insured DHL Express shipment to your US address. The entire process — from the moment your hair arrives in Japan — takes approximately five and a half months.',
+    photo_eyebrow:'Proof of Care',photo_title:'Before. During. <em>After.</em>',photo_p1:'You deserve to see exactly how your precious hair was handled. Before your jewel ships to you in the US, we send you a complete photographic record of the entire sealing process — captured at every key moment by the artisan who made your piece.',photo_p2:'There\'s nothing to take on faith alone. You see the hair before it enters the jewel. You see it being placed. You see the finished, sealed chamber. These photographs belong to you, and they stay with you forever alongside the jewel itself.',
+    perm_eyebrow:'Made to Last',perm_title:'Hermetically sealed.<br><em>For generations.</em>',perm_p1:'The sealing technique used at Rion has been refined over years of practice and iteration. Once sealed, the hair is enclosed in an airtight barrier within solid precious metal — designed to withstand a lifetime of daily wear without any degradation.',perm_p2:'The sealed chamber is unaffected by water, perspiration, light, or the passage of time. You can wear your Rion jewel every single day, and the hair inside will remain exactly as it was on the day it was sealed — as close to you as your heartbeat.',perm_note:'Important: the seal should never be tampered with. Attempting to open the hair chamber will permanently damage the jewel and void all service warranties. If you ever have a concern about your piece, please contact us on WhatsApp before doing anything else.',
+    cta_title:'Questions about<br>the <em>sealing process?</em>',cta_body:'We\'re happy to answer anything — no question is too small or too personal. Message us on WhatsApp or browse our full FAQ.',cta_wa:'💬 Message Us on WhatsApp',cta_faq:'Read FAQ'
+  },
+  ja: {
+    nav_order:'ご注文',
+    trust_shipping:'アメリカへ無料配送',trust_duties:'輸入関税なし',trust_made:'日本で手作り',trust_payment:'安全なお支払い',
+    menu_home:'ホーム',menu_collection:'コレクション',menu_heritage:'ブランドの<em>歴史</em>',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_legal:'法律・<em>プライバシー</em>',
+    hero_eyebrow:'髪の毛の封入方法',hero_title:'あなたの髪が<br><em>ジュエルになるまで。</em>',hero_lead:'Rionのすべてのジュエルは、かけがえのないもの――あなたの愛を宿した一本の髪の毛から始まります。そこから先は、精密さ、敬意、そして永続的な美しさのプロセスが、広島のアトリエで完全に手作業で行われます。',
+    concept_eyebrow:'ロケットではありません',concept_title:'髪の毛はジュエルの<em>内部に</em>封入されます。',concept_p1:'Rionはロケットではありません。髪の毛はガラスの後ろに置かれたり、開けたり、紛失したり、露出したりするコンパートメントに保管されるのではありません。',concept_p2:'アトリエでは、熟練の職人が各ストランドをジュエルの本体に直接封入します。精密な樹脂の中に設置され、K18ゴールドまたはPt900プラチナの無垢の中に閉じ込められ、気密封入されて永続します。髪の毛はジュエリーそのものの一部になります。外からは見えません。ただそこに――永遠に――着用者の近くに存在し続けます。',
+    process_title:'封入の6<em>ステップ。</em>',process_lead:'ヘアコレクションキットが日本に届いた瞬間から、完成したジュエルが米国へ発送される準備ができるまで。',
+    ps1_title:'髪の毛が<em>届く</em>',ps1_body:'封印されたコレクションキットが国際郵便で日本のアトリエに届きます。中には、弊社が提供した気密封筒に丁寧に包まれた、大切な方やペットの髪の毛が入っています。1cm未満の1本の毛髪でも十分です。届いた瞬間から、ジュエル本体と同じ丁寧さで取り扱います。',
+    ps2_title:'制作の<em>準備</em>',ps2_body:'デザインが確定し、素材が選択され、すべての仕様が最終決定されます。担当職人は制作開始前にすべての詳細を確認します。最後の1ミリまでお客様のビジョン通りになると確信できるまで、何も進みません。',
+    ps3_title:'ジュエリーの<em>制作</em>',ps3_body:'K18ゴールドまたはPt900プラチナのジュエルは、熟練の日本人職人が完全に手作業で制作します。リング、ペンダント、完全フルオーダーを問わず、すべての曲線、比率、表面がお客様の承認済みデザイン通りに形成されます。髪の毛を封入する前に、ジュエルは完成して完璧でなければなりません。',
+    ps4_title:'髪の毛を<em>内部に封入</em>',ps4_body1:'ジュエルに精密な小さな開口部が開けられます。お客様の髪の毛を1本ずつ手で内部に置いていきます。開口部は次に、まったく同じ金属（K18ゴールドまたはPt900プラチナ）のキャップで封印されます。その後、室は気密封印されます。気密で、永続的で、世代を超えて持続するよう設計されています。',ps4_body2:'一度封印されると、ジュエルを破壊せずに室を開けることはできません。これは意図的なものです。封印はあなたへの、そして内部に髪の毛が住む方への約束です。',ps4_note:'髪の毛は20〜30本お送りいただくことをお勧めします。職人が最良の毛髪を選択する柔軟性が増し、無駄がなくなります。余った毛髪は完成品と一緒にお返しします。',
+    ps5_title:'<em>フォトレポート</em>',ps5_body:'最終研磨の前に、封入の各重要段階を撮影します。髪の毛がジュエルに入る前、封入中、室が閉じられた後。この完全な写真記録はWhatsAppでお送りします。これらの画像は永遠にあなたのものです。多くのお客様が、封入写真をジュエル本体と同じくらい大切にしていると教えてくれます。',
+    ps6_title:'最終<em>仕上げ・発送</em>',ps6_body:'ジュエルはRionの厳格な基準で研磨され、最終品質検査を通過し、Rion専用プレゼンテーションケースとパッケージに入れられます。その後にのみ、米国ご住所への無料保険付きDHL Express発送の準備が整います。全プロセスは――日本に髪の毛が届いた瞬間から――約5.5ヶ月かかります。',
+    photo_eyebrow:'ケアの証明',photo_title:'封入前。封入中。<em>封入後。</em>',photo_p1:'大切な髪の毛がどのように扱われたかを正確に見る権利があります。米国にジュエルが発送される前に、制作した職人が各重要な瞬間に撮影した封入プロセス全体の写真記録をお送りします。',photo_p2:'信頼だけに頼るものは何もありません。髪の毛がジュエルに入る前を見ます。置かれるところを見ます。完成した封印室を見ます。これらの写真はあなたのものであり、ジュエル本体とともに永遠にあなたのそばにあります。',
+    perm_eyebrow:'永続するために',perm_title:'気密封印。<br><em>世代を超えて。</em>',perm_p1:'Rionで使用される封印技術は、長年の実践と改良を経て洗練されています。一度封印されると、髪の毛は無垢の貴金属の中の気密バリアに閉じ込められ、劣化することなく一生の日常着用に耐えるよう設計されています。',perm_p2:'封印された室は、水、汗、光、または時間の経過に影響されません。Rionのジュエルを毎日着用することができ、内部の髪の毛は封印された日のままの状態で、あなたの鼓動と同じくらい近くに存在し続けます。',perm_note:'重要：封印は決していじらないでください。髪の封入室を開けようとすると、ジュエルが永久に損傷し、すべてのサービス保証が無効になります。ジュエルについて懸念がある場合は、何かをする前にWhatsAppでご連絡ください。',
+    cta_title:'封入プロセスについて<br><em>ご質問は？</em>',cta_body:'どんな質問でもお気軽にどうぞ。小さな質問も個人的な質問も、喜んでお答えします。WhatsAppでメッセージを送るか、よくある質問をご覧ください。',cta_wa:'💬 WhatsAppでメッセージ',cta_faq:'よくある質問'
+  }
+};
+function setLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
+  });
+  localStorage.setItem('rion_us_lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+(function(){
+  const saved=localStorage.getItem('rion_us_lang')||'en';
+  if(saved!=='en') setLang(saved);
+})();
 </script>
 </body>
 </html>

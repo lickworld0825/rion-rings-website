@@ -510,6 +510,53 @@ window.addEventListener('scroll',()=>{
   const t=document.getElementById('scrollTop');
   window.scrollY>500?t.classList.add('visible'):t.classList.remove('visible');
 });
+
+const T = {
+  en: {
+    nav_order:'Order Now',
+    trust_shipping:'Free Shipping to the USA',trust_duties:'No Import Duties',trust_made:'Handcrafted in Japan',trust_payment:'Secure Payment',
+    menu_home:'Home',menu_collection:'Collection',menu_heritage:'Our <em>Heritage</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_legal:'Legal &amp; <em>Privacy</em>',
+    hero_eyebrow:'Care Guide',hero_title:'Made to last<br><em>for generations.</em>',hero_lead:'Your Rion jewel is solid K18 gold or Pt900 platinum, hermetically sealed in Japan. With a few simple habits, it\'ll stay as beautiful as the day it arrived — and long beyond that.',
+    promise_eyebrow:'The Rion Promise',promise_title:'Complimentary lifetime <em>polishing.</em><br>For as long as you own it.',promise_body:'Every Rion piece includes our lifetime polishing service — completely free of charge. Whenever your jewel needs refreshing, simply send it to our Japanese atelier via DHL. We\'ll restore it to its original luster and return it to you fully insured. You cover the round-trip shipping; we handle everything else.',
+    daily_title:'Daily <em>care.</em>',daily_lead:'Four simple habits that keep your piece looking exceptional every day.',
+    c1_title:'Wipe after <em>wearing</em>',c1_body:'After each wear, give your jewel a gentle wipe with a soft, lint-free cloth. This removes skin oils, perspiration, and everyday dust — keeping the metal lustrous and the sealed hair chamber perfectly clear.',
+    c2_title:'Store with <em>care</em>',c2_body:'When you\'re not wearing it, place your jewel in the Rion exclusive case. Store it separately from other jewelry to prevent scratches. Keep it away from direct sunlight, heat, and excess humidity.',
+    c3_title:'Remove for <em>activities</em>',c3_body:'Take it off before swimming pools, the beach, hot tubs, saunas, and heavy workouts. Apply perfume, lotion, and sunscreen before putting on the jewel — never spray or apply products directly onto it.',
+    c4_title:'Clean <em>gently</em>',c4_body:'For light cleaning at home, a soft polishing cloth is all you need. Avoid ultrasonic cleaners, steamers, and harsh chemicals. For a deep clean or polish, send it to us in Japan — it\'s free and the results are extraordinary.',
+    dodont_title:'Do &amp; <em>Don\'t.</em>',dodont_lead:'A quick reference for everyday wear.',
+    do_title:'<em>Do</em>',do1:'Wipe with a soft cloth after each wear',do2:'Store in the Rion exclusive case',do3:'Remove before swimming, hot tubs, or saunas',do4:'Apply perfume and lotion before putting it on',do5:'Send to Japan for free lifetime polishing (you cover shipping)',do6:'Wear it every day — it\'s built for it',
+    dont_title:'<em>Don\'t</em>',dont1:'Expose to chlorine (pools, bleach-based cleaners)',dont2:'Spray perfume or hairspray directly on the jewel',dont3:'Use ultrasonic jewelry cleaners or steamers',dont4:'Scrub with abrasive cloths or toothpaste',dont5:'Knock against hard surfaces or store loosely',dont6:'Try to open or tamper with the hair chamber',
+    cta_title:'Questions about your <em>jewel?</em>',cta_body:'Whether it needs a polish, a repair, or you just have a question — we\'re always here and happy to help. Send us a message on WhatsApp anytime.',cta_wa:'💬 Message Us on WhatsApp',cta_faq:'Read FAQ'
+  },
+  ja: {
+    nav_order:'ご注文',
+    trust_shipping:'アメリカへ無料配送',trust_duties:'輸入関税なし',trust_made:'日本で手作り',trust_payment:'安全なお支払い',
+    menu_home:'ホーム',menu_collection:'コレクション',menu_heritage:'ブランドの<em>歴史</em>',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_legal:'法律・<em>プライバシー</em>',
+    hero_eyebrow:'お手入れ方法',hero_title:'世代を超えて<br><em>輝き続けるために。</em>',hero_lead:'Rionのジュエルは、日本で気密封入されたK18ゴールドまたはPt900プラチナの無垢素材です。いくつかのシンプルな習慣を守るだけで、お届けの日と同じ美しさが長く続きます。',
+    promise_eyebrow:'Rionのお約束',promise_title:'生涯無料の<em>研磨サービス。</em><br>お持ちの限り。',promise_body:'Rionのすべてのジュエルには、生涯無料の研磨サービスが含まれます。ジュエルのリフレッシュが必要な際は、DHLで日本のアトリエへお送りください。元の輝きに仕上げて全額保険付きでご返送します。往復の送料のみご負担ください。',
+    daily_title:'日常の<em>お手入れ。</em>',daily_lead:'毎日美しい状態を保つ4つのシンプルな習慣。',
+    c1_title:'着用後に<em>拭く</em>',c1_body:'毎回着用後は、柔らかい毛羽立ちのない布でジュエルを優しく拭いてください。皮脂、汗、日常の汚れを取り除き、金属の輝きと髪の封入室を透明に保ちます。',
+    c2_title:'丁寧に<em>保管する</em>',c2_body:'着用していないときは、Rion専用ケースに保管してください。他のジュエリーと別々に保管して傷を防ぎ、直射日光・熱・過度な湿気を避けてください。',
+    c3_title:'活動前に<em>外す</em>',c3_body:'プール、ビーチ、温泉、サウナ、激しい運動の前には外してください。香水、ローション、日焼け止めはジュエルを着ける前に使用し、直接スプレーや塗布はしないでください。',
+    c4_title:'優しく<em>クリーニング</em>',c4_body:'自宅での軽いクリーニングには、柔らかい磨き布があれば十分です。超音波クリーナー、スチーマー、強い化学薬品は避けてください。深いクリーニングや研磨には日本の弊社へお送りください — 無料で、仕上がりは格別です。',
+    dodont_title:'やること・<em>やってはいけないこと。</em>',dodont_lead:'日常着用のクイックリファレンス。',
+    do_title:'<em>やること</em>',do1:'着用後は柔らかい布で拭いてください',do2:'Rion専用ケースに保管してください',do3:'水泳・温泉・サウナの前には外してください',do4:'香水やローションはつける前に使用してください',do5:'無料の生涯研磨のために日本へお送りください（送料のみご負担）',do6:'毎日着用してください — その耐久性のために作られています',
+    dont_title:'<em>やってはいけないこと</em>',dont1:'塩素に触れさせないでください（プール・漂白剤系洗剤）',dont2:'ジュエルに直接香水やヘアスプレーをかけないでください',dont3:'超音波ジュエリークリーナーやスチーマーを使用しないでください',dont4:'研磨布や歯磨き粉でこすらないでください',dont5:'硬い面にぶつけたり、ゆるく保管したりしないでください',dont6:'髪の封入室を開けようとしたり、いじったりしないでください',
+    cta_title:'ジュエルについて<em>ご質問は？</em>',cta_body:'研磨、修理、または単純なご質問など、いつでも喜んでお答えします。WhatsAppでメッセージをお送りください。',cta_wa:'💬 WhatsAppでメッセージ',cta_faq:'よくある質問'
+  }
+};
+function setLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
+  });
+  localStorage.setItem('rion_us_lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+}
+(function(){
+  const saved=localStorage.getItem('rion_us_lang')||'en';
+  if(saved!=='en') setLang(saved);
+})();
 </script>
 </body>
 </html>

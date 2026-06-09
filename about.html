@@ -39,6 +39,10 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .nav-right{display:flex;align-items:center;gap:1.25rem}
 .nav-cta{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;background:var(--gold-dark);color:var(--cream);padding:8px 20px;text-decoration:none;transition:background .3s;white-space:nowrap}
 .nav-cta:hover{background:var(--ink)}
+.lang-switch{display:flex;align-items:center;gap:0.5rem}
+.lang-btn{background:none;border:none;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.14em;cursor:pointer;color:var(--ink-muted);transition:color .25s;padding:4px 0;font-weight:400}
+.lang-btn.active{color:var(--gold-dark);font-weight:500}
+.lang-btn:hover{color:var(--gold-dark)}
 
 /* TRUST STRIP */
 .trust-strip{background:var(--ink);color:var(--gold);padding:0.65rem 4rem;display:flex;justify-content:center;align-items:center;gap:2.5rem;flex-wrap:wrap;border-bottom:0.5px solid rgba(201,169,110,0.15)}
@@ -200,7 +204,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <nav>
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
-    <a href="order.html" class="nav-cta">Order Now</a>
+    <a href="order.html" class="nav-cta" data-i18n="nav_order">Order Now</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
