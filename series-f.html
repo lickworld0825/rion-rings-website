@@ -71,10 +71,10 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .breadcrumb-sep{color:var(--gold);font-style:italic;font-family:'Cormorant Garamond',serif}
 .breadcrumb-current{color:var(--gold-dark)}
 .series-hero{display:grid;grid-template-columns:1fr 1fr;min-height:70vh;border-bottom:0.5px solid var(--border)}
-.hero-images{display:grid;grid-template-columns:1fr 1fr;background:#F0EBE0}
-.hero-img-wrap{overflow:hidden}
-.hero-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;min-height:500px}
-.hero-img-wrap:first-child img{object-fit:contain;background:#F0EBE0}
+.hero-images{display:block}
+.hero-img-wrap{overflow:hidden;height:100%}
+.hero-img-wrap img{width:100%;height:100%;object-fit:contain;background:#F0EBE0;display:block;min-height:500px}
+
 .hero-info{padding:4rem 4rem 4rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream)}
 .series-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:1.25rem}
 .series-badge::before{content:'✦';color:var(--gold)}
@@ -82,10 +82,10 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .series-name em{font-style:italic;color:var(--gold-dark)}
 .series-type-tag{display:inline-block;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);border:0.5px solid var(--border);padding:4px 12px;margin-bottom:1.5rem}
 .series-desc{font-size:0.92rem;line-height:1.9;color:var(--ink-soft);margin-bottom:2rem;max-width:480px}
-.material-tabs{display:flex;gap:6px;margin-bottom:1.5rem;flex-wrap:wrap}
-.mat-tab{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;padding:8px 16px;border:0.5px solid var(--border);background:transparent;cursor:pointer;color:var(--ink-muted);font-family:'Jost',sans-serif;transition:all .2s}
-.mat-tab:hover{border-color:var(--gold);color:var(--gold-dark)}
-.mat-tab.active{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+
+
+
+
 .price-display{display:flex;align-items:baseline;gap:0.75rem;margin-bottom:0.5rem}
 .price-big{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold-dark);font-style:italic;line-height:1}
 .price-ddp{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted)}
@@ -104,7 +104,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .variants-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
 .variant-card{background:var(--cream);text-decoration:none;color:inherit;cursor:pointer;transition:background .3s,box-shadow .3s;position:relative;overflow:hidden}
 .variant-card:hover{background:#FDFAF5;box-shadow:0 8px 28px rgba(201,169,110,0.1)}
-.variant-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+.variant-card img{width:100%;aspect-ratio:1;object-fit:contain;background:#F0EBE0;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
 .variant-card:hover img{transform:scale(1.06)}
 .variant-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(201,169,110,0.08) 0%,transparent 50%);opacity:0;transition:opacity .3s;pointer-events:none}
 .variant-card:hover::after{opacity:1}
@@ -219,7 +219,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   .trust-strip{gap:1rem;font-size:0.58rem}
 }
 @media(max-width:480px){
-  .hero-img-wrap img{min-height:260px}.variants-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}
+  .hero-img-wrap img{width:100%;height:100%;object-fit:contain;background:#F0EBE0;display:block;min-height:500px}.variants-grid{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}
   .price-table th,.price-table td{padding:8px 6px}
   .price-table th:last-child,.price-table td:last-child{display:none}
   .price-aed{font-size:0.95rem}}
@@ -289,29 +289,16 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div class="hero-img-wrap">
       <img src="images/series-f/f1.jpg" alt="Series F — The Chevron Ring" loading="eager">
     </div>
-    <div class="hero-img-wrap">
-      <img src="images/series-f/f2-wear.jpg" alt="Series F — Worn on hand" loading="eager">
-    </div>
   </div>
   <div class="hero-info">
     <span class="series-badge">Series F · Chevron</span>
     <h1 class="series-name">The <em>Chevron</em> Ring</h1>
     <span class="series-type-tag">Ring · Half Eternity</span>
     <p class="series-desc">A V-shaped setting with diamonds cascading across the front. Elegant and bold — the Chevron carries grief into light.</p>
-    <div class="material-tabs">
-      <button class="mat-tab active" onclick="selectMat('yg',event)" data-i18n="mat_yg">K18 Yellow Gold</button>
-      <button class="mat-tab" onclick="selectMat('wg',event)" data-i18n="mat_wg">K18 White Gold</button>
-      <button class="mat-tab" onclick="selectMat('pg',event)" data-i18n="mat_pg">K18 Pink Gold</button>
-      <button class="mat-tab" onclick="selectMat('pt',event)" data-i18n="mat_pt">Platinum Pt900</button>
-    </div>
-    <div class="price-display">
-      <span class="price-big" id="priceDisplay">$6,800</span>
-      <span class="price-ddp" data-i18n="price_ddp">Free shipping · No duties</span>
-    </div>
+    <div class="price-display"><span class="price-big">From $6,800</span><span class="price-ddp" data-i18n="price_ddp">Free US Shipping · No Duties</span></div>
     <p class="price-note" data-i18n="price_note">Approx. 5.5 months · Made to order in Japan</p>
-    <p class="code-display"><span data-i18n="code_label">Code:</span> <strong id="codeDisplay">F-4</strong></p>
     <div class="hero-ctas">
-      <a href="#" class="btn-wa-hero" id="heroWa" target="_blank" data-i18n="btn_wa">💬 Order via WhatsApp</a>
+      <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20F%20(The%20Chevron%20Ring).%20Please%20send%20me%20more%20details." class="btn-wa-hero" target="_blank" data-i18n="btn_wa">💬 Order via WhatsApp</a>
       <a href="collection.html" class="btn-outline-hero" data-i18n="btn_back">← Back to Collection</a>
     </div>
   </div>
@@ -552,33 +539,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 </footer>
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
 <script>
-const WA='819054621246';
-const SERIES_NAME_FULL='Series F — The Chevron Ring';
-const MATERIALS={
-  yg:{code:'F-1',price:'$7,200',img:'images/series-f/f1.jpg',label:'K18 Yellow Gold',popular:false},
-  wg:{code:'F-2',price:'$7,500',img:'images/series-f/f2.jpg',label:'K18 White Gold',popular:false},
-  pg:{code:'F-3',price:'$7,200',img:'images/series-f/f3.jpg',label:'K18 Pink Gold',popular:false},
-  pt:{code:'F-4',price:'$6,800',img:'images/series-f/f4.jpg',label:'Platinum Pt900',popular:true}
-};
-let cur='yg';
-(function(){const p=new URLSearchParams(location.search).get('mat');if(p&&['yg','wg','pg','pt'].includes(p)){cur=p;}})();
+
+
+
+
+
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
-function updateWa(){
-  const m=MATERIALS[cur];
-  const msg=`Hello Rion, I'd like to order ${m.code} — ${SERIES_NAME_FULL} in ${m.label}. Could you guide me through the process?`;
-  document.getElementById('heroWa').href=buildWa(msg);
-  document.getElementById('enquireWa').href=buildWa(msg);
-  document.getElementById('menuWa').href=buildWa('');
-  document.getElementById('footerWa').href=buildWa('');
-}
-function selectMat(mat,e){
-  cur=mat;const m=MATERIALS[mat];
-  document.getElementById('priceDisplay').textContent=m.price;
-  document.getElementById('codeDisplay').textContent=m.code;
-  document.querySelectorAll('.mat-tab').forEach(b=>b.classList.remove('active'));
-  e.target.classList.add('active');
-  updateWa();
-}
 function toggleMenu(){
   const o=document.getElementById('menuOverlay'),b=document.querySelector('.hamburger');
   const a=o.classList.toggle('active');b.classList.toggle('active',a);
@@ -593,7 +559,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 window.addEventListener('scroll',()=>{
   window.scrollY>500?document.getElementById('scrollTop').classList.add('visible'):document.getElementById('scrollTop').classList.remove('visible');
 });
-updateWa();
+
 
 const T={
   en:{
@@ -630,22 +596,12 @@ function setLang(l){
   if(saved!=='en') setLang(saved);
 })();
 
-    updateWaLinks();
+    
   }
 });
 
-document.addEventListener('DOMContentLoaded',function(){
-  const _m=MATERIALS[cur];
-  if(_m){
-    var pd=document.getElementById('priceDisplay');
-    var cd=document.getElementById('codeDisplay');
-    if(pd)pd.textContent=_m.price;
-    if(cd)cd.textContent=_m.code;
-    document.querySelectorAll('.mat-tab').forEach(function(b){
-      var oc=b.getAttribute('onclick')||'';
-      b.classList.toggle('active',oc.indexOf("'"+cur+"'")>-1);
-    });
-    updateWa();
+
+    
   }
 });
 </script>
