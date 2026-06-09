@@ -228,6 +228,12 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 .cookie-btn-primary{background:var(--gold);color:var(--ink)}
 .cookie-btn-primary:hover{background:var(--gold-light)}
 
+/* LANG SWITCH */
+.lang-switch{display:flex;align-items:center;gap:0.5rem}
+.lang-btn{background:none;border:none;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.14em;cursor:pointer;color:var(--ink-muted);transition:color .25s;padding:4px 0;font-weight:400}
+.lang-btn.active{color:var(--gold-dark);font-weight:500}
+.lang-btn:hover{color:var(--gold-dark)}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   footer{padding-bottom:7rem!important}
@@ -279,6 +285,11 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
     <a href="https://wa.me/819054621246" class="nav-cta" target="_blank">Begin Your Order</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
     <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -287,15 +298,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
-  <span class="trust-strip-item"><span class="trust-strip-dot">✦</span> Free Shipping to the USA</span>
+  <span class="trust-strip-item"><span class="trust-strip-dot">✦</span> <span data-i18n="trust_ship">Free Shipping to the USA</span></span>
   <span class="trust-strip-dot">·</span>
-  <span class="trust-strip-item"><span class="trust-strip-dot">◈</span> No Import Duties</span>
+  <span class="trust-strip-item"><span class="trust-strip-dot">◈</span> <span data-i18n="trust_duty">No Import Duties</span></span>
   <span class="trust-strip-dot">·</span>
-  <span class="trust-strip-item"><span class="trust-strip-dot">◯</span> Handcrafted in Japan</span>
+  <span class="trust-strip-item"><span class="trust-strip-dot">◯</span> <span data-i18n="trust_made">Handcrafted in Japan</span></span>
   <span class="trust-strip-dot">·</span>
   <span class="trust-strip-item"><span class="trust-strip-dot">◇</span> All Prices in USD</span>
   <span class="trust-strip-dot">·</span>
-  <span class="trust-strip-item"><span class="trust-strip-dot">◉</span> Authenticity Certificate Included</span>
+  <span class="trust-strip-item"><span class="trust-strip-dot">◉</span> <span data-i18n="trust_cert">Authenticity Certificate Included</span></span>
 </div>
 
 <!-- MENU OVERLAY -->
@@ -325,11 +336,11 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <div class="page-header">
   <div class="page-header-inner">
     <div>
-      <h1>The<br><em>Collection</em></h1>
+      <h1 data-i18n="page_h1">The<br><em>Collection</em></h1>
     </div>
     <div class="page-header-right">
-      <p>Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via WhatsApp. We will guide you through every step with care and patience.</p>
-      <div class="page-header-note">✦ All prices in USD · Free insured shipping · No US import duties · DDP terms</div>
+      <p data-i18n="page_desc">Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via WhatsApp. We will guide you through every step with care and patience.</p>
+      <div class="page-header-note" data-i18n="page_note">✦ All prices in USD · Free insured shipping · No US import duties · DDP terms</div>
     </div>
   </div>
 </div>
