@@ -6,6 +6,8 @@ CONFIGS = {
     'uk': {
         'country':       'United Kingdom',
         'country_abbr':  'UK',
+        'the_abbr':      'the UK',          # with article: "to the UK"
+        'the_country':   'the United Kingdom',
         'country_iso':   'GB',
         'domain':        'uk.myart-rion.com',
         'currency':      'GBP',
@@ -19,6 +21,7 @@ CONFIGS = {
         'series_ddp_ja': '英国へ無料配送・VAT込み',
         'consumer_law':  'UK consumer protection laws',
         'coverage':      'all of the United Kingdom',
+        'addr_adj':      'UK',             # "UK address"
         'ja_country':    '英国',
         'ja_currency':   'GBP',
         'format_price':  "return '£' + n.toLocaleString('en-GB');",
@@ -50,6 +53,8 @@ CONFIGS = {
     'ca': {
         'country':       'Canada',
         'country_abbr':  'Canada',
+        'the_abbr':      'Canada',          # no article: "to Canada"
+        'the_country':   'Canada',
         'country_iso':   'CA',
         'domain':        'ca.myart-rion.com',
         'currency':      'CAD',
@@ -63,6 +68,7 @@ CONFIGS = {
         'series_ddp_ja': 'カナダへ無料配送・関税なし',
         'consumer_law':  'Canadian consumer protection laws',
         'coverage':      'all of Canada',
+        'addr_adj':      'Canadian',       # "Canadian address"
         'ja_country':    'カナダ',
         'ja_currency':   'CAD',
         'format_price':  "return 'CA$' + n.toLocaleString('en-CA');",
@@ -94,6 +100,8 @@ CONFIGS = {
     'nl': {
         'country':       'Netherlands',
         'country_abbr':  'Netherlands',
+        'the_abbr':      'the Netherlands', # with article
+        'the_country':   'the Netherlands',
         'country_iso':   'NL',
         'domain':        'nl.myart-rion.com',
         'currency':      'EUR',
@@ -107,6 +115,7 @@ CONFIGS = {
         'series_ddp_ja': 'オランダへ無料配送・VAT込み',
         'consumer_law':  'Dutch consumer protection laws',
         'coverage':      'the Netherlands',
+        'addr_adj':      'Netherlands',    # "Netherlands address"
         'ja_country':    'オランダ',
         'ja_currency':   'EUR',
         'format_price':  "return '€' + n.toLocaleString('en-GB');",
@@ -138,6 +147,8 @@ CONFIGS = {
     'ch': {
         'country':       'Switzerland',
         'country_abbr':  'Switzerland',
+        'the_abbr':      'Switzerland',     # no article
+        'the_country':   'Switzerland',
         'country_iso':   'CH',
         'domain':        'ch.myart-rion.com',
         'currency':      'CHF',
@@ -151,6 +162,7 @@ CONFIGS = {
         'series_ddp_ja': 'スイスへ無料配送・関税なし',
         'consumer_law':  'Swiss consumer protection laws',
         'coverage':      'Switzerland',
+        'addr_adj':      'Swiss',          # "Swiss address"
         'ja_country':    'スイス',
         'ja_currency':   'CHF',
         'format_price':  "return 'CHF' + n.toLocaleString('en-GB');",
@@ -201,6 +213,8 @@ def transform_file(path, cfg):
 
     country      = cfg['country']
     abbr         = cfg['country_abbr']
+    the_abbr     = cfg['the_abbr']       # "the UK" / "Canada" / "the Netherlands" / "Switzerland"
+    the_country  = cfg['the_country']    # "the United Kingdom" / "Canada" / etc.
     iso          = cfg['country_iso']
     domain       = cfg['domain']
     currency     = cfg['currency']
@@ -214,6 +228,7 @@ def transform_file(path, cfg):
     series_ddp_ja= cfg['series_ddp_ja']
     consumer_law = cfg['consumer_law']
     coverage     = cfg['coverage']
+    addr_adj     = cfg['addr_adj']   # "UK", "Canadian", "Netherlands", "Swiss"
     ja_country   = cfg['ja_country']
     ja_currency  = cfg['ja_currency']
     format_price = cfg['format_price']
@@ -250,7 +265,7 @@ def transform_file(path, cfg):
     content = content.replace('"currenciesAccepted":"USD"', f'"currenciesAccepted":"{currency}"')
     content = content.replace('"areaServed":["US","JP"]', f'"areaServed":["{iso}","JP"]')
     content = re.sub(r'"priceRange":"[^"]*"',
-                     f'"priceRange":"{currency} {price_min}–20,000+"', content)
+                     f'"priceRange":"{price_min}–20,000+"', content)
     # Remove trailing USD from already-converted prices
     content = re.sub(r'(£[\d,]+|€[\d,]+|CA\$[\d,]+|CHF[\d,]+)\s*USD', r'\1', content)
     # Price table column headers
@@ -310,21 +325,28 @@ def transform_file(path, cfg):
     content = content.replace('・DDP条件', '')
 
     # ── 11. English country name replacements ─────────────────────────────────
+    # Handle "the United States" → the_country BEFORE general "United States" replace
+    content = content.replace('the United States of America', the_country)
+    content = content.replace('the United States', the_country)
     content = content.replace('United States of America', country)
     content = content.replace('United States', country)
-    content = content.replace('the USA', f'the {abbr}')
-    content = content.replace('the US', f'the {abbr}')
-    content = content.replace('Free Shipping to the USA', f'Free Shipping to the {abbr}')
-    content = content.replace('Free shipping to the USA', f'Free shipping to the {abbr}')
-    content = content.replace('shipping to the USA', f'shipping to the {abbr}')
+    content = content.replace('the USA', the_abbr)
+    content = content.replace('the US', the_abbr)
+    content = content.replace(f'Free Shipping to {the_abbr}', f'Free Shipping to {the_abbr}')  # guard
+    content = content.replace('Free Shipping to the USA', f'Free Shipping to {the_abbr}')
+    content = content.replace('Free shipping to the USA', f'Free shipping to {the_abbr}')
+    content = content.replace('shipping to the USA', f'shipping to {the_abbr}')
     content = content.replace('all 50 US states, Washington D.C., and US territories', coverage)
     content = content.replace('all 50 US states, Washington D.C., and UK territories', coverage)
+    content = content.replace('all 50 US states, Washington D.C., and Canada territories', coverage)
     content = content.replace('Free US Shipping', f'Free {abbr} Shipping')
     content = content.replace('Free US shipping', f'Free {abbr} shipping')
     content = content.replace('US import duties', f'{abbr} import duties')
     content = content.replace('US Import Duties', f'{abbr} Import Duties')
     content = content.replace('US sizes', 'standard sizes')
-    content = content.replace('US address', f'{abbr} address')
+    content = content.replace('Your US Address', f'Your {addr_adj} Address')
+    content = content.replace('US Address', f'{addr_adj} Address')
+    content = content.replace('US address', f'{addr_adj} address')
     content = content.replace('US ring size', 'standard ring size')
     content = content.replace('US ring gauge', 'ring gauge')
     content = content.replace('US 1 – 12 (half sizes available) · Ring gauge included in kit',
@@ -335,10 +357,11 @@ def transform_file(path, cfg):
                                'Sizes 1–12, half sizes available · Ring gauge included in kit')
     content = content.replace('US 6½', '6½')
     content = content.replace('US territories', f'{abbr} territories')
-    content = content.replace('Free to all US states', f'Free to the {abbr}')
+    content = content.replace('Free to all US states', f'Free to {the_abbr}')
 
-    # Fix "to all of the <country>" after country name replace
+    # Fix "to all of the <country>" / "to all of <country>" after country name replace
     content = content.replace(f'to all of the {country}', f'to {country}')
+    content = content.replace(f'to all of {country}', f'to {country}')
 
     # ── 12. Tax wording ───────────────────────────────────────────────────────
     content = content.replace('No Import Duties · Sales Tax May Apply', tax_announce)
@@ -418,8 +441,8 @@ def transform_file(path, cfg):
 
     # ── 19. Announce bar ─────────────────────────────────────────────────────
     content = re.sub(
-        r'Free Shipping to the ' + re.escape(abbr) + r' &nbsp;·&nbsp; <span>[^<]*</span>',
-        f'Free Shipping to the {abbr} &nbsp;·&nbsp; <span>{tax_announce}</span>',
+        r'Free Shipping to [^&]+ &nbsp;·&nbsp; <span>[^<]*</span>',
+        f'Free Shipping to {the_abbr} &nbsp;·&nbsp; <span>{tax_announce}</span>',
         content
     )
 
@@ -468,7 +491,7 @@ def transform_file(path, cfg):
     )
     content = content.replace(
         "A ring size gauge is included in your hair collection kit — shipped to your UK address. Simply try the gauge and confirm your US size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.",
-        f"A ring size gauge is included in your hair collection kit — shipped to your {abbr} address. Simply try the gauge and confirm your size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order."
+        f"A ring size gauge is included in your hair collection kit — shipped to your {addr_adj} address. Simply try the gauge and confirm your size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order."
     )
     # faq.html inline answer about ring size
     content = content.replace(
