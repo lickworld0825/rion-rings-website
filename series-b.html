@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-63VV4WCTB5');
-</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Series B — The Bar Pendant | Rion Memorial Jewellery</title>
@@ -80,7 +73,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .series-type-tag{display:inline-block;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);border:0.5px solid var(--border);padding:4px 12px;margin-bottom:1rem}
 .series-tagline{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--gold-dark);margin-bottom:1.25rem;line-height:1.5}
 .series-desc{font-size:0.92rem;line-height:1.9;color:var(--ink-soft);margin-bottom:2rem;max-width:480px}
-
 
 
 
@@ -548,8 +540,6 @@ window.gtag = function(){dataLayer.push(arguments)};
 
 
 
-
-
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 function toggleMenu(){
   const o=document.getElementById('menuOverlay'),b=document.querySelector('.hamburger');
@@ -565,7 +555,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 window.addEventListener('scroll',()=>{
   window.scrollY>500?document.getElementById('scrollTop').classList.add('visible'):document.getElementById('scrollTop').classList.remove('visible');
 });
-
 
 const T={
   en:{
@@ -605,7 +594,6 @@ function setLang(l){
     
   }
 });
-
 
     
   }

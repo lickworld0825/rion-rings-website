@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-63VV4WCTB5');
-</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Japanese Heritage &amp; Craftsmanship — Rion Memorial Jewelry</title>
@@ -561,19 +554,27 @@ window.gtag = function(){dataLayer.push(arguments)};
     <span>This site uses Google Analytics and essential cookies only. No advertising cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
   </div>
   <div class="cookie-banner-actions">
+    <button class="cookie-btn" onclick="declineCookies()">Decline</button>
     <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
 
 <script>
 function acceptCookies(){
-  localStorage.setItem('rion_cookies_accepted','1');
-  const b=document.getElementById('cookieBanner');
-  if(b)b.classList.remove('visible');
+ localStorage.setItem('rion_us_cookies_accepted','1');
+ var b=document.getElementById('cookieBanner');
+ if(b) b.classList.remove('visible');
+ if(window._loadGA) window._loadGA();
+}
+function declineCookies(){
+ localStorage.setItem('rion_us_cookies_accepted','0');
+ var b=document.getElementById('cookieBanner');
+ if(b) b.classList.remove('visible');
 }
 (function(){
-  if(localStorage.getItem('rion_cookies_accepted')==='1')return;
-  setTimeout(()=>{const b=document.getElementById('cookieBanner');if(b)b.classList.add('visible');},1200);
+ var c=localStorage.getItem('rion_us_cookies_accepted');
+ if(c==='1'||c==='0') return;
+ setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('visible');},1800);
 })();
 
 document.querySelectorAll('img').forEach((img,i)=>{
