@@ -222,13 +222,24 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 }
 @media(max-width:768px){.scroll-top{display:none!important}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z72DT8WF7E"></script>
+<!-- Google Analytics (consent-gated) -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+window.dataLayer = window.dataLayer || [];
+window.gtag = function(){dataLayer.push(arguments)};
+(function(){
+ var GA_ID = 'G-Z72DT8WF7E';
+ window._loadGA = function(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
   gtag('js', new Date());
-  gtag('config', 'G-Z72DT8WF7E');
+  gtag('config', GA_ID);
+ };
+ if(localStorage.getItem('rion_us_cookies_accepted') === '1') window._loadGA();
+})();
 </script>
 </head>
 <body>
