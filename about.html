@@ -534,5 +534,17 @@ function declineCookies(){
  setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('visible');},1800);
 })();
 </script>
+
+<script>
+/* WhatsApp source tracking */
+setTimeout(function(){
+ document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+  var h=a.getAttribute('href');
+  if(!h||h.indexOf('%5BCA%5D')>=0) return;
+  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BCA%5D%20'));}
+  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BCA%5D%20');}
+ });
+},0);
+</script>
 </body>
 </html>
