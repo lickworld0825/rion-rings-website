@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-63VV4WCTB5');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Series B — The Bar Pendant | Rion Memorial Jewellery</title>
@@ -737,6 +729,55 @@ function setLang(lang){
   });
   updateWa();
 }
+</script>
+<!-- Google Analytics (consent-gated) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.gtag = function(){dataLayer.push(arguments)};
+(function(){
+ var GA_ID = 'G-63VV4WCTB5';
+ window._loadGA = function(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+ };
+ if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadGA();
+})();
+</script>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+ <div class="cookie-banner-text">
+ <strong>Cookie Notice</strong>
+ <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ </div>
+ <div class="cookie-banner-actions">
+ <button class="cookie-btn" onclick="declineCookies()">Decline</button>
+ <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+ </div>
+</div>
+<script>
+function acceptCookies(){
+ localStorage.setItem('rion_cookies_accepted','1');
+ var b=document.getElementById('cookieBanner');
+ if(b) b.classList.remove('visible');
+ if(window._loadGA) window._loadGA();
+}
+function declineCookies(){
+ localStorage.setItem('rion_cookies_accepted','0');
+ var b=document.getElementById('cookieBanner');
+ if(b) b.classList.remove('visible');
+}
+(function(){
+ var c=localStorage.getItem('rion_cookies_accepted');
+ if(c==='1'||c==='0') return;
+ setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('visible');},1800);
+})();
 </script>
 </body>
 </html>

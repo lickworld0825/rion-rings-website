@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-63VV4WCTB5');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rion — Bespoke Memorial Jewellery from Japan | Dubai, UAE & Kuwait</title>
@@ -349,7 +341,10 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 
 html[dir=rtl] .story-quote{border-left:none;border-right:1px solid var(--gold);padding-left:0;padding-right:2rem}
 
-@media(max-width:1024px){footer{padding-bottom:7rem!important}.nav-cta{display:none}
+@media(max-width:1024px){
+  #vip{padding:4rem 2rem!important}
+  #vip>div{grid-template-columns:1fr!important;gap:2rem!important}
+footer{padding-bottom:7rem!important}.nav-cta{display:none}
   .menu-inner{padding:4rem 4rem 2rem!important}
   .menu-eyebrow{margin-bottom:1.5rem!important}
   .menu-links a{font-size:clamp(1.2rem,3.6vw,2.6rem)!important;padding:0.75rem 0.5rem 0.75rem 0!important}
@@ -1346,5 +1341,24 @@ function setLang(lang){
   </div>
 </div>
 
+<!-- Google Analytics (consent-gated) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.gtag = function(){dataLayer.push(arguments)};
+(function(){
+ var GA_ID = 'G-63VV4WCTB5';
+ window._loadGA = function(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+ };
+ if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadGA();
+})();
+</script>
 </body>
 </html>

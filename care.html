@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-63VV4WCTB5');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Care Guide — Rion Memorial Jewellery | K18 Gold & Platinum</title>
@@ -605,9 +597,29 @@ function setLang(lang){
     <span>This site uses only essential cookies for language preference. We do not use tracking or advertising cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
   </div>
   <div class="cookie-banner-actions">
-    <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-btn" onclick="declineCookies()">Decline</button>
+ <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
 
+<!-- Google Analytics (consent-gated) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.gtag = function(){dataLayer.push(arguments)};
+(function(){
+ var GA_ID = 'G-63VV4WCTB5';
+ window._loadGA = function(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+ };
+ if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadGA();
+})();
+</script>
 </body>
 </html>
