@@ -1009,5 +1009,17 @@ function filterSeries(filter, e){
   });
 }
 </script>
+
+<script>
+/* WhatsApp source tracking */
+setTimeout(function(){
+ document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+  var h=a.getAttribute('href');
+  if(!h||h.indexOf('%5BUS%5D')>=0) return;
+  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BUS%5D%20'));}
+  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BUS%5D%20');}
+ });
+},0);
+</script>
 </body>
 </html>
