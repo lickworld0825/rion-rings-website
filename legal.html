@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'G-63VV4WCTB5');
-</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Legal & Privacy — Rion | Business Information, Terms & Privacy Policy</title>
-<meta name="description" content="Rion business information, commercial disclosure (Japan Specified Commercial Transactions Act), and privacy policy for US customers. Free shipping, no import duties.">
+<meta name="description" content="Rion business information, commercial disclosure (Japan Specified Commercial Transactions Act), and privacy policy for Netherlands customers. Free shipping, no import duties.">
 <meta name="theme-color" content="#1A1714">
 <link rel="canonical" href="https://nl.myart-rion.com/legal.html">
 <link rel="icon" type="image/jpeg" href="images/collection/ring.jpg">
@@ -181,13 +174,24 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 }
 @media(max-width:768px){.scroll-top{display:none!important}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7GJ715KEZ"></script>
+<!-- Google Analytics (consent-gated) -->
 <script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'G-C7GJ715KEZ');
+window.dataLayer = window.dataLayer || [];
+window.gtag = function(){dataLayer.push(arguments)};
+(function(){
+ var GA_ID = 'G-C7GJ715KEZ';
+ window._loadGA = function(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+ };
+ if(localStorage.getItem('rion_nl_cookies_accepted') === '1') window._loadGA();
+})();
 </script>
 </head>
 <body>
@@ -242,7 +246,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 <section class="page-hero">
  <span class="page-eyebrow" data-i18n="page_eyebrow">Legal &amp; Privacy</span>
  <h1 class="page-title" data-i18n="page_h1">Business Info, <em>Terms</em> &amp; <em>Privacy</em></h1>
- <p class="page-lead" data-i18n="page_lead">Business information, commercial disclosure under Japanese law, and our privacy policy for US customers. We respect your data and your trust — every detail is disclosed below.</p>
+ <p class="page-lead" data-i18n="page_lead">Business information, commercial disclosure under Japanese law, and our privacy policy for Netherlands customers. We respect your data and your trust — every detail is disclosed below.</p>
 </section>
 
 <!-- TOC -->
@@ -264,6 +268,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
  <tr><th data-i18n="th_company">Company Name</th><td>My Art Inc.</td></tr>
  <tr><th data-i18n="th_brand">Brand Name</th><td>Rion</td></tr>
  <tr><th data-i18n="th_address">Registered Address</th><td>&#12306;733-0801<br>20-3 Shinjo-cho, Nishi-ku, Hiroshima, Japan</td></tr>
+   <tr><th>KVK / BTW</th><td>Rion operates as a Japanese business (My Art Inc.) selling directly to Dutch customers. We are not VAT-registered in the Netherlands. Prices shown are all-inclusive — no additional charges on delivery.</td></tr>
  <tr><th data-i18n="th_email">Email</th><td><a href="mailto:info@art-rings.com">info@art-rings.com</a></td></tr>
  <tr><th>WhatsApp</th><td><a href="https://wa.me/819054621246" target="_blank">wa.me/819054621246</a></td></tr>
  <tr><th data-i18n="th_hours">Business Hours</th><td>9:00 – 19:00 JST (Japan Standard Time)<br><span style="font-size:0.82rem;color:var(--ink-muted)" data-i18n="th_hours_note">Out-of-hours responses also available via WhatsApp</span></td></tr>
@@ -320,7 +325,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
  </tr>
  <tr>
  <th data-i18n="th_returns">Returns &amp; Refunds</th>
- <td><strong>Returns are not accepted once production has begun.</strong> Each piece is made entirely to your personal specifications using your hair — custom-made goods are exempt from standard return rights under applicable US and Japanese law. In the event of a manufacturing defect on our part, we will remake the piece at no charge. Refunds are not offered in place of a remake.</td>
+ <td><strong>Returns are not accepted once production has begun.</strong> Each piece is made entirely to your personal specifications using your hair — custom-made goods are exempt from standard return rights under applicable EU and Dutch law (Consumer Rights Directive, Art. 16(c)). In the event of a manufacturing defect on our part, we will remake the piece at no charge. Refunds are not offered in place of a remake.</td>
  </tr>
  <tr>
  <th>Defect Policy</th>
@@ -417,6 +422,11 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
  </div>
 
  <div class="privacy-block">
+ <h3>Supervisory Authority</h3>
+ <p>You have the right to lodge a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens — AP) if you believe your personal data is being processed unlawfully. Website: <a href="https://autoriteitpersoonsgegevens.nl" target="_blank">autoriteitpersoonsgegevens.nl</a>.</p>
+ </div>
+
+ <div class="privacy-block">
  <h3 data-i18n="priv8_h">8. Data Retention</h3>
  <p>Order records (including sealing process photographs) are retained for 10 years for warranty and aftercare purposes. You may request earlier deletion in writing, subject to legal retention requirements.</p>
  </div>
@@ -507,6 +517,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
  <span>This site uses Google Analytics and essential cookies only. We do not use advertising or tracking cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
+ <button class="cookie-btn" onclick="declineCookies()">Decline</button>
  <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
  </div>
 </div>
@@ -520,7 +531,7 @@ const T = {
  trust_pay: 'Secure Payment',
  page_eyebrow: 'Legal &amp; Privacy',
  page_h1: 'Business Info, <em>Terms</em> &amp; <em>Privacy</em>',
- page_lead: 'Business information, commercial disclosure under Japanese law, and our privacy policy for US customers. We respect your data and your trust — every detail is disclosed below.',
+ page_lead: 'Business information, commercial disclosure under Japanese law, and our privacy policy for Netherlands customers. We respect your data and your trust — every detail is disclosed below.',
  toc_business: '① Business Information',
  toc_commercial: '② Commercial Disclosure',
  toc_privacy: '③ Privacy Policy',
