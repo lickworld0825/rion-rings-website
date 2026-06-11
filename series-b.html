@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VV4WCTB5"></script>
-<script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'G-63VV4WCTB5');
-</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Series B — The Bar Pendant | Rion Memorial Jewellery</title>
@@ -80,7 +73,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .series-type-tag{display:inline-block;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);border:0.5px solid var(--border);padding:4px 12px;margin-bottom:1rem}
 .series-tagline{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--gold-dark);margin-bottom:1.25rem;line-height:1.5}
 .series-desc{font-size:0.92rem;line-height:1.9;color:var(--ink-soft);margin-bottom:2rem;max-width:480px}
-
 
 
 
@@ -217,13 +209,24 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
  .price-local{font-size:0.95rem}}
 @media(max-width:768px){.scroll-top{display:none!important}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K4C7BXY6SE"></script>
+<!-- Google Analytics (consent-gated) -->
 <script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'G-K4C7BXY6SE');
+window.dataLayer = window.dataLayer || [];
+window.gtag = function(){dataLayer.push(arguments)};
+(function(){
+ var GA_ID = 'G-K4C7BXY6SE';
+ window._loadGA = function(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+ };
+ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadGA();
+})();
 </script>
 </head>
 <body>
@@ -537,8 +540,6 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 
 
 
-
-
 function buildWa(msg){return'https://wa.me/'+WA+(msg?'?text='+encodeURIComponent(msg):'');}
 function toggleMenu(){
  const o=document.getElementById('menuOverlay'),b=document.querySelector('.hamburger');
@@ -554,7 +555,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 window.addEventListener('scroll',()=>{
  window.scrollY>500?document.getElementById('scrollTop').classList.add('visible'):document.getElementById('scrollTop').classList.remove('visible');
 });
-
 
 const T={
  en:{
@@ -595,10 +595,38 @@ function setLang(l){
  }
 });
 
-
  
  }
 });
+</script>
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+ <div class="cookie-banner-text">
+ <strong>Cookie Notice</strong>
+ <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ </div>
+ <div class="cookie-banner-actions">
+ <button class="cookie-btn" onclick="declineCookies()">Decline</button>
+ <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+ </div>
+</div>
+<script>
+function acceptCookies(){
+ localStorage.setItem('rion_uk_cookies_accepted','1');
+ var b=document.getElementById('cookieBanner');
+ if(b) b.classList.remove('visible');
+ if(window._loadGA) window._loadGA();
+}
+function declineCookies(){
+ localStorage.setItem('rion_uk_cookies_accepted','0');
+ var b=document.getElementById('cookieBanner');
+ if(b) b.classList.remove('visible');
+}
+(function(){
+ var c=localStorage.getItem('rion_uk_cookies_accepted');
+ if(c==='1'||c==='0') return;
+ setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('visible');},1800);
+})();
 </script>
 </body>
 </html>
