@@ -730,5 +730,19 @@ setTimeout(function(){
  });
 },0);
 </script>
+<script>
+/* GA4 event tracking */
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href]');
+  if(!a||!window.gtag)return;
+  var h=a.getAttribute('href')||'';
+  if(h.indexOf('wa.me')!==-1){
+    gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
+    gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
+  }
+});
+</script>
 </body>
 </html>
