@@ -40,7 +40,9 @@ def read_excel_prices(xlsx_path):
     wb = load_workbook(xlsx_path, data_only=True)
     ws = wb['価格編集']
     new_prices = {s: {} for s in BRANCHES}
-    site_cols = {'UAE':4,'US':5,'UK':6,'CA':7,'NL':8,'CH':9,'AU':10}  # col index (1-based)
+    # New layout: 4 fixed cols + 2 cols per site (local price, JPY)
+    # Site price cols: UAE=5, US=7, UK=9, CA=11, NL=13, CH=15, AU=17
+    site_cols = {'UAE':5,'US':7,'UK':9,'CA':11,'NL':13,'CH':15,'AU':17}  # col index (1-based)
     for row in ws.iter_rows(min_row=5, values_only=True):
         code = row[0]
         if not code or code not in ALL_CODES:
