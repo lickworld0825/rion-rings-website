@@ -412,6 +412,7 @@ footer{padding-bottom:7rem!important}.nav-cta{display:none}
 @media(max-width:768px){.scroll-top{display:none!important}}
 </style>
 <link rel="preload" as="image" href="images/hero/04.jpg" fetchpriority="high">
+<style>.cookie-banner{display:none!important}</style>
 </head>
 <body class="lang-en">
 
@@ -1360,7 +1361,7 @@ window.gtag = function(){dataLayer.push(arguments)};
   gtag('js', new Date());
   gtag('config', GA_ID);
  };
- if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadGA();
+ window._loadGA();
 })();
 </script>
 
@@ -1377,7 +1378,7 @@ window._loadPixel = function(){
  fbq('init','52510464599807');
  fbq('track','PageView');
 };
-if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadPixel();
+window._loadPixel();
 </script>
 <!-- Microsoft Clarity (consent-gated) -->
 <script>
@@ -1390,7 +1391,7 @@ window._loadClarity = function(){
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window,document,"clarity","script","x7pgzlnipy");
 };
-if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadClarity();
+window._loadClarity();
 </script>
 
 <script>

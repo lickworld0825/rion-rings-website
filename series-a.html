@@ -260,6 +260,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
 }
 @media(max-width:768px){.scroll-top{display:none!important}}
 </style>
+<style>.cookie-banner{display:none!important}</style>
 </head>
 <body class="lang-en">
 
@@ -892,7 +893,7 @@ window.gtag = function(){dataLayer.push(arguments)};
   gtag('js', new Date());
   gtag('config', GA_ID);
  };
- if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadGA();
+ window._loadGA();
 })();
 </script>
 
@@ -909,7 +910,7 @@ window._loadPixel = function(){
  fbq('init','52510464599807');
  fbq('track','PageView');
 };
-if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadPixel();
+window._loadPixel();
 </script>
 <!-- Microsoft Clarity (consent-gated) -->
 <script>
@@ -922,7 +923,7 @@ window._loadClarity = function(){
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window,document,"clarity","script","x7pgzlnipy");
 };
-if(localStorage.getItem('rion_cookies_accepted') === '1') window._loadClarity();
+window._loadClarity();
 </script>
 
 <!-- COOKIE BANNER -->
