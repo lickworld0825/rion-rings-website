@@ -233,7 +233,7 @@ window.gtag = function(){dataLayer.push(arguments)};
   gtag('js', new Date());
   gtag('config', GA_ID);
  };
- if(localStorage.getItem('rion_au_cookies_accepted') === '1') window._loadGA();
+ window._loadGA();
 })();
 </script>
 <!-- Microsoft Clarity (consent-gated) -->
@@ -247,8 +247,9 @@ window._loadClarity = function(){
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window,document,"clarity","script","x7pkk0xfl8");
 };
-if(localStorage.getItem('rion_au_cookies_accepted') === '1') window._loadClarity();
+window._loadClarity();
 </script>
+<style>.cookie-banner{display:none!important}</style>
 </head>
 <body>
 <nav>
