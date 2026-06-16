@@ -401,6 +401,19 @@ window.gtag = function(){dataLayer.push(arguments)};
  if(localStorage.getItem('rion_us_cookies_accepted') === '1') window._loadGA();
 })();
 </script>
+<!-- Microsoft Clarity (consent-gated) -->
+<script>
+window._loadClarity = function(){
+  if(window._clarityLoaded) return;
+  window._clarityLoaded = true;
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","x7pjav63uz");
+};
+if(localStorage.getItem('rion_us_cookies_accepted') === '1') window._loadClarity();
+</script>
 <link rel="preload" as="image" href="images/hero/04.jpg" fetchpriority="high">
 </head>
 <body>
@@ -987,6 +1000,7 @@ function acceptCookies(){
  var b=document.getElementById('cookieBanner');
  if(b) b.classList.remove('visible');
  if(window._loadGA) window._loadGA();
+ if(window._loadClarity) window._loadClarity();
 }
 function declineCookies(){
  localStorage.setItem('rion_us_cookies_accepted','0');
