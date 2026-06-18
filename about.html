@@ -225,6 +225,21 @@ window._loadClarity = function(){
 };
 if(localStorage.getItem('rion_us_cookies_accepted') === '1') window._loadClarity();
 </script>
+<!-- Meta Pixel (consent-gated) -->
+<script>
+window._loadPixel = function(){
+  if(window._pixelLoaded) return;
+  window._pixelLoaded = true;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','52514513521407');
+  fbq('track','PageView');
+};
+if(localStorage.getItem('rion_us_cookies_accepted') === '1') window._loadPixel();
+</script>
 </head>
 <body>
 
@@ -538,6 +553,7 @@ function acceptCookies(){
  if(b) b.classList.remove('visible');
  if(window._loadGA) window._loadGA();
  if(window._loadClarity) window._loadClarity();
+ if(window._loadPixel) window._loadPixel();
 }
 function declineCookies(){
  localStorage.setItem('rion_us_cookies_accepted','0');
