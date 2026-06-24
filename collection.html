@@ -306,12 +306,12 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 </head>
 <body>
 
-<div class="announce">Free Shipping to the UK &nbsp;·&nbsp; <span>No Import Duties · VAT Included</span> &nbsp;·&nbsp; <span>100% Handcrafted in Japan</span></div>
+<div class="announce" data-i18n="announce_bar">Free Shipping to the UK &nbsp;·&nbsp; <span>No Import Duties · VAT Included</span> &nbsp;·&nbsp; <span>100% Handcrafted in Japan</span></div>
 
 <nav>
  <a href="index.html" class="nav-logo">Rion</a>
  <div class="nav-right">
- <a href="https://wa.me/819054621246" class="nav-cta" target="_blank">Begin Your Order</a>
+ <a href="https://wa.me/819054621246" class="nav-cta" target="_blank" data-i18n="nav_cta">Begin Your Order</a>
  <div class="lang-switch">
  <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
  <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
@@ -331,7 +331,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <span class="trust-strip-dot">·</span>
  <span class="trust-strip-item"><span class="trust-strip-dot">◯</span> <span data-i18n="trust_made">Handcrafted in Japan</span></span>
  <span class="trust-strip-dot">·</span>
- <span class="trust-strip-item"><span class="trust-strip-dot">◇</span> All Prices in GBP</span>
+ <span class="trust-strip-item"><span class="trust-strip-dot">◇</span> <span data-i18n="trust_gbp">All Prices in GBP</span></span>
  <span class="trust-strip-dot">·</span>
  <span class="trust-strip-item"><span class="trust-strip-dot">◉</span> <span data-i18n="trust_cert">Authenticity Certificate Included</span></span>
 </div>
@@ -341,20 +341,20 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
  <div class="menu-inner">
  <div>
- <span class="menu-eyebrow">Navigation</span>
+ <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
  <nav class="menu-links">
- <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
- <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
- <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
- <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
- <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span>FAQ</span></a>
- <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span>Shipping &amp; <em>Returns</em></span></a>
- <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span>Contact</span></a>
+ <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
+ <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
+ <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_about">About <em>Rion</em></span></a>
+ <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
+ <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_faq">FAQ</span></a>
+ <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
+ <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_contact">Contact</span></a>
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 &nbsp;Message Us on WhatsApp</a>
+ <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_cta">💬 &nbsp;Message Us on WhatsApp</a>
  </div>
  </div>
 </div>
@@ -374,29 +374,29 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 
 <!-- FILTER BAR -->
 <div class="filter-bar">
- <span class="filter-label">Filter:</span>
+ <span class="filter-label" data-i18n="filter_label">Filter:</span>
  <button class="filter-btn active" onclick="filterSeries('all',event)" data-i18n="filter_all">All Series</button>
  <button class="filter-btn" onclick="filterSeries('ring',event)" data-i18n="filter_ring">Rings</button>
  <button class="filter-btn" onclick="filterSeries('necklace',event)" data-i18n="filter_necklace">Necklaces</button>
- <button class="filter-btn" onclick="filterSeries('A',event)">Series A</button>
- <button class="filter-btn" onclick="filterSeries('B',event)">Series B</button>
- <button class="filter-btn" onclick="filterSeries('C',event)">Series C</button>
- <button class="filter-btn" onclick="filterSeries('D',event)">Series D</button>
- <button class="filter-btn" onclick="filterSeries('F',event)">Series F</button>
- <button class="filter-btn" onclick="filterSeries('G',event)">Series G</button>
- <button class="filter-btn" onclick="filterSeries('H',event)">Series H</button>
- <button class="filter-btn" onclick="filterSeries('J',event)">Series J</button>
+ <button class="filter-btn" onclick="filterSeries('A',event)" data-i18n="filter_series_a">Series A</button>
+ <button class="filter-btn" onclick="filterSeries('B',event)" data-i18n="filter_series_b">Series B</button>
+ <button class="filter-btn" onclick="filterSeries('C',event)" data-i18n="filter_series_c">Series C</button>
+ <button class="filter-btn" onclick="filterSeries('D',event)" data-i18n="filter_series_d">Series D</button>
+ <button class="filter-btn" onclick="filterSeries('F',event)" data-i18n="filter_series_f">Series F</button>
+ <button class="filter-btn" onclick="filterSeries('G',event)" data-i18n="filter_series_g">Series G</button>
+ <button class="filter-btn" onclick="filterSeries('H',event)" data-i18n="filter_series_h">Series H</button>
+ <button class="filter-btn" onclick="filterSeries('J',event)" data-i18n="filter_series_j">Series J</button>
 </div>
 
 <!-- SERIES A -->
 <section class="series-section" id="series-a" data-series="A" data-type="ring">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series A</p>
- <h2 class="series-name">The <em>Classic</em> Ring</h2>
- <p class="series-desc">A timeless band with a sealed inner chamber — the most chosen design in the collection. A small hole is drilled into the K18 gold or platinum band, your hair is placed inside, and sealed with the same precious metal, completely airtight. Elegant, substantial, built to be worn every day for a lifetime.</p>
+ <p class="series-eyebrow" data-i18n="series_a_eyebrow">Series A</p>
+ <h2 class="series-name" data-i18n="series_a_name">The <em>Classic</em> Ring</h2>
+ <p class="series-desc" data-i18n="series_a_desc">A timeless band with a sealed inner chamber — the most chosen design in the collection. A small hole is drilled into the K18 gold or platinum band, your hair is placed inside, and sealed with the same precious metal, completely airtight. Elegant, substantial, built to be worn every day for a lifetime.</p>
  </div>
- <span class="series-type">Ring</span>
+ <span class="series-type" data-i18n="series_a_type">Ring</span>
  </div>
 
  <div class="product-grid">
@@ -431,7 +431,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <img src="images/series-a/a4.jpg" alt="A-4 Platinum Classic Ring" loading="lazy">
  <div class="product-info">
  <p class="product-code">A-4</p>
- <p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p>
+ <p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p>
  <p class="product-price-tag">£4,000</p>
  <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
  </div>
@@ -439,36 +439,36 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series A — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
+ <p class="price-table-label" data-i18n="series_a_table_label">Series A — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
  <table class="price-table">
  <thead>
  <tr>
- <th>Code</th>
- <th>Material</th>
- <th>Price (GBP) · All-Inclusive</th>
- <th>Delivery</th>
+ <th data-i18n="th_code">Code</th>
+ <th data-i18n="th_material">Material</th>
+ <th data-i18n="th_price">Price (GBP) · All-Inclusive</th>
+ <th data-i18n="th_delivery">Delivery</th>
  </tr>
  </thead>
  <tbody>
- <tr><td>A-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£4,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>A-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£4,300</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>A-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£4,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>A-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-local">£4,000</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>A-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£4,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>A-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£4,300</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>A-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£4,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>A-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span> <span class="material-tag" data-i18n="tag_most_popular">Most Popular</span></td><td><span class="price-local">£4,000</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
 
  <div class="addons-bar">
  <div class="addon-item">
- <span class="addon-label">Engraving (optional)</span>
+ <span class="addon-label" data-i18n="addon_engraving_label">Engraving (optional)</span>
  <span class="addon-value">£51</span>
- <span class="addon-note">Up to 10 characters · +£6 per additional character</span>
+ <span class="addon-note" data-i18n="addon_engraving_note">Up to 10 characters · +£6 per additional character</span>
  </div>
  </div>
 
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
- <span class="cta-note">We will confirm your design, ring size, and send your invoice in GBP.</span>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <span class="cta-note" data-i18n="series_a_cta_note">We will confirm your design, ring size, and send your invoice in GBP.</span>
  </div>
 </section>
 
@@ -476,11 +476,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-b" data-series="B" data-type="necklace" style="background:#F7F3EC">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series B</p>
- <h2 class="series-name">The <em>Bar</em> Pendant</h2>
- <p class="series-desc">A sleek vertical bar of solid gold, suspended from a refined round-link chain. The hair strand is sealed within the bar — hidden from the world, close to your heart. Worn against the chest, always with you. Chain length is fully customizable to your preference.</p>
+ <p class="series-eyebrow" data-i18n="series_b_eyebrow">Series B</p>
+ <h2 class="series-name" data-i18n="series_b_name">The <em>Bar</em> Pendant</h2>
+ <p class="series-desc" data-i18n="series_b_desc">A sleek vertical bar of solid gold, suspended from a refined round-link chain. The hair strand is sealed within the bar — hidden from the world, close to your heart. Worn against the chest, always with you. Chain length is fully customizable to your preference.</p>
  </div>
- <span class="series-type">Necklace</span>
+ <span class="series-type" data-i18n="series_b_type">Necklace</span>
  </div>
 
  <div class="product-grid">
@@ -494,29 +494,29 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=B-3">
  <img src="images/series-b/b3.jpg" alt="B-3 Pink Gold Bar Pendant" loading="lazy">
- <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">B-3</p><p class="product-material" data-i18n="mat_pgold_pop">K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  <a class="product-card" href="product.html?code=B-4">
  <img src="images/series-b/b4.jpg" alt="B-4 Platinum Bar Pendant" loading="lazy">
- <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">B-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series B — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
+ <p class="price-table-label" data-i18n="series_b_table_label">Series B — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>B-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>B-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£5,500</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>B-3</td><td><span class="material-name">K18 Pink Gold</span> <span class="material-tag">Most Popular</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>B-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-local">£4,700</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>B-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>B-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£5,500</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>B-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span> <span class="material-tag" data-i18n="tag_most_popular">Most Popular</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>B-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span></td><td><span class="price-local">£4,700</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20B%20(The%20Bar%20Pendant).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
- <span class="cta-note">We will confirm your design, chain length, and send your invoice in GBP.</span>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20B%20(The%20Bar%20Pendant).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <span class="cta-note" data-i18n="series_b_cta_note">We will confirm your design, chain length, and send your invoice in GBP.</span>
  </div>
 </section>
 
@@ -524,11 +524,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-c" data-series="C" data-type="ring">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series C</p>
- <h2 class="series-name">The <em>Birthstone</em> Ring</h2>
- <p class="series-desc">A ring with a sealed hair chamber and two birthstones of your choice — diamond, ruby, sapphire, emerald, and more. Perfect for commemorating a birth date, a person, or a milestone. The stones mark what words cannot. Two birthstones included in the listed price.</p>
+ <p class="series-eyebrow" data-i18n="series_c_eyebrow">Series C</p>
+ <h2 class="series-name" data-i18n="series_c_name">The <em>Birthstone</em> Ring</h2>
+ <p class="series-desc" data-i18n="series_c_desc">A ring with a sealed hair chamber and two birthstones of your choice — diamond, ruby, sapphire, emerald, and more. Perfect for commemorating a birth date, a person, or a milestone. The stones mark what words cannot. Two birthstones included in the listed price.</p>
  </div>
- <span class="series-type">Ring · 2 Birthstones</span>
+ <span class="series-type" data-i18n="series_c_type">Ring · 2 Birthstones</span>
  </div>
 
  <div class="product-grid">
@@ -546,26 +546,26 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=C-4">
  <img src="images/series-c/c4.jpg" alt="C-4 Platinum Birthstone Ring" loading="lazy">
- <div class="product-info"><p class="product-code">C-4</p><p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,300</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">C-4</p><p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,300</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series C — Price by Material (2 birthstones included · GBP · Free UK Shipping)</p>
+ <p class="price-table-label" data-i18n="series_c_table_label">Series C — Price by Material (2 birthstones included · GBP · Free UK Shipping)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>C-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>C-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£5,500</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>C-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>C-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>C-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>C-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£5,500</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>C-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>C-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span> <span class="material-tag" data-i18n="tag_most_popular">Most Popular</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
- <div class="special-note">✦ <strong>Birthstones:</strong> Choose any 2 from diamond, ruby, sapphire, emerald, amethyst, aquamarine, garnet, peridot, topaz, tourmaline, citrine, or tanzanite. Additional birthstones available at £20 per stone. Tell us your selection when you reach out.</div>
+ <div class="special-note" data-i18n="series_c_special_note">✦ <strong>Birthstones:</strong> Choose any 2 from diamond, ruby, sapphire, emerald, amethyst, aquamarine, garnet, peridot, topaz, tourmaline, citrine, or tanzanite. Additional birthstones available at £20 per stone. Tell us your selection when you reach out.</div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20C%20(The%20Birthstone%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
- <span class="cta-note">Tell us your 2 birthstone choices when you reach out.</span>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20C%20(The%20Birthstone%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <span class="cta-note" data-i18n="series_c_cta_note">Tell us your 2 birthstone choices when you reach out.</span>
  </div>
 </section>
 
@@ -573,11 +573,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-d" data-series="D" data-type="ring" style="background:#F7F3EC">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series D</p>
- <h2 class="series-name">The <em>Half Eternity</em> Ring</h2>
- <p class="series-desc">A half eternity ring set with conflict-free diamonds bezel-set in structured square frames across the band, with a sealed inner chamber for hair. Exceptional brilliance — structured, luminous, eternal. A statement of love that will never fade.</p>
+ <p class="series-eyebrow" data-i18n="series_d_eyebrow">Series D</p>
+ <h2 class="series-name" data-i18n="series_d_name">The <em>Half Eternity</em> Ring</h2>
+ <p class="series-desc" data-i18n="series_d_desc">A half eternity ring set with conflict-free diamonds bezel-set in structured square frames across the band, with a sealed inner chamber for hair. Exceptional brilliance — structured, luminous, eternal. A statement of love that will never fade.</p>
  </div>
- <span class="series-type">Ring · Diamond Band</span>
+ <span class="series-type" data-i18n="series_d_type">Ring · Diamond Band</span>
  </div>
 
  <div class="product-grid">
@@ -595,25 +595,25 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=D-4">
  <img src="images/series-d/d4.jpg" alt="D-4 Platinum Half Eternity" loading="lazy">
- <div class="product-info"><p class="product-code">D-4</p><p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£5,800</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">D-4</p><p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£5,800</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series D — Price by Material (conflict-free diamonds included · GBP · Free UK Shipping)</p>
+ <p class="price-table-label" data-i18n="series_d_table_label">Series D — Price by Material (conflict-free diamonds included · GBP · Free UK Shipping)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>D-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£6,200</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>D-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£6,600</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>D-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£6,200</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>D-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-local">£6,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>D-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£6,200</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>D-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£6,600</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>D-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£6,200</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>D-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span> <span class="material-tag" data-i18n="tag_most_popular">Most Popular</span></td><td><span class="price-local">£6,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20D%20(The%20Half%20Eternity%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
- <span class="cta-note">All diamonds are conflict-free, sourced entirely within Japan.</span>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20D%20(The%20Half%20Eternity%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <span class="cta-note" data-i18n="series_d_cta_note">All diamonds are conflict-free, sourced entirely within Japan.</span>
  </div>
 </section>
 
@@ -621,11 +621,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-f" data-series="F" data-type="ring">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series F</p>
- <h2 class="series-name">The <em>Chevron</em> Ring</h2>
- <p class="series-desc">A V-shaped half eternity ring, pavé-set with stones along the full curve of the front. Graceful and luminous — the chevron form brings light and movement to every gesture. A piece that catches the eye and holds the heart, quietly and forever.</p>
+ <p class="series-eyebrow" data-i18n="series_f_eyebrow">Series F</p>
+ <h2 class="series-name" data-i18n="series_f_name">The <em>Chevron</em> Ring</h2>
+ <p class="series-desc" data-i18n="series_f_desc">A V-shaped half eternity ring, pavé-set with stones along the full curve of the front. Graceful and luminous — the chevron form brings light and movement to every gesture. A piece that catches the eye and holds the heart, quietly and forever.</p>
  </div>
- <span class="series-type">Ring</span>
+ <span class="series-type" data-i18n="series_f_type">Ring</span>
  </div>
 
  <div class="product-grid">
@@ -643,24 +643,24 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=F-4">
  <img src="images/series-f/f4.jpg" alt="F-4 Platinum Chevron Ring" loading="lazy">
- <div class="product-info"><p class="product-code">F-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">£5,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">F-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£5,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series F — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
+ <p class="price-table-label" data-i18n="series_f_table_label">Series F — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>F-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£5,800</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>F-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£6,000</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>F-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£5,800</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>F-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-local">£5,400</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>F-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£5,800</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>F-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£6,000</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>F-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£5,800</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>F-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span></td><td><span class="price-local">£5,400</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20F%20(The%20Chevron%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20F%20(The%20Chevron%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
  </div>
 </section>
 
@@ -668,11 +668,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-g" data-series="G" data-type="ring" style="background:#F7F3EC">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series G</p>
- <h2 class="series-name">The <em>Milgrain</em> Band</h2>
- <p class="series-desc">A flat polished band edged with hand-applied milgrain — a centuries-old goldsmithing technique involving tiny beaded detail pressed by hand along each edge. Quiet in presence, extraordinary in craft. This is a ring built to endure, to be passed down, to outlast all of us.</p>
+ <p class="series-eyebrow" data-i18n="series_g_eyebrow">Series G</p>
+ <h2 class="series-name" data-i18n="series_g_name">The <em>Milgrain</em> Band</h2>
+ <p class="series-desc" data-i18n="series_g_desc">A flat polished band edged with hand-applied milgrain — a centuries-old goldsmithing technique involving tiny beaded detail pressed by hand along each edge. Quiet in presence, extraordinary in craft. This is a ring built to endure, to be passed down, to outlast all of us.</p>
  </div>
- <span class="series-type">Ring</span>
+ <span class="series-type" data-i18n="series_g_type">Ring</span>
  </div>
 
  <div class="product-grid">
@@ -690,24 +690,24 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=G-4">
  <img src="images/series-g/g4.jpg" alt="G-4 Platinum Milgrain Band" loading="lazy">
- <div class="product-info"><p class="product-code">G-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">G-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series G — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
+ <p class="price-table-label" data-i18n="series_g_table_label">Series G — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>G-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>G-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>G-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>G-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-local">£4,700</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>G-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>G-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>G-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>G-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span></td><td><span class="price-local">£4,700</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20G%20(The%20Milgrain%20Band).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20G%20(The%20Milgrain%20Band).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
  </div>
 </section>
 
@@ -715,11 +715,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-h" data-series="H" data-type="ring">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series H</p>
- <h2 class="series-name">The <em>Flow</em> Ring</h2>
- <p class="series-desc">Two gold curves meet at a single point, where five diamonds are set in an elongated cluster. A form that suggests movement and connection — two lives flowing into one. For those who want their love to be felt in every gesture of the hand.</p>
+ <p class="series-eyebrow" data-i18n="series_h_eyebrow">Series H</p>
+ <h2 class="series-name" data-i18n="series_h_name">The <em>Flow</em> Ring</h2>
+ <p class="series-desc" data-i18n="series_h_desc">Two gold curves meet at a single point, where five diamonds are set in an elongated cluster. A form that suggests movement and connection — two lives flowing into one. For those who want their love to be felt in every gesture of the hand.</p>
  </div>
- <span class="series-type">Ring</span>
+ <span class="series-type" data-i18n="series_h_type">Ring</span>
  </div>
 
  <div class="product-grid">
@@ -737,24 +737,24 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=H-4">
  <img src="images/series-h/h4.jpg" alt="H-4 Platinum Flow Ring" loading="lazy">
- <div class="product-info"><p class="product-code">H-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">H-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series H — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
+ <p class="price-table-label" data-i18n="series_h_table_label">Series H — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>H-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>H-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£5,300</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>H-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>H-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>H-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>H-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£5,300</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>H-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£5,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>H-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span></td><td><span class="price-local">£4,900</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20H%20(The%20Flow%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20H%20(The%20Flow%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
  </div>
 </section>
 
@@ -762,11 +762,11 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <section class="series-section" id="series-j" data-series="J" data-type="ring" style="background:#F7F3EC">
  <div class="series-header">
  <div class="series-title-block">
- <p class="series-eyebrow">Series J</p>
- <h2 class="series-name">The <em>Statement</em> Ring</h2>
- <p class="series-desc">Two ribbons of gold, interwoven and set with diamonds along one strand. Bold in form, intimate in meaning. Our most expressive design — for those whose love is a force that commands presence in every room. Wear your story with power.</p>
+ <p class="series-eyebrow" data-i18n="series_j_eyebrow">Series J</p>
+ <h2 class="series-name" data-i18n="series_j_name">The <em>Statement</em> Ring</h2>
+ <p class="series-desc" data-i18n="series_j_desc">Two ribbons of gold, interwoven and set with diamonds along one strand. Bold in form, intimate in meaning. Our most expressive design — for those whose love is a force that commands presence in every room. Wear your story with power.</p>
  </div>
- <span class="series-type">Ring · Statement</span>
+ <span class="series-type" data-i18n="series_j_type">Ring · Statement</span>
  </div>
 
  <div class="product-grid">
@@ -784,24 +784,24 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </a>
  <a class="product-card" href="product.html?code=J-4">
  <img src="images/series-j/j4.jpg" alt="J-4 Platinum Statement Ring" loading="lazy">
- <div class="product-info"><p class="product-code">J-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">J-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
  </a>
  </div>
 
  <div class="price-table-wrap">
- <p class="price-table-label">Series J — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
+ <p class="price-table-label" data-i18n="series_j_table_label">Series J — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)</p>
  <table class="price-table">
- <thead><tr><th>Code</th><th>Material</th><th>Price (GBP) · All-Inclusive</th><th>Delivery</th></tr></thead>
+ <thead><tr><th data-i18n="th_code">Code</th><th data-i18n="th_material">Material</th><th data-i18n="th_price">Price (GBP) · All-Inclusive</th><th data-i18n="th_delivery">Delivery</th></tr></thead>
  <tbody>
- <tr><td>J-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-local">£6,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>J-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-local">£6,300</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>J-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-local">£6,100</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
- <tr><td>J-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-local">£5,800</span></td><td><span class="price-note">Approx. 5.5 months</span></td></tr>
+ <tr><td>J-1</td><td><span class="material-name" data-i18n="mat_ygold">K18 Yellow Gold</span></td><td><span class="price-local">£6,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>J-2</td><td><span class="material-name" data-i18n="mat_wgold">K18 White Gold</span></td><td><span class="price-local">£6,300</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>J-3</td><td><span class="material-name" data-i18n="mat_pgold">K18 Pink Gold</span></td><td><span class="price-local">£6,100</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
+ <tr><td>J-4</td><td><span class="material-name" data-i18n="mat_plat">Platinum Pt900</span></td><td><span class="price-local">£5,800</span></td><td><span class="price-note" data-i18n="delivery_approx">Approx. 5.5 months</span></td></tr>
  </tbody>
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20J%20(The%20Statement%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20J%20(The%20Statement%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
  </div>
 </section>
 
@@ -810,30 +810,30 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="bespoke-inner">
  <div class="bespoke-text">
  <h2 data-i18n="bespoke_h2">Fully <em>Bespoke</em><br>Commission</h2>
- <p>None of the above feels quite right for your story? We create entirely original designs — conceived from your vision, built by our master artisans in Japan. No templates. No constraints. Just your love, expressed in gold, in a form that has never existed before and never will again.</p>
- <p>Many of our most meaningful pieces are bespoke commissions — created for families who needed something that only they could imagine. We will guide you from the first conversation to the final jewel.</p>
+ <p data-i18n="bespoke_p1">None of the above feels quite right for your story? We create entirely original designs — conceived from your vision, built by our master artisans in Japan. No templates. No constraints. Just your love, expressed in gold, in a form that has never existed before and never will again.</p>
+ <p data-i18n="bespoke_p2">Many of our most meaningful pieces are bespoke commissions — created for families who needed something that only they could imagine. We will guide you from the first conversation to the final jewel.</p>
  <div class="bespoke-features">
  <div class="bespoke-feat">
- <h4>Original Design</h4>
- <p>Created entirely from scratch with our artisans. Unlimited forms, fully original. Your vision, realized in gold.</p>
+ <h4 data-i18n="bespoke_feat1_h">Original Design</h4>
+ <p data-i18n="bespoke_feat1_p">Created entirely from scratch with our artisans. Unlimited forms, fully original. Your vision, realized in gold.</p>
  </div>
  <div class="bespoke-feat">
- <h4>Precious Materials</h4>
- <p>K18 Gold, Platinum, Diamonds, Rubies, Sapphires, Emeralds — any combination. All sourced in Japan.</p>
+ <h4 data-i18n="bespoke_feat2_h">Precious Materials</h4>
+ <p data-i18n="bespoke_feat2_p">K18 Gold, Platinum, Diamonds, Rubies, Sapphires, Emeralds — any combination. All sourced in Japan.</p>
  </div>
  <div class="bespoke-feat">
- <h4>Multiple Hairs</h4>
- <p>Seal hair from multiple loved ones — family members, pets — in a single jewel. Every story honored together.</p>
+ <h4 data-i18n="bespoke_feat3_h">Multiple Hairs</h4>
+ <p data-i18n="bespoke_feat3_p">Seal hair from multiple loved ones — family members, pets — in a single jewel. Every story honored together.</p>
  </div>
  <div class="bespoke-feat">
- <h4>Timeline</h4>
- <p>Approximately 6 months. We update you at every stage with photos and updates — you are never left wondering.</p>
+ <h4 data-i18n="bespoke_feat4_h">Timeline</h4>
+ <p data-i18n="bespoke_feat4_p">Approximately 6 months. We update you at every stage with photos and updates — you are never left wondering.</p>
  </div>
  </div>
  <div class="bespoke-price">From £15,800</div>
- <div class="bespoke-price-note">Free insured shipping to the UK · No import duties · Price depends on design complexity &amp; materials chosen</div>
+ <div class="bespoke-price-note" data-i18n="bespoke_price_note">Free insured shipping to the UK · No import duties · Price depends on design complexity &amp; materials chosen</div>
  <br><br>
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20begin%20a%20fully%20bespoke%20commission.%20Please%20tell%20me%20about%20the%20process%20and%20what%27s%20possible." class="btn-enquire" target="_blank">💬 Begin Your Bespoke Journey</a>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20begin%20a%20fully%20bespoke%20commission.%20Please%20tell%20me%20about%20the%20process%20and%20what%27s%20possible." class="btn-enquire" target="_blank" data-i18n="bespoke_cta">💬 Begin Your Bespoke Journey</a>
  </div>
  <div class="bespoke-img">
  <img src="images/bespoke/main.jpg" alt="Bespoke Jewellery Craftsmanship — Japan" loading="lazy">
@@ -846,41 +846,41 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="footer-grid">
  <div class="footer-col footer-brand">
  <a href="index.html" class="footer-logo">Rion</a>
- <p>Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across the United Kingdom.</p>
- <p class="footer-est">Est. 2018 · Japan · Serving the UK</p>
+ <p data-i18n="footer_brand_desc">Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across the United Kingdom.</p>
+ <p class="footer-est" data-i18n="footer_est">Est. 2018 · Japan · Serving the UK</p>
  </div>
  <div class="footer-col">
- <h5>Explore</h5>
+ <h5 data-i18n="footer_h_explore">Explore</h5>
  <ul>
- <li><a href="index.html">Home</a></li>
- <li><a href="collection.html">Collection</a></li>
- <li><a href="about.html">About Rion</a></li>
- <li><a href="order.html">How to Order</a></li>
- <li><a href="index.html#voices">Stories</a></li>
+ <li><a href="index.html" data-i18n="footer_link_home">Home</a></li>
+ <li><a href="collection.html" data-i18n="footer_link_collection">Collection</a></li>
+ <li><a href="about.html" data-i18n="footer_link_about">About Rion</a></li>
+ <li><a href="order.html" data-i18n="footer_link_order">How to Order</a></li>
+ <li><a href="index.html#voices" data-i18n="footer_link_stories">Stories</a></li>
  </ul>
  </div>
  <div class="footer-col">
- <h5>Help</h5>
+ <h5 data-i18n="footer_h_help">Help</h5>
  <ul>
- <li><a href="faq.html">FAQ</a></li>
- <li><a href="care.html">Care Guide</a></li>
- <li><a href="shipping.html">Shipping &amp; Returns</a></li>
- <li><a href="legal.html">Legal &amp; Privacy</a></li>
- <li><a href="index.html#contact">Contact</a></li>
+ <li><a href="faq.html" data-i18n="footer_link_faq">FAQ</a></li>
+ <li><a href="care.html" data-i18n="footer_link_care">Care Guide</a></li>
+ <li><a href="shipping.html" data-i18n="footer_link_shipping">Shipping &amp; Returns</a></li>
+ <li><a href="legal.html" data-i18n="footer_link_legal">Legal &amp; Privacy</a></li>
+ <li><a href="index.html#contact" data-i18n="footer_link_contact">Contact</a></li>
  </ul>
  </div>
  <div class="footer-col">
- <h5>Connect</h5>
+ <h5 data-i18n="footer_h_connect">Connect</h5>
  <div class="footer-social">
- <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">◐</span>WhatsApp</a>
- <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
- <a href="mailto:info@art-rings.com"><span class="footer-social-ico">✉</span>Send Enquiry</a>
+ <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">◐</span><span data-i18n="footer_social_wa">WhatsApp</span></a>
+ <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span><span data-i18n="footer_social_ig">Instagram</span></a>
+ <a href="mailto:info@art-rings.com"><span class="footer-social-ico">✉</span><span data-i18n="footer_social_email">Send Enquiry</span></a>
  </div>
  </div>
  </div>
  <div class="footer-bottom">
- <div class="footer-copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the UK · No import duties · All prices in GBP</div>
- <div class="footer-right">Est. 2018 · Japan · United Kingdom</div>
+ <div class="footer-copy" data-i18n="footer_copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the UK · No import duties · All prices in GBP</div>
+ <div class="footer-right" data-i18n="footer_right">Est. 2018 · Japan · United Kingdom</div>
  </div>
 </footer>
 
@@ -888,22 +888,22 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 
 <!-- STICKY BAR -->
 <div class="sticky-bar" id="stickyBar">
- <div class="sticky-text"><strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From £4,000 · Free UK shipping · No import duties</div>
+ <div class="sticky-text" data-i18n="sticky_text"><strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From £4,000 · Free UK shipping · No import duties</div>
  <div class="sticky-ctas">
- <a href="https://wa.me/819054621246" class="s-wa" target="_blank">💬 WhatsApp</a>
- <a href="index.html" class="s-back">← Back to Home</a>
+ <a href="https://wa.me/819054621246" class="s-wa" target="_blank" data-i18n="sticky_wa">💬 WhatsApp</a>
+ <a href="index.html" class="s-back" data-i18n="sticky_back">← Back to Home</a>
  </div>
 </div>
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
- <strong>Cookie Notice</strong>
- <span>This site uses only essential analytics cookies. We do not use advertising or tracking cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <strong data-i18n="cookie_title">Cookie Notice</strong>
+ <span data-i18n="cookie_body">This site uses only essential analytics cookies. We do not use advertising or tracking cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
- <button class="cookie-btn" onclick="declineCookies()">Decline</button>
- <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+ <button class="cookie-btn" onclick="declineCookies()" data-i18n="cookie_decline">Decline</button>
+ <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()" data-i18n="cookie_accept">Accept</button>
  </div>
 </div>
 
@@ -972,7 +972,125 @@ const T = {
  mat_wgold: 'K18 White Gold',
  mat_pgold: 'K18 Pink Gold',
  enquire_wa: 'Enquire via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> →',
- bespoke_h2: 'Fully <em>Bespoke</em><br>Commission'
+ bespoke_h2: 'Fully <em>Bespoke</em><br>Commission',
+ trust_gbp: 'All Prices in GBP',
+ announce_bar: 'Free Shipping to the UK &nbsp;·&nbsp; <span>No Import Duties · VAT Included</span> &nbsp;·&nbsp; <span>100% Handcrafted in Japan</span>',
+ nav_cta: 'Begin Your Order',
+ menu_eyebrow: 'Navigation',
+ menu_home: 'Home',
+ menu_collection: 'Collection',
+ menu_about: 'About <em>Rion</em>',
+ menu_order: 'How to <em>Order</em>',
+ menu_faq: 'FAQ',
+ menu_shipping: 'Shipping &amp; <em>Returns</em>',
+ menu_care: 'Care <em>Guide</em>',
+ menu_contact: 'Contact',
+ menu_cta: '💬 &nbsp;Message Us on WhatsApp',
+ filter_label: 'Filter:',
+ filter_series_a: 'Series A',
+ filter_series_b: 'Series B',
+ filter_series_c: 'Series C',
+ filter_series_d: 'Series D',
+ filter_series_f: 'Series F',
+ filter_series_g: 'Series G',
+ filter_series_h: 'Series H',
+ filter_series_j: 'Series J',
+ series_a_eyebrow: 'Series A',
+ series_a_name: 'The <em>Classic</em> Ring',
+ series_a_desc: 'A timeless band with a sealed inner chamber — the most chosen design in the collection. A small hole is drilled into the K18 gold or platinum band, your hair is placed inside, and sealed with the same precious metal, completely airtight. Elegant, substantial, built to be worn every day for a lifetime.',
+ series_a_type: 'Ring',
+ mat_plat_pop: 'Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span>',
+ series_a_table_label: 'Series A — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)',
+ th_code: 'Code',
+ th_material: 'Material',
+ th_price: 'Price (GBP) · All-Inclusive',
+ th_delivery: 'Delivery',
+ addon_engraving_label: 'Engraving (optional)',
+ addon_engraving_note: 'Up to 10 characters · +£6 per additional character',
+ btn_enquire_wa: '💬 Enquire via WhatsApp',
+ series_a_cta_note: 'We will confirm your design, ring size, and send your invoice in GBP.',
+ series_b_eyebrow: 'Series B',
+ series_b_name: 'The <em>Bar</em> Pendant',
+ series_b_desc: 'A sleek vertical bar of solid gold, suspended from a refined round-link chain. The hair strand is sealed within the bar — hidden from the world, close to your heart. Worn against the chest, always with you. Chain length is fully customizable to your preference.',
+ series_b_type: 'Necklace',
+ mat_pgold_pop: 'K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span>',
+ mat_plat: 'Platinum Pt900',
+ series_b_table_label: 'Series B — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)',
+ series_b_cta_note: 'We will confirm your design, chain length, and send your invoice in GBP.',
+ series_c_eyebrow: 'Series C',
+ series_c_name: 'The <em>Birthstone</em> Ring',
+ series_c_desc: 'A ring with a sealed hair chamber and two birthstones of your choice — diamond, ruby, sapphire, emerald, and more. Perfect for commemorating a birth date, a person, or a milestone. The stones mark what words cannot. Two birthstones included in the listed price.',
+ series_c_type: 'Ring · 2 Birthstones',
+ series_c_table_label: 'Series C — Price by Material (2 birthstones included · GBP · Free UK Shipping)',
+ series_c_special_note: '✦ <strong>Birthstones:</strong> Choose any 2 from diamond, ruby, sapphire, emerald, amethyst, aquamarine, garnet, peridot, topaz, tourmaline, citrine, or tanzanite. Additional birthstones available at £20 per stone. Tell us your selection when you reach out.',
+ series_c_cta_note: 'Tell us your 2 birthstone choices when you reach out.',
+ series_d_eyebrow: 'Series D',
+ series_d_name: 'The <em>Half Eternity</em> Ring',
+ series_d_desc: 'A half eternity ring set with conflict-free diamonds bezel-set in structured square frames across the band, with a sealed inner chamber for hair. Exceptional brilliance — structured, luminous, eternal. A statement of love that will never fade.',
+ series_d_type: 'Ring · Diamond Band',
+ series_d_table_label: 'Series D — Price by Material (conflict-free diamonds included · GBP · Free UK Shipping)',
+ series_d_cta_note: 'All diamonds are conflict-free, sourced entirely within Japan.',
+ series_f_eyebrow: 'Series F',
+ series_f_name: 'The <em>Chevron</em> Ring',
+ series_f_desc: 'A V-shaped half eternity ring, pavé-set with stones along the full curve of the front. Graceful and luminous — the chevron form brings light and movement to every gesture. A piece that catches the eye and holds the heart, quietly and forever.',
+ series_f_type: 'Ring',
+ series_f_table_label: 'Series F — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)',
+ series_g_eyebrow: 'Series G',
+ series_g_name: 'The <em>Milgrain</em> Band',
+ series_g_desc: 'A flat polished band edged with hand-applied milgrain — a centuries-old goldsmithing technique involving tiny beaded detail pressed by hand along each edge. Quiet in presence, extraordinary in craft. This is a ring built to endure, to be passed down, to outlast all of us.',
+ series_g_type: 'Ring',
+ series_g_table_label: 'Series G — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)',
+ series_h_eyebrow: 'Series H',
+ series_h_name: 'The <em>Flow</em> Ring',
+ series_h_desc: 'Two gold curves meet at a single point, where five diamonds are set in an elongated cluster. A form that suggests movement and connection — two lives flowing into one. For those who want their love to be felt in every gesture of the hand.',
+ series_h_type: 'Ring',
+ series_h_table_label: 'Series H — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)',
+ series_j_eyebrow: 'Series J',
+ series_j_name: 'The <em>Statement</em> Ring',
+ series_j_desc: 'Two ribbons of gold, interwoven and set with diamonds along one strand. Bold in form, intimate in meaning. Our most expressive design — for those whose love is a force that commands presence in every room. Wear your story with power.',
+ series_j_type: 'Ring · Statement',
+ series_j_table_label: 'Series J — Price by Material (GBP · Free UK Shipping · No Import Duties · VAT Included)',
+ tag_most_popular: 'Most Popular',
+ delivery_approx: 'Approx. 5.5 months',
+ bespoke_p1: 'None of the above feels quite right for your story? We create entirely original designs — conceived from your vision, built by our master artisans in Japan. No templates. No constraints. Just your love, expressed in gold, in a form that has never existed before and never will again.',
+ bespoke_p2: 'Many of our most meaningful pieces are bespoke commissions — created for families who needed something that only they could imagine. We will guide you from the first conversation to the final jewel.',
+ bespoke_feat1_h: 'Original Design',
+ bespoke_feat1_p: 'Created entirely from scratch with our artisans. Unlimited forms, fully original. Your vision, realized in gold.',
+ bespoke_feat2_h: 'Precious Materials',
+ bespoke_feat2_p: 'K18 Gold, Platinum, Diamonds, Rubies, Sapphires, Emeralds — any combination. All sourced in Japan.',
+ bespoke_feat3_h: 'Multiple Hairs',
+ bespoke_feat3_p: 'Seal hair from multiple loved ones — family members, pets — in a single jewel. Every story honored together.',
+ bespoke_feat4_h: 'Timeline',
+ bespoke_feat4_p: 'Approximately 6 months. We update you at every stage with photos and updates — you are never left wondering.',
+ bespoke_price_note: 'Free insured shipping to the UK · No import duties · Price depends on design complexity &amp; materials chosen',
+ bespoke_cta: '💬 Begin Your Bespoke Journey',
+ footer_brand_desc: 'Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across the United Kingdom.',
+ footer_est: 'Est. 2018 · Japan · Serving the UK',
+ footer_h_explore: 'Explore',
+ footer_link_home: 'Home',
+ footer_link_collection: 'Collection',
+ footer_link_about: 'About Rion',
+ footer_link_order: 'How to Order',
+ footer_link_stories: 'Stories',
+ footer_h_help: 'Help',
+ footer_link_faq: 'FAQ',
+ footer_link_care: 'Care Guide',
+ footer_link_shipping: 'Shipping &amp; Returns',
+ footer_link_legal: 'Legal &amp; Privacy',
+ footer_link_contact: 'Contact',
+ footer_h_connect: 'Connect',
+ footer_social_wa: 'WhatsApp',
+ footer_social_ig: 'Instagram',
+ footer_social_email: 'Send Enquiry',
+ footer_copy: '© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the UK · No import duties · All prices in GBP',
+ footer_right: 'Est. 2018 · Japan · United Kingdom',
+ sticky_text: '<strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From £4,000 · Free UK shipping · No import duties',
+ sticky_wa: '💬 WhatsApp',
+ sticky_back: '← Back to Home',
+ cookie_title: 'Cookie Notice',
+ cookie_body: 'This site uses only essential analytics cookies. We do not use advertising or tracking cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.',
+ cookie_decline: 'Decline',
+ cookie_accept: 'Accept'
  },
  ja: {
  trust_ship: '英国へ無料配送',
@@ -989,7 +1107,125 @@ const T = {
  mat_wgold: 'K18ホワイトゴールド',
  mat_pgold: 'K18ピンクゴールド',
  enquire_wa: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でお問い合わせ →',
- bespoke_h2: 'フルオーダー<br><em>ビスポーク</em>'
+ bespoke_h2: 'フルオーダー<br><em>ビスポーク</em>',
+ trust_gbp: '価格はすべてGBP表示',
+ announce_bar: '英国へ無料配送 &nbsp;·&nbsp; <span>輸入関税なし · VAT込み</span> &nbsp;·&nbsp; <span>すべて日本で手作り</span>',
+ nav_cta: 'ご注文をはじめる',
+ menu_eyebrow: 'ナビゲーション',
+ menu_home: 'ホーム',
+ menu_collection: 'コレクション',
+ menu_about: '<em>Rion</em>について',
+ menu_order: 'ご注文<em>方法</em>',
+ menu_faq: 'よくある質問',
+ menu_shipping: '配送・<em>返品</em>について',
+ menu_care: 'お手入れ<em>ガイド</em>',
+ menu_contact: 'お問い合わせ',
+ menu_cta: '💬 &nbsp;WhatsAppでメッセージを送る',
+ filter_label: '絞り込み:',
+ filter_series_a: 'シリーズA',
+ filter_series_b: 'シリーズB',
+ filter_series_c: 'シリーズC',
+ filter_series_d: 'シリーズD',
+ filter_series_f: 'シリーズF',
+ filter_series_g: 'シリーズG',
+ filter_series_h: 'シリーズH',
+ filter_series_j: 'シリーズJ',
+ series_a_eyebrow: 'シリーズA',
+ series_a_name: '<em>クラシック</em>リング',
+ series_a_desc: '内部に密閉した小さな空間を備えた、時を超えるデザイン — コレクションの中で最も選ばれているリングです。K18ゴールドまたはプラチナのリングに小さな穴を開け、お客様の毛髪を納めた後、同じ貴金属で完全密閉いたします。エレガントで存在感があり、一生にわたり毎日身につけられる仕上がりです。',
+ series_a_type: 'リング',
+ mat_plat_pop: 'プラチナPt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">人気No.1</span>',
+ series_a_table_label: 'シリーズA — 素材別価格（GBP · 英国無料配送 · 輸入関税なし · VAT込み）',
+ th_code: '商品コード',
+ th_material: '素材',
+ th_price: '価格（GBP）· 全込み',
+ th_delivery: 'お届け',
+ addon_engraving_label: '刻印（オプション）',
+ addon_engraving_note: '10文字まで · 1文字追加ごとに+£6',
+ btn_enquire_wa: '💬 WhatsAppでお問い合わせ',
+ series_a_cta_note: 'デザインとリングサイズを確認のうえ、GBP表示のインボイスをお送りいたします。',
+ series_b_eyebrow: 'シリーズB',
+ series_b_name: '<em>バー</em>ペンダント',
+ series_b_desc: '上質なラウンドリンクチェーンに吊るされた、無垢ゴールドのすっきりとした縦型バー。毛髪はバーの内部に密閉され、世界から隔てられたまま、いつも心のすぐそばにあります。胸元に身につけ、常に共に過ごせます。チェーンの長さはお好みに合わせて自由に調整可能です。',
+ series_b_type: 'ネックレス',
+ mat_pgold_pop: 'K18ピンクゴールド <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">人気No.1</span>',
+ mat_plat: 'プラチナPt900',
+ series_b_table_label: 'シリーズB — 素材別価格（GBP · 英国無料配送 · 輸入関税なし · VAT込み）',
+ series_b_cta_note: 'デザインとチェーンの長さを確認のうえ、GBP表示のインボイスをお送りいたします。',
+ series_c_eyebrow: 'シリーズC',
+ series_c_name: '<em>誕生石</em>リング',
+ series_c_desc: '毛髪を密閉する空間と、お好きな誕生石2石をあしらったリング — ダイヤモンド、ルビー、サファイア、エメラルドなどからお選びいただけます。誕生日や特別な方、人生の節目を記念するのに最適です。言葉では表せない想いを、石が静かに語ります。誕生石2石は表示価格に含まれています。',
+ series_c_type: 'リング · 誕生石2石',
+ series_c_table_label: 'シリーズC — 素材別価格（誕生石2石込み · GBP · 英国無料配送）',
+ series_c_special_note: '✦ <strong>誕生石について:</strong> ダイヤモンド、ルビー、サファイア、エメラルド、アメジスト、アクアマリン、ガーネット、ペリドット、トパーズ、トルマリン、シトリン、タンザナイトより、お好きな2石をお選びください。追加の誕生石は1石につき£20で承ります。お問い合わせの際にご希望をお知らせください。',
+ series_c_cta_note: 'お問い合わせの際に、誕生石2石のご希望をお知らせください。',
+ series_d_eyebrow: 'シリーズD',
+ series_d_name: '<em>ハーフエタニティ</em>リング',
+ series_d_desc: '構造的な正方形のフレームにベゼル留めされたコンフリクトフリーダイヤモンドを配したハーフエタニティリングで、内部には毛髪を納める密閉空間を備えています。格別の輝き — 構築的で、光り輝き、永遠に続きます。決して色褪せることのない愛の証です。',
+ series_d_type: 'リング · ダイヤモンドバンド',
+ series_d_table_label: 'シリーズD — 素材別価格（コンフリクトフリーダイヤモンド込み · GBP · 英国無料配送）',
+ series_d_cta_note: 'すべてのダイヤモンドはコンフリクトフリーで、すべて日本国内で調達しています。',
+ series_f_eyebrow: 'シリーズF',
+ series_f_name: '<em>シェブロン</em>リング',
+ series_f_desc: 'V字型のハーフエタニティリングで、正面のカーブ全体にパヴェ留めの石を配しています。優美で輝きに満ち — シェブロンの形が、どんな所作にも光と動きをもたらします。視線を引き、そして静かに、永遠に心を捉える一品です。',
+ series_f_type: 'リング',
+ series_f_table_label: 'シリーズF — 素材別価格（GBP · 英国無料配送 · 輸入関税なし · VAT込み）',
+ series_g_eyebrow: 'シリーズG',
+ series_g_name: '<em>ミルグレイン</em>バンド',
+ series_g_desc: 'フラットに研磨されたバンドの縁に、手作業によるミルグレイン装飾を施しました — 何世紀も続く金細工の技法で、極小のビーズ模様を一つひとつ手で縁に刻んでいきます。佇まいは控えめながら、その技巧は非凡です。世代を超えて受け継がれ、私たちの誰よりも長く在り続けるリングです。',
+ series_g_type: 'リング',
+ series_g_table_label: 'シリーズG — 素材別価格（GBP · 英国無料配送 · 輸入関税なし · VAT込み）',
+ series_h_eyebrow: 'シリーズH',
+ series_h_name: '<em>フロー</em>リング',
+ series_h_desc: '二つのゴールドの曲線が一点で出会い、そこに5石のダイヤモンドが縦長のクラスターとして配されています。動きとつながりを感じさせる形 — 二つの人生が一つに流れ込むように。手の所作のすべてに、愛を感じてほしい方へ。',
+ series_h_type: 'リング',
+ series_h_table_label: 'シリーズH — 素材別価格（GBP · 英国無料配送 · 輸入関税なし · VAT込み）',
+ series_j_eyebrow: 'シリーズJ',
+ series_j_name: '<em>ステートメント</em>リング',
+ series_j_desc: '二本のゴールドのリボンが絡み合い、一方の筋にダイヤモンドを配しています。フォルムは大胆に、意味は親密に。当コレクションで最も表現力豊かなデザイン — その愛が、どんな場所でも存在感を放つ力を持つ方へ。あなたの物語を、力強く身にまとってください。',
+ series_j_type: 'リング · ステートメント',
+ series_j_table_label: 'シリーズJ — 素材別価格（GBP · 英国無料配送 · 輸入関税なし · VAT込み）',
+ tag_most_popular: '人気No.1',
+ delivery_approx: '約5.5ヶ月',
+ bespoke_p1: 'これまでのデザインの中に、ぴったりと感じられるものがありませんでしたか？私たちは、お客様のビジョンから生まれる完全にオリジナルのデザインを、日本の熟練職人の手によってお作りいたします。テンプレートはなく、制約もありません。これまでに存在せず、これからも二つとない形で、あなたの愛をゴールドに込めて表現します。',
+ bespoke_p2: '私たちが手がけた最も心に残る作品の多くは、ビスポークでのご依頼によるものです — それぞれの想いを思い描くことができたご家族のためにお作りしました。最初のご相談から完成のジュエルまで、私たちが丁寧にご案内いたします。',
+ bespoke_feat1_h: 'オリジナルデザイン',
+ bespoke_feat1_p: '職人とともに、完全にゼロから作り上げます。形に制限はなく、完全にオリジナル。あなたのビジョンを、ゴールドの形にして実現します。',
+ bespoke_feat2_h: '高級素材',
+ bespoke_feat2_p: 'K18ゴールド、プラチナ、ダイヤモンド、ルビー、サファイア、エメラルド — どのような組み合わせも可能です。すべて日本国内で調達しています。',
+ bespoke_feat3_h: '複数の毛髪',
+ bespoke_feat3_p: 'ご家族やペットなど、複数の大切な存在の毛髪を一つのジュエルに納めることができます。すべての物語を、一緒に大切にお守りします。',
+ bespoke_feat4_h: '製作期間',
+ bespoke_feat4_p: '目安として約6ヶ月。各製作段階で写真とともにご報告いたしますので、お客様をお待たせしたままにすることはありません。',
+ bespoke_price_note: '英国への保険付き無料配送 · 輸入関税なし · 価格はデザインの複雑さおよび使用素材により異なります',
+ bespoke_cta: '💬 ビスポークのご相談をはじめる',
+ footer_brand_desc: '日本で完全に手作りされる、ビスポークのメモリアルジュエリー。一筋の毛髪。一つのジュエル。一つの愛 — あなたのもの、永遠に。英国全土のご家族に信頼されています。',
+ footer_est: '創業 2018年 · 日本 · 英国にお届け',
+ footer_h_explore: '探す',
+ footer_link_home: 'ホーム',
+ footer_link_collection: 'コレクション',
+ footer_link_about: 'Rionについて',
+ footer_link_order: 'ご注文方法',
+ footer_link_stories: 'お客様の声',
+ footer_h_help: 'ヘルプ',
+ footer_link_faq: 'よくある質問',
+ footer_link_care: 'お手入れガイド',
+ footer_link_shipping: '配送・返品について',
+ footer_link_legal: '法的情報・プライバシー',
+ footer_link_contact: 'お問い合わせ',
+ footer_h_connect: 'つながる',
+ footer_social_wa: 'WhatsApp',
+ footer_social_ig: 'Instagram',
+ footer_social_email: 'お問い合わせを送る',
+ footer_copy: '© 2026 Rion™ · My Art Inc. · 100%日本製 · 英国への保険付き無料配送 · 輸入関税なし · 価格はすべてGBP表示',
+ footer_right: '創業 2018年 · 日本 · 英国',
+ sticky_text: '<strong>Rionコレクション</strong> &nbsp;·&nbsp; すべて日本で手作り · £4,000より · 英国無料配送 · 輸入関税なし',
+ sticky_wa: '💬 WhatsApp',
+ sticky_back: '← ホームへ戻る',
+ cookie_title: 'クッキーについて',
+ cookie_body: '当サイトでは必須の分析用クッキーのみを使用しています。広告や追跡目的のクッキーは使用しておりません。詳しくは<a href="legal.html#privacy">プライバシーポリシー</a>をご覧ください。',
+ cookie_decline: '拒否する',
+ cookie_accept: '同意する'
  }
 };
 function setLang(l){
