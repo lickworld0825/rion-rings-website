@@ -225,21 +225,21 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
  <div class="menu-inner">
  <div>
- <span class="menu-eyebrow">Navigation</span>
+ <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
  <nav class="menu-links">
- <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
- <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
- <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
- <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
- <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
- <a href="faq.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
- <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
- <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span>Contact</span></a>
+ <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
+ <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
+ <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_about">About <em>Rion</em></span></a>
+ <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
+ <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_sealing">How Hair Is <em>Sealed</em></span></a>
+ <a href="faq.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
+ <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
+ <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_contact">Contact</span></a>
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+ <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_wa">💬 Message Us on WhatsApp</a>
  </div>
  </div>
 </div>
@@ -268,25 +268,25 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 
 <!-- HAIR & PROCESS -->
 <section class="faq-section" data-cat="hair">
- <h2 class="faq-section-title">Hair &amp; <em>Process</em></h2>
+ <h2 class="faq-section-title" data-i18n="sec_hair">Hair &amp; <em>Process</em></h2>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">What exactly is memorial jewellery?</span>
+ <span class="faq-q-text" data-i18n="q_what_is">What exactly is memorial jewellery?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>Memorial jewellery is a fine jewel that encloses the hair of someone you love — a person or a beloved pet. The hair is hermetically sealed inside the ring or pendant, invisible from the outside but permanently part of the piece. You carry them with you, every day, wherever you go.</p></div>
+ <div class="faq-a"><p data-i18n="a_what_is">Memorial jewellery is a fine jewel that encloses the hair of someone you love — a person or a beloved pet. The hair is hermetically sealed inside the ring or pendant, invisible from the outside but permanently part of the piece. You carry them with you, every day, wherever you go.</p></div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Whose hair can be used?</span>
+ <span class="faq-q-text" data-i18n="q_whose_hair">Whose hair can be used?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>Anyone's hair — a parent, a child, a spouse, a grandparent, a close friend. We also accept pet hair (dogs, cats, and other animals).</p>
- <p>Hair from someone who has passed away is accepted, as is hair from someone still living. Many of our clients create pieces while their loved one is still with them — to carry that connection forward, always. There's no wrong time to begin.</p>
- <span class="faq-note">Multiple people's hair can be sealed together in one piece — ask us about this option.</span>
+ <p data-i18n="a_whose_hair1">Anyone's hair — a parent, a child, a spouse, a grandparent, a close friend. We also accept pet hair (dogs, cats, and other animals).</p>
+ <p data-i18n="a_whose_hair2">Hair from someone who has passed away is accepted, as is hair from someone still living. Many of our clients create pieces while their loved one is still with them — to carry that connection forward, always. There's no wrong time to begin.</p>
+ <span class="faq-note" data-i18n="note_multi_hair">Multiple people's hair can be sealed together in one piece — ask us about this option.</span>
  </div>
  </div>
 
@@ -300,47 +300,47 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How is the hair sealed inside the jewel?</span>
+ <span class="faq-q-text" data-i18n="q_how_sealed">How is the hair sealed inside the jewel?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>A small chamber is created inside the ring or necklace. Your hair is carefully placed inside by hand, then the opening is sealed with a cap of the same material — K18 gold or Pt900 platinum. The jewel is then hermetically sealed: completely airtight and watertight. From the outside, it looks like any fine jewel. The hair is invisible — but it's there, always.</p>
- <p>We photograph the process before, during, and after sealing, and send these photos to you via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email. This photo report is included with every order, at no extra charge.</p>
+ <p data-i18n="a_how_sealed1">A small chamber is created inside the ring or necklace. Your hair is carefully placed inside by hand, then the opening is sealed with a cap of the same material — K18 gold or Pt900 platinum. The jewel is then hermetically sealed: completely airtight and watertight. From the outside, it looks like any fine jewel. The hair is invisible — but it's there, always.</p>
+ <p data-i18n="a_how_sealed2">We photograph the process before, during, and after sealing, and send these photos to you via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email. This photo report is included with every order, at no extra charge.</p>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Will the hair deteriorate over time?</span>
+ <span class="faq-q-text" data-i18n="q_deteriorate">Will the hair deteriorate over time?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>No. The hermetic seal is airtight and permanent. Hair is one of the most durable biological materials — it does not decompose in the absence of moisture and oxygen, both of which are excluded by the seal. Rion pieces are designed for a lifetime of daily wear and intended to be passed down through generations.</p></div>
+ <div class="faq-a"><p data-i18n="a_deteriorate">No. The hermetic seal is airtight and permanent. Hair is one of the most durable biological materials — it does not decompose in the absence of moisture and oxygen, both of which are excluded by the seal. Rion pieces are designed for a lifetime of daily wear and intended to be passed down through generations.</p></div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Can I include hair from multiple people in one jewel?</span>
+ <span class="faq-q-text" data-i18n="q_multi_people">Can I include hair from multiple people in one jewel?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>Yes. We can seal hair from more than one person — or from a person and a pet — inside the same chamber. This is available on all standard series and is a popular choice for families who want to carry multiple loved ones close at once.</p>
- <span class="faq-note">Please let us know at the time of enquiry so we can prepare accordingly.</span>
+ <p data-i18n="a_multi_people">Yes. We can seal hair from more than one person — or from a person and a pet — inside the same chamber. This is available on all standard series and is a popular choice for families who want to carry multiple loved ones close at once.</p>
+ <span class="faq-note" data-i18n="note_multi_people">Please let us know at the time of enquiry so we can prepare accordingly.</span>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">What if I can't collect the hair myself?</span>
+ <span class="faq-q-text" data-i18n="q_cant_collect">What if I can't collect the hair myself?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>If you're collecting hair from a loved one who has passed, a funeral home, hospice, or family member can often help. Hair that was saved — from a haircut, a brush, or a keepsake — is entirely acceptable. Please reach out to us and we'll advise you personally on the best approach for your situation. We've helped many families navigate this with care.</p></div>
+ <div class="faq-a"><p data-i18n="a_cant_collect">If you're collecting hair from a loved one who has passed, a funeral home, hospice, or family member can often help. Hair that was saved — from a haircut, a brush, or a keepsake — is entirely acceptable. Please reach out to us and we'll advise you personally on the best approach for your situation. We've helped many families navigate this with care.</p></div>
  </div>
 </section>
 
 <!-- THE JEWEL -->
 <section class="faq-section" data-cat="jewel" style="background:#F7F3EC;max-width:100%;padding:4rem 0">
  <div style="max-width:1100px;margin:0 auto;padding:0 6rem">
- <h2 class="faq-section-title">The <em>Jewel</em></h2>
+ <h2 class="faq-section-title" data-i18n="sec_jewel">The <em>Jewel</em></h2>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
@@ -352,60 +352,60 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Can I add engraving to my jewel?</span>
+ <span class="faq-q-text" data-i18n="q_engraving">Can I add engraving to my jewel?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>Yes. Inner engraving is available on all ring designs — English characters only. A name, a date, a meaningful phrase, or any combination you choose. The engraving is done on the inner band and is visible only to you when you remove the ring. Spaces are not counted as characters.</p>
- <span class="faq-note">1–10 characters: CHF59 · From the 11th character: +CHF6 each · Please specify at time of order confirmation.</span>
+ <p data-i18n="a_engraving">Yes. Inner engraving is available on all ring designs — English characters only. A name, a date, a meaningful phrase, or any combination you choose. The engraving is done on the inner band and is visible only to you when you remove the ring. Spaces are not counted as characters.</p>
+ <span class="faq-note" data-i18n="note_engraving">1–10 characters: CHF59 · From the 11th character: +CHF6 each · Please specify at time of order confirmation.</span>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How do I choose my ring size?</span>
+ <span class="faq-q-text" data-i18n="q_ring_size">How do I choose my ring size?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your US size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.</p></div>
+ <div class="faq-a"><p data-i18n="a_ring_size">A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your US size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.</p></div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Can the ring be resized later?</span>
+ <span class="faq-q-text" data-i18n="q_resize">Can the ring be resized later?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>Resizing is possible in some cases, depending on the design. However, because the sealed hair chamber is built into the band, resizing requires returning the piece to Japan and can take 2–3 months. We strongly recommend confirming your size carefully using the gauge we send before production begins. The cost of resizing covers round-trip shipping — we handle the rest. Please contact us for a quote before sending.</p></div>
+ <div class="faq-a"><p data-i18n="a_resize">Resizing is possible in some cases, depending on the design. However, because the sealed hair chamber is built into the band, resizing requires returning the piece to Japan and can take 2–3 months. We strongly recommend confirming your size carefully using the gauge we send before production begins. The cost of resizing covers round-trip shipping — we handle the rest. Please contact us for a quote before sending.</p></div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Is the jewel suitable for daily wear?</span>
+ <span class="faq-q-text" data-i18n="q_daily_wear">Is the jewel suitable for daily wear?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>Yes. Rion pieces are designed for a lifetime of daily wear. The hermetic seal is water-resistant — safe for handwashing, light rain, and everyday use. We recommend removing it during swimming, heavy exercise, or contact with harsh chemicals, which is standard advice for all fine jewellery. See our <a href="care.html">Care Guide</a> for full details.</p></div>
+ <div class="faq-a"><p data-i18n="a_daily_wear">Yes. Rion pieces are designed for a lifetime of daily wear. The hermetic seal is water-resistant — safe for handwashing, light rain, and everyday use. We recommend removing it during swimming, heavy exercise, or contact with harsh chemicals, which is standard advice for all fine jewellery. See our <a href="care.html">Care Guide</a> for full details.</p></div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">What is the lifetime polishing service?</span>
+ <span class="faq-q-text" data-i18n="q_polishing">What is the lifetime polishing service?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>Every Rion piece comes with complimentary lifetime polishing at our atelier in Japan. Years or decades from now, you can send your jewel back to us and we'll polish and restore it at no charge. You pay only the shipping back to Japan. This service is included with all pieces, forever — no registration required.</p></div>
+ <div class="faq-a"><p data-i18n="a_polishing">Every Rion piece comes with complimentary lifetime polishing at our atelier in Japan. Years or decades from now, you can send your jewel back to us and we'll polish and restore it at no charge. You pay only the shipping back to Japan. This service is included with all pieces, forever — no registration required.</p></div>
  </div>
  </div>
 </section>
 
 <!-- ORDERING -->
 <section class="faq-section" data-cat="order">
- <h2 class="faq-section-title"><em>Ordering</em></h2>
+ <h2 class="faq-section-title" data-i18n="sec_order"><em>Ordering</em></h2>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How do I place an order?</span>
+ <span class="faq-q-text" data-i18n="q_place_order">How do I place an order?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>All orders begin with a conversation — via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>, <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank">Instagram DM</a>, or <a href="mailto:info@art-rings.com">email</a>. Browse our collection, choose a series and material, and reach out to us. Our team will walk you through every detail — design, size, engraving, pricing — and issue your invoice when you're ready. See our <a href="order.html">How to Order</a> page for the full step-by-step guide.</p>
+ <p data-i18n="a_place_order">All orders begin with a conversation — via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>, <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank">Instagram DM</a>, or <a href="mailto:info@art-rings.com">email</a>. Browse our collection, choose a series and material, and reach out to us. Our team will walk you through every detail — design, size, engraving, pricing — and issue your invoice when you're ready. See our <a href="order.html">How to Order</a> page for the full step-by-step guide.</p>
  </div>
  </div>
 
@@ -419,12 +419,12 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Can I cancel or change my order after placing it?</span>
+ <span class="faq-q-text" data-i18n="q_cancel_change">Can I cancel or change my order after placing it?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>Engraving and birthstone selection can be changed up until the point production begins. Design and material cannot be changed once the order is confirmed.</p>
- <p>Because each piece is made entirely to your order and cannot be resold, no refund is offered once production has begun. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full policy details.</p>
+ <p data-i18n="a_cancel_change1">Engraving and birthstone selection can be changed up until the point production begins. Design and material cannot be changed once the order is confirmed.</p>
+ <p data-i18n="a_cancel_change2">Because each piece is made entirely to your order and cannot be resold, no refund is offered once production has begun. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full policy details.</p>
  </div>
  </div>
 
@@ -434,7 +434,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>Yes. If none of our standard series feel quite right, we create fully bespoke commissions — designed from scratch with our team. No templates, no limits: any form, any material, any combination of stones. Bespoke commissions start from CHF18,900 DDP and take approximately 6 months. Reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> to begin a bespoke consultation — no commitment required.</p>
+ <p data-i18n="a_bespoke">Yes. If none of our standard series feel quite right, we create fully bespoke commissions — designed from scratch with our team. No templates, no limits: any form, any material, any combination of stones. Bespoke commissions start from CHF18,900 DDP and take approximately 6 months. Reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> to begin a bespoke consultation — no commitment required.</p>
  </div>
  </div>
 </section>
@@ -442,50 +442,50 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <!-- SHIPPING & PAYMENT -->
 <section class="faq-section" data-cat="shipping" style="background:#F7F3EC;max-width:100%;padding:4rem 0">
  <div style="max-width:1100px;margin:0 auto;padding:0 6rem">
- <h2 class="faq-section-title">Shipping &amp; <em>Payment</em></h2>
+ <h2 class="faq-section-title" data-i18n="sec_shipping">Shipping &amp; <em>Payment</em></h2>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How is the jewel shipped to me?</span>
+ <span class="faq-q-text" data-i18n="q_how_shipped">How is the jewel shipped to me?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>Your finished jewel is shipped via DHL Express from Japan — fully insured for its full value, with a tracking number provided as soon as it's dispatched. Delivery typically takes 3–5 business days from Japan to anywhere in Switzerland after production is complete. All customs clearance is handled entirely by Rion.</p></div>
+ <div class="faq-a"><p data-i18n="a_how_shipped">Your finished jewel is shipped via DHL Express from Japan — fully insured for its full value, with a tracking number provided as soon as it's dispatched. Delivery typically takes 3–5 business days from Japan to anywhere in Switzerland after production is complete. All customs clearance is handled entirely by Rion.</p></div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">What currencies and payment methods do you accept?</span>
- <span class="faq-q-ico"></span>
- </button>
- <div class="faq-a">
- <p>All prices are quoted in CHF. We accept credit card (Visa, Mastercard, American Express, Diners Club, JCB — via secure Stripe invoice link) and international bank transfer (SWIFT/wire). Full payment is required before production begins.</p>
- </div>
- </div>
-
- <div class="faq-item">
- <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">What is your return policy?</span>
+ <span class="faq-q-text" data-i18n="q_currencies">What currencies and payment methods do you accept?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <p>Because each piece is made entirely to your order — with your hair, to your specifications — it cannot be returned or exchanged unless there is a manufacturing defect.</p>
- <p>If there is a defect, we will repair or remake the piece at no charge, including shipping. We take quality seriously and subject every piece to rigorous inspection before shipping. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full details.</p>
+ <p data-i18n="a_currencies">All prices are quoted in CHF. We accept credit card (Visa, Mastercard, American Express, Diners Club, JCB — via secure Stripe invoice link) and international bank transfer (SWIFT/wire). Full payment is required before production begins.</p>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How is my privacy protected?</span>
+ <span class="faq-q-text" data-i18n="q_return_policy">What is your return policy?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p>All personal information — your name, your address, and the name of your loved one — is handled with complete discretion and never shared with any third party. We understand the deeply personal nature of what we do, and we treat every client's information and story with the utmost respect. See our <a href="legal.html">Privacy Policy</a> for full details.</p></div>
+ <div class="faq-a">
+ <p data-i18n="a_return_policy1">Because each piece is made entirely to your order — with your hair, to your specifications — it cannot be returned or exchanged unless there is a manufacturing defect.</p>
+ <p data-i18n="a_return_policy2">If there is a defect, we will repair or remake the piece at no charge, including shipping. We take quality seriously and subject every piece to rigorous inspection before shipping. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full details.</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-q" onclick="toggleFaq(this)">
+ <span class="faq-q-text" data-i18n="q_privacy">How is my privacy protected?</span>
+ <span class="faq-q-ico"></span>
+ </button>
+ <div class="faq-a"><p data-i18n="a_privacy">All personal information — your name, your address, and the name of your loved one — is handled with complete discretion and never shared with any third party. We understand the deeply personal nature of what we do, and we treat every client's information and story with the utmost respect. See our <a href="legal.html">Privacy Policy</a> for full details.</p></div>
  </div>
  </div>
 </section>
 
 <!-- US-SPECIFIC -->
 <section class="faq-section" data-cat="usa">
- <h2 class="faq-section-title">For Switzerland <em>Customers</em></h2>
+ <h2 class="faq-section-title" data-i18n="sec_usa">For Switzerland <em>Customers</em></h2>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
@@ -493,10 +493,10 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <div class="us-badge">Switzerland Customers</div>
- <p><strong>No — not a single dollar.</strong> Rion ships on DDP (Delivered Duty Paid) terms to Switzerland. This means all Switzerland import duties, customs fees, and any applicable taxes are prepaid by Rion on your behalf before your package is shipped. When DHL delivers your jewel to your door, there is nothing to sign for, nothing to pay. Just open it.</p>
- <p>The price you agreed to is the price you paid. That's it.</p>
- <span class="faq-note">DDP — Delivered Duty Paid. No hidden costs. No surprises at delivery.</span>
+ <div class="us-badge" data-i18n="badge_ch">Switzerland Customers</div>
+ <p data-i18n="a_import_duty1"><strong>No — not a single dollar.</strong> Rion ships on DDP (Delivered Duty Paid) terms to Switzerland. This means all Switzerland import duties, customs fees, and any applicable taxes are prepaid by Rion on your behalf before your package is shipped. When DHL delivers your jewel to your door, there is nothing to sign for, nothing to pay. Just open it.</p>
+ <p data-i18n="a_import_duty2">The price you agreed to is the price you paid. That's it.</p>
+ <span class="faq-note" data-i18n="note_import_duty">DDP — Delivered Duty Paid. No hidden costs. No surprises at delivery.</span>
  </div>
  </div>
 
@@ -506,60 +506,60 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <div class="us-badge">Switzerland Customers</div>
- <p>Yes, completely. Human hair is not a controlled substance under Swiss law and is not subject to import or export restrictions. It is shipped internationally every day — used in the beauty industry, medical research, and keepsake products — via standard international couriers including DHL, FedEx, and others.</p>
- <p>We ship your hair using DHL Express with a prepaid return label. All customs declarations are pre-completed by us. You simply drop the sealed envelope at any DHL drop-off location. There is nothing complicated or legally ambiguous about this process.</p>
- <span class="faq-note">Hair is legally shipped internationally as a standard non-hazardous personal effect. No restrictions apply.</span>
+ <div class="us-badge" data-i18n="badge_ch">Switzerland Customers</div>
+ <p data-i18n="a_legal_ship1">Yes, completely. Human hair is not a controlled substance under Swiss law and is not subject to import or export restrictions. It is shipped internationally every day — used in the beauty industry, medical research, and keepsake products — via standard international couriers including DHL, FedEx, and others.</p>
+ <p data-i18n="a_legal_ship2">We ship your hair using DHL Express with a prepaid return label. All customs declarations are pre-completed by us. You simply drop the sealed envelope at any DHL drop-off location. There is nothing complicated or legally ambiguous about this process.</p>
+ <span class="faq-note" data-i18n="note_legal_ship">Hair is legally shipped internationally as a standard non-hazardous personal effect. No restrictions apply.</span>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How do I send my hair from Switzerland to Japan?</span>
+ <span class="faq-q-text" data-i18n="q_send_hair">How do I send my hair from Switzerland to Japan?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <div class="us-badge">Switzerland Customers</div>
- <p>We make this as easy as possible. Here's exactly what happens:</p>
- <p><strong>Step 1:</strong> After your order is confirmed and paid, we ship you a Rion Hair Collection Kit via DHL Express directly to your Swiss address. It typically arrives within 3–5 business days.</p>
- <p><strong>Step 2:</strong> Inside the kit, you'll find a sterile envelope, clear instructions, a ring size gauge, and a prepaid DHL Express return label addressed to our atelier in Japan.</p>
- <p><strong>Step 3:</strong> Place a few strands of hair in the envelope, seal it, attach the label, and drop it at any DHL drop-off location or schedule a pickup. All customs paperwork is pre-completed by us. You don't write or arrange anything.</p>
- <span class="faq-note">The entire hair return process takes about 5 minutes. We handle all the logistics.</span>
+ <div class="us-badge" data-i18n="badge_ch">Switzerland Customers</div>
+ <p data-i18n="a_send_hair_intro">We make this as easy as possible. Here's exactly what happens:</p>
+ <p data-i18n="a_send_hair_step1"><strong>Step 1:</strong> After your order is confirmed and paid, we ship you a Rion Hair Collection Kit via DHL Express directly to your Swiss address. It typically arrives within 3–5 business days.</p>
+ <p data-i18n="a_send_hair_step2"><strong>Step 2:</strong> Inside the kit, you'll find a sterile envelope, clear instructions, a ring size gauge, and a prepaid DHL Express return label addressed to our atelier in Japan.</p>
+ <p data-i18n="a_send_hair_step3"><strong>Step 3:</strong> Place a few strands of hair in the envelope, seal it, attach the label, and drop it at any DHL drop-off location or schedule a pickup. All customs paperwork is pre-completed by us. You don't write or arrange anything.</p>
+ <span class="faq-note" data-i18n="note_send_hair">The entire hair return process takes about 5 minutes. We handle all the logistics.</span>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">Do you ship throughout Switzerland?</span>
+ <span class="faq-q-text" data-i18n="q_ship_all_ch">Do you ship throughout Switzerland?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <div class="us-badge">Switzerland Customers</div>
- <p>Yes. We ship free via DHL Express to all of Switzerland, including remote Alpine regions. All shipments are DDP — no import duties or customs fees regardless of your location within Switzerland.</p>
+ <div class="us-badge" data-i18n="badge_ch">Switzerland Customers</div>
+ <p data-i18n="a_ship_all_ch">Yes. We ship free via DHL Express to all of Switzerland, including remote Alpine regions. All shipments are DDP — no import duties or customs fees regardless of your location within Switzerland.</p>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">What if my ring doesn't fit when it arrives?</span>
+ <span class="faq-q-text" data-i18n="q_ring_no_fit">What if my ring doesn't fit when it arrives?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <div class="us-badge">Switzerland Customers</div>
- <p>We include a ring size gauge in your hair kit specifically so you can confirm your size before production begins. We strongly encourage you to use it — half sizes are available (sizes 1 through 12) and a correct fit from the start saves time for everyone.</p>
- <p>If, after production, your ring doesn't fit, resizing may be possible depending on the design (because the sealed chamber is built into the band, not all designs can be resized). If resizing is possible, we'll do so at the cost of round-trip shipping between you and Japan — we handle the craftsmanship at no charge. Please contact us as soon as your jewel arrives and before wearing it.</p>
- <span class="faq-note">Use the size gauge we send — it's the simplest way to ensure a perfect fit from day one.</span>
+ <div class="us-badge" data-i18n="badge_ch">Switzerland Customers</div>
+ <p data-i18n="a_ring_no_fit1">We include a ring size gauge in your hair kit specifically so you can confirm your size before production begins. We strongly encourage you to use it — half sizes are available (sizes 1 through 12) and a correct fit from the start saves time for everyone.</p>
+ <p data-i18n="a_ring_no_fit2">If, after production, your ring doesn't fit, resizing may be possible depending on the design (because the sealed chamber is built into the band, not all designs can be resized). If resizing is possible, we'll do so at the cost of round-trip shipping between you and Japan — we handle the craftsmanship at no charge. Please contact us as soon as your jewel arrives and before wearing it.</p>
+ <span class="faq-note" data-i18n="note_ring_no_fit">Use the size gauge we send — it's the simplest way to ensure a perfect fit from day one.</span>
  </div>
  </div>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
- <span class="faq-q-text">How long does delivery take from Japan to Switzerland?</span>
+ <span class="faq-q-text" data-i18n="q_delivery_time">How long does delivery take from Japan to Switzerland?</span>
  <span class="faq-q-ico"></span>
  </button>
  <div class="faq-a">
- <div class="us-badge">Switzerland Customers</div>
- <p>Once your finished jewel is dispatched from our atelier in Japan, DHL Express typically delivers to Swiss addresses within 3–5 business days. You will receive a DHL tracking number as soon as your order ships so you can follow it every step of the way. DHL delivers throughout Switzerland.</p>
+ <div class="us-badge" data-i18n="badge_ch">Switzerland Customers</div>
+ <p data-i18n="a_delivery_time">Once your finished jewel is dispatched from our atelier in Japan, DHL Express typically delivers to Swiss addresses within 3–5 business days. You will receive a DHL tracking number as soon as your order ships so you can follow it every step of the way. DHL delivers throughout Switzerland.</p>
  </div>
  </div>
 </section>
@@ -570,11 +570,11 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <section class="help-section">
  <h2 data-i18n="cta_h2">Still have a <em>question?</em></h2>
  <p data-i18n="cta_p">Our team is available on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> in English and responds personally — typically within a few hours. We genuinely want to help.</p>
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%20have%20a%20question%20I%20couldn't%20find%20in%20the%20FAQ%3A" class="btn-wa" target="_blank">💬 Message Us on WhatsApp</a>
+ <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%20have%20a%20question%20I%20couldn't%20find%20in%20the%20FAQ%3A" class="btn-wa" target="_blank" data-i18n="btn_wa_faq">💬 Message Us on WhatsApp</a>
  <div class="help-links">
- <a href="order.html" class="help-link">How to Order &rarr;</a>
- <a href="shipping.html" class="help-link">Shipping &amp; Returns &rarr;</a>
- <a href="care.html" class="help-link">Care Guide &rarr;</a>
+ <a href="order.html" class="help-link" data-i18n="link_how_order">How to Order &rarr;</a>
+ <a href="shipping.html" class="help-link" data-i18n="link_shipping_returns">Shipping &amp; Returns &rarr;</a>
+ <a href="care.html" class="help-link" data-i18n="link_care_guide">Care Guide &rarr;</a>
  </div>
 </section>
 
@@ -583,8 +583,8 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <div class="footer-grid">
  <div class="footer-col footer-brand">
  <a href="index.html" class="footer-logo">Rion</a>
- <p>Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
- <p class="footer-est">Est. 2018 · Japan</p>
+ <p data-i18n="footer_p">Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
+ <p class="footer-est" data-i18n="footer_est">Est. 2018 · Japan</p>
  </div>
  <div class="footer-col">
  <h5>Explore</h5>
@@ -657,7 +657,92 @@ footer_p:"Bijoux mémoriaux sur mesure, fabriqués entièrement à la main au Ja
  q_import_duty: 'Do I pay import duties or customs fees when my jewel arrives?',
  q_legal_ship: 'Is it legal to ship hair through Switzerland mail or via international courier?',
  cta_h2: 'Still have a <em>question?</em>',
- cta_p: 'Our team is available on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> in English and responds personally — typically within a few hours. We genuinely want to help.'
+ cta_p: 'Our team is available on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> in English and responds personally — typically within a few hours. We genuinely want to help.',
+ menu_eyebrow: 'Navigation',
+ menu_home: 'Home',
+ menu_collection: 'Collection',
+ menu_about: 'About <em>Rion</em>',
+ menu_order: 'How to <em>Order</em>',
+ menu_sealing: 'How Hair Is <em>Sealed</em>',
+ menu_faq: 'FAQ',
+ menu_shipping: 'Shipping &amp; <em>Returns</em>',
+ menu_care: 'Care <em>Guide</em>',
+ menu_contact: 'Contact',
+ menu_wa: '💬 Message Us on WhatsApp',
+ sec_hair: 'Hair &amp; <em>Process</em>',
+ q_what_is: 'What exactly is memorial jewellery?',
+ a_what_is: 'Memorial jewellery is a fine jewel that encloses the hair of someone you love — a person or a beloved pet. The hair is hermetically sealed inside the ring or pendant, invisible from the outside but permanently part of the piece. You carry them with you, every day, wherever you go.',
+ q_whose_hair: 'Whose hair can be used?',
+ a_whose_hair1: 'Anyone\'s hair — a parent, a child, a spouse, a grandparent, a close friend. We also accept pet hair (dogs, cats, and other animals).',
+ a_whose_hair2: 'Hair from someone who has passed away is accepted, as is hair from someone still living. Many of our clients create pieces while their loved one is still with them — to carry that connection forward, always. There\'s no wrong time to begin.',
+ note_multi_hair: 'Multiple people\'s hair can be sealed together in one piece — ask us about this option.',
+ q_how_sealed: 'How is the hair sealed inside the jewel?',
+ a_how_sealed1: 'A small chamber is created inside the ring or necklace. Your hair is carefully placed inside by hand, then the opening is sealed with a cap of the same material — K18 gold or Pt900 platinum. The jewel is then hermetically sealed: completely airtight and watertight. From the outside, it looks like any fine jewel. The hair is invisible — but it\'s there, always.',
+ a_how_sealed2: 'We photograph the process before, during, and after sealing, and send these photos to you via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email. This photo report is included with every order, at no extra charge.',
+ q_deteriorate: 'Will the hair deteriorate over time?',
+ a_deteriorate: 'No. The hermetic seal is airtight and permanent. Hair is one of the most durable biological materials — it does not decompose in the absence of moisture and oxygen, both of which are excluded by the seal. Rion pieces are designed for a lifetime of daily wear and intended to be passed down through generations.',
+ q_multi_people: 'Can I include hair from multiple people in one jewel?',
+ a_multi_people: 'Yes. We can seal hair from more than one person — or from a person and a pet — inside the same chamber. This is available on all standard series and is a popular choice for families who want to carry multiple loved ones close at once.',
+ note_multi_people: 'Please let us know at the time of enquiry so we can prepare accordingly.',
+ q_cant_collect: 'What if I can\'t collect the hair myself?',
+ a_cant_collect: 'If you\'re collecting hair from a loved one who has passed, a funeral home, hospice, or family member can often help. Hair that was saved — from a haircut, a brush, or a keepsake — is entirely acceptable. Please reach out to us and we\'ll advise you personally on the best approach for your situation. We\'ve helped many families navigate this with care.',
+ sec_jewel: 'The <em>Jewel</em>',
+ q_engraving: 'Can I add engraving to my jewel?',
+ a_engraving: 'Yes. Inner engraving is available on all ring designs — English characters only. A name, a date, a meaningful phrase, or any combination you choose. The engraving is done on the inner band and is visible only to you when you remove the ring. Spaces are not counted as characters.',
+ note_engraving: '1–10 characters: CHF59 · From the 11th character: +CHF6 each · Please specify at time of order confirmation.',
+ q_ring_size: 'How do I choose my ring size?',
+ a_ring_size: 'A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your US size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.',
+ q_resize: 'Can the ring be resized later?',
+ a_resize: 'Resizing is possible in some cases, depending on the design. However, because the sealed hair chamber is built into the band, resizing requires returning the piece to Japan and can take 2–3 months. We strongly recommend confirming your size carefully using the gauge we send before production begins. The cost of resizing covers round-trip shipping — we handle the rest. Please contact us for a quote before sending.',
+ q_daily_wear: 'Is the jewel suitable for daily wear?',
+ a_daily_wear: 'Yes. Rion pieces are designed for a lifetime of daily wear. The hermetic seal is water-resistant — safe for handwashing, light rain, and everyday use. We recommend removing it during swimming, heavy exercise, or contact with harsh chemicals, which is standard advice for all fine jewellery. See our <a href="care.html">Care Guide</a> for full details.',
+ q_polishing: 'What is the lifetime polishing service?',
+ a_polishing: 'Every Rion piece comes with complimentary lifetime polishing at our atelier in Japan. Years or decades from now, you can send your jewel back to us and we\'ll polish and restore it at no charge. You pay only the shipping back to Japan. This service is included with all pieces, forever — no registration required.',
+ sec_order: '<em>Ordering</em>',
+ q_place_order: 'How do I place an order?',
+ a_place_order: 'All orders begin with a conversation — via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>, <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank">Instagram DM</a>, or <a href="mailto:info@art-rings.com">email</a>. Browse our collection, choose a series and material, and reach out to us. Our team will walk you through every detail — design, size, engraving, pricing — and issue your invoice when you\'re ready. See our <a href="order.html">How to Order</a> page for the full step-by-step guide.',
+ q_cancel_change: 'Can I cancel or change my order after placing it?',
+ a_cancel_change1: 'Engraving and birthstone selection can be changed up until the point production begins. Design and material cannot be changed once the order is confirmed.',
+ a_cancel_change2: 'Because each piece is made entirely to your order and cannot be resold, no refund is offered once production has begun. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full policy details.',
+ a_bespoke: 'Yes. If none of our standard series feel quite right, we create fully bespoke commissions — designed from scratch with our team. No templates, no limits: any form, any material, any combination of stones. Bespoke commissions start from CHF18,900 DDP and take approximately 6 months. Reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> to begin a bespoke consultation — no commitment required.',
+ sec_shipping: 'Shipping &amp; <em>Payment</em>',
+ q_how_shipped: 'How is the jewel shipped to me?',
+ a_how_shipped: 'Your finished jewel is shipped via DHL Express from Japan — fully insured for its full value, with a tracking number provided as soon as it\'s dispatched. Delivery typically takes 3–5 business days from Japan to anywhere in Switzerland after production is complete. All customs clearance is handled entirely by Rion.',
+ q_currencies: 'What currencies and payment methods do you accept?',
+ a_currencies: 'All prices are quoted in CHF. We accept credit card (Visa, Mastercard, American Express, Diners Club, JCB — via secure Stripe invoice link) and international bank transfer (SWIFT/wire). Full payment is required before production begins.',
+ q_return_policy: 'What is your return policy?',
+ a_return_policy1: 'Because each piece is made entirely to your order — with your hair, to your specifications — it cannot be returned or exchanged unless there is a manufacturing defect.',
+ a_return_policy2: 'If there is a defect, we will repair or remake the piece at no charge, including shipping. We take quality seriously and subject every piece to rigorous inspection before shipping. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full details.',
+ q_privacy: 'How is my privacy protected?',
+ a_privacy: 'All personal information — your name, your address, and the name of your loved one — is handled with complete discretion and never shared with any third party. We understand the deeply personal nature of what we do, and we treat every client\'s information and story with the utmost respect. See our <a href="legal.html">Privacy Policy</a> for full details.',
+ sec_usa: 'For Switzerland <em>Customers</em>',
+ badge_ch: 'Switzerland Customers',
+ a_import_duty1: '<strong>No — not a single dollar.</strong> Rion ships on DDP (Delivered Duty Paid) terms to Switzerland. This means all Switzerland import duties, customs fees, and any applicable taxes are prepaid by Rion on your behalf before your package is shipped. When DHL delivers your jewel to your door, there is nothing to sign for, nothing to pay. Just open it.',
+ a_import_duty2: 'The price you agreed to is the price you paid. That\'s it.',
+ note_import_duty: 'DDP — Delivered Duty Paid. No hidden costs. No surprises at delivery.',
+ a_legal_ship1: 'Yes, completely. Human hair is not a controlled substance under Swiss law and is not subject to import or export restrictions. It is shipped internationally every day — used in the beauty industry, medical research, and keepsake products — via standard international couriers including DHL, FedEx, and others.',
+ a_legal_ship2: 'We ship your hair using DHL Express with a prepaid return label. All customs declarations are pre-completed by us. You simply drop the sealed envelope at any DHL drop-off location. There is nothing complicated or legally ambiguous about this process.',
+ note_legal_ship: 'Hair is legally shipped internationally as a standard non-hazardous personal effect. No restrictions apply.',
+ q_send_hair: 'How do I send my hair from Switzerland to Japan?',
+ a_send_hair_intro: 'We make this as easy as possible. Here\'s exactly what happens:',
+ a_send_hair_step1: '<strong>Step 1:</strong> After your order is confirmed and paid, we ship you a Rion Hair Collection Kit via DHL Express directly to your Swiss address. It typically arrives within 3–5 business days.',
+ a_send_hair_step2: '<strong>Step 2:</strong> Inside the kit, you\'ll find a sterile envelope, clear instructions, a ring size gauge, and a prepaid DHL Express return label addressed to our atelier in Japan.',
+ a_send_hair_step3: '<strong>Step 3:</strong> Place a few strands of hair in the envelope, seal it, attach the label, and drop it at any DHL drop-off location or schedule a pickup. All customs paperwork is pre-completed by us. You don\'t write or arrange anything.',
+ note_send_hair: 'The entire hair return process takes about 5 minutes. We handle all the logistics.',
+ q_ship_all_ch: 'Do you ship throughout Switzerland?',
+ a_ship_all_ch: 'Yes. We ship free via DHL Express to all of Switzerland, including remote Alpine regions. All shipments are DDP — no import duties or customs fees regardless of your location within Switzerland.',
+ q_ring_no_fit: 'What if my ring doesn\'t fit when it arrives?',
+ a_ring_no_fit1: 'We include a ring size gauge in your hair kit specifically so you can confirm your size before production begins. We strongly encourage you to use it — half sizes are available (sizes 1 through 12) and a correct fit from the start saves time for everyone.',
+ a_ring_no_fit2: 'If, after production, your ring doesn\'t fit, resizing may be possible depending on the design (because the sealed chamber is built into the band, not all designs can be resized). If resizing is possible, we\'ll do so at the cost of round-trip shipping between you and Japan — we handle the craftsmanship at no charge. Please contact us as soon as your jewel arrives and before wearing it.',
+ note_ring_no_fit: 'Use the size gauge we send — it\'s the simplest way to ensure a perfect fit from day one.',
+ q_delivery_time: 'How long does delivery take from Japan to Switzerland?',
+ a_delivery_time: 'Once your finished jewel is dispatched from our atelier in Japan, DHL Express typically delivers to Swiss addresses within 3–5 business days. You will receive a DHL tracking number as soon as your order ships so you can follow it every step of the way. DHL delivers throughout Switzerland.',
+ btn_wa_faq: '💬 Message Us on WhatsApp',
+ link_how_order: 'How to Order &rarr;',
+ link_shipping_returns: 'Shipping &amp; Returns &rarr;',
+ link_care_guide: 'Care Guide &rarr;',
+ footer_p: 'Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.',
+ footer_est: 'Est. 2018 · Japan'
  },
  ja: {
  trust_ship: 'スイスへ無料配送',
@@ -683,7 +768,92 @@ footer_p:"Bijoux mémoriaux sur mesure, fabriqués entièrement à la main au Ja
  q_import_duty: 'ジュエルが届く際に輸入関税やカスタム手数料はかかりますか？',
  q_legal_ship: 'スイスから日本へ髪を郵送することは合法ですか？',
  cta_h2: 'ご不明な点はございますか？',
- cta_p: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でお気軽にお問い合わせください。日本語・英語でご対応いたします。通常数時間以内にご返信します。'
+ cta_p: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でお気軽にお問い合わせください。日本語・英語でご対応いたします。通常数時間以内にご返信します。',
+ menu_eyebrow: 'ナビゲーション',
+ menu_home: 'ホーム',
+ menu_collection: 'コレクション',
+ menu_about: 'Rionについて',
+ menu_order: 'ご注文の<em>流れ</em>',
+ menu_sealing: '髪の<em>封入方法</em>',
+ menu_faq: 'よくあるご質問',
+ menu_shipping: '配送・<em>返品について</em>',
+ menu_care: 'お手入れ<em>ガイド</em>',
+ menu_contact: 'お問い合わせ',
+ menu_wa: '💬 WhatsAppでお問い合わせ',
+ sec_hair: '髪・<em>制作工程</em>',
+ q_what_is: 'メモリアルジュエリーとは具体的に何ですか？',
+ a_what_is: 'メモリアルジュエリーとは、大切な方やペットの髪を内部に封入したファインジュエリーです。髪はリングやペンダントの内部に気密封入され、外からは見えませんが、永遠にそのジュエルの一部となります。毎日、どこへ行くときも、大切な方を共に携えることができます。',
+ q_whose_hair: 'どなたの髪を使用できますか？',
+ a_whose_hair1: 'ご両親、お子様、配偶者、祖父母、親しいご友人など、どなたの髪でもご利用いただけます。ペットの毛（犬・猫など）も承っております。',
+ a_whose_hair2: 'すでにお亡くなりになった方の髪はもちろん、ご存命の方の髪も承っております。多くのお客様が、大切な方がまだ共におられるうちに制作され、その繋がりをこれからも携えていくことを選ばれています。始めるのに「早すぎる」「遅すぎる」ということはありません。',
+ note_multi_hair: '複数の方の髪を一つのジュエルに封入することも可能です。お気軽にご相談ください。',
+ q_how_sealed: '髪はどのようにジュエルの中に封入されますか？',
+ a_how_sealed1: 'リングやネックレスの内部に小さな空間を作り、その中に手作業で丁寧に髪を納めます。その後、開口部を同じ素材——K18ゴールドまたはPt900プラチナ——のキャップで封じます。ジュエルは完全に気密・防水状態となり、外見は通常のファインジュエリーと変わりません。髪は見えませんが、いつもそこにあります。',
+ a_how_sealed2: '封入の前・最中・後の様子を撮影し、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>またはメールで写真をお送りします。このフォトレポートはすべてのご注文に無料で含まれています。',
+ q_deteriorate: '髪は時間が経つと劣化しますか？',
+ a_deteriorate: 'いいえ。気密封入は永久に保たれます。髪は非常に耐久性の高い生体材料であり、水分や酸素が存在しない環境では分解されません。封入によりその両方が遮断されているため、Rionのジュエルは一生を通じた日常使用に耐え、世代を超えて受け継いでいただけるよう設計されています。',
+ q_multi_people: '一つのジュエルに複数の方の髪を入れることはできますか？',
+ a_multi_people: 'はい、可能です。お二人以上の方——あるいはご家族とペット——の髪を同じ空間に封入することができます。これはすべての標準シリーズでご利用いただける選択肢で、複数の大切な存在を一つの形で携えたいというご家族に人気です。',
+ note_multi_people: 'お問い合わせの際にあらかじめお知らせいただければ、ご用意いたします。',
+ q_cant_collect: '自分で髪を採取できない場合はどうすればよいですか？',
+ a_cant_collect: 'お亡くなりになった大切な方の髪を採取する際は、葬儀社やホスピス、ご家族にご協力いただける場合が多くあります。ヘアカットの際やブラシに残った髪を保管していたものでも問題ございません。お客様の状況に応じて最適な方法を個別にご案内いたしますので、どうぞお気軽にご相談ください。これまで多くのご家族に寄り添ってまいりました。',
+ sec_jewel: 'ジュエルについて',
+ q_engraving: 'ジュエルに刻印を入れることはできますか？',
+ a_engraving: 'はい。すべてのリングデザインに内側刻印をご利用いただけます（英数字のみ）。お名前、日付、想いの込もった言葉、またはその組み合わせなど、自由にお選びいただけます。刻印はリング内側に施され、外したときにのみ見える位置です。スペースは文字数に含まれません。',
+ note_engraving: '1〜10文字：CHF59 · 11文字目以降：1文字+CHF6 · ご注文確定時にご指定ください。',
+ q_ring_size: 'リングサイズはどのように選びますか？',
+ a_ring_size: 'スイスのご自宅にお送りするヘアコレクションキットにリングサイズゲージを同封しています。ゲージで試していただき、髪をご返送いただく際にサイズをお知らせください。サイズは1号から12号までの標準サイズに対応し、ハーフサイズもご用意しています。すでにサイズをご存知の場合は、ご注文時にお知らせください。',
+ q_resize: 'リングは後でサイズ直しできますか？',
+ a_resize: 'デザインによっては、サイズ直しが可能な場合があります。ただし、封入された髪の空間がリングのバンド部分に組み込まれているため、サイズ直しには日本への返送が必要となり、2〜3ヶ月程度お時間をいただきます。製作前にお送りするゲージで慎重にサイズをご確認いただくことを強くお勧めします。サイズ直しの費用は往復配送料のみで、それ以外は当方で対応いたします。お送りいただく前に、お見積りについてお問い合わせください。',
+ q_daily_wear: 'ジュエルは日常的に着用できますか？',
+ a_daily_wear: 'はい。Rionのジュエルは一生を通じた日常使用を想定して設計されています。気密封入部分は耐水性があり、手洗いや小雨程度であれば問題なくご使用いただけます。水泳、激しい運動、刺激の強い化学物質との接触時には外していただくことをお勧めします。これはファインジュエリー全般に共通する標準的なご案内です。詳しくは<a href="care.html">お手入れガイド</a>をご覧ください。',
+ q_polishing: '永久研磨サービスとは何ですか？',
+ a_polishing: 'すべてのRionのジュエルには、日本のアトリエでの無料永久研磨サービスが含まれています。数年後、数十年後でも、ジュエルをお送りいただければ無料で研磨・修復いたします。お客様にご負担いただくのは日本への往路の配送料のみです。このサービスはすべてのジュエルに永久に適用され、事前登録は不要です。',
+ sec_order: 'ご注文について',
+ q_place_order: 'どのように注文すればよいですか？',
+ a_place_order: 'ご注文はまず<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>、<a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank">InstagramのDM</a>、または<a href="mailto:info@art-rings.com">メール</a>でのご相談から始まります。コレクションをご覧になり、シリーズと素材をお選びいただいた上でお問い合わせください。デザイン、サイズ、刻印、お見積りなど、すべての詳細をスタッフが丁寧にご案内し、ご準備が整いましたら請求書を発行いたします。詳しいステップガイドは<a href="order.html">ご注文の流れ</a>ページをご覧ください。',
+ q_cancel_change: '注文後に取り消しや変更はできますか？',
+ a_cancel_change1: '刻印と誕生石の選択は、製作が始まるまでは変更可能です。デザインと素材は、ご注文確定後は変更できません。',
+ a_cancel_change2: '各ジュエルはお客様専用にお作りするため転売ができず、製作開始後の返金には対応しておりません。詳細は<a href="shipping.html">配送・返品について</a>ページをご覧ください。',
+ a_bespoke: 'はい。標準シリーズにご希望のデザインがない場合、スタッフと一から作り上げる完全オーダーメイドにも対応しております。テンプレートや制限はなく、形状、素材、石の組み合わせも自由です。オーダーメイドはCHF18,900（DDP）から、製作期間は約6ヶ月です。<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>よりお気軽にオーダーメイドのご相談をお始めください。ご相談自体に費用はかかりません。',
+ sec_shipping: '配送・<em>お支払い</em>',
+ q_how_shipped: 'ジュエルはどのように配送されますか？',
+ a_how_shipped: '完成したジュエルはDHL Expressにて日本から発送され、全額保険が適用されます。発送後すぐに追跡番号をお知らせします。製作完了後、日本からスイスへの配送は通常3〜5営業日です。通関手続きはすべてRionが対応いたします。',
+ q_currencies: 'どの通貨・お支払い方法に対応していますか？',
+ a_currencies: 'すべての価格はCHF表示です。クレジットカード（Visa、Mastercard、American Express、Diners Club、JCB——安全なStripe請求リンク経由）および国際銀行振込（SWIFT/wire）に対応しています。製作開始前に全額のお支払いが必要です。',
+ q_return_policy: '返品ポリシーについて教えてください。',
+ a_return_policy1: '各ジュエルはお客様の髪を使用し、ご指定の仕様に基づいて完全に一点ずつお作りするため、製造上の不具合がある場合を除き、返品・交換はお受けできません。',
+ a_return_policy2: '不具合があった場合は、配送費を含め無料で修理または再製作いたします。すべてのジュエルは発送前に厳格な検査を実施しています。詳細は<a href="shipping.html">配送・返品について</a>ページをご覧ください。',
+ q_privacy: '個人情報はどのように保護されますか？',
+ a_privacy: 'お名前、ご住所、大切な方のお名前など、すべての個人情報は厳重な機密として管理し、第三者への提供は一切行いません。私たちが取り扱う仕事の非常に個人的な性質を理解し、すべてのお客様の情報とストーリーを最大限の敬意をもって扱っています。詳細は<a href="legal.html">プライバシーポリシー</a>をご覧ください。',
+ sec_usa: 'スイス在住の<em>お客様へ</em>',
+ badge_ch: 'スイス在住のお客様',
+ a_import_duty1: '<strong>いいえ——一切かかりません。</strong>Rionはスイスへの配送をDDP（関税元払い）条件で行っています。つまり、スイスの輸入関税、通関手数料、その他適用される税金はすべて、発送前にRionが立て替えてお支払い済みです。DHLがジュエルをご自宅にお届けする際、署名やお支払いの必要は一切ありません。そのまま開けていただくだけです。',
+ a_import_duty2: 'ご了承いただいた価格が、そのままお支払い total 額です。それだけです。',
+ note_import_duty: 'DDP——関税元払い。隠れたコストや配達時の予期せぬ請求は一切ありません。',
+ a_legal_ship1: 'はい、完全に合法です。人毛はスイス法において規制物質に該当せず、輸出入の制限対象ではありません。美容業界、医学研究、記念品制作など、DHLやFedExをはじめとする標準的な国際配送業者を通じて、日々世界中で発送されています。',
+ a_legal_ship2: '髪の発送には、返送ラベル付きのDHL Expressをご利用いただきます。通関書類はすべて当方で事前に作成済みです。封をした封筒を最寄りのDHL集荷場所に持参していただくだけで完了します。複雑な手続きや法的な懸念は一切ございません。',
+ note_legal_ship: '髪は通常の非危険物の身の回り品として国際的に合法的に発送されます。制限はありません。',
+ q_send_hair: 'スイスから日本へ髪を送るにはどうすればよいですか？',
+ a_send_hair_intro: 'できるだけ簡単になるようご用意しています。手順は以下の通りです。',
+ a_send_hair_step1: '<strong>ステップ1：</strong>ご注文確定・お支払い完了後、RionヘアコレクションキットをDHL Express便でスイスのご自宅へ直接お送りします。通常3〜5営業日で到着します。',
+ a_send_hair_step2: '<strong>ステップ2：</strong>キットには、滅菌済みの封筒、わかりやすい手順書、リングサイズゲージ、日本のアトリエ宛の返送用DHL Express返送ラベルが同封されています。',
+ a_send_hair_step3: '<strong>ステップ3：</strong>数本の髪を封筒に入れて封をし、ラベルを貼り、最寄りのDHL集荷場所に持参するか集荷を依頼してください。通関書類はすべて当方で事前に作成済みのため、何も書いたり手配したりする必要はありません。',
+ note_send_hair: '髪の返送手続きは、わずか5分程度で完了します。物流面はすべて当方が対応します。',
+ q_ship_all_ch: 'スイス全土に配送可能ですか？',
+ a_ship_all_ch: 'はい。アルプス地方の遠隔地を含むスイス全土へ、DHL Expressにて無料配送しています。すべての配送はDDPのため、スイス国内のどこにお住まいでも輸入関税や通関手数料はかかりません。',
+ q_ring_no_fit: 'リングのサイズが合わなかった場合はどうなりますか？',
+ a_ring_no_fit1: 'ヘアキットには、製作前にサイズをご確認いただけるよう専用のリングサイズゲージを同封しています。ぜひご活用ください——ハーフサイズも含め1号から12号までご用意しており、最初に正しいサイズをご確認いただくことで、双方の時間の節約にもつながります。',
+ a_ring_no_fit2: '製作後にサイズが合わなかった場合、デザインによってはサイズ直しが可能です（封入された空間がバンドに内蔵されているため、すべてのデザインでサイズ直しができるわけではありません）。サイズ直しが可能な場合は、お客様と日本の間の往復配送料のみご負担いただき、職人による作業費は無料で対応いたします。ジュエルがお手元に届きましたら、着用前にできるだけ早くご連絡ください。',
+ note_ring_no_fit: 'お送りするサイズゲージをご活用いただくことが、最初から最適な着け心地を得る最も簡単な方法です。',
+ q_delivery_time: '日本からスイスまでの配送にはどのくらい時間がかかりますか？',
+ a_delivery_time: '完成したジュエルが日本のアトリエから発送されると、DHL Expressにより通常3〜5営業日でスイスのご自宅にお届けします。発送後すぐにDHLの追跡番号をお知らせしますので、配送状況をいつでもご確認いただけます。DHLはスイス全土に配送しております。',
+ btn_wa_faq: '💬 WhatsAppでお問い合わせ',
+ link_how_order: 'ご注文の流れ &rarr;',
+ link_shipping_returns: '配送・返品について &rarr;',
+ link_care_guide: 'お手入れガイド &rarr;',
+ footer_p: '日本で完全ハンドメイドのオーダーメイドメモリアルジュエリー。一本の髪。一つのジュエル。あなたのための、永遠の愛。',
+ footer_est: '2018年創業 · 日本'
  }
 };
 function setLang(l){
