@@ -285,7 +285,7 @@ window._loadPixel();
   <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
   <div class="menu-inner">
     <div>
-      <span class="menu-eyebrow">Navigation</span>
+      <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
       <nav class="menu-links">
         <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
         <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
@@ -299,7 +299,7 @@ window._loadPixel();
       </nav>
     </div>
     <div class="menu-footer">
-      <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+      <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_wa">💬 Message Us on WhatsApp</a>
     </div>
   </div>
 </div>
@@ -566,41 +566,41 @@ window._loadPixel();
   <div class="footer-grid">
     <div class="footer-col footer-brand">
       <a href="index.html" class="footer-logo">Rion</a>
-      <p>Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
-      <p class="footer-est">Est. 2018 · Japan</p>
+      <p data-i18n="footer_tagline">Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
+      <p class="footer-est" data-i18n="footer_est">Est. 2018 · Japan</p>
     </div>
     <div class="footer-col">
-      <h5>Explore</h5>
+      <h5 data-i18n="footer_explore">Explore</h5>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="collection.html">Collection</a></li>
-        <li><a href="about.html">About Rion</a></li>
-        <li><a href="order.html">How to Order</a></li>
-        <li><a href="sealing.html">How Hair Is Sealed</a></li>
+        <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+        <li><a href="collection.html" data-i18n="footer_collection">Collection</a></li>
+        <li><a href="about.html" data-i18n="footer_about">About Rion</a></li>
+        <li><a href="order.html" data-i18n="footer_order">How to Order</a></li>
+        <li><a href="sealing.html" data-i18n="footer_sealing">How Hair Is Sealed</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Help</h5>
+      <h5 data-i18n="footer_help">Help</h5>
       <ul>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="care.html">Care Guide</a></li>
-        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
-        <li><a href="legal.html">Legal &amp; Privacy</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="faq.html" data-i18n="footer_faq">FAQ</a></li>
+        <li><a href="care.html" data-i18n="footer_care">Care Guide</a></li>
+        <li><a href="shipping.html" data-i18n="footer_shipping">Shipping &amp; Returns</a></li>
+        <li><a href="legal.html" data-i18n="footer_legal">Legal &amp; Privacy</a></li>
+        <li><a href="index.html#contact" data-i18n="footer_contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Connect</h5>
+      <h5 data-i18n="footer_connect">Connect</h5>
       <div class="footer-social">
-        <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
-        <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
-        <a href="index.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
+        <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">💬</span><span data-i18n="footer_wa">WhatsApp</span></a>
+        <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span><span data-i18n="footer_ig">Instagram</span></a>
+        <a href="index.html#contact"><span class="footer-social-ico">✉</span><span data-i18n="footer_enquiry">Send Enquiry</span></a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — No import duties for US customers</div>
-    <div class="footer-right">Est. 2018 · Japan</div>
+    <div class="footer-copy" data-i18n="footer_copy">© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — No import duties for US customers</div>
+    <div class="footer-right" data-i18n="footer_right">Est. 2018 · Japan</div>
   </div>
 </footer>
 
@@ -661,7 +661,14 @@ const T = {
     pay_sched_title:'Payment Schedule',
     pay1_label:'Full payment — before production begins',pay1_note:'Invoice issued after design approval',
     pay2_label:'US Import Duties &amp; Customs Fees',pay2_note:'Prepaid by Rion — included in all DDP prices',pay2_pct:'Included',
-    pay3_label:'Shipping — kit &amp; finished jewel',pay3_note:'USPS for the hair kit + DHL Express for the finished jewel — both free',pay3_pct:'Included'
+    pay3_label:'Shipping — kit &amp; finished jewel',pay3_note:'USPS for the hair kit + DHL Express for the finished jewel — both free',pay3_pct:'Included',
+    menu_eyebrow:'Navigation',menu_wa:'💬 Message Us on WhatsApp',
+    footer_tagline:'Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.',footer_est:'Est. 2018 · Japan',
+    footer_explore:'Explore',footer_home:'Home',footer_collection:'Collection',footer_about:'About Rion',footer_order:'How to Order',footer_sealing:'How Hair Is Sealed',
+    footer_help:'Help',footer_faq:'FAQ',footer_care:'Care Guide',footer_shipping:'Shipping &amp; Returns',footer_legal:'Legal &amp; Privacy',footer_contact:'Contact',
+    footer_connect:'Connect',footer_wa:'WhatsApp',footer_ig:'Instagram',footer_enquiry:'Send Enquiry',
+    footer_copy:'© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — No import duties for US customers',footer_right:'Est. 2018 · Japan',
+    cookie_title:'Cookie Notice',cookie_desc:'This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.',cookie_decline:'Decline',cookie_accept:'Accept'
   },
   ja: {
     nav_order:'ご注文',
@@ -694,7 +701,14 @@ const T = {
     pay_sched_title:'お支払いスケジュール',
     pay1_label:'全額お支払い — 製作開始前',pay1_note:'デザイン承認後に請求書を発行します',
     pay2_label:'米国輸入関税・通関費用',pay2_note:'Rionが事前負担 — すべてのDDP価格に含まれます',pay2_pct:'含む',
-    pay3_label:'配送費用（キット＋完成品）',pay3_note:'ヘアキットはUSPS、完成したジュエルはDHL Expressで配送 — いずれも無料',pay3_pct:'含む'
+    pay3_label:'配送費用（キット＋完成品）',pay3_note:'ヘアキットはUSPS、完成したジュエルはDHL Expressで配送 — いずれも無料',pay3_pct:'含む',
+    menu_eyebrow:'ナビゲーション',menu_wa:'💬 WhatsAppでメッセージ',
+    footer_tagline:'日本で完全に手作りされたオーダーメイドの追悼ジュエリー。一本の髪。一つのジュエル。ひとつの愛――永遠にあなたのもの。',footer_est:'創業2018年 · 日本',
+    footer_explore:'探索',footer_home:'ホーム',footer_collection:'コレクション',footer_about:'Rionについて',footer_order:'ご注文方法',footer_sealing:'封入方法',
+    footer_help:'ヘルプ',footer_faq:'よくある質問',footer_care:'お手入れ方法',footer_shipping:'配送・返品',footer_legal:'法律・プライバシー',footer_contact:'お問い合わせ',
+    footer_connect:'お問い合わせ',footer_wa:'WhatsApp',footer_ig:'Instagram',footer_enquiry:'お問い合わせを送る',
+    footer_copy:'© 2026 Rion™ · My Art Inc. · 日本製100% · DDP — 米国のお客様の輸入関税なし',footer_right:'創業2018年 · 日本',
+    cookie_title:'クッキーに関する通知',cookie_desc:'当サイトでは分析目的でのみGoogleアナリティクスを使用しています。広告クッキーは使用していません。詳細は<a href="legal.html#privacy">プライバシーポリシー</a>をご覧ください。',cookie_decline:'拒否',cookie_accept:'同意する'
   }
 };
 function setLang(l){
@@ -713,12 +727,12 @@ function setLang(l){
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
- <strong>Cookie Notice</strong>
- <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <strong data-i18n="cookie_title">Cookie Notice</strong>
+ <span data-i18n="cookie_desc">This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
- <button class="cookie-btn" onclick="declineCookies()">Decline</button>
- <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+ <button class="cookie-btn" onclick="declineCookies()" data-i18n="cookie_decline">Decline</button>
+ <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()" data-i18n="cookie_accept">Accept</button>
  </div>
 </div>
 <script>
