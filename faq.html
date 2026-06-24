@@ -81,6 +81,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .faq-section{padding:4rem 6rem;max-width:1100px;margin:0 auto}
 .faq-section-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:2rem;padding-bottom:1rem;border-bottom:0.5px solid var(--border)}
 .faq-section-title em{font-style:italic;color:var(--gold-dark)}
+.faq-section-alt{background:#F7F3EC;max-width:100%;padding:4rem 0}
+.faq-section-alt-inner{max-width:1100px;margin:0 auto;padding:0 6rem}
 
 /* ACCORDION */
 .faq-item{border-bottom:0.5px solid var(--border)}
@@ -159,6 +161,8 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   footer{padding:3rem 1.5rem 1.5rem}
   .footer-grid{grid-template-columns:1fr;gap:2.5rem;margin-bottom:2rem}
   .footer-bottom{flex-direction:column;align-items:flex-start;gap:0.5rem}
+  .faq-section-alt{padding:2.5rem 0}
+  .faq-section-alt-inner{padding:0 2rem}
 }
 @media(max-width:768px){.scroll-top{display:none!important}.trust-strip{display:none}}
 </style>
@@ -354,8 +358,8 @@ window._loadPixel();
 </section>
 
 <!-- THE JEWEL -->
-<section class="faq-section" data-cat="jewel" style="background:#F7F3EC;max-width:100%;padding:4rem 0">
-  <div style="max-width:1100px;margin:0 auto;padding:0 6rem">
+<section class="faq-section faq-section-alt" data-cat="jewel">
+  <div class="faq-section-alt-inner">
   <h2 class="faq-section-title" data-i18n="sec_jewel">The <em>Jewel</em></h2>
 
   <div class="faq-item">
@@ -456,8 +460,8 @@ window._loadPixel();
 </section>
 
 <!-- SHIPPING & PAYMENT -->
-<section class="faq-section" data-cat="shipping" style="background:#F7F3EC;max-width:100%;padding:4rem 0">
-  <div style="max-width:1100px;margin:0 auto;padding:0 6rem">
+<section class="faq-section faq-section-alt" data-cat="shipping">
+  <div class="faq-section-alt-inner">
   <h2 class="faq-section-title" data-i18n="sec_shipping">Shipping &amp; <em>Payment</em></h2>
 
   <div class="faq-item">
