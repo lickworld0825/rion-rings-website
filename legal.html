@@ -230,7 +230,7 @@ window._loadPixel();
 <nav>
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
-    <a href="collection.html" class="nav-cta">Order Now</a>
+    <a href="collection.html" class="nav-cta" data-i18n="nav_cta">Order Now</a>
     <div class="lang-switch">
       <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
       <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
@@ -246,21 +246,21 @@ window._loadPixel();
   <button class="menu-close" aria-label="Close menu" onclick="closeMenu()"></button>
   <div class="menu-inner">
     <div>
-      <span class="menu-eyebrow">Navigation</span>
+      <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span>Our <em>Heritage</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span>Legal &amp; <em>Privacy</em></span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
+        <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
+        <a href="legal.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
       </nav>
     </div>
     <div class="menu-footer">
-      <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">&#128172; Message Us on WhatsApp</a>
+      <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_cta">&#128172; Message Us on WhatsApp</a>
     </div>
   </div>
 </div>
@@ -291,25 +291,25 @@ window._loadPixel();
 
 <!-- 1. BUSINESS INFORMATION -->
 <section class="legal-section" id="business">
-  <span class="section-eyebrow">Section 1</span>
+  <span class="section-eyebrow" data-i18n="s1_eyebrow">Section 1</span>
   <h2 data-i18n="s1_h2">Business <em>Information</em></h2>
   <p class="section-intro" data-i18n="s1_intro">Rion is a registered brand operated by My Art Inc., based in Hiroshima, Japan. All bespoke memorial jewelry is handcrafted at our Japanese atelier and shipped directly to you in the United States.</p>
 
   <table class="info-table">
     <tr><th data-i18n="th_company">Company Name</th><td>My Art Inc.</td></tr>
     <tr><th data-i18n="th_brand">Brand Name</th><td>Rion</td></tr>
-    <tr><th data-i18n="th_address">Registered Address</th><td>&#12306;733-0801<br>20-3 Shinjo-cho, Nishi-ku, Hiroshima, Japan</td></tr>
+    <tr><th data-i18n="th_address">Registered Address</th><td data-i18n="td_address">&#12306;733-0801<br>20-3 Shinjo-cho, Nishi-ku, Hiroshima, Japan</td></tr>
     <tr><th data-i18n="th_email">Email</th><td><a href="mailto:info@art-rings.com">info@art-rings.com</a></td></tr>
     <tr><th><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a></th><td><a href="https://wa.me/819054621246" target="_blank">wa.me/819054621246</a></td></tr>
-    <tr><th data-i18n="th_hours">Business Hours</th><td>9:00 – 19:00 JST (Japan Standard Time)<br><span style="font-size:0.82rem;color:var(--ink-muted)" data-i18n="th_hours_note">Out-of-hours responses also available via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a></span></td></tr>
-    <tr><th data-i18n="th_founded">Founded</th><td>2018, Hiroshima, Japan</td></tr>
+    <tr><th data-i18n="th_hours">Business Hours</th><td><span data-i18n="td_hours">9:00 – 19:00 JST (Japan Standard Time)</span><br><span style="font-size:0.82rem;color:var(--ink-muted)" data-i18n="th_hours_note">Out-of-hours responses also available via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a></span></td></tr>
+    <tr><th data-i18n="th_founded">Founded</th><td data-i18n="td_founded">2018, Hiroshima, Japan</td></tr>
     <tr><th data-i18n="th_business">Business</th><td data-i18n="td_business">Design, manufacture, and international sale of bespoke memorial jewelry (hair-sealed) in K18 gold and Pt900 platinum.</td></tr>
   </table>
 </section>
 
 <!-- 2. COMMERCIAL DISCLOSURE -->
 <section class="legal-section" id="commercial">
-  <span class="section-eyebrow">Section 2</span>
+  <span class="section-eyebrow" data-i18n="s2_eyebrow">Section 2</span>
   <h2 data-i18n="s2_h2">Commercial <em>Disclosure</em></h2>
   <p class="section-intro" data-i18n="s2_intro">Required disclosure under Japan's Act on Specified Commercial Transactions (特定商取引法). As a Japanese seller shipping internationally, this disclosure applies to all orders. US consumers retain applicable federal and state consumer protection rights.</p>
 
@@ -317,130 +317,130 @@ window._loadPixel();
     <tr><th data-i18n="th_seller">Seller</th><td data-i18n="td_seller">My Art Inc. — see Business Information above</td></tr>
     <tr>
       <th data-i18n="th_price">Sales Price</th>
-      <td>Each piece is priced individually in <strong>USD</strong>. Prices displayed on the Collection page are exclusive of any applicable state sales tax. Price range: <strong>$4,700 – $20,000+</strong> depending on design and material.</td>
+      <td data-i18n="td_price">Each piece is priced individually in <strong>USD</strong>. Prices displayed on the Collection page are exclusive of any applicable state sales tax. Price range: <strong>$4,700 – $20,000+</strong> depending on design and material.</td>
     </tr>
     <tr>
       <th data-i18n="th_tax">Sales Tax</th>
       <td>
-        Prices shown are in USD and do not include applicable US state sales tax. Where required by law, sales tax will be calculated based on your delivery address and added to your Stripe invoice before payment is due.
-        <div class="stripe-note" style="margin-top:0.6rem">Tax collection is handled automatically by Stripe Tax. The applicable rate depends on your state and local jurisdiction. You will see the tax amount clearly on your invoice before paying.</div>
+        <span data-i18n="td_tax">Prices shown are in USD and do not include applicable US state sales tax. Where required by law, sales tax will be calculated based on your delivery address and added to your Stripe invoice before payment is due.</span>
+        <div class="stripe-note" style="margin-top:0.6rem" data-i18n="td_tax_note">Tax collection is handled automatically by Stripe Tax. The applicable rate depends on your state and local jurisdiction. You will see the tax amount clearly on your invoice before paying.</div>
       </td>
     </tr>
     <tr>
       <th data-i18n="th_fees">Additional Fees</th>
       <td>
-        None on standard orders. Optional add-ons:
+        <span data-i18n="td_fees_intro">None on standard orders. Optional add-ons:</span>
         <ul>
-          <li>Engraving: +$65 for 1–10 characters; +$7 per character thereafter</li>
-          <li>Birthstone setting: +$25 per stone</li>
+          <li data-i18n="td_fees_li1">Engraving: +$65 for 1–10 characters; +$7 per character thereafter</li>
+          <li data-i18n="td_fees_li2">Birthstone setting: +$25 per stone</li>
         </ul>
-        International bank transfer fees, if applicable, are borne by the customer.
+        <span data-i18n="td_fees_note">International bank transfer fees, if applicable, are borne by the customer.</span>
       </td>
     </tr>
     <tr>
       <th data-i18n="th_payment">Payment Methods</th>
       <td>
         <ul>
-          <li>Credit card (Visa · Mastercard · American Express · Diners Club · JCB) via secure Stripe invoice link</li>
-          <li>Bank transfer (USD or JPY accepted)</li>
+          <li data-i18n="td_payment_li1">Credit card (Visa · Mastercard · American Express · Diners Club · JCB) via secure Stripe invoice link</li>
+          <li data-i18n="td_payment_li2">Bank transfer (USD or JPY accepted)</li>
         </ul>
-        <div class="stripe-note">Card data goes directly to Stripe's servers (PCI-DSS Level 1 certified). Rion never stores or accesses your card number.</div>
+        <div class="stripe-note" data-i18n="td_payment_note">Card data goes directly to Stripe's servers (PCI-DSS Level 1 certified). Rion never stores or accesses your card number.</div>
       </td>
     </tr>
     <tr><th data-i18n="th_pay_timing">Payment Timing</th><td data-i18n="td_pay_timing">Invoice issued after design approval. Full payment required before production begins.</td></tr>
-    <tr><th data-i18n="th_delivery">Delivery Timing</th><td>Approximately <strong>5.5 months</strong> from order confirmation — including hair collection kit dispatch, your return of the hair, crafting at our Japanese atelier, and international shipping.</td></tr>
+    <tr><th data-i18n="th_delivery">Delivery Timing</th><td data-i18n="td_delivery">Approximately <strong>5.5 months</strong> from order confirmation — including hair collection kit dispatch, your return of the hair, crafting at our Japanese atelier, and international shipping.</td></tr>
     <tr>
       <th data-i18n="th_shipping">Shipping &amp; Duties</th>
-      <td><strong>Free insured DHL Express to all US addresses.</strong> No import duties or customs fees — these are prepaid by Rion. You will not be charged anything on delivery.</td>
+      <td data-i18n="td_shipping"><strong>Free insured DHL Express to all US addresses.</strong> No import duties or customs fees — these are prepaid by Rion. You will not be charged anything on delivery.</td>
     </tr>
     <tr>
       <th data-i18n="th_returns">Returns &amp; Refunds</th>
-      <td><strong>Returns are not accepted once production has begun.</strong> Each piece is made entirely to your personal specifications using your hair — custom-made goods are exempt from standard return rights under applicable US and Japanese law. In the event of a manufacturing defect on our part, we will remake the piece at no charge. Refunds are not offered in place of a remake.</td>
+      <td data-i18n="td_returns"><strong>Returns are not accepted once production has begun.</strong> Each piece is made entirely to your personal specifications using your hair — custom-made goods are exempt from standard return rights under applicable US and Japanese law. In the event of a manufacturing defect on our part, we will remake the piece at no charge. Refunds are not offered in place of a remake.</td>
     </tr>
     <tr>
-      <th>Defect Policy</th>
-      <td>Notify us within 3 days of receipt with photographs via <strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or <a href="mailto:info@art-rings.com">email</a></strong>. We will remake the piece at no charge for confirmed manufacturing defects.</td>
+      <th data-i18n="th_defect">Defect Policy</th>
+      <td data-i18n="td_defect">Notify us within 3 days of receipt with photographs via <strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or <a href="mailto:info@art-rings.com">email</a></strong>. We will remake the piece at no charge for confirmed manufacturing defects.</td>
     </tr>
     <tr>
-      <th>Lifetime Service</th>
-      <td>Complimentary lifetime polishing at our Japanese atelier. Customer is responsible for round-trip shipping costs. Major repairs are quoted privately.</td>
+      <th data-i18n="th_lifetime">Lifetime Service</th>
+      <td data-i18n="td_lifetime">Complimentary lifetime polishing at our Japanese atelier. Customer is responsible for round-trip shipping costs. Major repairs are quoted privately.</td>
     </tr>
     <tr>
-      <th>Force Majeure</th>
-      <td>Delays caused by natural disasters, war, pandemics, customs disruptions, or other events beyond our control are not Rion's responsibility. We will communicate any delays promptly. Delivery dates may be extended by mutual agreement.</td>
+      <th data-i18n="th_force">Force Majeure</th>
+      <td data-i18n="td_force">Delays caused by natural disasters, war, pandemics, customs disruptions, or other events beyond our control are not Rion's responsibility. We will communicate any delays promptly. Delivery dates may be extended by mutual agreement.</td>
     </tr>
     <tr>
-      <th>Price Changes</th>
-      <td>Prices may change without notice due to material costs or currency fluctuations. Orders confirmed and paid before any price change are unaffected.</td>
+      <th data-i18n="th_pricechg">Price Changes</th>
+      <td data-i18n="td_pricechg">Prices may change without notice due to material costs or currency fluctuations. Orders confirmed and paid before any price change are unaffected.</td>
     </tr>
     <tr>
-      <th>Governing Law</th>
-      <td>This contract is governed by the laws of Japan. US consumers retain applicable federal and state consumer protection rights. Disputes are resolved first via good-faith negotiation; failing that, the courts of Hiroshima, Japan have jurisdiction unless applicable US consumer law requires otherwise.</td>
+      <th data-i18n="th_law">Governing Law</th>
+      <td data-i18n="td_law">This contract is governed by the laws of Japan. US consumers retain applicable federal and state consumer protection rights. Disputes are resolved first via good-faith negotiation; failing that, the courts of Hiroshima, Japan have jurisdiction unless applicable US consumer law requires otherwise.</td>
     </tr>
   </table>
 </section>
 
 <!-- 3. PRIVACY POLICY -->
 <section class="legal-section" id="privacy">
-  <span class="section-eyebrow">Section 3</span>
+  <span class="section-eyebrow" data-i18n="s3_eyebrow">Section 3</span>
   <h2 data-i18n="s3_h2">Privacy <em>Policy</em></h2>
   <p class="section-intro" data-i18n="s3_intro">My Art Inc. (Rion) is committed to protecting your personal information. We operate under Japan's Act on the Protection of Personal Information (個人情報保護法 / APPI). California residents have additional rights under the California Consumer Privacy Act (CCPA) — see section 6 below.</p>
 
   <div class="privacy-block">
     <h3 data-i18n="priv1_h">1. Information We Collect</h3>
-    <p>For each order, we collect:</p>
+    <p data-i18n="priv1_p">For each order, we collect:</p>
     <ul>
-      <li>Name, US shipping address, phone number, email address (or <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> number)</li>
-      <li>Hair provided by you for sealing inside the jewel</li>
-      <li>Payment confirmation details — we do not store card numbers (processed by Stripe)</li>
-      <li>Photographs of the hair sealing process (shared with you; retained as production records)</li>
-      <li>Communication records via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email</li>
+      <li data-i18n="priv1_li1">Name, US shipping address, phone number, email address (or <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> number)</li>
+      <li data-i18n="priv1_li2">Hair provided by you for sealing inside the jewel</li>
+      <li data-i18n="priv1_li3">Payment confirmation details — we do not store card numbers (processed by Stripe)</li>
+      <li data-i18n="priv1_li4">Photographs of the hair sealing process (shared with you; retained as production records)</li>
+      <li data-i18n="priv1_li5">Communication records via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email</li>
     </ul>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv2_h">2. How We Use Your Information</h3>
     <ul>
-      <li>Manufacture and deliver your bespoke memorial jewel</li>
-      <li>Send you photo reports of the production process</li>
-      <li>Handle DHL shipping and US customs documentation</li>
-      <li>Issue invoices and process payments</li>
-      <li>Provide aftercare (lifetime polishing service)</li>
-      <li>Respond to your inquiries</li>
+      <li data-i18n="priv2_li1">Manufacture and deliver your bespoke memorial jewel</li>
+      <li data-i18n="priv2_li2">Send you photo reports of the production process</li>
+      <li data-i18n="priv2_li3">Handle DHL shipping and US customs documentation</li>
+      <li data-i18n="priv2_li4">Issue invoices and process payments</li>
+      <li data-i18n="priv2_li5">Provide aftercare (lifetime polishing service)</li>
+      <li data-i18n="priv2_li6">Respond to your inquiries</li>
     </ul>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv3_h">3. Third-Party Sharing</h3>
-    <p>We share your information only with:</p>
+    <p data-i18n="priv3_p">We share your information only with:</p>
     <ul>
-      <li><strong>DHL Express</strong> — for international shipping and US customs (name, address, phone)</li>
-      <li><strong>Stripe</strong> (PCI-DSS Level 1 certified payment processor) — card data goes directly to Stripe's servers; Rion never stores or accesses your card number</li>
-      <li><strong>Our Japanese artisans</strong> — for production only (first name and order details only; no full address shared)</li>
+      <li data-i18n="priv3_li1"><strong>DHL Express</strong> — for international shipping and US customs (name, address, phone)</li>
+      <li data-i18n="priv3_li2"><strong>Stripe</strong> (PCI-DSS Level 1 certified payment processor) — card data goes directly to Stripe's servers; Rion never stores or accesses your card number</li>
+      <li data-i18n="priv3_li3"><strong>Our Japanese artisans</strong> — for production only (first name and order details only; no full address shared)</li>
     </ul>
-    <p style="margin-top:0.75rem">We never sell, rent, or share your personal information for marketing purposes.</p>
+    <p style="margin-top:0.75rem" data-i18n="priv3_p2">We never sell, rent, or share your personal information for marketing purposes.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv4_h">4. Hair Handling</h3>
-    <p>Your hair is treated with the utmost care and respect. Any excess hair remaining after sealing is returned to you with the finished piece in a dedicated container. Nothing is ever discarded.</p>
+    <p data-i18n="priv4_p">Your hair is treated with the utmost care and respect. Any excess hair remaining after sealing is returned to you with the finished piece in a dedicated container. Nothing is ever discarded.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv5_h">5. Photography &amp; Image Rights</h3>
-    <p>Photographs taken during the sealing process and of the finished piece are copyright My Art Inc. They are shared with you as part of your personal photo report. <strong>You may share these photos on personal social media</strong> with attribution to Rion (@rion.rings_official). Commercial use requires prior written consent from Rion.</p>
+    <p data-i18n="priv5_p">Photographs taken during the sealing process and of the finished piece are copyright My Art Inc. They are shared with you as part of your personal photo report. <strong>You may share these photos on personal social media</strong> with attribution to Rion (@rion.rings_official). Commercial use requires prior written consent from Rion.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv6_h">6. California Residents — CCPA Rights</h3>
-    <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):</p>
+    <p data-i18n="priv6_p">If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):</p>
     <ul>
-      <li><strong>Right to Know:</strong> You may request details about the personal information we collect, use, and share</li>
-      <li><strong>Right to Delete:</strong> You may request deletion of your personal information (subject to legal retention requirements)</li>
-      <li><strong>Right to Opt Out of Sale:</strong> We do not sell personal information — this right is already honored</li>
-      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA right</li>
+      <li data-i18n="priv6_li1"><strong>Right to Know:</strong> You may request details about the personal information we collect, use, and share</li>
+      <li data-i18n="priv6_li2"><strong>Right to Delete:</strong> You may request deletion of your personal information (subject to legal retention requirements)</li>
+      <li data-i18n="priv6_li3"><strong>Right to Opt Out of Sale:</strong> We do not sell personal information — this right is already honored</li>
+      <li data-i18n="priv6_li4"><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA right</li>
     </ul>
-    <div class="ccpa-note">
+    <div class="ccpa-note" data-i18n="priv6_note">
       <strong>California Privacy Contact</strong>
       To exercise your CCPA rights, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> (wa.me/819054621246) or at our registered address above. We will respond within 45 days as required by law.
     </div>
@@ -448,39 +448,39 @@ window._loadPixel();
 
   <div class="privacy-block">
     <h3 data-i18n="priv7_h">7. International Data Transfer (US &rarr; Japan)</h3>
-    <p>Your personal information is stored and processed at our atelier in Japan. By placing an order, you consent to the international transfer of your data from the United States to Japan. Japan's Act on the Protection of Personal Information (APPI) provides substantial safeguards equivalent to leading international privacy standards.</p>
+    <p data-i18n="priv7_p">Your personal information is stored and processed at our atelier in Japan. By placing an order, you consent to the international transfer of your data from the United States to Japan. Japan's Act on the Protection of Personal Information (APPI) provides substantial safeguards equivalent to leading international privacy standards.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv8_h">8. Data Retention</h3>
-    <p>Order records (including sealing process photographs) are retained for 10 years for warranty and aftercare purposes. You may request earlier deletion in writing, subject to legal retention requirements.</p>
+    <p data-i18n="priv8_p">Order records (including sealing process photographs) are retained for 10 years for warranty and aftercare purposes. You may request earlier deletion in writing, subject to legal retention requirements.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv9_h">9. Your Rights (All Users)</h3>
-    <p>You have the right to:</p>
+    <p data-i18n="priv9_p">You have the right to:</p>
     <ul>
-      <li>Access the personal information we hold about you</li>
-      <li>Correct or update inaccurate information</li>
-      <li>Request deletion of your data (subject to legal retention requirements)</li>
-      <li>Withdraw consent for processing (where applicable)</li>
+      <li data-i18n="priv9_li1">Access the personal information we hold about you</li>
+      <li data-i18n="priv9_li2">Correct or update inaccurate information</li>
+      <li data-i18n="priv9_li3">Request deletion of your data (subject to legal retention requirements)</li>
+      <li data-i18n="priv9_li4">Withdraw consent for processing (where applicable)</li>
     </ul>
-    <p style="margin-top:0.75rem">To exercise these rights, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email.</p>
+    <p style="margin-top:0.75rem" data-i18n="priv9_p2">To exercise these rights, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv10_h">10. Security</h3>
-    <p>We use industry-standard security measures including HTTPS, encrypted communications, and access-limited internal systems. Hair and physical orders are stored in our secured Japanese atelier.</p>
+    <p data-i18n="priv10_p">We use industry-standard security measures including HTTPS, encrypted communications, and access-limited internal systems. Hair and physical orders are stored in our secured Japanese atelier.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv11_h">11. Cookies &amp; Analytics</h3>
-    <p>Our website uses Google Analytics to understand how visitors use our site, and essential cookies for language preferences. We do not use third-party advertising or tracking cookies.</p>
+    <p data-i18n="priv11_p">Our website uses Google Analytics to understand how visitors use our site, and essential cookies for language preferences. We do not use third-party advertising or tracking cookies.</p>
   </div>
 
   <div class="privacy-block">
     <h3 data-i18n="priv12_h">12. Contact for Privacy Concerns</h3>
-    <p>For any privacy-related questions or requests, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> (<a href="https://wa.me/819054621246" target="_blank">wa.me/819054621246</a>) or at our registered address listed in Section 1 above.</p>
+    <p data-i18n="priv12_p">For any privacy-related questions or requests, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> (<a href="https://wa.me/819054621246" target="_blank">wa.me/819054621246</a>) or at our registered address listed in Section 1 above.</p>
   </div>
 
   <p class="last-updated" data-i18n="last_updated">Last updated: June 2026</p>
@@ -490,37 +490,37 @@ window._loadPixel();
 <section class="cta-section">
   <h2 data-i18n="cta_h2">Questions about our <em>policies?</em></h2>
   <p data-i18n="cta_p">We're happy to clarify anything above. Reach us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond in English and Japanese, typically within a few hours.</p>
-  <a href="https://wa.me/819054621246" class="btn-wa" target="_blank">&#128172; Message Us on WhatsApp</a>
+  <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_btn">&#128172; Message Us on WhatsApp</a>
 </section>
 
 <footer>
   <div class="footer-grid">
     <div class="footer-col footer-brand">
       <a href="index.html" class="footer-logo">Rion</a>
-      <p>Bespoke memorial jewelry, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
-      <p class="footer-est">Est. 2018 · Japan</p>
+      <p data-i18n="footer_brand_p">Bespoke memorial jewelry, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.</p>
+      <p class="footer-est" data-i18n="footer_est">Est. 2018 · Japan</p>
     </div>
     <div class="footer-col">
-      <h5>Explore</h5>
+      <h5 data-i18n="footer_explore">Explore</h5>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="collection.html">Collection</a></li>
-        <li><a href="heritage.html">Our Heritage</a></li>
-        <li><a href="index.html#process">How It Works</a></li>
+        <li><a href="index.html" data-i18n="footer_home">Home</a></li>
+        <li><a href="collection.html" data-i18n="footer_collection">Collection</a></li>
+        <li><a href="heritage.html" data-i18n="footer_heritage">Our Heritage</a></li>
+        <li><a href="index.html#process" data-i18n="footer_how">How It Works</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Help</h5>
+      <h5 data-i18n="footer_help">Help</h5>
       <ul>
-        <li><a href="order.html">How to Order</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="care.html">Care Guide</a></li>
-        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
-        <li><a href="legal.html">Legal &amp; Privacy</a></li>
+        <li><a href="order.html" data-i18n="footer_order">How to Order</a></li>
+        <li><a href="faq.html" data-i18n="footer_faq">FAQ</a></li>
+        <li><a href="care.html" data-i18n="footer_care">Care Guide</a></li>
+        <li><a href="shipping.html" data-i18n="footer_shipping">Shipping &amp; Returns</a></li>
+        <li><a href="legal.html" data-i18n="footer_legal">Legal &amp; Privacy</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Connect</h5>
+      <h5 data-i18n="footer_connect">Connect</h5>
       <div class="footer-social">
         <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">&#128172;</span>WhatsApp</a>
         <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">&#9672;</span>Instagram</a>
@@ -528,8 +528,8 @@ window._loadPixel();
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">&#169; 2026 Rion&#8482; &middot; My Art Inc. &middot; 100% Made in Japan &middot; Free US Shipping &middot; No Import Duties · Sales Tax May Apply</div>
-    <div class="footer-right">Est. 2018 &middot; Japan &middot; USA</div>
+    <div class="footer-copy" data-i18n="footer_copy">&#169; 2026 Rion&#8482; &middot; My Art Inc. &middot; 100% Made in Japan &middot; Free US Shipping &middot; No Import Duties · Sales Tax May Apply</div>
+    <div class="footer-right" data-i18n="footer_right">Est. 2018 &middot; Japan &middot; USA</div>
   </div>
 </footer>
 
@@ -538,12 +538,12 @@ window._loadPixel();
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
   <div class="cookie-banner-text">
-    <strong>Cookie Notice</strong>
-    <span>This site uses Google Analytics and essential cookies only. We do not use advertising or tracking cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
+    <strong data-i18n="cookie_title">Cookie Notice</strong>
+    <span data-i18n="cookie_text">This site uses Google Analytics and essential cookies only. We do not use advertising or tracking cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
   </div>
   <div class="cookie-banner-actions">
-    <button class="cookie-btn" onclick="declineCookies()">Decline</button>
-    <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-btn" onclick="declineCookies()" data-i18n="cookie_decline">Decline</button>
+    <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()" data-i18n="cookie_accept">Accept</button>
   </div>
 </div>
 
@@ -600,7 +600,105 @@ const T = {
     priv12_h: '12. Contact for Privacy Concerns',
     last_updated: 'Last updated: June 2026',
     cta_h2: 'Questions about our <em>policies?</em>',
-    cta_p: 'We\'re happy to clarify anything above. Reach us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond in English and Japanese, typically within a few hours.'
+    cta_p: 'We\'re happy to clarify anything above. Reach us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond in English and Japanese, typically within a few hours.',
+    nav_cta: 'Order Now',
+    menu_eyebrow: 'Navigation',
+    menu_home: 'Home',
+    menu_collection: 'Collection',
+    menu_heritage: 'Our <em>Heritage</em>',
+    menu_order: 'How to <em>Order</em>',
+    menu_sealing: 'How Hair Is <em>Sealed</em>',
+    menu_faq: 'FAQ',
+    menu_shipping: 'Shipping &amp; <em>Returns</em>',
+    menu_care: 'Care <em>Guide</em>',
+    menu_legal: 'Legal &amp; <em>Privacy</em>',
+    menu_cta: '&#128172; Message Us on WhatsApp',
+    s1_eyebrow: 'Section 1',
+    s2_eyebrow: 'Section 2',
+    s3_eyebrow: 'Section 3',
+    td_address: '&#12306;733-0801<br>20-3 Shinjo-cho, Nishi-ku, Hiroshima, Japan',
+    td_hours: '9:00 – 19:00 JST (Japan Standard Time)',
+    td_founded: '2018, Hiroshima, Japan',
+    td_price: 'Each piece is priced individually in <strong>USD</strong>. Prices displayed on the Collection page are exclusive of any applicable state sales tax. Price range: <strong>$4,700 – $20,000+</strong> depending on design and material.',
+    td_tax: 'Prices shown are in USD and do not include applicable US state sales tax. Where required by law, sales tax will be calculated based on your delivery address and added to your Stripe invoice before payment is due.',
+    td_tax_note: 'Tax collection is handled automatically by Stripe Tax. The applicable rate depends on your state and local jurisdiction. You will see the tax amount clearly on your invoice before paying.',
+    td_fees_intro: 'None on standard orders. Optional add-ons:',
+    td_fees_li1: 'Engraving: +$65 for 1–10 characters; +$7 per character thereafter',
+    td_fees_li2: 'Birthstone setting: +$25 per stone',
+    td_fees_note: 'International bank transfer fees, if applicable, are borne by the customer.',
+    td_payment_li1: 'Credit card (Visa · Mastercard · American Express · Diners Club · JCB) via secure Stripe invoice link',
+    td_payment_li2: 'Bank transfer (USD or JPY accepted)',
+    td_payment_note: 'Card data goes directly to Stripe\'s servers (PCI-DSS Level 1 certified). Rion never stores or accesses your card number.',
+    td_delivery: 'Approximately <strong>5.5 months</strong> from order confirmation — including hair collection kit dispatch, your return of the hair, crafting at our Japanese atelier, and international shipping.',
+    td_shipping: '<strong>Free insured DHL Express to all US addresses.</strong> No import duties or customs fees — these are prepaid by Rion. You will not be charged anything on delivery.',
+    td_returns: '<strong>Returns are not accepted once production has begun.</strong> Each piece is made entirely to your personal specifications using your hair — custom-made goods are exempt from standard return rights under applicable US and Japanese law. In the event of a manufacturing defect on our part, we will remake the piece at no charge. Refunds are not offered in place of a remake.',
+    th_defect: 'Defect Policy',
+    td_defect: 'Notify us within 3 days of receipt with photographs via <strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or <a href="mailto:info@art-rings.com">email</a></strong>. We will remake the piece at no charge for confirmed manufacturing defects.',
+    th_lifetime: 'Lifetime Service',
+    td_lifetime: 'Complimentary lifetime polishing at our Japanese atelier. Customer is responsible for round-trip shipping costs. Major repairs are quoted privately.',
+    th_force: 'Force Majeure',
+    td_force: 'Delays caused by natural disasters, war, pandemics, customs disruptions, or other events beyond our control are not Rion\'s responsibility. We will communicate any delays promptly. Delivery dates may be extended by mutual agreement.',
+    th_pricechg: 'Price Changes',
+    td_pricechg: 'Prices may change without notice due to material costs or currency fluctuations. Orders confirmed and paid before any price change are unaffected.',
+    th_law: 'Governing Law',
+    td_law: 'This contract is governed by the laws of Japan. US consumers retain applicable federal and state consumer protection rights. Disputes are resolved first via good-faith negotiation; failing that, the courts of Hiroshima, Japan have jurisdiction unless applicable US consumer law requires otherwise.',
+    priv1_p: 'For each order, we collect:',
+    priv1_li1: 'Name, US shipping address, phone number, email address (or <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> number)',
+    priv1_li2: 'Hair provided by you for sealing inside the jewel',
+    priv1_li3: 'Payment confirmation details — we do not store card numbers (processed by Stripe)',
+    priv1_li4: 'Photographs of the hair sealing process (shared with you; retained as production records)',
+    priv1_li5: 'Communication records via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email',
+    priv2_li1: 'Manufacture and deliver your bespoke memorial jewel',
+    priv2_li2: 'Send you photo reports of the production process',
+    priv2_li3: 'Handle DHL shipping and US customs documentation',
+    priv2_li4: 'Issue invoices and process payments',
+    priv2_li5: 'Provide aftercare (lifetime polishing service)',
+    priv2_li6: 'Respond to your inquiries',
+    priv3_p: 'We share your information only with:',
+    priv3_li1: '<strong>DHL Express</strong> — for international shipping and US customs (name, address, phone)',
+    priv3_li2: '<strong>Stripe</strong> (PCI-DSS Level 1 certified payment processor) — card data goes directly to Stripe\'s servers; Rion never stores or accesses your card number',
+    priv3_li3: '<strong>Our Japanese artisans</strong> — for production only (first name and order details only; no full address shared)',
+    priv3_p2: 'We never sell, rent, or share your personal information for marketing purposes.',
+    priv4_p: 'Your hair is treated with the utmost care and respect. Any excess hair remaining after sealing is returned to you with the finished piece in a dedicated container. Nothing is ever discarded.',
+    priv5_p: 'Photographs taken during the sealing process and of the finished piece are copyright My Art Inc. They are shared with you as part of your personal photo report. <strong>You may share these photos on personal social media</strong> with attribution to Rion (@rion.rings_official). Commercial use requires prior written consent from Rion.',
+    priv6_p: 'If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):',
+    priv6_li1: '<strong>Right to Know:</strong> You may request details about the personal information we collect, use, and share',
+    priv6_li2: '<strong>Right to Delete:</strong> You may request deletion of your personal information (subject to legal retention requirements)',
+    priv6_li3: '<strong>Right to Opt Out of Sale:</strong> We do not sell personal information — this right is already honored',
+    priv6_li4: '<strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA right',
+    priv6_note: '<strong>California Privacy Contact</strong>\n      To exercise your CCPA rights, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> (wa.me/819054621246) or at our registered address above. We will respond within 45 days as required by law.',
+    priv7_p: 'Your personal information is stored and processed at our atelier in Japan. By placing an order, you consent to the international transfer of your data from the United States to Japan. Japan\'s Act on the Protection of Personal Information (APPI) provides substantial safeguards equivalent to leading international privacy standards.',
+    priv8_p: 'Order records (including sealing process photographs) are retained for 10 years for warranty and aftercare purposes. You may request earlier deletion in writing, subject to legal retention requirements.',
+    priv9_p: 'You have the right to:',
+    priv9_li1: 'Access the personal information we hold about you',
+    priv9_li2: 'Correct or update inaccurate information',
+    priv9_li3: 'Request deletion of your data (subject to legal retention requirements)',
+    priv9_li4: 'Withdraw consent for processing (where applicable)',
+    priv9_p2: 'To exercise these rights, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email.',
+    priv10_p: 'We use industry-standard security measures including HTTPS, encrypted communications, and access-limited internal systems. Hair and physical orders are stored in our secured Japanese atelier.',
+    priv11_p: 'Our website uses Google Analytics to understand how visitors use our site, and essential cookies for language preferences. We do not use third-party advertising or tracking cookies.',
+    priv12_p: 'For any privacy-related questions or requests, contact us via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> (<a href="https://wa.me/819054621246" target="_blank">wa.me/819054621246</a>) or at our registered address listed in Section 1 above.',
+    cta_btn: '&#128172; Message Us on WhatsApp',
+    footer_brand_p: 'Bespoke memorial jewelry, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.',
+    footer_est: 'Est. 2018 · Japan',
+    footer_explore: 'Explore',
+    footer_home: 'Home',
+    footer_collection: 'Collection',
+    footer_heritage: 'Our Heritage',
+    footer_how: 'How It Works',
+    footer_help: 'Help',
+    footer_order: 'How to Order',
+    footer_faq: 'FAQ',
+    footer_care: 'Care Guide',
+    footer_shipping: 'Shipping &amp; Returns',
+    footer_legal: 'Legal &amp; Privacy',
+    footer_connect: 'Connect',
+    footer_copy: '&#169; 2026 Rion&#8482; &middot; My Art Inc. &middot; 100% Made in Japan &middot; Free US Shipping &middot; No Import Duties · Sales Tax May Apply',
+    footer_right: 'Est. 2018 &middot; Japan &middot; USA',
+    cookie_title: 'Cookie Notice',
+    cookie_text: 'This site uses Google Analytics and essential cookies only. We do not use advertising or tracking cookies. See <a href="legal.html#privacy">Privacy Policy</a>.',
+    cookie_decline: 'Decline',
+    cookie_accept: 'Accept'
   },
   ja: {
     trust_ship: 'アメリカへ無料配送',
@@ -653,7 +751,105 @@ const T = {
     priv12_h: '12. プライバシーに関するお問い合わせ',
     last_updated: '最終更新：2026年6月',
     cta_h2: 'ポリシーについてご不明な点は？',
-    cta_p: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>よりお気軽にお問い合わせください。日本語・英語でご対応いたします。通常数時間以内にご返信します。'
+    cta_p: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>よりお気軽にお問い合わせください。日本語・英語でご対応いたします。通常数時間以内にご返信します。',
+    nav_cta: '今すぐ注文',
+    menu_eyebrow: 'ナビゲーション',
+    menu_home: 'ホーム',
+    menu_collection: 'コレクション',
+    menu_heritage: '<em>私たちの伝統</em>',
+    menu_order: '<em>ご注文方法</em>',
+    menu_sealing: '<em>髪の封入方法</em>',
+    menu_faq: 'よくあるご質問',
+    menu_shipping: '<em>配送・返品</em>',
+    menu_care: '<em>お手入れガイド</em>',
+    menu_legal: '<em>法律・プライバシー</em>',
+    menu_cta: '&#128172; WhatsAppでお問い合わせ',
+    s1_eyebrow: 'セクション1',
+    s2_eyebrow: 'セクション2',
+    s3_eyebrow: 'セクション3',
+    td_address: '&#12306;733-0801<br>日本国広島市西区新庄町20-3',
+    td_hours: '9:00 – 19:00 JST（日本標準時）',
+    td_founded: '2018年、日本国広島',
+    td_price: '各作品は<strong>USD</strong>にて個別に価格を設定しております。コレクションページに表示される価格には、適用される州の売上税（セールスタックス）は含まれておりません。価格帯：デザインおよび素材により<strong>$4,700 – $20,000+</strong>。',
+    td_tax: '表示価格はUSDであり、適用される米国の州の売上税（セールスタックス）は含まれておりません。法律で義務付けられている場合、売上税はお届け先住所に基づいて計算され、お支払い前にStripeの請求書に追加されます。',
+    td_tax_note: '税金の徴収はStripe Taxにより自動的に処理されます。適用される税率は、お客様の州および地域の管轄により異なります。お支払い前に請求書にて税額を明確にご確認いただけます。',
+    td_fees_intro: '標準のご注文には追加料金はかかりません。任意のオプション：',
+    td_fees_li1: '刻印：1〜10文字で+$65、以降1文字につき+$7',
+    td_fees_li2: '誕生石のセッティング：1石につき+$25',
+    td_fees_note: '国際銀行送金手数料が発生する場合は、お客様のご負担となります。',
+    td_payment_li1: 'クレジットカード（Visa · Mastercard · American Express · Diners Club · JCB）— 安全なStripeの請求書リンク経由',
+    td_payment_li2: '銀行振込（USDまたはJPYに対応）',
+    td_payment_note: 'カード情報はStripeのサーバー（PCI-DSSレベル1認証取得）に直接送信されます。Rionがお客様のカード番号を保存またはアクセスすることは一切ありません。',
+    td_delivery: 'ご注文確定から約<strong>5.5か月</strong>— 髪の採取キットの発送、お客様からの髪のご返送、日本のアトリエでの制作、および国際配送を含みます。',
+    td_shipping: '<strong>すべての米国住所へ、保険付きDHL Expressにて無料配送いたします。</strong>輸入関税や通関手数料はかかりません。これらはRionが事前に支払います。お届け時に料金を請求されることはありません。',
+    td_returns: '<strong>制作開始後の返品はお受けできません。</strong>各作品はお客様の髪を用いて完全にお客様のご指定通りにお作りするため、オーダーメイド品は、適用される米国および日本の法律に基づく標準的な返品権の対象外となります。当方の製造上の欠陥があった場合は、無償で作り直しいたします。作り直しに代わる返金は行っておりません。',
+    th_defect: '欠陥対応方針',
+    td_defect: '受領後3日以内に、<strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>または<a href="mailto:info@art-rings.com">メール</a></strong>にて写真を添えてご連絡ください。製造上の欠陥が確認された場合は、無償で作り直しいたします。',
+    th_lifetime: '生涯サービス',
+    td_lifetime: '日本のアトリエにて、生涯無償の研磨サービスをご提供します。往復の送料はお客様のご負担となります。大きな修理については個別にお見積りいたします。',
+    th_force: '不可抗力',
+    td_force: '自然災害、戦争、パンデミック、通関の混乱、その他当方の管理を超える事象に起因する遅延については、Rionは責任を負いかねます。遅延が生じた場合は速やかにご連絡いたします。お届け日は双方の合意により延長される場合があります。',
+    th_pricechg: '価格の変更',
+    td_pricechg: '素材費や為替変動により、予告なく価格が変更される場合があります。価格変更前に確定およびお支払いが完了したご注文には影響しません。',
+    th_law: '準拠法',
+    td_law: '本契約は日本の法律に準拠します。米国のお客様は、適用される連邦および各州の消費者保護権を保持されます。紛争はまず誠実な協議により解決を図り、解決に至らない場合は、適用される米国の消費者法が別段の定めをしない限り、日本国広島の裁判所が管轄権を有します。',
+    priv1_p: '各ご注文につき、当方は以下を収集します：',
+    priv1_li1: '氏名、米国の配送先住所、電話番号、メールアドレス（または<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>番号）',
+    priv1_li2: 'ジュエリーに封入するためにお客様からご提供いただく髪',
+    priv1_li3: 'お支払い確認情報 — カード番号は保存しません（Stripeにより処理されます）',
+    priv1_li4: '髪の封入工程の写真（お客様と共有し、製造記録として保管します）',
+    priv1_li5: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>またはメールによる連絡記録',
+    priv2_li1: 'お客様のビスポークメモリアルジュエリーの製造およびお届け',
+    priv2_li2: '制作工程の写真レポートの送付',
+    priv2_li3: 'DHL配送および米国通関書類の対応',
+    priv2_li4: '請求書の発行およびお支払いの処理',
+    priv2_li5: 'アフターケア（生涯研磨サービス）のご提供',
+    priv2_li6: 'お問い合わせへの対応',
+    priv3_p: '当方は、以下に対してのみお客様の情報を共有します：',
+    priv3_li1: '<strong>DHL Express</strong> — 国際配送および米国通関のため（氏名、住所、電話番号）',
+    priv3_li2: '<strong>Stripe</strong>（PCI-DSSレベル1認証取得の決済処理業者）— カード情報はStripeのサーバーに直接送信されます。Rionがお客様のカード番号を保存またはアクセスすることは一切ありません',
+    priv3_li3: '<strong>日本の職人</strong> — 制作のためのみ（名のみおよびご注文詳細のみ。完全な住所は共有しません）',
+    priv3_p2: '当方は、マーケティング目的でお客様の個人情報を販売、貸与、または共有することは一切ありません。',
+    priv4_p: 'お客様の髪は最大限の配慮と敬意をもって取り扱います。封入後に残った余分な髪は、完成品とともに専用の容器に入れてお客様にお返しします。廃棄することは一切ありません。',
+    priv5_p: '封入工程および完成品の撮影写真の著作権はMy Art Inc.に帰属します。これらはお客様の個人的な写真レポートの一部として共有されます。<strong>これらの写真は、Rion（@rion.rings_official）への帰属表示とともに、個人のソーシャルメディアで共有いただけます。</strong>商用利用にはRionの事前の書面による同意が必要です。',
+    priv6_p: 'カリフォルニア州在住の方は、カリフォルニア州消費者プライバシー法（CCPA）に基づき、以下の権利を有します：',
+    priv6_li1: '<strong>知る権利：</strong>当方が収集、利用、共有する個人情報の詳細を請求できます',
+    priv6_li2: '<strong>削除する権利：</strong>お客様の個人情報の削除を請求できます（法律上の保持要件に従います）',
+    priv6_li3: '<strong>販売のオプトアウト権：</strong>当方は個人情報を販売しません — この権利はすでに尊重されています',
+    priv6_li4: '<strong>差別を受けない権利：</strong>CCPA上の権利を行使されたことを理由に、お客様を差別することはありません',
+    priv6_note: '<strong>カリフォルニア州プライバシー連絡先</strong>\n      CCPA上の権利を行使するには、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>（wa.me/819054621246）または上記の登録住所までご連絡ください。法律で義務付けられている通り、45日以内にご回答いたします。',
+    priv7_p: 'お客様の個人情報は、日本の当方アトリエにて保管・処理されます。ご注文いただくことにより、お客様は米国から日本へのデータの国際転送に同意されたものとみなされます。日本の個人情報保護法（APPI）は、主要な国際的プライバシー基準に相当する十分な保護措置を提供します。',
+    priv8_p: 'ご注文記録（封入工程の写真を含む）は、保証およびアフターケアのために10年間保持されます。法律上の保持要件に従い、書面によりそれより早期の削除をご請求いただけます。',
+    priv9_p: 'お客様は以下の権利を有します：',
+    priv9_li1: '当方が保有するお客様に関する個人情報へのアクセス',
+    priv9_li2: '不正確な情報の訂正または更新',
+    priv9_li3: 'お客様のデータの削除の請求（法律上の保持要件に従います）',
+    priv9_li4: '処理に対する同意の撤回（該当する場合）',
+    priv9_p2: 'これらの権利を行使するには、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>またはメールにてご連絡ください。',
+    priv10_p: 'HTTPS、暗号化通信、アクセス制限された内部システムを含む、業界標準のセキュリティ対策を講じています。髪および物理的なご注文品は、施錠管理された日本のアトリエに保管されます。',
+    priv11_p: '当ウェブサイトは、訪問者のサイト利用状況を把握するためにGoogle Analyticsを使用し、言語設定のために必須クッキーを使用しています。第三者の広告またはトラッキングクッキーは使用していません。',
+    priv12_p: 'プライバシーに関するご質問やご要望は、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>（<a href="https://wa.me/819054621246" target="_blank">wa.me/819054621246</a>）または上記セクション1に記載の登録住所までご連絡ください。',
+    cta_btn: '&#128172; WhatsAppでお問い合わせ',
+    footer_brand_p: '日本で一つひとつ手作りされる、ビスポークメモリアルジュエリー。一筋の髪、一つの宝石、一つの愛 — あなたのものとして、永遠に。',
+    footer_est: '創業2018年 · 日本',
+    footer_explore: '探す',
+    footer_home: 'ホーム',
+    footer_collection: 'コレクション',
+    footer_heritage: '私たちの伝統',
+    footer_how: '制作の流れ',
+    footer_help: 'ヘルプ',
+    footer_order: 'ご注文方法',
+    footer_faq: 'よくあるご質問',
+    footer_care: 'お手入れガイド',
+    footer_shipping: '配送・返品',
+    footer_legal: '法律・プライバシー',
+    footer_connect: 'つながる',
+    footer_copy: '&#169; 2026 Rion&#8482; &middot; My Art Inc. &middot; 100%日本製 &middot; 米国送料無料 &middot; 輸入関税なし · 売上税が適用される場合があります',
+    footer_right: '創業2018年 &middot; 日本 &middot; アメリカ',
+    cookie_title: 'クッキーに関する通知',
+    cookie_text: '当サイトはGoogle Analyticsおよび必須クッキーのみを使用しています。広告またはトラッキングクッキーは使用していません。<a href="legal.html#privacy">プライバシーポリシー</a>をご覧ください。',
+    cookie_decline: '拒否する',
+    cookie_accept: '同意する'
   }
 };
 function setLang(l){
