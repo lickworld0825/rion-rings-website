@@ -183,6 +183,8 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   .ship-timeline::before{left:35px}
   .ship-step{grid-template-columns:50px 1fr;gap:1.25rem}
   .ship-step-num{font-size:1.5rem}
+  .ship-step-num::after{right:-0.85rem}
+  .hair-faq-grid{grid-template-columns:1fr!important;gap:1.25rem!important}
   .coverage-grid{grid-template-columns:1fr;gap:1rem}
   .returns-grid{grid-template-columns:1fr;gap:1.5rem}
   .fees-table th,.fees-table td{padding:10px 8px;font-size:0.78rem}
@@ -408,7 +410,7 @@ window._loadClarity();
     <h2>Sending hair from <em>Australia</em></h2>
     <p>We make it simple. Here's everything you need to know about the hair return process.</p>
   </div>
-  <div style="max-width:780px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+  <div class="hair-faq-grid" style="max-width:780px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
     <div style="padding:2rem;background:var(--cream);border:0.5px solid var(--border)">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;margin-bottom:1rem">Is it legal?</h3>
       <p style="font-size:0.87rem;line-height:1.85;color:var(--ink-soft)">Yes, completely. Human hair is not a controlled substance under Australian or Japanese law. It is shipped internationally every day via standard postal services. Australia Post carries hair shipments routinely. Our customs declarations are pre-completed and accurate — there are no legal complications whatsoever.</p>
@@ -465,7 +467,7 @@ window._loadClarity();
 <!-- CTA -->
 <section class="cta-section">
   <h2 data-i18n="cta_title">Questions about <em>shipping?</em></h2>
-  <p data-i18n="cta_body">Whether you're in New York or Honolulu, we'll walk you through every step. Message us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English, typically within a few hours.</p>
+  <p data-i18n="cta_body">Whether you're in New York or Honolulu, we'll walk you through every step. Message us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English and Japanese, typically within a few hours.</p>
   <div class="cta-group">
     <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">💬 Message Us on WhatsApp</a>
     <a href="order.html" class="btn-primary" data-i18n="cta_order">How to Order</a>
@@ -579,7 +581,7 @@ const T = {
     policy_li1:'No cancellations after production begins',policy_li2:'No returns on completed bespoke pieces (custom goods cannot be resold)',policy_li3:'Design and material cannot be changed once confirmed',policy_li4:'Engraving and birthstone can be changed up to the start of production',policy_li5:'Invoice payment confirms your order',
     defects_title:'Manufacturing <em>Defects</em>',defects_p1:'If you discover a manufacturing defect on our part, we will remake the piece at no charge — including all shipping and customs for the remake. <strong>Refunds are not offered.</strong>',defects_p2:'Contact us via <strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or <a href="mailto:info@art-rings.com">email</a></strong> within 3 days of receiving your jewel, with clear photographs of the issue. We respond personally and will resolve the situation promptly.',
     defects_li1:'Free remake for manufacturing defects',defects_li2:'All shipping &amp; Australian customs for remake covered by Rion',defects_li3:'Contact within 3 days of receipt',defects_li4:'Resizing available at cost of round-trip shipping (where design permits)',defects_li5:'Lifetime polishing complimentary — customer pays postage to Japan',
-    cta_title:'Questions about <em>shipping?</em>',cta_body:'Whether you\'re in New York or Honolulu, we\'ll walk you through every step. Message us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English, typically within a few hours.',cta_wa:'💬 Message Us on WhatsApp',cta_order:'How to Order'
+    cta_title:'Questions about <em>shipping?</em>',cta_body:'Whether you\'re in New York or Honolulu, we\'ll walk you through every step. Message us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English and Japanese, typically within a few hours.',cta_wa:'💬 Message Us on WhatsApp',cta_order:'How to Order'
   },
   ja: {
     nav_order:'ご注文',
