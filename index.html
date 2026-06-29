@@ -294,8 +294,14 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 .gallery{padding:5rem 6rem;border-bottom:0.5px solid var(--border);background:var(--cream)}
 .gallery-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;cursor:zoom-in;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
 .gallery-grid img:hover{transform:scale(1.04);opacity:0.9}
+.lightbox{position:fixed;inset:0;z-index:600;background:rgba(20,18,15,0.92);display:flex;align-items:center;justify-content:center;padding:5.5rem 4vw 4vw;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;cursor:zoom-out}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:92vw;max-height:82vh;width:auto;height:auto;object-fit:contain;border-radius:3px;box-shadow:0 24px 80px rgba(0,0,0,0.5);transform:scale(.96);transition:transform .35s ease}
+.lightbox.open img{transform:scale(1)}
+.lightbox-close{position:absolute;top:1.1rem;right:1.2rem;z-index:10;width:44px;height:44px;border:0.5px solid rgba(250,247,242,0.45);background:rgba(20,18,15,0.55);color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.lightbox-close:hover{background:rgba(250,247,242,0.18);border-color:var(--gold)}
 
 /* PHOTO STORY */
 .photo-story{padding:5rem 6rem;border-bottom:0.5px solid var(--border)}
@@ -351,7 +357,7 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
  .hero-right{min-height:0}
  .hero-left{width:100%;min-height:80vh;padding:5rem 2rem 7rem;justify-content:flex-end;background:none}
  .hero-body{max-width:100%}
- .scarcity,.trust-section,.story,.process,.collection,.testimonials,.voices,.faq,.contact,.legal,.gallery,.photo-story,.cta-block{padding:4rem 2rem}
+ .scarcity,.trust-section,.story,.process,.collection,.testimonials,.voices,.instagram,.faq,.contact,.legal,.gallery,.photo-story,.cta-block{padding:4rem 2rem}
  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:6px}
  .trust-section{grid-template-columns:1fr}
  .story{grid-template-columns:1fr}
@@ -537,6 +543,13 @@ if(localStorage.getItem('rion_nl_cookies_accepted') === '1') window._loadClarity
  <div><p class="story-label" data-i18n="story_label">Our Story</p></div>
  <div class="story-content">
  <h2 data-i18n="story_title">Born from <em>loss.</em><br>Made from love.</h2>
+    <div class="founder" style="display:flex;align-items:center;gap:1.25rem;margin:0 0 2rem">
+      <img src="images/founder/yuma.jpg" alt="Yuma Aoyama — Founder of Rion" loading="lazy" style="width:118px;height:148px;border-radius:2px;object-fit:cover;object-position:50% 22%;flex-shrink:0;border:0.5px solid rgba(201,169,110,0.4)">
+      <div>
+        <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin:0 0 0.35rem" data-i18n="founder_role">Founder</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--ink);margin:0;line-height:1.1">Yuma Aoyama</p>
+      </div>
+    </div>
  <p data-i18n="story_p1">In 2011, our founder held his infant son for three days — and then said goodbye. In that grief, a question was born: how do we carry the people we love when they can no longer walk beside us?</p>
  <p data-i18n="story_p2">He discovered memorial jewellery — a ring that could hold a piece of his son close to his heart forever. Seven years later, in 2018, he founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.</p>
  <div class="story-quote"><p data-i18n="story_quote">"Eternal love. A bond that continues — forever."</p></div>
@@ -764,6 +777,31 @@ if(localStorage.getItem('rion_nl_cookies_accepted') === '1') window._loadClarity
  <span class="voice-tag" data-i18n="v6_tag">Dog · Ring</span>
  </div>
  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram" id="instagram" style="padding:6rem 6rem;text-align:center;background:#fff;border-bottom:0.5px solid rgba(201,169,110,0.15)">
+  <span class="gallery-label" data-i18n="ig_label">Instagram</span>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin:0.5rem 0 0.9rem" data-i18n="ig_title">Follow our <em style="font-style:italic;color:var(--gold)">journey</em></h2>
+  <p style="font-size:0.9rem;line-height:1.9;color:var(--ink-muted);max-width:560px;margin:0 auto 2.75rem" data-i18n="ig_sub">Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.</p>
+  <style>
+    .ig-reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:0 auto 2.75rem}
+    .ig-reel{position:relative;display:block;overflow:hidden;border-radius:4px;background:#eef1f4;aspect-ratio:379/506}
+    .ig-reel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .ig-reel::after{content:"";position:absolute;inset:0;background:rgba(26,23,20,0);transition:background .45s ease}
+    .ig-reel:hover img{transform:scale(1.06)}
+    .ig-reel:hover::after{background:rgba(26,23,20,.14)}
+    @media(max-width:760px){.ig-reels{grid-template-columns:repeat(2,1fr);gap:10px;max-width:420px}}
+  </style>
+  <div class="ig-reels">
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-1.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-2.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-3.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-4.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-5.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-6.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+  </div>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" style="display:inline-flex;align-items:center;gap:9px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);background:transparent;border:0.5px solid var(--gold-dark);padding:0.95rem 2.2rem;text-decoration:none;white-space:nowrap;transition:all .3s" onmouseover="this.style.background='var(--gold-dark)';this.style.color='var(--cream)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold-dark)'" data-i18n="ig_cta">Follow on Instagram &nbsp;→</a>
 </section>
 
 <!-- CTA BLOCK -->
@@ -1074,6 +1112,8 @@ document.querySelectorAll('img').forEach((img, i) => {
 // Bilingual EN/JA
 const T = {
  en:{
+ founder_role:"Founder",
+ ig_label:"Instagram",ig_title:"Follow our <em style='font-style:italic;color:var(--gold)'>journey</em>",ig_sub:"Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.",ig_cta:"Follow on Instagram &nbsp;→",
  nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
  tr1:"Free Shipping to the Netherlands",tr2:"No Import Duties · VAT Included",tr3:"Handcrafted in Japan",tr4:"Secure Payment",tr5:"Authenticity Certificate Included",
  hero_eyebrow:"Bespoke Memorial Jewellery · Handcrafted in Japan",hero_title:"Keep them close.<br><em>Forever.</em>",hero_body:"A single strand of hair — just 1cm — sealed forever inside Japanese gold or platinum. Every piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone. When words aren't enough, gold endures.",hero_badge:"✦ &nbsp;The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> Us",hero_proof:"Trusted by families across the Netherlands",
@@ -1094,6 +1134,8 @@ const T = {
  sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From €4,700 · Free Netherlands Shipping · No Import Duties · VAT Included · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
  },
  ja:{
+ founder_role:"創業者",
+ ig_label:"Instagram",ig_title:"Rionの<em style='font-style:italic;color:var(--gold)'>日々</em>をご覧ください",ig_sub:"制作の舞台裏、完成したジュエル、そして大切な人をそばに連れて歩むご家族の物語を、毎日お届けしています。",ig_cta:"Instagramでフォロー &nbsp;→",
  nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
  tr1:"オランダへ無料配送",tr2:"輸入関税なし",tr3:"日本の職人が手作り",tr4:"安全なお支払い",tr5:"本物証明書付き",
  hero_eyebrow:"オーダーメイド メモリアルジュエリー・日本",hero_title:"愛する人を、<br><em>そばに。永遠に。</em>",hero_body:"たった1cmの髪の毛一本を、K18ゴールドまたはPt900プラチナの中に永遠に封入。世界に一つだけのジュエル。日本の職人が一つひとつ丁寧に手作りします。言葉にできない想いを、ゴールドに込めて。",hero_badge:"✦ &nbsp;世界で唯一のジュエル",hero_cta1:"ご注文を始める",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で相談する",hero_proof:"オランダ中のご家族に信頼されています",
@@ -1152,6 +1194,38 @@ document.addEventListener('click',function(e){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
   }
 });
+</script>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),grid=document.querySelector('.gallery-grid');
+  var reqId=0;
+  if(grid){
+    grid.addEventListener('click',function(e){
+      var t=e.target;
+      if(t&&t.tagName==='IMG'){
+        var full=t.src.replace('-thumb','')+'?v=2';
+        var myId=++reqId;
+        // show the already-loaded grid image instantly (no flash of the previous one)
+        lbImg.src=t.src;
+        lbImg.alt=t.alt||'';
+        lb.classList.add('open');
+        document.body.style.overflow='hidden';
+        // upgrade to the full-resolution image once it has finished loading
+        var hi=new Image();
+        hi.onload=function(){ if(myId===reqId) lbImg.src=full; };
+        hi.src=full;
+      }
+    });
+  }
+  window.closeLightbox=function(){lb.classList.remove('open');document.body.style.overflow='';};
+  lb.addEventListener('click',function(e){if(e.target===lb)window.closeLightbox();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))window.closeLightbox();});
+})();
 </script>
 </body>
 </html>
