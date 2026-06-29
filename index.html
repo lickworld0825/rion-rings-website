@@ -318,10 +318,16 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 .gallery{padding:5rem 6rem;border-bottom:0.5px solid var(--border);background:var(--cream)}
 .gallery-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;cursor:zoom-in;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
 .gallery-grid img:hover{transform:scale(1.04);opacity:0.9}
 .gallery-wide{grid-column:span 2;aspect-ratio:2/1 !important}
 .gallery-tall{grid-row:span 2;aspect-ratio:1/2 !important}
+.lightbox{position:fixed;inset:0;z-index:600;background:rgba(20,18,15,0.92);display:flex;align-items:center;justify-content:center;padding:5.5rem 4vw 4vw;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;cursor:zoom-out}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:92vw;max-height:82vh;width:auto;height:auto;object-fit:contain;border-radius:3px;box-shadow:0 24px 80px rgba(0,0,0,0.5);transform:scale(.96);transition:transform .35s ease}
+.lightbox.open img{transform:scale(1)}
+.lightbox-close{position:absolute;top:1.1rem;right:1.2rem;z-index:10;width:44px;height:44px;border:0.5px solid rgba(250,247,242,0.45);background:rgba(20,18,15,0.55);color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.lightbox-close:hover{background:rgba(250,247,242,0.18);border-color:var(--gold)}
 
 /* PHOTO STORY */
 .photo-story{padding:5rem 6rem;border-bottom:0.5px solid var(--border)}
@@ -357,7 +363,7 @@ footer{padding-bottom:7rem!important}.nav-cta{display:none}
   .hero-right{min-height:0}
   .hero-left{width:100%;min-height:80vh;padding:5rem 2rem 7rem;justify-content:flex-end;background:none}
   .hero-body{max-width:100%}
-  .scarcity,.trust-section,.story,.process,.photo-story,.collection,.voices,.faq,.contact,.legal,.gallery{padding:4rem 2rem}
+  .scarcity,.trust-section,.story,.process,.photo-story,.collection,.voices,.faq,.contact,.legal,.gallery,.instagram{padding:4rem 2rem}
   .gallery-grid{grid-template-columns:repeat(2,1fr);gap:6px}
   .trust-section{grid-template-columns:1fr}.story{grid-template-columns:1fr}
   .kit-flow{grid-template-columns:1fr}.craft-steps{grid-template-columns:1fr!important}
@@ -526,6 +532,13 @@ footer{padding-bottom:7rem!important}.nav-cta{display:none}
   <div><p class="story-label" data-i18n="story_label">Our Story</p></div>
   <div class="story-content">
     <h2 data-i18n="story_title">Born from <em>loss.</em><br>Made from love.</h2>
+    <div class="founder" style="display:flex;align-items:center;gap:1.25rem;margin:0 0 2rem">
+      <img src="images/founder/yuma.jpg" alt="Yuma Aoyama — Founder of Rion" loading="lazy" style="width:118px;height:148px;border-radius:2px;object-fit:cover;object-position:50% 22%;flex-shrink:0;border:0.5px solid rgba(201,169,110,0.4)">
+      <div>
+        <p style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin:0 0 0.35rem" data-i18n="founder_role">Founder</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--ink);margin:0;line-height:1.1">Yuma Aoyama</p>
+      </div>
+    </div>
     <p data-i18n="story_p1">In 2011, our founder held his infant son for three days — and then said goodbye. In that grief, a question was born: how do we carry the people we love when they can no longer walk beside us?</p>
     <p data-i18n="story_p2">He discovered memorial jewellery — a ring that could hold a piece of his son close to his heart forever. Seven years later, in 2018, he founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.</p>
     <div class="story-quote"><p data-i18n="story_quote">"Eternal love.<br>A bond that continues forever."</p></div>
@@ -724,6 +737,31 @@ footer{padding-bottom:7rem!important}.nav-cta{display:none}
       <span class="voice-tag" data-i18n="v6_tag">Dog · Ring</span>
     </div>
   </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram" id="instagram" style="padding:6rem 6rem;text-align:center;background:#fff;border-bottom:0.5px solid rgba(201,169,110,0.15)">
+  <span class="gallery-label" data-i18n="ig_label">Instagram</span>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin:0.5rem 0 0.9rem" data-i18n="ig_title">Follow our <em style="font-style:italic;color:var(--gold)">journey</em></h2>
+  <p style="font-size:0.9rem;line-height:1.9;color:var(--ink-muted);max-width:560px;margin:0 auto 2.75rem" data-i18n="ig_sub">Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.</p>
+  <style>
+    .ig-reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:0 auto 2.75rem}
+    .ig-reel{position:relative;display:block;overflow:hidden;border-radius:4px;background:#eef1f4;aspect-ratio:379/506}
+    .ig-reel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .ig-reel::after{content:"";position:absolute;inset:0;background:rgba(26,23,20,0);transition:background .45s ease}
+    .ig-reel:hover img{transform:scale(1.06)}
+    .ig-reel:hover::after{background:rgba(26,23,20,.14)}
+    @media(max-width:760px){.ig-reels{grid-template-columns:repeat(2,1fr);gap:10px;max-width:420px}}
+  </style>
+  <div class="ig-reels">
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-1.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-2.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-3.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-4.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-5.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-6.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+  </div>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" style="display:inline-flex;align-items:center;gap:9px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);background:transparent;border:0.5px solid var(--gold-dark);padding:0.95rem 2.2rem;text-decoration:none;white-space:nowrap;transition:all .3s" onmouseover="this.style.background='var(--gold-dark)';this.style.color='var(--cream)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold-dark)'" data-i18n="ig_cta">Follow on Instagram &nbsp;→</a>
 </section>
 
 <!-- FAQ -->
@@ -1064,6 +1102,8 @@ const T={
     story_p2:"He discovered memorial jewellery — a ring that could hold a piece of his son close to his heart forever. Seven years later, in 2018, he founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.",
     story_quote:'"Eternal love.<br>A bond that continues forever."',
     story_p3:"A strand of hair from someone dear — a child, a parent, a partner, a beloved pet — is enclosed inside a ring or necklace, handcrafted entirely in Japan. One jewel. One story. One love. Carried with you, always.",
+    founder_role:"Founder",
+    ig_label:"Instagram",ig_title:"Follow our <em style='font-style:italic;color:var(--gold)'>journey</em>",ig_sub:"Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.",ig_cta:"Follow on Instagram &nbsp;→",
     process_title:"From precious <em>hair</em><br>to your heart.",
     process_intro:"Six simple steps — from choosing your design to receiving your jewel in Dubai, UAE & Kuwait.",
     ps1_t:"Browse the Collection",ps1_b:"Choose your series and material — K18 Yellow Gold, White Gold, Pink Gold, or Platinum Pt900.",
@@ -1158,6 +1198,8 @@ const T={
     story_p2:"اكتشف مجوهرات الذكرى — خاتماً يحمل جزءاً من ابنه قريباً من قلبه إلى الأبد. بعد سبع سنوات، في 2018، أسّس Rion — سُمّيت على اسم ذلك الابن. كل قطعة نصنعها تبدأ ليس بالذهب، بل بقصتك أنت.",
     story_quote:'"حب أبدي.<br>رابط يستمر إلى الأبد."',
     story_p3:"خصلة شعر من شخص عزيز — طفل، والد، شريك، حيوان أليف — تُدرَج داخل خاتم أو قلادة، مصنوعة يدوياً في اليابان. جوهرة واحدة. قصة واحدة. حب واحد. معك دائماً.",
+    founder_role:"المؤسس",
+    ig_label:"Instagram",ig_title:"تابع <em style='font-style:italic;color:var(--gold)'>رحلتنا</em>",ig_sub:"خلف الكواليس، القطع المكتملة، والعائلات التي تحمل أحباءها معها — كل يوم.",ig_cta:"تابعنا على Instagram &nbsp;→",
     process_title:"من <em>شعر</em> عزيز<br>إلى قلبك.",
     process_intro:"ستة خطوات بسيطة — من اختيار تصميمك إلى استلام جوهرتك في دبي والإمارات والكويت.",
     ps1_t:"تصفّح المجموعة",ps1_b:"اختاري سلسلتك وموادك — ذهب K18 أصفر أو أبيض أو زهري أو بلاتين Pt900.",
@@ -1252,6 +1294,8 @@ const T={
     story_p2:"メモリアルジュエリーに出会い、息子を心の近くに感じられるリングを作りました。それから7年後、2018年に「Rion」を創業——息子リオンの名を冠したブランドです。すべての作品はあなたのストーリーから始まります。",
     story_quote:'「永遠の愛。これからも続く絆。」',
     story_p3:"大切な存在の毛髪——お子様、ご両親、パートナー、愛するペット——をリングやネックレスの中に封入し、日本で完全に手作りで。一つのジュエリー。一つのストーリー。一つの愛。いつも一緒に。",
+    founder_role:"創業者",
+    ig_label:"Instagram",ig_title:"Rionの<em style='font-style:italic;color:var(--gold)'>日々</em>をご覧ください",ig_sub:"制作の舞台裏、完成したジュエル、そして大切な人をそばに連れて歩むご家族の物語を、毎日お届けしています。",ig_cta:"Instagramでフォロー &nbsp;→",
     process_title:"大切な<em>毛</em>から、<br>心へ。",
     process_intro:"6つのシンプルなステップ——デザインのご選択からドバイ・UAE全域・クウェートへのお届けまで。",
     ps1_t:"コレクションをご覧ください",ps1_b:"シリーズと素材をお選びください——K18イエロー・ホワイト・ピンクゴールド、またはプラチナPt900。",
@@ -1421,6 +1465,38 @@ document.addEventListener('click',function(e){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
   }
 });
+</script>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),grid=document.querySelector('.gallery-grid');
+  var reqId=0;
+  if(grid){
+    grid.addEventListener('click',function(e){
+      var t=e.target;
+      if(t&&t.tagName==='IMG'){
+        var full=t.src.replace('-thumb','')+'?v=2';
+        var myId=++reqId;
+        // show the already-loaded grid image instantly (no flash of the previous one)
+        lbImg.src=t.src;
+        lbImg.alt=t.alt||'';
+        lb.classList.add('open');
+        document.body.style.overflow='hidden';
+        // upgrade to the full-resolution image once it has finished loading
+        var hi=new Image();
+        hi.onload=function(){ if(myId===reqId) lbImg.src=full; };
+        hi.src=full;
+      }
+    });
+  }
+  window.closeLightbox=function(){lb.classList.remove('open');document.body.style.overflow='';};
+  lb.addEventListener('click',function(e){if(e.target===lb)window.closeLightbox();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))window.closeLightbox();});
+})();
 </script>
 </body>
 </html>
