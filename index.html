@@ -1215,7 +1215,7 @@ document.addEventListener('click',function(e){
     grid.addEventListener('click',function(e){
       var t=e.target;
       if(t&&t.tagName==='IMG'){
-        lbImg.src=t.src.replace('-thumb','');
+        lbImg.src=t.src.replace('-thumb','')+'?v=2';
         lbImg.alt=t.alt||'';
         lb.classList.add('open');
         document.body.style.overflow='hidden';
