@@ -794,14 +794,22 @@ window._loadPixel();
   <span class="gallery-label" data-i18n="ig_label">Instagram</span>
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin:0.5rem 0 0.9rem" data-i18n="ig_title">Follow our <em style="font-style:italic;color:var(--gold)">journey</em></h2>
   <p style="font-size:0.9rem;line-height:1.9;color:var(--ink-muted);max-width:560px;margin:0 auto 2.75rem" data-i18n="ig_sub">Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.</p>
-  <div style="max-width:1040px;margin:0 auto 2.75rem">
-    <behold-widget feed-id="6kTUg3mbiD96TB6kl1cM"></behold-widget>
-    <script>
-      (() => {
-        const d=document,s=d.createElement("script");s.type="module";
-        s.src="https://w.behold.so/widget.js";d.head.append(s);
-      })();
-    </script>
+  <style>
+    .ig-reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:0 auto 2.75rem}
+    .ig-reel{position:relative;display:block;overflow:hidden;border-radius:4px;background:#eef1f4;aspect-ratio:379/506}
+    .ig-reel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .ig-reel::after{content:"";position:absolute;inset:0;background:rgba(26,23,20,0);transition:background .45s ease}
+    .ig-reel:hover img{transform:scale(1.06)}
+    .ig-reel:hover::after{background:rgba(26,23,20,.14)}
+    @media(max-width:760px){.ig-reels{grid-template-columns:repeat(2,1fr);gap:10px;max-width:420px}}
+  </style>
+  <div class="ig-reels">
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-1.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-2.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-3.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-4.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-5.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
+    <a class="ig-reel" href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" aria-label="Rion reel on Instagram"><img src="images/instagram/reel-6.jpg" alt="Rion memorial ring reel" loading="lazy"></a>
   </div>
   <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank" style="display:inline-flex;align-items:center;gap:9px;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);background:transparent;border:0.5px solid var(--gold-dark);padding:0.95rem 2.2rem;text-decoration:none;white-space:nowrap;transition:all .3s" onmouseover="this.style.background='var(--gold-dark)';this.style.color='var(--cream)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold-dark)'" data-i18n="ig_cta">Follow on Instagram &nbsp;→</a>
 </section>
