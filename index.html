@@ -1211,14 +1211,22 @@ document.addEventListener('click',function(e){
 <script>
 (function(){
   var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),grid=document.querySelector('.gallery-grid');
+  var reqId=0;
   if(grid){
     grid.addEventListener('click',function(e){
       var t=e.target;
       if(t&&t.tagName==='IMG'){
-        lbImg.src=t.src.replace('-thumb','')+'?v=2';
+        var full=t.src.replace('-thumb','')+'?v=2';
+        var myId=++reqId;
+        // show the already-loaded grid image instantly (no flash of the previous one)
+        lbImg.src=t.src;
         lbImg.alt=t.alt||'';
         lb.classList.add('open');
         document.body.style.overflow='hidden';
+        // upgrade to the full-resolution image once it has finished loading
+        var hi=new Image();
+        hi.onload=function(){ if(myId===reqId) lbImg.src=full; };
+        hi.src=full;
       }
     });
   }
