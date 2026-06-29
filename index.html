@@ -294,8 +294,14 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 .gallery{padding:5rem 6rem;border-bottom:0.5px solid var(--border);background:var(--cream)}
 .gallery-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;cursor:zoom-in;transition:transform .5s cubic-bezier(.25,.46,.45,.94),opacity .3s}
 .gallery-grid img:hover{transform:scale(1.04);opacity:0.9}
+.lightbox{position:fixed;inset:0;z-index:600;background:rgba(20,18,15,0.92);display:flex;align-items:center;justify-content:center;padding:3vw;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;cursor:zoom-out}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:92vw;max-height:90vh;width:auto;height:auto;object-fit:contain;border-radius:3px;box-shadow:0 24px 80px rgba(0,0,0,0.5);transform:scale(.96);transition:transform .35s ease}
+.lightbox.open img{transform:scale(1)}
+.lightbox-close{position:absolute;top:1.4rem;right:1.6rem;width:44px;height:44px;border:0.5px solid rgba(250,247,242,0.4);background:transparent;color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.lightbox-close:hover{background:rgba(250,247,242,0.12);border-color:var(--gold)}
 
 /* PHOTO STORY */
 .photo-story{padding:5rem 6rem;border-bottom:0.5px solid var(--border)}
@@ -1196,6 +1202,30 @@ document.addEventListener('click',function(e){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
   }
 });
+</script>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),grid=document.querySelector('.gallery-grid');
+  if(grid){
+    grid.addEventListener('click',function(e){
+      var t=e.target;
+      if(t&&t.tagName==='IMG'){
+        lbImg.src=t.src.replace('-thumb','');
+        lbImg.alt=t.alt||'';
+        lb.classList.add('open');
+        document.body.style.overflow='hidden';
+      }
+    });
+  }
+  window.closeLightbox=function(){lb.classList.remove('open');document.body.style.overflow='';};
+  lb.addEventListener('click',function(e){if(e.target===lb)window.closeLightbox();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))window.closeLightbox();});
+})();
 </script>
 </body>
 </html>
