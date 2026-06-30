@@ -729,17 +729,23 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadPixel()
  <div class="testimonial-card">
  <div class="testimonial-stars">★★★★★</div>
  <p class="testimonial-text" data-i18n="t1_text">"I lost my mother to cancer last year. I wore the ring to my daughter's graduation — Mom was there with us for every moment. There are no words for what this piece means to me. The craftsmanship from Japan is absolutely breathtaking."</p>
- <span class="testimonial-tag" data-i18n="t1_tag">Mother · Classic Ring</span>
+ <div class="testimonial-author">Margaret L.</div>
+      <div class="testimonial-location" data-i18n="t1_loc">London, England</div>
+      <span class="testimonial-tag" data-i18n="t1_tag">Mother · Classic Ring</span>
  </div>
  <div class="testimonial-card">
  <div class="testimonial-stars">★★★★★</div>
  <p class="testimonial-text" data-i18n="t2_text">"My husband was taken from us suddenly at 41. The whole process — from the first <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> message to receiving the ring — was handled with such extraordinary care. I grip it when I miss him most. He's right here."</p>
- <span class="testimonial-tag" data-i18n="t2_tag">Husband · Milgrain Band</span>
+ <div class="testimonial-author">Diane R.</div>
+      <div class="testimonial-location" data-i18n="t2_loc">Manchester</div>
+      <span class="testimonial-tag" data-i18n="t2_tag">Husband · Milgrain Band</span>
  </div>
  <div class="testimonial-card">
  <div class="testimonial-stars">★★★★★</div>
  <p class="testimonial-text" data-i18n="t3_text">"We had our golden retriever Charlie for 14 years. I couldn't bear to let go of that connection. The Rion team treated every part of this with the same respect I'd want for a person. I wear it every day and Charlie comes with me everywhere."</p>
- <span class="testimonial-tag" data-i18n="t3_tag">Dog · Flow Ring</span>
+ <div class="testimonial-author">James K.</div>
+      <div class="testimonial-location" data-i18n="t3_loc">Edinburgh, Scotland</div>
+      <span class="testimonial-tag" data-i18n="t3_tag">Dog · Flow Ring</span>
  </div>
  </div>
 </section>
@@ -1121,7 +1127,7 @@ document.querySelectorAll('img').forEach((img, i) => {
 
 // Bilingual EN/JA
 const T = {
- en:{announce:"Free Shipping to the UK <span>&nbsp;·&nbsp; No Import Duties · VAT Included &nbsp;·&nbsp; 100% Handcrafted in Japan</span>",
+ en:{t1_loc:"London, England",t2_loc:"Manchester",t3_loc:"Edinburgh, Scotland",announce:"Free Shipping to the UK <span>&nbsp;·&nbsp; No Import Duties · VAT Included &nbsp;·&nbsp; 100% Handcrafted in Japan</span>",
  nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
  tr1:"Free Shipping to the UK",tr2:"No Import Duties · VAT Included",tr3:"Handcrafted in Japan",tr4:"Secure Payment",tr5:"Authenticity Certificate Included",
  hero_eyebrow:"Bespoke Memorial Jewellery · Handcrafted in Japan",hero_title:"Keep them close.<br><em>Forever.</em>",hero_body:"A single strand of hair — just 1cm — sealed forever inside Japanese gold or platinum. Every piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone. When words aren't enough, gold endures.",founder_role:"Founder",ig_label:"Instagram",ig_title:"Follow our <em style='font-style:italic;color:var(--gold)'>journey</em>",ig_sub:"Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.",ig_cta:"Follow on Instagram &nbsp;→",hero_badge:"✦ &nbsp;The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> Us",hero_proof:"Trusted by families across the United Kingdom",
@@ -1141,7 +1147,7 @@ const T = {
  footer_p:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across the United Kingdom.",footer_est:"Est. 2018 · Japan · Serving the UK",footer_explore:"Explore",footer_about:"About Rion",footer_order:"How to Order",footer_stories:"Stories",footer_help:"Help",footer_ship:"Shipping &amp; Returns",footer_legal:"Legal &amp; Privacy",footer_connect:"Connect",footer_email:"Send Enquiry",footer_copy:"© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the UK · No import duties",footer_right:"Est. 2018 · Japan · United Kingdom",
  sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From £4,000 · Free UK Shipping · No Import Duties · VAT Included · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
  },
- ja:{announce:"英国へ送料無料 <span>&nbsp;·&nbsp; 輸入関税なし · VAT込み &nbsp;·&nbsp; 100% 日本で手作り</span>",
+ ja:{t1_loc:"ロンドン",t2_loc:"マンチェスター",t3_loc:"エディンバラ",announce:"英国へ送料無料 <span>&nbsp;·&nbsp; 輸入関税なし · VAT込み &nbsp;·&nbsp; 100% 日本で手作り</span>",
  nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
  tr1:"英国へ無料配送",tr2:"輸入関税なし",tr3:"日本の職人が手作り",tr4:"安全なお支払い",tr5:"本物証明書付き",
  hero_eyebrow:"オーダーメイド メモリアルジュエリー・日本",hero_title:"愛する人を、<br><em>そばに。永遠に。</em>",hero_body:"たった1cmの髪の毛一本を、K18ゴールドまたはPt900プラチナの中に永遠に封入。世界に一つだけのジュエル。日本の職人が一つひとつ丁寧に手作りします。言葉にできない想いを、ゴールドに込めて。",founder_role:"創業者",ig_label:"Instagram",ig_title:"Rionの<em style='font-style:italic;color:var(--gold)'>日々</em>をご覧ください",ig_sub:"制作の舞台裏、完成したジュエル、そして大切な人をそばに連れて歩むご家族の物語を、毎日お届けしています。",ig_cta:"Instagramでフォロー &nbsp;→",hero_badge:"✦ &nbsp;世界で唯一のジュエル",hero_cta1:"ご注文を始める",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で相談する",hero_proof:"英国中のご家族に信頼されています",
