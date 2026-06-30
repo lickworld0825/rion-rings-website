@@ -140,7 +140,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .trust-block-img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:1rem}
 
 /* STORY */
-.story{padding:7rem 6rem;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;border-bottom:0.5px solid var(--border)}
+.story{padding:7rem 6rem;max-width:900px;margin-left:auto;margin-right:auto;border-bottom:0.5px solid var(--border)}
 .story-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);line-height:2.5}
 .story-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
 .story-content h2 em{font-style:italic;color:var(--gold-dark)}
@@ -427,7 +427,7 @@ window._loadClarity();
 </head>
 <body>
 
-<div class="announce">Free Shipping to Canada &nbsp;·&nbsp; <span>No Import Duties &nbsp;·&nbsp; 100% Handcrafted in Japan</span></div>
+<div class="announce" data-i18n="announce">Free Shipping to Canada &nbsp;·&nbsp; <span>No Import Duties &nbsp;·&nbsp; 100% Handcrafted in Japan</span></div>
 
 <nav>
  <a href="index.html" class="nav-logo">Rion</a>
@@ -1112,7 +1112,7 @@ document.querySelectorAll('img').forEach((img, i) => {
 
 // Bilingual EN/JA
 const T = {
- en:{
+ en:{announce:"Free Shipping to Canada &nbsp;·&nbsp; <span>No Import Duties &nbsp;·&nbsp; 100% Handcrafted in Japan</span>",
  nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
  tr1:"Free Shipping to Canada",tr2:"No Import Duties · GST/HST May Apply",tr3:"Handcrafted in Japan",tr4:"Secure Payment",tr5:"Authenticity Certificate Included",
  hero_eyebrow:"Bespoke Memorial Jewellery · Handcrafted in Japan",hero_title:"Keep them close.<br><em>Forever.</em>",hero_body:"A single strand of hair — just 1cm — sealed forever inside Japanese gold or platinum. Every piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone. When words aren't enough, gold endures.",hero_badge:"✦ &nbsp;The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> Us",hero_proof:"Trusted by families across Canada",
@@ -1132,7 +1132,7 @@ const T = {
  footer_p:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across Canada.",footer_est:"Est. 2018 · Japan · Serving Canada",footer_explore:"Explore",footer_about:"About Rion",footer_order:"How to Order",footer_stories:"Stories",footer_help:"Help",footer_ship:"Shipping &amp; Returns",footer_legal:"Legal &amp; Privacy",footer_connect:"Connect",footer_email:"Send Enquiry",footer_copy:"© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to Canada · No import duties",footer_right:"Est. 2018 · Japan · Canada",
  sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From CA$6,600 · Free Canada Shipping · No Import Duties · GST/HST May Apply · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
  },
- ja:{
+ ja:{announce:"カナダへ送料無料 &nbsp;·&nbsp; <span>輸入関税なし &nbsp;·&nbsp; 100% 日本で手作り</span>",
  nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
  tr1:"カナダへ無料配送",tr2:"輸入関税なし",tr3:"日本の職人が手作り",tr4:"安全なお支払い",tr5:"本物証明書付き",
  hero_eyebrow:"オーダーメイド メモリアルジュエリー・日本",hero_title:"愛する人を、<br><em>そばに。永遠に。</em>",hero_body:"たった1cmの髪の毛一本を、K18ゴールドまたはPt900プラチナの中に永遠に封入。世界に一つだけのジュエル。日本の職人が一つひとつ丁寧に手作りします。言葉にできない想いを、ゴールドに込めて。",hero_badge:"✦ &nbsp;世界で唯一のジュエル",hero_cta1:"ご注文を始める",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で相談する",hero_proof:"カナダ中のご家族に信頼されています",
