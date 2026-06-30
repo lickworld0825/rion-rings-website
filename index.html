@@ -140,7 +140,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .trust-block-img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:1rem}
 
 /* STORY */
-.story{padding:7rem 6rem;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;border-bottom:0.5px solid var(--border)}
+.story{padding:7rem 6rem;max-width:900px;margin-left:auto;margin-right:auto;border-bottom:0.5px solid var(--border)}
 .story-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);line-height:2.5}
 .story-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
 .story-content h2 em{font-style:italic;color:var(--gold-dark)}
@@ -426,7 +426,7 @@ if(localStorage.getItem('rion_nl_cookies_accepted') === '1') window._loadClarity
 </head>
 <body>
 
-<div class="announce">Free Shipping to the Netherlands &nbsp;·&nbsp; <span>No Import Duties · VAT Included &nbsp;·&nbsp; 100% Handcrafted in Japan</span></div>
+<div class="announce" data-i18n="announce">Free Shipping to the Netherlands &nbsp;·&nbsp; <span>No Import Duties · VAT Included &nbsp;·&nbsp; 100% Handcrafted in Japan</span></div>
 
 <nav>
  <a href="index.html" class="nav-logo">Rion</a>
@@ -1111,7 +1111,7 @@ document.querySelectorAll('img').forEach((img, i) => {
 
 // Bilingual EN/JA
 const T = {
- en:{
+ en:{announce:"Free Shipping to the Netherlands &nbsp;·&nbsp; <span>No Import Duties · VAT Included &nbsp;·&nbsp; 100% Handcrafted in Japan</span>",
  founder_role:"Founder",
  ig_label:"Instagram",ig_title:"Follow our <em style='font-style:italic;color:var(--gold)'>journey</em>",ig_sub:"Behind the craft, finished pieces, and the families who carry their loved ones with them — every day.",ig_cta:"Follow on Instagram &nbsp;→",
  nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
@@ -1133,7 +1133,7 @@ const T = {
  footer_p:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across the Netherlands.",footer_est:"Est. 2018 · Japan · Serving the Netherlands",footer_explore:"Explore",footer_about:"About Rion",footer_order:"How to Order",footer_stories:"Stories",footer_help:"Help",footer_ship:"Shipping &amp; Returns",footer_legal:"Legal &amp; Privacy",footer_connect:"Connect",footer_email:"Send Enquiry",footer_copy:"© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the Netherlands · No import duties",footer_right:"Est. 2018 · Japan · Netherlands",
  sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From €4,700 · Free Netherlands Shipping · No Import Duties · VAT Included · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
  },
- ja:{
+ ja:{announce:"オランダへ送料無料 &nbsp;·&nbsp; <span>輸入関税なし · VAT込み &nbsp;·&nbsp; 100% 日本で手作り</span>",
  founder_role:"創業者",
  ig_label:"Instagram",ig_title:"Rionの<em style='font-style:italic;color:var(--gold)'>日々</em>をご覧ください",ig_sub:"制作の舞台裏、完成したジュエル、そして大切な人をそばに連れて歩むご家族の物語を、毎日お届けしています。",ig_cta:"Instagramでフォロー &nbsp;→",
  nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
