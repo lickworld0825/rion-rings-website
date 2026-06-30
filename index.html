@@ -139,15 +139,15 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .trust-block-img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;margin-bottom:1rem}
 
 /* STORY */
-.story{padding:7rem 6rem;border-bottom:0.5px solid var(--border)}
+.story{padding:7rem 6rem;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;border-bottom:0.5px solid var(--border)}
 .story-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);line-height:2.5}
 .story-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
 .story-content h2 em{font-style:italic;color:var(--gold-dark)}
 .story-content p{font-size:0.95rem;line-height:2;color:var(--ink-soft);margin-bottom:1.5rem;max-width:760px}
 .story-quote{border-left:1px solid var(--gold);padding-left:2rem;margin:2.5rem 0}
 .story-quote p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:var(--ink);line-height:1.6;margin:0}
-.story-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:2rem}
-.story-img-grid img{width:100%;height:240px;object-fit:cover;display:block}
+.story-img-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+.story-img-grid img{width:100%;height:320px;object-fit:cover;display:block}
 
 /* PROCESS */
 .process{background:var(--ink);padding:7rem 6rem;color:var(--cream)}
@@ -539,8 +539,8 @@ window._loadClarity();
 
 <!-- STORY -->
 <section class="story" id="story">
-  <div><p class="story-label" data-i18n="story_label">Our Story</p></div>
   <div class="story-content">
+    <p class="story-label" data-i18n="story_label">Our Story</p>
     <h2 data-i18n="story_title">Born from <em>loss.</em><br>Made from love.</h2>
     <div class="founder" style="display:flex;align-items:center;gap:1.25rem;margin:0 0 2rem">
       <img src="images/founder/yuma.jpg" alt="Yuma Aoyama — Founder of Rion" loading="lazy" style="width:200px;height:250px;border-radius:2px;object-fit:cover;object-position:50% 22%;flex-shrink:0;border:0.5px solid rgba(201,169,110,0.4)">
@@ -553,11 +553,11 @@ window._loadClarity();
     <p data-i18n="story_p2">He discovered memorial jewellery — a ring that could hold a piece of his son close to his heart forever. Seven years later, in 2018, he founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.</p>
     <div class="story-quote"><p data-i18n="story_quote">"Eternal love. A bond that continues — forever."</p></div>
     <p data-i18n="story_p3">A strand of hair from someone dear — a child, a parent, a partner, a beloved pet — becomes a jewel you carry every day. Just 1cm. One strand. That is all we need to keep them with you, always. When words aren't enough, gold endures.</p>
-    <div class="story-img-grid">
+    </div>
+  <div class="story-img-grid">
       <img src="images/materials/main.jpg" alt="Rion — handcrafted in Japan" loading="lazy">
       <img src="images/craft/main.jpg" alt="Rion memorial ring" loading="lazy">
     </div>
-  </div>
 </section>
 
 <!-- PROCESS -->
