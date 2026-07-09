@@ -129,7 +129,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .price-table tr:hover td{background:rgba(201,169,110,0.04)}
 .price-table .material-name{font-weight:500;color:var(--ink)}
 .price-table .material-tag{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:8px;vertical-align:middle}
-.price-table .price-aed{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold-dark);font-style:italic;white-space:nowrap}
+.price-table .price-sgd{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold-dark);font-style:italic;white-space:nowrap}
 .price-table .price-note{font-size:0.72rem;color:var(--ink-muted)}
 .price-table .multi-note{font-size:0.72rem;color:var(--gold-dark);font-style:italic}
 
@@ -283,15 +283,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div>
       <span class="menu-eyebrow">Navigation · Menu · メニュー</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span>Contact</span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="m_home">Home</span></a>
+        <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="m_collection">Collection</span></a>
+        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="m_about">About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="m_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="m_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="m_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="m_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="m_care">Care <em>Guide</em></span></a>
+        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="m_contact">Contact</span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -346,39 +346,39 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="A-1" data-material="K18 Yellow Gold" data-price="6,950">
+    <a class="product-card" data-code="A-1" data-material="K18 Yellow Gold" data-price="17,400">
       <img src="images/series-a/a1.jpg" alt="A-1 Yellow Gold" loading="lazy">
       <div class="product-info">
         <p class="product-code">A-1</p>
         <p class="product-material">K18 Yellow Gold</p>
-        <p class="product-price-tag">SGD 6,950</p>
+        <p class="product-price-tag">SGD 17,400</p>
         <p class="product-order-cta">View Details →</p>
       </div>
     </a>
-    <a class="product-card" data-code="A-2" data-material="K18 White Gold" data-price="7,200">
+    <a class="product-card" data-code="A-2" data-material="K18 White Gold" data-price="18,000">
       <img src="images/series-a/a2.jpg" alt="A-2 White Gold" loading="lazy">
       <div class="product-info">
         <p class="product-code">A-2</p>
         <p class="product-material">K18 White Gold</p>
-        <p class="product-price-tag">SGD 7,200</p>
+        <p class="product-price-tag">SGD 18,000</p>
         <p class="product-order-cta">View Details →</p>
       </div>
     </a>
-    <a class="product-card" data-code="A-3" data-material="K18 Pink Gold" data-price="6,950">
+    <a class="product-card" data-code="A-3" data-material="K18 Pink Gold" data-price="17,400">
       <img src="images/series-a/a3.jpg" alt="A-3 Pink Gold" loading="lazy">
       <div class="product-info">
         <p class="product-code">A-3</p>
         <p class="product-material">K18 Pink Gold</p>
-        <p class="product-price-tag">SGD 6,950</p>
+        <p class="product-price-tag">SGD 17,400</p>
         <p class="product-order-cta">View Details →</p>
       </div>
     </a>
-    <a class="product-card" data-code="A-4" data-material="Platinum Pt900" data-price="6,800">
+    <a class="product-card" data-code="A-4" data-material="Platinum Pt900" data-price="17,000">
       <img src="images/series-a/a4.jpg" alt="A-4 Platinum" loading="lazy">
       <div class="product-info">
         <p class="product-code">A-4</p>
         <p class="product-material">Platinum Pt900</p>
-        <p class="product-price-tag">SGD 6,800</p>
+        <p class="product-price-tag">SGD 17,000</p>
         <p class="product-order-cta">View Details →</p>
       </div>
     </a>
@@ -399,25 +399,25 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
         <tr>
           <td>A-1</td>
           <td><span class="material-name">K18 Yellow Gold</span></td>
-          <td><span class="price-aed">SGD 6,950</span></td>
+          <td><span class="price-sgd">SGD 17,400</span></td>
           <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
         <tr>
           <td>A-2</td>
           <td><span class="material-name">K18 White Gold</span></td>
-          <td><span class="price-aed">SGD 7,200</span></td>
+          <td><span class="price-sgd">SGD 18,000</span></td>
           <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
         <tr>
           <td>A-3</td>
           <td><span class="material-name">K18 Pink Gold</span></td>
-          <td><span class="price-aed">SGD 6,950</span></td>
+          <td><span class="price-sgd">SGD 17,400</span></td>
           <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
         <tr>
           <td>A-4</td>
           <td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td>
-          <td><span class="price-aed">SGD 6,800</span></td>
+          <td><span class="price-sgd">SGD 17,000</span></td>
           <td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td>
         </tr>
       </tbody>
@@ -442,21 +442,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="B-1" data-material="K18 Yellow Gold" data-price="8,550">
+    <a class="product-card" data-code="B-1" data-material="K18 Yellow Gold" data-price="21,400">
       <img src="images/series-b/b1.jpg" alt="B-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">B-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 8,550</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">B-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 21,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="B-2" data-material="K18 White Gold" data-price="9,200">
+    <a class="product-card" data-code="B-2" data-material="K18 White Gold" data-price="23,000">
       <img src="images/series-b/b2.jpg" alt="B-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">B-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 9,200</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">B-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 23,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="B-3" data-material="K18 Pink Gold" data-price="8,550">
+    <a class="product-card" data-code="B-3" data-material="K18 Pink Gold" data-price="21,400">
       <img src="images/series-b/b3.jpg" alt="B-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 8,550</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 21,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="B-4" data-material="Platinum Pt900" data-price="8,000">
+    <a class="product-card" data-code="B-4" data-material="Platinum Pt900" data-price="20,000">
       <img src="images/series-b/b4.jpg" alt="B-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 8,000</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 20,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -465,10 +465,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>B-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 8,550</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>B-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 9,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>B-3</td><td><span class="material-name">K18 Pink Gold</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">SGD 8,550</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>B-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">SGD 8,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 21,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 23,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-3</td><td><span class="material-name">K18 Pink Gold</span> <span class="material-tag">Most Popular</span></td><td><span class="price-sgd">SGD 21,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>B-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-sgd">SGD 20,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -491,21 +491,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="C-1" data-material="K18 Yellow Gold (2 birthstones)" data-price="8,650">
+    <a class="product-card" data-code="C-1" data-material="K18 Yellow Gold (2 birthstones)" data-price="21,600">
       <img src="images/series-c/c1.jpg" alt="C-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">C-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 8,650</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">C-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 21,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="C-2" data-material="K18 White Gold (2 birthstones)" data-price="9,200">
+    <a class="product-card" data-code="C-2" data-material="K18 White Gold (2 birthstones)" data-price="23,000">
       <img src="images/series-c/c2.jpg" alt="C-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">C-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 9,200</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">C-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 23,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="C-3" data-material="K18 Pink Gold (2 birthstones)" data-price="8,650">
+    <a class="product-card" data-code="C-3" data-material="K18 Pink Gold (2 birthstones)" data-price="21,600">
       <img src="images/series-c/c3.jpg" alt="C-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">C-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 8,650</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">C-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 21,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="C-4" data-material="Platinum Pt900 (2 birthstones)" data-price="8,400">
+    <a class="product-card" data-code="C-4" data-material="Platinum Pt900 (2 birthstones)" data-price="21,000">
       <img src="images/series-c/c4.jpg" alt="C-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">C-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 8,400</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">C-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 21,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -514,10 +514,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>C-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 8,650</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>C-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 9,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>C-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">SGD 8,650</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>C-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">SGD 8,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 21,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 23,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-sgd">SGD 21,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>C-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-sgd">SGD 21,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -542,21 +542,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="D-1" data-material="K18 Yellow Gold (Half Eternity, diamonds)" data-price="10,550">
+    <a class="product-card" data-code="D-1" data-material="K18 Yellow Gold (Half Eternity, diamonds)" data-price="26,400">
       <img src="images/series-d/d1.jpg" alt="D-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">D-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 10,550</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">D-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 26,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="D-2" data-material="K18 White Gold (Half Eternity, diamonds)" data-price="11,050">
+    <a class="product-card" data-code="D-2" data-material="K18 White Gold (Half Eternity, diamonds)" data-price="27,600">
       <img src="images/series-d/d2.jpg" alt="D-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">D-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 11,050</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">D-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 27,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="D-3" data-material="K18 Pink Gold (Half Eternity, diamonds)" data-price="10,550">
+    <a class="product-card" data-code="D-3" data-material="K18 Pink Gold (Half Eternity, diamonds)" data-price="26,400">
       <img src="images/series-d/d3.jpg" alt="D-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">D-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 10,550</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">D-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 26,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="D-4" data-material="Platinum Pt900 (Half Eternity, diamonds)" data-price="10,400">
+    <a class="product-card" data-code="D-4" data-material="Platinum Pt900 (Half Eternity, diamonds)" data-price="26,000">
       <img src="images/series-d/d4.jpg" alt="D-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">D-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 10,400</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">D-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 26,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -565,10 +565,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>D-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 10,550</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>D-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 11,050</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>D-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">SGD 10,550</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>D-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-aed">SGD 10,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 26,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 27,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-sgd">SGD 26,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>D-4</td><td><span class="material-name">Platinum Pt900</span> <span class="material-tag">Most Popular</span></td><td><span class="price-sgd">SGD 26,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -590,21 +590,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="F-1" data-material="K18 Yellow Gold (Sculptural)" data-price="9,750">
+    <a class="product-card" data-code="F-1" data-material="K18 Yellow Gold (Sculptural)" data-price="24,400">
       <img src="images/series-f/f1.jpg" alt="F-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">F-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 9,750</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">F-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 24,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="F-2" data-material="K18 White Gold (Sculptural)" data-price="10,150">
+    <a class="product-card" data-code="F-2" data-material="K18 White Gold (Sculptural)" data-price="25,400">
       <img src="images/series-f/f2.jpg" alt="F-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">F-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 10,150</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">F-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 25,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="F-3" data-material="K18 Pink Gold (Sculptural)" data-price="9,750">
+    <a class="product-card" data-code="F-3" data-material="K18 Pink Gold (Sculptural)" data-price="24,400">
       <img src="images/series-f/f3.jpg" alt="F-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">F-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 9,750</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">F-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 24,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="F-4" data-material="Platinum Pt900 (Sculptural)" data-price="9,200">
+    <a class="product-card" data-code="F-4" data-material="Platinum Pt900 (Sculptural)" data-price="23,000">
       <img src="images/series-f/f4.jpg" alt="F-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">F-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 9,200</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">F-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 23,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -613,10 +613,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>F-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 9,750</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>F-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 10,150</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>F-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">SGD 9,750</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>F-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">SGD 9,200</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 24,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 25,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-sgd">SGD 24,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>F-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-sgd">SGD 23,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -638,21 +638,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="G-1" data-material="K18 Yellow Gold (Refined)" data-price="8,250">
+    <a class="product-card" data-code="G-1" data-material="K18 Yellow Gold (Refined)" data-price="20,600">
       <img src="images/series-g/g1.jpg" alt="G-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">G-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 8,250</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">G-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 20,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="G-2" data-material="K18 White Gold (Refined)" data-price="8,650">
+    <a class="product-card" data-code="G-2" data-material="K18 White Gold (Refined)" data-price="21,600">
       <img src="images/series-g/g2.jpg" alt="G-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">G-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 8,650</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">G-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 21,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="G-3" data-material="K18 Pink Gold (Refined)" data-price="8,250">
+    <a class="product-card" data-code="G-3" data-material="K18 Pink Gold (Refined)" data-price="20,600">
       <img src="images/series-g/g3.jpg" alt="G-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">G-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 8,250</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">G-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 20,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="G-4" data-material="Platinum Pt900 (Refined)" data-price="8,000">
+    <a class="product-card" data-code="G-4" data-material="Platinum Pt900 (Refined)" data-price="20,000">
       <img src="images/series-g/g4.jpg" alt="G-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">G-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 8,000</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">G-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 20,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -661,10 +661,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>G-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 8,250</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>G-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 8,650</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>G-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">SGD 8,250</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>G-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">SGD 8,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 20,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 21,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-sgd">SGD 20,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>G-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-sgd">SGD 20,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -686,21 +686,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="H-1" data-material="K18 Yellow Gold (Modern)" data-price="8,650">
+    <a class="product-card" data-code="H-1" data-material="K18 Yellow Gold (Modern)" data-price="21,600">
       <img src="images/series-h/h1.jpg" alt="H-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">H-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 8,650</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">H-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 21,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="H-2" data-material="K18 White Gold (Modern)" data-price="8,950">
+    <a class="product-card" data-code="H-2" data-material="K18 White Gold (Modern)" data-price="22,400">
       <img src="images/series-h/h2.jpg" alt="H-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">H-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 8,950</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">H-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 22,400</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="H-3" data-material="K18 Pink Gold (Modern)" data-price="8,650">
+    <a class="product-card" data-code="H-3" data-material="K18 Pink Gold (Modern)" data-price="21,600">
       <img src="images/series-h/h3.jpg" alt="H-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">H-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 8,650</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">H-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 21,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="H-4" data-material="Platinum Pt900 (Modern)" data-price="8,400">
+    <a class="product-card" data-code="H-4" data-material="Platinum Pt900 (Modern)" data-price="21,000">
       <img src="images/series-h/h4.jpg" alt="H-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">H-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 8,400</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">H-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 21,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -709,10 +709,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>H-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 8,650</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>H-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 8,950</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>H-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">SGD 8,650</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>H-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">SGD 8,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 21,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 22,400</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-sgd">SGD 21,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>H-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-sgd">SGD 21,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -734,21 +734,21 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   </div>
 
   <div class="product-grid">
-    <a class="product-card" data-code="J-1" data-material="K18 Yellow Gold (Statement)" data-price="10,250">
+    <a class="product-card" data-code="J-1" data-material="K18 Yellow Gold (Statement)" data-price="25,600">
       <img src="images/series-j/j1.jpg" alt="J-1 Yellow Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">J-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 10,250</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">J-1</p><p class="product-material">K18 Yellow Gold</p><p class="product-price-tag">SGD 25,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="J-2" data-material="K18 White Gold (Statement)" data-price="10,650">
+    <a class="product-card" data-code="J-2" data-material="K18 White Gold (Statement)" data-price="26,600">
       <img src="images/series-j/j2.jpg" alt="J-2 White Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">J-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 10,650</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">J-2</p><p class="product-material">K18 White Gold</p><p class="product-price-tag">SGD 26,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="J-3" data-material="K18 Pink Gold (Statement)" data-price="10,250">
+    <a class="product-card" data-code="J-3" data-material="K18 Pink Gold (Statement)" data-price="25,600">
       <img src="images/series-j/j3.jpg" alt="J-3 Pink Gold" loading="lazy">
-      <div class="product-info"><p class="product-code">J-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 10,250</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">J-3</p><p class="product-material">K18 Pink Gold</p><p class="product-price-tag">SGD 25,600</p><p class="product-order-cta">View Details →</p></div>
     </a>
-    <a class="product-card" data-code="J-4" data-material="Platinum Pt900 (Statement)" data-price="10,000">
+    <a class="product-card" data-code="J-4" data-material="Platinum Pt900 (Statement)" data-price="25,000">
       <img src="images/series-j/j4.jpg" alt="J-4 Platinum" loading="lazy">
-      <div class="product-info"><p class="product-code">J-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 10,000</p><p class="product-order-cta">View Details →</p></div>
+      <div class="product-info"><p class="product-code">J-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">SGD 25,000</p><p class="product-order-cta">View Details →</p></div>
     </a>
   </div>
 
@@ -757,10 +757,10 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <table class="price-table">
       <thead><tr><th>Code</th><th>Material</th><th>Price (SGD) · DDP</th><th>Delivery</th></tr></thead>
       <tbody>
-        <tr><td>J-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-aed">SGD 10,250</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>J-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-aed">SGD 10,650</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>J-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-aed">SGD 10,250</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
-        <tr><td>J-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-aed">SGD 10,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>J-1</td><td><span class="material-name">K18 Yellow Gold</span></td><td><span class="price-sgd">SGD 25,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>J-2</td><td><span class="material-name">K18 White Gold</span></td><td><span class="price-sgd">SGD 26,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>J-3</td><td><span class="material-name">K18 Pink Gold</span></td><td><span class="price-sgd">SGD 25,600</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
+        <tr><td>J-4</td><td><span class="material-name">Platinum Pt900</span></td><td><span class="price-sgd">SGD 25,000</span></td><td><span class="price-note" data-i18n="delivery_note">Approx. 5.5 months</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -954,7 +954,7 @@ function filterSeries(filter){
 
 // ===== I18N =====
 const T = {
-  en: {
+  en: {m_home:"Home",m_collection:"Collection",m_about:"About <em>Rion</em>",m_order:"How to <em>Order</em>",m_sealing:"How Hair Is <em>Sealed</em>",m_faq:"FAQ",m_shipping:"Shipping &amp; <em>Returns</em>",m_care:"Care <em>Guide</em>",m_contact:"Contact",
     delivery_note:"Approx. 5.5 months",
     nav_cta:"Order Now",
     page_title:"The<br><em>Collection</em>",
@@ -995,8 +995,8 @@ const T = {
     cta_note_neck:"We will confirm design, length, and send your invoice.",
     cta_note_bs:"Tell us your 2 birthstone choices when enquiring."
   ,th_material_v:"Material"},
-  ms:{delivery_note:"Kira-kira 5.5 bulan",nav_cta:"Tempah Sekarang",page_title:"Koleksi<br><em>Itu</em>",page_lead:"Setiap perhiasan dibuat sepenuhnya mengikut tempahan anda — dibuat dengan tangan di Jepun, hanya daripada rambut anda. Pilih satu siri, pilih bahan anda, dan bertanya melalui <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>. Kami akan membimbing anda untuk selebihnya.",page_note:"✦ Semua harga DDP — GST import Singapura (9%) termasuk · Tiada caj tambahan semasa penghantaran",filter_label:"Tapis:",f_all:"Semua Siri",f_ring:"Cincin",f_necklace:"Rantai Leher",f_a:"Siri A",f_b:"Siri B",f_c:"Siri C",f_d:"Siri D",f_f:"Siri F",f_g:"Siri G",f_h:"Siri H",f_j:"Siri J",se_a:"Siri A",se_b:"Siri B",se_c:"Siri C",se_d:"Siri D",se_f:"Siri F",se_g:"Siri G",se_h:"Siri H",se_j:"Siri J",st_ring:"Cincin",st_neck:"Rantai Leher",st_ring_bs:"Cincin · 2 Batu Kelahiran",st_ring_dia:"Cincin · Jalur Berlian",st_ring_st:"Cincin · Statement",sa_name:"Cincin <em>Classic</em>",sa_desc:"Jalur yang lembut dan terbentuk secara organik — gelombang lembutnya dibentuk dengan tangan di Jepun. Minimalis, abadi, dibuat untuk dipakai setiap hari seumur hidup.",sb_name:"Loket <em>Bar</em>",sb_desc:"Sebatang bar emas tulen yang ramping pada rantai bulat yang halus. Helai rambut dimeteraikan di dalam bar tersebut — tersembunyi daripada dunia, dekat dengan hati anda.",sc_name:"Cincin <em>Batu Kelahiran</em>",sc_desc:"Sebentuk cincin dengan segmen geometri, setiap segi menangkap cahaya dengan tepat. Dua batu kelahiran pilihan anda ditatah dalam jalur — memperingati orang atau detik yang paling bermakna.",sd_name:"Cincin <em>Half Eternity</em>",sd_desc:"Jalur half eternity, berlian ditatah dalam bingkai segi empat di sepanjang bahagian depan. Kilauan berstruktur, makna abadi. Batu bebas konflik diperoleh sepenuhnya dari Jepun.",sf_name:"Cincin <em>Chevron</em>",sf_desc:"Sebentuk cincin half eternity berbentuk V, ditatah dengan batu di sepanjang lengkung penuh bahagian depan. Anggun dan bercahaya — bentuk chevron membawa cahaya dan pergerakan pada setiap gerak.",sg_name:"Jalur <em>Milgrain</em>",sg_desc:"Jalur licin yang digilap dan ditepi dengan milgrain buatan tangan — teknik tukang emas yang berusia berabad-abad. Tenang, kukuh, dibina untuk bertahan lama.",sh_name:"Cincin <em>Flow</em>",sh_desc:"Dua lengkung emas bertemu pada satu titik, di mana lima berlian ditatah dalam kluster memanjang. Bentuk yang menggambarkan pergerakan dan hubungan — dua kehidupan mengalir menjadi satu.",sj_name:"Cincin <em>Statement</em>",sj_desc:"Dua reben emas, dijalin bersama dan ditatah dengan berlian di sepanjang satu helai. Berani dari segi bentuk, intim dari segi makna. Untuk mereka yang cintanya menuntut kehadiran.",enquire_wa:"Bertanya melalui WhatsApp",view_series:"Lihat Siri →",bsp_title:"Tempahan<br><em>Sepenuhnya Tersuai</em>",bsp_body:"Tiada satu pun di atas yang sesuai? Kami mencipta reka bentuk yang sepenuhnya tersuai — daripada visi anda, bersama kakitangan kami. Tiada templat, tiada had. Hanya kisah anda, dalam emas.",bsp_f1_t:"Reka Bentuk",bsp_f1_b:"Dicipta dari awal bersama kakitangan kami. Bentuk tanpa had, sepenuhnya asli.",bsp_f2_t:"Bahan",bsp_f2_b:"Emas K18, Platinum, Berlian, Ruby, Nilam, Zamrud — sebarang kombinasi.",bsp_f3_t:"Pelbagai Helai Rambut",bsp_f3_b:"Meterai rambut daripada beberapa orang tersayang — ahli keluarga, haiwan peliharaan — dalam satu perhiasan.",bsp_f4_t:"Garis Masa",bsp_f4_b:"Kira-kira 6 bulan. Kami akan mengemas kini anda pada setiap peringkat proses.",bsp_price:"Dari SGD 28,000",bsp_price_note:"DDP · semua cukai termasuk · Harga bergantung pada kerumitan reka bentuk & bahan",bsp_cta:"Mulakan Perjalanan Tersuai Anda",sticky_text:"<strong>Koleksi Rion</strong> &nbsp;·&nbsp; Semua perhiasan dibuat dengan tangan di Jepun · Dari SGD 6,800 · GST termasuk",sticky_wa:"WhatsApp",sticky_back:"← Kembali ke Laman Utama",cta_note_ring:"Kami akan mengesahkan reka bentuk, saiz, dan menghantar invois anda.",cta_note_neck:"Kami akan mengesahkan reka bentuk, panjang, dan menghantar invois anda.",cta_note_bs:"Beritahu kami 2 pilihan batu kelahiran anda semasa bertanya.",th_material_v:"Bahan"},
-  ja: {
+  ms:{m_home:"Laman Utama",m_collection:"Koleksi",m_about:"Tentang <em>Rion</em>",m_order:"Cara <em>Menempah</em>",m_sealing:"Cara Rambut <em>Dimeterai</em>",m_faq:"Soalan Lazim",m_shipping:"Penghantaran &amp; <em>Pemulangan</em>",m_care:"Panduan <em>Penjagaan</em>",m_contact:"Hubungi",delivery_note:"Kira-kira 5.5 bulan",nav_cta:"Tempah Sekarang",page_title:"Koleksi<br><em>Itu</em>",page_lead:"Setiap perhiasan dibuat sepenuhnya mengikut tempahan anda — dibuat dengan tangan di Jepun, hanya daripada rambut anda. Pilih satu siri, pilih bahan anda, dan bertanya melalui <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>. Kami akan membimbing anda untuk selebihnya.",page_note:"✦ Semua harga DDP — GST import Singapura (9%) termasuk · Tiada caj tambahan semasa penghantaran",filter_label:"Tapis:",f_all:"Semua Siri",f_ring:"Cincin",f_necklace:"Rantai Leher",f_a:"Siri A",f_b:"Siri B",f_c:"Siri C",f_d:"Siri D",f_f:"Siri F",f_g:"Siri G",f_h:"Siri H",f_j:"Siri J",se_a:"Siri A",se_b:"Siri B",se_c:"Siri C",se_d:"Siri D",se_f:"Siri F",se_g:"Siri G",se_h:"Siri H",se_j:"Siri J",st_ring:"Cincin",st_neck:"Rantai Leher",st_ring_bs:"Cincin · 2 Batu Kelahiran",st_ring_dia:"Cincin · Jalur Berlian",st_ring_st:"Cincin · Statement",sa_name:"Cincin <em>Classic</em>",sa_desc:"Jalur yang lembut dan terbentuk secara organik — gelombang lembutnya dibentuk dengan tangan di Jepun. Minimalis, abadi, dibuat untuk dipakai setiap hari seumur hidup.",sb_name:"Loket <em>Bar</em>",sb_desc:"Sebatang bar emas tulen yang ramping pada rantai bulat yang halus. Helai rambut dimeteraikan di dalam bar tersebut — tersembunyi daripada dunia, dekat dengan hati anda.",sc_name:"Cincin <em>Batu Kelahiran</em>",sc_desc:"Sebentuk cincin dengan segmen geometri, setiap segi menangkap cahaya dengan tepat. Dua batu kelahiran pilihan anda ditatah dalam jalur — memperingati orang atau detik yang paling bermakna.",sd_name:"Cincin <em>Half Eternity</em>",sd_desc:"Jalur half eternity, berlian ditatah dalam bingkai segi empat di sepanjang bahagian depan. Kilauan berstruktur, makna abadi. Batu bebas konflik diperoleh sepenuhnya dari Jepun.",sf_name:"Cincin <em>Chevron</em>",sf_desc:"Sebentuk cincin half eternity berbentuk V, ditatah dengan batu di sepanjang lengkung penuh bahagian depan. Anggun dan bercahaya — bentuk chevron membawa cahaya dan pergerakan pada setiap gerak.",sg_name:"Jalur <em>Milgrain</em>",sg_desc:"Jalur licin yang digilap dan ditepi dengan milgrain buatan tangan — teknik tukang emas yang berusia berabad-abad. Tenang, kukuh, dibina untuk bertahan lama.",sh_name:"Cincin <em>Flow</em>",sh_desc:"Dua lengkung emas bertemu pada satu titik, di mana lima berlian ditatah dalam kluster memanjang. Bentuk yang menggambarkan pergerakan dan hubungan — dua kehidupan mengalir menjadi satu.",sj_name:"Cincin <em>Statement</em>",sj_desc:"Dua reben emas, dijalin bersama dan ditatah dengan berlian di sepanjang satu helai. Berani dari segi bentuk, intim dari segi makna. Untuk mereka yang cintanya menuntut kehadiran.",enquire_wa:"Bertanya melalui WhatsApp",view_series:"Lihat Siri →",bsp_title:"Tempahan<br><em>Sepenuhnya Tersuai</em>",bsp_body:"Tiada satu pun di atas yang sesuai? Kami mencipta reka bentuk yang sepenuhnya tersuai — daripada visi anda, bersama kakitangan kami. Tiada templat, tiada had. Hanya kisah anda, dalam emas.",bsp_f1_t:"Reka Bentuk",bsp_f1_b:"Dicipta dari awal bersama kakitangan kami. Bentuk tanpa had, sepenuhnya asli.",bsp_f2_t:"Bahan",bsp_f2_b:"Emas K18, Platinum, Berlian, Ruby, Nilam, Zamrud — sebarang kombinasi.",bsp_f3_t:"Pelbagai Helai Rambut",bsp_f3_b:"Meterai rambut daripada beberapa orang tersayang — ahli keluarga, haiwan peliharaan — dalam satu perhiasan.",bsp_f4_t:"Garis Masa",bsp_f4_b:"Kira-kira 6 bulan. Kami akan mengemas kini anda pada setiap peringkat proses.",bsp_price:"Dari SGD 28,000",bsp_price_note:"DDP · semua cukai termasuk · Harga bergantung pada kerumitan reka bentuk & bahan",bsp_cta:"Mulakan Perjalanan Tersuai Anda",sticky_text:"<strong>Koleksi Rion</strong> &nbsp;·&nbsp; Semua perhiasan dibuat dengan tangan di Jepun · Dari SGD 6,800 · GST termasuk",sticky_wa:"WhatsApp",sticky_back:"← Kembali ke Laman Utama",cta_note_ring:"Kami akan mengesahkan reka bentuk, saiz, dan menghantar invois anda.",cta_note_neck:"Kami akan mengesahkan reka bentuk, panjang, dan menghantar invois anda.",cta_note_bs:"Beritahu kami 2 pilihan batu kelahiran anda semasa bertanya.",th_material_v:"Bahan"},
+  ja: {m_home:"ホーム",m_collection:"コレクション",m_about:"Rion<em>について</em>",m_order:"ご注文の<em>流れ</em>",m_sealing:"毛髪の<em>封入方法</em>",m_faq:"よくある質問",m_shipping:"配送・<em>返品</em>",m_care:"お手入れ<em>ガイド</em>",m_contact:"お問い合わせ",
     delivery_note:"約5.5ヶ月",
     nav_cta:"ご注文",
     page_title:"<em>コレクション</em>",
