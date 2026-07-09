@@ -75,8 +75,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
 .menu-links a.menu-active{color:var(--gold-dark)}
 .menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
-.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
-.menu-cta:hover{background:#0E7567}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold-dark);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#6b4f0f}
 .hamburger.active span{background:var(--ink)}
 .menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
 .menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
@@ -189,6 +189,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .sticky-text strong{color:var(--gold-light);font-weight:400}
 .sticky-ctas{display:flex;gap:1rem}
 .s-wa{background:var(--green);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none}
+.s-email{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap}
 .s-back{background:rgba(250,247,242,0.1);color:var(--gold-light);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;border:0.5px solid rgba(201,169,110,0.3)}
 
 /* FOOTER */
@@ -265,7 +266,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
   .price-table th,.price-table td{padding:8px 8px}
   .price-table th:last-child,.price-table td:last-child{display:none}
   .s-back{display:none}
-  .s-wa{font-size:0.65rem;padding:0.75rem 1.5rem}
+  .s-wa,.s-email{font-size:0.65rem;padding:0.75rem 1.5rem}
   .sticky-ctas{gap:0.5rem}
 }
 @media(max-width:768px){.scroll-top{display:none!important}}
@@ -311,7 +312,7 @@ window._loadClarity();
 <nav>
   <a href="index.html" class="nav-logo">Rion</a>
   <div class="nav-right">
-    <a href="https://wa.me/819054621246" class="nav-cta" target="_blank">Begin Your Order</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="nav-cta">Begin Your Order</a>
     <div class="lang-switch">
       <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
       <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
@@ -354,7 +355,7 @@ window._loadClarity();
       </nav>
     </div>
     <div class="menu-footer">
-      <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 &nbsp;Message Us on WhatsApp</a>
+      <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="menu-cta">&#9993; &nbsp;Email Us</a>
     </div>
   </div>
 </div>
@@ -366,7 +367,7 @@ window._loadClarity();
       <h1 data-i18n="page_h1">The<br><em>Collection</em></h1>
     </div>
     <div class="page-header-right">
-      <p data-i18n="page_desc">Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>. We will guide you through every step with care and patience.</p>
+      <p data-i18n="page_desc">Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you.">email</a>. We will guide you through every step with care and patience.</p>
       <div class="page-header-note" data-i18n="page_note">✦ All prices in AUD · Free insured shipping · No Australian import duties · DDP terms</div>
     </div>
   </div>
@@ -406,7 +407,7 @@ window._loadClarity();
         <p class="product-code">A-1</p>
         <p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p>
         <p class="product-price-tag">$6,900 AUD</p>
-        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
       </div>
     </a>
     <a class="product-card" href="product.html?code=A-2">
@@ -415,7 +416,7 @@ window._loadClarity();
         <p class="product-code">A-2</p>
         <p class="product-material" data-i18n="mat_wgold">K18 White Gold</p>
         <p class="product-price-tag">$7,200 AUD</p>
-        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
       </div>
     </a>
     <a class="product-card" href="product.html?code=A-3">
@@ -424,7 +425,7 @@ window._loadClarity();
         <p class="product-code">A-3</p>
         <p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p>
         <p class="product-price-tag">$6,900 AUD</p>
-        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
       </div>
     </a>
     <a class="product-card" href="product.html?code=A-4">
@@ -433,7 +434,7 @@ window._loadClarity();
         <p class="product-code">A-4</p>
         <p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p>
         <p class="product-price-tag">$6,800 AUD</p>
-        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+        <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
       </div>
     </a>
   </div>
@@ -467,7 +468,7 @@ window._loadClarity();
   </div>
 
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20A%20%28The%20Classic%20Ring%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20%28The%20Classic%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
     <span class="cta-note">We will confirm your design, ring size, and send your invoice in AUD.</span>
   </div>
 </section>
@@ -486,19 +487,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=B-1">
       <img src="images/series-b/b1.jpg" alt="B-1 Yellow Gold Bar Pendant" loading="lazy">
-      <div class="product-info"><p class="product-code">B-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">B-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=B-2">
       <img src="images/series-b/b2.jpg" alt="B-2 White Gold Bar Pendant" loading="lazy">
-      <div class="product-info"><p class="product-code">B-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">B-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=B-3">
       <img src="images/series-b/b3.jpg" alt="B-3 Pink Gold Bar Pendant" loading="lazy">
-      <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">B-3</p><p class="product-material">K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=B-4">
       <img src="images/series-b/b4.jpg" alt="B-4 Platinum Bar Pendant" loading="lazy">
-      <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$6,900 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">B-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$6,900 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -515,7 +516,7 @@ window._loadClarity();
     </table>
   </div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20B%20(The%20Bar%20Pendant).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20B%20%28The%20Bar%20Pendant%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20B%20%28The%20Bar%20Pendant%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
     <span class="cta-note">We will confirm your design, chain length, and send your invoice in AUD.</span>
   </div>
 </section>
@@ -534,19 +535,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=C-1">
       <img src="images/series-c/c1.jpg" alt="C-1 Yellow Gold Birthstone Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">C-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">C-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=C-2">
       <img src="images/series-c/c2.jpg" alt="C-2 White Gold Birthstone Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">C-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,500 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">C-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,500 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=C-3">
       <img src="images/series-c/c3.jpg" alt="C-3 Pink Gold Birthstone Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">C-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">C-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=C-4">
       <img src="images/series-c/c4.jpg" alt="C-4 Platinum Birthstone Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">C-4</p><p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">$7,200 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">C-4</p><p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">$7,200 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -564,7 +565,7 @@ window._loadClarity();
   </div>
   <div class="special-note">✦ <strong>Birthstones:</strong> Choose any 2 from diamond, ruby, sapphire, emerald, amethyst, aquamarine, garnet, peridot, topaz, tourmaline, citrine, or tanzanite. Additional birthstones available at $25 per stone. Tell us your selection when you reach out.</div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20C%20(The%20Birthstone%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20C%20%28The%20Birthstone%20Ring%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20C%20%28The%20Birthstone%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
     <span class="cta-note">Tell us your 2 birthstone choices when you reach out.</span>
   </div>
 </section>
@@ -583,19 +584,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=D-1">
       <img src="images/series-d/d1.jpg" alt="D-1 Yellow Gold Half Eternity" loading="lazy">
-      <div class="product-info"><p class="product-code">D-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$10,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">D-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$10,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=D-2">
       <img src="images/series-d/d2.jpg" alt="D-2 White Gold Half Eternity" loading="lazy">
-      <div class="product-info"><p class="product-code">D-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$11,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">D-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$11,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=D-3">
       <img src="images/series-d/d3.jpg" alt="D-3 Pink Gold Half Eternity" loading="lazy">
-      <div class="product-info"><p class="product-code">D-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$10,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">D-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$10,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=D-4">
       <img src="images/series-d/d4.jpg" alt="D-4 Platinum Half Eternity" loading="lazy">
-      <div class="product-info"><p class="product-code">D-4</p><p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">$10,400 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">D-4</p><p class="product-material">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">$10,400 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -612,7 +613,7 @@ window._loadClarity();
     </table>
   </div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20D%20(The%20Half%20Eternity%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20D%20%28The%20Half%20Eternity%20Ring%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20D%20%28The%20Half%20Eternity%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
     <span class="cta-note">All diamonds are conflict-free, sourced entirely within Japan.</span>
   </div>
 </section>
@@ -631,19 +632,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=F-1">
       <img src="images/series-f/f1.jpg" alt="F-1 Yellow Gold Chevron Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">F-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$9,800 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">F-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$9,800 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=F-2">
       <img src="images/series-f/f2.jpg" alt="F-2 White Gold Chevron Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">F-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$10,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">F-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$10,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=F-3">
       <img src="images/series-f/f3.jpg" alt="F-3 Pink Gold Chevron Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">F-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$9,800 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">F-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$9,800 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=F-4">
       <img src="images/series-f/f4.jpg" alt="F-4 Platinum Chevron Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">F-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$9,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">F-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$9,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -660,7 +661,7 @@ window._loadClarity();
     </table>
   </div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20F%20(The%20Chevron%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20F%20%28The%20Chevron%20Ring%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20F%20%28The%20Chevron%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
   </div>
 </section>
 
@@ -678,19 +679,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=G-1">
       <img src="images/series-g/g1.jpg" alt="G-1 Yellow Gold Milgrain Band" loading="lazy">
-      <div class="product-info"><p class="product-code">G-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">G-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=G-2">
       <img src="images/series-g/g2.jpg" alt="G-2 White Gold Milgrain Band" loading="lazy">
-      <div class="product-info"><p class="product-code">G-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">G-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,300 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=G-3">
       <img src="images/series-g/g3.jpg" alt="G-3 Pink Gold Milgrain Band" loading="lazy">
-      <div class="product-info"><p class="product-code">G-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">G-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$7,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=G-4">
       <img src="images/series-g/g4.jpg" alt="G-4 Platinum Milgrain Band" loading="lazy">
-      <div class="product-info"><p class="product-code">G-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$6,900 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">G-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$6,900 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -707,7 +708,7 @@ window._loadClarity();
     </table>
   </div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20G%20(The%20Milgrain%20Band).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20G%20%28The%20Milgrain%20Band%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20G%20%28The%20Milgrain%20Band%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
   </div>
 </section>
 
@@ -725,19 +726,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=H-1">
       <img src="images/series-h/h1.jpg" alt="H-1 Yellow Gold Flow Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">H-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">H-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$7,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=H-2">
       <img src="images/series-h/h2.jpg" alt="H-2 White Gold Flow Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">H-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,700 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">H-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$7,700 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=H-3">
       <img src="images/series-h/h3.jpg" alt="H-3 Pink Gold Flow Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">H-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$7,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">H-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$7,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=H-4">
       <img src="images/series-h/h4.jpg" alt="H-4 Platinum Flow Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">H-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$7,400 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">H-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$7,400 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -754,7 +755,7 @@ window._loadClarity();
     </table>
   </div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20H%20(The%20Flow%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20H%20%28The%20Flow%20Ring%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20H%20%28The%20Flow%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
   </div>
 </section>
 
@@ -772,19 +773,19 @@ window._loadClarity();
   <div class="product-grid">
     <a class="product-card" href="product.html?code=J-1">
       <img src="images/series-j/j1.jpg" alt="J-1 Yellow Gold Statement Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">J-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$10,200 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">J-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">$10,200 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=J-2">
       <img src="images/series-j/j2.jpg" alt="J-2 White Gold Statement Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">J-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$10,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">J-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">$10,600 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=J-3">
       <img src="images/series-j/j3.jpg" alt="J-3 Pink Gold Statement Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">J-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$10,200 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">J-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">$10,200 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
     <a class="product-card" href="product.html?code=J-4">
       <img src="images/series-j/j4.jpg" alt="J-4 Platinum Statement Ring" loading="lazy">
-      <div class="product-info"><p class="product-code">J-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$10,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+      <div class="product-info"><p class="product-code">J-4</p><p class="product-material">Platinum Pt900</p><p class="product-price-tag">$10,100 AUD</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
     </a>
   </div>
 
@@ -801,7 +802,7 @@ window._loadClarity();
     </table>
   </div>
   <div class="series-cta" style="margin-top:1.5rem">
-    <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20J%20(The%20Statement%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank">💬 Enquire via WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20%E2%80%94%20Series%20J%20%28The%20Statement%20Ring%29&body=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20J%20%28The%20Statement%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire">&#9993; Enquire via Email</a>
   </div>
 </section>
 
@@ -833,7 +834,7 @@ window._loadClarity();
       <div class="bespoke-price" data-i18n="bespoke_price">From $7,200 AUD</div>
       <div class="bespoke-price-note" data-i18n="bespoke_price_note">Free insured shipping to Australia · No import duties · Price depends on design complexity &amp; materials chosen</div>
       <br><br>
-      <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20begin%20a%20fully%20bespoke%20commission.%20Please%20tell%20me%20about%20the%20process%20and%20what%27s%20possible." class="btn-enquire" target="_blank" data-i18n="bespoke_cta">💬 Begin Your Bespoke Journey</a>
+      <a href="mailto:info@art-rings.com?subject=Bespoke%20Commission%20Enquiry%20%E2%80%94%20Australia&body=Hello%20Rion%2C%20I%27d%20like%20to%20begin%20a%20fully%20bespoke%20commission.%20Please%20tell%20me%20about%20the%20process%20and%20what%27s%20possible.%0A%0AThank%20you." class="btn-enquire" data-i18n="bespoke_cta">&#9993; Begin Your Bespoke Journey</a>
     </div>
     <div class="bespoke-img">
       <img src="images/bespoke/main.jpg" alt="Bespoke Jewellery Craftsmanship — Japan" loading="lazy">
@@ -872,7 +873,7 @@ window._loadClarity();
     <div class="footer-col">
       <h5>Connect</h5>
       <div class="footer-social">
-        <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">◐</span>WhatsApp</a>
+        <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you."><span class="footer-social-ico">✉</span>Email</a>
         <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
         <a href="mailto:info@art-rings.com"><span class="footer-social-ico">✉</span>Send Enquiry</a>
       </div>
@@ -890,7 +891,7 @@ window._loadClarity();
 <div class="sticky-bar" id="stickyBar">
   <div class="sticky-text"><strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From $6,800 AUD · Free Australia shipping · No import duties</div>
   <div class="sticky-ctas">
-    <a href="https://wa.me/819054621246" class="s-wa" target="_blank">💬 WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="s-email">&#9993; Email</a>
     <a href="index.html" class="s-back">← Back to Home</a>
   </div>
 </div>
@@ -962,7 +963,7 @@ const T = {
     trust_made: 'Handcrafted in Japan',
     trust_cert: 'Authenticity Certificate Included',
     page_h1: 'The<br><em>Collection</em>',
-    page_desc: 'Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>. We will guide you through every step with care and patience.',
+    page_desc: 'Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you.">email</a>. We will guide you through every step with care and patience.',
     page_note: '✦ All prices in AUD · Free insured shipping · No Australian import duties · DDP terms',
     filter_all: 'All Series',
     filter_ring: 'Rings',
@@ -970,7 +971,7 @@ const T = {
     mat_ygold: 'K18 Yellow Gold',
     mat_wgold: 'K18 White Gold',
     mat_pgold: 'K18 Pink Gold',
-    enquire_wa: 'Enquire via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> →',
+    enquire_wa: 'Enquire via <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you.">email</a> →',
     bespoke_h2: 'Fully <em>Bespoke</em><br>Commission',
     bespoke_p1: 'None of the above feels quite right for your story? We create entirely original designs — conceived from your vision, built by our master artisans in Japan. No templates. No constraints. Just your love, expressed in gold, in a form that has never existed before and never will again.',
     bespoke_p2: 'Many of our most meaningful pieces are bespoke commissions — created for families who needed something that only they could imagine. We will guide you from the first conversation to the final jewel.',
@@ -984,7 +985,7 @@ const T = {
     bespoke_f4_p: 'Approximately 6 months. We update you at every stage with photos and updates — you are never left wondering.',
     bespoke_price: 'From $7,200 AUD',
     bespoke_price_note: 'Free insured shipping to Australia · No import duties · Price depends on design complexity &amp; materials chosen',
-    bespoke_cta: '💬 Begin Your Bespoke Journey'
+    bespoke_cta: '&#9993; Begin Your Bespoke Journey'
   },
   ja: {
     trust_ship: 'オーストラリアへ無料配送',
@@ -992,7 +993,7 @@ const T = {
     trust_made: '日本で手作り',
     trust_cert: '真正証明書付き',
     page_h1: '<em>コレクション</em>',
-    page_desc: 'すべてのジュエルは、お客様のご注文に合わせて一点一点、日本で手作りされます。シリーズを選び、素材をお選びいただき、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>よりお問い合わせください。丁寧にご案内いたします。',
+    page_desc: 'すべてのジュエルは、お客様のご注文に合わせて一点一点、日本で手作りされます。シリーズを選び、素材をお選びいただき、<a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you.">メール</a>よりお問い合わせください。丁寧にご案内いたします。',
     page_note: '✦ 価格はすべてAUD · 保険付き無料配送 · オーストラリア輸入関税なし · DDP条件',
     filter_all: 'すべて',
     filter_ring: 'リング',
@@ -1000,7 +1001,7 @@ const T = {
     mat_ygold: 'K18イエローゴールド',
     mat_wgold: 'K18ホワイトゴールド',
     mat_pgold: 'K18ピンクゴールド',
-    enquire_wa: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でお問い合わせ →',
+    enquire_wa: '<a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Australia%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you.">メール</a>でお問い合わせ →',
     bespoke_h2: 'フルオーダー<br><em>ビスポーク</em>',
     bespoke_p1: '上記のいずれもお客様の物語にしっくりこないと感じられますか。私たちは、お客様のご構想から生まれ、日本の熟練職人が形にする、完全オリジナルのデザインをお作りいたします。型もなく、制約もありません。これまで存在せず、これからも二度と存在しない形で、お客様の愛をゴールドに表現いたします。',
     bespoke_p2: '私たちの最も心のこもった作品の多くは、ビスポークによるご依頼から生まれています。それは、ご自身にしか思い描けないものを必要とされたご家族のために作られたものです。最初のご相談から最後の宝石が完成するまで、丁寧にご案内いたします。',
@@ -1014,7 +1015,7 @@ const T = {
     bespoke_f4_p: '約6ヶ月です。各工程ごとに写真とともに進捗をお知らせいたしますので、不安なくお待ちいただけます。',
     bespoke_price: '$7,200 AUD〜',
     bespoke_price_note: 'オーストラリアへ保険付き無料配送 · 輸入関税なし · 価格はデザインの複雑さとお選びいただく素材により異なります',
-    bespoke_cta: '💬 ビスポークの旅を始める'
+    bespoke_cta: '&#9993; ビスポークの旅を始める'
   }
 };
 function setLang(l){
@@ -1047,25 +1048,11 @@ function filterSeries(filter, e){
 </script>
 
 <script>
-/* WhatsApp source tracking */
-setTimeout(function(){
- document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h.indexOf('%5BAU%5D')>=0) return;
-  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BAU%5D%20'));}
-  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BAU%5D%20');}
- });
-},0);
-</script>
-<script>
 /* GA4 event tracking */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
   if(!a||!window.gtag)return;
   var h=a.getAttribute('href')||'';
-  if(h.indexOf('wa.me')!==-1){
-    gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
-  }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
   }
