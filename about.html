@@ -65,8 +65,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
 .menu-links a.menu-active{color:var(--gold-dark)}
 .menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
-.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
-.menu-cta:hover{background:#0E7567}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold-dark);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#6E5410}
 .menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
 .menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
 .menu-close::before{transform:rotate(45deg)}
@@ -145,6 +145,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .btn-primary:hover{background:var(--gold-dark)}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
 .btn-wa:hover{background:#075E54}
+.btn-email{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:1rem 2rem;text-decoration:none;transition:background .3s}
+.btn-email:hover{background:#6E5410}
 
 /* FOOTER */
 footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
@@ -270,7 +272,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="menu-cta">&#9993; Email Us</a>
  </div>
  </div>
 </div>
@@ -446,10 +448,10 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <!-- CTA -->
 <section class="cta-section">
  <h2 data-i18n="cta_title">Begin your <em>story</em><br>with Rion.</h2>
- <p data-i18n="cta_body">Every Rion piece begins with a conversation. Reach us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English, and we'll guide you through every step of the process from your first question to your finished jewel.</p>
+ <p data-i18n="cta_body">Every Rion piece begins with a conversation. Reach us by <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Begin%20Your%20Story&body=Hello%20Rion%2C%0A%0AEvery%20Rion%20piece%20begins%20with%20a%20conversation.%20I%27d%20love%20to%20hear%20about%20the%20process%20and%20next%20steps.%0A%0AThank%20you.">email</a> — we respond personally in English, and we'll guide you through every step of the process from your first question to your finished jewel.</p>
  <div class="cta-group">
  <a href="order.html" class="btn-primary" data-i18n="cta_order">Begin Your Order</a>
- <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">💬 Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Begin%20Your%20Story&body=Hello%20Rion%2C%0A%0AEvery%20Rion%20piece%20begins%20with%20a%20conversation.%20I%27d%20love%20to%20hear%20about%20the%20process%20and%20next%20steps.%0A%0AThank%20you." class="btn-email" data-i18n="cta_wa">&#9993; Message Us via Email</a>
  </div>
 </section>
 
@@ -485,8 +487,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="footer-col">
  <h5>Connect</h5>
  <div class="footer-social">
- <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
- <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
  <a href="index.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
  </div>
  </div>
@@ -545,7 +546,7 @@ const T = {
     atelier_eyebrow:'Our Atelier · Japan',atelier_title:'Where every jewel is <em>made.</em>',atelier_p1:'Our atelier is in Japan. Every single piece — without exception — is crafted here, by hand, by skilled artisans who understand what they are making and why. There are no factories involved at any stage. There are no shortcuts. Only craftsmanship, time, and profound care.',atelier_p2:'We work in K18 gold (yellow, white, and rose), Pt900 platinum, and high-grade diamonds, rubies, and sapphires — all sourced within Japan. The sealing technique was developed and perfected over years of iteration: each piece is completely sealed, designed to last for generations of daily wear.',atelier_p3:'When your jewel leaves our atelier and travels to your door in the United Kingdom, it carries with it the full weight of Japanese craft tradition — and the full weight of your love for someone who matters deeply.',
     why_eyebrow:'For UK Families',why_title:'Made in Japan.<br><em>Delivered to your door.</em>',why_p1:'We understand that ordering from an atelier in Japan might feel daunting — particularly when the purpose is so personal. That\'s why we\'ve built a process that puts you first at every step.',why_p2:'We ship your hair collection kit to your UK address via Royal Mail. You return your hair using our prepaid Royal Mail label. We handle all UK customs and import duties — every single one — so that when your finished jewel arrives at your door via DHL Express, there is nothing to sign for, nothing to pay. Just open it.',why_p3:'Our team responds to every message personally, in English, within 24 hours. We know the trust you are placing in us. We don\'t take it lightly.',
     stat1_label:'Import duties or customs fees',stat2_label:'Free shipping, kit &amp; jewel',stat3_label:'Response time · English support',
-    cta_title:'Begin your <em>story</em><br>with Rion.',cta_body:'Every Rion piece begins with a conversation. Reach us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English, and we\'ll guide you through every step of the process from your first question to your finished jewel.',cta_order:'Begin Your Order',cta_wa:'💬 Message Us on WhatsApp',
+    cta_title:'Begin your <em>story</em><br>with Rion.',cta_body:'Every Rion piece begins with a conversation. Reach us by <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Begin%20Your%20Story&body=Hello%20Rion%2C%0A%0AEvery%20Rion%20piece%20begins%20with%20a%20conversation.%20I%27d%20love%20to%20hear%20about%20the%20process%20and%20next%20steps.%0A%0AThank%20you.">email</a> — we respond personally in English, and we\'ll guide you through every step of the process from your first question to your finished jewel.',cta_order:'Begin Your Order',cta_wa:'&#9993; Message Us via Email',
     footer_p:'Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever.',footer_est:'Est. 2018 · Japan',
     footer_copy:'© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — No import duties for UK customers',footer_right:'Est. 2018 · Japan'
   },
@@ -567,7 +568,7 @@ const T = {
     atelier_eyebrow:'私たちのアトリエ・日本',atelier_title:'すべてのジュエルが<em>作られる場所。</em>',atelier_p1:'私たちのアトリエは日本にあります。すべての作品は例外なく、ここで、製作の意味を理解した熟練の職人の手によって、一つひとつ手作業で作られています。どの工程にも工場は介在しません。近道もありません。あるのは職人技と、時間と、深い心配りだけです。',atelier_p2:'私たちはK18ゴールド(イエロー、ホワイト、ローズ)、Pt900プラチナ、そして高品質なダイヤモンド、ルビー、サファイアを使用しており、これらはすべて日本国内で調達されています。封入技術は、長年の試行を経て開発・洗練されたもので、それぞれの作品は気密封入され、世代を超えて日常的に使用できるよう設計されています。',atelier_p3:'ジュエルがアトリエを離れ、英国のあなたの元へ届く時、それは日本の職人技の伝統の重みと、あなたが大切な誰かに寄せる愛の重みの両方を携えています。',
     why_eyebrow:'英国のご家族へ',why_title:'日本製。<br><em>ご自宅まで配送。</em>',why_p1:'日本のアトリエに注文することは、特に個人的な目的であるほど、不安に感じられるかもしれません。だからこそ、私たちはすべての段階でお客様を第一に考えたプロセスを構築しました。',why_p2:'ヘアコレクションキットはお客様の英国内のご住所へRoyal Mailで発送します。お客様は弊社が用意した着払いのRoyal Mailラベルを使用して髪の毛を返送してください。英国の通関手続きと輸入関税はすべて――一つ残らず――弊社が対応します。完成したジュエルがDHL Expressでお手元に届いた際には、署名も、お支払いも一切必要ありません。ただ開けるだけです。',why_p3:'私たちのチームは、すべてのメッセージに24時間以内に、英語で個別にご返信します。お客様が私たちに寄せてくださる信頼を、私たちは重く受け止めています。',
     stat1_label:'輸入関税・通関費用',stat2_label:'キット・ジュエル共に無料配送',stat3_label:'返信時間・英語サポート',
-    cta_title:'Rionとともに<br>あなたの<em>物語</em>を始めましょう。',cta_body:'すべてのRionの作品は、対話から始まります。<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>からお気軽にご連絡ください――英語で個別に対応し、最初のご質問から完成したジュエルまで、すべての工程を丁寧にご案内します。',cta_order:'ご注文を始める',cta_wa:'💬 WhatsAppでメッセージ',
+    cta_title:'Rionとともに<br>あなたの<em>物語</em>を始めましょう。',cta_body:'すべてのRionの作品は、対話から始まります。<a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Begin%20Your%20Story&body=Hello%20Rion%2C%0A%0AEvery%20Rion%20piece%20begins%20with%20a%20conversation.%20I%27d%20love%20to%20hear%20about%20the%20process%20and%20next%20steps.%0A%0AThank%20you.">メール</a>からお気軽にご連絡ください――英語で個別に対応し、最初のご質問から完成したジュエルまで、すべての工程を丁寧にご案内します。',cta_order:'ご注文を始める',cta_wa:'&#9993; メールでメッセージ',
     footer_p:'日本で完全にハンドメイドされたオーダーメイドのメモリアルジュエリー。一本の髪。一つのジュエル。一つの愛――あなたのために、永遠に。',footer_est:'2018年創業・日本',
     footer_copy:'© 2026 Rion™ · My Art Inc. · 100%日本製 · DDP――英国のお客様の輸入関税は無料',footer_right:'2018年創業・日本'
   }
@@ -617,17 +618,6 @@ function declineCookies(){
 </script>
 
 <script>
-/* WhatsApp source tracking */
-setTimeout(function(){
- document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h.indexOf('%5BUK%5D')>=0) return;
-  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BUK%5D%20'));}
-  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BUK%5D%20');}
- });
-},0);
-</script>
-<script>
 /* GA4 event tracking */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
@@ -635,6 +625,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});

@@ -57,8 +57,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
 .menu-links a.menu-active{color:var(--gold-dark)}
 .menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
-.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
-.menu-cta:hover{background:#0E7567}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold-dark);color:#FFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#6E5410}
 .menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
 .menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink)}
 .menu-close::before{transform:rotate(45deg)}
@@ -97,6 +97,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .hero-ctas{display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem}
 .btn-wa-hero{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#FFF;font-size:0.76rem;letter-spacing:0.16em;text-transform:uppercase;padding:1.1rem 2rem;text-decoration:none;font-weight:500;transition:background .3s;border:none;cursor:pointer}
 .btn-wa-hero:hover{background:#0E7567}
+.btn-email-hero{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold-dark);color:#FFF;font-size:0.76rem;letter-spacing:0.16em;text-transform:uppercase;padding:1.1rem 2rem;text-decoration:none;font-weight:500;transition:background .3s;border:none;cursor:pointer}
+.btn-email-hero:hover{background:#6E5410}
 .btn-outline-hero{display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--ink);font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;padding:0.9rem 2rem;text-decoration:none;border:0.5px solid var(--ink);transition:all .3s}
 .btn-outline-hero:hover{background:var(--ink);color:var(--cream)}
 .code-display{font-size:0.72rem;letter-spacing:0.18em;color:var(--ink-muted);text-transform:uppercase;margin-top:0.75rem}
@@ -161,8 +163,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .enquire-section h2 em{font-style:italic;color:var(--gold-dark)}
 .enquire-section p{font-size:0.9rem;color:var(--ink-muted);line-height:1.8;max-width:500px;margin:0 auto 2rem}
 .enquire-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-.btn-enquire-main{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#FFF;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;padding:1.2rem 2.5rem;text-decoration:none;font-weight:500;transition:background .3s}
-.btn-enquire-main:hover{background:#0E7567}
+.btn-enquire-main{display:inline-flex;align-items:center;gap:10px;background:var(--gold-dark);color:#FFF;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;padding:1.2rem 2.5rem;text-decoration:none;font-weight:500;transition:background .3s}
+.btn-enquire-main:hover{background:#6E5410}
 .btn-view-all{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;padding:1.1rem 2.2rem;text-decoration:none;border:0.5px solid var(--ink);transition:all .3s}
 .btn-view-all:hover{background:var(--ink);color:var(--cream)}
 
@@ -331,7 +333,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="menu-cta" id="menuWa" target="_blank">💬 Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20A%20%28The%20Classic%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20A%20%28The%20Classic%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="menu-cta" id="menuEmail">&#9993; Email Us</a>
  </div>
  </div>
 </div>
@@ -363,7 +365,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <p class="price-note" data-i18n="price_note">Approx. 5.5 months · Made to order in Japan · Handcrafted entirely by hand</p>
 
  <div class="hero-ctas">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="btn-wa-hero" target="_blank" data-i18n="btn_wa">💬 Order via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20A%20%28The%20Classic%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20A%20%28The%20Classic%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-email-hero" data-i18n="btn_wa">&#9993; Order via Email</a>
  <a href="collection.html" class="btn-outline-hero" data-i18n="btn_back">← Back to Collection</a>
  </div>
  </div>
@@ -480,7 +482,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="spec-row"><span class="spec-label">Production</span><span class="spec-value">Approx. 5.5 months from hair receipt</span></div>
  <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-value">100% handcrafted in Japan · Made in Japan by My Art Inc.</span></div>
  <div class="spec-row"><span class="spec-label">Shipping</span><span class="spec-value">Free insured express delivery to the UK · No import duties</span></div>
- <div class="spec-row"><span class="spec-label">Photo Report</span><span class="spec-value">Hair sealing photographed &amp; sent via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a></span></div>
+ <div class="spec-row"><span class="spec-label">Photo Report</span><span class="spec-value">Hair sealing photographed &amp; sent via <a href="mailto:info@art-rings.com">email</a></span></div>
  <div class="spec-row"><span class="spec-label">Aftercare</span><span class="spec-value">Complimentary lifetime polishing in Japan</span></div>
  </div>
  </div>
@@ -561,7 +563,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </div>
  <div class="craft-point">
  <span class="craft-point-num">iv</span>
- <div class="craft-point-text"><strong>Photo Report</strong>We photograph the sealing process and send it to you via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — so you witness every step.</div>
+ <div class="craft-point-text"><strong>Photo Report</strong>We photograph the sealing process and send it to you via <a href="mailto:info@art-rings.com">email</a> — so you witness every step.</div>
  </div>
  </div>
  </div>
@@ -570,9 +572,9 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <!-- ENQUIRE -->
 <section class="enquire-section" id="enquire">
  <h2>Ready to begin?<br>We are <em>here.</em></h2>
- <p>Send us a message on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> to enquire about Series A. No commitment required — our team will guide you through every step, from choosing your material to sending your hair.</p>
+ <p>Send us a message via <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20A%20%28The%20Classic%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20A%20%28The%20Classic%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you.">email</a> to enquire about Series A. No commitment required — our team will guide you through every step, from choosing your material to sending your hair.</p>
  <div class="enquire-btns">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire-main" id="enquireWa" target="_blank">💬 Order via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20A%20%28The%20Classic%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20A%20%28The%20Classic%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire-main" id="enquireEmail">&#9993; Order via Email</a>
  <a href="order.html" class="btn-view-all">How to Order →</a>
  </div>
 </section>
@@ -643,8 +645,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="footer-col">
  <h5>Connect</h5>
  <div class="footer-social">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." id="footerWa" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
- <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
  <a href="index.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
  </div>
  </div>
@@ -684,7 +685,7 @@ const T={
  price_ddp:'Free UK Shipping · No Duties',
  price_note:'Approx. 5.5 months · Made to order in Japan · Handcrafted entirely by hand',
  code_label:'Code:',
- btn_wa:'💬 Order via WhatsApp',btn_back:'← Back to Collection'
+ btn_wa:'&#9993; Order via Email',btn_back:'← Back to Collection'
  },
  ja:{
  trust_strip:'英国へ無料配送 &nbsp;·&nbsp; 輸入関税なし &nbsp;·&nbsp; 日本で手作り &nbsp;·&nbsp; 安全なお支払い',
@@ -694,7 +695,7 @@ const T={
  price_ddp:'英国へ無料配送・関税なし',
  price_note:'約5.5ヶ月・日本で受注制作・完全ハンドメイド',
  code_label:'商品コード:',
- btn_wa:'💬 WhatsAppでお問い合わせ',btn_back:'← コレクションへ戻る'
+ btn_wa:'&#9993; メールでお問い合わせ',btn_back:'← コレクションへ戻る'
  }
 };
 function setLang(l){
@@ -742,17 +743,6 @@ function declineCookies(){
 </script>
 
 <script>
-/* WhatsApp source tracking */
-setTimeout(function(){
- document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h.indexOf('%5BUK%5D')>=0) return;
-  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BUK%5D%20'));}
-  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BUK%5D%20');}
- });
-},0);
-</script>
-<script>
 /* GA4 event tracking */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
@@ -760,6 +750,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});

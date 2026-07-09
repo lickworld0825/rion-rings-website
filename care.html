@@ -55,8 +55,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
 .menu-links a.menu-active{color:var(--gold-dark)}
 .menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
-.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
-.menu-cta:hover{background:#0E7567}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold-dark);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#6E5410}
 .menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
 .menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
 .menu-close::before{transform:rotate(45deg)}
@@ -149,6 +149,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .btn-primary:hover{background:var(--gold-dark)}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
 .btn-wa:hover{background:#075E54}
+.btn-email{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:1rem 2rem;text-decoration:none;transition:background .3s}
+.btn-email:hover{background:#6E5410}
 
 /* FOOTER */
 footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
@@ -274,7 +276,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">&#128172; Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="menu-cta">&#9993; Email Us</a>
  </div>
  </div>
 </div>
@@ -414,7 +416,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="service-list-item">
  <div class="service-list-num">i</div>
  <div class="service-list-content">
- <h4>Message Us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a></h4>
+ <h4>Message Us via <a href="mailto:info@art-rings.com?subject=Care%20%26%20Repair%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20caring%20for%20my%20Rion%20jewel%20%E2%80%94%20possibly%20a%20polish%20or%20repair.%20Could%20you%20help%3F%0A%0AThank%20you.">Email</a></h4>
  <p>Tell us what your jewel needs. We'll respond personally with step-by-step shipping instructions.</p>
  </div>
  </div>
@@ -440,9 +442,9 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <!-- CTA -->
 <section class="cta-section">
  <h2 data-i18n="cta_title">Questions about your <em>jewel?</em></h2>
- <p data-i18n="cta_body">Whether it needs a polish, a repair, or you just have a question — we're always here and happy to help. Send us a message on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> anytime.</p>
+ <p data-i18n="cta_body">Whether it needs a polish, a repair, or you just have a question — we're always here and happy to help. Send us a message via <a href="mailto:info@art-rings.com?subject=Care%20%26%20Repair%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20caring%20for%20my%20Rion%20jewel%20%E2%80%94%20possibly%20a%20polish%20or%20repair.%20Could%20you%20help%3F%0A%0AThank%20you.">email</a> anytime.</p>
  <div class="cta-group">
- <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">&#128172; Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Care%20%26%20Repair%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20caring%20for%20my%20Rion%20jewel%20%E2%80%94%20possibly%20a%20polish%20or%20repair.%20Could%20you%20help%3F%0A%0AThank%20you." class="btn-email" data-i18n="cta_wa">&#9993; Message Us via Email</a>
  <a href="faq.html" class="btn-primary" data-i18n="cta_faq">Read FAQ</a>
  </div>
 </section>
@@ -477,8 +479,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="footer-col">
  <h5>Connect</h5>
  <div class="footer-social">
- <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">&#128172;</span>WhatsApp</a>
- <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">&#9672;</span>Instagram</a>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">&#9672;</span>Instagram</a>
  </div>
  </div>
  </div>
@@ -554,7 +555,7 @@ const T = {
  dodont_title:'Do &amp; <em>Don\'t.</em>',dodont_lead:'A quick reference for everyday wear.',
  do_title:'<em>Do</em>',do1:'Wipe with a soft cloth after each wear',do2:'Store in the Rion exclusive case',do3:'Remove before swimming, hot tubs, or saunas',do4:'Apply perfume and lotion before putting it on',do5:'Send to Japan for free lifetime polishing (you cover shipping)',do6:'Wear it every day — it\'s built for it',
  dont_title:'<em>Don\'t</em>',dont1:'Expose to chlorine (pools, bleach-based cleaners)',dont2:'Spray perfume or hairspray directly on the jewel',dont3:'Use ultrasonic jewelry cleaners or steamers',dont4:'Scrub with abrasive cloths or toothpaste',dont5:'Knock against hard surfaces or store loosely',dont6:'Try to open or tamper with the hair chamber',
- cta_title:'Questions about your <em>jewel?</em>',cta_body:'Whether it needs a polish, a repair, or you just have a question — we\'re always here and happy to help. Send us a message on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> anytime.',cta_wa:'💬 Message Us on WhatsApp',cta_faq:'Read FAQ'
+ cta_title:'Questions about your <em>jewel?</em>',cta_body:'Whether it needs a polish, a repair, or you just have a question — we\'re always here and happy to help. Send us a message via <a href="mailto:info@art-rings.com?subject=Care%20%26%20Repair%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20caring%20for%20my%20Rion%20jewel%20%E2%80%94%20possibly%20a%20polish%20or%20repair.%20Could%20you%20help%3F%0A%0AThank%20you.">email</a> anytime.',cta_wa:'&#9993; Message Us via Email',cta_faq:'Read FAQ'
  },
  ja: {
  nav_order:'ご注文',
@@ -570,7 +571,7 @@ const T = {
  dodont_title:'やること・<em>やってはいけないこと。</em>',dodont_lead:'日常着用のクイックリファレンス。',
  do_title:'<em>やること</em>',do1:'着用後は柔らかい布で拭いてください',do2:'Rion専用ケースに保管してください',do3:'水泳・温泉・サウナの前には外してください',do4:'香水やローションはつける前に使用してください',do5:'無料の生涯研磨のために日本へお送りください（送料のみご負担）',do6:'毎日着用してください — その耐久性のために作られています',
  dont_title:'<em>やってはいけないこと</em>',dont1:'塩素に触れさせないでください（プール・漂白剤系洗剤）',dont2:'ジュエルに直接香水やヘアスプレーをかけないでください',dont3:'超音波ジュエリークリーナーやスチーマーを使用しないでください',dont4:'研磨布や歯磨き粉でこすらないでください',dont5:'硬い面にぶつけたり、ゆるく保管したりしないでください',dont6:'髪の封入室を開けようとしたり、いじったりしないでください',
- cta_title:'ジュエルについて<em>ご質問は？</em>',cta_body:'研磨、修理、または単純なご質問など、いつでも喜んでお答えします。<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でメッセージをお送りください。',cta_wa:'💬 WhatsAppでメッセージ',cta_faq:'よくある質問'
+ cta_title:'ジュエルについて<em>ご質問は？</em>',cta_body:'研磨、修理、または単純なご質問など、いつでも喜んでお答えします。<a href="mailto:info@art-rings.com?subject=Care%20%26%20Repair%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20caring%20for%20my%20Rion%20jewel%20%E2%80%94%20possibly%20a%20polish%20or%20repair.%20Could%20you%20help%3F%0A%0AThank%20you.">メール</a>でメッセージをお送りください。',cta_wa:'&#9993; メールでメッセージ',cta_faq:'よくある質問'
  }
 };
 function setLang(l){
@@ -588,17 +589,6 @@ function setLang(l){
 </script>
 
 <script>
-/* WhatsApp source tracking */
-setTimeout(function(){
- document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h.indexOf('%5BUK%5D')>=0) return;
-  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BUK%5D%20'));}
-  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BUK%5D%20');}
- });
-},0);
-</script>
-<script>
 /* GA4 event tracking */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
@@ -606,6 +596,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});

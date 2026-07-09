@@ -61,8 +61,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
 .menu-links a.menu-active{color:var(--gold-dark)}
 .menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
-.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
-.menu-cta:hover{background:#0E7567}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold-dark);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#6E5410}
 .menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
 .menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
 .menu-close::before{transform:rotate(45deg)}
@@ -145,6 +145,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .btn-primary:hover{background:var(--gold-dark)}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1rem 2rem;text-decoration:none;transition:background .3s}
 .btn-wa:hover{background:#075E54}
+.btn-email{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:1rem 2rem;text-decoration:none;transition:background .3s}
+.btn-email:hover{background:#6E5410}
 
 footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem}
@@ -272,7 +274,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="menu-cta">&#9993; Email Us</a>
  </div>
  </div>
 </div>
@@ -333,7 +335,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="ship-step-num">iii</div>
  <div class="ship-step-content">
  <h3 data-i18n="step3_title">Crafting in our <em>atelier in Japan</em></h3>
- <p data-i18n="step3_body">Your hair arrives at our atelier in Japan. Handcrafting begins. We photograph the hair sealing process and send you a photo report via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email — before, during, and after the seal is closed. You witness every step of your jewel's creation.</p>
+ <p data-i18n="step3_body">Your hair arrives at our atelier in Japan. Handcrafting begins. We photograph the hair sealing process and send you a photo report via <a href="mailto:info@art-rings.com">email</a> — before, during, and after the seal is closed. You witness every step of your jewel's creation.</p>
  <span class="ship-step-meta" data-i18n="step3_meta">Japan · Approx. 5.5 months</span>
  </div>
  </div>
@@ -374,7 +376,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <p class="coverage-meta" data-i18n="cov3_meta">DDP · No duties · Free DHL Express</p>
  </div>
  </div>
- <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--ink-soft);text-align:center" data-i18n="coverage_note">Ordering from another country? <a href="https://wa.me/819054621246" style="color:var(--gold-dark)">Contact us on WhatsApp</a> — we ship internationally on request.</p>
+ <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--ink-soft);text-align:center" data-i18n="coverage_note">Ordering from another country? <a href="mailto:info@art-rings.com?subject=International%20Shipping%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%27m%20ordering%20from%20another%20country%20and%20would%20like%20to%20ask%20about%20international%20shipping%20options.%0A%0AThank%20you." style="color:var(--gold-dark)">Contact us by email</a> — we ship internationally on request.</p>
 </section>
 
 <!-- FEES TABLE -->
@@ -396,7 +398,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <tr><td data-i18n="fee5_item">Customs paperwork &amp; declarations</td><td class="fee-paid">Rion</td><td data-i18n="fee5_note">Pre-completed by us. You write nothing, arrange nothing.</td></tr>
  <tr><td data-i18n="fee6_item">Full shipping insurance</td><td class="fee-paid">Rion</td><td data-i18n="fee6_note">Your finished jewel is insured for its full value via DHL Express.</td></tr>
  <tr><td data-i18n="fee7_item">Ring size gauge</td><td class="fee-paid">Rion</td><td data-i18n="fee7_note">Included in your hair kit. standard sizes 1–12, half sizes available.</td></tr>
- <tr><td data-i18n="fee8_item">Photo report (sealing process)</td><td class="fee-paid">Rion</td><td data-i18n="fee8_note">Photographs sent via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email at each stage of production.</td></tr>
+ <tr><td data-i18n="fee8_item">Photo report (sealing process)</td><td class="fee-paid">Rion</td><td data-i18n="fee8_note">Photographs sent via <a href="mailto:info@art-rings.com">email</a> at each stage of production.</td></tr>
  <tr><td data-i18n="fee9_item">Gift packaging &amp; certificate of authenticity</td><td class="fee-paid">Rion</td><td data-i18n="fee9_note">Rion presentation box, tissue, and signed certificate.</td></tr>
  <tr><td data-i18n="fee10_item">Lifetime polishing (return to Japan)</td><td data-i18n="fee10_who">Customer pays postage</td><td data-i18n="fee10_note">We polish and restore at no charge. You pay only the shipping back to Japan.</td></tr>
  </tbody>
@@ -425,7 +427,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </div>
  <div style="padding:2rem;background:var(--cream);border:0.5px solid var(--border)">
  <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;margin-bottom:1rem">What if something goes wrong?</h3>
- <p style="font-size:0.87rem;line-height:1.85;color:var(--ink-soft)">If your return shipment is delayed or held for any reason, contact us immediately on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>. We will handle all correspondence with Royal Mail and customs on your behalf. We've never had a hair shipment lost — but if the extraordinary happened, we would work with you personally to find a solution.</p>
+ <p style="font-size:0.87rem;line-height:1.85;color:var(--ink-soft)">If your return shipment is delayed or held for any reason, contact us immediately via <a href="mailto:info@art-rings.com?subject=Shipment%20Issue%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AMy%20return%20shipment%20appears%20to%20be%20delayed%20or%20held.%20Could%20you%20help%20me%20resolve%20this%20as%20soon%20as%20possible%3F%0A%0AThank%20you.">email</a>. We will handle all correspondence with Royal Mail and customs on your behalf. We've never had a hair shipment lost — but if the extraordinary happened, we would work with you personally to find a solution.</p>
  </div>
  </div>
 </section>
@@ -452,7 +454,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="returns-col">
  <h3 data-i18n="defects_title">Manufacturing <em>Defects</em></h3>
  <p data-i18n="defects_p1">If you discover a manufacturing defect on our part, we will remake the piece at no charge — including all shipping and customs for the remake. <strong>Refunds are not offered.</strong></p>
- <p data-i18n="defects_p2">Contact us via <strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or <a href="mailto:info@art-rings.com">email</a></strong> within 3 days of receiving your jewel, with clear photographs of the issue. We respond personally and will resolve the situation promptly.</p>
+ <p data-i18n="defects_p2">Contact us via <strong><a href="mailto:info@art-rings.com">email</a></strong> within 3 days of receiving your jewel, with clear photographs of the issue. We respond personally and will resolve the situation promptly.</p>
  <ul>
  <li data-i18n="defects_li1">Free remake for manufacturing defects</li>
  <li data-i18n="defects_li2">All shipping &amp; UK customs for remake covered by Rion</li>
@@ -467,9 +469,9 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <!-- CTA -->
 <section class="cta-section">
  <h2 data-i18n="cta_title">Questions about <em>shipping?</em></h2>
- <p data-i18n="cta_body">Whether you're in London or the Scottish Highlands, we'll walk you through every step. Message us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English and Japanese, typically within a few hours.</p>
+ <p data-i18n="cta_body">Whether you're in London or the Scottish Highlands, we'll walk you through every step. Message us by <a href="mailto:info@art-rings.com?subject=Shipping%20Question%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20shipping%20to%20my%20location%20in%20the%20UK.%20Could%20you%20help%3F%0A%0AThank%20you.">email</a> — we respond personally in English and Japanese, typically within a few hours.</p>
  <div class="cta-group">
- <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="cta_wa">💬 Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Shipping%20Question%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20shipping%20to%20my%20location%20in%20the%20UK.%20Could%20you%20help%3F%0A%0AThank%20you." class="btn-email" data-i18n="cta_wa">&#9993; Message Us via Email</a>
  <a href="order.html" class="btn-primary" data-i18n="cta_order">How to Order</a>
  </div>
 </section>
@@ -506,8 +508,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="footer-col">
  <h5>Connect</h5>
  <div class="footer-social">
- <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">💬</span>WhatsApp</a>
- <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
  <a href="index.html#contact"><span class="footer-social-ico">✉</span>Send Enquiry</a>
  </div>
  </div>
@@ -557,13 +558,13 @@ const T = {
  timeline_title:'How it <em>works.</em>',timeline_lead:'The complete shipping journey from order confirmation to your door — every step handled by Rion.',
  step1_title:'Hair <em>collection kit</em> ships to your UK address',step1_body:'After your order is confirmed and invoice paid, we dispatch a Rion Hair Collection Kit directly to your UK address via Royal Mail — free of charge. The kit includes a sterile sealed envelope, a ring size gauge (standard sizes 1–12, half sizes available), clear step-by-step instructions in English, and a prepaid Royal Mail return label addressed to our atelier in Japan.',step1_meta:'Japan → Your UK Address · Royal Mail · Free',
  step2_title:'You <em>return</em> the hair to us',step2_body:'Place a few strands of hair in the sealed envelope, then drop the package in any Royal Mail postbox or post office — using our prepaid label. All customs declarations for international shipping are pre-completed by us. There is nothing for you to write, arrange, or pay.',step2_meta:'Your UK Address → Japan · Royal Mail · Free · Prepaid label',
- step3_title:'Crafting in our <em>atelier in Japan</em>',step3_body:'Your hair arrives at our atelier in Japan. Handcrafting begins. We photograph the hair sealing process and send you a photo report via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email — before, during, and after the seal is closed. You witness every step of your jewel\'s creation.',step3_meta:'Japan · Approx. 5.5 months',
+ step3_title:'Crafting in our <em>atelier in Japan</em>',step3_body:'Your hair arrives at our atelier in Japan. Handcrafting begins. We photograph the hair sealing process and send you a photo report via <a href="mailto:info@art-rings.com">email</a> — before, during, and after the seal is closed. You witness every step of your jewel\'s creation.',step3_meta:'Japan · Approx. 5.5 months',
  step4_title:'Your finished jewel <em>arrives at your door</em>',step4_body:'After passing our final quality inspection, your jewel is shipped via DHL Express in a Rion presentation box with certificate of authenticity. Fully insured for its full value. All UK import duties and customs fees are prepaid by Rion. Transit time is typically 3–5 business days from Japan. You will receive a tracking number as soon as your order ships.',step4_meta:'Japan → UK · DHL Express · DDP · Fully Insured · 3–5 Business Days',
  coverage_title:'Where we <em>ship.</em>',coverage_lead:'Free DDP shipping to all of the United Kingdom',
  cov1_title:'All Nations of the UK',cov1_body:'England · Scotland · Wales · Northern Ireland',cov1_meta:'DDP · No import duties · Free DHL Express',
  cov2_title:'Channel Islands &amp; Isle of Man',cov2_body:'Jersey, Guernsey &amp; the Isle of Man',cov2_meta:'DDP · No duties · Free DHL Express',
  cov3_title:'Remote &amp; Rural UK',cov3_body:'Including the Scottish Highlands &amp; Islands',cov3_meta:'DDP · No duties · Free DHL Express',
- coverage_note:'Ordering from another country? <a href="https://wa.me/819054621246" style="color:var(--gold-dark)">Contact us on WhatsApp</a> — we ship internationally on request.',
+ coverage_note:'Ordering from another country? <a href="mailto:info@art-rings.com?subject=International%20Shipping%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%27m%20ordering%20from%20another%20country%20and%20would%20like%20to%20ask%20about%20international%20shipping%20options.%0A%0AThank%20you." style="color:var(--gold-dark)">Contact us by email</a> — we ship internationally on request.',
  fees_title:'What\'s <em>included.</em>',fees_lead:'Everything below is covered in your listed price. No surprises at the door — ever.',
  fees_th_item:'Item',fees_th_who:'Who Pays',fees_th_notes:'Notes',
  fee1_item:'Hair collection kit (Japan → your UK address)',fee1_note:'Royal Mail, delivered to your door. Free.',
@@ -573,15 +574,15 @@ const T = {
  fee5_item:'Customs paperwork &amp; declarations',fee5_note:'Pre-completed by us. You write nothing, arrange nothing.',
  fee6_item:'Full shipping insurance',fee6_note:'Your finished jewel is insured for its full value via DHL Express.',
  fee7_item:'Ring size gauge',fee7_note:'Included in your hair kit. standard sizes 1–12, half sizes available.',
- fee8_item:'Photo report (sealing process)',fee8_note:'Photographs sent via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or email at each stage of production.',
+ fee8_item:'Photo report (sealing process)',fee8_note:'Photographs sent via <a href="mailto:info@art-rings.com">email</a> at each stage of production.',
  fee9_item:'Gift packaging &amp; certificate of authenticity',fee9_note:'Rion presentation box, tissue, and signed certificate.',
  fee10_item:'Lifetime polishing (return to Japan)',fee10_who:'Customer pays postage',fee10_note:'We polish and restore at no charge. You pay only the shipping back to Japan.',
  returns_title:'Returns &amp; <em>Defects.</em>',returns_lead:'Because every Rion piece is bespoke, please read these terms carefully before ordering.',
  policy_title:'Bespoke <em>Order Policy</em>',policy_p1:'Each Rion jewel is made entirely to your personal order — incorporating your hair, your chosen design, your approved specifications, and your engraving.',policy_p2:'Before production begins, we obtain your written approval of all details. Once you approve and production begins, the order is final.',
  policy_li1:'No cancellations after production begins',policy_li2:'No returns on completed bespoke pieces (custom goods cannot be resold)',policy_li3:'Design and material cannot be changed once confirmed',policy_li4:'Engraving and birthstone can be changed up to the start of production',policy_li5:'Invoice payment confirms your order',
- defects_title:'Manufacturing <em>Defects</em>',defects_p1:'If you discover a manufacturing defect on our part, we will remake the piece at no charge — including all shipping and customs for the remake. <strong>Refunds are not offered.</strong>',defects_p2:'Contact us via <strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> or <a href="mailto:info@art-rings.com">email</a></strong> within 3 days of receiving your jewel, with clear photographs of the issue. We respond personally and will resolve the situation promptly.',
+ defects_title:'Manufacturing <em>Defects</em>',defects_p1:'If you discover a manufacturing defect on our part, we will remake the piece at no charge — including all shipping and customs for the remake. <strong>Refunds are not offered.</strong>',defects_p2:'Contact us via <strong><a href="mailto:info@art-rings.com">email</a></strong> within 3 days of receiving your jewel, with clear photographs of the issue. We respond personally and will resolve the situation promptly.',
  defects_li1:'Free remake for manufacturing defects',defects_li2:'All shipping &amp; UK customs for remake covered by Rion',defects_li3:'Contact within 3 days of receipt',defects_li4:'Resizing available at cost of round-trip shipping (where design permits)',defects_li5:'Lifetime polishing complimentary — customer pays postage to Japan',
- cta_title:'Questions about <em>shipping?</em>',cta_body:'Whether you\'re in London or the Scottish Highlands, we\'ll walk you through every step. Message us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond personally in English and Japanese, typically within a few hours.',cta_wa:'💬 Message Us on WhatsApp',cta_order:'How to Order'
+ cta_title:'Questions about <em>shipping?</em>',cta_body:'Whether you\'re in London or the Scottish Highlands, we\'ll walk you through every step. Message us by <a href="mailto:info@art-rings.com?subject=Shipping%20Question%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20shipping%20to%20my%20location%20in%20the%20UK.%20Could%20you%20help%3F%0A%0AThank%20you.">email</a> — we respond personally in English and Japanese, typically within a few hours.',cta_wa:'&#9993; Message Us via Email',cta_order:'How to Order'
  },
  ja: {
  nav_order:'ご注文',
@@ -592,13 +593,13 @@ const T = {
  timeline_title:'ご注文から<em>お届けまで。</em>',timeline_lead:'ご注文確認からお手元に届くまでの完全な配送の流れ。すべてRionが対応します。',
  step1_title:'ヘアコレクションキットを<em>英国住所へ発送</em>',step1_body:'ご注文確認・ご入金後、Rionのヘアコレクションキットを英国ご住所へRoyal Mailにて無料発送いたします。キットには、滅菌済みの封入封筒、リングサイズゲージ（US1〜12号、ハーフサイズ対応）、日本語の手順書、そして日本のアトリエ宛の着払いRoyal Mailラベルが含まれます。',step1_meta:'日本 → 英国ご住所 · Royal Mail · 無料',
  step2_title:'髪の毛を<em>ご返送</em>ください',step2_body:'封筒に髪の毛を数本入れ、着払いラベルを貼って最寄りのRoyal Mailのポストまたは郵便局にお入れください。国際発送に必要な通関書類はすべて弊社が事前に作成します。お客様は記入・手配・お支払い一切不要です。',step2_meta:'英国ご住所 → 日本 · Royal Mail · 無料 · 着払いラベル付き',
- step3_title:'日本のアトリエでの<em>制作</em>',step3_body:'髪の毛が日本のアトリエに届き次第、制作を開始します。封入プロセスを撮影し、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>またはメールにてフォトレポートをお送りします（封入前・封入中・封入後）。ジュエルが作られるすべての工程をご覧いただけます。',step3_meta:'日本 · 約5.5ヶ月',
+ step3_title:'日本のアトリエでの<em>制作</em>',step3_body:'髪の毛が日本のアトリエに届き次第、制作を開始します。封入プロセスを撮影し、<a href="mailto:info@art-rings.com">メール</a>にてフォトレポートをお送りします（封入前・封入中・封入後）。ジュエルが作られるすべての工程をご覧いただけます。',step3_meta:'日本 · 約5.5ヶ月',
  step4_title:'完成したジュエルが<em>お手元に届きます</em>',step4_body:'最終品質検査を通過後、Rionのプレゼンテーションボックスと真正証明書とともにDHL Expressで発送します。全額保険付き。英国への輸入関税・通関費用はRionが負担します（DDP条件）。通常、日本から3〜5営業日でお届けします。発送次第、追跡番号をお送りします。',step4_meta:'日本 → 英国 · DHL Express · DDP · 全額保険 · 3〜5営業日',
  coverage_title:'配送<em>エリア。</em>',coverage_lead:'英国全土へ無料DDP配送。例外なし、追加料金なし。',
  cov1_title:'英国全土',cov1_body:'イングランド・スコットランド・ウェールズ・北アイルランド',cov1_meta:'DDP · 輸入関税なし · DHL Express無料',
  cov2_title:'チャネル諸島・マン島',cov2_body:'ジャージー、ガーンジー・マン島',cov2_meta:'DDP · 関税なし · DHL Express無料',
  cov3_title:'離島・地方エリア',cov3_body:'スコットランド・ハイランド地方や離島も対応',cov3_meta:'DDP · 関税なし · DHL Express無料',
- coverage_note:'他の国からのご注文については <a href="https://wa.me/819054621246" style="color:var(--gold-dark)">WhatsAppでお問い合わせ</a>ください。国際配送もご対応しています。',
+ coverage_note:'他の国からのご注文については <a href="mailto:info@art-rings.com?subject=International%20Shipping%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%27m%20ordering%20from%20another%20country%20and%20would%20like%20to%20ask%20about%20international%20shipping%20options.%0A%0AThank%20you." style="color:var(--gold-dark)">メールでお問い合わせ</a>ください。国際配送もご対応しています。',
  fees_title:'<em>含まれる</em>内容。',fees_lead:'以下はすべてご請求金額に含まれます。お届け時の追加費用は一切ありません。',
  fees_th_item:'内容',fees_th_who:'負担者',fees_th_notes:'備考',
  fee1_item:'ヘアコレクションキット（日本→英国ご住所）',fee1_note:'Royal Mailでご自宅へ。無料。',
@@ -608,15 +609,15 @@ const T = {
  fee5_item:'通関書類・申告',fee5_note:'弊社が事前に作成。記入・手配不要。',
  fee6_item:'全額配送保険',fee6_note:'完成したジュエルはDHL Expressによる全額保険付きです。',
  fee7_item:'リングサイズゲージ',fee7_note:'ヘアキットに同封。US1〜12号・ハーフサイズ対応。',
- fee8_item:'フォトレポート（封入プロセス）',fee8_note:'制作の各段階で<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>またはメールで写真をお送りします。',
+ fee8_item:'フォトレポート（封入プロセス）',fee8_note:'制作の各段階で<a href="mailto:info@art-rings.com">メール</a>で写真をお送りします。',
  fee9_item:'ギフトパッケージ・真正証明書',fee9_note:'Rionのプレゼンテーションボックス、ティッシュ、署名入り証明書。',
  fee10_item:'生涯研磨サービス（日本への返送）',fee10_who:'送料はお客様負担',fee10_note:'研磨・仕上げは無料。日本への送料のみご負担ください。',
  returns_title:'返品・<em>不具合について。</em>',returns_lead:'Rionのすべてのジュエルはオーダーメイドです。ご注文前に必ずご確認ください。',
  policy_title:'カスタムオーダーの<em>ポリシー</em>',policy_p1:'Rionのジュエルはすべてお客様の個人オーダーで制作されます。お客様の髪の毛、選ばれたデザイン、承認済みの仕様、刻印を組み込みます。',policy_p2:'制作開始前に、すべての詳細についてお客様の書面による承認を得ます。承認後、制作が開始された時点でオーダーは確定となります。',
  policy_li1:'制作開始後のキャンセル不可',policy_li2:'カスタムオーダーのご返品はお受けできません（カスタム品の転売は不可）',policy_li3:'確定後のデザイン・素材変更不可',policy_li4:'制作開始前まで刻印・誕生石の変更可能',policy_li5:'請求書のお支払いをもってオーダー確定',
- defects_title:'製造上の<em>欠陥について</em>',defects_p1:'万が一、弊社の製造上の欠陥が発見された場合、送料・通関費を含め無償でお作り直しします。<strong>返金はお受けできません。</strong>',defects_p2:'ジュエルお受け取り後3日以内に、問題の写真とともに<strong><a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>または<a href="mailto:info@art-rings.com">メール</a></strong>でご連絡ください。個別に対応し、迅速に解決いたします。',
+ defects_title:'製造上の<em>欠陥について</em>',defects_p1:'万が一、弊社の製造上の欠陥が発見された場合、送料・通関費を含め無償でお作り直しします。<strong>返金はお受けできません。</strong>',defects_p2:'ジュエルお受け取り後3日以内に、問題の写真とともに<strong><a href="mailto:info@art-rings.com">メール</a></strong>でご連絡ください。個別に対応し、迅速に解決いたします。',
  defects_li1:'製造上の欠陥に対する無償お作り直し',defects_li2:'お作り直しの送料・英国通関費はRionが負担',defects_li3:'お受け取り後3日以内にご連絡ください',defects_li4:'デザインが許す範囲でサイズ変更可能（往復送料はお客様負担）',defects_li5:'生涯研磨サービス無料 — 日本への送料のみお客様負担',
- cta_title:'配送について<em>ご質問は？</em>',cta_body:'ロンドンでもスコットランドのハイランド地方でも、すべての手順をご案内します。<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でメッセージをお送りください。日本語でも対応しており、通常数時間以内にご返信します。',cta_wa:'💬 WhatsAppでメッセージ',cta_order:'ご注文方法'
+ cta_title:'配送について<em>ご質問は？</em>',cta_body:'ロンドンでもスコットランドのハイランド地方でも、すべての手順をご案内します。<a href="mailto:info@art-rings.com?subject=Shipping%20Question%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%20have%20a%20question%20about%20shipping%20to%20my%20location%20in%20the%20UK.%20Could%20you%20help%3F%0A%0AThank%20you.">メール</a>でメッセージをお送りください。日本語でも対応しており、通常数時間以内にご返信します。',cta_wa:'&#9993; メールでメッセージ',cta_order:'ご注文方法'
  }
 };
 function setLang(l){
@@ -664,17 +665,6 @@ function declineCookies(){
 </script>
 
 <script>
-/* WhatsApp source tracking */
-setTimeout(function(){
- document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h.indexOf('%5BUK%5D')>=0) return;
-  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BUK%5D%20'));}
-  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BUK%5D%20');}
- });
-},0);
-</script>
-<script>
 /* GA4 event tracking */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
@@ -682,6 +672,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});

@@ -76,8 +76,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .menu-links a .menu-num{font-family:'Jost',sans-serif;font-size:0.7rem;letter-spacing:0.22em;color:var(--ink-muted);font-style:normal;font-weight:400;flex-shrink:0;min-width:2.5rem}
 .menu-links a.menu-active{color:var(--gold-dark)}
 .menu-footer{margin-top:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:0.5px solid rgba(26,23,20,0.15)}
-.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--green);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
-.menu-cta:hover{background:#0E7567}
+.menu-cta{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold-dark);color:#FFFFFF;padding:1rem 2rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .3s;font-weight:500}
+.menu-cta:hover{background:#6E5410}
 .hamburger.active span{background:var(--ink)}
 .menu-close{position:absolute;top:1.4rem;right:4rem;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;z-index:402;display:flex;align-items:center;justify-content:center}
 .menu-close::before,.menu-close::after{content:'';position:absolute;width:24px;height:1px;background:var(--ink);transition:background .3s}
@@ -146,6 +146,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .btn-enquire:hover{background:var(--gold-dark)}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:0.9rem 1.75rem;text-decoration:none;transition:background .3s}
 .btn-wa:hover{background:#075E54}
+.btn-email{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:0.9rem 1.75rem;text-decoration:none;transition:background .3s}
+.btn-email:hover{background:#6E5410}
 .cta-note{font-size:0.75rem;color:var(--ink-muted)}
 
 /* SPECIAL NOTE */
@@ -190,6 +192,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .sticky-text strong{color:var(--gold-light);font-weight:400}
 .sticky-ctas{display:flex;gap:1rem}
 .s-wa{background:var(--green);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none}
+.s-email{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none}
 .s-back{background:rgba(250,247,242,0.1);color:var(--gold-light);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;border:0.5px solid rgba(201,169,110,0.3)}
 
 /* FOOTER */
@@ -266,7 +269,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
  .price-table th,.price-table td{padding:8px 8px}
  .price-table th:last-child,.price-table td:last-child{display:none}
  .s-back{display:none}
- .s-wa{font-size:0.65rem;padding:0.75rem 1.5rem}
+ .s-wa,.s-email{font-size:0.65rem;padding:0.75rem 1.5rem}
  .sticky-ctas{gap:0.5rem}
 }
 @media(max-width:768px){.scroll-top{display:none!important}}
@@ -311,7 +314,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <nav>
  <a href="index.html" class="nav-logo">Rion</a>
  <div class="nav-right">
- <a href="https://wa.me/819054621246" class="nav-cta" target="_blank" data-i18n="nav_cta">Begin Your Order</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="nav-cta" data-i18n="nav_cta">Begin Your Order</a>
  <div class="lang-switch">
  <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
  <span style="color:var(--ink-muted);font-size:0.65rem">|</span>
@@ -354,7 +357,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </nav>
  </div>
  <div class="menu-footer">
- <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_cta">💬 &nbsp;Message Us on WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="menu-cta" data-i18n="menu_cta">&#9993; &nbsp;Email Us</a>
  </div>
  </div>
 </div>
@@ -366,7 +369,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <h1 data-i18n="page_h1">The<br><em>Collection</em></h1>
  </div>
  <div class="page-header-right">
- <p data-i18n="page_desc">Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>. We will guide you through every step with care and patience.</p>
+ <p data-i18n="page_desc">Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="mailto:info@art-rings.com">email</a>. We will guide you through every step with care and patience.</p>
  <div class="page-header-note" data-i18n="page_note">✦ All prices in GBP · Free insured shipping · No UK import duties</div>
  </div>
  </div>
@@ -406,7 +409,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <p class="product-code">A-1</p>
  <p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p>
  <p class="product-price-tag">£4,100</p>
- <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+ <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
  </div>
  </a>
  <a class="product-card" href="product.html?code=A-2">
@@ -415,7 +418,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <p class="product-code">A-2</p>
  <p class="product-material" data-i18n="mat_wgold">K18 White Gold</p>
  <p class="product-price-tag">£4,300</p>
- <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+ <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
  </div>
  </a>
  <a class="product-card" href="product.html?code=A-3">
@@ -424,7 +427,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <p class="product-code">A-3</p>
  <p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p>
  <p class="product-price-tag">£4,100</p>
- <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+ <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
  </div>
  </a>
  <a class="product-card" href="product.html?code=A-4">
@@ -433,7 +436,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <p class="product-code">A-4</p>
  <p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p>
  <p class="product-price-tag">£4,000</p>
- <p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p>
+ <p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p>
  </div>
  </a>
  </div>
@@ -467,7 +470,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </div>
 
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20A%20(The%20Classic%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20A%20%28The%20Classic%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20A%20%28The%20Classic%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  <span class="cta-note" data-i18n="series_a_cta_note">We will confirm your design, ring size, and send your invoice in GBP.</span>
  </div>
 </section>
@@ -486,19 +489,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=B-1">
  <img src="images/series-b/b1.jpg" alt="B-1 Yellow Gold Bar Pendant" loading="lazy">
- <div class="product-info"><p class="product-code">B-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">B-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=B-2">
  <img src="images/series-b/b2.jpg" alt="B-2 White Gold Bar Pendant" loading="lazy">
- <div class="product-info"><p class="product-code">B-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">B-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=B-3">
  <img src="images/series-b/b3.jpg" alt="B-3 Pink Gold Bar Pendant" loading="lazy">
- <div class="product-info"><p class="product-code">B-3</p><p class="product-material" data-i18n="mat_pgold_pop">K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">B-3</p><p class="product-material" data-i18n="mat_pgold_pop">K18 Pink Gold <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=B-4">
  <img src="images/series-b/b4.jpg" alt="B-4 Platinum Bar Pendant" loading="lazy">
- <div class="product-info"><p class="product-code">B-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">B-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -515,7 +518,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20B%20(The%20Bar%20Pendant).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20B%20%28The%20Bar%20Pendant%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20B%20%28The%20Bar%20Pendant%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  <span class="cta-note" data-i18n="series_b_cta_note">We will confirm your design, chain length, and send your invoice in GBP.</span>
  </div>
 </section>
@@ -534,19 +537,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=C-1">
  <img src="images/series-c/c1.jpg" alt="C-1 Yellow Gold Birthstone Ring" loading="lazy">
- <div class="product-info"><p class="product-code">C-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">C-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=C-2">
  <img src="images/series-c/c2.jpg" alt="C-2 White Gold Birthstone Ring" loading="lazy">
- <div class="product-info"><p class="product-code">C-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">C-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=C-3">
  <img src="images/series-c/c3.jpg" alt="C-3 Pink Gold Birthstone Ring" loading="lazy">
- <div class="product-info"><p class="product-code">C-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">C-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=C-4">
  <img src="images/series-c/c4.jpg" alt="C-4 Platinum Birthstone Ring" loading="lazy">
- <div class="product-info"><p class="product-code">C-4</p><p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,300</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">C-4</p><p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£4,300</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -564,7 +567,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </div>
  <div class="special-note" data-i18n="series_c_special_note">✦ <strong>Birthstones:</strong> Choose any 2 from diamond, ruby, sapphire, emerald, amethyst, aquamarine, garnet, peridot, topaz, tourmaline, citrine, or tanzanite. Additional birthstones available at £20 per stone. Tell us your selection when you reach out.</div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20C%20(The%20Birthstone%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20C%20%28The%20Birthstone%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20C%20%28The%20Birthstone%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  <span class="cta-note" data-i18n="series_c_cta_note">Tell us your 2 birthstone choices when you reach out.</span>
  </div>
 </section>
@@ -583,19 +586,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=D-1">
  <img src="images/series-d/d1.jpg" alt="D-1 Yellow Gold Half Eternity" loading="lazy">
- <div class="product-info"><p class="product-code">D-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£5,900</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">D-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£5,900</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=D-2">
  <img src="images/series-d/d2.jpg" alt="D-2 White Gold Half Eternity" loading="lazy">
- <div class="product-info"><p class="product-code">D-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£6,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">D-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£6,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=D-3">
  <img src="images/series-d/d3.jpg" alt="D-3 Pink Gold Half Eternity" loading="lazy">
- <div class="product-info"><p class="product-code">D-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£5,900</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">D-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£5,900</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=D-4">
  <img src="images/series-d/d4.jpg" alt="D-4 Platinum Half Eternity" loading="lazy">
- <div class="product-info"><p class="product-code">D-4</p><p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£5,800</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">D-4</p><p class="product-material" data-i18n="mat_plat_pop">Platinum Pt900 <span class="material-tag" style="font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-light);padding:2px 8px;margin-left:4px;">Most Popular</span></p><p class="product-price-tag">£5,800</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -612,7 +615,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20D%20(The%20Half%20Eternity%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20D%20%28The%20Half%20Eternity%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20D%20%28The%20Half%20Eternity%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  <span class="cta-note" data-i18n="series_d_cta_note">All diamonds are conflict-free, sourced entirely within Japan.</span>
  </div>
 </section>
@@ -631,19 +634,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=F-1">
  <img src="images/series-f/f1.jpg" alt="F-1 Yellow Gold Chevron Ring" loading="lazy">
- <div class="product-info"><p class="product-code">F-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">F-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=F-2">
  <img src="images/series-f/f2.jpg" alt="F-2 White Gold Chevron Ring" loading="lazy">
- <div class="product-info"><p class="product-code">F-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£5,800</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">F-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£5,800</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=F-3">
  <img src="images/series-f/f3.jpg" alt="F-3 Pink Gold Chevron Ring" loading="lazy">
- <div class="product-info"><p class="product-code">F-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">F-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=F-4">
  <img src="images/series-f/f4.jpg" alt="F-4 Platinum Chevron Ring" loading="lazy">
- <div class="product-info"><p class="product-code">F-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£5,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">F-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£5,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -660,7 +663,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20F%20(The%20Chevron%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20F%20%28The%20Chevron%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20F%20%28The%20Chevron%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  </div>
 </section>
 
@@ -678,19 +681,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=G-1">
  <img src="images/series-g/g1.jpg" alt="G-1 Yellow Gold Milgrain Band" loading="lazy">
- <div class="product-info"><p class="product-code">G-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">G-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=G-2">
  <img src="images/series-g/g2.jpg" alt="G-2 White Gold Milgrain Band" loading="lazy">
- <div class="product-info"><p class="product-code">G-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,300</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">G-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,300</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=G-3">
  <img src="images/series-g/g3.jpg" alt="G-3 Pink Gold Milgrain Band" loading="lazy">
- <div class="product-info"><p class="product-code">G-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">G-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£4,200</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=G-4">
  <img src="images/series-g/g4.jpg" alt="G-4 Platinum Milgrain Band" loading="lazy">
- <div class="product-info"><p class="product-code">G-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">G-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,100</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -707,7 +710,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20G%20(The%20Milgrain%20Band).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20G%20%28The%20Milgrain%20Band%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20G%20%28The%20Milgrain%20Band%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  </div>
 </section>
 
@@ -725,19 +728,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=H-1">
  <img src="images/series-h/h1.jpg" alt="H-1 Yellow Gold Flow Ring" loading="lazy">
- <div class="product-info"><p class="product-code">H-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">H-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£4,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=H-2">
  <img src="images/series-h/h2.jpg" alt="H-2 White Gold Flow Ring" loading="lazy">
- <div class="product-info"><p class="product-code">H-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,700</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">H-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£4,700</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=H-3">
  <img src="images/series-h/h3.jpg" alt="H-3 Pink Gold Flow Ring" loading="lazy">
- <div class="product-info"><p class="product-code">H-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£4,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">H-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£4,500</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=H-4">
  <img src="images/series-h/h4.jpg" alt="H-4 Platinum Flow Ring" loading="lazy">
- <div class="product-info"><p class="product-code">H-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">H-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£4,400</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -754,7 +757,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20H%20(The%20Flow%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20H%20%28The%20Flow%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20H%20%28The%20Flow%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  </div>
 </section>
 
@@ -772,19 +775,19 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="product-grid">
  <a class="product-card" href="product.html?code=J-1">
  <img src="images/series-j/j1.jpg" alt="J-1 Yellow Gold Statement Ring" loading="lazy">
- <div class="product-info"><p class="product-code">J-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£5,700</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">J-1</p><p class="product-material" data-i18n="mat_ygold">K18 Yellow Gold</p><p class="product-price-tag">£5,700</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=J-2">
  <img src="images/series-j/j2.jpg" alt="J-2 White Gold Statement Ring" loading="lazy">
- <div class="product-info"><p class="product-code">J-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£5,900</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">J-2</p><p class="product-material" data-i18n="mat_wgold">K18 White Gold</p><p class="product-price-tag">£5,900</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=J-3">
  <img src="images/series-j/j3.jpg" alt="J-3 Pink Gold Statement Ring" loading="lazy">
- <div class="product-info"><p class="product-code">J-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£5,700</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">J-3</p><p class="product-material" data-i18n="mat_pgold">K18 Pink Gold</p><p class="product-price-tag">£5,700</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  <a class="product-card" href="product.html?code=J-4">
  <img src="images/series-j/j4.jpg" alt="J-4 Platinum Statement Ring" loading="lazy">
- <div class="product-info"><p class="product-code">J-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via WhatsApp →</p></div>
+ <div class="product-info"><p class="product-code">J-4</p><p class="product-material" data-i18n="mat_plat">Platinum Pt900</p><p class="product-price-tag">£5,600</p><p class="product-order-cta" data-i18n="enquire_wa">Enquire via Email →</p></div>
  </a>
  </div>
 
@@ -801,7 +804,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  </table>
  </div>
  <div class="series-cta" style="margin-top:1.5rem">
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20enquire%20about%20Series%20J%20(The%20Statement%20Ring).%20Please%20send%20me%20more%20details." class="btn-enquire" target="_blank" data-i18n="btn_enquire_wa">💬 Enquire via WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20%E2%80%94%20Series%20J%20%28The%20Statement%20Ring%29&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20enquire%20about%20Series%20J%20%28The%20Statement%20Ring%29.%20Please%20send%20me%20more%20details.%0A%0AThank%20you." class="btn-enquire" data-i18n="btn_enquire_wa">&#9993; Enquire via Email</a>
  </div>
 </section>
 
@@ -833,7 +836,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="bespoke-price" data-i18n="bespoke_price">From £4,300</div>
  <div class="bespoke-price-note" data-i18n="bespoke_price_note">Free insured shipping to the UK · No import duties · Price depends on design complexity &amp; materials chosen</div>
  <br><br>
- <a href="https://wa.me/819054621246?text=Hello%20Rion%2C%20I%27d%20like%20to%20begin%20a%20fully%20bespoke%20commission.%20Please%20tell%20me%20about%20the%20process%20and%20what%27s%20possible." class="btn-enquire" target="_blank" data-i18n="bespoke_cta">💬 Begin Your Bespoke Journey</a>
+ <a href="mailto:info@art-rings.com?subject=Bespoke%20Commission%20Enquiry%20%E2%80%94%20UK&body=Hello%20Rion%2C%0A%0AI%27d%20like%20to%20begin%20a%20fully%20bespoke%20commission.%20Please%20tell%20me%20about%20the%20process%20and%20what%27s%20possible.%0A%0AThank%20you." class="btn-enquire" data-i18n="bespoke_cta">&#9993; Begin Your Bespoke Journey</a>
  </div>
  <div class="bespoke-img">
  <img src="images/bespoke/main.jpg" alt="Bespoke Jewellery Craftsmanship — Japan" loading="lazy">
@@ -872,8 +875,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
  <div class="footer-col">
  <h5 data-i18n="footer_h_connect">Connect</h5>
  <div class="footer-social">
- <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">◐</span><span data-i18n="footer_social_wa">WhatsApp</span></a>
- <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span><span data-i18n="footer_social_ig">Instagram</span></a>
+  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span><span data-i18n="footer_social_ig">Instagram</span></a>
  <a href="mailto:info@art-rings.com"><span class="footer-social-ico">✉</span><span data-i18n="footer_social_email">Send Enquiry</span></a>
  </div>
  </div>
@@ -890,7 +892,7 @@ if(localStorage.getItem('rion_uk_cookies_accepted') === '1') window._loadClarity
 <div class="sticky-bar" id="stickyBar">
  <div class="sticky-text" data-i18n="sticky_text"><strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From £4,000 · Free UK shipping · No import duties</div>
  <div class="sticky-ctas">
- <a href="https://wa.me/819054621246" class="s-wa" target="_blank" data-i18n="sticky_wa">💬 WhatsApp</a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20UK%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="s-email" data-i18n="sticky_wa">&#9993; Email</a>
  <a href="index.html" class="s-back" data-i18n="sticky_back">← Back to Home</a>
  </div>
 </div>
@@ -963,7 +965,7 @@ const T = {
  trust_made: 'Handcrafted in Japan',
  trust_cert: 'Authenticity Certificate Included',
  page_h1: 'The<br><em>Collection</em>',
- page_desc: 'Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>. We will guide you through every step with care and patience.',
+ page_desc: 'Each piece is made entirely to your order — handcrafted in Japan, from your hair alone. Select a series, choose your material, and reach out via <a href="mailto:info@art-rings.com">email</a>. We will guide you through every step with care and patience.',
  page_note: '✦ All prices in GBP · Free insured shipping · No UK import duties',
  filter_all: 'All Series',
  filter_ring: 'Rings',
@@ -971,7 +973,7 @@ const T = {
  mat_ygold: 'K18 Yellow Gold',
  mat_wgold: 'K18 White Gold',
  mat_pgold: 'K18 Pink Gold',
- enquire_wa: 'Enquire via <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> →',
+ enquire_wa: 'Enquire via Email &#8594;',
  bespoke_h2: 'Fully <em>Bespoke</em><br>Commission',
  trust_gbp: 'All Prices in GBP',
  announce_bar: 'Free Shipping to the UK <span>&nbsp;·&nbsp; No Import Duties · VAT Included &nbsp;·&nbsp; 100% Handcrafted in Japan</span>',
@@ -985,7 +987,7 @@ const T = {
  menu_shipping: 'Shipping &amp; <em>Returns</em>',
  menu_care: 'Care <em>Guide</em>',
  menu_contact: 'Contact',
- menu_cta: '💬 &nbsp;Message Us on WhatsApp',
+ menu_cta: '&#9993; &nbsp;Email Us',
  filter_label: 'Filter:',
  filter_series_a: 'Series A',
  filter_series_b: 'Series B',
@@ -1007,7 +1009,7 @@ const T = {
  th_delivery: 'Delivery',
  addon_engraving_label: 'Engraving (optional)',
  addon_engraving_note: 'Up to 10 characters · +£6 per additional character',
- btn_enquire_wa: '💬 Enquire via WhatsApp',
+ btn_enquire_wa: '&#9993; Enquire via Email',
  series_a_cta_note: 'We will confirm your design, ring size, and send your invoice in GBP.',
  series_b_eyebrow: 'Series B',
  series_b_name: 'The <em>Bar</em> Pendant',
@@ -1086,7 +1088,7 @@ const T = {
  footer_copy: '© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the UK · No import duties · All prices in GBP',
  footer_right: 'Est. 2018 · Japan · United Kingdom',
  sticky_text: '<strong>Rion Collection</strong> &nbsp;·&nbsp; All pieces handcrafted in Japan · From £4,000 · Free UK shipping · No import duties',
- sticky_wa: '💬 WhatsApp',
+ sticky_wa: '&#9993; Email',
  sticky_back: '← Back to Home',
  cookie_title: 'Cookie Notice',
  cookie_body: 'This site uses only essential analytics cookies. We do not use advertising or tracking cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.',
@@ -1099,7 +1101,7 @@ const T = {
  trust_made: '日本で手作り',
  trust_cert: '真正証明書付き',
  page_h1: '<em>コレクション</em>',
- page_desc: 'すべてのジュエルは、お客様のご注文に合わせて一点一点、日本で手作りされます。シリーズを選び、素材をお選びいただき、<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>よりお問い合わせください。丁寧にご案内いたします。',
+ page_desc: 'すべてのジュエルは、お客様のご注文に合わせて一点一点、日本で手作りされます。シリーズを選び、素材をお選びいただき、<a href="mailto:info@art-rings.com">メール</a>よりお問い合わせください。丁寧にご案内いたします。',
  page_note: '✦ 価格はすべてGBP · 保険付き無料配送 · 英国輸入関税なし · DDP条件',
  filter_all: 'すべて',
  filter_ring: 'リング',
@@ -1107,7 +1109,7 @@ const T = {
  mat_ygold: 'K18イエローゴールド',
  mat_wgold: 'K18ホワイトゴールド',
  mat_pgold: 'K18ピンクゴールド',
- enquire_wa: '<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>でお問い合わせ →',
+ enquire_wa: 'メールでお問い合わせ &#8594;',
  bespoke_h2: 'フルオーダー<br><em>ビスポーク</em>',
  trust_gbp: '価格はすべてGBP表示',
  announce_bar: '英国へ無料配送 <span>&nbsp;·&nbsp; 輸入関税なし · VAT込み &nbsp;·&nbsp; すべて日本で手作り</span>',
@@ -1121,7 +1123,7 @@ const T = {
  menu_shipping: '配送・<em>返品</em>について',
  menu_care: 'お手入れ<em>ガイド</em>',
  menu_contact: 'お問い合わせ',
- menu_cta: '💬 &nbsp;WhatsAppでメッセージを送る',
+ menu_cta: '&#9993; &nbsp;メールでお問い合わせ',
  filter_label: '絞り込み:',
  filter_series_a: 'シリーズA',
  filter_series_b: 'シリーズB',
@@ -1143,7 +1145,7 @@ const T = {
  th_delivery: 'お届け',
  addon_engraving_label: '刻印（オプション）',
  addon_engraving_note: '10文字まで · 1文字追加ごとに+£6',
- btn_enquire_wa: '💬 WhatsAppでお問い合わせ',
+ btn_enquire_wa: '&#9993; メールでお問い合わせ',
  series_a_cta_note: 'デザインとリングサイズを確認のうえ、GBP表示のインボイスをお送りいたします。',
  series_b_eyebrow: 'シリーズB',
  series_b_name: '<em>バー</em>ペンダント',
@@ -1222,7 +1224,7 @@ const T = {
  footer_copy: '© 2026 Rion™ · My Art Inc. · 100%日本製 · 英国への保険付き無料配送 · 輸入関税なし · 価格はすべてGBP表示',
  footer_right: '創業 2018年 · 日本 · 英国',
  sticky_text: '<strong>Rionコレクション</strong> &nbsp;·&nbsp; すべて日本で手作り · £4,000より · 英国無料配送 · 輸入関税なし',
- sticky_wa: '💬 WhatsApp',
+ sticky_wa: '&#9993; Email',
  sticky_back: '← ホームへ戻る',
  cookie_title: 'クッキーについて',
  cookie_body: '当サイトでは必須の分析用クッキーのみを使用しています。広告や追跡目的のクッキーは使用しておりません。詳しくは<a href="legal.html#privacy">プライバシーポリシー</a>をご覧ください。',
@@ -1260,17 +1262,6 @@ function filterSeries(filter, e){
 </script>
 
 <script>
-/* WhatsApp source tracking */
-setTimeout(function(){
- document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h.indexOf('%5BUK%5D')>=0) return;
-  if(h.indexOf('text=')>=0){a.setAttribute('href',h.replace('text=','text=%5BUK%5D%20'));}
-  else{a.setAttribute('href',h+(h.indexOf('?')>=0?'&':'?')+'text=%5BUK%5D%20');}
- });
-},0);
-</script>
-<script>
 /* GA4 event tracking */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
@@ -1278,6 +1269,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
