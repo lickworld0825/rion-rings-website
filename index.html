@@ -449,15 +449,15 @@ footer{padding-bottom:7rem!important}.nav-cta{display:none}
     <div>
       <span class="menu-eyebrow" data-i18n="menu_eyebrow">Navigation</span>
       <nav class="menu-links">
-        <a href="index.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span>Contact</span></a>
+        <a href="index.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="m_home">Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="m_collection">Collection</span></a>
+        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="m_about">About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="m_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="m_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="m_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="m_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="m_care">Care <em>Guide</em></span></a>
+        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="m_contact">Contact</span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -1076,7 +1076,7 @@ window.addEventListener('scroll',()=>{
 });
 
 const T={
-  en:{
+  en:{m_home:"Home",m_collection:"Collection",m_about:"About <em>Rion</em>",m_order:"How to <em>Order</em>",m_sealing:"How Hair Is <em>Sealed</em>",m_faq:"FAQ",m_shipping:"Shipping &amp; <em>Returns</em>",m_care:"Care <em>Guide</em>",m_contact:"Contact",
     announce:"Free insured shipping to Dubai · UAE · Kuwait &nbsp;|&nbsp; <span>100% Handcrafted in Japan</span>",
     nav_home:"Home",nav_story:"Our <em>Story</em>",nav_process:"How It <em>Works</em>",nav_collection:"Collection",nav_voices:"Stories",nav_faq:"FAQ",nav_contact:"Contact",nav_cta:"Order Now",
     nav_about:"About <em>Rion</em>",nav_care:"Care <em>Guide</em>",nav_shipping:"Shipping &amp; <em>Returns</em>",
@@ -1172,7 +1172,7 @@ const T={
     sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From AED 17,000 DDP · Handcrafted in Japan.",
     sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
   },
-  ar:{
+  ar:{m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_order:"طريقة <em>الطلب</em>",m_sealing:"كيفية <em>ختم الشعر</em>",m_faq:"الأسئلة الشائعة",m_shipping:"الشحن و<em>الإرجاع</em>",m_care:"دليل <em>العناية</em>",m_contact:"تواصل",
     announce:"شحن مجاني ومؤمَّن إلى دبي · الإمارات · الكويت &nbsp;|&nbsp; <span>مصنوع يدوياً بالكامل في اليابان</span>",
     nav_home:"الرئيسية",nav_story:"<em>قصتنا</em>",nav_process:"كيف <em>يعمل</em>",nav_collection:"المجموعة",nav_voices:"قصص",nav_faq:"أسئلة",nav_contact:"تواصل",nav_cta:"اطلب الآن",
     nav_about:"عن <em>Rion</em>",nav_care:"دليل <em>العناية</em>",nav_shipping:"الشحن و<em>الإرجاع</em>",
@@ -1268,7 +1268,7 @@ const T={
     sticky_text:"<strong>شعرة واحدة. جوهرة واحدة. حب واحد.</strong> &nbsp;من AED 17,000 DDP · مصنوعة يدوياً في اليابان.",
     sticky_wa:"💬 واتساب",sticky_order:"ابدأ الطلب →"
   },
-  ja:{
+  ja:{m_home:"ホーム",m_collection:"コレクション",m_about:"Rion<em>について</em>",m_order:"ご注文の<em>流れ</em>",m_sealing:"毛髪の<em>封入方法</em>",m_faq:"よくある質問",m_shipping:"配送・<em>返品</em>",m_care:"お手入れ<em>ガイド</em>",m_contact:"お問い合わせ",
     announce:"ドバイ・UAE・クウェートへ保険付き無料配送 &nbsp;|&nbsp; <span>100% 日本製</span>",
     nav_home:"ホーム",nav_story:"<em>ストーリー</em>",nav_process:"ご注文の<em>流れ</em>",nav_collection:"コレクション",nav_voices:"お客様の声",nav_faq:"よくある質問",nav_contact:"お問い合わせ",nav_cta:"ご注文",
     nav_about:"Rion<em>について</em>",nav_care:"お手入れ<em>ガイド</em>",nav_shipping:"配送・<em>返品</em>",

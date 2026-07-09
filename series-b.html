@@ -242,15 +242,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div>
       <span class="menu-eyebrow">Navigation · القائمة · メニュー</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span>How Hair Is <em>Sealed</em></span></a>
-        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span>Care <em>Guide</em></span></a>
-        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span>Contact</span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="m_home">Home</span></a>
+        <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="m_collection">Collection</span></a>
+        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="m_about">About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="m_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="m_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="m_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="m_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="m_care">Care <em>Guide</em></span></a>
+        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="m_contact">Contact</span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -589,7 +589,7 @@ window.addEventListener('scroll',()=>{
 });
 updateWa();
 const T={
-  en:{nav_cta:'Order Now',menu_wa:'Message Us on WhatsApp',
+  en:{m_home:"Home",m_collection:"Collection",m_about:"About <em>Rion</em>",m_order:"How to <em>Order</em>",m_sealing:"How Hair Is <em>Sealed</em>",m_faq:"FAQ",m_shipping:"Shipping &amp; <em>Returns</em>",m_care:"Care <em>Guide</em>",m_contact:"Contact",nav_cta:'Order Now',menu_wa:'Message Us on WhatsApp',
     bc_home:'Home',bc_coll:'Collection',bc_cur:'Series B',
     badge:'Series B · Bar Pendant',series_name:'The <em>Bar</em> Pendant',type_tag:'Necklace · Sealed Hair Chamber',series_desc:'A sleek vertical bar of solid gold, suspended from a refined round-link chain. The hair strand is sealed within the bar — hidden from the world, close to your heart. Chain length is customisable.',
     mat_yg:'K18 Yellow Gold',
@@ -630,7 +630,7 @@ const T={
     opt_chain_r1:'50 cm',opt_chain_r2:'55 cm',opt_chain_r3:'60 cm',
     opt_chain_v:'Enquire',opt_chain_n:'Specify preferred length at order confirmation. Chain material matches the pendant (B-4: chain in Pt850).',
   },
-  ar:{nav_cta:'اطلب الآن',menu_wa:'راسلنا عبر واتساب',
+  ar:{m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_order:"طريقة <em>الطلب</em>",m_sealing:"كيفية <em>ختم الشعر</em>",m_faq:"الأسئلة الشائعة",m_shipping:"الشحن و<em>الإرجاع</em>",m_care:"دليل <em>العناية</em>",m_contact:"تواصل",nav_cta:'اطلب الآن',menu_wa:'راسلنا عبر واتساب',
     bc_home:'الرئيسية',bc_coll:'المجموعة',bc_cur:'السلسلة B',
     badge:'السلسلة B · قلادة البار',series_name:'قلادة <em>البار</em>',type_tag:'قلادة · غرفة شعر مختومة',series_desc:'قضيب ذهبي أنيق معلق على سلسلة دقيقة. خصلة الشعر مختومة داخل القضيب — مخفية عن العالم، قريبة من قلبك. طول السلسلة قابل للتخصيص.',
     mat_yg:'ذهب K18 أصفر',
@@ -671,7 +671,7 @@ const T={
     opt_chain_r1:'50 سم',opt_chain_r2:'55 سم',opt_chain_r3:'60 سم',
     opt_chain_v:'استفسري',opt_chain_n:'حدّدي الطول المفضل عند تأكيد الطلب. مادة السلسلة تطابق القلادة (B-4: السلسلة Pt850).',
   },
-  ja:{nav_cta:'ご注文',menu_wa:'WhatsAppでメッセージ',
+  ja:{m_home:"ホーム",m_collection:"コレクション",m_about:"Rion<em>について</em>",m_order:"ご注文の<em>流れ</em>",m_sealing:"毛髪の<em>封入方法</em>",m_faq:"よくある質問",m_shipping:"配送・<em>返品</em>",m_care:"お手入れ<em>ガイド</em>",m_contact:"お問い合わせ",nav_cta:'ご注文',menu_wa:'WhatsAppでメッセージ',
     bc_home:'ホーム',bc_coll:'コレクション',bc_cur:'シリーズB',
     badge:'シリーズB · バーペンダント',series_name:'<em>バー</em>ペンダント',type_tag:'ネックレス · 毛髪密封チャンバー',series_desc:'シンプルな縦型ゴールドバーを繊細なチェーンに下げたネックレス。毛髪はバーの内部に密封され、世界から隠され、心のそばにある。チェーンの長さはカスタマイズ可能。',
     mat_yg:'K18イエローゴールド',

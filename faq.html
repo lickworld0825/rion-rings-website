@@ -182,14 +182,15 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
     <div>
       <span class="menu-eyebrow">Navigation · القائمة · メニュー</span>
       <nav class="menu-links">
-        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span>Home</span></a>
-        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span>Collection</span></a>
-        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span>About <em>Rion</em></span></a>
-        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span>How to <em>Order</em></span></a>
-        <a href="faq.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">05</span><span>FAQ</span></a>
-        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span>Shipping &amp; <em>Returns</em></span></a>
-        <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span>Care <em>Guide</em></span></a>
-        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span>Contact</span></a>
+        <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="m_home">Home</span></a>
+        <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="m_collection">Collection</span></a>
+        <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="m_about">About <em>Rion</em></span></a>
+        <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="m_order">How to <em>Order</em></span></a>
+        <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="m_sealing">How Hair Is <em>Sealed</em></span></a>
+        <a href="faq.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="m_faq">FAQ</span></a>
+        <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="m_shipping">Shipping &amp; <em>Returns</em></span></a>
+        <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="m_care">Care <em>Guide</em></span></a>
+        <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="m_contact">Contact</span></a>
       </nav>
     </div>
     <div class="menu-footer">
@@ -596,7 +597,7 @@ window.addEventListener('scroll',()=>{
 });
 
 const T={
-  en:{
+  en:{m_home:"Home",m_collection:"Collection",m_about:"About <em>Rion</em>",m_order:"How to <em>Order</em>",m_sealing:"How Hair Is <em>Sealed</em>",m_faq:"FAQ",m_shipping:"Shipping &amp; <em>Returns</em>",m_care:"Care <em>Guide</em>",m_contact:"Contact",
     nav_cta:"Order Now",menu_wa:"Message Us on WhatsApp",
     eyebrow:"Frequently Asked Questions",h1:"Your questions,<br><em>answered.</em>",
     lead:"Everything you need to know about Rion — the hair, the process, the jewel, and the delivery. If your question is not here, send us a message on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>, <a href='https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr' target='_blank'>Instagram DM</a>, or <a href='mailto:info@art-rings.com'>email</a>.",
@@ -628,7 +629,7 @@ const T={
     q24:"How is my privacy protected?",a24:"All personal information is handled with complete discretion and is never shared with third parties. We understand the deeply personal nature of what we do.",a24_link:"Privacy Policy",
     help_h:"Still have a <em>question?</em>",help_p:"Our team is available on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> in English, Arabic, and Japanese. We typically respond within a few hours.",help_wa:"Message Us on WhatsApp",help_l1:"How to Order →",help_l2:"Shipping & Returns →",help_l3:"Care Guide →"
   },
-  ar:{
+  ar:{m_home:"الرئيسية",m_collection:"المجموعة",m_about:"عن <em>Rion</em>",m_order:"طريقة <em>الطلب</em>",m_sealing:"كيفية <em>ختم الشعر</em>",m_faq:"الأسئلة الشائعة",m_shipping:"الشحن و<em>الإرجاع</em>",m_care:"دليل <em>العناية</em>",m_contact:"تواصل",
     nav_cta:"اطلب الآن",menu_wa:"راسلنا عبر واتساب",
     eyebrow:"الأسئلة الشائعة",h1:"أسئلتك،<br><em>مُجابة.</em>",
     lead:"كل ما تحتاجين معرفته عن Rion — الشعر والعملية والجوهرة والتسليم. إذا لم تجدي سؤالك هنا، أرسلي لنا رسالة على <a href='https://wa.me/819054621246' target='_blank'>واتساب</a>.",
@@ -660,7 +661,7 @@ const T={
     q24:"كيف تُحمى خصوصيتي؟",a24:"يُتعامل مع جميع المعلومات الشخصية بتقدير تام ولا تُشارَك مع أطراف ثالثة أبداً. نفهم الطابع الشخصي العميق لما نقوم به.",a24_link:"سياسة الخصوصية",
     help_h:"هل لديك <em>سؤال آخر؟</em>",help_p:"فريقنا متاح على <a href='https://wa.me/819054621246' target='_blank'>واتساب</a> بالعربية والإنجليزية واليابانية. نرد عادةً في غضون ساعات قليلة.",help_wa:"راسلينا على واتساب",help_l1:"كيفية الطلب ←",help_l2:"الشحن والإرجاع ←",help_l3:"دليل العناية ←"
   },
-  ja:{
+  ja:{m_home:"ホーム",m_collection:"コレクション",m_about:"Rion<em>について</em>",m_order:"ご注文の<em>流れ</em>",m_sealing:"毛髪の<em>封入方法</em>",m_faq:"よくある質問",m_shipping:"配送・<em>返品</em>",m_care:"お手入れ<em>ガイド</em>",m_contact:"お問い合わせ",
     nav_cta:"ご注文",menu_wa:"WhatsAppでメッセージ",
     eyebrow:"よくある質問",h1:"お客様のご質問に<br><em>お答えします。</em>",
     lead:"Rionについて知っておきたいすべてのこと——毛髪、制作工程、ジュエリー、配送について。ご質問がここにない場合は、<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージをお送りください。",
