@@ -933,7 +933,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <span class="channel-label">Instagram DM<span class="channel-sub">@rion.rings_official</span></span>
  <span class="channel-arrow">→</span>
  </a>
- <a href="mailto:info@art-rings.com" class="channel">
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Switzerland%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="channel">
  <span class="channel-icon">✉</span>
  <span class="channel-label"><span data-i18n="email_label">Email</span><span class="channel-sub">info@art-rings.com</span></span>
  <span class="channel-arrow">→</span>
@@ -1008,7 +1008,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <div class="footer-social">
  <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">◐</span>WhatsApp</a>
  <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
- <a href="mailto:info@art-rings.com"><span class="footer-social-ico">✉</span><span data-i18n="footer_email">Send Enquiry</span></a>
+ <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20Switzerland%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you."><span class="footer-social-ico">✉</span><span data-i18n="footer_email">Send Enquiry</span></a>
  </div>
  </div>
  </div>
@@ -1211,6 +1211,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
