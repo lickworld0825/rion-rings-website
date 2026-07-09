@@ -117,8 +117,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .hero-cta-group{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:2.5rem}
 .btn-primary{display:inline-block;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:1.1rem 2.8rem;text-decoration:none;transition:background .3s;border:none;cursor:pointer;font-weight:500}
 .btn-primary:hover{background:var(--ink)}
-.btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1.1rem 2.2rem;text-decoration:none;transition:background .3s;font-weight:500}
-.btn-wa:hover{background:#075E54}
 .btn-email{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:1.1rem 2.2rem;text-decoration:none;transition:background .3s;font-weight:500}
 .btn-email:hover{background:#6E5410}
 .btn-secondary{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:transparent;border:0.5px solid rgba(250,247,242,0.5);padding:1rem 2.2rem;text-decoration:none;transition:all .3s}
@@ -289,7 +287,6 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 .sticky-order-text{font-size:0.75rem;color:rgba(250,247,242,0.6)}
 .sticky-order-text strong{color:var(--gold-light);font-weight:400}
 .sticky-ctas{display:flex;gap:1rem}
-.s-wa{background:var(--green);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap}
 .s-email{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap}
 .s-order{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap}
 
@@ -379,7 +376,7 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
  .sticky-order{padding:1rem 1.5rem}
  .sticky-order-text{display:none}
  .sticky-ctas{width:100%;gap:0.5rem}
- .s-wa,.s-email,.s-order{flex:1;text-align:center;padding:0.85rem 0.5rem;font-size:0.62rem}
+ .s-email,.s-order{flex:1;text-align:center;padding:0.85rem 0.5rem;font-size:0.62rem}
  .menu-inner{padding:4rem 4rem 2rem!important}
  .menu-eyebrow{margin-bottom:1.5rem!important}
  .menu-links a{font-size:clamp(1.2rem,3.6vw,2.6rem)!important;padding:0.75rem 0.5rem 0.75rem 0!important}
@@ -389,7 +386,7 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
  .announce span{font-size:0.68rem;display:inline;letter-spacing:0.14em}
  .trust-strip{display:none}
  .hero-cta-group{flex-direction:column;gap:0.75rem}
- .btn-primary,.btn-wa,.btn-email,.btn-secondary{text-align:center;justify-content:center}
+ .btn-primary,.btn-email,.btn-secondary{text-align:center;justify-content:center}
 }
 @media(max-width:768px){.scroll-top{display:none!important}}
 </style>
@@ -1178,9 +1175,6 @@ document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
   if(!a||!window.gtag)return;
   var h=a.getAttribute('href')||'';
-  if(h.indexOf('wa.me')!==-1){
-    gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
-  }
   if(h.indexOf('mailto:')!==-1){
     gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }

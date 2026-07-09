@@ -100,8 +100,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 
 /* CTA BUTTONS */
 .product-cta{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
-.btn-wa-main{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#FFF;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;padding:1.2rem 2rem;text-decoration:none;font-weight:500;transition:background .3s;border:none;cursor:pointer}
-.btn-wa-main:hover{background:#0E7567}
 .btn-email-main{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold-dark);color:#FFF;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;padding:1.2rem 2rem;text-decoration:none;font-weight:500;transition:background .3s;border:none;cursor:pointer}
 .btn-email-main:hover{background:#6E5410}
 .btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--ink);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;border:0.5px solid var(--ink);transition:all .3s}
@@ -173,9 +171,7 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .sticky-product img{width:36px;height:36px;object-fit:cover}
 .sticky-product strong{color:var(--gold-light);font-weight:400}
 .sticky-ctas{display:flex;gap:0.5rem}
-.s-wa{background:var(--green);color:#FFF;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.8rem 1.5rem;text-decoration:none;transition:background .3s}
 .s-email{background:var(--gold-dark);color:#FFF;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.8rem 1.5rem;text-decoration:none;transition:background .3s}
-.s-wa:hover{background:#0E7567}
 
 /* FOOTER */
 footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(201,169,110,0.15)}
@@ -891,9 +887,6 @@ document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
   if(!a||!window.gtag)return;
   var h=a.getAttribute('href')||'';
-  if(h.indexOf('wa.me')!==-1){
-    gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
-  }
   if(h.indexOf('mailto:')!==-1){
     gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }

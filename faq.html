@@ -108,8 +108,6 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .help-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;color:var(--gold-light);margin-bottom:0.75rem}
 .help-section h2 em{font-style:italic;color:var(--gold)}
 .help-section p{font-size:0.9rem;color:rgba(250,247,242,0.55);line-height:1.8;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto}
-.btn-wa{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#FFF;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;padding:1.2rem 2.5rem;text-decoration:none;font-weight:500;transition:background .3s}
-.btn-wa:hover{background:#0E7567}
 .btn-email{display:inline-flex;align-items:center;gap:10px;background:var(--gold-dark);color:#FFF;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;padding:1.2rem 2.5rem;text-decoration:none;font-weight:500;transition:background .3s}
 .btn-email:hover{background:#6E5410}
 .help-links{margin-top:1.5rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
@@ -753,7 +751,6 @@ const T = {
  foot_help_4: 'Legal &amp; Privacy',
  foot_help_5: 'Contact',
  foot_h_connect: 'Connect',
- foot_connect_1: 'WhatsApp',
  foot_connect_2: 'Instagram',
  foot_connect_3: 'Send Enquiry',
  foot_copy: '© 2026 Rion™ · My Art Inc. · 100% Made in Japan · DDP — No import duties for UK customers',
@@ -890,7 +887,6 @@ const T = {
  foot_help_4: '法律・プライバシー',
  foot_help_5: 'お問い合わせ',
  foot_h_connect: 'つながる',
- foot_connect_1: 'WhatsApp',
  foot_connect_2: 'Instagram',
  foot_connect_3: 'お問い合わせを送る',
  foot_copy: '© 2026 Rion™ · My Art Inc. · 日本製100% · DDP——英国のお客様に輸入関税はかかりません',
@@ -989,9 +985,6 @@ document.addEventListener('click',function(e){
   var a=e.target.closest('a[href]');
   if(!a||!window.gtag)return;
   var h=a.getAttribute('href')||'';
-  if(h.indexOf('wa.me')!==-1){
-    gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
-  }
   if(h.indexOf('mailto:')!==-1){
     gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
