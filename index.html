@@ -119,6 +119,8 @@ nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between
 .btn-primary:hover{background:var(--ink)}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:1.1rem 2.2rem;text-decoration:none;transition:background .3s;font-weight:500}
 .btn-wa:hover{background:#075E54}
+.btn-email{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream);background:var(--gold-dark);padding:1.1rem 2.2rem;text-decoration:none;transition:background .3s;font-weight:500}
+.btn-email:hover{background:#6b4f0f}
 .btn-secondary{display:inline-block;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);background:transparent;border:0.5px solid rgba(250,247,242,0.5);padding:1rem 2.2rem;text-decoration:none;transition:all .3s}
 .btn-secondary:hover{background:rgba(250,247,242,0.1);border-color:var(--gold)}
 .social-proof{display:flex;align-items:center;gap:1rem;font-size:0.8rem;color:rgba(250,247,242,.65)}
@@ -289,6 +291,7 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
 .sticky-ctas{display:flex;gap:1rem}
 .s-wa{background:var(--green);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap}
 .s-order{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap}
+.s-email{background:var(--gold-dark);color:var(--cream);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.5rem;text-decoration:none;white-space:nowrap;border-left:0.5px solid rgba(250,247,242,0.2)}
 
 /* GALLERY */
 .gallery{padding:5rem 6rem;border-bottom:0.5px solid var(--border);background:var(--cream)}
@@ -376,7 +379,7 @@ footer{background:var(--ink);padding:6rem 6rem 2.5rem;border-top:0.5px solid rgb
   .sticky-order{padding:1rem 1.5rem}
   .sticky-order-text{display:none}
   .sticky-ctas{width:100%;gap:0.5rem}
-  .s-wa,.s-order{flex:1;text-align:center;padding:0.85rem 0.5rem;font-size:0.62rem}
+  .s-wa,.s-order,.s-email{flex:1;text-align:center;padding:0.7rem 0.3rem;font-size:0.56rem}
   .menu-inner{padding:4rem 4rem 2rem!important}
   .menu-eyebrow{margin-bottom:1.5rem!important}
   .menu-links a{font-size:clamp(1.2rem,3.6vw,2.6rem)!important;padding:0.75rem 0.5rem 0.75rem 0!important}
@@ -505,6 +508,7 @@ window._loadPixel();
     <div class="hero-cta-group">
       <a href="collection.html" class="btn-primary" data-i18n="hero_cta1">Begin Your Order</a>
       <a href="https://wa.me/819054621246" class="btn-wa" target="_blank" data-i18n="hero_cta2">💬 &nbsp;WhatsApp Us</a>
+      <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20USA%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="btn-email" data-i18n="hero_cta3">&#9993; &nbsp;Email Us</a>
     </div>
     <div class="social-proof">
       <span class="stars">★★★★★</span>
@@ -942,7 +946,7 @@ window._loadPixel();
       <span class="channel-label"><span data-i18n="ch_ig">Instagram DM</span><span class="channel-sub">@rion.rings_official</span></span>
       <span class="channel-arrow">→</span>
     </a>
-    <a href="mailto:info@art-rings.com" class="channel">
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20USA%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="channel">
       <span class="channel-icon">✉</span>
       <span class="channel-label"><span data-i18n="email_label">Email</span><span class="channel-sub">info@art-rings.com</span></span>
       <span class="channel-arrow">→</span>
@@ -1017,7 +1021,7 @@ window._loadPixel();
       <div class="footer-social">
         <a href="https://wa.me/819054621246" target="_blank"><span class="footer-social-ico">◐</span>WhatsApp</a>
         <a href="https://www.instagram.com/rion.memorial.world?igsh=YmRvcGQ4YnlxMWR1&utm_source=qr" target="_blank"><span class="footer-social-ico">◈</span>Instagram</a>
-        <a href="mailto:info@art-rings.com"><span class="footer-social-ico">✉</span><span data-i18n="footer_email">Send Enquiry</span></a>
+        <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20USA%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you."><span class="footer-social-ico">✉</span><span data-i18n="footer_email">Send Enquiry</span></a>
       </div>
     </div>
   </div>
@@ -1033,6 +1037,7 @@ window._loadPixel();
   <div class="sticky-order-text" data-i18n="sticky_text"><strong>One hair. One jewel. One love.</strong> &nbsp;From $4,700 USD · Free US Shipping · No Import Duties · Sales Tax May Apply · Handcrafted in Japan.</div>
   <div class="sticky-ctas">
     <a href="https://wa.me/819054621246" class="s-wa" target="_blank" data-i18n="sticky_wa">💬 WhatsApp</a>
+    <a href="mailto:info@art-rings.com?subject=Enquiry%20from%20the%20USA%20-%20Rion%20Memorial%20Jewellery&body=Hello%20Rion%2C%0A%0AI%27m%20interested%20in%20your%20memorial%20jewellery%20and%20would%20like%20to%20know%20more.%20Could%20you%20tell%20me%20about%20the%20process%20and%20next%20steps%3F%0A%0AThank%20you." class="s-email" data-i18n="sticky_email">&#9993; Email</a>
     <a href="collection.html" class="s-order" data-i18n="sticky_order">Begin Order →</a>
   </div>
 </div>
@@ -1116,7 +1121,7 @@ const T = {
   en:{
     nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
     tr1:"Free Shipping to the USA",tr2:"No Import Duties · Sales Tax May Apply",tr3:"Handcrafted in Japan",tr4:"Secure Payment",tr5:"Authenticity Certificate Included",
-    hero_eyebrow:"Bespoke Memorial Jewellery · Handcrafted in Japan",hero_title:"Keep them close.<br><em>Forever.</em>",hero_body:"A single strand of hair — just 1cm — sealed forever inside Japanese gold or platinum. Every piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone. When words aren't enough, gold endures.",hero_badge:"✦ &nbsp;The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> Us",hero_proof:"Trusted by families across the United States",
+    hero_eyebrow:"Bespoke Memorial Jewellery · Handcrafted in Japan",hero_title:"Keep them close.<br><em>Forever.</em>",hero_body:"A single strand of hair — just 1cm — sealed forever inside Japanese gold or platinum. Every piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone. When words aren't enough, gold endures.",hero_badge:"✦ &nbsp;The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> Us",hero_cta3:"&#9993; &nbsp;Email Us",hero_proof:"Trusted by families across the United States",
     sc1:"Precious hair enclosed · One-of-a-kind, made only for you",sc2:"Just 1cm of hair is all we need",sc3:"Free insured shipping to the United States",sc4:"Authenticity certificate &amp; photo report included",
     tb1_h:"One of a Kind",tb1_p:"Every piece holds your precious hair — a one-of-a-kind jewel made only for you, carrying the love of someone irreplaceable.",tb2_h:"100% Made in Japan",tb2_p:"Gold, platinum, diamonds and every element — sourced and handcrafted entirely in Japan by master artisans.",tb3_h:"Photo Documentation",tb3_p:"We photograph every step of the hair sealing process and send you the photos before delivery — complete peace of mind.",tb4_h:"Your Approval First",tb4_p:"Design, materials and specifications are confirmed with you in writing before any work begins. Nothing moves forward without your sign-off.",
     story_label:"Our Story",story_title:"Born from <em>loss.</em><br>Made from love.",story_p1:"In 2011, our founder held his infant son for three days — and then said goodbye. In that grief, a question was born: how do we carry the people we love when they can no longer walk beside us?",story_p2:"He discovered memorial jewellery — a ring that could hold a piece of his son close to his heart forever. Seven years later, in 2018, he founded Rion — named after that son. Every piece we create begins not with gold, but with a story. Yours.",story_quote:"\"Eternal love. A bond that continues — forever.\"",story_p3:"A strand of hair from someone dear — a child, a parent, a partner, a beloved pet — becomes a jewel you carry every day. Just 1cm. One strand. That is all we need to keep them with you, always. When words aren't enough, gold endures.",founder_role:"Founder",
@@ -1132,7 +1137,7 @@ const T = {
     con_title:"Begin your<br><em>story.</em>",con_body:"Every Rion piece begins with a conversation. Reach us via <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> or email — we respond personally in English and Japanese. No question is too small. We understand what this means.",con_sub:"Free insured shipping to the United States · No import duties · Sales tax may apply · All-inclusive USD pricing · Design approved before production begins · 100% Made in Japan",mij_label:"100% Made in Japan — Our Promise",mij_body:"Every element — gold, platinum, gemstones, and setting — is sourced and handcrafted entirely in Japan. Our artisans combine decades of traditional goldsmithing with refined modern design. Made in Japan is not a marketing phrase. It is how we work, and it is all we do.",wa_sub:"Fastest response · English &amp; Japanese · Replies within 24 hours",email_label:"Email",ship_label:"Free Insured Shipping via DHL",ship_sub:"United States · No import duties · Sales tax may apply · DDP terms",hours_label:"Response Hours",hours_val:"9:00–19:00 JST · Outside hours also available",
     legal_title:"Legal &amp; Compliance",leg1_h:"US Consumer Information",leg1_p:"All prices in USD. Shipped DDP — all US import duties and taxes covered by Rion. No additional charges on delivery. Each piece is bespoke and made to personal order. Written design approval is obtained before production begins. In case of manufacturing defect, pieces are remade at no charge.",leg2_h:"Product &amp; Shipping",leg2_1:"All pieces handcrafted entirely in Japan",leg2_2:"Certificate of Authenticity with every order",leg2_3:"Photo report of sealing process included",leg2_4:"Shipped via DHL Express (fully insured)",leg2_5:"Hair: non-biological hazard, customs compliant",leg2_6:"No extra charges on delivery (DDP terms)",leg2_7:"Remaining hair returned with your jewel",leg3_h:"Business Information",leg3_p:"Rion · My Art Inc. · Est. 2018, Japan · All prices in USD. US sales comply with applicable federal and state consumer protection laws. Contact via <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> or email for all enquiries.",
     footer_p:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across the United States.",footer_est:"Est. 2018 · Japan · Serving the USA",footer_explore:"Explore",footer_about:"About Rion",footer_order:"How to Order",footer_stories:"Stories",footer_help:"Help",footer_ship:"Shipping &amp; Returns",footer_legal:"Legal &amp; Privacy",footer_connect:"Connect",footer_email:"Send Enquiry",footer_copy:"© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to the USA · No import duties · Sales tax may apply",footer_right:"Est. 2018 · Japan · United States",
-    sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From $4,700 USD · Free US Shipping · No Import Duties · Sales Tax May Apply · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →",
+    sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From $4,700 USD · Free US Shipping · No Import Duties · Sales Tax May Apply · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_email:"&#9993; Email",sticky_order:"Begin Order →",
     announce:"Free Shipping to the USA &nbsp;·&nbsp; <span>No Import Duties · 100% Handcrafted in Japan</span>",
     p1_price:"From $4,700",p2_price:"From $4,800",p3_price:"From $5,000",ch_ig:"Instagram DM",
     t1_loc:"Portland, Oregon",t2_loc:"Austin, Texas",t3_loc:"Nashville, Tennessee",
@@ -1141,7 +1146,7 @@ const T = {
   ja:{
     nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
     tr1:"アメリカへ無料配送",tr2:"輸入関税なし・州税は別途",tr3:"日本の職人が手作り",tr4:"安全なお支払い",tr5:"本物証明書付き",
-    hero_eyebrow:"オーダーメイド メモリアルジュエリー・日本",hero_title:"愛する人を、<br><em>そばに。永遠に。</em>",hero_body:"たった1cmの髪の毛一本を、K18ゴールドまたはPt900プラチナの中に永遠に封入。世界に一つだけのジュエル。日本の職人が一つひとつ丁寧に手作りします。言葉にできない想いを、ゴールドに込めて。",hero_badge:"✦ &nbsp;世界で唯一のジュエル",hero_cta1:"ご注文を始める",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で相談する",hero_proof:"アメリカ中のご家族に信頼されています",
+    hero_eyebrow:"オーダーメイド メモリアルジュエリー・日本",hero_title:"愛する人を、<br><em>そばに。永遠に。</em>",hero_body:"たった1cmの髪の毛一本を、K18ゴールドまたはPt900プラチナの中に永遠に封入。世界に一つだけのジュエル。日本の職人が一つひとつ丁寧に手作りします。言葉にできない想いを、ゴールドに込めて。",hero_badge:"✦ &nbsp;世界で唯一のジュエル",hero_cta1:"ご注文を始める",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で相談する",hero_cta3:"&#9993; &nbsp;メールで問い合わせる",hero_proof:"アメリカ中のご家族に信頼されています",
     sc1:"大切な髪の毛を封入・世界に一つだけ、あなただけのために",sc2:"必要な髪の毛はたった1cm",sc3:"アメリカへ無料・保険付き配送",sc4:"本物証明書・フォトレポート付き",
     tb1_h:"世界に一つだけ",tb1_p:"すべてのジュエルに大切な方の髪の毛が封入されています。かけがえない愛を込めた、あなただけの一品。",tb2_h:"100%日本製",tb2_p:"ゴールド・プラチナ・ダイヤモンドに至るまで、すべての素材を日本の職人が丁寧に手作りしています。",tb3_h:"フォトドキュメント",tb3_p:"髪の毛の封入工程をすべて写真に収め、発送前にお送りします。完全な安心をお約束します。",tb4_h:"ご承認を優先します",tb4_p:"制作開始前に、デザイン・素材・仕様を書面でご確認いただきます。お客様のご承認なしには何も進みません。",
     story_label:"私たちのストーリー",story_title:"ある喪失から生まれ、<br><em>愛から作られた。</em>",story_p1:"2011年、創業者は生まれたばかりの息子を3日間だけ抱き、そして別れを告げました。その悲しみの中で、一つの問いが生まれました。愛する人がそばにいられなくなったとき、どうすればいつも一緒にいられるだろうかと。",story_p2:"メモリアルジュエリーに出会い、息子を心の近くに持ち続けられるリングを作りました。7年後の2018年、息子の名前「璃音（Rion）」を冠してブランドを設立。私たちが作るすべてのジュエルは、ゴールドではなく、一つの物語から始まります。あなたの物語から。",story_quote:"「永遠の愛。永久に続く絆。」",story_p3:"大切な方の髪の毛一本——お子様、ご両親、パートナー、愛するペット——が、毎日身に着けるジュエルになります。たった1cm。一本の髪。それだけで、いつもそばにいられます。言葉にできない想いを、ゴールドに込めて。",founder_role:"創業者",
@@ -1157,7 +1162,7 @@ const T = {
     con_title:"あなたの<br><em>物語を、始めましょう。</em>",con_body:"Rionのジュエルは、一つの会話から始まります。<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>またはメールでお気軽にお問い合わせください。英語・日本語で対応いたします。どんな小さな疑問でも歓迎します。",con_sub:"アメリカへ保険付き無料配送 · 輸入関税なし・州税は別途 · USD全込み価格 · 制作前にデザイン承認 · 100%日本製",mij_label:"100%日本製——私たちのお約束",mij_body:"ゴールド・プラチナ・宝石・セッティングに至るまで、すべての素材を日本で調達し手作りしています。職人たちは数十年の伝統的な金細工技術と現代的なデザインを融合させています。日本製は宣伝文句ではありません。それが私たちの仕事のやり方であり、私たちがすることのすべてです。",wa_sub:"最も早いお返事 · 英語・日本語対応 · 24時間以内にお返事",email_label:"メール",ship_label:"DHL保険付き無料配送",ship_sub:"アメリカ · 輸入関税なし・州税は別途 · DDP条件",hours_label:"対応時間",hours_val:"9:00–19:00 JST · 時間外も<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で対応",
     legal_title:"法律・<em>コンプライアンス</em>",leg1_h:"米国消費者向け情報",leg1_p:"価格はすべてUSD表示。DDP配送——すべての米国輸入関税・税金はRionが負担します。お届け時の追加料金なし。各作品はオーダーメイドです。制作開始前に書面でデザイン承認をいただきます。製造上の欠陥の場合は無償でお作り直しします。",leg2_h:"商品・配送",leg2_1:"すべての作品を日本で完全手作り",leg2_2:"すべてのご注文に本物証明書付き",leg2_3:"封入工程のフォトレポート付き",leg2_4:"DHL速達便で配送（全額保険付き）",leg2_5:"髪の毛：非生物学的危険物・通関対応済み",leg2_6:"お届け時の追加料金なし（DDP条件）",leg2_7:"残った髪の毛はジュエルと共にご返却",leg3_h:"会社情報",leg3_p:"Rion · My Art Inc. · 2018年設立・日本 · 価格はすべてUSD。米国の連邦・州消費者保護法を遵守しています。お問い合わせは<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>またはメールにて。",
     footer_p:"オーダーメイドメモリアルジュエリー。日本の職人が心を込めて手作り。一本の髪。一つのジュエル。一つの愛。永遠に。アメリカ中のご家族に信頼されています。",footer_est:"2018年設立 · 日本 · アメリカへお届け",footer_explore:"探索する",footer_about:"Rionについて",footer_order:"ご注文方法",footer_stories:"お客様の声",footer_help:"サポート",footer_ship:"配送・返品",footer_legal:"法律・プライバシー",footer_connect:"つながる",footer_email:"お問い合わせを送る",footer_copy:"© 2026 Rion™ · My Art Inc. · 100%日本製 · アメリカへ保険付き無料配送 · 輸入関税なし・州税は別途",footer_right:"2018年設立 · 日本 · アメリカ",
-    sticky_text:"<strong>一本の髪。一つのジュエル。一つの愛。</strong> &nbsp;$4,700 USD〜 · 米国無料配送 · 輸入関税なし・州税は別途 · 日本で手作り。",sticky_wa:"💬 WhatsApp",sticky_order:"ご注文を始める →",
+    sticky_text:"<strong>一本の髪。一つのジュエル。一つの愛。</strong> &nbsp;$4,700 USD〜 · 米国無料配送 · 輸入関税なし・州税は別途 · 日本で手作り。",sticky_wa:"💬 WhatsApp",sticky_email:"&#9993; メール",sticky_order:"ご注文を始める →",
     announce:"アメリカ全土へ送料無料 &nbsp;·&nbsp; <span>輸入関税なし · 100% 日本で手作り</span>",
     p1_price:"$4,700〜",p2_price:"$4,800〜",p3_price:"$5,000〜",ch_ig:"Instagram DM",
     t1_loc:"オレゴン州ポートランド",t2_loc:"テキサス州オースティン",t3_loc:"テネシー州ナッシュビル",
@@ -1197,6 +1202,9 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href')||'';
   if(h.indexOf('wa.me')!==-1){
     gtag('event','whatsapp_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
+  }
+  if(h.indexOf('mailto:')!==-1){
+    gtag('event','email_click',{'event_category':'conversion','event_label':document.title,'page_path':location.pathname});
   }
   if(a.classList.contains('btn-primary')||a.classList.contains('s-order')){
     gtag('event','cta_click',{'event_category':'engagement','event_label':document.title,'page_path':location.pathname});
