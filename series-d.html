@@ -576,18 +576,9 @@ function selectMat(mat){
   cur=mat;const m=MATERIALS[mat];
   document.getElementById('priceDisplay').textContent=m.price;
   document.getElementById('codeDisplay').textContent=m.code;
-  document.getElementById('mainImg').src=m.img;
   document.querySelectorAll('.mat-tab').forEach(b=>b.classList.remove('active'));
   event.target.classList.add('active');
-  document.querySelectorAll('.hero-thumb').forEach(t=>{
-    t.classList.toggle('active',t.getAttribute('data-img')===m.img);
-  });
   updateWa();
-}
-function switchImg(el,src){
-  document.getElementById('mainImg').src=src;
-  document.querySelectorAll('.hero-thumb').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
 }
 function toggleMenu(){
   const o=document.getElementById('menuOverlay'),b=document.querySelector('.hamburger');

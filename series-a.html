@@ -577,7 +577,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
       <div class="related-card-info">
         <p class="related-series">Series C</p>
         <p class="related-name">The <em>Birthstone</em> Ring</p>
-        <p class="related-price">From AED 18,000</p>
+        <p class="related-price">From AED 21,000</p>
         <span class="related-arrow" data-i18n="view_series">View Series →</span>
       </div>
     </a>
@@ -586,7 +586,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
       <div class="related-card-info">
         <p class="related-series">Series G</p>
         <p class="related-name">The <em>Refined</em> Ring</p>
-        <p class="related-price">From AED 17,200</p>
+        <p class="related-price">From AED 20,000</p>
         <span class="related-arrow" data-i18n="view_series">View Series →</span>
       </div>
     </a>
@@ -595,7 +595,7 @@ footer{background:var(--ink);padding:5rem 6rem 2rem;border-top:0.5px solid rgba(
       <div class="related-card-info">
         <p class="related-series">Series H</p>
         <p class="related-name">The <em>Modern</em> Ring</p>
-        <p class="related-price">From AED 18,000</p>
+        <p class="related-price">From AED 21,000</p>
         <span class="related-arrow" data-i18n="view_series">View Series →</span>
       </div>
     </a>
@@ -684,20 +684,11 @@ function selectMat(mat){
   const m=MATERIALS[mat];
   document.getElementById('priceDisplay').textContent=m.price;
   document.getElementById('codeDisplay').textContent=m.code;
-  document.getElementById('mainImg').src=m.img;
   document.querySelectorAll('.mat-tab').forEach(b=>b.classList.remove('active'));
   event.target.classList.add('active');
-  document.querySelectorAll('.hero-thumb').forEach(t=>{
-    t.classList.toggle('active',t.src.includes(m.img.split('/').pop()));
-  });
   updateWaLinks();
 }
 
-function switchImg(el,src){
-  document.getElementById('mainImg').src=src;
-  document.querySelectorAll('.hero-thumb').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-}
 
 function toggleMenu(){
   const o=document.getElementById('menuOverlay'),b=document.querySelector('.hamburger');
