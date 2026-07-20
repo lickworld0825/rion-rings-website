@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ca.myart-rion.com/sitemap.xml
