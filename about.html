@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -246,7 +246,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <!-- TRUST STRIP -->
 <div class="trust-strip">
  <span class="trust-item" data-i18n="trust_shipping">Free Shipping to Switzerland</span>
- <span class="trust-item" data-i18n="trust_duties">No Import Duties · Swiss VAT May Apply</span>
+ <span class="trust-item" data-i18n="trust_duties">No Import Duties · All Taxes Included</span>
  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
  <span class="trust-item" data-i18n="trust_payment">Secure Payment</span>
 </div>
@@ -266,8 +266,10 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
  <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
  <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_contact">Contact</span></a>
- </nav>
+ <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+ <a href="legal.html" onclick="closeMenu()"><span class="menu-num">10</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">11</span><span data-i18n="menu_contact">Contact</span></a>
+</nav>
  </div>
  <div class="menu-footer">
  <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_wa">💬 Message Us on WhatsApp</a>
@@ -530,7 +532,7 @@ const T={
  fr:{
  nav_order:"Commencer votre commande",
  trust_shipping:"Livraison gratuite en Suisse",
- trust_duties:"Pas de droits de douane · TVA suisse possible",
+ trust_duties:"Pas de droits de douane · Toutes taxes incluses",
  trust_made:"Fabriqué à la main au Japon",
  trust_payment:"Paiement sécurisé",
  menu_eyebrow:"Navigation",
@@ -541,7 +543,7 @@ const T={
  menu_sealing:"Comment les cheveux sont <em>scellés</em>",
  menu_faq:"FAQ",
  menu_shipping:"Livraison &amp; <em>retours</em>",
- menu_care:"Guide <em>d'entretien</em>",
+ menu_care:"Guide <em>d'entretien</em>",menu_heritage:"Notre <em>Héritage</em>",menu_legal:"Mentions <em>légales</em>",
  menu_contact:"Contact",
  menu_wa:"💬 Contactez-nous sur WhatsApp",
  hero_eyebrow:"Notre histoire",
@@ -604,7 +606,7 @@ const T={
  en:{
  nav_order:"Order Now",
  trust_shipping:"Free Shipping to Switzerland",
- trust_duties:"No Import Duties · Swiss VAT May Apply",
+ trust_duties:"No Import Duties · All Taxes Included",
  trust_made:"Handcrafted in Japan",
  trust_payment:"Secure Payment",
  menu_eyebrow:"Navigation",
@@ -615,7 +617,7 @@ const T={
  menu_sealing:"How Hair Is <em>Sealed</em>",
  menu_faq:"FAQ",
  menu_shipping:"Shipping &amp; <em>Returns</em>",
- menu_care:"Care <em>Guide</em>",
+ menu_care:"Care <em>Guide</em>",menu_heritage:"Our <em>Heritage</em>",menu_legal:"Legal &amp; <em>Privacy</em>",
  menu_contact:"Contact",
  menu_wa:"💬 Message Us on WhatsApp",
  hero_eyebrow:"Our Story",
@@ -678,7 +680,7 @@ const T={
  ja:{
  nav_order:"ご注文",
  trust_shipping:"スイスへ無料配送",
- trust_duties:"輸入関税なし · スイスVATが適用される場合があります",
+ trust_duties:"輸入関税なし・税込み価格",
  trust_made:"日本で手作り",
  trust_payment:"安全なお支払い",
  menu_eyebrow:"ナビゲーション",
@@ -689,7 +691,7 @@ const T={
  menu_sealing:"毛髪の封入方法",
  menu_faq:"よくある質問",
  menu_shipping:"配送・返品について",
- menu_care:"お手入れガイド",
+ menu_care:"お手入れガイド",menu_heritage:"ブランドの<em>歴史</em>",menu_legal:"法律・<em>プライバシー</em>",
  menu_contact:"お問い合わせ",
  menu_wa:"💬 WhatsAppでお問い合わせ",
  hero_eyebrow:"私たちの物語",
@@ -755,19 +757,20 @@ function setLang(l){
  const k=el.getAttribute('data-i18n');
  if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
  });
+ document.documentElement.lang=l;
  localStorage.setItem('rion_ch_lang',l);
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
 (function(){
  const saved=localStorage.getItem('rion_ch_lang')||'fr';
- if(saved!=='en') setLang(saved);
+ if(saved!=='en') setLang(saved); else document.documentElement.lang='en';
 })();
 </script>
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
  <strong>Cookie Notice</strong>
- <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <span>This site uses Google Analytics — including advertising-related measurement signals — and Microsoft Clarity to understand how visitors use our site. These are only activated if you click Accept. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
  <button class="cookie-btn" onclick="declineCookies()">Decline</button>

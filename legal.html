@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -234,14 +234,16 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <nav class="menu-links">
  <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="menu_home">Home</span></a>
  <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="menu_collection">Collection</span></a>
- <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+ <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="menu_about">About <em>Rion</em></span></a>
  <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="menu_order">How to <em>Order</em></span></a>
  <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="menu_sealing">How Hair Is <em>Sealed</em></span></a>
  <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
  <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
  <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
- <a href="legal.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
- </nav>
+ <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+ <a href="legal.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">10</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">11</span><span data-i18n="menu_contact">Contact</span></a>
+</nav>
  </div>
  <div class="menu-footer">
  <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">&#128172; Message Us on WhatsApp</a>
@@ -252,7 +254,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <!-- TRUST STRIP -->
 <div class="trust-strip">
  <span class="trust-item" data-i18n="trust_ship">Free Shipping to Switzerland</span>
- <span class="trust-item" data-i18n="trust_duty">No Import Duties · Swiss VAT May Apply</span>
+ <span class="trust-item" data-i18n="trust_duty">No Import Duties · All Taxes Included</span>
  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
  <span class="trust-item" data-i18n="trust_pay">Secure Payment</span>
 </div>
@@ -459,7 +461,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 
  <div class="privacy-block">
  <h3 data-i18n="priv11_h">11. Cookies &amp; Analytics</h3>
- <p>Our website uses Google Analytics to understand how visitors use our site, and essential cookies for language preferences. We do not use third-party advertising or tracking cookies.</p>
+ <p data-i18n="priv11_p">Our website uses Google Analytics — including advertising-related measurement signals (such as ad_storage, ad_user_data and ad_personalization) — and Microsoft Clarity (session recording and heatmaps) to understand how visitors use our site, alongside essential cookies for language preferences. These analytics and measurement tools are only activated after you accept cookies via our cookie banner; if you decline, none of them load.</p>
  </div>
 
  <div class="privacy-block">
@@ -512,7 +514,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  </div>
  </div>
  <div class="footer-bottom">
- <div class="footer-copy">&#169; 2026 Rion&#8482; &middot; My Art Inc. &middot; 100% Made in Japan &middot; Free Switzerland Shipping &middot; No Import Duties · Swiss VAT May Apply</div>
+ <div class="footer-copy">&#169; 2026 Rion&#8482; &middot; My Art Inc. &middot; 100% Made in Japan &middot; Free Switzerland Shipping &middot; No Import Duties · All Taxes Included</div>
  <div class="footer-right">Est. 2018 &middot; Japan &middot; Switzerland</div>
  </div>
 </footer>
@@ -523,7 +525,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
  <strong>Cookie Notice</strong>
- <span>This site uses Google Analytics and essential cookies only. We do not use advertising or tracking cookies. See <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <span>This site uses Google Analytics — including advertising-related measurement signals — and Microsoft Clarity to understand how visitors use our site. These are only activated if you click Accept. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
  <button class="cookie-btn" onclick="declineCookies()">Decline</button>
@@ -535,9 +537,9 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 const T = {
 
  fr: {
- menu_home:'Accueil',menu_collection:'Collection',menu_heritage:'Notre <em>Héritage</em>',menu_order:'Comment <em>commander</em>',menu_sealing:'Comment les cheveux sont <em>scellés</em>',menu_faq:'FAQ',menu_shipping:'Livraison &amp; <em>Retours</em>',menu_care:"Guide d'<em>entretien</em>",menu_legal:'Mentions <em>légales</em>',
+ menu_home:'Accueil',menu_collection:'Collection',menu_about:'À propos de <em>Rion</em>',menu_heritage:'Notre <em>Héritage</em>',menu_order:'Comment <em>commander</em>',menu_sealing:'Comment les cheveux sont <em>scellés</em>',menu_faq:'FAQ',menu_shipping:'Livraison &amp; <em>Retours</em>',menu_care:"Guide d'<em>entretien</em>",menu_legal:'Mentions <em>légales</em>',menu_contact:'Contact',
  trust_ship: 'Livraison gratuite vers la Suisse',
- trust_duty: 'Pas de droits de douane · TVA suisse possible',
+ trust_duty: 'Pas de droits de douane · Toutes taxes incluses',
  trust_made: 'Fabriqué à la main au Japon',
  trust_pay: 'Paiement sécurisé',
  page_eyebrow: 'Mentions légales &amp; confidentialité',
@@ -583,15 +585,16 @@ const T = {
  priv9_h: '9. Vos droits (tous les utilisateurs)',
  priv10_h: '10. Sécurité',
  priv11_h: '11. Cookies &amp; analyses',
+ priv11_p: 'Notre site utilise Google Analytics — y compris des signaux de mesure liés à la publicité (tels que ad_storage, ad_user_data et ad_personalization) — ainsi que Microsoft Clarity (enregistrement de session et cartes de chaleur) pour comprendre comment les visiteurs utilisent notre site, en complément des cookies essentiels pour les préférences de langue. Ces outils d\'analyse et de mesure ne sont activés qu\'après votre acceptation via notre bandeau de cookies ; en cas de refus, aucun d\'entre eux ne se charge.',
  priv12_h: '12. Contact pour les questions de confidentialité',
  last_updated: 'Dernière mise à jour : juin 2026',
  cta_h2: 'Des questions sur nos <em>politiques ?</em>',
  cta_p: 'Nous serons heureux de clarifier tout point ci-dessus. Contactez-nous sur <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — nous répondons en anglais et en japonais, généralement dans les quelques heures.'
  },
  en: {
- menu_home:'Home',menu_collection:'Collection',menu_heritage:'Our <em>Heritage</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_legal:'Legal &amp; <em>Privacy</em>',
+ menu_home:'Home',menu_collection:'Collection',menu_about:'About <em>Rion</em>',menu_heritage:'Our <em>Heritage</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_legal:'Legal &amp; <em>Privacy</em>',menu_contact:'Contact',
  trust_ship: 'Free Shipping to Switzerland',
- trust_duty: 'No Import Duties · Swiss VAT May Apply',
+ trust_duty: 'No Import Duties · All Taxes Included',
  trust_made: 'Handcrafted in Japan',
  trust_pay: 'Secure Payment',
  page_eyebrow: 'Legal &amp; Privacy',
@@ -637,15 +640,16 @@ const T = {
  priv9_h: '9. Your Rights (All Users)',
  priv10_h: '10. Security',
  priv11_h: '11. Cookies &amp; Analytics',
+ priv11_p: 'Our website uses Google Analytics — including advertising-related measurement signals (such as ad_storage, ad_user_data and ad_personalization) — and Microsoft Clarity (session recording and heatmaps) to understand how visitors use our site, alongside essential cookies for language preferences. These analytics and measurement tools are only activated after you accept cookies via our cookie banner; if you decline, none of them load.',
  priv12_h: '12. Contact for Privacy Concerns',
  last_updated: 'Last updated: June 2026',
  cta_h2: 'Questions about our <em>policies?</em>',
  cta_p: 'We\'re happy to clarify anything above. Reach us on <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> — we respond in English and Japanese, typically within a few hours.'
  },
  ja: {
- menu_home:'ホーム',menu_collection:'コレクション',menu_heritage:'ブランドの<em>歴史</em>',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_legal:'法律・<em>プライバシー</em>',
+ menu_home:'ホーム',menu_collection:'コレクション',menu_about:'Rionについて',menu_heritage:'ブランドの<em>歴史</em>',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_legal:'法律・<em>プライバシー</em>',menu_contact:'お問い合わせ',
  trust_ship: 'スイスへ無料配送',
- trust_duty: '輸入関税なし',
+ trust_duty: '輸入関税なし・税込み価格',
  trust_made: '日本で手作り',
  trust_pay: '安全なお支払い',
  page_eyebrow: '法律・プライバシー',
@@ -691,6 +695,7 @@ const T = {
  priv9_h: '9. お客様の権利（全ユーザー）',
  priv10_h: '10. セキュリティ',
  priv11_h: '11. クッキーと分析',
+ priv11_p: '当サイトでは、Google Analytics(広告関連の測定シグナルである ad_storage、ad_user_data、ad_personalization を含む)およびMicrosoft Clarity(セッション記録・ヒートマップ)を使用し、言語設定のための必須クッキーとあわせて、訪問者のサイト利用状況を把握しています。これらの解析・測定ツールは、Cookieバナーで同意いただいた場合にのみ有効化されます。同意いただけない場合、これらは一切読み込まれません。',
  priv12_h: '12. プライバシーに関するお問い合わせ',
  last_updated: '最終更新：2026年6月',
  cta_h2: 'ポリシーについてご不明な点は？',
@@ -702,12 +707,13 @@ function setLang(l){
  const k=el.getAttribute('data-i18n');
  if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
  });
+ document.documentElement.lang=l;
  localStorage.setItem('rion_ch_lang',l);
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
 (function(){
  const saved=localStorage.getItem('rion_ch_lang')||'fr';
- if(saved!=='en') setLang(saved);
+ if(saved!=='en') setLang(saved); else document.documentElement.lang='en';
 })();
 
 function acceptCookies(){

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -288,7 +288,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <div class="trust-strip-nav">
  <span data-i18n="trust_ship">✦ Free Shipping to Switzerland</span>
  <span class="sep">·</span>
- <span data-i18n="trust_duty">◈ No Import Duties · Swiss VAT May Apply</span>
+ <span data-i18n="trust_duty">◈ No Import Duties · All Taxes Included</span>
  <span class="sep">·</span>
  <span data-i18n="trust_made">◯ Handcrafted in Japan</span>
  <span class="sep">·</span>
@@ -303,14 +303,17 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <span class="menu-eyebrow">Navigation</span>
  <nav class="menu-links">
  <a href="index.html" onclick="closeMenu()"><span class="menu-num">01</span><span data-i18n="nav_home">Home</span></a>
- <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="nav_col">Collection</span></a>
+ <a href="collection.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="nav_col">Collection</span></a>
  <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="nav_about">About <em>Rion</em></span></a>
  <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="nav_order">How to <em>Order</em></span></a>
- <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="nav_faq">FAQ</span></a>
- <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="nav_ship">Shipping &amp; <em>Returns</em></span></a>
- <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="nav_care">Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="nav_contact">Contact</span></a>
- </nav>
+ <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="nav_sealing">How Hair Is <em>Sealed</em></span></a>
+ <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="nav_faq">FAQ</span></a>
+ <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="nav_ship">Shipping &amp; <em>Returns</em></span></a>
+ <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="nav_care">Care <em>Guide</em></span></a>
+ <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="nav_heritage">Our <em>Heritage</em></span></a>
+ <a href="legal.html" onclick="closeMenu()"><span class="menu-num">10</span><span data-i18n="nav_legal">Legal &amp; <em>Privacy</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">11</span><span data-i18n="nav_contact">Contact</span></a>
+</nav>
  </div>
  <div class="menu-footer">
  <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">&#x1F4AC; &nbsp;Message Us on WhatsApp</a>
@@ -335,7 +338,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 
  <div class="product-price-row">
  <span class="product-price" id="prodPrice"></span>
- <span class="product-price-note" data-i18n="price_note">Free Switzerland Shipping &middot; No Import Duties · Swiss VAT May Apply</span>
+ <span class="product-price-note" data-i18n="price_note">Free Switzerland Shipping &middot; No Import Duties · All Taxes Included</span>
  </div>
 
  <div class="product-stock" data-i18n="made_to_order">Made to order &middot; Approx. 5.5 months</div>
@@ -374,7 +377,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <div class="trust-item"><div class="trust-item-icon">&#9675;</div><h4 data-i18n="ti1_h">One of a Kind</h4><p data-i18n="ti1_p">Made from your hair alone</p></div>
  <div class="trust-item"><div class="trust-item-icon">&#10022;</div><h4 data-i18n="ti2_h">100% Made in Japan</h4><p data-i18n="ti2_p">Every element, every step</p></div>
  <div class="trust-item"><div class="trust-item-icon">&#9671;</div><h4 data-i18n="ti3_h">Photo Report</h4><p data-i18n="ti3_p">Hair sealing documented</p></div>
- <div class="trust-item"><div class="trust-item-icon">&#9672;</div><h4 data-i18n="ti4_h">No Import Duties · Swiss VAT May Apply</h4><p data-i18n="ti4_p">Free Switzerland shipping, no charges on delivery</p></div>
+ <div class="trust-item"><div class="trust-item-icon">&#9672;</div><h4 data-i18n="ti4_h">No Import Duties · All Taxes Included</h4><p data-i18n="ti4_p">Free Switzerland shipping, no charges on delivery</p></div>
  </div>
 </section>
 
@@ -414,7 +417,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <div class="custom-card" id="sizingCard">
  <div class="custom-card-num">03</div>
  <h3 id="sizingTitle">Custom <em>Sizing</em></h3>
- <p id="sizingBody">ring gauge (sizes 1–12) sent in your collection kit. Or tell us your US size if you already know.</p>
+ <p id="sizingBody">ring gauge (sizes 1–12) sent in your collection kit. Or tell us your size if you already know.</p>
  <p class="custom-price" id="sizingPrice">Included &middot; No extra fee</p>
  </div>
  </div>
@@ -509,22 +512,27 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 const T = {
 
  fr:{
- nav_cta:"Commencer votre commande",menu_eyebrow:"Navigation",nav_home:"Accueil",nav_col:"Collection",nav_about:"À propos de <em>Rion</em>",nav_order:"Comment <em>commander</em>",nav_faq:"FAQ",nav_ship:"Livraison &amp; <em>Retours</em>",nav_care:"Guide d'<em>entretien</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Contactez-nous sur <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",tr1:"Livraison gratuite en Suisse",tr2:"Pas de droits de douane · TVA suisse possible",tr3:"Fabriqué à la main au Japon",tr4:"Paiement sécurisé",tr5:"Certificat d'authenticité inclus",trust_shipping:"Livraison gratuite en Suisse",trust_duties:"Pas de droits de douane · TVA suisse possible",trust_made:"Fabriqué à la main au Japon",trust_payment:"Paiement sécurisé",trust_strip:"Livraison gratuite en Suisse &nbsp;·&nbsp; Pas de droits de douane · TVA suisse possible &nbsp;·&nbsp; Fabriqué à la main au Japon &nbsp;·&nbsp; Paiement sécurisé",
+ nav_cta:"Commencer votre commande",menu_eyebrow:"Navigation",nav_home:"Accueil",nav_col:"Collection",nav_about:"À propos de <em>Rion</em>",nav_order:"Comment <em>commander</em>",nav_sealing:"Comment les cheveux sont <em>scellés</em>",nav_faq:"FAQ",nav_ship:"Livraison &amp; <em>Retours</em>",nav_care:"Guide d'<em>entretien</em>",nav_heritage:"Notre <em>Héritage</em>",nav_legal:"Mentions <em>légales</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Contactez-nous sur <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",tr1:"Livraison gratuite en Suisse",tr2:"Pas de droits de douane · Toutes taxes incluses",tr3:"Fabriqué à la main au Japon",tr4:"Paiement sécurisé",tr5:"Certificat d'authenticité inclus",trust_shipping:"Livraison gratuite en Suisse",trust_duties:"Pas de droits de douane · Toutes taxes incluses",trust_made:"Fabriqué à la main au Japon",trust_payment:"Paiement sécurisé",trust_strip:"Livraison gratuite en Suisse &nbsp;·&nbsp; Pas de droits de douane · Toutes taxes incluses &nbsp;·&nbsp; Fabriqué à la main au Japon &nbsp;·&nbsp; Paiement sécurisé",
 spec_series:"Série",spec_mat:"Matériau",spec_size:"Taille de bague",spec_sizing:"Calibre",spec_time:"Délai de production",spec_ship:"Livraison",spec_price:"Prix",
-price_note:"Livraison gratuite en Suisse · Pas de droits de douane · TVA suisse possible",
+price_note:"Livraison gratuite en Suisse · Pas de droits de douane · Toutes taxes incluses",
 engrave_label:"Gravure personnalisée (optionnel)",engrave_desc:"Ajoutez un texte gravé à l'intérieur de la bague — jusqu'à 10 caractères inclus.",
 birthstone_label:"Pierres de naissance (optionnel)",birthstone_desc:"Ajoutez 1 à 4 pierres à votre design.",
 order_cta:"Commencer via <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> →",order_sub:"Sans engagement · Nous répondons sous 24h",
 related_title:"Vous pourriez aussi aimer",
 mat_ygold:"Or jaune K18",mat_wgold:"Or blanc K18",mat_pgold:"Or rose K18",mat_pt:"Platine Pt900",enquire_wa:"Demande via WhatsApp →",footer_p:"Bijoux mémoriaux sur mesure, fabriqués entièrement à la main au Japon. Un cheveu. Un bijou. Un amour — le vôtre, pour toujours. La confiance de familles à travers toute la Suisse.",footer_est:"Fondé en 2018 · Japon · Suisse",footer_explore:"Explorer",footer_about:"À propos de Rion",footer_order:"Comment commander",footer_stories:"Témoignages",footer_help:"Assistance",footer_ship:"Livraison &amp; Retours",footer_legal:"Mentions légales",footer_connect:"Nous contacter",footer_email:"Envoyer un message",footer_copy:"© 2026 Rion™ · My Art Inc. · 100% fabriqué au Japon · Livraison assurée gratuite en Suisse · Pas de droits de douane",footer_right:"Fondé en 2018 · Japon · Suisse",
+trust_ship:"✦ Livraison gratuite vers la Suisse",trust_duty:"◈ Pas de droits de douane · Toutes taxes incluses",trust_pay:"◇ Paiement sécurisé",
+made_to_order:"Fabriqué sur commande · Environ 5,5 mois",pill_japan:"100% fabriqué au Japon",pill_ship:"Livraison assurée gratuite",pill_photo:"Rapport photo inclus",pill_polish:"Polissage à vie",
+btn_order:"💬 Commander via <a href=\"https://wa.me/819054621246\" target=\"_blank\">WhatsApp</a>",btn_enquire:"Poser une question d'abord",
+spec_code:"Code",spec_material:"Matériau",spec_type:"Type",spec_chain:"Chaîne",spec_hair:"Chambre à cheveux",spec_hair_val:"Scellée hermétiquement à la main au Japon",spec_prod:"Fabrication",spec_prod_val:"Environ 5,5 mois après réception des cheveux",spec_ship_val:"DHL Express · Entièrement assuré · Gratuit vers la Suisse · Aucun droit de douane",spec_origin:"Origine",spec_origin_val:"Entièrement fait main au Japon",
+ti1_h:"Pièce unique",ti1_p:"Réalisée uniquement à partir de vos cheveux",ti2_h:"100% fabriqué au Japon",ti2_p:"Chaque élément, chaque étape",ti3_h:"Rapport photo",ti3_p:"Scellage des cheveux documenté",ti4_h:"Pas de droits de douane · Toutes taxes incluses",ti4_p:"Livraison gratuite en Suisse, aucun frais à la livraison",
  },
  en: {
- nav_home:'Home',nav_col:'Collection',nav_about:'About <em>Rion</em>',nav_order:'How to <em>Order</em>',nav_faq:'FAQ',nav_ship:'Shipping &amp; <em>Returns</em>',nav_care:'Care <em>Guide</em>',nav_contact:'Contact',
+ nav_home:'Home',nav_col:'Collection',nav_about:'About <em>Rion</em>',nav_order:'How to <em>Order</em>',nav_sealing:'How Hair Is <em>Sealed</em>',nav_faq:'FAQ',nav_ship:'Shipping &amp; <em>Returns</em>',nav_care:'Care <em>Guide</em>',nav_heritage:'Our <em>Heritage</em>',nav_legal:'Legal &amp; <em>Privacy</em>',nav_contact:'Contact',
  trust_ship: '✦ Free Shipping to Switzerland',
- trust_duty: '◈ No Import Duties · Swiss VAT May Apply',
+ trust_duty: '◈ No Import Duties · All Taxes Included',
  trust_made: '◯ Handcrafted in Japan',
  trust_pay: '◇ Secure Payment',
- price_note: 'Free Switzerland Shipping · No Import Duties · Swiss VAT May Apply',
+ price_note: 'Free Switzerland Shipping · No Import Duties · All Taxes Included',
  made_to_order: 'Made to order · Approx. 5.5 months',
  pill_japan: '100% Made in Japan',
  pill_ship: 'Free Insured Shipping',
@@ -548,12 +556,12 @@ mat_ygold:"Or jaune K18",mat_wgold:"Or blanc K18",mat_pgold:"Or rose K18",mat_pt
  ti1_h: 'One of a Kind', ti1_p: 'Made from your hair alone',
  ti2_h: '100% Made in Japan', ti2_p: 'Every element, every step',
  ti3_h: 'Photo Report', ti3_p: 'Hair sealing documented',
- ti4_h: 'No Import Duties · Swiss VAT May Apply', ti4_p: 'Free Switzerland shipping, no charges on delivery'
+ ti4_h: 'No Import Duties · All Taxes Included', ti4_p: 'Free Switzerland shipping, no charges on delivery'
  },
  ja: {
- nav_home:'ホーム',nav_col:'コレクション',nav_about:'Rionについて',nav_order:'ご注文方法',nav_faq:'よくある質問',nav_ship:'配送・<em>返品</em>',nav_care:'お手入れ<em>ガイド</em>',nav_contact:'お問い合わせ',
+ nav_home:'ホーム',nav_col:'コレクション',nav_about:'Rionについて',nav_order:'ご注文方法',nav_sealing:'封入方法',nav_faq:'よくある質問',nav_ship:'配送・<em>返品</em>',nav_care:'お手入れ<em>ガイド</em>',nav_heritage:'ブランドの<em>歴史</em>',nav_legal:'法律・<em>プライバシー</em>',nav_contact:'お問い合わせ',
  trust_ship: '✦ スイスへ無料配送',
- trust_duty: '◈ 輸入関税なし',
+ trust_duty: '◈ 輸入関税なし・税込み価格',
  trust_made: '◯ 日本で手作り',
  trust_pay: '◇ 安全なお支払い',
  price_note: 'スイス送料無料 · 輸入関税なし',
@@ -580,7 +588,7 @@ mat_ygold:"Or jaune K18",mat_wgold:"Or blanc K18",mat_pgold:"Or rose K18",mat_pt
  ti1_h: '世界に一つだけ', ti1_p: 'お客様の髪だけで作られます',
  ti2_h: '100%日本製', ti2_p: 'すべての工程を日本で',
  ti3_h: '写真レポート', ti3_p: '髪の封入工程を記録',
- ti4_h: '輸入関税なし', ti4_p: 'スイス送料無料、配送時の追加料金なし'
+ ti4_h: '輸入関税なし・税込み価格', ti4_p: 'スイス送料無料、配送時の追加料金なし'
  }
 };
 function setLang(l){
@@ -588,12 +596,13 @@ function setLang(l){
  const k=el.getAttribute('data-i18n');
  if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
  });
+ document.documentElement.lang=l;
  localStorage.setItem('rion_ch_lang',l);
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
 (function(){
  const saved=localStorage.getItem('rion_ch_lang')||'fr';
- if(saved!=='en') setLang(saved);
+ if(saved!=='en') setLang(saved); else document.documentElement.lang='en';
 })();
 
 // ===== PRODUCT DATA =====
@@ -810,7 +819,7 @@ function renderProduct(code){
 
  // Restore sizing card
  document.getElementById('sizingTitle').innerHTML = 'Custom <em>Sizing</em>';
- document.getElementById('sizingBody').textContent = 'ring gauge (sizes 1–12) sent in your collection kit. Or tell us your US size if you already know.';
+ document.getElementById('sizingBody').textContent = 'ring gauge (sizes 1–12) sent in your collection kit. Or tell us your size if you already know.';
  document.getElementById('sizingPrice').textContent = 'Included · No extra fee';
  }
 
@@ -869,7 +878,7 @@ renderProduct(getCurrentCode());
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
  <strong>Cookie Notice</strong>
- <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <span>This site uses Google Analytics — including advertising-related measurement signals — and Microsoft Clarity to understand how visitors use our site. These are only activated if you click Accept. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
  <button class="cookie-btn" onclick="declineCookies()">Decline</button>

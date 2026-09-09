@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -215,7 +215,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <!-- TRUST STRIP -->
 <div class="trust-strip">
  <span class="trust-item" data-i18n="trust_ship">Free Shipping to Switzerland</span>
- <span class="trust-item" data-i18n="trust_duty">No Import Duties · Swiss VAT May Apply</span>
+ <span class="trust-item" data-i18n="trust_duty">No Import Duties · All Taxes Included</span>
  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
  <span class="trust-item" data-i18n="trust_pay">Secure Payment</span>
 </div>
@@ -235,8 +235,10 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <a href="faq.html" class="menu-active" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
  <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
  <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_contact">Contact</span></a>
- </nav>
+ <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+ <a href="legal.html" onclick="closeMenu()"><span class="menu-num">10</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">11</span><span data-i18n="menu_contact">Contact</span></a>
+</nav>
  </div>
  <div class="menu-footer">
  <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_wa">💬 Message Us on WhatsApp</a>
@@ -260,7 +262,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <button class="cat-tab" onclick="showCat('jewel')" data-i18n="tab_jewel">The Jewel</button>
  <button class="cat-tab" onclick="showCat('order')" data-i18n="tab_order">Ordering</button>
  <button class="cat-tab" onclick="showCat('shipping')" data-i18n="tab_shipping">Shipping &amp; Payment</button>
- <button class="cat-tab" onclick="showCat('usa')" data-i18n="tab_usa">Switzerland-Specific</button>
+ <button class="cat-tab" onclick="showCat('ch')" data-i18n="tab_ch">Switzerland-Specific</button>
 </div>
 
 <!-- FAQ CONTENT -->
@@ -366,7 +368,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <span class="faq-q-text" data-i18n="q_ring_size">How do I choose my ring size?</span>
  <span class="faq-q-ico"></span>
  </button>
- <div class="faq-a"><p data-i18n="a_ring_size">A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your US size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.</p></div>
+ <div class="faq-a"><p data-i18n="a_ring_size">A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.</p></div>
  </div>
 
  <div class="faq-item">
@@ -484,8 +486,8 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 </section>
 
 <!-- US-SPECIFIC -->
-<section class="faq-section" data-cat="usa">
- <h2 class="faq-section-title" data-i18n="sec_usa">For Switzerland <em>Customers</em></h2>
+<section class="faq-section" data-cat="ch">
+ <h2 class="faq-section-title" data-i18n="sec_ch">For Switzerland <em>Customers</em></h2>
 
  <div class="faq-item">
  <button class="faq-q" onclick="toggleFaq(this)">
@@ -628,7 +630,7 @@ const T = {
 
  fr: {
  trust_ship: 'Livraison gratuite vers la Suisse',
- trust_duty: 'Aucun droit de douane · TVA suisse possible',
+ trust_duty: 'Aucun droit de douane · Toutes taxes incluses',
  trust_made: 'Fabriqué à la main au Japon',
  trust_pay: 'Paiement sécurisé',
  page_eyebrow: 'Questions fréquentes',
@@ -639,7 +641,7 @@ const T = {
  tab_jewel: 'Le bijou',
  tab_order: 'Commande',
  tab_shipping: 'Livraison &amp; Paiement',
- tab_usa: 'Spécifique à la Suisse',
+ tab_ch: 'Spécifique à la Suisse',
  q_hair_amount: 'De combien de cheveux avez-vous besoin ?',
  a_hair_amount: 'Très peu — environ 1 à 5 mèches suffisent. Aucune coupe n\'est nécessaire. Des cheveux naturellement tombés d\'un peigne, d\'une brosse, ou conservés d\'une coupe de cheveux conviennent parfaitement. Même une seule mèche de 1 cm ou moins fonctionne. Des instructions claires sont incluses dans votre kit de collecte de cheveux, afin qu\'il n\'y ait aucune incertitude.',
  q_production_time: 'Combien de temps prend la fabrication ?',
@@ -659,7 +661,7 @@ const T = {
  menu_sealing: 'Comment les cheveux sont <em>scellés</em>',
  menu_faq: 'FAQ',
  menu_shipping: 'Livraison &amp; <em>Retours</em>',
- menu_care: 'Guide d\'<em>entretien</em>',
+ menu_care: 'Guide d\'<em>entretien</em>',menu_heritage:'Notre <em>Héritage</em>',menu_legal:'Mentions <em>légales</em>',
  menu_contact: 'Contact',
  menu_wa: '💬 Contactez-nous sur WhatsApp',
  sec_hair: 'Cheveux &amp; <em>Processus</em>',
@@ -684,7 +686,7 @@ const T = {
  a_engraving: 'Oui. La gravure intérieure est disponible sur tous les modèles de bagues — caractères latins uniquement. Un nom, une date, une phrase qui vous tient à cœur, ou toute combinaison de votre choix. La gravure est réalisée sur la face intérieure de l\'anneau et n\'est visible que lorsque vous retirez la bague. Les espaces ne sont pas comptés comme des caractères.',
  note_engraving: '1 à 10 caractères : CHF59 · À partir du 11e caractère : +CHF6 chacun · À préciser lors de la confirmation de commande.',
  q_ring_size: 'Comment choisir ma taille de bague ?',
- a_ring_size: 'Un calibre de taille de bague est inclus dans votre kit de collecte de cheveux — expédié à votre adresse suisse. Essayez simplement le calibre et confirmez-nous votre taille américaine lorsque vous nous retournez vos cheveux. Nous travaillons avec les tailles standards de 1 à 12, demi-tailles disponibles. Si vous connaissez déjà votre taille, indiquez-le-nous simplement au moment de la commande.',
+ a_ring_size: 'Un calibre de taille de bague est inclus dans votre kit de collecte de cheveux — expédié à votre adresse suisse. Essayez simplement le calibre et confirmez-nous votre taille lorsque vous nous retournez vos cheveux. Nous travaillons avec les tailles standards de 1 à 12, demi-tailles disponibles. Si vous connaissez déjà votre taille, indiquez-le-nous simplement au moment de la commande.',
  q_resize: 'La bague peut-elle être redimensionnée ultérieurement ?',
  a_resize: 'Un redimensionnement est possible dans certains cas, selon le modèle. Cependant, comme la chambre scellée contenant les cheveux est intégrée à l\'anneau, le redimensionnement nécessite de renvoyer la pièce au Japon et peut prendre 2 à 3 mois. Nous vous recommandons vivement de vérifier soigneusement votre taille à l\'aide du calibre que nous vous envoyons avant le début de la fabrication. Le coût du redimensionnement couvre uniquement les frais d\'expédition aller-retour — nous prenons en charge le reste. Merci de nous contacter pour un devis avant tout envoi.',
  q_daily_wear: 'Le bijou convient-il à un port quotidien ?',
@@ -708,7 +710,7 @@ const T = {
  a_return_policy2: 'En cas de défaut, nous réparerons ou refabriquerons la pièce sans frais, y compris l\'expédition. Nous prenons la qualité très au sérieux et soumettons chaque pièce à une inspection rigoureuse avant l\'expédition. Consultez notre page <a href="shipping.html">Livraison &amp; Retours</a> pour tous les détails.',
  q_privacy: 'Comment ma vie privée est-elle protégée ?',
  a_privacy: 'Toutes les informations personnelles — votre nom, votre adresse et le nom de votre proche — sont traitées avec une discrétion absolue et ne sont jamais partagées avec un tiers. Nous comprenons la nature profondément personnelle de notre travail et traitons les informations et l\'histoire de chaque client avec le plus grand respect. Consultez notre <a href="legal.html">Politique de confidentialité</a> pour tous les détails.',
- sec_usa: 'Pour les clients <em>en Suisse</em>',
+ sec_ch: 'Pour les clients <em>en Suisse</em>',
  badge_ch: 'Clients en Suisse',
  a_import_duty1: '<strong>Non — pas un seul centime.</strong> Rion expédie en Suisse selon les conditions DDP (Delivered Duty Paid, rendu droits acquittés). Cela signifie que tous les droits de douane suisses, frais de dédouanement et taxes applicables sont prépayés par Rion en votre nom avant l\'expédition de votre colis. Lorsque DHL livre votre bijou à votre porte, il n\'y a rien à signer, rien à payer. Vous n\'avez qu\'à l\'ouvrir.',
  a_import_duty2: 'Le prix que vous avez accepté est le prix que vous avez payé. C\'est tout.',
@@ -739,7 +741,7 @@ const T = {
  },
  en: {
  trust_ship: 'Free Shipping to Switzerland',
- trust_duty: 'No Import Duties · Swiss VAT May Apply',
+ trust_duty: 'No Import Duties · All Taxes Included',
  trust_made: 'Handcrafted in Japan',
  trust_pay: 'Secure Payment',
  page_eyebrow: 'Frequently Asked Questions',
@@ -750,7 +752,7 @@ const T = {
  tab_jewel: 'The Jewel',
  tab_order: 'Ordering',
  tab_shipping: 'Shipping &amp; Payment',
- tab_usa: 'Switzerland-Specific',
+ tab_ch: 'Switzerland-Specific',
  q_hair_amount: 'How much hair is needed?',
  a_hair_amount: 'Very little — approximately 1 to 5 strands is sufficient. No cutting required. Naturally shed hair from a comb, brush, or saved from a haircut is perfectly fine. Even a single strand of 1 cm or less works. We include clear instructions in your hair collection kit, so there\'s no guesswork.',
  q_production_time: 'How long does production take?',
@@ -770,7 +772,7 @@ const T = {
  menu_sealing: 'How Hair Is <em>Sealed</em>',
  menu_faq: 'FAQ',
  menu_shipping: 'Shipping &amp; <em>Returns</em>',
- menu_care: 'Care <em>Guide</em>',
+ menu_care: 'Care <em>Guide</em>',menu_heritage:'Our <em>Heritage</em>',menu_legal:'Legal &amp; <em>Privacy</em>',
  menu_contact: 'Contact',
  menu_wa: '💬 Message Us on WhatsApp',
  sec_hair: 'Hair &amp; <em>Process</em>',
@@ -795,7 +797,7 @@ const T = {
  a_engraving: 'Yes. Inner engraving is available on all ring designs — English characters only. A name, a date, a meaningful phrase, or any combination you choose. The engraving is done on the inner band and is visible only to you when you remove the ring. Spaces are not counted as characters.',
  note_engraving: '1–10 characters: CHF59 · From the 11th character: +CHF6 each · Please specify at time of order confirmation.',
  q_ring_size: 'How do I choose my ring size?',
- a_ring_size: 'A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your US size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.',
+ a_ring_size: 'A ring size gauge is included in your hair collection kit — shipped to your Swiss address. Simply try the gauge and confirm your size when you return your hair. We work in standard sizes 1 through 12, with half sizes available. If you already know your size, just let us know at the time of order.',
  q_resize: 'Can the ring be resized later?',
  a_resize: 'Resizing is possible in some cases, depending on the design. However, because the sealed hair chamber is built into the band, resizing requires returning the piece to Japan and can take 2–3 months. We strongly recommend confirming your size carefully using the gauge we send before production begins. The cost of resizing covers round-trip shipping — we handle the rest. Please contact us for a quote before sending.',
  q_daily_wear: 'Is the jewel suitable for daily wear?',
@@ -819,7 +821,7 @@ const T = {
  a_return_policy2: 'If there is a defect, we will repair or remake the piece at no charge, including shipping. We take quality seriously and subject every piece to rigorous inspection before shipping. Please see our <a href="shipping.html">Shipping &amp; Returns</a> page for full details.',
  q_privacy: 'How is my privacy protected?',
  a_privacy: 'All personal information — your name, your address, and the name of your loved one — is handled with complete discretion and never shared with any third party. We understand the deeply personal nature of what we do, and we treat every client\'s information and story with the utmost respect. See our <a href="legal.html">Privacy Policy</a> for full details.',
- sec_usa: 'For Switzerland <em>Customers</em>',
+ sec_ch: 'For Switzerland <em>Customers</em>',
  badge_ch: 'Switzerland Customers',
  a_import_duty1: '<strong>No — not a single dollar.</strong> Rion ships on DDP (Delivered Duty Paid) terms to Switzerland. This means all Switzerland import duties, customs fees, and any applicable taxes are prepaid by Rion on your behalf before your package is shipped. When DHL delivers your jewel to your door, there is nothing to sign for, nothing to pay. Just open it.',
  a_import_duty2: 'The price you agreed to is the price you paid. That\'s it.',
@@ -850,7 +852,7 @@ const T = {
  },
  ja: {
  trust_ship: 'スイスへ無料配送',
- trust_duty: '輸入関税なし',
+ trust_duty: '輸入関税なし・税込み価格',
  trust_made: '日本で手作り',
  trust_pay: '安全なお支払い',
  page_eyebrow: 'よくあるご質問',
@@ -861,7 +863,7 @@ const T = {
  tab_jewel: 'ジュエルについて',
  tab_order: 'ご注文',
  tab_shipping: '配送・お支払い',
- tab_usa: 'スイス在住のお客様',
+ tab_ch: 'スイス在住のお客様',
  q_hair_amount: 'どのくらいの量の髪が必要ですか？',
  a_hair_amount: 'ごく少量で大丈夫です。長さ1cm程度、1〜5本の髪があれば十分です。カットの必要もなく、コームやブラシから自然に取れた髪でも構いません。詳しい手順はヘアコレクションキットに同封の説明書に記載しています。',
  q_production_time: 'どのくらい時間がかかりますか？',
@@ -881,7 +883,7 @@ const T = {
  menu_sealing: '髪の<em>封入方法</em>',
  menu_faq: 'よくあるご質問',
  menu_shipping: '配送・<em>返品について</em>',
- menu_care: 'お手入れ<em>ガイド</em>',
+ menu_care: 'お手入れ<em>ガイド</em>',menu_heritage:'ブランドの<em>歴史</em>',menu_legal:'法律・<em>プライバシー</em>',
  menu_contact: 'お問い合わせ',
  menu_wa: '💬 WhatsAppでお問い合わせ',
  sec_hair: '髪・<em>制作工程</em>',
@@ -930,7 +932,7 @@ const T = {
  a_return_policy2: '不具合があった場合は、配送費を含め無料で修理または再製作いたします。すべてのジュエルは発送前に厳格な検査を実施しています。詳細は<a href="shipping.html">配送・返品について</a>ページをご覧ください。',
  q_privacy: '個人情報はどのように保護されますか？',
  a_privacy: 'お名前、ご住所、大切な方のお名前など、すべての個人情報は厳重な機密として管理し、第三者への提供は一切行いません。私たちが取り扱う仕事の非常に個人的な性質を理解し、すべてのお客様の情報とストーリーを最大限の敬意をもって扱っています。詳細は<a href="legal.html">プライバシーポリシー</a>をご覧ください。',
- sec_usa: 'スイス在住の<em>お客様へ</em>',
+ sec_ch: 'スイス在住の<em>お客様へ</em>',
  badge_ch: 'スイス在住のお客様',
  a_import_duty1: '<strong>いいえ——一切かかりません。</strong>Rionはスイスへの配送をDDP（関税元払い）条件で行っています。つまり、スイスの輸入関税、通関手数料、その他適用される税金はすべて、発送前にRionが立て替えてお支払い済みです。DHLがジュエルをご自宅にお届けする際、署名やお支払いの必要は一切ありません。そのまま開けていただくだけです。',
  a_import_duty2: 'ご了承いただいた価格が、そのままお支払い total 額です。それだけです。',
@@ -965,12 +967,13 @@ function setLang(l){
  const k=el.getAttribute('data-i18n');
  if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
  });
+ document.documentElement.lang=l;
  localStorage.setItem('rion_ch_lang',l);
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
 (function(){
  const saved=localStorage.getItem('rion_ch_lang')||'fr';
- if(saved!=='en') setLang(saved);
+ if(saved!=='en') setLang(saved); else document.documentElement.lang='en';
 })();
 
 function toggleMenu(){
@@ -1015,7 +1018,7 @@ window.addEventListener('scroll',()=>{
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
  <strong>Cookie Notice</strong>
- <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <span>This site uses Google Analytics — including advertising-related measurement signals — and Microsoft Clarity to understand how visitors use our site. These are only activated if you click Accept. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
  <button class="cookie-btn" onclick="declineCookies()">Decline</button>

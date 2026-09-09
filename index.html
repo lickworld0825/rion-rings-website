@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -455,7 +455,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <div class="trust-strip">
  <span class="trust-strip-item"><span class="trust-strip-dot">✦</span> <span data-i18n="tr1">Free Shipping to Switzerland</span></span>
  <span class="trust-strip-dot">·</span>
- <span class="trust-strip-item"><span class="trust-strip-dot">◈</span> <span data-i18n="tr2">No Import Duties · Swiss VAT May Apply</span></span>
+ <span class="trust-strip-item"><span class="trust-strip-dot">◈</span> <span data-i18n="tr2">No Import Duties · All Taxes Included</span></span>
  <span class="trust-strip-dot">·</span>
  <span class="trust-strip-item"><span class="trust-strip-dot">◯</span> <span data-i18n="tr3">Handcrafted in Japan</span></span>
  <span class="trust-strip-dot">·</span>
@@ -475,11 +475,14 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <a href="collection.html" onclick="closeMenu()"><span class="menu-num">02</span><span data-i18n="nav_col">Collection</span></a>
  <a href="about.html" onclick="closeMenu()"><span class="menu-num">03</span><span data-i18n="nav_about">About <em>Rion</em></span></a>
  <a href="order.html" onclick="closeMenu()"><span class="menu-num">04</span><span data-i18n="nav_order">How to <em>Order</em></span></a>
- <a href="faq.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="nav_faq">FAQ</span></a>
- <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="nav_ship">Shipping &amp; <em>Returns</em></span></a>
- <a href="care.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="nav_care">Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="nav_contact">Contact</span></a>
- </nav>
+ <a href="sealing.html" onclick="closeMenu()"><span class="menu-num">05</span><span data-i18n="nav_sealing">How Hair Is <em>Sealed</em></span></a>
+ <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="nav_faq">FAQ</span></a>
+ <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="nav_ship">Shipping &amp; <em>Returns</em></span></a>
+ <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="nav_care">Care <em>Guide</em></span></a>
+ <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="nav_heritage">Our <em>Heritage</em></span></a>
+ <a href="legal.html" onclick="closeMenu()"><span class="menu-num">10</span><span data-i18n="nav_legal">Legal &amp; <em>Privacy</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">11</span><span data-i18n="nav_contact">Contact</span></a>
+</nav>
  </div>
  <div class="menu-footer">
  <a href="https://wa.me/819054621246" class="menu-cta" target="_blank" data-i18n="menu_cta">💬 &nbsp;Message Us on WhatsApp</a>
@@ -1022,7 +1025,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <button class="scroll-top" id="scrollTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
 
 <div class="sticky-order" id="stickyOrder">
- <div class="sticky-order-text" data-i18n="sticky_text"><strong>One hair. One jewel. One love.</strong> &nbsp;From CHF4,600 · Free Switzerland Shipping · No Import Duties · Swiss VAT May Apply · Handcrafted in Japan.</div>
+ <div class="sticky-order-text" data-i18n="sticky_text"><strong>One hair. One jewel. One love.</strong> &nbsp;From CHF4,600 · Free Switzerland Shipping · No Import Duties · All Taxes Included · Handcrafted in Japan.</div>
  <div class="sticky-ctas">
  <a href="https://wa.me/819054621246" class="s-wa" target="_blank" data-i18n="sticky_wa">💬 WhatsApp</a>
  <a href="collection.html" class="s-order" data-i18n="sticky_order">Begin Order →</a>
@@ -1033,7 +1036,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
  <strong>Cookie Notice</strong>
- <span>This site uses only essential analytics cookies (Google Analytics). We do not use advertising or tracking cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <span>This site uses Google Analytics — including advertising-related measurement signals — and Microsoft Clarity to understand how visitors use our site. These are only activated if you click Accept. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
  <button class="cookie-btn" onclick="declineCookies()">Decline</button>
@@ -1121,7 +1124,7 @@ document.querySelectorAll('img').forEach((img, i) => {
 const T = {
 
  fr:{t1_loc:"Genève",t2_loc:"Zurich",t3_loc:"Lausanne",announce:"Livraison gratuite vers la Suisse &nbsp;·&nbsp; <span>Aucun droit de douane &nbsp;·&nbsp; 100% fait main au Japon</span>",
- nav_cta:"Commencer votre commande",menu_eyebrow:"Navigation",nav_home:"Accueil",nav_col:"Collection",nav_about:"À propos de <em>Rion</em>",nav_order:"Comment <em>commander</em>",nav_faq:"FAQ",nav_ship:"Livraison &amp; <em>Retours</em>",nav_care:"Guide d'<em>entretien</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Contactez-nous sur <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",tr1:"Livraison gratuite en Suisse",tr2:"Pas de droits de douane · TVA suisse possible",tr3:"Fabriqué à la main au Japon",tr4:"Paiement sécurisé",tr5:"Certificat d'authenticité inclus",trust_shipping:"Livraison gratuite en Suisse",trust_duties:"Pas de droits de douane · TVA suisse possible",trust_made:"Fabriqué à la main au Japon",trust_payment:"Paiement sécurisé",trust_strip:"Livraison gratuite en Suisse &nbsp;·&nbsp; Pas de droits de douane · TVA suisse possible &nbsp;·&nbsp; Fabriqué à la main au Japon &nbsp;·&nbsp; Paiement sécurisé",
+ nav_cta:"Commencer votre commande",menu_eyebrow:"Navigation",nav_home:"Accueil",nav_col:"Collection",nav_about:"À propos de <em>Rion</em>",nav_order:"Comment <em>commander</em>",nav_sealing:"Comment les cheveux sont <em>scellés</em>",nav_faq:"FAQ",nav_ship:"Livraison &amp; <em>Retours</em>",nav_care:"Guide d'<em>entretien</em>",nav_heritage:"Notre <em>Héritage</em>",nav_legal:"Mentions <em>légales</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Contactez-nous sur <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",tr1:"Livraison gratuite en Suisse",tr2:"Pas de droits de douane · Toutes taxes incluses",tr3:"Fabriqué à la main au Japon",tr4:"Paiement sécurisé",tr5:"Certificat d'authenticité inclus",trust_shipping:"Livraison gratuite en Suisse",trust_duties:"Pas de droits de douane · Toutes taxes incluses",trust_made:"Fabriqué à la main au Japon",trust_payment:"Paiement sécurisé",trust_strip:"Livraison gratuite en Suisse &nbsp;·&nbsp; Pas de droits de douane · Toutes taxes incluses &nbsp;·&nbsp; Fabriqué à la main au Japon &nbsp;·&nbsp; Paiement sécurisé",
 hero_eyebrow:"Bijoux mémoriaux sur mesure · Fabriqués à la main au Japon",hero_title:"Gardez-les proches.<br><em>Pour toujours.</em>",hero_body:"Une simple mèche de cheveux — seulement 1cm — scellée à jamais dans de l'or ou du platine japonais. Chaque pièce est unique au monde, entièrement faite à la main au Japon, rien que pour vous. Quand les mots ne suffisent plus, l'or perdure.",hero_badge:"✦ &nbsp;Le bijou unique au monde",hero_cta1:"Commencer votre commande",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",hero_proof:"La confiance de familles à travers toute la Suisse",
 sc1:"Cheveux précieux scellés · Une pièce unique, faite uniquement pour vous",sc2:"Seulement 1cm de cheveux suffit",sc3:"Livraison assurée gratuite en Suisse",sc4:"Certificat d'authenticité et rapport photo inclus",
 tb1_h:"Unique au monde",tb1_p:"Chaque pièce renferme vos précieux cheveux — un bijou unique créé rien que pour vous.",tb2_h:"100% fabriqué au Japon",tb2_p:"Or, platine, diamants — sourcés et façonnés entièrement au Japon par des maîtres artisans.",tb3_h:"Documentation photo",tb3_p:"Nous photographions chaque étape et vous envoyons les photos avant la livraison.",tb4_h:"Votre approbation d'abord",tb4_p:"Design et matériaux sont confirmés par écrit avant le début du travail. Rien n'avance sans votre accord.",
@@ -1139,8 +1142,8 @@ footer_p:"Bijoux mémoriaux sur mesure, fabriqués entièrement à la main au Ja
 sticky_text:"<strong>Un cheveu. Un bijou. Un amour.</strong> &nbsp;Dès CHF4,600 · Livraison gratuite en Suisse · Pas de droits de douane · Fabriqué au Japon.",sticky_wa:"💬 WhatsApp",sticky_order:"Commencer →"
  },
  en:{t1_loc:"Geneva",t2_loc:"Zurich",t3_loc:"Lausanne",announce:"Free Shipping to Switzerland &nbsp;·&nbsp; <span>No Import Duties &nbsp;·&nbsp; 100% Handcrafted in Japan</span>",
- nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
- tr1:"Free Shipping to Switzerland",tr2:"No Import Duties · Swiss VAT May Apply",tr3:"Handcrafted in Japan",tr4:"Secure Payment",tr5:"Authenticity Certificate Included",
+ nav_cta:"Begin Your Order",menu_eyebrow:"Navigation",nav_home:"Home",nav_col:"Collection",nav_about:"About <em>Rion</em>",nav_order:"How to <em>Order</em>",nav_sealing:"How Hair Is <em>Sealed</em>",nav_faq:"FAQ",nav_ship:"Shipping &amp; <em>Returns</em>",nav_care:"Care <em>Guide</em>",nav_heritage:"Our <em>Heritage</em>",nav_legal:"Legal &amp; <em>Privacy</em>",nav_contact:"Contact",menu_cta:"💬 &nbsp;Message Us on <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>",
+ tr1:"Free Shipping to Switzerland",tr2:"No Import Duties · All Taxes Included",tr3:"Handcrafted in Japan",tr4:"Secure Payment",tr5:"Authenticity Certificate Included",
  hero_eyebrow:"Bespoke Memorial Jewellery · Handcrafted in Japan",hero_title:"Keep them close.<br><em>Forever.</em>",hero_body:"A single strand of hair — just 1cm — sealed forever inside Japanese gold or platinum. Every piece is the only one of its kind in the world, made entirely by hand in Japan, for you alone. When words aren't enough, gold endures.",hero_badge:"✦ &nbsp;The World's Only Jewel of Its Kind",hero_cta1:"Begin Your Order",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> Us",hero_proof:"Trusted by families across Switzerland",
  sc1:"Precious hair enclosed · One-of-a-kind, made only for you",sc2:"Just 1cm of hair is all we need",sc3:"Free insured shipping to Switzerland",sc4:"Authenticity certificate &amp; photo report included",
  tb1_h:"One of a Kind",tb1_p:"Every piece holds your precious hair — a one-of-a-kind jewel made only for you, carrying the love of someone irreplaceable.",tb2_h:"100% Made in Japan",tb2_p:"Gold, platinum, diamonds and every element — sourced and handcrafted entirely in Japan by master artisans.",tb3_h:"Photo Documentation",tb3_p:"We photograph every step of the hair sealing process and send you the photos before delivery — complete peace of mind.",tb4_h:"Your Approval First",tb4_p:"Design, materials and specifications are confirmed with you in writing before any work begins. Nothing moves forward without your sign-off.",
@@ -1156,11 +1159,11 @@ sticky_text:"<strong>Un cheveu. Un bijou. Un amour.</strong> &nbsp;Dès CHF4,600
  con_title:"Begin your<br><em>story.</em>",con_body:"Every Rion piece begins with a conversation. Reach us via <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> or email — we respond personally in English and Japanese. No question is too small. We understand what this means.",con_sub:"Free insured shipping to Switzerland · No import duties · All-inclusive CHF pricing · Design approved before production begins · 100% Made in Japan",mij_label:"100% Made in Japan — Our Promise",mij_body:"Every element — gold, platinum, gemstones, and setting — is sourced and handcrafted entirely in Japan. Our artisans combine decades of traditional goldsmithing with refined modern design. Made in Japan is not a marketing phrase. It is how we work, and it is all we do.",wa_sub:"Fastest response · English &amp; Japanese · Replies within 24 hours",email_label:"Email",ship_label:"Free Insured Shipping via DHL",ship_sub:"Switzerland · No import duties",hours_label:"Response Hours",hours_val:"9:00–19:00 JST · Outside hours also available",
  legal_title:"Legal &amp; Compliance",leg1_h:"Switzerland Consumer Information",leg1_p:"All prices in CHF. Shipped DDP — all Switzerland import duties and taxes covered by Rion. No additional charges on delivery. Each piece is bespoke and made to personal order. Written design approval is obtained before production begins. In case of manufacturing defect, pieces are remade at no charge.",leg2_h:"Product &amp; Shipping",leg2_1:"All pieces handcrafted entirely in Japan",leg2_2:"Certificate of Authenticity with every order",leg2_3:"Photo report of sealing process included",leg2_4:"Shipped via DHL Express (fully insured)",leg2_5:"Hair: non-biological hazard, customs compliant",leg2_6:"No extra charges on delivery",leg2_7:"Remaining hair returned with your jewel",leg3_h:"Business Information",leg3_p:"Rion · My Art Inc. · Est. 2018, Japan · All prices in CHF. Sales comply with applicable Swiss consumer protection laws. Contact via <a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a> or email for all enquiries.",
  footer_p:"Bespoke memorial jewellery, handcrafted entirely in Japan. One hair. One jewel. One love — yours, forever. Trusted by families across Switzerland.",footer_est:"Est. 2018 · Japan · Serving Switzerland",footer_explore:"Explore",footer_about:"About Rion",footer_order:"How to Order",footer_stories:"Stories",footer_help:"Help",footer_ship:"Shipping &amp; Returns",footer_legal:"Legal &amp; Privacy",footer_connect:"Connect",footer_email:"Send Enquiry",footer_copy:"© 2026 Rion™ · My Art Inc. · 100% Made in Japan · Free insured shipping to Switzerland · No import duties",footer_right:"Est. 2018 · Japan · Switzerland",
- sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From CHF4,600 · Free Switzerland Shipping · No Import Duties · Swiss VAT May Apply · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
+ sticky_text:"<strong>One hair. One jewel. One love.</strong> &nbsp;From CHF4,600 · Free Switzerland Shipping · No Import Duties · All Taxes Included · Handcrafted in Japan.",sticky_wa:"💬 WhatsApp",sticky_order:"Begin Order →"
  },
  ja:{t1_loc:"ジュネーブ",t2_loc:"チューリッヒ",t3_loc:"ローザンヌ",announce:"スイスへ送料無料 &nbsp;·&nbsp; <span>輸入関税なし &nbsp;·&nbsp; 100% 日本で手作り</span>",
- nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
- tr1:"スイスへ無料配送",tr2:"輸入関税なし",tr3:"日本の職人が手作り",tr4:"安全なお支払い",tr5:"本物証明書付き",
+ nav_cta:"ご注文はこちら",menu_eyebrow:"ナビゲーション",nav_home:"ホーム",nav_col:"コレクション",nav_about:"Rionについて",nav_order:"ご注文方法",nav_sealing:"封入方法",nav_faq:"よくある質問",nav_ship:"配送・<em>返品</em>",nav_care:"お手入れ<em>ガイド</em>",nav_heritage:"ブランドの<em>歴史</em>",nav_legal:"法律・<em>プライバシー</em>",nav_contact:"お問い合わせ",menu_cta:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>でメッセージ",
+ tr1:"スイスへ無料配送",tr2:"輸入関税なし・税込み価格",tr3:"日本の職人が手作り",tr4:"安全なお支払い",tr5:"本物証明書付き",
  hero_eyebrow:"オーダーメイド メモリアルジュエリー・日本",hero_title:"愛する人を、<br><em>そばに。永遠に。</em>",hero_body:"たった1cmの髪の毛一本を、K18ゴールドまたはPt900プラチナの中に永遠に封入。世界に一つだけのジュエル。日本の職人が一つひとつ丁寧に手作りします。言葉にできない想いを、ゴールドに込めて。",hero_badge:"✦ &nbsp;世界で唯一のジュエル",hero_cta1:"ご注文を始める",hero_cta2:"💬 &nbsp;<a href='https://wa.me/819054621246' target='_blank'>WhatsApp</a>で相談する",hero_proof:"スイス中のご家族に信頼されています",
  sc1:"大切な髪の毛を封入・世界に一つだけ、あなただけのために",sc2:"必要な髪の毛はたった1cm",sc3:"スイスへ無料・保険付き配送",sc4:"本物証明書・フォトレポート付き",
  tb1_h:"世界に一つだけ",tb1_p:"すべてのジュエルに大切な方の髪の毛が封入されています。かけがえない愛を込めた、あなただけの一品。",tb2_h:"100%日本製",tb2_p:"ゴールド・プラチナ・ダイヤモンドに至るまで、すべての素材を日本の職人が丁寧に手作りしています。",tb3_h:"フォトドキュメント",tb3_p:"髪の毛の封入工程をすべて写真に収め、発送前にお送りします。完全な安心をお約束します。",tb4_h:"ご承認を優先します",tb4_p:"制作開始前に、デザイン・素材・仕様を書面でご確認いただきます。お客様のご承認なしには何も進みません。",
@@ -1184,12 +1187,13 @@ function setLang(l){
  const k=el.getAttribute('data-i18n');
  if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
  });
+ document.documentElement.lang=l;
  localStorage.setItem('rion_ch_lang',l);
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
 (function(){
  const saved=localStorage.getItem('rion_ch_lang')||'fr';
- if(saved!=='en') setLang(saved);
+ if(saved!=='en') setLang(saved); else document.documentElement.lang='en';
 })();
 </script>
 

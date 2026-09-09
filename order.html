@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -259,7 +259,7 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
 <!-- TRUST STRIP -->
 <div class="trust-strip">
  <span class="trust-item" data-i18n="trust_shipping">Free Shipping to Switzerland</span>
- <span class="trust-item" data-i18n="trust_duties">No Import Duties · Swiss VAT May Apply</span>
+ <span class="trust-item" data-i18n="trust_duties">No Import Duties · All Taxes Included</span>
  <span class="trust-item" data-i18n="trust_made">Handcrafted in Japan</span>
  <span class="trust-item" data-i18n="trust_payment">Secure Payment</span>
 </div>
@@ -279,8 +279,10 @@ if(localStorage.getItem('rion_ch_cookies_accepted') === '1') window._loadClarity
  <a href="faq.html" onclick="closeMenu()"><span class="menu-num">06</span><span data-i18n="menu_faq">FAQ</span></a>
  <a href="shipping.html" onclick="closeMenu()"><span class="menu-num">07</span><span data-i18n="menu_shipping">Shipping &amp; <em>Returns</em></span></a>
  <a href="care.html" onclick="closeMenu()"><span class="menu-num">08</span><span data-i18n="menu_care">Care <em>Guide</em></span></a>
- <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_contact">Contact</span></a>
- </nav>
+ <a href="heritage.html" onclick="closeMenu()"><span class="menu-num">09</span><span data-i18n="menu_heritage">Our <em>Heritage</em></span></a>
+ <a href="legal.html" onclick="closeMenu()"><span class="menu-num">10</span><span data-i18n="menu_legal">Legal &amp; <em>Privacy</em></span></a>
+ <a href="index.html#contact" onclick="closeMenu()"><span class="menu-num">11</span><span data-i18n="menu_contact">Contact</span></a>
+</nav>
  </div>
  <div class="menu-footer">
  <a href="https://wa.me/819054621246" class="menu-cta" target="_blank">💬 Message Us on WhatsApp</a>
@@ -617,8 +619,8 @@ const T = {
 
  fr: {
  nav_order:'Commander maintenant',
- trust_shipping:'Livraison gratuite vers la Suisse',trust_duties:'Aucun droit de douane · TVA suisse possible',trust_made:'Fabriqué à la main au Japon',trust_payment:'Paiement sécurisé',
- menu_home:'Accueil',menu_collection:'Collection',menu_about:'À propos de <em>Rion</em>',menu_order:'Comment <em>commander</em>',menu_sealing:'Comment les cheveux sont <em>scellés</em>',menu_faq:'FAQ',menu_shipping:'Livraison &amp; <em>Retours</em>',menu_care:'Guide d\'<em>entretien</em>',menu_contact:'Contact',
+ trust_shipping:'Livraison gratuite vers la Suisse',trust_duties:'Aucun droit de douane · Toutes taxes incluses',trust_made:'Fabriqué à la main au Japon',trust_payment:'Paiement sécurisé',
+ menu_home:'Accueil',menu_collection:'Collection',menu_about:'À propos de <em>Rion</em>',menu_order:'Comment <em>commander</em>',menu_sealing:'Comment les cheveux sont <em>scellés</em>',menu_faq:'FAQ',menu_shipping:'Livraison &amp; <em>Retours</em>',menu_care:'Guide d\'<em>entretien</em>',menu_heritage:'Notre <em>Héritage</em>',menu_legal:'Mentions <em>légales</em>',menu_contact:'Contact',
  hero_eyebrow:'Comment commander',hero_title:'Six étapes simples<br>vers votre<br><em>bijou éternel.</em>',hero_lead:'Chaque pièce Rion est fabriquée entièrement sur commande, à la main, au Japon. Nous vous accompagnons de la première question jusqu\'à la livraison à votre porte — sans frais supplémentaires. Nous expédions votre kit de collecte de cheveux directement à votre adresse suisse et prenons en charge toutes les formalités douanières et droits d\'importation, afin que vous ne payiez rien à l\'arrivée.',
  trust_ddp:'DDP gratuit vers la Suisse',trust_wa:'Assistance <a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>',trust_photo:'Suivi photo',
  steps_title:'Le <em>parcours</em> — étape par étape',steps_lead:'Du choix de votre design à la réception de votre bijou, partout en Suisse, chaque étape est guidée par notre équipe. Il faut du courage pour commencer. Nous nous occupons du reste.',
@@ -656,8 +658,8 @@ const T = {
  },
  en: {
  nav_order:'Order Now',
- trust_shipping:'Free Shipping to Switzerland',trust_duties:'No Import Duties · Swiss VAT May Apply',trust_made:'Handcrafted in Japan',trust_payment:'Secure Payment',
- menu_home:'Home',menu_collection:'Collection',menu_about:'About <em>Rion</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_contact:'Contact',
+ trust_shipping:'Free Shipping to Switzerland',trust_duties:'No Import Duties · All Taxes Included',trust_made:'Handcrafted in Japan',trust_payment:'Secure Payment',
+ menu_home:'Home',menu_collection:'Collection',menu_about:'About <em>Rion</em>',menu_order:'How to <em>Order</em>',menu_sealing:'How Hair Is <em>Sealed</em>',menu_faq:'FAQ',menu_shipping:'Shipping &amp; <em>Returns</em>',menu_care:'Care <em>Guide</em>',menu_heritage:'Our <em>Heritage</em>',menu_legal:'Legal &amp; <em>Privacy</em>',menu_contact:'Contact',
  hero_eyebrow:'How to Order',hero_title:'Six simple<br>steps to your<br><em>forever jewel.</em>',hero_lead:'Every Rion piece is made entirely to your order by hand in Japan. We guide you from first question to doorstep delivery — at no extra cost. We ship your hair collection kit directly to your Swiss address, and handle every customs and import duty so you pay nothing on arrival.',
  trust_ddp:'Free DDP to Switzerland',trust_wa:'<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a> Support',trust_photo:'Photo Updates',
  steps_title:'The <em>journey</em> — step by step',steps_lead:'From choosing your design to receiving your jewel anywhere in Switzerland, every step is guided by our team. It takes courage to begin. We make the rest easy.',
@@ -695,8 +697,8 @@ const T = {
  },
  ja: {
  nav_order:'ご注文',
- trust_shipping:'スイスへ無料配送',trust_duties:'No Import Duties · Swiss VAT May Apply',trust_made:'日本で手作り',trust_payment:'安全なお支払い',
- menu_home:'ホーム',menu_collection:'コレクション',menu_about:'Rionについて',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_contact:'お問い合わせ',
+ trust_shipping:'スイスへ無料配送',trust_duties:'輸入関税なし・税込み価格',trust_made:'日本で手作り',trust_payment:'安全なお支払い',
+ menu_home:'ホーム',menu_collection:'コレクション',menu_about:'Rionについて',menu_order:'ご注文方法',menu_sealing:'封入方法',menu_faq:'よくある質問',menu_shipping:'配送・<em>返品</em>',menu_care:'お手入れ<em>方法</em>',menu_heritage:'ブランドの<em>歴史</em>',menu_legal:'法律・<em>プライバシー</em>',menu_contact:'お問い合わせ',
  hero_eyebrow:'ご注文方法',hero_title:'6つの簡単な<br>ステップで、<br><em>永遠のジュエルを。</em>',hero_lead:'Rionのすべてのジュエルは、日本のアトリエで完全にハンドメイドされます。最初のご質問からお届けまで、追加費用なしでご案内します。ヘアコレクションキットはスイス住所へ直送し、通関・輸入関税もすべて弊社が負担します。',
  trust_ddp:'スイスへ無料DDP配送',trust_wa:'<a href="https://wa.me/819054621246" target="_blank">WhatsApp</a>サポート',trust_photo:'フォト更新あり',
  steps_title:'ステップごとの<em>ご注文の流れ</em>',steps_lead:'デザインの選択からスイス全土へのお届けまで、すべてのステップを弊社チームがご案内します。踏み出す勇気があれば、あとはお任せください。',
@@ -738,19 +740,20 @@ function setLang(l){
  const k=el.getAttribute('data-i18n');
  if(T[l]&&T[l][k]!==undefined) el.innerHTML=T[l][k];
  });
+ document.documentElement.lang=l;
  localStorage.setItem('rion_ch_lang',l);
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
 (function(){
  const saved=localStorage.getItem('rion_ch_lang')||'fr';
- if(saved!=='en') setLang(saved);
+ if(saved!=='en') setLang(saved); else document.documentElement.lang='en';
 })();
 </script>
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
  <div class="cookie-banner-text">
  <strong>Cookie Notice</strong>
- <span>This site uses Google Analytics for analytics only. No advertising cookies. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
+ <span>This site uses Google Analytics — including advertising-related measurement signals — and Microsoft Clarity to understand how visitors use our site. These are only activated if you click Accept. See our <a href="legal.html#privacy">Privacy Policy</a>.</span>
  </div>
  <div class="cookie-banner-actions">
  <button class="cookie-btn" onclick="declineCookies()">Decline</button>
